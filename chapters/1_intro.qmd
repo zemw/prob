@@ -1,0 +1,39 @@
+## Logic of uncertainty
+
+> Probability is the most important concept in modern science,
+> especially as nobody has the slightest notion of what it means. ------
+> Bertrand Russell
+
+What is probability? We all talk about probabilities in everyday life,
+but mostly in vague languages. This course is to introduce probability
+as a logical framework for quantifying uncertainty and randomness.
+
+> Mathematics is the logic of certainty; probability is the logic of
+> uncertainty.
+
+The earliest development of probability is rooted in gambling. For
+instance, the renowned Monte Carlo method in statistics, invented by
+Stanislaw Ulam in the late 1940s, takes its name from the *Monte Carlo
+Casino* in Monaco, where Ulam's uncle would borrow money from relatives
+to gamble. Probability theories still apply today to analyze gambling
+odds, but their applications have expanded to nearly every field. It is
+the foundation of statistics, machine learning, and artificial
+intelligence. It also plays a crucial role in everyday decision-making,
+from stock investments to effective strategies to combat an infectious
+disease.
+
+Probability is a concept that is intuitive to understand but very hard
+to define formally. Perhaps, the first formal definition of probability
+is often attributed to Pierre-Simon Laplace in the 18th century. In his
+work Theorie analytique des probabilites, published in 1812,
+
+> The probability of an event is the ratio of the number of cases
+> favorable to it, to the number of all cases possible when nothing
+> leads us to expect that any one of these cases should occur more than
+> any other, which renders them, for us, equally possible.
+
+This definition is outdated, as we will soon discover. But before we
+explore the modern definition of probability, let's first clarify some
+preliminary concepts (based on sets), which is the mathematical language
+we use to describe probabilistic events.
+

@@ -1,0 +1,98 @@
+## Samples and statistics
+
+We model real-world uncertain events with random variables. We have also
+introduced various distributions suitable to model different kinds of
+events. However, we never observe the full distribution or the true
+parameters of the assumed distribution. Instead, we only observe a
+sample of that random variable. We can only infer the properties of the
+distribution from a limited sample. For example, suppose we model the
+height of an Asian women with a normal distribution. But we never know
+exactly what the mean and variance are. We can only observe a sample of
+the distribution.
+
+In statistics, the conceptual distribution $F$ is called the
+**population distribution**, or just the **population**.[^stat-1] It is
+tempting to think of the population as all the observations (e.g. all
+the population on the planet), but this is not exactly correct. The
+population distribution is more of a mathematical abstraction or an
+assumption. Suppose we are modeling the height of human being, even if
+we have all the observations on the planet, that does not include the
+people that have died or yet to be born. Thus, it is still a sample of
+the assumed distribution.
+
+[^stat-1]: This section is based on Bruce Hansen's *Probability and
+    Statistics for Economists*.
+
+A collection of random variables $\{X_{1},X_{2},\dots,X_{n}\}$ is a
+**random sample** from the population $F$ if $X_{i}$ are **independent
+and identically distributed (*i.i.d*)** with distribution $F$. What we
+mean by *i.i.d* is that $X_{1},\dots,X_{n}$ are mutually independent and
+have exactly the same distribution $X_{i}\sim F$. Survey sampling is an
+useful metaphor to understand random sampling, in which we randomly
+select a subset of the population with equal probability. The **sample
+size** $n$ is the number of individuals in the sample.
+
+A **data set** is a collection of numbers, typically organized by
+observation. We sometimes call a data set also as a sample. But it
+should not be confused with the random sample defined above. As the
+former is a collection of random variables, whereas the latter is one
+**realization** of the random variables.
+
+Typically, we will use $X$ without the subscript to denote a random
+variable or vector with distribution $F$, $X_{i}$ with a subscript to
+denote a random observation in the sample, and $x_{i}$ or $x$ to denote
+a specific or realized value.
+
+The problem of **statistical inference** is to learn about the
+underlying process --- the population distribution or data generating
+process --- by examining the observations. In most cases, we assume the
+population distribution and want to learn about the its parameters (e.g.
+$\mu$ and $\sigma^{2}$ in the normal distribution). As a convention, we
+use greek letters to denote population parameters.
+
+A **statistic** is a function of the random sample
+$\{X_{1},X_{2},\dots,X_{n}\}$. Recall that there is a distinction
+between random variables and their realizations. Similarly there is a
+distinction between a statistic as a function of a random sample --- and
+is therefore a random variable as well --- and a statistic as a function
+of the realized sample, which is a realized value. When we treat a
+statistic as random we are viewing it is a function of a sample of
+random variables. When we treat it as a realized value we are viewing it
+as a function of a set of realized values. One way of viewing the
+distinction is to think of "before viewing the data" and "after viewing
+the data". When we think about a statistic "before viewing" we do not
+know what value it will take. From our vantage point it is unknown and
+random. After viewing the data and specifically after computing and
+viewing the statistic the latter is a specific number and is therefore a
+realization. It is what it is and it is not changing. The randomness is
+the process by which the data was generated --- and the understanding
+that if this process were repeated the sample would be different and the
+specific realization would be therefore different. The distribution of a
+statistic is called the **sampling distribution**, since it is the
+distribution induced by sampling.
+
+An **estimator** $\hat{\theta}$ for a population parameter $\theta$ is a
+statistic intended to infer $\theta$. It is conventional to use the hat
+notation $\hat{\theta}$ to denote an estimator. Note that $\hat{\theta}$
+is a statistic and hence also a random variable. We call $\hat{\theta}$
+an **estimate** when it is a specific value (or realized value)
+calculated in a specific sample.
+
+A standard way to construct an estimator is by the analog principle. The
+idea is to express the parameter $\theta$ as a function of the
+population $F$, and then express the estimator $\hat{\theta}$ as the
+analog function in the sample.
+
+For example, suppose we want to construct an estimator for the
+population mean $\mu=E(X)$. By definition, if each value of $X$ is of
+equal probability, $\mu$ is simply the average. By analogy, we construct
+the **sample mean** as $\bar{X}_{n}=\frac{1}{n}\sum_{i=1}^{n}X_{i}$. It
+is conventional to denote a sample average by the notation "X bar".
+Because it is an estimator for $\mu$, we also denote it as
+$\hat{\mu}=\bar{X}_{n}$. Note that from different samples we calculate
+different estimates. In one sample, $\hat{\mu}=6.5$; in another sample,
+$\hat{\mu}=6.7$. All of them are erroneous estimate of the true
+parameter $\mu$. The question is therefore how close they are to the
+true parameter. To answer this question, we need to study the
+distribution of the sample mean.
+

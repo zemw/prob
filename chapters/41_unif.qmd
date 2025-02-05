@@ -1,0 +1,73 @@
+## Uniform distribution
+
+::: {#def-unif-1}
+Let $a$ and $b$ be two given real numbers such that $a<b$. Let $X$ be a
+random variable such that it is known that $a\leq X\leq b$ and, for
+every subinterval of $[a,b]$, the probability that $X$ will belong to
+that subinterval is proportional to the length of that subinterval. We
+then say that the random variable $X$ has the Uniform distribution on
+the interval $[a,b]$. The PDF of $X$ is $$f(x)=\begin{cases}
+\frac{1}{b-a} & \textrm{for }a\leq x\leq b\\
+0 & \textrm{otherwise}
+\end{cases}$$
+:::
+
+This is a valid PDF since
+$$\int_{-\infty}^{+\infty}f(x)dx=\int_{a}^{b}\frac{1}{b-a}dx=\frac{1}{b-a}\int_{a}^{b}dx=1.$$
+
+The CDF of $X$ is
+
+$$F(x)=\int_{-\infty}^{x}f(t)dt=\int_{a}^{x}f(t)dt=\begin{cases}
+0 & x<a\\
+\frac{x-a}{b-a} & a\leq x\leq b\\
+1 & x>b
+\end{cases}.$$
+
+The expectation of $X$:
+
+$$E(X)=\int_{a}^{b}x\frac{1}{b-a}dx=\frac{1}{b-a}\left[\frac{x^{2}}{2}\right]_{a}^{b}=\frac{a+b}{2}.$$
+
+To figure out the variance, first compute
+
+$$E(X^{2})=\int_{a}^{b}x^{2}\frac{1}{b-a}dx=\frac{1}{b-a}\left[\frac{x^{3}}{3}\right]_{a}^{b}=\frac{a^{2}+ab+b^{2}}{3}$$
+
+Thus,
+
+$$Var(X)=E(X^{2})-E^{2}(X)=\frac{a^{2}+ab+b^{2}}{3}-\frac{(a+b)^{2}}{4}=\frac{(b-a)^{2}}{12}.$$
+
+::: {#exm-5.1}
+A stick of unit length is broken at a random point X. What is the
+expected length of the longer piece?
+:::
+
+::: solution
+The lengths of the two pieces are $X$ and $1-X$, with $X\sim Unif(0,1)$.
+The longer piece is $\max(X,1-X)$. For $X<0.5$, the longer piece is
+$1-X$, and for $X\geq0.5$, it is $X$. The expected value is:
+$$E[\max(X,1-X)]=\int_{0}^{0.5}(1-X)\,dx+\int_{0.5}^{1}X\,dx=\frac{3}{4}.$$
+:::
+
+Intuition might suggest that since the stick is broken at a random
+point, the longer piece should be "somewhat larger" than the shorter
+piece, but not as large as 3/4. However, the uniform distribution of the
+break point means that the longer piece can sometimes be much larger
+than the shorter piece, especially when the break point is close to one
+end.
+
+```{r}
+# Set seed for reproducibility
+set.seed(123)
+
+# Number of simulations
+n_simulations <- 1000
+
+# Simulate breaking the stick
+X <- runif(n_simulations, min = 0, max = 1)  # Random break points
+longer_piece <- pmax(X, 1 - X)  # Length of the longer piece
+
+# Compute the expected length
+expected_length <- mean(longer_piece)
+
+# Print the result
+cat("Simulated Expected Length of Longer Piece:", expected_length)
+```

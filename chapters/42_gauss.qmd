@@ -1,0 +1,58 @@
+## Special integrals
+
+There are many reasons to learn integrals. But the most compelling
+reason is that math is no longer the same with integrals. We can have
+many amazing results with integrals that were otherwise not imaginable.
+This section introduces two integrals that are of special importance to
+continuous distributions.
+
+::: {#exm-gauss}
+Show that $\int_{-\infty}^{+\infty}e^{-x^{2}}dx=\sqrt{\pi}$.
+:::
+
+::: proof
+This is known as Gaussian integral, which is the kernel of the PDF of
+the normal distribution. It also amazingly relates two of the most
+famous constants in mathematics. It is not integrable by normal
+integration techniques. But it can be solved by switching to the polar
+coordinate.
+$$\begin{aligned}\left(\int_{-\infty}^{+\infty}e^{-x^{2}}dx\right)^{2}= & \int_{-\infty}^{+\infty}e^{-x^{2}}dx\int_{-\infty}^{+\infty}e^{-y^{2}}dy\\
+= & \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}e^{-(x^{2}+y^{2})}dxdy\\
+= & \int_{0}^{2\pi}\int_{0}^{\infty}e^{-r^{2}}rdrd\theta & dA=dxdy=rdrd\theta\\
+= & \int_{0}^{2\pi}\int_{0}^{\infty}\frac{1}{2}e^{-u}dud\theta & \textrm{let }u=r^{2}\\
+= & \frac{1}{2}\int_{0}^{2\pi}d\theta=\pi.
+\end{aligned}$$
+:::
+
+::: {#exm-gamma}
+Show that $\int_{0}^{\infty}t^{n}e^{-t}dt=n!$
+:::
+
+::: proof
+$\Gamma(z)=\int_{0}^{\infty}t^{z-1}e^{-t}dt$ is known as the Gamma
+function, which is definitely one of the most interesting functions in
+mathematics. It is the extension of factorials to real numbers or even
+complex numbers. It also has many interesting properties, such as
+$\Gamma(n)=(n-1)!$, $\Gamma(1/2)=\sqrt{\pi}$,
+$\Gamma(3/2)=\sqrt{\pi}/2$, $\Gamma'(1)=-\gamma$ and so on. The $(n-1)$
+in the Gamma function is due to historical reasons and does not matter
+in our case. We will prove the integral with $n$ instead of $(n-1)$.
+
+There are many ways to prove this. One is to discover the recursive
+relationship $\Gamma(n+1)=n\Gamma(n)$. But it does not give a clue why
+we need this integral to approximate the factorial. We start with an
+elementary integral
+
+$$\int_{0}^{\infty}e^{at}dt=-\frac{1}{a}$$ where $a<0$. Differentiate
+both sides $n$ times with respect to $a$:
+
+$$\begin{aligned}\int_{0}^{\infty}e^{at}tdt & = & -(-1)a^{-2}\\
+\int_{0}^{\infty}e^{at}t^{2}dt & = & -(-1)(-2)a^{-3}\\
+\int_{0}^{\infty}e^{at}t^{3}dt & = & -(-1)(-2)(-3)a^{-4}\\
+ & \vdots\\
+\int_{0}^{\infty}e^{at}t^{n}dt & = & (-1)^{n+1}n!a^{-(n+1)}
+\end{aligned}$$
+
+Let $a=-1$, we have $$\int_{0}^{\infty}e^{t}t^{n}=n!$$
+:::
+

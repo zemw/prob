@@ -1,0 +1,95 @@
+## Independence
+
+::: {#def-indep}
+### Independence for two events
+If event $B$'s occurrence does not change the probability of $A$, then
+we say $A$ and $B$ are independent. That is to say $A$ and $B$ are
+independent if $$P(A\cap B)=P(A)P(B).$$ Assuming $P(B)>0$, this is
+equivalent to $$P(A|B)=P(A)$$
+:::
+
+::: {#thm-indep}
+If events $A$ and $B$ are independent, then
+
+-   $A$ and $B^{c}$ are independent;
+-   $A^{c}$ and $B^{c}$ are independent.
+:::
+
+$A$ and $B$ are independent means they do not provide information to
+each other in the sense that conditional probability is not different
+from the unconditional probability. It is not an intuitive idea as it
+seems. It will become clearer when we discuss random variables in later
+chapters. 
+
+::: {#def-indep3}
+### Independence for three events
+Events $A$, $B$, and $C$ are said to be (mutually) independent if
+all of the following equations hold:
+$$\begin{aligned}P(A\cap B)= & P(A)P(B),\\
+P(A\cap C)= & P(A)P(C),\\
+P(B\cap C)= & P(B)P(C),\\
+P(A\cap B\cap C)= & P(A)P(B)P(C).
+\end{aligned}$$
+:::
+
+::: {#def-indepn}
+### Independence for $n$ events
+For $n$ events $A_{1},A_{2},\ldots,A_{n}$ to be (mutually)
+independent, we require any pair to satisfy
+$P(A_{i}\cap A_{j})=P(A_{i})P(A_{j})$ (for $i\neq j$), any triplet to
+satisfy $P(A_{i}\cap A_{j}\cap A_{k})=P(A_{i})P(A_{j})P(A_{k})$ (for
+$i$, $j$, $k$ distinct), and similarly for all quadruplets, quintuplets,
+and so on.
+:::
+
+
+:::{.callout-note}
+### Don't assume independence without justification
+
+In probability, assuming events are independent without justification can lead 
+to catastrophic errors. A tragic example is the Sally Clark case, where a mother 
+was wrongfully convicted of murdering her two children after both died of sudden 
+infant death syndrome (SIDS). The prosecution argued that the probability of two 
+SIDS deaths in one family was ￼ in ￼ million, assuming the events were independent. 
+However, this assumption ignored the potential influence of shared genetic, 
+environmental, or health factors, which could increase the likelihood of a second 
+SIDS death if one had already occurred. By treating dependent events as independent, 
+the calculated probability was grossly misleading, contributing to a miscarriage of 
+justice. Always evaluate relationships between events carefully before assuming 
+independence.
+:::
+
+## Common confusions {.unnumbered}
+
+::: {.callout-caution}
+### Independence is not the same as disjointness.
+
+$A$ and $B$ are disjoint means if $A$ occurs, $B$ cannot occur. But
+independence means $A$ occurs has nothing to do with $B$.
+:::
+
+::: {.callout-caution}
+### Pairwise independence does not imply independence.
+
+In @def-indep3, If the first three conditions hold, we say that 
+$A$, $B$, and $C$ are *pairwise independent*. Pairwise independence does not imply
+independence. Convince yourself with the following example.
+:::
+
+::: {#exm-1.12}
+Consider two fair, independent coin tosses, and let $A$ be the event
+that the first is Heads, $B$ the event that the second is Heads, and $C$
+the event that both tosses have the same result. Show that $A$, $B$, and
+$C$ are pairwise independent but not independent.
+:::
+
+::: solution
+For each event, $P(A)=\frac{1}{2}$, $P(B)=\frac{1}{2}$. Consider the two
+events together, there are four possible outcomes: HH, HT, TH, TT.
+$P(C)=P(HH)+P(TT)=\frac{1}{2}$. Thus, $$\begin{aligned}
+P(A\cap B) & =P(HH)=\frac{1}{4}=P(A)P(B)\\
+P(A\cap C) & =P(HH)=\frac{1}{4}=P(A)P(C)\\
+P(B\cap C) & =P(HH)=\frac{1}{4}=P(B)P(C)\end{aligned}$$ But $A,B,C$ are
+not independent, because
+$$P(A\cap B\cap C)=P(HH)=\frac{1}{4}\neq P(A)P(B)P(C).$$
+:::

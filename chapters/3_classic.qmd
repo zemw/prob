@@ -1,0 +1,105 @@
+## Classical probability
+
+::: {#def-classical}
+Classical (naive) definition of probability:
+$$P(A)=\frac{\left|A\right|}{\left|S\right|}=\dfrac{\textrm{number of outcomes favorable to A}}{\textrm{total number of outcomes in A}}$$
+assuming the outcomes are [finite]{.underline} and [equally
+likely]{.underline}.
+:::
+
+::: callout-note
+## Don's misuse the classical definition
+
+The classical probability is very restrictive. It only applies to
+scenarios such as flipping coins or rolling dice where the outcomes are
+equally likely. It has often been misapplied by people who assume
+equally likely outcomes without justification. For example, if one wants
+calculate the probability of a rainy day, it would be misleading to
+assume every day is equally likely to rain and compute
+$\frac{\text{rainy days}}{365}$.
+:::
+
+Calculating the naive probability of an event $A$ often involves
+counting the number of outcomes in $A$ and the number of outcomes in the
+sample space $S$, which usually involve some counting methods. We now
+review some of the counting methods (multiplications, factorials,
+permutations, combinations) that was introduced in high schools.
+
+## Counting methods {.unnumbered}
+
+**Multiplications.** Consider a compound experiment consisting of two
+sub-experiments, Experiment A and Experiment B. Suppose that Experiment
+A has $a$ possible outcomes, and for each of those outcomes Experiment B
+has $b$ possible outcomes. Then the compound experiment has $a\times b$
+possible outcomes.
+
+**Exponentiation.** Consider $n$ objects and making $k$ choices from
+them, one at a time [with replacement]{.underline}. Then there are
+$n^{k}$ possible outcomes.
+
+**Factorials.** Consider $n$ objects $1,2,\dots,n$. A permutation of
+$1,2,\dots,n$ is an arrangement of them in some order, e.g., $3,5,1,2,4$
+is a permutation of $1,2,3,4,5$. The are $n!$ permutations of
+$1,2,\dots,n$.
+
+**Permutations**. Consider $n$ objects and making $k$ choices from them,
+one at a time [without replacement]{.underline}. Then there are
+$P_{n}^{k}=n(n-1)\cdots(n-k+1)$ possible outcomes, for $k\leq n$.
+(Ordering matters in this case, e.g. $1,2,3$ is considered different
+from $2,3,1$)
+
+**Combinations**. Consider $n$ objects and making $k$ choices from them,
+one at a time without replacement, without distinguishing between the
+different orders in which they could be chosen (e.g. $1,2,3$ is
+considered no different from $2,3,1$). Then there are
+$C_{n}^{k}=\frac{n(n-1)\cdots(n-k+1)}{k!}$ possible outcomes. In modern
+math, we prefer the notation $\binom{n}{k}:= C_n^k$, which reads as "$n$
+choose $k$".
+
+The following table summarizes the counting methods.
+
+|                  | order matters | order doesn't matter |
+|------------------|:-------------:|:--------------------:|
+| with replacement |    $n^{k}$    |   $C_{n+k-1}^{k}$    |
+| non-replacement  |  $P_{n}^{k}$  |     $C_{n}^{k}$      |
+
+We don't explain the upper-right corner case $C_{n+k-1}^{k}$ as it is
+not relevant for our purpose here. Feel free to figure it out yourself
+if you are interested.
+
+## Binomial coefficient {.unnumbered}
+
+The Binomial coefficient $\binom{n}{k}$ counts the number of subsets of
+size $k$ for a set of size $n$. It is also the coefficient of $x^k$ when
+expanding the polynomial $(x+y)^n$.
+
+::: {#thm-binom}
+## Binomial theorem
+
+$$(x+y)^{n}=\sum_{k=0}^{n}\binom{n}{k}x^{k}y^{n-k}.$$
+:::
+
+![](img/pascal.jpg){width="50%" fig-align="center"}
+
+The coefficients form an infinite triangle called the **Pascal
+triangle**. By observing the patterns in the triangle, it is not hard to
+conclude the following recursive formula:
+
+$$\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}$$
+
+The value of the binomial coefficient is only defined for non-negative
+integers $n$ and $k$ with $0 \leq k \leq n$. But mathematics is about
+**generalization**. We can generalize the notion of "$n$ choose $k$" for
+negative $n$: $$\begin{aligned}
+\binom{-n}{k} &= \prod_{i=0}^{k-1} \frac{-n-i}{k-i}
+=(-1)^k \prod_{i=0}^{k-1} \frac{n+i}{k-i} \\
+&=(-1)^k\frac{n(n+1)\dots(n+k-1)}{k!}\\
+&=(-1)^k\frac{(n+k-1)!}{k!(n-1)!}\\
+&=(-1)^k\binom{n+k-1}{k}
+\end{aligned}$$
+
+We can also extend the formula to real numbers and even complex numbers:
+
+$$\binom{x}{y}=\frac{\Gamma(x+1)}{\Gamma(y+1)\Gamma(x-y+1)}$$where
+$\Gamma(x+1)=x!$ is a generalization of factorials. We will come back to
+the Gamma function when we discuss Gamma distributions.

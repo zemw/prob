@@ -1,0 +1,58 @@
+## Continuous variables
+
+::: {#def-conrv}
+## Continuous random variable
+
+We say a random variable $X$ has a continuous random variable if the
+possible values of $X$ takes the form of a continuum.
+:::
+
+::: {#def-pdf}
+## Probability density function
+
+For a continuous random variable $X$, the probability density function
+(PDF) of $X$ is a real-valued function $f$ such that
+$$P(a\leq X\leq b)=\int_{a}^{b}f(x)dx.$$
+:::
+
+Continuous random variables are usually measurements. Examples include
+height, weight, temperature, the amount of money and so on.
+
+::: callout-note
+## Density is not probability
+
+PDF differs from the discrete PMF in important ways:
+
+-   For a continuous random variable, $P(X=x)=0$ for all $x$;
+-   The quantity $f(x)$ is not a probability. To get the probability, we
+    integrate the PDF (probability is the area under the PDF):
+    $$P(a<X\leq b)=F(b)-F(a)=\int_{a}^{b}f(x)dx.$$
+-   Since any single value has probability 0, including or excluding
+    endpoints does not matter.
+    $$P(a<X<b)=P(a<X\leq b)=P(a\leq X<b)=P(a\leq X\leq b).$$
+:::
+
+::: {#prp-pdf}
+The PDF $f$ of a continuous random variable must satisfy the following
+criteria:
+
+-   Non-negative: $f(x)\geq0$;
+-   Integrate to one: $\int_{-\infty}^{\infty}f(x)dx=1$.
+:::
+
+::: {#exm-crv-1}
+A **uniform distribution** is a probability distribution where all
+values within a specified interval $[a, b]$ are equally likely to occur,
+and its probability density function (PDF) is given by:
+$$f(x) = \frac{1}{b - a} \quad \text{for} \quad a \leq x \leq b$$ and
+$f(x) = 0$ otherwise.
+:::
+
+::: callout-caution
+## Don't confuse a random variable with its distribution
+
+If random variable $X$ has distribution $f(x)$, the distribution of
+$X^2$ is not $f^2(x)$. To get the distribution of $X+Y$, you can't just
+add up $f_X(x)+f_Y(y)$. The right way to do it will be discussed in
+later chapters (transformation and convolution).
+:::

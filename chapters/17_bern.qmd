@@ -1,0 +1,41 @@
+# Bernoulli distribution
+
+We introduce some theoretical distributions from now on. These
+distributions are important because they provide standardized models for
+common "patterns" of random processes. We develop these distributions
+from idealized assumptions. In practice, we usually do not know what is
+the "true" distribution of the question of interest. Typically, we "fit"
+the question into a theoretical distribution according to their
+proximity to the assumptions.
+
+::: {#def-bern}
+## Bernoulli distribution
+
+A random variable $X$ is said to have the Bernoulli distribution,
+denoted as $X\sim Bern(p)$, if $X$ has only two possible values, $0$ and
+$1$, and $P(X=1)=p$, $P(X=0)=1-p$.
+:::
+
+The PMF of a Bernoulli random variable $X$ is given by
+$$P(X=k)=\begin{cases}
+p & \textrm{if }k=1,\\
+1-p & \textrm{if }k=0.
+\end{cases}$$
+
+This can also be expressed as
+$$P(X=k)=p^{k}(1-p)^{1-k},\quad k\in\left\{ 0,1\right\} .$$
+
+::: {#def-bern-trial}
+## Bernoulli trial
+
+A Bernoulli trial is a random experiment with binary outcomes, often
+labeled as “success” and “failure,” where the probability of success $p$
+remains constant across trials.
+:::
+
+Bernoulli trials have numerous applications across various fields. For
+instance, in quality control, a product can either pass or fail
+inspection; in healthcare, a treatment may either be effective or
+ineffective; and in marketing, a consumer may either purchase a product
+or not. As long as the probability of success is constant across trials,
+we can model such scenarios with Bernoulli distributions.

@@ -1,0 +1,166 @@
+## Linearity and indicators
+
+::: {#def-indicator}
+## Indicator variable
+
+An indicator variable $\mathbb{I}_A$ for an event $A$ is a random
+variable defined as: $$\mathbb{I}_A =
+\begin{cases}
+1 & \text{if event } A \text{ occurs}, \\
+0 & \text{if event } A \text{ does not occur}.
+\end{cases}
+$$
+
+The indicator variable $\mathbb{I}_A$ "indicates" whether the event $A$
+happens (1) or not (0).
+:::
+
+The expected value of an indicator variable is equal to the probability
+of the event $A$:
+$$E[\mathbb{I}_A] = 1 \cdot P(A) + 0 \cdot P(A^c) = P(A)$$ This is known
+as the **fundamental bridge**, as it allows us to convert between
+probability and expectation.
+
+Indicator variables are often used in linearity of expectation
+calculations. This allows us to break down a problem into easy-to-solve
+small problems. For example, if $X = \sum_{i=1}^n \mathbb{I}_{A_i}$,
+then: $$E[X] = \sum_{i=1}^n E[\mathbb{I}_{A_i}] = \sum_{i=1}^n P(A_i)$$
+
+::: {#exm-4.6}
+In a group of $n$ people, what is the expected number of distinct
+birthdays among the $n$ people (the expected number of days on which at
+least one of the people was born)? What is the expected number of people
+sharing a birthday (any day)?
+:::
+
+::: solution
+Let $X$ be the number of distinct birthdays, and write
+$X=I_{1}+\cdots+I_{365}$, where $$I_{j}=\begin{cases}
+1 & \textrm{if someone was born on day }j\\
+0 & \textrm{otherwise}
+\end{cases}.$$ Then $$\begin{aligned}
+E(I_{j}) & =P(\textrm{someone was born on day }j)\\
+ & =1-P(\textrm{no one was born on day }j)\\
+ & =1-\left(\frac{364}{365}\right)^{n}.\end{aligned}$$ Then by
+linearity, $$E(X)=365\left(1-\left(\frac{364}{365}\right)^{n}\right).$$
+Let $Y$ be the number of people sharing a birthday, and
+$Y=J_{1}+\cdots+J_{n}$ where $J_{k}$ is an indicator that the $j$-th
+person shares his birthday with somebody else. $$\begin{aligned}
+E(J_{k}) & =P(\textrm{someone shares birthday with }k)\\
+ & =1-P(\textrm{no one shares birthday with }k)\\
+ & =1-\left(\frac{364}{365}\right)^{n-1}.\end{aligned}$$ Therefore,
+$$E(Y)=\sum_{k=1}^{n}E(J_{k})=n\left(1-\left(\frac{364}{365}\right)^{n-1}\right).$$
+
+For some numeric values, $E(Y)=2.3$ if $n=30$; $E(Y)=6.3$ if $n=50$.
+:::
+
+::: {#exm-4.7}
+Suppose that there are $n$ people sitting in a classroom with exactly
+$n$ seats. At some point, everyone got up, ran around the room, and sat
+back down randomly (i.e., all seating arrangements are equally likely).
+What is the expected value of the number of people sitting in their
+original seat?
+:::
+
+::: solution
+Number the people from 1 to $n$. Let $X_{i}$ be the Bernoulli random
+variable with value $1$ if person $i$ returns to their original seat and
+value $0$ otherwise. Since person $i$ is equally likely to sit back down
+in any of the $n$ seats, the probability that person $i$ returns to
+their original seat is $1/n$. Therefore $E[X_{i}]=1/n$. Now, let $X$ be
+the number of people sitting in their original seat following the
+rearrangement. Then $X=X_{1}+X_{2}+\cdots+X_{n}$. By linearity of
+expected values, we have $E[X]=\sum E[X_{i}]=\sum1/n=1.$
+:::
+
+::: {#exm-4.8}
+Let $\Pi$ be a permutation over $\{1,2,\dots,n\}$. That is a reordering
+of the numbers. A fixed point of a permutation are the points not moved
+by the permutation. For example, in the permutation below
+$$\begin{array}{ccccc}
+ & 1 & 2 & 3 & 4\\
+\Pi & 2 & 4 & 3 & 1
+\end{array}$$
+
+The fixed point is 3. Find the expected number of fixed points of a
+random permutation.
+:::
+
+::: solution
+Let $X$ be the number of fixed points of a random permutation. Then
+$X=\sum_{k=1}^{n}\boldsymbol{1}_{\Pi(k)=k}$ where
+$\boldsymbol{1}_{\Pi(k)=k}$ indicates the $k$-th number stays the same
+after the permutation. By linearity,
+$$E(X)=E\left(\sum_{k=1}^{n}\boldsymbol{1}_{\Pi(k)=k}\right)=\sum_{k=1}^{n}E\left(\boldsymbol{1}_{\Pi(k)=k}\right)=\sum_{k=1}^{n}\frac{1}{n}=1.$$
+:::
+
+::: {#exm-4.9}
+(Buffon's needle). Rule a surface with parallel lines a distance $d$
+apart. What is the probability that a randomly dropped needle of length
+$l\leq d$ crosses a line?
+:::
+
+::: solution
+Consider dropping any (continuous) curve of length $l$ onto the surface.
+Imagine dividing up the curve into $N$ straight line segments, each of
+length $\frac{l}{N}$. Let $X_{i}$ be the indicator for the $i$-th
+segment crossing a line. Let $X$ be the total number of times the curve
+crosses a line. Then,
+$$E(X)=E(\sum X_{i})=\sum E(X_{i})=N\cdot E(X_{i}).$$ There could be
+infinitely many segments. It is hard to compute this expectation
+directly. But here we arrive an important Lemma: the expected number of
+crossings is proportional to the length of the curve, regardless of the
+shape of the curve. If we can compute $E(X)$ for some curve, the we can
+compute $E(X)$ for any length by scaling the value proportional to the
+length.
+
+Consider a circle of diameter $d$. The circle always crosses the lines
+twice for sure. That is, $E(X_{\textrm{circle}})=2$. The length of the
+circle is $\pi d$. Therefore, the value of $E(X)$ for any curve of
+length $l$ is given by $$E(X)=\frac{2l}{\pi d}.$$
+
+Now a needle can cross a line either $1$ or $0$ times. Thus,
+$E(X)=1\cdot P(X=1)+0\cdot P(X=0)$ is exactly the probability of a
+needle crossing a line.
+
+This amazing example can be used to approximate the value of $\pi$. Let
+$q$ be the probability of a needle crossing a line. $q$ can be
+approximated by large number of simulations. Then
+$\pi\approx\frac{2l}{qd}$.
+:::
+
+```{r}
+# Buffon's Needle Simulation
+buffon_needle <- function(N, L, D) {
+  # Initialize the number of crossings
+  crossings <- 0
+  
+  for (i in 1:N) {
+    # Randomly generate the position of the needle's midpoint
+    y <- runif(1, min = 0, max = D / 2)  # Distance from the nearest line
+    # Randomly generate the angle of the needle (in radians)
+    theta <- runif(1, min = 0, max = pi / 2)  # Angle with respect to the lines
+    
+    # Check if the needle crosses a line
+    if (y <= (L / 2) * sin(theta)) {
+      crossings <- crossings + 1
+    }
+  }
+  
+  # Estimate pi
+  pi_estimate <- (2 * L * N) / (D * crossings)
+  
+  return(pi_estimate)
+}
+
+# Parameters
+N <- 100000  # Number of trials
+L <- 1       # Length of the needle
+D <- 2       # Distance between the lines (D >= L)
+
+# Run the simulation
+pi_estimate <- buffon_needle(N, L, D)
+
+# Print the result
+cat("Estimated value of pi:", pi_estimate)
+```

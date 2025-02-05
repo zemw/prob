@@ -1,0 +1,55 @@
+# Birthday problem revisited
+
+The beauty if approximating discrete problems by continuous function is that
+it makes calculation easier. Now we revisit the birthday problem with Poisson
+distribution. 
+
+::: {#exm-4.22}
+If we have $m$ people and $\binom{m}{2}$ pairs. Each pair of people has
+probability $p=1/365$ of having the same birthday. Find the probability
+of at least one match.
+:::
+
+::: solution
+The probability of match is small, and the number of pairs is large. We
+consider using the Poisson paradigm to approximate the number $X$ of
+birthday matches. $X\approx Pois(\lambda)$ where
+$\lambda=\binom{m}{2}\frac{1}{365}$. Then the probability of at least
+one match is $$P(X\geq1)=1-P(X=0)\approx1-e^{-\lambda}.$$ For $m=23$,
+$\lambda=253/365$ and $1-e^{-\lambda}\approx0.5$, which agrees with our
+previous finding that we need 23 people to have 50% chance of a birthday
+match.
+:::
+
+::: {#exm-4.23}
+Continued with the assumption above. What's the probability of two
+people who were born not only on the same day, but also at the same hour
+and the same minute?
+:::
+
+::: solution
+This is the birthday problem with $c=365\cdot24\cdot60=525600$
+categories rather than $365$ categories. By Poisson approximation, the
+probability of at least one match is approximately $1-e^{-\lambda_{1}}$
+where $\lambda_{1}=\binom{m}{2}\frac{1}{525600}$. This would require
+$m=854$ to reach the break even point, 50% chance of getting a match.
+:::
+
+You may wonder how good the Poisson approximation is. We can compare it with
+the true values.
+
+```{r}
+# compute the probability of coincidences for 1,2...100 people
+n <- 1:100
+p <- sapply(n, pbirthday)
+
+# approximate the probability by Poisson paradigm
+lambda <- choose(n, 2)/365
+q <- 1 - exp(-lambda)
+
+# black line is the true probability
+# red line is the Poisson approximation
+plot(n, p, type = "s")
+lines(n, q, col = 2, type="s")
+```
+

@@ -1,0 +1,123 @@
+## Simpson's paradox
+
+::: {#exm-simpson}
+(Simpson's paradox). There are two doctors, Dr. Lee and Dr. Wong,
+performing two types of surgeries --- heart surgery (hard) and band-aid
+removal (easy). Dr. Lee has higher overall surgery success rate. Is Dr.
+Lee necessarily a better doctor than Dr. Wong?
+
+No. Consider the following example:
+
+|              |         |          |       |     |          |          |       |
+|--------------|:-------:|----------|-------|-----|:--------:|----------|-------|
+|              | Dr. Lee |          |       |     | Dr. Wong |          |       |
+|              |  Heart  | Band-Aid | Total |     |  Heart   | Band-Aid | Total |
+| Success      |    2    | 81       | 83    |     |    70    | 10       | 80    |
+| Failure      |    8    | 9        | 17    |     |    20    | 0        | 20    |
+| Success rate |   20%   | 90%      | 83%   |     |   78%    | 100%     | 80%   |
+
+The truth is Dr. Lee has overall higher success rate because he only
+does easy surgeries (band-aid removal). Dr. Wong does mostly hard
+surgeries and thus has a lower overall success rate. Yet, he is better
+at each single type of surgery. To formalize the argument, let $S$:
+successful surgery; $D$: treated by Dr. Lee, $D^{c}$: treated by Dr.
+Wong; $E$: heart surgery, $E^{c}$: band-aid removal. Dr. Wong is better
+at each type of surgery, $$\begin{aligned}P(S|D,E) & <P(S|D^{c},E)\\
+P(S|D,E^{c}) & <P(S|D^{c},E^{c});
+\end{aligned}$$ But, Dr. Lee has a higher overall successful rate,
+$$P(S|D)>P(S|D^{c}).$$ This is because there is a "confounder" $E$:
+$$P(S|D)=\underbrace{P(S|D,E)}_{<P(S|D^{c},E)}\underbrace{P(E|D)}_{\textrm{weight}}+\underbrace{P(S|D,E^{c})}_{<P(S|D^{c},E^{c})}\underbrace{P(E^{c}|D)}_{\textrm{weight}}.$$
+:::
+
+A **confounder** is a variable that influences with both explanatory
+variable and the outcome variable, which therefore "confounds" the
+correlation between the two. In our example, the type of surgery ($E$)
+is associated with both the doctor and the outcome. Without the
+confounder being controlled, it is impossible to draw valid conclusions
+from the statistics.
+
+In general terms, Simpson's paradox refers to the paradox in which a
+trend that appears across different groups of aggregate data is the
+reverse of the trend that appears when the aggregate data is broken up
+into its components. It is one of the most common sources of statistical
+misuse. Here is another example.
+
+::: {#exm-ucbgender}
+(UC Berkeley gender bias). One of the best-known examples of Simpson's
+paradox comes from a study of gender bias among graduate school
+admissions to University of California, Berkeley. The admission figures
+for the fall of 1973 showed that men applying were more likely than
+women to be admitted, and the difference was so large that it was
+unlikely to be due to chance.
+
+|       |            |          |     |            |          |
+|-------|:----------:|----------|-----|:----------:|----------|
+|       |    Male    |          |     |   Female   |          |
+|       | Applicants | Admitted |     | Applicants | Admitted |
+| Total |   8,442    | 44%      |     |   4,321    | 35%      |
+
+However, when taking into account the information about departments
+being applied to, the conclusion turns to the opposite: in most
+departments, the admission rate for women is higher than men. The lower
+overall admission rate is caused by the fact that women tended to apply
+to more competitive departments with lower rates of admission, whereas
+men tended to apply to less competitive departments with higher rates of
+admission.
+
+|            |            |          |            |          |
+|:----------:|:----------:|----------|:----------:|----------|
+| Department |    Male    |          |   Female   |          |
+|            | Applicants | Admitted | Applicants | Admitted |
+|     A      |    825     | 62%      |    108     | 82%      |
+|     B      |    560     | 63%      |     25     | 68%      |
+|     C      |    325     | 37%      |    593     | 34%      |
+|     D      |    417     | 33%      |    375     | 35%      |
+|     E      |    191     | 28%      |    393     | 24%      |
+|     F      |    373     | 6%       |    341     | 7%       |
+|   Total    |    2691    | 45%      |    1835    | 30%      |
+:::
+
+See <https://setosa.io/simpsons> for a really good
+    illustration of the Simpson's paradox.
+    
+## R demostration {.unnumbered}
+
+```{r}
+library(lattice)
+library(knitr)
+
+# R has a built-in dataset `UCBAdmissions`
+# we convert it to data frame for analysis
+UCB <- as.data.frame(UCBAdmissions)
+
+# list the first a few rows
+kable(head(UCB, 8))
+```
+
+```{r}
+# plot the number of admissions for each gender 
+# conditioned on admission status
+barchart(Freq ~ Gender | Admit, UCB)
+```
+
+```{r,fig.asp=1.5}
+# plot the number of admissions for each gender 
+# conditioned on admission status and department
+barchart(Freq ~ Gender | Admit + Dept, UCB)
+```
+
+::: callout-note
+### The importance of conditional thinking
+Whenever we talk about probability or statistics, always remind ourselves 
+what we are the conditioning on. Any statistical reasoning without specifying 
+the conditions can be misleading. We are prone to such fallacies everyday everywhere. 
+
+- "10 millions new jobs were added during the term of President X." But it doesn't 
+tell you this was achieved conditioned on that the economy had just had the worst
+recession. 
+- "Private schools' graduates earned 50% more than those graduated from 
+public schools." But it doesn't tell you the background of those students who
+enrolled in private schools.
+
+Be vigilant to these claims when you see them next time.
+:::

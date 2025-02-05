@@ -1,0 +1,110 @@
+## Axiomatic probability
+
+::: {#def-prob}
+A *probability space* consists of $S$ and $P$, where $S$ is a sample
+space, and $P$ is a function which takes an event $A\subseteq S$ as
+input and returns $P(A)\in[0,1]$ such that
+
+-   $P(\phi)=0$,
+-   $P(S)=1$,
+-   $P(\cup_{n=1}^{\infty}A_{n})=\sum_{n=1}^{\infty}P(A_{n})$ if
+    $A_{1},A_{2},\ldots,A_{n}$ are disjoint.
+:::
+
+Note that this Definition does not imply any particular interpretation
+of probability. In fact, any function $P$ that satisfies the axioms are
+valid "probabilities". Thus, the theories of probability do not depend
+on any particular interpretation. It is purely axiomatic. From the three
+axioms, we can derive any property of probabilities. The interpretation
+also matters, but it is more of a philosophical debate. 
+
+:::{.callout-note}
+## Two interpretations of probability
+
+-   The *frequentist* view of probability is that it represents a
+    long-run frequency over a large number of repetitions of an
+    experiment: if we say a coin has probability 1/2 of Heads, that
+    means the coin would land Heads 50% of the time if we tossed it over
+    and over and over.
+-   The *Bayesian* view of probability is that it represents a degree of
+    belief about the event in question, so we can assign probabilities
+    to hypotheses like "candidate A will win the election" or "the
+    defendant is guilty" even if it isn't possible to repeat the same
+    election or the same crime over and over again.
+:::
+
+::: {#prp-prob}
+For any events $A$ and $B$, we have
+
+-   $P(A^{c})=1-P(A)$
+-   If $A\subseteq B$, then $P(A)\leq P(B).$
+-   $P(A\cup B)=P(A)+P(B)-P(A\cap B)$.
+:::
+
+::: {.proof}
+We prove the three properties by just using the Axioms. 
+
+1) Since $A$ and $A^{c}$ are disjoint and their union is $S$, apply the
+third axiom: $$P(S)=P(A\cup A^{c})=P(A)+P(A^{c});$$ By the second axiom,
+$P(S)=1$. So $P(A)+P(A^{c})=1$.
+
+2) The key is to break up the set into disjoint sets. If
+$A\subseteq B$, then $B=A\cup(B\cap A^{c})$ where $A$ and $B\cap A^{c}$
+are disjoint (draw a Venn diagram for intuition). By the third axiom, we
+have $$P(B)=P(A\cup(B\cap A^{c}))=P(A)+P(B\cap A^{c})\geq P(A).$$
+
+3) We can write $A\cup B$ as the union of the disjoint set $A$ and
+$B\cap A^{c}$. Then by the third axiom,
+$$P(A\cup B)=P(A\cup(B\cap A^{c}))=P(A)+P(B\cap A^{c}).$$
+It suffices to show that $P(B\cap A^{c})=P(B)-P(A\cap B)$. Since
+$B\cap A$ and $B\cap A^{c}$ are disjoint, we have
+$$P(B)=P(B\cap A)+P(B\cap A^{c}).$$ So $P(B\cap A^{c})=P(B)-P(A\cap B)$
+as desired. 
+:::
+
+The last property is a very useful formula for finding the probability
+of a union of events when the events are not necessarily disjoint. 
+We can generalize it to $n$ events.
+
+::: {#thm-union}
+For any events $A_{1},A_{2},\dots,A_{n}$, it holds that
+$$\begin{aligned}
+P(A_{1}\cup A_{2}\cdots\cup A_{n}) & =\sum_{j=1}^{n}P(A_{j})-\sum_{i<j}P(A_{i}\cap A_{j})+\sum_{i<j<k}P(A_{i}\cap A_{j}\cap A_{k})-\cdots\\
+ & \quad(-1)^{n+1}P(A_{1}\cap\cdots\cap A_{n}).\end{aligned}$$
+:::
+
+This formula can be proved by induction using the axioms. Below is a
+famous application (known as de Montmort's problem, named after French
+mathematician Pierre Remond de Montmort) of the inclusion-exclusion
+theorem.
+
+::: {#exm-match}
+(Matching problem) 
+Suppose there are $n$ people who each check in a hat at a party. 
+The hats are randomly returned to them without any concern for whose 
+hat is whose. What is the probability that at least one person gets
+their own hat back?
+:::
+
+::: solution
+Let $A_j$ be the event: the $j$-th person gets his own hat. The problem 
+is equivalent to find $P(A_{1}\cup A_{2}\cup\cdots\cup A_{n})$.
+
+Since all position are equally likely, $P(A_{j})=\frac{1}{n}$. The
+probability of there being two matches is:
+$P(A_{1}\cap A_{2})=\frac{(n-2)!}{n!}=\frac{1}{n(n-1)}$. Similarly, the
+probability of there being $k$ matches is:
+$P(A_{1}\cap\cdots\cap A_{k})=\frac{(n-k)!}{n!}=\frac{1}{n(n-1)\cdots(n-k+1)}$.
+Using the property of the union of events,
+$$\begin{aligned}P(A_{1}\cup A_{2}\cup\cdots\cup A_{n})= & n\cdot\frac{1}{n}-\binom{n}{2}\frac{1}{n(n-1)}+\binom{n}{3}\frac{1}{n(n-1)(n-2)}-\cdots\\
+= & 1-\frac{1}{2!}+\frac{1}{3!}-\frac{1}{4!}+\cdots+(-1)^{n+1}\frac{1}{n!}\\ \approx & 1-\frac{1}{e}.
+\end{aligned}$$
+:::
+
+::: callout-tip
+### Pattern matching with Taylor series
+Pattern matching is a very useful technique. In the last step, we recognize that 
+the Taylor series of $e^x$ is
+$$e^x = 1 + x + \frac{x^2}{2!} +\frac{x^3}{3!}+\cdots $$
+Therefore, $e^{-1} = 1 -1  + \frac{1}{2!} - \frac{1}{3!}+\cdots$
+:::

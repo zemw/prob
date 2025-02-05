@@ -1,0 +1,85 @@
+## Multivariate normal
+
+::: {#def-mvn}
+## Bivariate normal distribution
+
+$(X,Y)$ is said to have a Bivariate Normal distribution if the joint PDF
+satisfies
+$$f(x,y)=\frac{1}{2\pi\sqrt{1-\rho^{2}}}\exp\left(-\frac{1}{2(1-\rho^{2})}(x^{2}+y^{2}-2\rho xy)\right)$$
+where $\rho\in(-1,1)$ is the correlation between $X$ and $Y$.
+:::
+
+::: {layout-ncol="2"}
+![](img/binorm1.png)
+
+![](img/binorm2.png)
+:::
+
+**Multivariate Normal (MVN)** is an extension of the bivariate normal
+distribution to $n$-dimensional variables. We skip the joint PDF here
+since it is too complicated. But like the bivariate case, an MVN is
+fully specified by knowing the mean of each component, the variance of
+each component, and the covariance between any two components.
+
+::: callout-caution
+## Marginal normality does not imply joint normality
+
+If $(X_{1},...,X_{k})$ is MVN, then the marginal distribution of every
+$X_{j}$ is Normal. However, the converse is false: it is possible to
+have Normally distributed $X_{1},...,X_{k}$ such that
+$(X_{1},...,X_{k})$ is not Multivariate Normal.
+:::
+
+```{r, fig.asp=0.4}
+# Load necessary library
+library(MASS)
+
+# Set seed for reproducibility
+set.seed(123)
+
+# Generate bivariate normal data
+bvn_data <- mvrnorm(n = 1000, 
+                    mu = c(0, 0), 
+                    Sigma = matrix(c(1, 0.5, 0.5, 1), nrow = 2))
+
+# Modify the joint distribution: apply a nonlinear transformation
+bvn_data[, 2] <- bvn_data[, 2] + 2 * sin(bvn_data[, 1]) 
+
+# The marginal distribution remains normal
+par(mfrow = c(1, 3))
+hist(bvn_data[, 1], main = "Marginal X1", col = "lightblue")
+hist(bvn_data[, 2], main = "Marginal X2", col = "lightblue")
+
+# But the joint distribution is not normal
+plot(bvn_data, main = "Joint Distribution", pch = 16, col = rgb(1,0,0,.2))
+```
+
+::: {#thm-mvn}
+A random vector $(X_{1},...,X_{k})$ is Multivariate Normal if every
+linear combination of the $X_{j}$ has a Normal distribution ($X_{j}$ do
+not have to be independent). That is, we require
+$t_{1}X_{1}+\cdot\cdot\cdot+t_{k}X_{k}$ to have a Normal distribution
+for any choice of constants $t_{1},...,t_{k}$.
+:::
+
+::: {#thm-mvn-corr}
+In general, uncorrelated does not imply independent. But with an MVN
+random vector, uncorrelated implies independent. In particular, if
+$(X,Y)$ is Bivariate Normal and $\rho_{XY}=0$, then X and Y are
+independent.
+:::
+
+::: {#thm-mvn-condexp}
+If $(X,Y)$ is Bivariate Normal, then the conditional expectation
+satisfies $$E(Y|X)=E(Y)+\frac{Cov(X,Y)}{Var(X)}(X-E(X)).$$
+
+In other words, $$E(Y|X)=a+bX$$where $b=\frac{Cov(X,Y)}{Var(X)}$ and
+$a=E(Y)-bE(X)$.
+:::
+
+This is exactly the case in @def-lm, where we assume the conditional
+expectation $E(Y|X)$ is a linear function of $X$. This assumption is
+true when $(X,Y)$ are jointly normal. Otherwise, the assumption might
+not be reasonable. In practice, we don't know precisely the joint
+distribution of variables. The linear model is just a simplified
+assumption.

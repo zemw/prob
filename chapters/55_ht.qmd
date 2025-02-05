@@ -1,0 +1,188 @@
+## Hypothesis testing
+
+Confidence interval allows us to construct an interval estimate of a
+population parameter. Hypothesis testing allows us to test specific
+hypothesis about a population parameter with the evidence obtained from
+a sample. The earliest use of statistical hypothesis testing is
+generally credited to the question of whether male and female births are
+equally likely (null hypothesis), which was addressed in the 1700s by
+John Arbuthnot and later by Pierre-Simon Laplace.
+
+Let $p$ be the population ratio (defined as the ratio of boys to the
+total number of babies). We hypotheses that $$H_{0}:p=0.5$$ This is
+called the **null hypothesis**, which is the hypothesis we want to test.
+If the null hypothesis is false, we have $$H_{1}:p\neq0.5$$ This is
+called the **alternative hypothesis**. How am I able to test which
+hypothesis is true? I can answer this question by collecting a small
+sample. Suppose I have collected a sample of $50$ babies computed a
+sample ratio of $\hat{p}=0.55$. Does it prove or disprove the
+hypothesis?
+
+Note that the ratio $\hat{p}$ can be regarded as a sample mean. Let
+$X_{i}$ be a random variable that equals $1$ if the $i$-th baby is a boy
+and $0$ otherwise. Then, $\hat{p}=\frac{1}{n}\sum_{i=1}^{n}X_{i}$. The
+variance of $\hat{p}$ is given by
+$$Var(\hat{p})=\frac{1}{n^{2}}\sum_{i=1}^{n}Var(X_{i})=\frac{p(1-p)}{n}$$
+since $X_{i}$ is a Bernoulli random variable. By the Central Limit
+Theorem, we have $$\frac{\hat{p}-p}{\sqrt{\frac{p(1-p)}{n}}}\to N(0,1)$$
+Suppose $H_{0}$ is true, then we know the distribution of $\hat{p}$. In
+particular, there is 95% chance that $\hat{p}$ would be in the interval
+$$p\pm1.96\sqrt{\frac{p(1-p)}{n}}=0.5\pm0.14$$ Our observed sample mean
+$\hat{p}=0.55$ is not outrageous. It is well within this interval. [That
+means the evidence is not against the null hypothesis.]{.underline} It
+does not mean $H_{0}$ is true. But it is reasonable given we have
+observed a sample mean $\hat{p}=0.55$.
+
+Suppose we have observed $\hat{p}=0.65$. This piece of evidence does not
+seem to be consistent with the null hypothesis. Because if $H_{0}$ is
+true, we only have less than 5% chance of observing this sample mean. It
+is extremely unlikely. Based on this sample, we are more inclined to
+reject the $H_{0}$. Rejecting the null hypothesis does not mean it is
+false, [but it means our evidence does not support this
+hypothesis.]{.underline}
+
+![](img/pvalue.jpg){width="60%" fig-align="center"}
+
+$p$**-value**: the probability of obtaining test results at least as
+extreme as the result actually observed, under the assumption that the
+null hypothesis is correct. A very small $p$-value means that such an
+extreme observed outcome would be very unlikely under the null
+hypothesis. Thus, [The smaller the $p$-value, the stronger the evidence
+against the $H_{0}$.]{.underline}
+
+In some studies, we can simply report the $p$-value and let people judge
+whether the evidence is strong enough. In other studies, we prefer to
+select a cut-off value $\alpha$, call the **significance level**, and
+follow the rule:
+
+-   If the $p\textrm{-value}<\alpha$, reject $H_{0}$;
+-   If the $p\textrm{-value}>\alpha$, do not reject $H_{0}$.
+
+Commonly used significance levels: $0.05$ and $0.01$. And we like to use
+the word "significant" to describe the test result:
+
+-   A test with $p\textrm{-value}<0.05$ is said to be (statistically)
+    **significant**;
+-   A test with $p\textrm{-value}<0.01$ is said to be highly
+    **significant**.
+
+When we make a decision about accepting or rejecting a hypothesis, there
+are chances that we make a mistake. There are two types of mistakes:
+**Type 1 error** and **Type 2 error**.
+
+|     |                  |                |                        |
+|-----|------------------|:--------------:|------------------------|
+|     |                  |    Decision    |                        |
+|     |                  | Reject $H_{0}$ | Fail to reject $H_{0}$ |
+|     | $H_{0}$ is true  |  Type 1 error  | $\checkmark$           |
+|     | $H_{0}$ is false |  $\checkmark$  | Type 2 error           |
+
+**Type 1 error** is rejecting the $H_{0}$ when it is true. **Type 2
+error** is failing to reject the $H_{0}$ when it is false. Usually, it
+is more important to control the Type 1 error than the the Type 2 error.
+That is, we want to minimize the chance of falsely rejecting the null
+hypothesis.
+
+In the example above, we reject the null hypothesis on the ground that
+there is only 2.3% of the chance that we could observe this sample.
+Therefore, the probability of Type 1 error is only 2.3%.
+
+If we make decisions based on a significance level, the significance
+level is the Type 1 error rate. In other words, when using a 5%
+significance level, there is 5% chance of making a Type 1 error.
+
+$$P(\textrm{Type 1 error}|H_{0}\textrm{ is true})=\alpha$$
+
+This is why we prefer small values of $\alpha$---smaller $\alpha$
+reduces the Type 1 error rate. However, significance level doesn't
+control Type 2 error rate.
+
+### Hypothesis testing with $z$-statistics {.unnumbered}
+
+We may have noticed that, in the above example, the assumption that the
+population $\sigma$ is known is unrealistic. In practice, we approximate
+it with the standard error $s/\sqrt{n}$. The approximate is valid if the
+the sample size is large enough or the underlying distribution is nearly
+normal. If this is not the case, we would opt for a $t$-test. Here we
+summarize the steps of testing for a population mean with
+$z$-statistics.
+
+We notice that the **two-sided** hypothesis tests are very closed
+related to the concept of confidence intervals. A two-sided test means
+we are interested in rejection regions on both sides of the tail
+distribution. Typically, the alternative hypothesis is
+$H_{1}:\mu\neq\mu_{0}$.
+
+![](img/twosides.png){width="80%" fig-align="center"}
+
+Suppose we are doing a hypothesis test under the significance level
+$\alpha$, the region of accepting the $H_{0}$ is
+
+$$-z_{\alpha/2}\leq\frac{\bar{X}-\mu}{SE}\leq z_{\alpha/2}$$
+
+such that the rejection region ($p$-value) has probability $\alpha$.
+This is equivalent to
+$$\bar{X}-z_{\alpha/2}SE\leq\mu\leq\bar{X}+z_{\alpha/2}SE$$
+
+which is exactly the $100(1-\alpha)\%$ confidence interval of $\bar{X}$.
+Therefore, for a two-sided test, we have the rule:
+
+-   Reject $H_{0}$ if $\mu$ is not in the $100(1-\alpha)\%$ CI:
+    $\bar{X}\pm z_{\alpha/2}SE$
+
+We conclude this chapter by reiterating a couple of critical points that
+could be easily misunderstood.
+
+Rejecting $H_{0}$ doesn't means we are 100% sure that $H_{0}$ is false.
+We might make Type 1 errors. Setting a significance level just guarantee
+we won't make Type 1 error too often.
+
+Failing to reject $H_{0}$ does not necessarily mean $H_{0}$ is true. We
+could make a type 2 error when failing to reject $H_{0}$. Moreover,
+unlike type 1 error rate is controlled at a low level, type 2 error rate
+is usually quite high. When we fail to reject $H_{0}$, it just means the
+data are not able to distinguish between $H_{0}$ and $H_{1}$. That's why
+we say *fail to reject*. [$p$-value is not the probability that the
+$H_{0}$ is true.]{.underline}
+
+Saying that results are statistically significant just informs the
+reader that the findings are unlikely due to chance alone. However, it
+says nothing about the practical importance of the finding. For example,
+rejecting the $H_{0}$: $\mu=\mu_{0}$ does not tell us how big the
+difference $|\mu-\mu_{0}|$ is. Mostly in practice we care more about the
+magnitude of this difference, rather than the fact that they are indeed
+different. It is possible that the difference is too small to be
+relevant even if it is significant.
+
+### Hypothesis testing with $t$-statistics {.unnumbered}
+
+When the sample size is small, we opt for $t$-test for more reliable
+hypothsis testing. Define test statistics
+$$T=\frac{\bar{X}-\mu}{s/\sqrt{n}}$$ where $s$ is the sample standard
+deviation. For small samples, this test statistics follows a Student
+$t$-distribution with $n$ degrees of freedom, $T\sim t(n)$.
+
+Why Student-$t$ distribution? Recall the definition of Student-$t$
+distribution: when the underlying distribution of
+$X_{1},X_{2},\dots,X_{n}$ is Normal, sample variance $s^{2}$ follows a
+$\chi^{2}$ distribution. $T$ follows $t$ distribution by definition
+regardless of the sample size. However, if the underlying distribution
+is not normal, this argument loses ground. We use $t$-test mainly as a
+convention. But $t$ distribution has heavier tails than standard normal,
+meaning that we are more likely to reject a hypothesis based on $t$
+distribution. In other words, $t$-test is a more conservative choice
+than $z$-test for small samples.
+
+|                   |       |       |       |
+|:-----------------:|:-----:|:-----:|:-----:|
+| one-tail $\alpha$ | 0.05  | 0.025 | 0.005 |
+| two-tail $\alpha$ | 0.10  | 0.05  | 0.01  |
+|       d.f.        |       |       |       |
+|        10         | 1.812 | 2.228 | 3.169 |
+|        20         | 1.725 | 2.086 | 2.845 |
+|        30         | 1.697 | 2.042 | 2.750 |
+|     $z$ value     | 1.645 | 1.960 | 2.576 |
+
+The table shows a few critical values for $t$-test with different
+degrees of freedom (d.f.). We can see as the sample size gets larger,
+$t$ distribution converges to standard normal.

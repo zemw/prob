@@ -1,0 +1,68 @@
+# Convolution
+
+A convolution is a sum of independent random variables. The main task in
+this section is to determine the distribution of $T = X + Y$, where $X$
+and $Y$ are independent random variables whose distributions are known.
+
+::: {#thm-convolution}
+## Convolution
+
+If $X$ and $Y$ are independent discrete random variables, then the PMF
+of their sum $T=X+Y$ is $$\begin{aligned}P(T=t)
+&=\sum_x P(Y=t-x)P(X=x)\\
+&=\sum_y P(X=t-y)P(Y=y)
+\end{aligned}.$$ If $X$ and $Y$ are independent continuous random
+variables, then the PDF of their sum $T=X+Y$ is $$\begin{aligned}
+f_T(t) &= \int_{-\infty}^{\infty} f_Y(t-x)f_X(x) dx  \\
+&=  \int_{-\infty}^{\infty} f_X(t-y)f_Y(y) dy.
+\end{aligned}$$
+:::
+
+::: {#thm-bin-sum}
+## Sum of Binomial random variables
+
+Let $X\sim \text{Bin}(n,p)$ and $Y\sim \text{Bin}(m,p)$ be two
+independent Binomial random variables. Then $X+Y\sim \text{Bin}(n+m,p)$.
+:::
+
+::: proof
+We have proved the theorem in @thm-bin. Here is another way to prove it
+using convolution.
+
+$$\begin{aligned}
+P(X+Y=k) & =\sum_{i=0}^k P(X=i)P(Y=k-i)\\
+ & =\sum_{i=0}^k\binom{n}{i}p^{i}(1-p)^{n-i}\binom{m}{k-i}p^{k-i}(1-p)^{m-k+i}\\
+ & =\sum_{i=0}^k\binom{n}{i}\binom{m}{k-i}p^{k}(1-p)^{m+n-k}\\
+ & =p^{k}(1-p)^{m+n-k}\sum_{i=0}^{k}\binom{n}{i}\binom{m}{k-i}\\
+ & =p^{k}(1-p)^{m+n-k}\binom{n+m}{k}.\end{aligned}$$
+
+The last step: $\binom{n+m}{k}=\sum_{i=0}^{k}\binom{n}{i}\binom{m}{k-i}$
+
+is known as the Vandermonde's identity.
+:::
+
+::: {#exm-pois-sum}
+## Sum of Poisson random variables
+
+If $X\sim \text{Pois}(\lambda_{1})$, $Y\sim \text{Pois}(\lambda_{2})$,
+and $X,Y$ are independent, then
+$X+Y\sim \text{Pois}(\lambda_{1}+\lambda_{2})$.
+:::
+
+::: proof
+Intuitively, $X$ is the number of events occurring at rate $\lambda_1$;
+$Y$ is the number of events occurring at rate $\lambda_2$. Therefore,
+$X+Y$ should be events occurring at rate $\lambda_1+\lambda_2$.
+
+To get the PMF of $X+Y$, condition on $X$ and use the law of total
+probability: $$\begin{aligned}
+P(X+Y=k) 
+ & =\sum_{j=0}^{k}P(Y=k-j)P(X=j)\\
+ & =\sum_{j=0}^{k}\frac{e^{-\lambda_{2}}\lambda_{2}^{k-j}}{(k-j)!}\cdot\frac{e^{-\lambda_{1}}\lambda_{1}^{j}}{j!}\\
+ & =\frac{e^{-(\lambda_{1}+\lambda_{2})}}{k!}\sum_{j=0}^{k}\binom{k}{j}\lambda_{1}^{j}\lambda_{2}^{k-j}\\
+ & =\frac{e^{-(\lambda_{1}+\lambda_{2})}}{k!}(\lambda_{1}+\lambda_{2})^{k}.\end{aligned}$$
+We thus arrive at the PMF for $\text{Pois}(\lambda_{1}+\lambda_{2})$.
+Intuitively, if there are two different types of events occurring at
+rates $\lambda_{1}$ and $\lambda_{2}$, independently, then the overall
+event rate is $\lambda_{1}+\lambda_{2}$.
+:::

@@ -1,0 +1,80 @@
+## Variance
+
+Expectation is the most commonly used summary of a distribution, as it
+indicates where values are likely centered. However, it provides limited
+insight into the distribution's overall shape. For example, two random
+variables might have the same mean, yet one could have values spread far
+from the mean while the other has values tightly clustered around it.
+Variance, on the other hand, describes how far values in a distribution
+typically deviate from the mean, offering a measure of the
+distribution's dispersion.
+
+::: {#def-var}
+The **variance** of a random variable $X$ is defined as
+$$Var(X)=E\left[X-E(X)\right]^{2}.$$ By convention, variance is also
+denoted by Greek letter $\sigma^2$, where $\sigma = \sqrt{Var(X)}$ is
+called the **standard deviation**.
+:::
+
+Variance measures how far $X$ typically deviates from its mean, but
+instead of averaging the differences, we average the squared differences
+to ensure both positive and negative deviations contribute. The expected
+deviation, $E(X-E(X))$, is always zero, so squaring avoids this
+cancellation. Since variance is in squared units, we take the square
+root to get the standard deviation, restoring the original units.
+
+::: callout-note
+### Why squared deviation?
+
+We can measure the dispersion of a distribution in different ways. For
+example, $E(|X-E(X)|)$ is also a possible choice. But it is less common
+because the absolute value function isn't differentiable. Besides,
+squaring connects to geometric concepts like the distance formula and
+Pythagorean theorem, which have useful statistical meanings.
+:::
+
+::: callout-note
+### Sample variance
+
+@def-var gives the theoretical variance of a distribution. With finite
+sample from the distribution, we estimate the variance with sample
+observations: $$\hat\sigma^2=\frac{1}{n-1}\sum_{i=1}^n (x_i-\bar x)^2$$
+Why dividing by $n-1$? Because we want an unbiased estimator. We will
+discuss this in later chapters.
+:::
+
+::: {#thm-var}
+For any random variable $X$, $$Var(X)=E(X^{2})-(EX)^{2}.$$
+:::
+
+::: proof
+Let $\mu=E(X)$. By definition, $$\begin{aligned}
+Var(X) & =E(X-\mu)^{2}=E(X^{2}-2\mu X+\mu^{2})\\
+ & =E(X^{2})-2\mu E(X)+\mu^{2}=E(X^{2})-\mu^{2}.\end{aligned}$$
+:::
+
+::: {#exm-4.13}
+Find the variance for $X\sim\textrm{Bern}(p).$
+$$Var(X)=E(X^{2})-E^{2}(X)=p-p^{2}=p(1-p).$$
+:::
+
+::: {#prp-var}
+Variance has the following properties:
+
+-   $Var(X)\geq0$
+
+-   $Var(X+c)=Var(X)$
+
+-   $Var(cX)=c^{2}Var(X)$
+
+-   If $X,Y$ are independent, $Var(X+Y)=Var(X)+Var(Y)$.
+
+-   If $X_{1},X_{2},\dots,X_{n}$ are independent,
+    ${\displaystyle Var(\sum_{i=1}^{n}X_{i})=\sum_{i=1}^{n}Var(X_{i})}$.
+:::
+
+::: {#exm-4.14}
+Find the variance for $X\sim\textrm{Bin}(n,p).$ $X=X_{1}+\cdots+X_{n}$
+where $X_{i}$ are $i.i.d$ Bernoulli distributions
+$$Var(X)\overset{iid}{=}\sum_{i=1}^{n}Var(X_{i})=np(1-p).$$
+:::

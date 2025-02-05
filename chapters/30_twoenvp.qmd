@@ -1,0 +1,128 @@
+## Two envelope paradox
+
+::: {#exm-two-envelope}
+### Two-envelope paradox
+
+Imagine you are given two identical envelopes, each containing money.
+One contains twice as much as the other. You may pick one envelope and
+keep the money it contains. Having chosen an envelope at will, but
+before inspecting it, you are given the chance to switch envelopes.
+Should you switch?
+:::
+
+The paradox arises when you try to solve the expectation. Let $A$ denote
+the amount of money in the envelope you have chosen, and $B$ denote the
+amount of money in the other envelope.
+
+We know $B$ is either twice as much as $A$, or half as much as $A$. Each
+with probability $1/2$. So
+
+$$E(B) = \frac{1}{2}(2A) + \frac{1}{2}(A/2) = \frac{5}{4}A$$
+
+Since $E(B)>A$, you should always switch! However, after you switch to
+$B$, by the same argument, you should switch back to $A$. You you switch
+back and forth indefinitely!
+
+**Where do things go wrong?** The error in this calculation lies in a
+subtle misunderstanding: the two $A$s in the calculation actually
+represent different values, that are incorrectly equated. In particular,
+the $2A$ represents the expected value in the other envelope given that
+it is the larger one, and the $A/2$ represents the expected value in the
+other envelope given that it is the smaller one.
+
+$$E(B) = E(B|B<A)P(B<A) + E(B|B>A)P(B>A)$$
+
+Suppose the amount of money in the two envelopes are $a$ and $2a$
+respectively. $E(B|B<A)=a$ and $E(B|B>A)=2a$. Therefore,
+
+$$E(B)=\frac{1}{2}a + \frac{1}{2}2a = \frac{3}{2}a.$$
+
+The same calculation applies to $E(A)$. Thus, $E(A)=E(B)$.
+
+::: {#exm-hh-ht}
+### HH vs HT
+
+Flip a coin indefinite times. Let $X$ denote the number of flips until
+you see HH. Let $Y$ denote the number of flips until you see HT. Find
+$E(X)$ and $E(Y)$.
+:::
+
+It is tempting to think they are the same, since either H or T happens
+with probability 1/2. But the answer is extremely counter-intuitive:
+$E(X)>E(Y)$!
+
+**HH case.** Let $E_0$ = E(X\|No H observed), and $E_1$ = E(X\|One H
+observed). Then $$E_0 = 1 + \frac{1}{2}E_1 + \frac{1}{2}E_0$$
+
+The first term is we need to flip once. If the first flip is H, the
+additional expected number of flips is $E_1$. If the first flip is T, we
+have to start over again ($E_0$).
+
+$$E_1 = 1 + \frac{1}{2}(0) + \frac{1}{2}E_0$$
+
+Once we have observed an H, we do another flip. If it is another H, we
+are done. If it is a T, we have to start over again ($E_0$).
+
+Solve the two equations, we have $E_0=6$, $E_1=4$. Thus, $E(X)=6$.
+
+**HT case.** Let $E_0$ = E(Y\|No H observed), and $E_1$ = E(Y\|One H
+observed). Then
+
+$$E_0 = 1 + \frac{1}{2}E_1 + \frac{1}{2}E_0$$
+
+If the first flip is H, we need $E_1$. If the first flip is T, we have
+wasted the flip, so it is $E_0$ again.
+
+$$E_1 = 1 + \frac{1}{2}(0) + \frac{1}{2}E_1$$
+
+If we have a T by 1/2 chance, we are done (the first term). If it is an
+H, we get another $E_1$.
+
+In this case, we have $E_0=4$, $E_1=2$. Thus, $E(Y)=4$.
+
+```{r}
+# Function to simulate the number of flips until a specific pattern appears
+simulate_pattern <- function(pattern, n_simulations) {
+  results <- numeric(n_simulations)
+  
+  for (i in 1:n_simulations) {
+    flips <- character(0)  # Initialize an empty vector to store flips
+    count <- 0  # Initialize the flip counter
+    
+    while (TRUE) {
+      # Simulate a coin flip (H or T)
+      flip <- sample(c("H", "T"), 1)
+      flips <- c(flips, flip)  # Append the flip to the sequence
+      count <- count + 1  # Increment the flip counter
+      
+      # Check if the last two flips match the pattern
+      if (length(flips) >= 2 && all(tail(flips, 2) == pattern)) {
+        results[i] <- count  # Record the number of flips
+        break  # Exit the loop
+      }
+    }
+  }
+  
+  return(results)
+}
+
+# Set the number of simulations
+n_simulations <- 2000
+
+# Simulate for HH
+results_HH <- simulate_pattern(c("H", "H"), n_simulations)
+expected_HH <- mean(results_HH)
+
+# Simulate for HT
+results_HT <- simulate_pattern(c("H", "T"), n_simulations)
+expected_HT <- mean(results_HT)
+
+# Create a table of results
+results_table <- data.frame(
+  Pattern = c("HH", "HT"),
+  Expected_Flips = c(expected_HH, expected_HT)
+)
+
+# Print the table
+knitr::kable(results_table)
+```

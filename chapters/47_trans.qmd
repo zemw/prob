@@ -1,0 +1,108 @@
+## Transformation
+
+::: {#exm-max-unif}
+## Min/max of random variables
+
+Let $X_1, X_2, \dots, X_n$ be i.i.d random variables, each following a
+uniform distribution on the interval $[0, 1]$. Find the distribution of
+$\max(X_1, X_2, \dots, X_n)$.
+:::
+
+::: solution
+Let $M = \max(X_1, X_2, \dots, X_n)$. The CDF of $M$, denoted $F_M(m)$,
+is the probability that $M \leq m$. For $M \leq m$ to hold, all $X_i$
+must satisfy $X_i \leq m$. Since the $X_i$ are independent and
+identically distributed: $$\begin{aligned}
+F_M(m) = P(M \leq m) &= P(X_1 \leq m, X_2 \leq m, \dots, X_n \leq m) \\
+&= P(X_1 \leq m) \cdot P(X_2 \leq m) \cdots P(X_n \leq m)
+\end{aligned}$$ For a uniform distribution on $[0, 1]$,
+$P(X_i \leq m) = m$ for $0 \leq m \leq 1$. Thus: $$F_M(m) = m^n.$$ The
+PDF of $M$, denoted $f_M(m)$, is the derivative of the CDF:
+$$f_M(m) = \frac{d}{dm} F_M(m) = \frac{d}{dm} (m^n) = n m^{n-1}.$$
+:::
+
+::: {#exm-chi-square}
+## Chi-square PDF
+
+Let $X\sim N(0,1)$, $Y=X^{2}$. The distribution of $Y$ is an example of
+a Chi-Square distribution. Find the PDF of $Y$.
+:::
+
+::: solution
+Again, we try to find the CDF first, and differentiate to the PDF.
+$$F_{Y}(y)=P(X^{2}\leq y)=P(-\sqrt{y}\leq X\leq\sqrt{y})=\Phi(\sqrt{y})-\Phi(-\sqrt{y})=2\Phi(\sqrt{y})-1$$
+Therefore,
+$$f_{Y}(y)=2\varphi(\sqrt{y})\cdot\frac{1}{2}y^{-1/2}=\varphi(\sqrt{y})y^{-1/2},\quad y>0.$$
+:::
+
+::: {#thm-trans}
+## Transformation
+
+Let $X$ be a continuous r.v. with PDF $f_{X}$, and let $Y=g(X)$, where
+$g$ is differentiable and [strictly increasing]{.underline} (or
+[strictly decreasing]{.underline}). Then the PDF of $Y$ is given by
+$$f_{Y}(y)=f_{X}(x)\left|\frac{dx}{dy}\right|,$$ where $x=g^{-1}(y)$.
+:::
+
+::: proof
+Let $g$ be strictly increasing. The CDF of $Y$ is
+$$F_{Y}(y)=P(Y\leq y)=P(g(X)\leq y)=P(X\leq g^{-1}(y))=F_{X}(g^{-1}(y))=F_{X}(x)$$
+By the chain rule, the PDF of $Y$ is $$f_{Y}(y)=f_{X}(x)\frac{dx}{dy}.$$
+If $g$ is strictly decreasing,
+$$F_{Y}(y)=P(Y\leq y)=P(g(X)\leq y)=P(X\geq g^{-1}(y))=1-F_{X}(g^{-1}(y))=1-F_{X}(x)$$
+Then the PDF of $Y$ is $$f_{Y}(y)=-f_{X}(x)\frac{dx}{dy}.$$ But in this
+case, $dx/dy<0$. So taking absolute value covers both cases.
+:::
+
+::: {#exm-lognormal}
+## Log-Normal PDF
+
+Let $X\sim N(0,1)$, $Y=e^{X}$. Then the distribution of $Y$ is called
+the Log-Normal distribution. Find the PDF of $Y$.
+:::
+
+::: solution
+Since $g(x)=e^{x}$ is strictly increasing. Let $y=e^{x}$, so $x=\log y$
+and $dy/dx=e^{x}$. Then
+$$f_{Y}(y)=f_{X}(x)\left|\frac{dx}{dy}\right|=\varphi(x)\frac{1}{e^{x}}=\varphi(\log y)\frac{1}{y},\quad y>0.$$
+Note that after applying the change of variables formula, we write
+everything on the right-hand side in terms of $y$, and we specify the
+support of the distribution. To determine the support, we just observe
+that as $x$ ranges from $-\infty$ to$\infty$, $e^{x}$ ranges from $0$ to
+$\infty$.
+:::
+
+::: {#thm-mtrans}
+## Transformation of multi-variables
+
+Let $\mathbf{X}=(X_{1},\dots,X_{n})$ be a continuous random vector with
+joint PDF $f_{\mathbf{X}}$, and let $\mathbf{Y}=g(\mathbf{X})$ where $g$
+is an invertible function from $\mathbb{R}^{n}$ to $\mathbb{R}^{n}$. Let
+$\mathbf{y}=g(\mathbf{x})$. Define the Jacobian matrix:
+$$\frac{\partial\mathbf{x}}{\partial\mathbf{y}}=\begin{pmatrix}\frac{\partial x_{1}}{\partial y_{1}} & \frac{\partial x_{1}}{\partial y_{2}} & \dots & \frac{\partial x_{1}}{\partial y_{n}}\\
+\vdots & \vdots &  & \vdots\\
+\frac{\partial x_{n}}{\partial y_{1}} & \frac{\partial x_{n}}{\partial y_{2}} & \dots & \frac{\partial x_{n}}{\partial y_{n}}
+\end{pmatrix}.$$ Also assume that the determinant of the Jacobian matrix
+is never 0. Then the joint PDF of $\mathbf{Y}$ is
+$$f_{\mathbf{Y}}(\mathbf{y})=f_{\mathbf{X}}(\mathbf{x})\left|\frac{\partial\mathbf{x}}{\partial\mathbf{y}}\right|,$$
+where $\left|\frac{\partial\mathbf{x}}{\partial\mathbf{y}}\right|$ is
+the absolute value of the determinant of the Jacobian matrix.
+:::
+
+::: {#exm-jacobian}
+Suppose $X,Y\overset{iid}{\sim}Expo(1)$. Find the distribution of
+$X/(X+Y)$.
+:::
+
+::: solution
+Let $U=\frac{X}{X+Y}$, $V=X+Y$. Then $X=UV$, $Y=V-UV$. The determinant
+of the Jacobian matrix is
+$$\left|\frac{\partial(x,y)}{\partial(u,v)}\right|=\left|\begin{array}{cc}
+v & u\\
+-v & 1-u
+\end{array}\right|=v$$ Thus, the joint distribution of $(U,V)$ is
+$$f_{UV}(u,v)=f_{XY}(x,y)|v|=f_{X}(x)f_{Y}(y)v=e^{-(x+y)}v=e^{-v}v.$$
+The distribution of $X/(X+Y)$ is equivalent to the marginal distribution
+of $U$: $$f_{U}(u)=\int_{0}^{\infty}e^{-v}vdv=1$$ for $0\leq u\leq1$.
+Hence $U$ is a Uniform distribution over $[0,1]$.
+:::

@@ -1,0 +1,101 @@
+## Beta distribution
+
+The Beta distribution is a continuous distribution on the interval
+$(0,1)$. It is a generalization of the $\textrm{Unif}(0,1)$
+distribution, allowing the PDF to be non-constant on $(0,1)$.
+
+::: {#def-beta}
+## Beta distribution
+
+A random variable $X$ is said to have the Beta distribution with
+parameters $a$ and $b$, $a>0$ and $b>0$, if its PDF is
+$$f(x)=\frac{1}{\beta(a,b)}x^{a-1}(1-x)^{b-1},\quad0<x<1$$ where the
+constant $\beta(a,b)$ is chosen to make the PDF integrate to $1$. We
+write this as $X\sim\textrm{Beta}(a,b)$.
+:::
+
+The Beta distribution takes different shapes for different $a$ and $b$
+values. Here are some general patterns:
+
+-   If $a=b=1$, the $\textrm{Beta}(1,1)$ PDF is constant on $(0,1)$,
+    equivalent to $\textrm{Unif}(0,1)$.
+-   If $a<1$ and $b<1$, the PDF is U-shaped and opens upward. If $a>1$
+    and $b>1$, the PDF opens downward.
+-   If $a=b$, the PDF is symmetric about $1/2$. If $a>b$, the PDF favors
+    values larger than $1/2$. If $a<b$, the PDF favors values smaller
+    than $1/2$.
+
+To make the PDF integrates to 1, the constant $\beta(a,b)$ has to
+satisfy $$\beta(a,b)=\int_{0}^{1}x^{a-1}(1-x)^{b-1}dx.$$
+
+We now try to find this integral:
+
+$$\begin{aligned}
+\beta(a,b) & =\int_{0}^{1}\underbrace{x^{a-1}}_{f}\underbrace{(1-x)^{b-1}}_{g'}dx\\
+ & =\left[-x^{a-1}\frac{(1-x)^{b}}{b}\right]_{0}^{1}+\int_{0}^{1}(a-1)x^{a-2}\frac{(1-x)^{b}}{b}dx\\
+ & =\frac{a-1}{b}\beta(a-1,b+1)\\
+ & =\frac{a-1}{b}\cdot\frac{a-2}{b+1}\beta(a-2,b+2)\\
+ & =\frac{a-1}{b}\cdot\frac{a-2}{b+1}\cdot\frac{a-3}{b+2}\beta(a-3,b+3)\\
+ & \vdots\\
+ & =\frac{(a-1)!}{b(b+1)(b+2)\cdots(b+a-2)}\underbrace{\beta(1,a+b-1)}_{\frac{1}{a+b-1}}\\
+ & =\frac{(a-1)!}{\frac{(b+a-2)!}{(b-1)!}}\cdot\frac{1}{a+b-1}\\
+ & =\frac{(a-1)!(b-1)!}{(a+b-1)!}\\
+ & =\frac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}.\end{aligned}$$
+
+::: {#exm-unif-beta}
+Let $X_{1},\ldots,X_{n}$ be independent random variables with the
+uniform distribution on the interval $[0,1]$. Find the distribution of
+$Y=\max(X_{1},\ldots,X_{n})$.
+:::
+
+::: solution
+Let's find the CDF of $Y$: $$\begin{aligned}
+P(Y\leq y) & =P(X_{1}\leq y\cap X_{2}\leq y\cap\cdots\cap X_{n}\leq y)\\
+ & \overset{iid}{=}P(X_{1}\leq y)P(X_{2}\leq y)\cdots P(X_{n}\leq y)\\
+ & =y^{n}\end{aligned}$$ for $y\in[0,1]$. Hence,
+$$F_{Y}(y)=P(Y\leq y)=\begin{cases}
+0 & y<0\\
+y^{n} & 0\leq y\leq1\\
+1 & y>1
+\end{cases}$$ The PDF of $Y$ is $$f_{Y}(y)=F'_{Y}(y)=\begin{cases}
+ny^{n-1} & 0\leq y\leq1\\
+0 & \textrm{otherwise}
+\end{cases}$$ Thus, $Y\sim Beta(n,1)$.
+:::
+
+Beta distributions are often used as *priors* for parameters in Bayesian
+inference. We do not cover Bayesian inference in this book. Nonetheless
+we illustrate this with an example.
+
+::: {#exm-beta-binom}
+## Beta-Binomial conjugacy
+
+We have a coin that lands Heads with probability $p$, but we don't know
+what $p$ is. Our goal is to infer the value of $p$ after observing the
+outcomes of $n$ tosses of the coin. The larger that $n$ is, the more
+accurately we should be able to estimate $p$.
+:::
+
+::: solution
+We model the unknown parameter $p$ as a Beta distribution,
+$p\sim\textrm{Beta}(a,b)$. Since we are completely ignorant about this
+$p$, we can also model it as the uniform distribution. But we will see
+that using the Beta distribution is even simpler than the uniform
+distribution. Let $X$ be the number of heads in $n$ tosses of the coin.
+Then $$X|p\sim\textrm{Bin}(n,p)$$ Apply the Bayes' rule to inverse the
+conditioning: $$\begin{aligned}
+f(p|X=k) & =\frac{P(X=k|p)f(p)}{P(X=k)}\\
+ & =\frac{\binom{n}{k}p^{k}(1-p)^{n-k}\cdot\frac{1}{\beta(a,b)}p^{a-1}(1-p)^{b-1}}{\int_{0}^{1}\binom{n}{k}p^{k}(1-p)^{n-k}f(p)dp}\\
+ & \propto p^{a+k-1}(1-p)^{b+n-k-1}\end{aligned}$$
+
+This the kernel of $\textrm{Beta}(a+k,b+n-k)$. The rest is just a
+normalizing constant. Therefore, $$p|X=k\sim\textrm{Beta}(a+k,b+n-k).$$
+
+The *posterior* distribution of $p$ after observing $X=k$ is still a
+Beta distribution! This is a special relationship between the Beta and
+Binomial distributions called *conjugacy*: if we have a Beta prior
+distribution on $p$ and data that are conditionally Binomial given $p$,
+then when going from prior to posterior, we don't leave the family of
+Beta distributions. We say that the Beta is the conjugate prior of the
+Binomial.
+:::

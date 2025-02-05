@@ -1,0 +1,110 @@
+## Inequalities
+
+This section introduces some of the most popular inequality in
+statistics and general mathematics. Interestingly, our probability
+theories can shed light on these inequalities that are otherwise hard to
+explain. We don't show formal proofs here, but just point out how these
+inequalities can be useful in statistics.
+
+::: {#thm-cauchy}
+(Cauchy-Schwarz inequality).
+$$\left|\sum x_{i}y_{i}\right|\leq\sqrt{\sum x_{i}^{2}}\sqrt{\sum y_{i}^{2}}$$
+:::
+
+::: proof
+If $X,Y$ have zero means, their correlation can be written as
+
+$$\rho_{XY}=\frac{E(XY)}{\sqrt{E(X^{2})E(Y^{2})}}$$ Since
+$|\rho_{XY}|\leq1$, we always have
+$$|E(XY)|\leq\sqrt{E(X^{2})E(Y^{2})}.$$
+
+Consider $\{x_{i}\}$ and $\{y_{i}\}$ as realizations of $X$ and $Y$ with
+equal probabilities, such that $E(X)=\frac{1}{n}\sum x_{i}$. The
+original inequality is thus proved.
+:::
+
+::: {#thm-jensen}
+(Jensen's inequality). For a convex function $f$, we have
+$$\frac{1}{n}\sum f(x_{i})\geq f\left(\frac{1}{n}\sum x_{i}\right);$$ If
+$f$ is concave, then
+$$\frac{1}{n}\sum f(x_{i})\leq f\left(\frac{1}{n}\sum x_{i}\right).$$
+:::
+
+::: empty
+We do not intend to prove it, but offer a special case in statistics
+that helps to understand Jensen's inequality. Consider
+
+$$Var(X)=E(X^{2})-(E(X))^{2}\geq0$$
+
+We have
+
+$$E(X^{2})\geq(E(X))^{2}.$$
+
+Note that $f(X)=X^{2}$ is a convex function, and
+$E(*)=\frac{1}{n}\sum*$, we have shown the first inequality. The concave
+case is the opposite.
+
+In general, if $g$ is a convex function, then $E(g(X))\geq g(E(X))$. If
+$g$ is a concave function, then $E(g(X))\leq g(E(X))$. In both cases,
+the only way that equality can hold is if there are constants $a$ and
+$b$ such that $g(X)=a+bX$ with probability 1.
+:::
+
+::: {#thm-markov}
+(Markov inequality). Let $X$ be a random variable, then
+$$P(|X|\geq a)\leq\frac{E|X|}{a}$$ That is, the probability of $|X|$
+deviating from its mean by a multiple of $a$ must be less than $1/a$.
+:::
+
+::: proof
+Define a random variable $$I_{|X|\geq a}=\begin{cases}
+1 & \textrm{if }|X|\geq a\\
+0 & \textrm{if }|X|<a
+\end{cases}$$
+
+Note that $P(|X|\geq a)=E(I_{|X|\geq a})$. It always holds that
+
+$$a\cdot I_{|X|\geq a}\leq|X|$$
+
+Therefore,
+
+$$E\left[a\cdot I_{|X|\geq a}\right]\leq E|X|$$
+
+Hence,
+
+$$P(|X|\geq a)\leq\frac{E|X|}{a}.$$
+:::
+
+For an intuitive interpretation, let $X$ be the income of a randomly
+selected individual from a population. Taking $a=2E(X)$, Markov's
+inequality says that $P(X\geq2E(X))\leq1/2$, i.e., it is impossible for
+more than half the population to make at least twice the average income.
+This is clearly true, since if over half the population were earning at
+least twice the average income, the average income would be higher.
+Similarly, $P(X\geq3E(X))\leq1/3$: you can't have more than $1/3$ of the
+population making at least three times the average income, since those
+people would already drive the average above what it is.
+
+::: {#thm-cheb}
+(Chebyshev inequality). Let $X$ be a random variable with mean $\mu$ and
+standard deviation $\sigma$, then
+$$P\left(\left|X-\mu\right|> c\sigma\right)\leq\frac{1}{c^{2}}$$ That
+is, the probability of $X$ deviating from its mean by $a$ times the
+standard deviation must be less than $1/a^{2}$.
+:::
+
+::: proof
+We first show $$P(|X-\mu|>a)\leq\frac{\sigma^{2}}{a^{2}}$$ This is true
+by taking squares and applying the Markov inequality,
+
+$$P(|X-\mu|>a)=P((X-\mu)^{2}>a^{2})\leq\frac{E(X-\mu)^{2}}{a^{2}}=\frac{\sigma^{2}}{a^{2}}.$$
+
+Substitute $c\sigma$ for $a$, we have the original inequality.
+:::
+
+This gives us an upper bound on the probability of a random variable
+being more than $c$ standard deviations away from its mean, e.g., there
+can't be more than a 25% chance of being 2 or more standard deviations
+from the mean. Given the mean and standard deviation of a random
+variable $X$, we know that $\mu\pm2\sigma$ captures 75% of its possible
+values; $\mu\pm3\sigma$ captures 90% of the possible values.

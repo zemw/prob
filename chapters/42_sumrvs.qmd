@@ -1,0 +1,84 @@
+# Sum of random variables
+
+We have seen the sum of coin heads and the sum of dice points follow a
+"bell-shaped" distribution. This is not a coincidence. The pattern does
+not exist when the number of coins or dice are small, but becomes
+apparent when the numbers get large.
+
+```{r}
+# Function to simulate the sum of rolling n fair dice
+simulate_dice_sum <- function(n, n_simulations) {
+  
+  # Simulate rolling n dice n_simulations times
+  dice_rolls <- matrix(sample(1:6, n * n_simulations, replace = TRUE), 
+                       nrow = n_simulations, ncol = n)
+  
+  # Compute the sum of each roll
+  sums <- rowSums(dice_rolls)
+  
+  return(sums)
+}
+
+# Set seed for reproducibility
+set.seed(123)
+
+# Rolling 2 dice
+sums <- simulate_dice_sum(2, 1000)
+
+# Plot the distribution of sums
+hist(sums, prob = TRUE, col = "lightblue")
+
+# Rolling 10 dice
+sums <- simulate_dice_sum(10, 1000)
+
+# Plot the distribution of sums
+hist(sums, prob = TRUE, ylim = c(0,.08), col = "lightblue")
+
+# Overlay the normal curve
+curve(dnorm(x, mean = mean(sums), sd = sd(sums)), 
+      col = "red", lwd = 2, add = TRUE)
+```
+
+This does not only hold for dice points. In fact, the sum of random
+variables from any distribution would reveal a similar pattern.
+
+```{r}
+# Sum of uniform random variables
+simulate_uniform_sum <- function(n, n_simulations) {
+  sums <- numeric(n_simulations)
+  
+  # Simulate the experiment n_simulations times
+  for (i in 1:n_simulations) {
+    # Sum of n Uniform random variables
+    sums[i] <- sum(runif(n))
+  }
+  
+  return(sums)
+} 
+
+# Sum of 2 Uniform random variables
+sums <- simulate_uniform_sum(2, 1000)
+
+# Plot the histogram
+hist(sums, prob = TRUE, col = "lightblue")
+
+# Sum of 10 Uniform random variables
+sums <- simulate_uniform_sum(10, 1000)
+
+# Plot the histogram
+hist(sums, prob = TRUE, col = "lightblue")
+
+# Overlay the normal curve
+curve(dnorm(x, mean = mean(sums), sd = sd(sums)), 
+      col = "red", lwd = 2, add = TRUE)
+```
+
+::: callout-note
+## Sum of random variables approaches Normal distribution
+
+Let $X_1, X_2, \dots, X_n$ be a sequence of **i.i.d** random variables
+with mean $\mu=E(X_i)$ and variance $\sigma^2=Var(X_i)$. Let
+$$S_n = X_1 + X_2 + \dots + X_n$$ Then, as $n\to\infty$, $S_n$
+**converge in distribution** to a normal distribution. That is
+$$S_n \to^d N(n\mu, n\sigma^2).$$
+:::

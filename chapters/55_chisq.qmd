@@ -1,0 +1,26 @@
+## Chi-Square and Student-t
+
+We now introduce two distributions that are closely related to the
+Normal distribution.
+
+::: {#def-chi}
+Let $V=Z_{1}^{2}+\cdots+Z_{n}^{2}$ where $Z_{1},Z_{2},\dots,Z_{n}$ are
+i.i.d $N(0,1)$. Then $V$ is said to have the Chi-Square distribution
+with $n$ degrees of freedom, denoted as $V\sim\chi^{2}(n)$.
+:::
+
+The $\chi^{2}$ distribution is a special case of the Gamma distribution
+that will be introduced in the following sections. In fact,
+$\chi^{2}(1)$ is $\textrm{Gamma}(\frac{1}{2},\frac{1}{2})$;
+$\chi^{2}(n)$ is $\textrm{Gamma}(\frac{n}{2},\frac{1}{2})$.
+
+::: {#def-stu}
+Let $$T=\frac{Z}{\sqrt{V/n}}$$ where $Z\sim N(0,1)$, $V\sim\chi^{2}(n)$,
+and $Z$ is independent of $V$. Then $T$ is said to have the Student-$t$
+distribution with $n$ degrees of freedom, denoted as $T\sim t_{n}$.
+:::
+
+Student-$t$ distribution is symmetric and has the similar bell-shaped
+curve of the Normal distribution but with heavier tail. As $n\to\infty$,
+$t_{n}$ distribution approaches the standard Normal distribution.
+

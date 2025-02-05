@@ -1,0 +1,101 @@
+## Confidence intervals
+
+Confidence intervals provide a method of adding more information to an
+estimator $\hat{\theta}$ when we wish to estimate an unknown parameter
+$\theta$. We can find an interval $(A,B)$ that we think has high
+probability of containing $\theta$. The length of such an interval gives
+us an idea of how closely we can estimate $\theta$.
+
+::: {#def-7.6}
+A $100(1-\alpha)\%$ confidence interval (CI) for $\theta$ is an interval
+$[L(\theta),U(\theta)]$ such that the probability that the interval
+contains the true $\theta$ is $(1-\alpha)$.
+:::
+
+Due to randomness we rarely seek a confidence interval with 100%
+coverage as this would typically need to be the entire parameter space.
+Instead we seek an interval which includes the true value with
+reasonably high probability. Standard choices are $\alpha=0.05$ and
+$0.10$, corresponding to 95% and 90% confidence.
+
+Confidence intervals are reported to indicate the degree of precision of
+our estimates. The narrower the confidence interval, the more precise
+the estimate. Because a small range of values contains the true
+parameter with high probability.
+
+With the help of the CLT, it is not hard to find the CI for the sample
+mean $\bar{X}_{n}$. Let's set $\alpha=5\%$, that is, we are trying to
+find the CI that contains the true mean 95% of the times. Assume our
+sample size $n$ is large enough to invoke the CLT, we thus have
+
+$$\begin{aligned}
+\frac{\bar{X}_{n}-\mu}{\sigma/\sqrt{n}} & \sim N(0,1)\end{aligned}$$
+Let's find the interval $[a,b]$ such that
+$$P\left(a\leq\frac{\bar{X}_{n}-\mu}{\sigma/\sqrt{n}}\leq b\right)=1-2\Phi(L)=0.95$$
+
+since the normal distribution is symmetric, $b=-a$. By looking at the
+CDF of standard normal, we get $a=-1.96$, $b=1.96$. Thus,
+
+$$P\left(-1.96\leq\frac{\bar{X}_{n}-\mu}{\sigma/\sqrt{n}}\leq1.96\right)=0.95$$
+
+With a little rearrangement, we have
+
+$$P\left(\bar{X}_{n}-1.96\frac{\sigma}{\sqrt{n}}\leq\mu\leq\bar{X}_{n}+1.96\frac{\sigma}{\sqrt{n}}\right)=0.95$$
+Therefore, the interval
+$\left[\bar{X}_{n}-1.96\frac{\sigma}{\sqrt{n}},\bar{X}_{n}+1.96\frac{\sigma}{\sqrt{n}}\right]$
+contains the true mean 95% of the times.
+
+::: {#thm-7.8}
+The $100(1-\alpha)\%$ confidence interval for the sample mean
+$\bar{X}_{n}$ is $\bar{X}_{n}\pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}}$,
+where $z_{\alpha/2}$ is the critical value such that
+$\Phi(z_{\alpha/2})=\frac{\alpha}{2}$.
+:::
+
+In practice, because we do not know $\sigma/\sqrt{n}$, we replace it
+with the standard error $s/\sqrt{n}$. Thus, we compute the confidence
+interval as $\bar{X}_{n}\pm z_{\alpha/2}SE$. However, this replacement
+is not without risk. When the sample size is small, $s$ is a very poor
+estimate of $\sigma$. For the approximation to be valid, we require
+either the sample size is large enough ($n\geq30$ at least) or the
+population distribution is nearly normal. Some commonly used confidence
+levels:
+
+-   90% CI: $\alpha=0.1$, $z_{0.05}=1.645$
+-   95% CI: $\alpha=0.05$, $z_{0.025}=1.96$
+-   99% CI: $\alpha=0.01$, $z_{0.005}=2.58$
+
+We go through some common misunderstandings about confidence intervals
+through an example. Suppose we have a sample fo size 50 with mean 3.2
+and standard deviation 1.74. We construct the 95% confidence interval as
+$$\bar{X}\pm1.96\times\frac{1.74}{\sqrt{50}}\approx3.2\pm0.5=(2.7,3.7).$$
+
+Now check the following interpretations (true or false):
+
+1.  We are 95% confident that the sample mean is between 2.7 and 3.7.\
+    False. The CI definitely contains the sample mean $\bar{X}$.
+2.  95% of the population observations are in 2.7 to 3.7.\
+    False. The CI is about covering the population mean, not for
+    covering 95% of the entire population.
+3.  The true mean falls in the interval (2.7, 3.7) with probability
+    95%.\
+    False. The true mean $\mu$ is a fixed number, not a random one that
+    happens with a probability.
+4.  If a new random sample is taken, we are 95% confident that the new
+    sample mean will be between 2.7 and 3.7.\
+    False. The confidence interval is for covering the population mean,
+    not for covering the mean of another sample.
+5.  This confidence interval is not valid if the population or sample is
+    not normally distributed.\
+    False. The construction of the CI only uses the normality of the
+    sampling distribution of the sample mean (by the CLT). Neither the
+    population nor the sample is required to be normally distributed.
+
+So what is exactly the thing that has a 95% change to happen? [It is the
+procedure to construct the 95% interval.]{.underline} About 95% of the
+intervals constructed following the procedure will cover the true
+population mean $\mu$. After taking the sample and an interval is
+constructed, the constructed interval either covers $\mu$ or it doesn't.
+But if we were able to take many such samples and reconstruct the
+interval many times, 95% of the intervals will contain the true mean.
+

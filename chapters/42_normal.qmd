@@ -1,0 +1,123 @@
+## Normal distribution
+
+The most widely used model for random variables with continuous
+distributions is the family of normal distributions. One reason is that
+many real world samples appears to be normally distributed (the mass
+centered around the mean). The other reason is because of the Central
+Limit Theorem (will be discussed in later chapters), which essentially
+says the sum (or mean) or any random samples are approximately normal.
+
+::: {#def-std-normal}
+A random variable $Z$ has the standard Normal distribution with mean $0$
+and variance $1$, denoted as $Z\sim N(0,1)$, if $Z$ has a PDF that
+follows $$f(z)=\frac{1}{\sqrt{2\pi}}e^{-z^{2}/2}.$$
+:::
+
+This is a valid PDF because $\int_{-\infty}^{\infty}f(z)dz=1$, which
+directly follows from @exm-gauss. We further verify its mean and
+variance:
+
+$$E(Z)=\int_{-\infty}^{+\infty}z\cdot\frac{1}{\sqrt{2\pi}}e^{-z^{2}/2}dz=0\quad\textrm{by symmetry.}$$
+
+$$\begin{aligned}
+Var(Z) & =E(Z^{2})-(EZ)^{2}=E(Z^{2})\\
+ & =\int_{-\infty}^{+\infty}z^{2}\cdot\frac{1}{\sqrt{2\pi}}e^{-z^{2}/2}dz\\
+ & =\frac{2}{\sqrt{2\pi}}\int_{0}^{\infty}\underbrace{z}_{u}\cdot\underbrace{ze^{-z^{2}/2}dz}_{dv}\\
+ & =\frac{2}{\sqrt{2\pi}}\left\{ \left[z(-e^{-z^{2}/2})\right]_{0}^{\infty}+\underbrace{\int_{0}^{\infty}e^{-z^{2}/2}dz}_{\sqrt{2\pi}/2}\right\} \\
+ & =1.\end{aligned}$$
+
+::: {#def-phi}
+The CDF of standard normal distribution is usually denoted by $\Phi$.
+Therefore,
+$$\Phi(z)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{z}e^{-t^{2}/2}dt.$$ By
+symmetry, we have $\Phi(-z)=1-\Phi(z)$.
+:::
+
+::: {#def-normal}
+Let $X=\mu+\sigma Z$ where $Z\sim N(0,1)$. Then we say $X$ has the
+Normal distribution with mean $\mu$ and variance $\sigma^{2}$, denoted
+as $X\sim N(\mu,\sigma^{2})$. The PDF of $X$ is given by
+$$f(x)=\frac{1}{\sqrt{2\pi\sigma^{2}}}\exp\left[-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}\right].$$
+:::
+
+The mean and variance of $X$ can be easily verified by the properties of
+expectation and variance. $$\begin{aligned}
+E(X) & =E(\mu+\sigma Z)=\mu+\sigma E(Z)=\mu,\\
+Var(X) & =Var(\mu+\sigma Z)=\sigma^{2}Var(Z)=\sigma^{2}.\end{aligned}$$
+
+To verify the PDF, we utilize the standard normal CDF:
+$$P(X\leq x)=P\left(\frac{X-\mu}{\sigma}\leq\frac{x-\mu}{\sigma}\right)=\Phi\left(\frac{x-\mu}{\sigma}\right)$$
+
+The PDF is the derivative of the CDF,
+$$f(x)=\frac{1}{\sigma}\Phi'\left(\frac{x-\mu}{\sigma}\right)=\frac{1}{\sigma\sqrt{2\pi}}\exp\left[-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}\right].$$
+
+The shape of the normal distribution is the famous bell-shaped curve.
+
+![](img/normal.png){width="70%" fig-align="center"}
+
+::: callout-note
+## Three-sigma rule
+The normal distribution has the "three-sigma rule": $$\begin{aligned}
+P(|X-\mu|\leq\sigma) & \approx0.68\\
+P(|X-\mu|\leq2\sigma) & \approx0.95\\
+P(|X-\mu|\leq3\sigma) & \approx0.997\end{aligned}$$ Critical values:
+$\Phi(-1)\approx0.16,\Phi(-2)\approx0.025,\Phi(-3)\approx0.0015$.
+:::
+
+::: {#thm-normal-1}
+Let $X$ have the Normal distribution with mean $\mu$ and variance
+$\sigma^{2}$. Let $F$ be the CDF of $X$. Then the **standardization** of
+$X$ $$Z=\frac{X-\mu}{\sigma}$$ has the standard normal distribution,
+and, for all $x$: $$F(x)=\Phi\left(\frac{x-\mu}{\sigma}\right).$$
+:::
+
+To find the value of $\Phi(z)$, we need to use the normal probability
+table or statistical software.
+
+::: {#exm-5.3}
+Suppose the test score of a class of 50 students is normally distributed
+with mean 80 and standard deviation 20 (the total mark is 100). A
+student has scored 90. What is his percentile in the class?
+:::
+
+::: solution
+$X\sim N(80,20)$. We want to find $P(X<90)$. Standardize the
+distribution:
+$$P(X<90)=P\left(\frac{X-80}{20}<\frac{90-80}{20}\right)=\Phi(0.5)\approx0.69.$$
+:::
+
+
+```{r}
+# Exam scores from past students
+scores <- read.csv("../dataset/exam.csv")$final
+
+# Histogram of the exam scores
+hist(scores, prob = TRUE, col = "lightblue")
+
+# Overlay the normal curve
+curve(dnorm(x, mean(scores), sd(scores)), col = "red", lwd = 2, add = TRUE)
+```
+
+
+::: {#thm-normal-2}
+Suppose $X\sim N(\mu,\sigma^{2})$. If $Y=aX+b$, then $Y$ has the Normal
+distribution $Y\sim N(a\mu+b,a^{2}\sigma^{2})$.
+:::
+
+::: {#thm-normal-3}
+If the random variables $X_{1},\ldots,X_{k}$ are independent and
+$X_{i}\sim N(\mu_{i},\sigma_{i}^{2})$. Then
+$$X_{1}+\cdots+X_{k}\sim N(\mu_{1}+\cdots+\mu_{k},\sigma_{1}^{2}+\cdots+\sigma_{k}^{2}).$$
+:::
+
+::: {#exm-5.4}
+Suppose the heights (in centimeters) of women and men independently
+follow the normal distribution, $X\sim N(165,25)$, $Y\sim N(170,25)$.
+Determine the probability that a randomly selected woman will be taller
+than a man.
+:::
+
+::: solution
+Let $W=Y-X\sim N(170-165,25+25).$ Then $W\sim N(5,50)$. Therefore,
+$$P(W<0)=P\left(\frac{W-5}{\sqrt{50}}<\frac{-5}{\sqrt{50}}\right)=P\left(Z<-\frac{1}{\sqrt{2}}\right)=\Phi(-0.707)\approx0.24.$$
+:::

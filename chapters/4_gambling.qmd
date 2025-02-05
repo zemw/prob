@@ -1,0 +1,152 @@
+# Gambling problems
+
+::: {#exm-1.3}
+Texas hold'em is one of the most popular variant of the card game of
+poker. Essentially, the players in the game bet on the rankings of their
+hand of five cards (illustrated in the figure below). For the game to be
+fair, a hand of higher values must have lower probability than a hand of
+lower values. In this example, we compute the probabilities of different
+patterns of cards (assuming a total of 52 cards, excluding the 2
+jokers).
+:::
+
+![](img/poker.png){width="60%" fig-align="center"}
+
+::: solution
+To compute the probabilities of different five-card poker hands, we
+first determine the total number of possible five-card hands from a
+standard 52-card deck. The total number of combinations is:
+$$\binom{52}{5} = \frac{52 \times 51 \times 50 \times 49 \times 48}{5 \times 4 \times 3 \times 2 \times 1} = 2,598,960$$
+
+Now, we find the number of combinations for each hand type and use this
+to compute the probabilities.
+
+1.  Straight Flush
+
+    A straight flush consists of five consecutive cards of the same
+    suit. There are 10 possible sequences (A-5 through 10-A), and each
+    sequence can occur in any of the 4 suits. Thus, the total number of
+    straight flushes is: $4 \times 10 = 40$. The probability is:
+    $$P(\text{Straight Flush}) = \frac{40}{2598960} \approx 0.00154\%$$
+
+2.  Four of a Kind (Quads)
+
+    Four of a kind consists of four cards of the same rank plus one
+    additional card. There are 13 possible ranks, and for each rank,
+    there are 4 cards that form the quads. The fifth card can be any of
+    the remaining 48 cards. Therefore, the total number of quads is:
+    $13 \times 48 = 624$. The probability is:
+    $$P(\text{Four of a Kind}) = \frac{624}{2598960} \approx 0.024\%$$
+
+3.  Full House
+
+    A full house consists of three cards of one rank and two cards of
+    another rank. The number of ways to choose the rank for the triplet
+    is $\binom{13}{1} = 13$ , and the number of ways to choose 3 cards
+    of that rank is $\binom{4}{3} = 4$ . The number of ways to choose
+    the rank for the pair is $\binom{12}{1} = 12$ , and the number of
+    ways to choose 2 cards of that rank is $\binom{4}{2} = 6$ .
+    Therefore, the total number of full houses is:
+    $13 \times 4 \times 12 \times 6 = 3744$. The probability is:
+    $$P(\text{Full House}) = \frac{3744}{2598960} \approx 0.144\%$$
+
+4.  Flush
+
+    A flush consists of five cards of the same suit that are not in
+    sequence. The number of ways to choose a suit is $\binom{4}{1} = 4$
+    , and the number of ways to choose 5 cards from that suit is
+    $\binom{13}{5} = 1287$ . Since this includes straight flushes, we
+    subtract 40 (the number of straight flushes):
+    $4 \times 1287 - 40 = 5148$. The probability is:
+    $$P(\text{Flush}) = \frac{5148}{2598960} \approx 0.198\%$$
+
+5.  Straight
+
+    A straight consists of five consecutive cards of different suits.
+    There are 10 possible sequences, and for each sequence, there are
+    $4^5 = 1024$ combinations. Subtracting the 40 straight flushes
+    gives: $10 \times 1024 - 40 = 10200$. The probability is:
+    $$P(\text{Straight}) = \frac{10200}{2598960} \approx 0.392\%$$
+
+6.  Three of a kind
+
+    Three of a kind consists of three cards of the same rank plus two
+    unrelated cards. The number of ways to choose the rank for the
+    triplet is $\binom{13}{1} = 13$ , and the number of ways to choose 3
+    cards of that rank is $\binom{4}{3} = 4$ . The two additional ranks
+    are chosen from the remaining 12, with one card selected from each:
+    $13 \times 4 \times \binom{12}{2} \times 4^2 = 13 \times 4 \times 66 \times 16 = 54912$.
+    The probability is:
+    $$P(\text{Three of a Kind}) = \frac{54912}{2598960} \approx 2.11\%$$
+
+7.  Two pairs
+
+    Two pair consists of two cards of one rank, two cards of another
+    rank, and one unrelated card. The number of ways to choose 2 ranks
+    is $\binom{13}{2} = 78$ , and the number of ways to choose 2 cards
+    from each rank is $\binom{4}{2} = 6$ . The fifth card is chosen from
+    the remaining 44: $78 \times 6^2 \times 44 = 123552$. The
+    probability is:
+    $$P(\text{Two Pair}) = \frac{123552}{2598960} \approx 4.75\%$$
+
+8.  One pair
+
+    One pair consists of two cards of one rank and three unrelated
+    cards. The number of ways to choose the rank for the pair is
+    $\binom{13}{1} = 13$ , and the number of ways to choose 2 cards from
+    that rank is $\binom{4}{2} = 6$ . The three unrelated ranks are
+    chosen from the remaining 12, with one card selected from each:
+    $13 \times 6 \times \binom{12}{3} \times 4^3 = 13 \times 6 \times 220 \times 64 = 1098240$.
+    The probability is:
+    $$P(\text{One Pair}) = \frac{1098240}{2598960} \approx 42.26\%$$
+:::
+
+::: {#exm-newton}
+(Newton-Pepys problem) The Newton-Pepys problem is a classical
+probability problem involving dice rolls, posed in correspondence
+between Samuel Pepys, a famous diarist and government official, and
+Isaac Newton in 1693. The problem concerns which of the following three
+events is most likely when rolling fair dice:
+
+1.  At least one 6 appears when 6 fair dice are rolled.
+2.  At least two 6's appear when 12 fair dice are rolled.
+3.  At least three 6's appear when 18 fair dice are rolled.
+:::
+
+::: solution
+We compute the probabilities for each scenario:
+
+1.  Probability of at least one 6 in six rolls of a single die:
+
+    The probability of not rolling a 6 in six rolls is:
+    $$P(\text{no 6 in six rolls}) = \frac{5^6}{6^6}$$ Thus, the
+    probability of at least one 6 in six rolls is:
+    $$P(\text{at least one 6}) = 1 - \frac{5^6}{6^6} \approx 0.67$$
+
+2.  Probability of at least two 6s in twelve rolls of a single die:
+
+    We use the complement, finding the probabilities of getting 0 or 1
+    six. The probability of getting exactly 0 sixes in twelve rolls is
+    similar as above. The probability of getting exactly 1 six is:
+    $$P(1 \text{ six}) = \binom{12}{1} \frac{5^{11}}{6^{12}}$$ Thus, the
+    probability of at least two 6s is:
+    $$P(\text{at least two 6s}) = 1 - P(0 \text{ six})-P(1 \text{ six}) \approx 0.62$$
+
+3.  Probability of at least three 6s in eighteen rolls of a single die:
+
+    Similarly, we calculate the complement, finding the probabilities of
+    getting fewer than 3 sixes. $$\begin{aligned}
+    P(\text{at least three 6s}) &= 1 - P(0\text{ six}) -P(1\text{ six}) - P(2\text{ sixes}) \\ \\
+    &= 1- \frac{5^{18} + \binom{18}{1}5^{17} + \binom{18}{2} 5^{16}}{6^{18}} \approx 0.60
+    \end{aligned}
+    $$
+
+Thus,
+$P(\text{one 6 in 6 rolls}) > P(\text{two 6s in 12 rolls}) > P(\text{three 6s in 18 rolls})$.
+
+Intuitively, this is because as the number of dice increases, the
+likelihood of matching higher thresholds does not keep pace with the
+probability of rolling individual sixes. This is perhaps contrary to
+most people's common sense: the more dice rolled, the more likely to see
+the sixes.
+:::

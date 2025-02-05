@@ -1,0 +1,79 @@
+# Expectation
+
+::: {#def-dexp}
+## Expectation of a discrete random variable
+
+Let $X$ be a discrete random variable. The expectation of $X$ (or the
+mean of $X$) is defined as: $$E(X)=\sum_{\textrm{all }x}xP(X=x).$$
+:::
+
+In other words, the expected value of $X$ is a *weighted average* of the
+possible values that $X$ can take on, weighted by their probabilities.
+
+::: callout-note
+The expected value of $X$ is a fixed number, $E(X)\in\mathbb{R}$. It is
+not a random variable such as $g(X)$.
+:::
+
+Sometimes, we would like to omit the parentheses for simplicity and
+write $EX := E(X)$. We also like to denote expectation by the Greek
+letter $\mu := E(X)$.
+
+::: {#exm-exp-bern}
+The expectation of a Bernoulli random variable $X \sim Bern(p)$:
+$$E(X)=1\times P(X=1)+0\times P(X=0)=p.$$
+:::
+
+::: {#exm-exp-bin}
+The expectation of a Binomial random variable $X \sim Bin(n,p)$:
+$$\begin{aligned}E(X)= & \sum_{k=0}^{n}kp(k)\\
+= & \sum_{k=0}^{n}k\cdot\binom{n}{k}p^{k}q^{n-k}\\
+= & \sum_{k=1}^{n}n\cdot\binom{n-1}{k-1}p^{k}q^{n-k}\\
+= & np\sum_{k=1}^{n}\binom{n-1}{k-1}p^{k-1}q^{n-k}\\
+= & np\underbrace{\sum_{j=0}^{n-1}\binom{n-1}{j}p^{j}q^{n-1-j}}_{\textrm{another Binomial PMF}}\\
+= & np.
+\end{aligned}$$
+:::
+
+::: {#prp-exp}
+Expectation has the following properties:
+
+- $E(X+Y) = E(X) + E(Y)$
+
+- $E(aX + b) = a E(X) + b$
+:::
+
+::: {#exm-exp-bin2}
+Redo the expectation of $X\sim {Bin}(n,p)$ with properties of
+expectation: $$E(X)=E(X_{1}+\cdots+X_{n})=nE(X_{i})=np$$ where
+$X_{i}\sim\textrm{Bern}(p)$.
+:::
+
+
+## Law of averages {.unnumbered}
+
+You may wonder what is the difference between $E(X)$ defined in
+@def-dexp and the average of values defined as
+$\bar{X}=\frac{1}{n}(X_1+X_2+\dots+X_n)$.
+
+The short answer is this: $E(X)$ is a theoretical value, while $\bar{X}$
+is an approximation to $E(X)$ with finite observations. They are
+associated by the following theorem.
+
+::: callout-note
+## Law of averages
+
+The law of averages (or the law of large numbers) states that if you
+repeat a random experiment, such as tossing a coin or rolling a die, a
+very large number of times, your individual outcomes, when averaged,
+should be very close to the theoretical mean (a constant parameter). In
+mathematical language, $$\bar X_n \to^p \mu \text{ when }n\to\infty.$$
+where $\to^p$ reads as "converge in probability".
+:::
+
+There is another fundamental difference. In probability theory, we treat
+$E(X)$ as a fixed number; while $\bar X$ is another random variable!
+Because the sample $\{X_1,X_2,\dots,X_n\}$ is generated randomly.
+Consider the coin flipping example, while $E(X)=0.5$ is a constant, each
+time you compute the average of, say, 10 flips, you get a different
+number. We will come back to this point later.

@@ -1,0 +1,149 @@
+## Exponential distribution
+
+Imagine you are a shop owner that waits for your next customer. The
+customers arrive randomly, with no preference for any specific time
+interval. What interests us is the waiting time until the next customer
+arrives. Since the customers arrives randomly, the likelihood of it
+coming in the next moment is the same whether you've been waiting for
+one minute or ten minutes. In other words, the waiting time between
+events that occur randomly and independently over time. The exponential
+distribution is the mathematical model that best describes such
+scenarios.
+
+To model the waiting time, let $X$ represent the time until the next
+event. A crucial feature of this process is that the waiting time has no
+"memory." That is, no matter how long you've already waited, the
+probability of waiting an additional amount of time is the same.
+Mathematically, this memoryless property is expressed as:
+$$P(X\geq s+t\mid X\geq s)=P(X\geq t),\quad\text{for all }s,t\geq0.$$
+The conditional probability can be rewritten using the definition of
+conditional probabilities:
+$$P(X\geq s+t\mid X\geq s)=\frac{P(X\geq s+t)}{P(X\geq s)}.$$ Thus, the
+memoryless property implies:
+$$\frac{P(X\geq s+t)}{P(X\geq s)}=P(X\geq t).$$ Let the survival
+function $S(x)$ represent $P(X\geq x)$ . Substituting $S(x)$ into the
+equation gives: $$\frac{S(s+t)}{S(s)}=S(t).$$ This reminds us of the
+exponential function. In fact, the only continuous and non-negative
+solution to this equation is: $$S(x)=e^{-\lambda x},\quad\lambda>0,$$
+where $\lambda$ is a positive constant. This solution represents the
+probability that the waiting time exceeds $x$ , and $\lambda$ determines
+how quickly the probability decreases over time.
+
+The CDF of $X$ is exactly the opposite of $S(x)$:
+$$F(x)=1-S(x)=1-e^{-\lambda x}.$$ Take derivative to get the PDF:
+$$f(x)=F'(x)=\lambda e^{-\lambda x}.$$
+
+::: {#def-expo}
+## Exponential distribution
+
+A random variable $X$ is said to have the Exponential distribution with
+parameter $\lambda$ if its PDF is
+$$f(x)=\lambda e^{-\lambda x},\qquad x>0.$$
+
+We denote this as $X\sim\textrm{Expo}(\lambda).$$\lambda$ is interpreted
+as the "rate", i.e. number of events per unit of time.
+:::
+
+To compute the expectation and variance, we first standardize the
+exponential distribution. Let $Y=\lambda X$, then
+$Y\sim\textrm{Expo}(1)$, because
+$$P(Y\leq y)=P(X\leq y/\lambda)=1-e^{-y}.$$ It follows that,
+$$\begin{aligned}
+E(Y) & =\int_{0}^{\infty}ye^{-y}dy=\left[-ye^{-y}\right]_{0}^{\infty}+\int_{0}^{\infty}e^{-y}dy=1;\\
+Var(Y) & =E(Y^{2})-(EY)^{2}=\int_{0}^{\infty}y^{2}e^{-y}dy-1=1.\end{aligned}$$
+For $X=Y/\lambda$, we have $E(X)=\frac{1}{\lambda}$,
+$Var(X)=\frac{1}{\lambda^{2}}$.
+
+::: {#thm-memoryless}
+## Memoryless property
+
+If $X$ has the exponential distribution with parameter $\lambda$, and
+let $t>0$, $h>0$, then $$P(X\geq t+h|X\geq t)=P(X\geq h).$$
+:::
+
+::: proof
+For $t>0$ we have
+$$P(X\geq t)=\int_{t}^{\infty}\lambda e^{-\lambda x}dx=e^{-\lambda t}.$$
+Hence for each $t>0$ and each $h>0$,
+$$P(X\geq t+h|X\geq t)=\frac{P(X\geq t+h)}{P(X\geq t)}=\frac{e^{-\lambda(t+h)}}{e^{-\lambda t}}=e^{-\lambda h}=P(X\geq h).$$ 
+:::
+
+What are the implications of the memoryless property? If human lifetimes
+were Exponential, then conditional on having survived to the age of 80,
+your remaining lifetime would have the same distribution as that of a
+newborn baby! Clearly, the memoryless property is not an appropriate
+description for human lifetimes.
+
+The memoryless property is a very special property of the Exponential
+distribution. In fact, the Exponential is the only memoryless continuous
+distribution (with support $(0,\infty)$); and Geometric distribution is
+the only memoryless discrete distribution (with support $0,1,\dots$).
+
+::: {#exm-waiting-time}
+### Waiting time
+We try to model the waiting time at a bus station. Suppose the bus
+arrives at random time but on average there will be one bus per 10
+minutes. You arrive at the bus stop at a random time, not knowing how
+long ago the previous bus came. What is the distribution of your waiting
+time for the next bus? What is the mean waiting time? What is the median
+waiting time?
+:::
+
+::: solution
+Let $X$ be the waiting time and we know it is an Exponential
+distribution. Since $E(X)=1/\lambda=10$, the parameter $\lambda=1/10$.
+Thus $X\sim\textrm{Expo}(0.1)$. By the memoryless property, how much
+longer the next bus will take to arrive is independent of how long ago
+the previous bus arrived. The average waiting time is always 10 minutes.
+
+The CDF of $X$ is: $F(x)=1-e^{-\lambda x}$. The median $m$ satisfies
+$F(m) = 1/2$. Thus, $m= \log(2)/\lambda \approx 6.9$ minutes. So the
+typical waiting experienced by most passengers is less than 10 minutes.
+:::
+
+::: {#thm-expo}
+## Poisson-Exponential connection
+
+Let $T$ be the time between two consecutive events in Poisson process
+$\text{Pois}(\lambda t)$. Then $T$ follows Exponential distribution
+$T\sim\text{Expo}(\lambda)$.
+:::
+
+::: proof
+The waiting time $T>t$ is equivalent to no event occurred during period
+$t$. Therefore,
+$$P(T>t)=P(N_{t}=0)=e^{-\lambda t}\frac{(\lambda t)^{0}}{0!}=e^{-\lambda t}$$
+where $N_{t}$ is the number of events occurred in $[0,t]$, which follows
+a Poisson distribution. The CDF of $T$ is
+
+$$F(t)=1-P(T>t)=1-e^{-\lambda t}$$
+
+The PDF of $T$ is $$f(t)=F'(t)=\lambda e^{-\lambda t}$$ This indicates
+$T\sim \text{Expo}(\lambda)$.
+:::
+
+```{r}
+#
+# Simulate random arrivals and inter-arrival time
+#
+T <- 1000  # Total time horizon
+rate <- 1  # rate of occurrence per unit time
+
+# Total number of arrivals
+n_arrivals <- rpois(1, lambda = rate * T)
+
+# Time of each arrivals
+t_arrivals <- sort(runif(n_arrivals, min = 0, max = T))
+
+# Plot the timeline of arrivals
+plot(t_arrivals[1:20], rep(1, 20), type = "h", col = "red", ann = F)
+
+# Compute inter-arrival time
+inter_arrival_time <- diff(t_arrivals)
+
+# Plot the distribution of inter-arrival time
+hist(inter_arrival_time, prob = TRUE, breaks = 20)
+
+# Overlay the exponential function
+curve(exp(-x), col = "red", add = TRUE)
+```

@@ -1,0 +1,99 @@
+## Application: seller ratings\*
+
+This example involves multiple types of discrete distributions. The
+technique used to solve this problem aligns with Bayesian inference,
+which is beyond the scope of this course. However, it remains an
+interesting case. The procedure illustrates the process of statistical
+modeling: we begin with an assumption and a proposed statistical model,
+then update it with new data. Finally, we draw inferences based on the
+model, typically addressing the question we aim to answer. You are not
+required to understand everything in this example. Nonetheless, it helps
+to develop a mindset of statistical inference early in the study.
+
+Suppose you are shopping a product online. There are three sellers with
+the following ratings:
+
+-   Seller 1: 100% positive out of 10 reviews
+-   Seller 2: 96% positive out of 50 reviews
+-   Seller 3: 93% positive out of 200 reviews
+
+Which seller is likely to give the best service?
+
+The problem is intriguing because it is obvious that higher ratings do
+not necessarily means higher satisfaction. We have to weight in the
+number of reviews. The more reviews, the more trustworthy the ratings
+are. Let $X_{j}^{(i)}$ be a random variable that means consumer $j$ is
+satisfied with seller $i$, where $i\in\left\{ 1,2,3\right\}$. Assume
+$X_{j}^{(i)}$ follows a Bernoulli distribution:
+
+$$X_{j}^{(i)}=\begin{cases}
+1 & \textrm{satisfied with probability } \theta_{i}\\
+0 & \textrm{otherwise}
+\end{cases}$$
+
+where $\theta_{i}$ is an unknown parameter of seller $i$ that captures
+their "genuine" satisfaction rate. We assume the consumers independently
+write their ratings. The overall positive rate of seller $i$ is
+therefore $R_{i}=\frac{1}{n_{i}}\sum_{j}X_{j}^{(i)}$ where $n_{i}$ is
+the total number of reviews. We want to infer the value of $\theta_{i}$
+from their observed positive rate $R_{i}$. From now on we drop the
+seller index $i$ to simply the notation since it is symmetric for all
+sellers.
+
+Because we have no prior knowledge about $\theta$. We assume that
+$\theta$ takes any value from $[0,1]$ equally likely, i.e.
+$\theta\sim\textrm{Unif}(0,1)$. Assuming each $X_{j}$ is independent and
+identical, then
+
+$$S=X_{1}+X_{2}+\dots+X_{n}$$
+
+follows the Binomial distribution with PMF:
+
+$$p(k|\theta)=\binom{n}{k}\theta^{k}(1-\theta)^{n-k}$$
+
+Our goal is to find: $p(\theta|k)$. Recall that the Bayes' rule allows
+us to invert the conditional probability:
+
+$$\begin{aligned}p(\theta|k) & =\frac{p(k|\theta)p(\theta)}{p(k)}=\frac{p(k|\theta)p(\theta)}{\int_{-\infty}^{\infty}p(k|\theta)p(\theta)d\theta}\\[1em]\end{aligned}$$
+
+Since $\theta\sim\textrm{Unif}(0,1)$, we have $$p(\theta)=\begin{cases}
+1 & \textrm{if }\theta\in[0,1]\\
+0 & \textrm{otherwise}
+\end{cases}$$
+
+We now focus on $\theta\in[0,1]$, since the probability is $0$
+otherwise. Substitute in the PMF of the Binomial distribution,
+
+$$p(\theta|k)=\frac{\binom{n}{k}\theta^{k}(1-\theta)^{n-k}}{\int_{0}^{1}\binom{n}{k}\theta^{k}(1-\theta)^{n-k}d\theta}$$
+
+The hard part is to evaluate the integral. We state without proof (this
+is known as the Beta function, which we will prove in later chapters):
+
+$$\int_{0}^{1}\theta^{k}(1-\theta)^{n-k}=\frac{k!(n-k)!}{(n+1)!}$$
+
+Therefore,
+
+$$p(\theta|k)=\frac{(n+1)!}{k!(n-k)!}\theta^{k}(1-\theta)^{n-k}$$
+
+Now suppose you are the next customer. The probability that you would be
+satisfied is
+
+$$\begin{aligned}P(X_{n+1}=1|S=k)= & \int_{0}^{1}P(x_{n+1}=1|\theta)p(\theta|k)d\theta\\
+= & \int_{0}^{1}\theta\times\frac{(n+1)!}{k!(n-k)!}\theta^{k}(1-\theta)^{n-k}d\theta\\
+= & \frac{(n+1)!}{k!(n-k)!}\int_{0}^{1}\theta^{k+1}(1-\theta)^{(n+1)-(k+1)}d\theta\\
+= & \frac{(n+1)!}{k!(n-k)!}\times\frac{(k+1)!(n-k)!}{(n+2)!}\\
+= & \frac{k+1}{n+2}.
+\end{aligned}$$
+
+Now we substitute the ratings for the three sellers:
+
+-   Seller 1: $n=10,k=10$
+-   Seller 2: $n=50,k=48$
+-   Seller 3: $n=200,k=186$
+
+The probabilities that you would be satisfied with each seller are: 92%,
+94%, 93%. The result is known as the **Laplace's rule of succession**.
+The rule of thumb is, pretending we have too more reviews: one is
+positive, the other is negative. Compute the satisfaction rate as
+$\frac{k+1}{n+2}$.
+

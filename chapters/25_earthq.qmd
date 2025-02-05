@@ -1,0 +1,84 @@
+# Earthquake simulation
+
+::: {#exm-4.21}
+What is the probability of $k$ earthquakes occurred in a random year in
+Sichuan?
+
+This is the case of rare events with approximately constant rate of
+occurrence. We intend to model this with the Poisson distribution. The
+key is to figure out the parameter $\lambda$.
+
+Historical records[^25_earthquake-1] show that, from 26 BCE to 2021 CE,
+there were 309 earthquakes with magnitude of 5.0 or greater. Let $X$ be
+the number of earthquakes with magnitude 5.0 or greater. The annual rate
+$\lambda$ of earthquakes is therefore $\frac{309}{2048}=0.15$.
+
+Assume earthquakes are independent events (not always the case). Then
+$X\sim\textrm{Pois}(0.15)$. By the distribution of the Poisson
+distribution, $$P(X=k)=\begin{cases}
+0.86 & k=0\\
+0.13 & k=1\\
+0.01 & k=2
+\end{cases}.$$
+:::
+
+[^25_earthquake-1]: See [this
+    article](https://www.scdzj.gov.cn/dzpd/dzkp/202201/t20220125_51277.html)
+    from the Sichuan Earthquake Administration.
+
+This is of course a rough approximation. Let's see how close the
+occurrences of earthquakes simulated by a Poisson process to the actual
+patterns of events.
+
+```{r}
+library(lattice)
+library(data.table)
+
+# Earthquakes of Sichuan 1900-2019. source: USGS
+eq <- fread("../dataset/earthq.csv")
+
+# only consider strong earthquakes with magnitude >= 6
+# count the number of earthquakes by year
+eq6 <- eq[mag >=6, .N, by = year] 
+  
+# plot the occurrence of earthquakes by year
+xyplot(N~year, data=eq6, type="h", ylim=c(0,4))
+```
+
+```{r}
+# earthquakes are likely to be followed by earthquakes
+# the rate of occurrence, however, looks constant 
+t <- seq(1900, 2019)
+rate <- 0.3
+
+# initialize the random generator
+set.seed(3000)
+
+# model the occurrence with Poisson distribution 
+y <- rpois(length(t), rate)
+
+# plot the simulated occurrence of earthquakes
+xyplot(y ~ t, type="h", ylim = c(0,4))
+```
+
+The simulated result looks somewhat similar to the history. However,
+there are a few notable difference. The simulated ones are distributed
+more evenly, whereas in reality, earthquakes are not independent.
+Moreover, the Poisson process seems to generate less rare events (more
+than 4 earthquakes a year) than the reality. 
+
+```{r, include=FALSE}
+# generate a new sequence
+z <- numeric(length(t))
+z[1] <- rpois(1, rate)
+
+for (i in 2:length(t)) {
+  # introduce weak dependency
+  # if an event occurs more often than expected, increase the 
+  # rate of the next event; decrease the rate otherwise. 
+  z[i] <- rpois(1, rate + 0.1*(z[i-1]-rate))  
+}
+
+# plot the series
+xyplot(z ~ t, type = "h")
+```

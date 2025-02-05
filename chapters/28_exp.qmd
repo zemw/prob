@@ -1,0 +1,183 @@
+# Expectation revisited
+
+::: {#def-exp}
+For discrete random variable $X$, the expectation of $X$ is defined as
+$$E(X)=\sum_{\textrm{all }x}xP(X=x);$$For continuous random variable $X$
+with density function $f(x)$, the expectation is defined as
+$$E(X)=\int_{-\infty}^{\infty}x\ f(x)\ dx.$$
+:::
+
+::: {#prp-exp-lin}
+### Linearity
+
+For random variables $X_1,X_2,\dots,X_n$, regardless of their
+dependencies, it holds that
+
+$$E(X_{1}+\cdots+X_{n})=E(X_{1})+\cdots+E(X_{n}).$$
+:::
+
+::: proof
+We prove the simplest case $E(X+Y)=E(X)+E(Y)$. $$\begin{aligned}
+E(X+Y) & =\sum_{z=x+y}zP(X+Y=z)\\
+ & =\sum_{x}\sum_{y}(x+y)P(X=x,Y=y)\\
+ & =\sum_{x}\sum_{y}xP(X=x,Y=y)+\sum_{x}\sum_{y}yP(X=x,Y=y)\\
+ & =\sum_{x}x\sum_{y}P(X=x,Y=y)+\sum_{y}y\sum_{x}P(X=x,Y=y)\\
+ & =\sum_{x}xP((X=x)\cap\bigcup_{\textrm{all }y}(Y=y))+\sum_{y}yP(\bigcup_{\textrm{all }x}(X=x)\cap(Y=y))\\
+ & =\sum_{x}xP(X=x)+\sum_{y}yP(Y=y)\\
+ & =E(X)+E(Y).
+ \end{aligned}$$
+:::
+
+::: {#prp-exp-lin2}
+Further properties on the linearity of expectations:
+
+-   If $Y=aX+b$, then $E(Y)=aE(X)+b$.
+
+-   $E(a_{1}X_{1}+\cdots+a_{n}X_{n}+b)=a_{1}E(X_{1})+\cdots+a_{n}E(X_{n})+b$
+:::
+
+::: {#prp-exp-mult}
+### Multiplication
+
+If $X$ and $Y$ are independent, we have $$E(XY)=E(X)E(Y).$$ In general,
+if $X_{1},\ldots,X_{n}$ are independent, we have
+$$E(X_{1}X_{2}\cdots X_{n})=E(X_{1})E(X_{2})\cdots E(X_{n}).$$
+:::
+
+::: proof
+For discrete and independent $X,Y$, $$\begin{aligned}
+E(XY) & =\sum_{x}\sum_{y}xyP(X=x,Y=y)\\
+ & =\sum_{x}\sum_{y}xyP(X=x)P(Y=y)\quad\textrm{if independent}\\
+ & =\sum_{x}xP(X=x)\sum_{y}yP(Y=y)\\
+ & =E(X)E(Y).\end{aligned}$$
+:::
+
+::: callout-caution
+### Multiplication does not hold without independence
+
+It is misleadingly natural to extend the generality of the addition rule
+to multiplication. But the multiplication rule of expectation is very
+restrictive. Always remember to check independence before applying the
+multiplication rule.
+:::
+
+::: callout-note
+### Sufficient but not necessary condition
+
+If $X,Y$ are independent, it follows that $E(XY)=E(X)E(Y)$. However, the
+latter does not imply independence. Consider a counter-example,
+$$X=\begin{cases}
+    1 & \textrm{with prob. }1/2\\
+    0 & \textrm{with prob. }1/2
+    \end{cases},\quad Z=\begin{cases}
+    1 & \textrm{with prob. }1/2\\
+    -1 & \textrm{with prob. }1/2
+    \end{cases};$$ Then $$Y=XZ=\begin{cases}
+    -1 & \textrm{with prob. }1/4\\
+    0 & \textrm{with prob. }1/2\\
+    1 & \textrm{with prob. }1/4
+    \end{cases}.$$ We have $E(X)=1/2$, $E(Y)=0$, $E(XY)=0$. So
+$E(XY)=E(X)E(Y)$. But clearly $X,Y$ are not independent.
+:::
+
+::: {#thm-lotus}
+### Law of the unconscious statistician (LOTUS)
+
+Let $X$ be a random variable, and $g$ be a real-valued function of a
+real variable. If $X$ has a discrete distribution, then
+$$E[g(X)]=\sum_{\textrm{all }x}g(x)P(X=x).$$
+:::
+
+LOTUS says we can compute the expectation of $g(X)$ without knowing the
+PMF of $g(X)$.
+
+::: {#exm-exp-sqx}
+Compute $E(X)$ and $E(X^{2})$ given the following distribution.
+
+|         |     |     |     |
+|:-------:|:---:|:---:|:---:|
+|   $X$   |  0  |  1  |  2  |
+| $X^{2}$ |  0  |  1  |  4  |
+|   $P$   | 1/4 | 1/2 | 1/4 |
+:::
+
+::: solution
+According to the distribution table, we compute the expectations as
+$$\begin{aligned}
+E(X) & =0\times1/4+1\times1/2+2\times1/4=1;\\
+E(X^{2}) & =0\times1/4+1\times1/2+4\times1/4=3/2.\end{aligned}$$ Note
+that $E(X^{2})\neq[E(X)]^{2}$.
+:::
+
+::: callout-caution
+## Don't pull non-linear functions out of expectation
+
+In general, $E[g(X)]\neq g(E(X))$. Linearity implies $E[g(X)]=g(E(X))$
+if $g$ is a linear function. For a nonlinear function $g$, you can't
+pull function $g$ out of expectation $E$. The right way to find
+$E[g(X)]$ is with LOTUS.
+:::
+
+::: {#exm-petersburg}
+### St. Petersburg Paradox
+
+Flip a fair coin over and over again until the head lands the first
+time. You will win $2^{k}$ dollars if the head lands in the $k$-th trial
+(including the successful trial). What is the expected payoff of this
+game?
+:::
+
+::: solution
+Let $X=2^{k}$. We want to find $E(X)$. The probability of the first head
+showing up in the $k$-th trial is $\frac{1}{2^{k}}$. Therefore,
+$$E(X)=\sum_{k=1}^{\infty}2^{k}\cdot\frac{1}{2^{k}}=\sum_{k=1}^{\infty}1=\infty$$
+
+The expected payoff is infinitely high! This is against most people's
+intuition, which is likely to be a small number. This is because we
+mistakenly go through the calculation $E(X)=E(2^{k})=2^{E(k)}$ in our
+mind. $E(k)$ the expected number of flips before a head is 2. Thus,
+$2^{E(k)}=4$.
+
+Another way to resolve the paradox is that we don't typically reason
+about infinity. No one would play this game infinitely many times. For
+finite number of plays, the probability of getting very large payoff,
+say $2^{100}$, is none. We can demonstrate this with a simulation.
+:::
+
+```{r}
+# Function to simulate the St. Petersburg Paradox
+st_petersburg_game <- function(n_simulations) {
+  # Initialize a vector to store the outcomes
+  outcomes <- numeric(n_simulations)
+  
+  for (i in 1:n_simulations) {
+    # Start with the initial reward
+    reward <- 2
+    # Flip a coin until it lands tails
+    while (runif(1) < 0.5) {
+      reward <- reward * 2
+    }
+    # Store the reward for this simulation
+    outcomes[i] <- reward
+  }
+  
+  # Return the outcomes
+  return(outcomes)
+}
+
+# Set the number of simulations
+n_simulations <- 1000
+
+# Run the simulation
+results <- st_petersburg_game(n_simulations)
+
+# Calculate the average outcome (expected value)
+expected_value <- mean(results)
+
+# Print the results
+cat("Simulated Expected Value:", expected_value)
+
+# However, as the number of simulations increases
+# We would see higher and higher maximum reward
+cat("Maximum Reward Observed:", max(results))
+```

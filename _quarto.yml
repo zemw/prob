@@ -1,0 +1,98 @@
+project:
+  type: book
+  preview:
+    port: 4200
+    browser: true
+
+book:
+  title: "Introduction to Probability"
+  author: "Z. WANG (PhD)"
+  date: "12/20/2024"
+  chapters:
+    - index.qmd
+    - chapters/Preface.qmd
+    - part: "Probability Basics" 
+      chapters:
+        - chapters/1_intro.qmd
+        - chapters/2_event.qmd
+        - chapters/3_classic.qmd
+        - chapters/4_gambling.qmd
+        - chapters/5_birthday.qmd
+        - chapters/6_axioms.qmd
+        - chapters/7_cond.qmd
+        - chapters/8_montyhall.qmd
+        - chapters/9_simpson.qmd
+        - chapters/10_indep.qmd
+        - chapters/11_dating.qmd
+        - chapters/11_calculus.qmd
+    - part: "Random Variables"
+      chapters:
+        - chapters/12_rv.qmd
+        - chapters/13_data.qmd
+        - chapters/14_disc.qmd
+        - chapters/15_cont.qmd
+        - chapters/16_cdf.qmd
+    - part: "Discrete Distributions"
+      chapters:
+        - chapters/17_bern.qmd
+        - chapters/18_bin.qmd
+        - chapters/19_dice.qmd
+        - chapters/20_dexp.qmd
+        - chapters/21_hgeom.qmd
+        - chapters/22_geom.qmd
+        - chapters/23_joint.qmd
+        - chapters/23_condist.qmd
+        - chapters/24_pois.qmd
+        - chapters/25_earthq.qmd
+        - chapters/26_birthday2.qmd
+        - chapters/27_convolution.qmd
+        - chapters/27_ratings.qmd
+    - part: "Expectation and Variance"
+      chapters:
+        - chapters/28_exp.qmd
+        - chapters/29_lifexp.qmd
+        - chapters/30_twoenvp.qmd
+        - chapters/31_linearity.qmd
+        - chapters/32_median.qmd
+        - chapters/33_var.qmd
+        - chapters/34_cov.qmd
+        - chapters/34_portfolio.qmd
+        - chapters/35_condexp.qmd
+        - chapters/36_mgf.qmd
+        - chapters/37_ineq.qmd
+    - part: "Continuous Distributions"
+      chapters:
+        - chapters/40_contd.qmd
+        - chapters/41_unif.qmd
+        - chapters/42_gauss.qmd
+        - chapters/42_sumrvs.qmd
+        - chapters/42_normal.qmd
+        - chapters/42_mvn.qmd
+        - chapters/43_expo.qmd
+        - chapters/44_gamma.qmd
+        - chapters/45_beta.qmd
+        - chapters/46_2rvs.qmd
+        - chapters/47_trans.qmd
+    - part: "Sampling distributions"
+      chapters:
+        - chapters/50_lln.qmd
+        - chapters/51_clt.qmd
+        - chapters/52_samples.qmd
+        - chapters/53_estimator.qmd
+        - chapters/54_ci.qmd
+        - chapters/55_ht.qmd
+
+format:
+  html:
+    theme: cosmo
+    page-layout: article
+    grid:
+      sidebar-width: 300px
+      body-width: 900px
+      margin-width: 300px
+      gutter-width: 1.5rem
+  pdf:
+    documentclass: scrreprt
+
+editor: source
+

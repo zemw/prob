@@ -1,0 +1,81 @@
+# Dice rolling formula\*
+
+The Binomial distribution gives the formula for the probability of
+observing $k$ heads when flipping $n$ coins. Can we find a formula for
+the probability of getting a total of $p$ points when rolling $n$ dice?
+
+The probability of obtaining $p$ points on $n$ $s$-sided dice can be
+computed as the coefficient of $x^p$ in
+
+$$f(x)=(x+x^2+...+x^s)^n$$
+
+since each possible arrangement contributes one term.
+
+$$f(x) = x^n(1+x+\dots+x^{s-1})^n = x^n\left(\frac{1-x^s}{1-x}\right)^n$$
+
+To obtain the coefficient of $x^p$, expand the binomial power:
+
+$$x^n(1-x^s)^n(1-x)^{-n} = x^n \sum_{k=0}^n (-1)^k \binom{n}{k} x^{sk}
+\sum_{l=0}^\infty\binom{n+l-1}{l}x^l$$
+
+The coefficient of $x^p$ include all terms with $p=n+sk+l$. Therefore,
+
+$$c_p = \sum_{k=0}^n (-1)^k \binom{n}{k}\binom{p-sk-1}{p-sk-n}$$
+
+But $p-sk-n>0$ only when $k<(p-n)/s$, so the other terms do not
+contribute. Furthermore, applying the symmetric property of the binomial
+formula, we have
+
+$$\binom{p-sk-1}{p-sk-n}= \binom{p-sk-1}{n-1}$$
+
+Therefore, the probability of getting $p$ points when rolling $n$
+$s$-sided dice is given by
+
+$$f(p,n,s) = \sum_{k=0}^{\lfloor{(p-n)/s}\rfloor} (-1)^k \binom{n}{k} \binom{p-sk-1}{n-1}.$$
+
+::: callout-note
+## Binomial formula for negative $n$
+
+$$\begin{aligned}
+\binom{-n}{k} &= \prod_{i=0}^{k-1} \frac{-n-i}{k-i}
+=(-1)^k \prod_{i=0}^{k-1} \frac{n+i}{k-i} \\
+&=(-1)^k\frac{n(n+1)\dots(n+k-1)}{k!}\\
+&=(-1)^k\frac{(n+k-1)!}{k!(n-1)!}\\
+&=(-1)^k\binom{n+k-1}{k}
+\end{aligned}$$
+:::
+
+We can verify our formula by simulating the dice rolling game.
+
+```{r}
+set.seed(0)
+
+# simulates rolling n dice and returns the sum
+roll_dice <- function(n, s=6) {
+  sum(sample(seq(1,s), n, replace = T))
+}
+
+# rolling 10 dice 1000 times and collect the results
+points <- replicate(1000, roll_dice(10))
+
+# distribution of the sum of points
+hist(points, freq = F)
+```
+
+```{r}
+# formula for computing probability of dice points
+dice_formula <- function(p, n, s=6) {
+  prob <- 1/s^n*sum(
+    sapply(seq(0, floor((p-n)/s)), 
+           function(k) (-1)^k*choose(n,k)*choose(p-s*k-1,n-1)))
+}
+
+# computing the probability of getting 20-50 when rolling 10 dice
+x <- 20:50; 
+y <- sapply(x, function(p) dice_formula(p,n=10))
+
+# overlay the formula on the histogram
+# it turns out the formula does a nice job!
+hist(points, ylim = c(0, 0.07), freq = F)
+lines(x, y, col = 2, lwd=2)
+```

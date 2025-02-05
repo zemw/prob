@@ -1,0 +1,62 @@
+## Discrete variables
+
+::: {#def-disrv}
+## Discrete random variable
+
+We say $X$ is a discrete random variable if $X$ can take a finite or
+countable number of values $x_1,x_2, \ldots,x_n$.
+:::
+
+::: {#def-supp}
+## Support
+
+The finite or countably infinite set of values $x$ such that $P(X=x)>0$
+is called the support of $X$.
+:::
+
+::: {#def-pmf}
+## Probability mass function
+
+If a random variable $X$ has a discrete distribution, the probability
+mass function (PMF) of $X$ is defined as the function $f$ such that
+$$f(x)=P(X=x).$$
+:::
+
+::: callout-note
+### Notation for PMF
+
+PMF is also known as the **probability function**, since $f(x)$ gives
+the probability. Throughout this lecture notes, we use PMF for
+abbreviation. But you will find the textbook uses *p.f.* They are
+different conventions for the same thing.
+
+Note that how $f(x)$ differs from the probability function $P(\cdot)$.
+$f(x)$ is a real-valued function, whereas $P(\cdot)$ is the probability
+operator. Also note that $x$ is not the same as random variable $X$.
+Sometimes, we add a subscript, $f_{X}(x)$, to specify this is the PMF
+for random variable $X$.
+
+Because we also use $f(x)$ to denote the PDF for continuous random
+variables. PDF is known as the density function, it is not probability.
+So we better avoid confusing the two. To distinguish a PMF from a PDF,
+we may use $p(x)$ for PMF and $f(x)$ for PDF. Mostly in this lecture
+note, we simply use $P(X=k)$ for PMF.
+:::
+
+::: {#prp-pmf}
+A valid PMF must satisfy the following criteria:
+
+-   Non-negative: $P(X=k)\geq0$ for all $k$;
+-   Sum up to one: $\sum_{k}P(X=k)=1$.
+:::
+
+There are different ways to represent a PMF. We can (1) list all the
+possible values and their associated probabilities; (2) write a formula
+for the PMF; or (3) visualize it in a graph.
+
+::: {#exm-drv-1}
+A random variable $X$ is said to have the **Bernoulli distribution** if
+$X$ has only two possible values, $0$ and $1$, and $P(X=1)=p$,
+$P(X=0)=1-p$. The PMF of $X$ is $$P(X=k)=p^{k}(1-p)^{1-k}$$ where
+$k\in\left\{ 0,1\right\}$.
+:::
