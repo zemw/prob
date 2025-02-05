@@ -1,13 +1,10 @@
 project:
   type: book
-  preview:
-    port: 4200
-    browser: true
 
 book:
   title: "Introduction to Probability"
   author: "Z. WANG (PhD)"
-  date: "12/20/2024"
+  date: "January 2025"
   chapters:
     - index.qmd
     - chapters/Preface.qmd
