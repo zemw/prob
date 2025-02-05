@@ -13,15 +13,15 @@ book:
     - chapters/Preface.qmd
     - part: "Probability Basics" 
       chapters:
-        - chapters/1_intro.qmd
-        - chapters/2_event.qmd
-        - chapters/3_classic.qmd
-        - chapters/4_gambling.qmd
-        - chapters/5_birthday.qmd
-        - chapters/6_axioms.qmd
-        - chapters/7_cond.qmd
-        - chapters/8_montyhall.qmd
-        - chapters/9_simpson.qmd
+        - chapters/01_intro.qmd
+        - chapters/02_event.qmd
+        - chapters/03_classic.qmd
+        - chapters/04_gambling.qmd
+        - chapters/05_birthday.qmd
+        - chapters/06_axioms.qmd
+        - chapters/07_cond.qmd
+        - chapters/08_montyhall.qmd
+        - chapters/09_simpson.qmd
         - chapters/10_indep.qmd
         - chapters/11_dating.qmd
         - chapters/11_calculus.qmd
