@@ -63,9 +63,10 @@ The following table summarizes the counting methods.
 | with replacement |    $n^{k}$    |   $C_{n+k-1}^{k}$    |
 | non-replacement  |  $P_{n}^{k}$  |     $C_{n}^{k}$      |
 
-We don't explain the upper-right corner case $C_{n+k-1}^{k}$ as it is
-not relevant for our purpose here. Feel free to figure it out yourself
-if you are interested.
+The upper-right corner case is equivalent to putting $k$ indistinguishable 
+balls into $n$ distinguishable baskets (e.g. two balls in Basket 3 means
+the 3rd object is chosen twice). Therefore, the number of possible 
+arrangements is $C_{k+n-1}^{n-1}$.
 
 ## Binomial coefficient {.unnumbered}
 
