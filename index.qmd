@@ -36,31 +36,33 @@ How do I know I am taller than an average person?
 
 ## Assessment
 
-**Quiz (20%).** There will be an arbitrary number of in-class quizzes.
+**Quiz (25%).** There will be an arbitrary number of in-class quizzes.
 The date for each quiz will be announced in advance. Each quiz will
 consist of 1-2 questions based on material covered in previous weeks.
-Suppose there are $n$ quizzes in total, only your top $n-1$ quiz scores
-will count toward your final grade. This means you can miss or skip one
-quiz without penalty.
+Every quiz is mandatory; there will be no make-up quizzes under any 
+circumstances.
 
-**Project (20%).** The goal of this project is to encourage students to
+**Project (25%).** The goal of the projects is to encourage students to
 apply the knowledge learned in this course to solve practical problems.
-We will conduct a survey to gather information about the students in
-this class. Using this data, you will carry out a mini research project,
-in which you raise your own question and analyzing the data to answer it
-(e.g. why some students perform better in exams than others). Essays
-that present interesting questions and use the data persuasively to
-support their conclusions will receive higher marks. Additionally,
-selective students will be invited to present their findings to the
-class.
+Projects are usually open-ended and may involve data analysis, simulations,
+or exploring real-world applications of probability. Essays that present
+innovative perspectives and use the data persuasively to support their 
+conclusions will receive higher marks. Selective students may be invited 
+to present their findings to the class.
 
-**Final exam (60%).** The final exam will be a closed-book,
+**Final exam (50%).** The final exam will be a closed-book,
 paper-and-pencil exam scheduled for Week 17. It will not simply repeat
 lecture material but will assess your ability to apply the knowledge you
 have gained to solve novel problems. To perform well, you must have a
 deep understanding of the concepts and acquire some degree of
 problem-solving skills. The average score of the past exam is 69 with a
 standard deviation 15. The pass rate (\>=60) is about 80%.
+
+**Class participation (5%).** Additional 5 marks for class participation
+ on top of the above. Regular attendance and constructive participation 
+ are are encouraged (though not mandatory) and will be recognized. Active 
+ engagement in class discussions or asking insightful questions will  
+ also be considered. 
 
 ![](chapters/img/final.jpg){width="80%" fig-align="center"}
 
