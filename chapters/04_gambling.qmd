@@ -5,100 +5,31 @@ Texas hold'em is one of the most popular variant of the card game of
 poker. Essentially, the players in the game bet on the rankings of their
 hand of five cards (illustrated in the figure below). For the game to be
 fair, a hand of higher values must have lower probability than a hand of
-lower values. In this example, we compute the probabilities of different
-patterns of cards (assuming a total of 52 cards, excluding the 2
-jokers).
+lower values. Compute the probability for each type of hand.
 :::
 
-![](img/poker.png){width="60%" fig-align="center"}
+![](img/poker.png){fig-align="center" width="40%"}
 
 ::: solution
-To compute the probabilities of different five-card poker hands, we
-first determine the total number of possible five-card hands from a
-standard 52-card deck. The total number of combinations is:
+To apply @def-classical, we first determine the total number of possible
+five-card hands from a standard 52-card deck. The total number of
+combinations is:
 $$\binom{52}{5} = \frac{52 \times 51 \times 50 \times 49 \times 48}{5 \times 4 \times 3 \times 2 \times 1} = 2,598,960$$
 
-Now, we find the number of combinations for each hand type and use this
-to compute the probabilities.
+We then find the number of combinations for each hand type. As an
+illustration, we only compute the case of *Full House*.
 
-1.  Straight Flush
+A full house consists of three cards of one rank and two cards of
+another rank. The number of ways to choose the rank for the triplet is
+$\binom{13}{1} = 13$ , and the number of ways to choose 3 cards of that
+rank is $\binom{4}{3} = 4$ . The number of ways to choose the rank for
+the pair is $\binom{12}{1} = 12$ , and the number of ways to choose 2
+cards of that rank is $\binom{4}{2} = 6$ . Therefore, the total number
+of full houses is:
+$\binom{13}{1}\binom{4}{3}\cdot\binom{12}{1}\binom{4}{2} = 3,744$.
 
-    A straight flush consists of five consecutive cards of the same
-    suit. There are 10 possible sequences (A-5 through 10-A), and each
-    sequence can occur in any of the 4 suits. Thus, the total number of
-    straight flushes is: $4 \times 10 = 40$. The probability is:
-    $$P(\text{Straight Flush}) = \frac{40}{2598960} \approx 0.00154\%$$
-
-2.  Four of a Kind (Quads)
-
-    Four of a kind consists of four cards of the same rank plus one
-    additional card. There are 13 possible ranks, and for each rank,
-    there are 4 cards that form the quads. The fifth card can be any of
-    the remaining 48 cards. Therefore, the total number of quads is:
-    $13 \times 48 = 624$. The probability is:
-    $$P(\text{Four of a Kind}) = \frac{624}{2598960} \approx 0.024\%$$
-
-3.  Full House
-
-    A full house consists of three cards of one rank and two cards of
-    another rank. The number of ways to choose the rank for the triplet
-    is $\binom{13}{1} = 13$ , and the number of ways to choose 3 cards
-    of that rank is $\binom{4}{3} = 4$ . The number of ways to choose
-    the rank for the pair is $\binom{12}{1} = 12$ , and the number of
-    ways to choose 2 cards of that rank is $\binom{4}{2} = 6$ .
-    Therefore, the total number of full houses is:
-    $13 \times 4 \times 12 \times 6 = 3744$. The probability is:
-    $$P(\text{Full House}) = \frac{3744}{2598960} \approx 0.144\%$$
-
-4.  Flush
-
-    A flush consists of five cards of the same suit that are not in
-    sequence. The number of ways to choose a suit is $\binom{4}{1} = 4$
-    , and the number of ways to choose 5 cards from that suit is
-    $\binom{13}{5} = 1287$ . Since this includes straight flushes, we
-    subtract 40 (the number of straight flushes):
-    $4 \times 1287 - 40 = 5148$. The probability is:
-    $$P(\text{Flush}) = \frac{5148}{2598960} \approx 0.198\%$$
-
-5.  Straight
-
-    A straight consists of five consecutive cards of different suits.
-    There are 10 possible sequences, and for each sequence, there are
-    $4^5 = 1024$ combinations. Subtracting the 40 straight flushes
-    gives: $10 \times 1024 - 40 = 10200$. The probability is:
-    $$P(\text{Straight}) = \frac{10200}{2598960} \approx 0.392\%$$
-
-6.  Three of a kind
-
-    Three of a kind consists of three cards of the same rank plus two
-    unrelated cards. The number of ways to choose the rank for the
-    triplet is $\binom{13}{1} = 13$ , and the number of ways to choose 3
-    cards of that rank is $\binom{4}{3} = 4$ . The two additional ranks
-    are chosen from the remaining 12, with one card selected from each:
-    $13 \times 4 \times \binom{12}{2} \times 4^2 = 13 \times 4 \times 66 \times 16 = 54912$.
-    The probability is:
-    $$P(\text{Three of a Kind}) = \frac{54912}{2598960} \approx 2.11\%$$
-
-7.  Two pairs
-
-    Two pair consists of two cards of one rank, two cards of another
-    rank, and one unrelated card. The number of ways to choose 2 ranks
-    is $\binom{13}{2} = 78$ , and the number of ways to choose 2 cards
-    from each rank is $\binom{4}{2} = 6$ . The fifth card is chosen from
-    the remaining 44: $78 \times 6^2 \times 44 = 123552$. The
-    probability is:
-    $$P(\text{Two Pair}) = \frac{123552}{2598960} \approx 4.75\%$$
-
-8.  One pair
-
-    One pair consists of two cards of one rank and three unrelated
-    cards. The number of ways to choose the rank for the pair is
-    $\binom{13}{1} = 13$ , and the number of ways to choose 2 cards from
-    that rank is $\binom{4}{2} = 6$ . The three unrelated ranks are
-    chosen from the remaining 12, with one card selected from each:
-    $13 \times 6 \times \binom{12}{3} \times 4^3 = 13 \times 6 \times 220 \times 64 = 1098240$.
-    The probability is:
-    $$P(\text{One Pair}) = \frac{1098240}{2598960} \approx 42.26\%$$
+Thus, the probability is:
+$$P(\text{Full House}) = \frac{3,744}{2,598,960} \approx 0.144\%$$
 :::
 
 ::: {#exm-newton}
@@ -150,3 +81,44 @@ probability of rolling individual sixes. This is perhaps contrary to
 most people's common sense: the more dice rolled, the more likely to see
 the sixes.
 :::
+
+## Find probability by simulation
+
+Let's redo @exm-1.3 by simulation.
+
+```{r}
+
+# generate a deck of cards
+deck.grid <- expand.grid(c(1:10,'J','Q','K','A'), c('♠','♥','♦','♣'))
+
+# convert the grid to a vector
+deck <- do.call(paste0, deck.grid)
+
+# total number of simulations
+N <- 100000 
+
+# number of target hand
+K <- 0
+
+# for random generator
+set.seed(1000)
+
+for (j in 1:N) {
+
+  # a random five-cards hand
+  hand <- sample(deck, 5)
+
+  # drop the color
+  num <- substr(hand, 1, nchar(hand)-1)
+  
+  # Full House have only two distinguished numbers
+  if ( length(unique(num)) == 2 ) {
+    K <- K + 1
+  }
+}
+
+# compute the probability
+P <- K / N
+
+sprintf("Prob of Full House: %.3f %%", P*100)
+```

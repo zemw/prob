@@ -3,11 +3,12 @@ project:
 
 book:
   title: "Introduction to Probability"
-  author: "Z. WANG (PhD)"
-  date: "January 2025"
+  author: 
+    - name: "Zeming WANG"
+      affiliations: "Southwest University of Finance and Economics"
+  date: "26 January 2025"
   chapters:
     - index.qmd
-    - chapters/Preface.qmd
     - part: "Probability Basics" 
       chapters:
         - chapters/01_intro.qmd
@@ -22,6 +23,7 @@ book:
         - chapters/10_indep.qmd
         - chapters/11_dating.qmd
         - chapters/11_calculus.qmd
+        - chapters/01_baseR.qmd
     - part: "Random Variables"
       chapters:
         - chapters/12_rv.qmd

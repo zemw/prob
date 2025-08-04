@@ -13,41 +13,87 @@ outcomes can be an experiment. The sample space can be finite, countably
 infinite, or uncountably infinite. It is convenient to visualize events
 with *Venn diagrams*.
 
-::: {.callout-note}
+::: callout-note
 ## Don's confuse events with outcomes
-Outcomes are individual results, while events are groups of outcomes that we are interested in.
-Outcomes are elements of the sample space, and events are subsets of this space.
+
+Outcomes are individual results, while events are groups of outcomes
+that we are interested in. Outcomes are elements of the sample space,
+and events are subsets of this space.
 :::
 
 ::: {#exm-1.1}
 A coin is flipped twice. We write "H" if a coin lands Head, and "T" if a
 coin lands Tail.
 
-- The sample space (all possible outcomes): $S=\left\{ HH,HT,TH,TT\right\}$. 
-- Let $A_{1}$ be the event that the first flip is Heads, $A_{1}=\left\{ HH,HT\right\}$. 
-- Let $A_{2}$ be the event that the second flip is Heads, $A_{2}=\left\{ HH,TH\right\}$.
-- Let $B$ be the event that at least one flip is Heads, $B=A_{1}\cup A_{2}$.
-- Let $C$ be the event that all the flips are Heads, $C=A_{1}\cap A_{2}$.
-- Let $D$ be the event that no flip is Heads, $D=B^{c}$.
+-   The sample space (all possible outcomes):
+    $S=\left\{ HH,HT,TH,TT\right\}$
+-   Let $A_{1}$ be the event that the first flip is Heads,
+    $A_{1}=\left\{ HH,HT\right\}$
+-   Let $A_{2}$ be the event that the second flip is Heads,
+    $A_{2}=\left\{ HH,TH\right\}$
+-   Let $B$ be the event that at least one flip is Heads,
+    $B=A_{1}\cup A_{2}$
+-   Let $C$ be the event that all the flips are Heads,
+    $C=A_{1}\cap A_{2}$
+-   Let $D$ be the event that no flip is Heads, $D=B^{c}$
 :::
 
 ### Use set language to describe events {.unnumbered}
 
 <div>
 
-| English | Sets |
-|:-----------------------------------|:----------------------------------:|
-| sample space | $S$ |
-| $s$ is a possible outcome | $s\in S$ |
-| $A$ is an event | $A\subseteq S$ |
-| $A$ occurs | $s_{\textrm{actual}}\in A$ |
-| $A$ or $B$ occurs | $A\cup B$ |
-| Both $A$ and $B$ occur | $A\cap B$ |
-| $A$ does not occur | $A^{c}$ |
-| at least one of $A_{1},\dots,A_{n}$ | $A_{1}\cup\cdots\cup A_{n}$ |
-| all of $A_{1},\dots,A_{n}$ | $A_{1}\cap\cdots\cap A_{n}$ |
-| $A$ implies $B$ | $A\subseteq B$ |
-| $A$ and $B$ are disjoint (mutually exclusive) | $A\cap B=\phi$ |
-| $A_{1},\dots,A_{n}$are a partition of $S$ | $A_{1}\cup\cdots\cup A_{n}=S$ and $A_{i}\cap A_{j}=\phi$ for $i\neq j$ |
+| English                                   |            Sets             |
+|:------------------------------------------|:---------------------------:|
+| sample space                              |             $S$             |
+| $s$ is a possible outcome                 |          $s\in S$           |
+| $A$ is an event                           |       $A\subseteq S$        |
+| $A$ or $B$ occurs                         |          $A\cup B$          |
+| Both $A$ and $B$ occur                    |          $A\cap B$          |
+| $A$ does not occur                        |           $A^{c}$           |
+| at least one of $A_{1},\dots,A_{n}$ occur | $A_{1}\cup\cdots\cup A_{n}$ |
+| all of $A_{1},\dots,A_{n}$ occur          | $A_{1}\cap\cdots\cap A_{n}$ |
+| $A$ implies $B$                           |       $A\subseteq B$        |
 
 </div>
+
+::: {#def-disjoint}
+$A$ and $B$ are **disjoint** (mutually exclusive) if $A\cap B=\phi$.
+:::
+
+::: {#def-partition}
+$A_{1},\dots,A_{n}$ are a **partition** of $S$ if
+
+-   $A_{1}\cup\cdots\cup A_{n}=S$, and
+
+-    $A_{i}\cap A_{j}=\phi$ for $i\neq j$.
+:::
+
+## Simulating coin flipping
+
+Randomly sampling from the set $\{H,T\}$:
+
+```{r}
+# 10 draws with equal prob with replacement
+sample(c('H', 'T'), 10, replace = T)
+```
+
+Compute the probability of $HH$ when tossing two coins:
+
+```{r}
+# simulate coin tossing 10000 times
+toss <- sample(c('H','T'), 10000, replace =T)
+
+# group them into pairs
+toss.pair <- paste0(toss[-length(toss)], toss[-1])
+
+# number of HH
+n_HH <- sum(toss.pair == 'HH')
+
+# total number of tosses
+n_total <- length(toss.pair)
+
+# compute the probability
+prob <- n_HH / n_total
+
+cat("Prob of HH: ", prob)
+```

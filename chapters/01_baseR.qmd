@@ -1,0 +1,148 @@
+---
+title: "R tutorial*"
+format: html
+---
+
+**Variables**
+
+```{r}
+a = 5
+b <- 5
+c <- "Hello"
+```
+
+**Assignment**
+
+```{r,results='hide'}
+a <- a + 1 # assignment
+a == a + 1 # math equal
+```
+
+**Vectors**
+
+```{r}
+u <- c(1,2,3,4,5)
+v <- 6:10
+b <- c('good', 'night', '😊')
+```
+
+**Matrices**
+
+```{r}
+A <- matrix(c(1,2,3,4), nrow = 2, ncol = 2)
+B <- matrix(c(5,6,7,8), nrow = 2, ncol = 2)
+```
+
+**Linear algebra**
+
+```{r, results='hide'}
+u * v   # element-wise 
+u %*% v # dot product
+A * B   # element-wise
+A %*% B # matrix multiplication
+t(A)    # transpose
+det(A)  # determinant 
+```
+
+**Random numbers**
+
+```{r, results='hide'}
+# a random number from 0 to 100
+runif(1, 0, 100)
+
+# generate 10 random numbers
+runif(10, 0, 100)
+
+# random sampling
+sample(1:100, 10)
+```
+
+**Conditional statement**
+
+```{r, results='hide'}
+# draw a random integer
+x <- sample(1:100, 1)
+
+# if the remainder divided by 2 is 0
+if (x %% 2 == 0) {
+  
+  # display it is an even number
+  print("even number")
+
+  } else {
+  
+    # otherwise, it is an odd number
+    cat("odd number")
+
+}
+```
+
+**Loop**
+
+```{r, results='hide'}
+# for-loop
+# loop for a given number of times
+for (k in 1:10) {
+  
+  # the code to be repeated
+  print("Hello!")
+  
+}
+
+# while-loop
+# loop on condition
+k <- 0
+while (k < 10) {
+  
+  # the code to be repeated
+  print("Hello!")
+  
+  # keep track of the 
+  k <- k + 1
+}
+```
+
+```{r, results='hide'}
+# 1+2+...+100=?
+s = 0;
+k = 1;
+while (k <= 100) {
+  s <- s + k;
+  k <- k + 1;
+}
+```
+
+**Functions**
+
+```{r, eval=F}
+# built-in functions
+sin(pi/2)
+log(100)
+exp(2.3)
+```
+
+```{r, results='hide'}
+# custom functions
+square <- function(a) {
+  a * a
+}
+
+# call the function
+square(10)
+```
+
+```{r, results='hide'}
+# function as a reusable code block
+seqsum <- function(begin, end) {
+  s = 0;
+  k = begin;
+  while (k <= end) {
+    s <- s + k;
+    k <- k + 1;
+  }
+  return(s)
+}
+
+# function call
+seqsum(1, 100)
+```
