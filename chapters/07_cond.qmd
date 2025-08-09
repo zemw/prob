@@ -1,6 +1,98 @@
 ## Conditional probability
 
-:::{.callout-note}
+The probability of A **conditioned on** B is the updated probability of
+event A after we learn that event B has occurred. Since events contain
+information, the occurring of a certain event may change our believes on
+probabilities of other relevant events. The updated probability of event
+A after we learn that event B has occurred is the conditional
+probability of A given B.
+
+::: {#def-cond}
+If $A$ and $B$ are events with $P(B)>0$, then the conditional
+probability of $A$ given $B$ is defined as
+$$P(A|B)=\frac{P(A\cap B)}{P(B)}.$$
+:::
+
+::: callout-note
+## Don't confuse P(A\|B) with P(A,B)
+
+$P(A|B)$ is the probability of $A$ occurring given that $B$ has already
+occurred. While $P(A,B)=P(A\cap B)$ is the probability that $A$ and $B$
+occur simultaneously.
+:::
+
+::: {#prp-cond}
+Properties of conditional probability:
+
+-   $P(A\cap B)=P(B)P(A|B)=P(A)P(B|A)$
+
+-   $P(A_{1}\cap\cdots\cap A_{n})=P(A_{1})P(A_{2}|A_{1})P(A_{3}|A_{1},A_{2})\cdots P(A_{n}|A_{1}\ldots A_{n-1})$
+:::
+
+::: {#thm-bayes}
+### Bayes' rule
+Assume $P(B)>0$, we have $$P(A|B)=\dfrac{P(B|A)P(A)}{P(B)}$$
+:::
+
+::: {#thm-lotp}
+### Law of total probability
+Let $A_{1},...,A_{n}$ be a partition of the
+sample space $S$ (i.e., the $A_{i}$ are disjoint events and their union
+is $S$), with $P(A_{i})>0$ for all $i$. Then
+$$P(B)=\sum_{i=1}^{n}P(B|A_{i})P(A_{i}).$$
+:::
+
+::: {#exm-1.7}
+Get a random 2-card hand from a standard deck. Find the probability of
+(a) Both cards are aces given that at least one of them (not necessarily
+the first one) is an ace;
+(b) Getting another ace given the first draw is an ace of spade.
+:::
+
+::: solution
+The example shows the subtleness of conditional probabilities. The
+seemingly indifferent probabilities are in fact different:
+$$\begin{aligned} 
+P(\textrm{two aces | one ace}) 
+&=\frac{P(\textrm{both aces})}{P(\textrm{one ace})}\\
+&=\frac{\binom{4}{2}/\binom{52}{2}}{1-\binom{48}{2}/\binom{52}{2}}\\
+&=\frac{1}{33};\\
+& \\
+P(\textrm{another ace | ace of spade})
+&=\frac{P(\textrm{ace of spade \& another ace})}{P(\textrm{ace of spade})}\\
+&=\frac{\binom{3}{1}/\binom{52}{2}}{\binom{51}{1}/\binom{52}{2}}\\
+&=\frac{1}{17}.
+\end{aligned}$$
+
+Note that, in the first case, the denominator is interpreted as "at
+least one ace"; whereas in the second case, it is "ace of space +
+another card".
+:::
+
+::: {#exm-1.8}
+A disease has a prevalence rate of 10% (i.e., the probability of being
+infected is 10%). A diagnostic test for the disease has an accuracy of
+98%, meaning it correctly identifies infected individuals as positive
+98% of the time. Calculate the probability that an individual is
+infected given that the test result is positive.
+:::
+
+::: solution
+Let $D$ denote being actually infected by the disease; and $T$ denote a
+positive test. The test accuracy means: $P(T|D)=98\%$. It also means
+$P(T|D^{C})=2\%$. We also know that $P(D)=0.1$. We want to find
+$P(D|T)$. Note they are two different conditional probabilities, though
+we mostly confuse the two in everyday life. The two conditional
+probabilities are associated with Bayes' rule:
+$$\begin{aligned}P(D|T)= & \frac{P(T|D)P(D)}{P(T)}\\
+= & \frac{P(T|D)P(D)}{P(T|D)P(D)+P(T|D^{C})P(D^{C})}\\
+= & \frac{0.98\times 0.1}{0.98\times 0.1+0.02\times 0.9}\approx 84\%.
+\end{aligned}$$
+:::
+
+Note that how $P(T|D)$ is far away from $P(D|T)$!
+
+::: callout-note
 ## Thinking conditionally
 
 Abraham Wald, the renowned statistician, was hired by the Statistical
@@ -20,105 +112,3 @@ completely changes the answer!
 See [The Soul of Statistics](http://www.youtube.com/watch?v=dzFf3r1yph8)
 by Professor Joseph Blitzstein.
 :::
-
-The probability of A **conditioned on** B is the updated probability of
-event A after we learn that event B has occurred. Since events contain
-information, the occurring of a certain event may change our believes on
-probabilities of other relevant events. The updated probability of event
-A after we learn that event B has occurred is the conditional
-probability of A given B.
-
-::: {#def-cond}
-If $A$ and $B$ are events with $P(B)>0$, then the conditional probability 
-of $A$ given $B$ is defined as
-$$P(A|B)=\frac{P(A\cap B)}{P(B)}.$$
-:::
-
-:::{.callout-note}
-## Don't confuse P(A|B) with P(A,B)
-
-$P(A|B)$ is the probability of $A$ occurring given that $B$ has already occurred.
-$P(A,B):=P(A\cap B)$ is the probability that $A$ and $B$ occur simultaneously.
-:::
-
-::: {#prp-cond}
-Properties of conditional probability:
-
--   $P(A\cap B)=P(B)P(A|B)=P(A)P(B|A)$
-
--   $P(A_{1}\cap\cdots\cap A_{n})=P(A_{1})P(A_{2}|A_{1})P(A_{3}|A_{1},A_{2})\cdots P(A_{n}|A_{1}\ldots A_{n-1})$
-:::
-
-
-::: {#thm-bayes}
-(Bayes' rule) Assume $P(B)>0$, we have
-$$P(A|B)=\dfrac{P(B|A)P(A)}{P(B)}$$ 
-:::
-
-
-:::{.callout-note}
-### History of Bayes' rule
-
-Bayes' rule, quantifies how to update probabilities
-based on new evidence. It is named after Thomas Bayes in the 18th
-century. It gained prominence posthumously through Richard Price's
-publication of Bayes' work in 1763. The rule calculates the probability
-of a hypothesis based on prior knowledge and new data, foundation for
-Bayesian statistics.
-
-Historically, Bayes studied the problem in order to prove David Hume
-wrong. Hume argued that we cannot directly observe causation; instead,
-we infer it from patterns of events. Bayes' rule allows for a systematic
-way to update our beliefs about causal relationships as new evidence
-emerges, thereby bridging the gap between empirical observation and
-theoretical inference. This approach counters Hume's skepticism by
-providing a method for rationally assessing the likelihood of causes
-based on observed effects.
-
-See [The Christian roots of Bayesian statistics](https://faculty.som.yale.edu/jameschoi/bayes-theorem-began-as-a-defense-of-christianity).
-:::
-
-
-::: {#thm-lotp}
-(Law of total probability). Let $A_{1},...,A_{n}$ be a partition of the
-sample space $S$ (i.e., the $A_{i}$ are disjoint events and their union
-is $S$), with $P(A_{i})>0$ for all $i$. Then
-$$P(B)=\sum_{i=1}^{n}P(B|A_{i})P(A_{i}).$$
-:::
-
-
-::: {#exm-1.7}
-Get a random 2-card hand from a standard deck. Find the probability of
-getting another ace conditioned on (a) having one ace, or (b) having the
-ace of spade.
-:::
-
-::: solution
-The example shows the subtleness of conditional probabilities. The
-seemingly indifferent probabilities are in fact different:
-$$\begin{aligned} & P(\textrm{another ace | one ace})=\frac{P(\textrm{both aces})}{P(\textrm{one ace})}=\frac{C_{4}^{2}/C_{52}^{2}}{1-C_{48}^{2}/C_{52}^{2}}=\frac{1}{33};\\
- & P(\textrm{another ace | ace of spade})=\frac{P(\textrm{ace of spade \& another ace})}{P(\textrm{ace of spade})}=\frac{C_{3}^{1}/C_{52}^{2}}{C_{51}^{1}/C_{52}^{2}}=\frac{1}{17}.
-\end{aligned}$$
-
-In the first case, the denominator is interpreted as "at least one ace";
-whereas in the second case, it is "ace of space + another card".
-:::
-
-::: {#exm-1.8}
-A disease has a prevalence rate of 10% (i.e., the probability of being infected is 10%). A diagnostic test for the disease has an accuracy of 98%, meaning it correctly identifies infected individuals as positive 98% of the time. Calculate the probability that an individual is infected given that the test result is positive.
-:::
-
-::: solution
-Let $D$ denote being actually infected by the disease; and $T$ denote 
-a positive test. The test accuracy means:
-$P(T|D)=98\%$. It also means $P(T|D^{C})=2\%$. We also know that
-$P(D)=0.1$. We want to find $P(D|T)$. Note they are two different
-conditional probabilities, though we mostly confuse the two in everyday life. 
-The two conditional probabilities are associated with Bayes' rule:
-$$\begin{aligned}P(D|T)= & \frac{P(T|D)P(D)}{P(T)}\\
-= & \frac{P(T|D)P(D)}{P(T|D)P(D)+P(T|D^{C})P(D^{C})}\\
-= & \frac{0.98\times 0.1}{0.98\times 0.1+0.02\times 0.9}\approx 84\%.
-\end{aligned}$$
-:::
-
-Note that how $P(T|D)$ is far away from $P(D|T)$! 

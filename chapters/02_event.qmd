@@ -65,7 +65,7 @@ $A_{1},\dots,A_{n}$ are a **partition** of $S$ if
 
 -   $A_{1}\cup\cdots\cup A_{n}=S$, and
 
--    $A_{i}\cap A_{j}=\phi$ for $i\neq j$.
+-   $A_{i}\cap A_{j}=\phi$ for $i\neq j$.
 :::
 
 ## Simulating coin flipping

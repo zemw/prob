@@ -28,36 +28,40 @@ all those previously considered.
 Let's assume there's a pool of $N$ people out there from which you are
 choosing. We'll also assume that you have a clear-cut way of rating
 people. You know who is the best to be your partner. We will call that
-person Mr/Ms X. The people that you will show up in random order. X can
+person Mr/Ms $X$. The people that you will show up in random order. $X$ can
 show up anywhere in the sequence. Sadly, a person you have dated and
 then rejected isn't available to you any longer later on. So you cannot
 date all of them and pick the best one.
 
 Your dating strategy is to date $M$ of the $N$ people and then settle
 with the next person who is better. Our task is to find the optimal $M$.
-If $M$ is too small, you will likely land with someone before X shows
-up. If $M$ is too large, X will likely pass X and pick someone less
+If $M$ is too small, you will likely land with someone before $X$ shows
+up. If $M$ is too large, $X$ will likely pass $X$ and pick someone less
 optimal. Of course, there is no perfect solution. We want to find the
-$M$ that maximizes the probability of landing X.
+$M$ that maximizes the probability of landing $X$.
 
-Let $P(M,N)$ be the probability of successfully picking X if you date
+Let $P(M,N)$ be the probability of successfully picking $X$ if you date
 $M$ people out of $N$ and then go for the next person who is better than
-the previous ones. The overall probability is: $$\begin{aligned}P(M,N) 
-&= P(\text{Success | X in position 1}) + P(\text{Success | X in position 2}) + \cdots \\
-&+ P(\text{Success | X in position N})
+the previous ones. The overall probability is: 
+$$\begin{aligned}
+P(M,N) = 
+& P(\text{Success | X is in position 1}) P(\text{X is in position 1}) + \\
+& P(\text{Success | X is in position 2}) P(\text{X is in position 2}) + \\
+& \quad\vdots \\
+& P(\text{Success | X in position N})P(\text{X is in position N})
 \end{aligned}\\ $$
 
-For a given value of $M$, if X is among the first $M$ people you date,
-then you have missed your chance. The probability of settling with X is
+For a given value of $M$, if $X$ is among the first $M$ people you date,
+then you have missed your chance. The probability of settling with $X$ is
 zero. Therefore, the first $M$ terms are all zero.
 
-If X is in $M+1$, you're in luck: since X is better than all others so
-far, you will pick X for sure. Therefore,
+If $X$ is in $M+1$, you're in luck: since $X$ is better than all others so
+far, you will pick $X$ for sure. Therefore,
 $$P(\text{Success }|M+1) = P(\text{X is in position } M+1)= \frac{1}{N}$$Since
-X is equally likely to be in any position, the probability of X being in
+$X$ is equally likely to be in any position, the probability of $X$ being in
 $M+1$ out of $N$ people is $1/N$.
 
-If X is in $M+2$, you'll pick him/her up as long as the $M+1$st person
+If $X$ is in $M+2$, you'll pick him/her up as long as the $M+1$st person
 didn't have a higher rating than all the previous $M$ people.
 
 $$
@@ -71,7 +75,7 @@ This is because the highest rated person can be anywhere in the sequence
 $1,\dots,M+1$. We want him/her to be in the first $M$ people. The chance
 is $M/(M+2)$.
 
-Similarly, if X is the $M+3$ person, you'll pick him/her up to as long
+Similarly, if $X$ is the $M+3$ person, you'll pick him/her up to as long
 as neither the $M+1$ nor the $M+2$ person have a higher rating than all
 the previous $M$ people. The probability is
 

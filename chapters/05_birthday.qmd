@@ -6,28 +6,29 @@ birthday. While it might seem intuitive that the probability is low in
 small groups, the results are surprising.
 
 ::: {#exm-birthday}
-In a group of $k$ people, what is the probability that at least two people 
-share the same birthday? Assume (1) there are 365 possible birthdays; 
-(2) birthdays are evenly distributed across the year;
-(3) people are equally likely to be born on any given day.
+In a group of $k$ people, what is the probability that at least two
+people share the same birthday? Assume (1) there are 365 possible
+birthdays; (2) birthdays are evenly distributed across the year; (3)
+people are equally likely to be born on any given day.
 :::
 
 ::: solution
 If $k>365$, the probability is $1$. Assume $k\leq365$ for the rest.
-Instead of directly calculating the probability of at least two people 
-sharing a birthday, we first compute the complementary probability, 
-$P(\text{no match})$ , where no two people in the group have the same birthday.
+Instead of directly calculating the probability of at least two people
+sharing a birthday, we first compute the complementary probability,
+$P(\text{no match})$ , where no two people in the group have the same
+birthday.
 
-For the first person, there are 365 choices for their birthday.
-For the second person, to avoid a shared birthday, there are 364 remaining choices.
-For the third person, there are 363 choices, and so on.
-For $k$ people, the total number of arrangements (no shared birthday) is:
+For the first person, there are 365 choices for their birthday. For the
+second person, to avoid a shared birthday, there are 364 remaining
+choices. For the third person, there are 363 choices, and so on. For $k$
+people, the total number of arrangements (no shared birthday) is:
 
 $$365 \times 364 \times 363 \times \cdots \times (365 - k + 1)$$
 
-The total number of possible arrangements (with or without shared birthdays) is $365^k$.
-Thus, the probability of no shared birthday is:
-	
+The total number of possible arrangements (with or without shared
+birthdays) is $365^k$. Thus, the probability of no shared birthday is:
+
 $$P(\textrm{no match})=\frac{365\cdot364\cdots(365-k+1)}{365^{k}}$$
 
 Thus, the probability of at least one matched birthday is:
@@ -42,29 +43,35 @@ $$P(\text{match})= 1- P(\text{no match})=\begin{cases}
 ## R simulation {.unnumbered}
 
 ```{r}
-# the birthday experiment with k people
-birthday_experiment <- function(k = 30) {
+# a class of k people 
+k <- 30
+
+# number of experiments
+N <- 1000
+
+# number of matches
+m <- 0
+
+for (i in 1:N) {
   
   # draw k random numbers from 1 to 365 with replacement
   birthdays <- sample(1:365, k, replace = T) 
-  
+    
   # number of duplicated birthdays
-  dups <- length(birthdays) - length(unique(birthdays))
+  dups <- duplicated(birthdays)
+    
+  # if duplicated birthdays found
+  if (any(dups)) m <- m + 1
   
-  # return the value
-  dups
 }
 
-# repeat the experiment 1000 times
-results <- replicate(1000, birthday_experiment(k = 30))
+cat("Prob of at least one match: ", m / N)
 
-# count frequencies
-table(results) |> knitr::kable()
 ```
 
-There is even a built-in function `pbirthday` that computes the probability of
-birthday coincidence. We may utilize this function to plot the probability 
-as the number of people increases. 
+There is even a built-in function `pbirthday` that computes the
+probability of birthday coincidence. We may utilize this function to
+plot the probability as the number of people increases.
 
 ```{r, results='hide'}
 # compute the probability of birthday match for 30 people
