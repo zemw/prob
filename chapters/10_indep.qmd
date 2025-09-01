@@ -46,17 +46,9 @@ and so on.
 :::{.callout-note}
 ### Don't assume independence without justification
 
-In probability, assuming events are independent without justification can lead 
-to catastrophic errors. A tragic example is the Sally Clark case, where a mother 
-was wrongfully convicted of murdering her two children after both died of sudden 
-infant death syndrome (SIDS). The prosecution argued that the probability of two 
-SIDS deaths in one family was ￼ in ￼ million, assuming the events were independent. 
-However, this assumption ignored the potential influence of shared genetic, 
-environmental, or health factors, which could increase the likelihood of a second 
-SIDS death if one had already occurred. By treating dependent events as independent, 
-the calculated probability was grossly misleading, contributing to a miscarriage of 
-justice. Always evaluate relationships between events carefully before assuming 
-independence.
+Independence provides lots of nice properties, which are not necessarily
+true without independence. A common mistake is to assume independence without
+justification. Be careful when you apply properties that assume independence.
 :::
 
 ## Common confusions {.unnumbered}

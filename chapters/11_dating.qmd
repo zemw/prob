@@ -104,11 +104,9 @@ $$
 We can ask the computer to find the solution.
 
 ```{r}
-
 N <- 100
-m <- 1:100
-p <- sapply(m, function(m) m/N*sum(1/seq(m, N-1)))
-plot(m, p)
+p <- sapply(1:(N-1), function(m) m/N*sum(1/seq(m, N-1)))
+plot(1:(N-1), p, type="l")
 ```
 
 For $N=100$, the highest probability if achieved when $M=37$.

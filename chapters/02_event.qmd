@@ -68,7 +68,7 @@ $A_{1},\dots,A_{n}$ are a **partition** of $S$ if
 -   $A_{i}\cap A_{j}=\phi$ for $i\neq j$.
 :::
 
-## Simulating coin flipping
+## Simulating coin flipping {.unnumbered}
 
 Randomly sampling from the set $\{H,T\}$:
 

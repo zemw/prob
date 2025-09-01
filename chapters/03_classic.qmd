@@ -44,7 +44,7 @@ $1,2,\dots,n$.
 
 **Permutations**. Consider $n$ objects and making $k$ choices from them,
 one at a time [without replacement]{.underline}. Then there are
-$P_{n}^{k}=n(n-1)\cdots(n-k+1)$ possible outcomes, for $k\leq n$.
+$P_{n}^{k}=n(n-1)\cdots(n-k+1)=\frac{n!}{k!}$ possible outcomes, for $k\leq n$.
 (Ordering matters in this case, e.g. $1,2,3$ is considered different
 from $2,3,1$)
 
@@ -53,20 +53,20 @@ one at a time without replacement, without distinguishing between the
 different orders in which they could be chosen (e.g. $1,2,3$ is
 considered no different from $2,3,1$). Then there are
 $C_{n}^{k}=\frac{n(n-1)\cdots(n-k+1)}{k!}$ possible outcomes. In modern
-math, we prefer the notation $\binom{n}{k}:= C_n^k$, which reads as "$n$
+math, we prefer the notation $$\binom{n}{k}\equiv C_n^k,$$ which reads as "$n$
 choose $k$".
 
 The following table summarizes the counting methods.
 
 |                  | order matters | order doesn't matter |
 |------------------|:-------------:|:--------------------:|
-| with replacement |    $n^{k}$    |   $C_{n+k-1}^{k}$    |
-| non-replacement  |  $P_{n}^{k}$  |     $C_{n}^{k}$      |
+| with replacement |    $n^{k}$    |   $\binom{n+k-1}{k}$    |
+| non-replacement  |  $\frac{n!}{k!}$  |     $\binom{n}{k}$      |
 
 The upper-right corner case is equivalent to putting $k$
 indistinguishable balls into $n$ distinguishable baskets (e.g. two balls
 in Basket 3 means the 3rd object is chosen twice). Therefore, the number
-of possible arrangements is $C_{k+n-1}^{n-1}$.
+of possible arrangements is $\binom{k+n-1}{n-1}$.
 
 ## Binomial coefficient {.unnumbered}
 

@@ -81,5 +81,5 @@ prob <- pbirthday(30)
 probs <- sapply(1:100, pbirthday)
 
 # make a plot
-plot(1:100, probs, main = "Probability of >1 people with the same birthday")
+plot(1:100, probs, type="l",main = "Probability of >1 people with the same birthday")
 ```

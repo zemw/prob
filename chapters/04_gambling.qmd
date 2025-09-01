@@ -82,7 +82,7 @@ most people's common sense: the more dice rolled, the more likely to see
 the sixes.
 :::
 
-## Find probability by simulation
+## Find probability by simulation {.unnumbered}
 
 Let's redo @exm-1.3 by simulation.
 
