@@ -44,7 +44,7 @@ $1,2,\dots,n$.
 
 **Permutations**. Consider $n$ objects and making $k$ choices from them,
 one at a time [without replacement]{.underline}. Then there are
-$P_{n}^{k}=n(n-1)\cdots(n-k+1)=\frac{n!}{k!}$ possible outcomes, for $k\leq n$.
+$P_{n}^{k}=n(n-1)\cdots(n-k+1)=\frac{n!}{(n-k)!}$ possible outcomes, for $k\leq n$.
 (Ordering matters in this case, e.g. $1,2,3$ is considered different
 from $2,3,1$)
 
@@ -61,7 +61,7 @@ The following table summarizes the counting methods.
 |                  | order matters | order doesn't matter |
 |------------------|:-------------:|:--------------------:|
 | with replacement |    $n^{k}$    |   $\binom{n+k-1}{k}$    |
-| non-replacement  |  $\frac{n!}{k!}$  |     $\binom{n}{k}$      |
+| non-replacement  |  $\frac{n!}{(n-k)!}$  |     $\binom{n}{k}$      |
 
 The upper-right corner case is equivalent to putting $k$
 indistinguishable balls into $n$ distinguishable baskets (e.g. two balls
