@@ -607,7 +607,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Don’s misuse the classical definition
+Don’t misuse the classical definition
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -620,7 +620,7 @@ Don’s misuse the classical definition
 <p><strong>Multiplications.</strong> Consider a compound experiment consisting of two sub-experiments, Experiment A and Experiment B. Suppose that Experiment A has <span class="math inline">\(a\)</span> possible outcomes, and for each of those outcomes Experiment B has <span class="math inline">\(b\)</span> possible outcomes. Then the compound experiment has <span class="math inline">\(a\times b\)</span> possible outcomes.</p>
 <p><strong>Exponentiation.</strong> Consider <span class="math inline">\(n\)</span> objects and making <span class="math inline">\(k\)</span> choices from them, one at a time <u>with replacement</u>. Then there are <span class="math inline">\(n^{k}\)</span> possible outcomes.</p>
 <p><strong>Factorials.</strong> Consider <span class="math inline">\(n\)</span> objects <span class="math inline">\(1,2,\dots,n\)</span>. A permutation of <span class="math inline">\(1,2,\dots,n\)</span> is an arrangement of them in some order, e.g., <span class="math inline">\(3,5,1,2,4\)</span> is a permutation of <span class="math inline">\(1,2,3,4,5\)</span>. The are <span class="math inline">\(n!\)</span> permutations of <span class="math inline">\(1,2,\dots,n\)</span>.</p>
-<p><strong>Permutations</strong>. Consider <span class="math inline">\(n\)</span> objects and making <span class="math inline">\(k\)</span> choices from them, one at a time <u>without replacement</u>. Then there are <span class="math inline">\(P_{n}^{k}=n(n-1)\cdots(n-k+1)=\frac{n!}{k!}\)</span> possible outcomes, for <span class="math inline">\(k\leq n\)</span>. (Ordering matters in this case, e.g.&nbsp;<span class="math inline">\(1,2,3\)</span> is considered different from <span class="math inline">\(2,3,1\)</span>)</p>
+<p><strong>Permutations</strong>. Consider <span class="math inline">\(n\)</span> objects and making <span class="math inline">\(k\)</span> choices from them, one at a time <u>without replacement</u>. Then there are <span class="math inline">\(P_{n}^{k}=n(n-1)\cdots(n-k+1)=\frac{n!}{(n-k)!}\)</span> possible outcomes, for <span class="math inline">\(k\leq n\)</span>. (Ordering matters in this case, e.g.&nbsp;<span class="math inline">\(1,2,3\)</span> is considered different from <span class="math inline">\(2,3,1\)</span>)</p>
 <p><strong>Combinations</strong>. Consider <span class="math inline">\(n\)</span> objects and making <span class="math inline">\(k\)</span> choices from them, one at a time without replacement, without distinguishing between the different orders in which they could be chosen (e.g.&nbsp;<span class="math inline">\(1,2,3\)</span> is considered no different from <span class="math inline">\(2,3,1\)</span>). Then there are <span class="math inline">\(C_{n}^{k}=\frac{n(n-1)\cdots(n-k+1)}{k!}\)</span> possible outcomes. In modern math, we prefer the notation <span class="math display">\[\binom{n}{k}\equiv C_n^k,\]</span> which reads as “<span class="math inline">\(n\)</span> choose <span class="math inline">\(k\)</span>”.</p>
 <p>The following table summarizes the counting methods.</p>
 <table class="caption-top table">
@@ -639,7 +639,7 @@ Don’s misuse the classical definition
 </tr>
 <tr class="even">
 <td>non-replacement</td>
-<td style="text-align: center;"><span class="math inline">\(\frac{n!}{k!}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{n!}{(n-k)!}\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(\binom{n}{k}\)</span></td>
 </tr>
 </tbody>
