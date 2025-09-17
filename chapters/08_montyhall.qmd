@@ -1,7 +1,7 @@
 ## Monty Hall problem
 
 :::{#exm-monty}
-(Monty Hall problem)
+### Monty Hall problem
 Suppose you are on Monty Hall's TV show. There are
 three doors. One of them has a car behind it. The other two doors have
 goats. Monty knows which one has the car. Monty now asks you to pick one
@@ -42,39 +42,40 @@ of the door.
 ## R simulation {.unnumbered}
 
 ```{r}
-monty_hall <- function() {
+
+# Number of simulations
+N <- 1000 
+
+# Number of total wins
+W <- 0
+
+# Prizes offered
+prizes <- c('Car', 'Goat 1', 'Goat 2')
+
+for (i in 1:N) {
   
-  # three doors numbered 1,2,3
-  doors <- c(1,2,3)
+  # Prizes are in random order behind the doors
+  doors <- sample(prizes, 3)
   
-  # a random door has a car behind it
-  car_door <- sample(doors, 1)
+  # Guest picks a random door
+  pick <- sample(doors, 1)
   
-  # the guest pick a door randomly
-  init_pick <- sample(doors, 1)
+  # Monty opens the door that is not picked by the guest 
+  # nor does it has the Car behind it
+  open <- sample(setdiff(doors, c(pick, 'Car')), 1)
   
-  if (car_door == init_pick) {
-    # if the guest pick the car door
-    # Monty opens either of the other two doors
-    monty_open <- sample(setdiff(doors, car_door), 1)
-  } else {
-    # otherwise, Monty opens the door without the car
-    monty_open <- setdiff(doors, c(car_door, init_pick))
-  }
+  # If the Guest swithes, he chooses the door that is not
+  # his initial pick nor the one opened by Monty
+  switch <- setdiff(doors, c(pick, open))
   
-  # if the guest switch, he chooses the door other than 
-  # his initial choice and the opened door
-  switch_door <- setdiff(doors, c(init_pick, monty_open))
+  # The guest wins if his final choice has the Car
+  win <- switch == 'Car'
   
-  # he wins if the switched door is the car door
-  win <- switch_door == car_door
-  win
+  # Increase the winning counter
+  W <- W + win
 }
 
-# repeat the experiment 1000 times and collect the results
-wins <- replicate(1000, monty_hall())
-# convert the results to numbers: 1-win,0-lose
-wins <- as.numeric(wins)
-# plot the distribution of values
-hist(wins, breaks = 2)
+# Frequency of winning the game if always switching
+W/N
 ```
+
