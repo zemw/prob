@@ -35,6 +35,24 @@ Properties of conditional probability:
 Assume $P(B)>0$, we have $$P(A|B)=\dfrac{P(B|A)P(A)}{P(B)}$$
 :::
 
+::: callout-note
+## Thomas Bayes and "causes and effects"
+
+The Bayes' rule is named after Thomas Bayes (18th century) who wanted
+to know how to infer causes from effects. Human intelligence wants to
+know the cause given its effects. However, we are only able to observe
+the effects given the cause. Here is Bayes' reasoning.
+
+Suppose we have a *prior* belief about the cause of something we want to learn.
+We may not be able to learn the true cause directly, but after we observe its 
+effects (the *Data*), we would update our belief based on the new information 
+we have learned from the data. The updated belief (the *posterior*) is therefore  somewhat closer to the "truth". 
+
+$$\underbrace{P(\text{Belief | Data})}_{\text{Posterier}}=
+\frac{\overbrace{P(\text{Data | Belief})}^{\text{Likelihood}}\;
+\overbrace{P(\text{Belief})}^{\text{Prior}} }{P(\text{Data})}$$
+:::
+
 ::: {#thm-lotp}
 ### Law of total probability (LOTP)
 
