@@ -79,7 +79,7 @@ mathematician Pierre Remond de Montmort) of the inclusion-exclusion
 theorem.
 
 ::: {#exm-match}
-(Matching problem) 
+### Matching problem
 Suppose there are $n$ people who each check in a hat at a party. 
 The hats are randomly returned to them without any concern for whose 
 hat is whose. What is the probability that at least one person gets
@@ -107,4 +107,30 @@ Pattern matching is a very useful technique. In the last step, we recognize that
 the Taylor series of $e^x$ is
 $$e^x = 1 + x + \frac{x^2}{2!} +\frac{x^3}{3!}+\cdots $$
 Therefore, $e^{-1} = 1 -1  + \frac{1}{2!} - \frac{1}{3!}+\cdots$
+:::
+
+:::{#exm-monkey}
+### Infinite monkey theorem
+A monkey hitting keys independently and at random on a typewriter 
+keyboard for an infinite amount of time will almost surely type any 
+given text (e.g. the complete works of William Shakespeare).
+In other words, *an infinite random sequence of letters contain 
+every finite string infinitely often with probability 1.*
+:::
+
+::: proof
+Let's compute the probability of the monkey typing "banana" correctly
+with random strokes. Suppose there are 50 keys on the keyboard. 
+The monkey typed correctly "banana" is $\frac{1}{50^6}$.
+Suppose the monkey tried $n$ times, the probability that he did not 
+typed the correct text is
+$$X_n = \left(1-\frac{1}{50^6}\right)^n$$
+For finite $n$ (even $n$ is very large), $X_n$ would be very close to 1. 
+For example, when $n=10^6$, $X_n\approx 0.9999$. 
+But as $n\to\infty$, $X_n\to 0$. That means, if $n$ is infinitely large, 
+the probability that the monkey produced the correct text goes to 1.
+
+The theorem reminds us that infinite limits behave very differently from 
+large finite numbers. It is also used as a metaphor: given enough time, 
+randomness can generate order, structure, or meaning.
 :::

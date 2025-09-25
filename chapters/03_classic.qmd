@@ -8,7 +8,7 @@ likely]{.underline}.
 :::
 
 ::: callout-note
-## Don's misuse the classical definition
+## Don't misuse the classical definition
 
 The classical probability is very restrictive. It only applies to
 scenarios such as flipping coins or rolling dice where the outcomes are
