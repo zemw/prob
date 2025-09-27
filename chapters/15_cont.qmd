@@ -1,4 +1,4 @@
-## Continuous variables
+## Continuous RVs
 
 ::: {#def-conrv}
 ## Continuous random variable
