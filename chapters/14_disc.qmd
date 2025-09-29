@@ -57,11 +57,20 @@ for the PMF; or (3) visualize it in a graph.
 ::: {#exm-drv-1}
 A random variable $X$ is said to have the **Bernoulli distribution** if
 $X$ has only two possible values, $0$ and $1$, and $P(X=1)=p$,
-$P(X=0)=1-p$. The PMF of $X$ is $$P(X=k)=p^{k}(1-p)^{1-k}$$ where
-$k\in\left\{ 0,1\right\}$.
+$P(X=0)=1-p$. 
+
+The PMF of a Bernoulli random variable $X$ is given by
+$$P(X=k)=\begin{cases}
+p & \textrm{if }k=1,\\
+1-p & \textrm{if }k=0.
+\end{cases}$$
+
+This can also be expressed as
+$$P(X=k)=p^{k}(1-p)^{1-k},\quad k\in\left\{ 0,1\right\} .$$
 :::
 
-::: {#exr-dis-1}
+::: callout-tip
+### Exercise
 A student is trying to connect to the campus Wi-Fi network. Each attempt
 is independent, and:
 
