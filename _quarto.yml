@@ -33,7 +33,6 @@ book:
         - chapters/16_cdf.qmd
     - part: "Discrete Distributions"
       chapters:
-        - chapters/17_bern.qmd
         - chapters/18_bin.qmd
         - chapters/19_dice.qmd
         - chapters/20_dexp.qmd
