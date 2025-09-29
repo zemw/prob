@@ -56,3 +56,18 @@ $X^2$ is not $f^2(x)$. To get the distribution of $X+Y$, you can't just
 add up $f_X(x)+f_Y(y)$. The right way to do it will be discussed in
 later chapters (transformation and convolution).
 :::
+
+::: {#exr-cont-1}
+Every morning, a student waits for the elevator in their dormitory. The
+waiting time (in minutes) is equally likely to be anywhere between 0 and
+3 minutes, depending on when the elevator arrives.
+
+1.  Define the random variable $X$ = "the student’s elevator waiting
+    time." What is the support of $X$?
+2.  Derive the probability density function (PDF) of $X$.
+3.  Compute $P(X \leq 1)$, i.e. the probability that the waiting time is
+    at most 1 minute.
+4.  If the student must wait more than 2 minutes, they decide to take
+    the stairs instead. Define a new indicator random variable
+    $Y = \mathbb{I}(X>2)$. Compute $P(Y=1)$.
+:::

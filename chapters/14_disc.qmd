@@ -60,3 +60,21 @@ $X$ has only two possible values, $0$ and $1$, and $P(X=1)=p$,
 $P(X=0)=1-p$. The PMF of $X$ is $$P(X=k)=p^{k}(1-p)^{1-k}$$ where
 $k\in\left\{ 0,1\right\}$.
 :::
+
+::: {#exr-dis-1}
+A student is trying to connect to the campus Wi-Fi network. Each attempt
+is independent, and:
+
+-   With probability $p$ the attempt is successful.
+-   With probability $1-p$ the attempt fails, and the student tries
+    again.
+
+The student will keep trying until the first success.
+
+1.  Define the event $A_k$ = "the first successful connection occurs on
+    the $k$-th attempt." What is $P(A_k)$?
+2.  Define a random variable $X$ = "the number of attempts needed until
+    the first success." What is the support of $X$?
+3.  Derive the probability mass function (PMF) of $X$.
+4.  Show that the PMF is properly normalized.
+:::
