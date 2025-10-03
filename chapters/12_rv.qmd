@@ -1,114 +1,68 @@
 # What is a random variable?
 
-In the previous chapter, we have been working with *events*, which is a
-conceptualization of real world outcomes occurred with probabilities. In
-this chapter, we introduce a much more powerful conceptualization that
-deals with uncertain outcomes --- random variables, which is the
-foundation of all probability and statistical studies.
+In the previous chapter, we have been working with *events*, which is a conceptualization of real world outcomes occurred with probabilities. In this chapter, we introduce a much more powerful conceptualization that deals with uncertain outcomes --- random variables, which is the foundation of all probability and statistical studies.
 
-Informally, a random variable differs from a normal variable as it is
-"random". A random variable, say $X$, is never associated with a certain
-value. It could different values *probabilistically*. For example, $X$
-may take the value 1 with probability 0.4, and take the value 2 with
-probability 0.3. The formal definition of a random variable is as
-follows.
+Informally, a random variable differs from a normal variable as it is "random". A random variable, say $X$, is never associated with a certain value. It could different values *probabilistically*. For example, $X$ may take the value 1 with probability 0.4, and take the value 2 with probability 0.3. The formal definition of a random variable is as follows.
+
+## RV as numeric encoding of events {.unnumbered}
 
 ::: {#def-rv}
-## Random variable
+### Random variable
 
-Given an experiment with sample space $S$, a random variable is a
-function from the sample space $S$ to the real numbers $\mathbb{R}$.
+Given an experiment with sample space $S$, a random variable is a function from the sample space $S$ to the real numbers $\mathbb{R}$.
 :::
 
-As an example, flipping a coin twice, let $X$ be the number of heads.
-Then $X(\cdot)$ is a functions that maps events in
-$\left\{ HH,HT,TH,TT\right\}$ into real numbers. In our case, the
-mapping goes like $$\begin{aligned}
-X(HH) & =2,X(HT)=1,X(TH)=1,X(TT)=0.\end{aligned}$$ $X$ is therefore an
-[encoding]{.underline} of events in the sample space into real numbers.
-We could, of course, have different encoding. Consider the random
-variable $Y$ as the number of tails. Then we have $Y=2-X$.
-$$\begin{aligned}
-Y(HH) & =0,Y(HT)=1,Y(TH)=2,Y(TT)=2.\end{aligned}$$ We could also define
-$Z$ as the number heads in the 1st toss only. The encoding goes like
-$$Z(HH)=1,Z(HT)=1,Z(TH)=0,Z(TT)=0.$$ We have listed three ways of
-"encoding" the same experiment as random variables. All of them are
-valid random variables, but they map the outcomes into different
-numbers. We can say that, a random variable is a [numeric]{.underline}
-"summary" of an aspect of an experiment.
+As an example, flipping a coin twice, let $X$ be the number of heads. Then $X(\cdot)$ is a functions that maps events in $\left\{ HH,HT,TH,TT\right\}$ into real numbers. In our case, the mapping goes like $$\begin{aligned}
+X(HH) & =2,X(HT)=1,X(TH)=1,X(TT)=0.\end{aligned}$$ $X$ is therefore an [encoding]{.underline} of events in the sample space into real numbers. We could, of course, have different encoding. Consider the random variable $Y$ as the number of tails. Then we have $Y=2-X$. $$\begin{aligned}
+Y(HH) & =0,Y(HT)=1,Y(TH)=2,Y(TT)=2.\end{aligned}$$ We could also define $Z$ as the number heads in the 1st toss only. The encoding goes like $$Z(HH)=1,Z(HT)=1,Z(TH)=0,Z(TT)=0.$$ We have listed three ways of "encoding" the same experiment as random variables. All of them are valid random variables, but they map the outcomes into different numbers. We can say that, a random variable is a [numeric]{.underline} "summary" of an aspect of an experiment.
 
 ::: callout-caution
 ### Notation for random variables
 
-We usually use capital letters, such as $X,Y,Z$, to denote random
-variables. We use small letters, such as $x,y,z$, to denote specific
-values. $P(X=x)$ means the probability of $X$ taking the value $x$.
-Don't confuse the random variable $X$ with the number $x$.
+We usually use capital letters, such as $X,Y,Z$, to denote random variables. We use small letters, such as $x,y,z$, to denote specific values. $P(X=x)$ means the probability of $X$ taking the value $x$. Don't confuse the random variable $X$ with the number $x$.
 :::
 
 ::: callout-caution
 ### Don't confuse random variables, numbers, and events
 
-Random variables are never fixed numbers. Functions of random variables,
-such as $X^2$, $|X|$, $e^X$, are also random variables. Random variables
-are not events. It does not make sense to write $P(X)$, because $X$ is
-not an event. But $X=a$ is an event, it makes sense to write $P(X=a)$.
+Random variables are never fixed numbers. Functions of random variables, such as $X^2$, $|X|$, $e^X$, are also random variables. Random variables are not events. It does not make sense to write $P(X)$, because $X$ is not an event. But $X=a$ is an event, it makes sense to write $P(X=a)$.
 :::
 
 ::: {#def-dist}
-## Distribution
+### Distribution
 
-Let $X$ be a random variable. The distribution of $X$ is the collection
-of all probabilities of the form $P(X\in C)$ for all sets $C$ of real
-numbers such that $\left\{ X\in C\right\}$ is an event.
+Let $X$ be a random variable. The distribution of $X$ is the collection of all probabilities of the form $P(X\in C)$ for all sets $C$ of real numbers such that $\left\{ X\in C\right\}$ is an event.
 :::
 
-A distribution specifies the probabilities associated with
-[all]{.underline} values of a random variable. In the above example, the
-distribution of $X$ is given by
-$$P(X=0)=\frac{1}{4},P(X=1)=\frac{1}{2},P(X=2)=\frac{1}{4}.$$ The
-distribution of $Y$ is given by
-$$P(Y=0)=\frac{1}{4},P(Y=1)=\frac{1}{2},P(Y=2)=\frac{1}{4}.$$ The
-distribution of $Z$ is given by
-$$P(Z=0)=\frac{1}{2},P(Z=1)=\frac{1}{2}.$$
+A distribution specifies the probabilities associated with [all]{.underline} values of a random variable. In the above example, the distribution of $X$ is given by $$P(X=0)=\frac{1}{4},P(X=1)=\frac{1}{2},P(X=2)=\frac{1}{4}.$$ The distribution of $Y$ is given by $$P(Y=0)=\frac{1}{4},P(Y=1)=\frac{1}{2},P(Y=2)=\frac{1}{4}.$$ The distribution of $Z$ is given by $$P(Z=0)=\frac{1}{2},P(Z=1)=\frac{1}{2}.$$
 
-You may have noted that the probabilities in a distribution always sums
-up to $1$, as all possible events constitute the entire sample space.
+You may have noted that the probabilities in a distribution always sums up to $1$, as all possible events constitute the entire sample space.
 
 ::: callout-tip
-## Specifying the distribution
+### Specifying the distribution
 
-Listing all the values is not a smart way to specify a distribution. We
-like to use a function (if possible), such as
-$f(x) \overset{?}{=} e^{-x}$, to specify the probability of a random
-variable $X$ taking the value $x$. This is convenient, because once we
-know the function, we know all the probabilities. But how to specify
-this function depends on whether a random variable is discrete or
-continuous.
+Listing all the values is not a smart way to specify a distribution. We like to use a function (if possible), such as $f(x) \overset{?}{=} e^{-x}$, to specify the probability of a random variable $X$ taking the value $x$. This is convenient, because once we know the function, we know all the probabilities. But how to specify this function depends on whether a random variable is discrete or continuous.
 :::
+
+## RV as abstraction for uncertain outcomes {.unnumbered}
+
+Many real-world processes have uncertain outcomes. For example, the outcome of tossing a coin or the temperature of tomorrow. In many applications like this, we simply do not have perfect information to predict the future with certainty. In such cases, we model the uncertain outcome as an RV, which takes uncertain values with probabilities. The exact distribution of many applications may be unknown, but we can approximate it with frequencies observed in samples.
+
+|  |  |  |
+|----|----|----|
+| **Experiment:** | **Tossing a coin** |  |
+|  | **Conceptualization** | **Observations** |
+| Random variable | $X$ with support $\{0,1\}$ | $\{0,1,1,0,0,1, ...\}$ |
+| Distribution | $P(X=i)=0.5,i\in\{0,1\}$ | Proportion of $1$s $= 0.45$ |
+| **Experiment:** | **Taking an exam** |  |
+|  | **Conceptualization** | **Observations** |
+| Random variable | $Z$ with support $\{0,1,2,...,100\}$ | $\{80,69,75,60,92, ...\}$ |
+| Distribution | $Z\sim N(80,10)$ (assumed) | Proportion of B+ $= 0.14$ |
 
 ::: callout-note
 ### Deterministic vs probabilistic models
 
-In high school, mathematical models are typically presented as if they
-operate with certainty. For example, the time it takes an object to fall
-from a height $h$ to the ground is given by $t = \sqrt{\tfrac{2h}{g}}$,
-where $g$ denotes the gravitational constant. The outcome here is
-*deterministic*: once the values of the variables are specified, the
-result follows with certainty. While the variables may or may not be
-known in practice, they are not *random* in the sense that the outcome
-is fully determined once inputs are given. Errors can only arise from
-frictions or measurement inaccuracies.
+In high school, mathematical models are typically presented as if they operate with certainty. For example, the time it takes an object to fall from a height $h$ to the ground is given by $t = \sqrt{\tfrac{2h}{g}}$, where $g$ denotes the gravitational constant. The outcome here is *deterministic*: once the values of the variables are specified, the result follows with certainty. While the variables may or may not be known in practice, they are not *random* in the sense that the outcome is fully determined once inputs are given. Errors can only arise from frictions or measurement inaccuracies.
 
-By contrast, many real-world processes are inherently uncertain.
-Consider tomorrow’s temperature or stock market returns: such outcomes
-can only be predicted probabilistically. This uncertainty does not
-reflect randomness in the nature of the universe itself, but rather the
-limits of human knowledge. In principle, with perfect information about
-the climate system, tomorrow’s temperature could be predicted exactly.
-However, given informational constraints, the only feasible approach is
-to incorporate uncertainty into mathematical models. *Probabilistic
-models* thus arise from the deliberate or unavoidable abstraction from
-complete information. The concept of the *random variable* provides the
-mathematical foundation for formalizing such uncertainty.
+By contrast, many real-world processes are inherently uncertain. Consider tomorrow’s temperature or stock market returns: such outcomes can only be predicted probabilistically. This uncertainty does not reflect randomness in the nature of the universe itself, but rather the limits of human knowledge. In principle, with perfect information about the climate system, tomorrow’s temperature could be predicted exactly. However, given informational constraints, the only feasible approach is to incorporate uncertainty into mathematical models. *Probabilistic models* thus arise from the deliberate or unavoidable abstraction from complete information. The concept of the *random variable* provides the mathematical foundation for formalizing such uncertainty.
 :::

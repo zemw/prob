@@ -1,44 +1,23 @@
-# Random variables in practice
-
-It might be boggling to transit from the concept of events to random
-variables. The formal definition of a random variable introduces an
-additional layer of abstraction that is not always intuitive. In
-practice, however, it is often easier to think of random variables as
-numbers that carry probabilities, or, from a data perspective, as
-numerical outcomes that exhibit variation across repeated observations.
-
-### Numbers with probabilities {.unnumbered}
-
-It is more intuitive to think random variables as a number whose value
-is never certain, but comes with probabilities. Think about rolling two
-dice, the sum of points, $X$, is a random variables. The probabilities
-associated with each possible values naturally demonstrate the idea of a
-distribution.
-
-![](img/twodice.jpg){fig-align="center" width="60%"}
-
-### The data perspective {.unnumbered}
+# Data descriptives*
 
 A random variable is a mathematical abstraction that provides a bridge
-between theoretical probability and real-world data. Every dataset you
-encounter---whether it's student grades, daily temperatures, or stock
-market prices---can be viewed as observations from random variables.
+between theoretical probability and real-world data. Every dataset can 
+be viewed as observations from random variables.
 
 Despite the outcome of any one event being uncertain, we can use
 patterns from past observations to predict the general behavior of these
 variables. By collecting data, we can figure out how often certain
-outcomes happen and connect them to theoretical models called
-*distributions*.
+outcomes occur and connect them to theoretical distributions.
 
 $$\begin{array}{ccccccc}
-\textrm{Question with} & \rightarrow & \textrm{Data Collection} & \rightarrow & \textrm{Patterns}\\
+\textrm{Question with} & \rightarrow & \textrm{Data} & \rightarrow & \textrm{Patterns}\\
 \textrm{uncertainty} &  & \downarrow &  & \downarrow\\
- &  & \textrm{Random Variables} & \rightarrow & \textrm{Distributions} & \rightarrow & \textrm{Predictions}
+ &  & \textrm{RVs} & \rightarrow & \textrm{Distributions} & \rightarrow & \textrm{Predictions}\\
 \end{array}$$
 
 **Columns as random variables**
 
-In a dataset, we view every variable in a dataset as random variables.
+In a dataset, we view every column as a random variable.
 
 ```{r}
 # Load a dataset from a CSV file
@@ -48,7 +27,17 @@ exam <- read.csv("../dataset/exam.csv")
 head(exam)
 ```
 
-**Histograms (frequency plots)**
+**Summary statistics**
+
+We can describe the distribution of a variable with summary statistics: 
+such as quartiles, deciles and percentiles.
+
+```{r}
+summary(exam$overall)
+```
+
+
+**Histograms**
 
 One way to visualize the distribution of a variable is to plot a
 histogram. A histogram groups data points into intervals, showing how
@@ -56,8 +45,8 @@ often data values fall within each range. The horizontal axis represents
 the intervals (or bins), and the vertical axis shows the frequency or
 count of data points in each bin.
 
-A histogram gives an idea of the shape of the distribution. However, it
-is not itself the distribution. A distribution refers to the
+A histogram gives an approximation of the true (unknown) distribution.
+It is not itself the distribution. A distribution refers to the
 *theoretical* assignment of probabilities across all possible outcomes,
 whereas a histogram represents the *empirical* frequencies observed in a
 finite sample.
@@ -77,8 +66,7 @@ histogram(~final | gender, exam)
 
 **Boxplots**
 
-A more parsimonious way to visualize the distribution is to use a
-boxplot. A boxplot, also known as a box-and-whisker plot, displays the
+A boxplot, also known as a box-and-whisker plot, displays the
 median, quartiles, and range of the data. The box represents the
 interquartile range (IQR), which contains the middle 50% of the data,
 with the lower and upper edges corresponding to the first (Q1) and third
