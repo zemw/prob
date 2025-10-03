@@ -1,4 +1,4 @@
-## Dependence
+# Bivariate distribution
 
 We need a tool to study collections of variables. Knowledge of each
 individual PMF is of little help. Because variables can be dependent on

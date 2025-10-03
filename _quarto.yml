@@ -34,16 +34,17 @@ book:
     - part: "Discrete Distributions"
       chapters:
         - chapters/18_bin.qmd
-        - chapters/19_dice.qmd
         - chapters/20_dexp.qmd
         - chapters/21_hgeom.qmd
         - chapters/22_geom.qmd
+        - chapters/22_hhht.qmd
+        - chapters/22_nbin.qmd
         - chapters/23_joint.qmd
         - chapters/23_condist.qmd
         - chapters/24_pois.qmd
-        - chapters/25_earthq.qmd
         - chapters/26_birthday2.qmd
         - chapters/27_convolution.qmd
+        - chapters/19_dice.qmd
         - chapters/27_ratings.qmd
     - part: "Expectation and Variance"
       chapters:

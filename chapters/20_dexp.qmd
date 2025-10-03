@@ -1,4 +1,4 @@
-# Expectation
+# Discrete expectation
 
 ::: {#def-dexp}
 ## Expectation of a discrete random variable
@@ -20,12 +20,12 @@ write $EX := E(X)$. We also like to denote expectation by the Greek
 letter $\mu := E(X)$.
 
 ::: {#exm-exp-bern}
-The expectation of a Bernoulli random variable $X \sim Bern(p)$:
+The expectation of a Bernoulli random variable $X \sim \text{Bern}(p)$:
 $$E(X)=1\times P(X=1)+0\times P(X=0)=p.$$
 :::
 
 ::: {#exm-exp-bin}
-The expectation of a Binomial random variable $X \sim Bin(n,p)$:
+The expectation of a Binomial random variable $X \sim \text{Bin}(n,p)$:
 $$\begin{aligned}E(X)= & \sum_{k=0}^{n}kp(k)\\
 = & \sum_{k=0}^{n}k\cdot\binom{n}{k}p^{k}q^{n-k}\\
 = & \sum_{k=1}^{n}n\cdot\binom{n-1}{k-1}p^{k}q^{n-k}\\
@@ -44,13 +44,13 @@ Expectation has the following properties:
 :::
 
 ::: {#exm-exp-bin2}
-Redo the expectation of $X\sim {Bin}(n,p)$ with properties of
+Redo the expectation of $X\sim \text{Bin}(n,p)$ with properties of
 expectation: $$E(X)=E(X_{1}+\cdots+X_{n})=nE(X_{i})=np$$ where
 $X_{i}\sim\textrm{Bern}(p)$.
 :::
 
 
-## Law of averages {.unnumbered}
+## Law of averages* {.unnumbered}
 
 You may wonder what is the difference between $E(X)$ defined in
 @def-dexp and the average of values defined as

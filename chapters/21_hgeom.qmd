@@ -1,4 +1,4 @@
-## Hypergeometric
+# Hypergeometric dist
 
 ::: {#exm-3.6}
 Let's explore an example that appears to be Binomial but is, in fact,

@@ -4,7 +4,7 @@ In the previous chapter, we have been working with *events*, which is a conceptu
 
 Informally, a random variable differs from a normal variable as it is "random". A random variable, say $X$, is never associated with a certain value. It could different values *probabilistically*. For example, $X$ may take the value 1 with probability 0.4, and take the value 2 with probability 0.3. The formal definition of a random variable is as follows.
 
-## RV as numeric encoding of events {.unnumbered}
+## Numeric encoding of events {.unnumbered}
 
 ::: {#def-rv}
 ### Random variable
@@ -44,7 +44,7 @@ You may have noted that the probabilities in a distribution always sums up to $1
 Listing all the values is not a smart way to specify a distribution. We like to use a function (if possible), such as $f(x) \overset{?}{=} e^{-x}$, to specify the probability of a random variable $X$ taking the value $x$. This is convenient, because once we know the function, we know all the probabilities. But how to specify this function depends on whether a random variable is discrete or continuous.
 :::
 
-## RV as abstraction for uncertain outcomes {.unnumbered}
+## Conceptualization of uncertain outcomes {.unnumbered}
 
 Many real-world processes have uncertain outcomes. For example, the outcome of tossing a coin or the temperature of tomorrow. In many applications like this, we simply do not have perfect information to predict the future with certainty. In such cases, we model the uncertain outcome as an RV, which takes uncertain values with probabilities. The exact distribution of many applications may be unknown, but we can approximate it with frequencies observed in samples.
 
@@ -57,7 +57,7 @@ Many real-world processes have uncertain outcomes. For example, the outcome of t
 | **Experiment:** | **Taking an exam** |  |
 |  | **Conceptualization** | **Observations** |
 | Random variable | $Z$ with support $\{0,1,2,...,100\}$ | $\{80,69,75,60,92, ...\}$ |
-| Distribution | $Z\sim N(80,10)$ (assumed) | Proportion of B+ $= 0.14$ |
+| Distribution | $Z\sim N(80,10)$ (assumed) | Proportion of 80+ $= 0.14$ |
 
 ::: callout-note
 ### Deterministic vs probabilistic models

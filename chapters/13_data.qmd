@@ -52,16 +52,7 @@ whereas a histogram represents the *empirical* frequencies observed in a
 finite sample.
 
 ```{r}
-library(lattice)
-
-histogram(~final, exam)
-```
-
-To explore conditional probability, we may plot the histogram
-conditioned on other variables.
-
-```{r}
-histogram(~final | gender, exam)
+hist(exam$final, prob = T, ann=F)
 ```
 
 **Boxplots**
@@ -75,7 +66,7 @@ values within 1.5 times the IQR from Q1 and Q3, while points beyond this
 range are considered outliers.
 
 ```{r}
-bwplot(final ~ major, exam)
+boxplot(final ~ major, exam)
 ```
 
 **Scatter plots**
@@ -88,5 +79,5 @@ directions. A flat slope implies the absence of correlation between the
 two variables.
 
 ```{r}
-xyplot(final ~ mid, exam)
+plot(final ~ mid, exam)
 ```

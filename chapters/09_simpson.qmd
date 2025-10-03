@@ -83,27 +83,21 @@ See <https://setosa.io/simpsons> for a really good
 ## R demostration {.unnumbered}
 
 ```{r}
-library(lattice)
-library(knitr)
-
 # R has a built-in dataset `UCBAdmissions`
 # we convert it to data frame for analysis
-UCB <- as.data.frame(UCBAdmissions)
+data <- as.data.frame(UCBAdmissions)
 
-# list the first a few rows
-kable(head(UCB, 8))
-```
+# browse the first a few rows
+head(data)
 
-```{r}
-# plot the number of admissions for each gender 
-# conditioned on admission status
-barchart(Freq ~ Gender | Admit, UCB)
-```
+# subset of the data with only admissions
+data <- subset(data, Admit == 'Admitted')
 
-```{r,fig.asp=1.5}
-# plot the number of admissions for each gender 
-# conditioned on admission status and department
-barchart(Freq ~ Gender | Admit + Dept, UCB)
+# number of admissions by Gender
+aggregate(Freq ~ Gender, data = data, FUN = sum)
+
+# number of admissions by Gender and Department
+aggregate(Freq ~ Gender + Dept, data = data, FUN = sum)
 ```
 
 ::: callout-note
