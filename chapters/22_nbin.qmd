@@ -1,0 +1,72 @@
+# Negative Binomial
+
+::: {#def-nbin}
+### Negative Binomial distribution
+
+In a sequence of independent Bernoulli trials with success probability $p$, if $X$ is the number of failures before the $r$-th success, then $X$ is said to have a Negative Binomial distribution, denoted $X\sim\textrm{NBin}(r,p)$.
+:::
+
+The PMF for Negative Binomial distribution is given by
+
+$$P(X=k)=\binom{k+r-1}{r-1}q^{k}p^{r}.$$
+
+To compute the expectation, let $X=X_{1}+\cdots+X_{r}$ where $X_{i}$ is the number of failures between the $(i-1)$-th success and the $i$-th success, $1\leq i\leq r$. Then $X_{i}\sim\textrm{Geom}(p)$. By linearity of expectations,
+
+$$E(X)=E(X_{1})+\cdots+E(X_{r})=r\frac{1-p}{p}.$$
+
+::: {#thm-nbin}
+Let $X_1,X_2,...,X_n$ be independent geometric distributions with the same parameter $p$. Then $$X=X_1+X_2+\cdots+X_n$$ is a negative binomial distribution, namely $X\sim\text{NBin}(n,p)$.
+:::
+
+The theorem is straightforward if we interpret $X_1$ as the number of failures before the 1st success, $X_2$ as the number of failures between the 1st and 2nd successes, and $X_n$ be the number of failures between the $(n-1)$-th and $n$-th successes.
+
+::: {#exm-toy}
+### Toy collection
+
+There are $n$ types of toys. Assume each time you buy a toy, it is equally likely to be any of the $n$ types. What is the expected number of toys you need to buy until you have a complete set?
+:::
+
+::: solution
+Define the following random variables: $$\begin{aligned}T= & T_{1}+T_{2}+\cdots+T_{n}\\
+T_{1}= & \textrm{number of toys until 1st new type}\\
+T_{2}= & \textrm{additional number of toys until 2nd new type}\\
+T_{3}= & \textrm{additional number of toys until 3rd new type}\\
+\vdots
+\end{aligned}$$
+
+We know, $T_{1}=1$, $T_{2}-1\sim\textrm{Geom}\left(\frac{n-1}{n}\right)$,..., $T_{j}-1\sim\textrm{Geom}\left(\frac{n-(j-1)}{n}\right)$. Thus, $$\begin{aligned}E(T)= & E(T_{1})+E(T_{2})+\cdots+E(T_{n})\\
+= & 1+\frac{n}{n-1}+\frac{n}{n-2}+\cdots+\frac{1}{n}\\
+= & n(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n})\\
+\to & n(\log n+0.577).
+\end{aligned}$$
+
+If $n=5$, $E(T)\approx11$; if $n=10$, $E(T)\approx29$.
+:::
+
+```{r}
+# number of simulations
+N <- 1000
+
+# number of toys bought in each simulation
+X <- numeric(N)
+
+# the set of toys
+Toys <- c('🧸','🐢','🐣','🐤','🐼','🤖','🐸','🐷')
+
+set.seed(100)
+
+# run simulation
+for (i in 1:N) {
+  C <- c() # the collection of toys bought
+  # repeat until a full set is collected
+  while(TRUE) {
+    t <- sample(Toys, 1, replace=T)
+    C <- c(C, t)
+    if(setequal(C, Toys)) break
+  }
+  X[i] <- length(C)
+}
+
+hist(X, probability = T)
+abline(v = mean(X), col = 2)
+```

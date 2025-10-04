@@ -1,0 +1,79 @@
+# Coin flip: HH vs HT\*
+
+Flip a coin indefinite times. Let $X$ denote the number of flips until you see **HH**. Let $Y$ denote the number of flips until you see **HT**. Find $E(X)$ and $E(Y)$.
+
+It is tempting to think they are the same, since either H or T happens with probability 1/2. But the answer is extremely counter-intuitive: $E(X)>E(Y)$!
+
+**HH case.** Let $E_0$ = E(X\|No H observed), and $E_1$ = E(X\|One H observed). Then $$E_0 = 1 + \frac{1}{2}E_1 + \frac{1}{2}E_0$$
+
+The first term is we need to flip once. If the first flip is H, the additional expected number of flips is $E_1$. If the first flip is T, we have to start over again ($E_0$).
+
+$$E_1 = 1 + \frac{1}{2}(0) + \frac{1}{2}E_0$$
+
+Once we have observed an H, we do another flip. If it is another H, we are done. If it is a T, we have to start over again ($E_0$).
+
+Solve the two equations, we have $E_0=6$, $E_1=4$. Thus, $E(X)=6$.
+
+**HT case.** Let $E_0$ = E(Y\|No H observed), and $E_1$ = E(Y\|One H observed). Then
+
+$$E_0 = 1 + \frac{1}{2}E_1 + \frac{1}{2}E_0$$
+
+If the first flip is H, we need $E_1$. If the first flip is T, we have wasted the flip, so it is $E_0$ again.
+
+$$E_1 = 1 + \frac{1}{2}(0) + \frac{1}{2}E_1$$
+
+If we have a T by 1/2 chance, we are done (the first term). If it is an H, we get another $E_1$.
+
+In this case, we have $E_0=4$, $E_1=2$. Thus, $E(Y)=4$.
+
+```{r}
+# number of simulations
+N <- 1000  
+
+# X: number of flips until HH
+X <- numeric(N) 
+
+set.seed(100)
+
+# run simulations
+for (i in 1:N) {
+  x <- 0
+  # repeat until first head
+  while(TRUE) {
+    x <- x + 1
+    t <- sample(c('H','T'), 1, F)
+    if (x >=2 && t == 'H' && tt == 'H') break
+    else tt <- t  # store last toss
+  }
+  # record the number
+  X[i] <- x
+}
+
+cat("Average number of flips until HH:", mean(X))
+```
+
+```{r}
+# number of simulations
+N <- 1000  
+
+# X: number of flips until HT
+Y <- numeric(N) 
+
+set.seed(100)
+
+# run simulations
+for (i in 1:N) {
+  y <- 0
+  # repeat until first head
+  while(TRUE) {
+    y <- y + 1
+    t <- sample(c('H','T'), 1, F)
+    if (y >= 2 && t == 'T' && tt == 'H') break
+    else tt <- t  # store last toss
+  }
+  # record the number
+  Y[i] <- y
+}
+
+cat("Average number of flips until HT:", mean(Y))
+```
