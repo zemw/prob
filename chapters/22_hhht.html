@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>36&nbsp; Median and mode – Introduction to Probability</title>
+<title>23&nbsp; Coin flip: HH vs HT* – Introduction to Probability</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/33_var.html" rel="next">
-<link href="../chapters/31_linearity.html" rel="prev">
+<link href="../chapters/22_nbin.html" rel="next">
+<link href="../chapters/22_geom.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -111,7 +146,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/28_exp.html">Expectation and Variance</a></li><li class="breadcrumb-item"><a href="../chapters/32_median.html"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Median and mode</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/18_bin.html">Discrete Distributions</a></li><li class="breadcrumb-item"><a href="../chapters/22_hhht.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Coin flip: HH vs HT*</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -307,7 +342,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/22_hhht.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/22_hhht.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Coin flip: HH vs HT*</span></span></a>
   </div>
 </li>
@@ -396,7 +431,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/32_median.html" class="sidebar-item-text sidebar-link active">
+  <a href="../chapters/32_median.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Median and mode</span></span></a>
   </div>
 </li>
@@ -573,9 +608,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/28_exp.html">Expectation and Variance</a></li><li class="breadcrumb-item"><a href="../chapters/32_median.html"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Median and mode</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/18_bin.html">Discrete Distributions</a></li><li class="breadcrumb-item"><a href="../chapters/22_hhht.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Coin flip: HH vs HT*</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Median and mode</span></h1>
+<h1 class="title"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Coin flip: HH vs HT*</span></h1>
 </div>
 
 
@@ -592,56 +627,74 @@ window.Quarto = {
 </header>
 
 
-<p>The mean is called a measure of <em>central tendency</em> because it tells us something about the center of a distribution, specifically its center of mass. Other measures of central tendency that are commonly used in statistics are the median and the mode, which we now define.</p>
-<div id="def-median" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 36.1 (Median)</strong></span> We say that <span class="math inline">\(c\)</span> is a median of a random variable <span class="math inline">\(X\)</span> if <span class="math display">\[P(X\leq c)\geq1/2 \text{ and } P(X\geq c)\geq1/2.\]</span></p>
+<p>Flip a coin indefinite times. Let <span class="math inline">\(X\)</span> denote the number of flips until you see <strong>HH</strong>. Let <span class="math inline">\(Y\)</span> denote the number of flips until you see <strong>HT</strong>. Find <span class="math inline">\(E(X)\)</span> and <span class="math inline">\(E(Y)\)</span>.</p>
+<p>It is tempting to think they are the same, since either H or T happens with probability 1/2. But the answer is extremely counter-intuitive: <span class="math inline">\(E(X)&gt;E(Y)\)</span>!</p>
+<p><strong>HH case.</strong> Let <span class="math inline">\(E_0\)</span> = E(X|No H observed), and <span class="math inline">\(E_1\)</span> = E(X|One H observed). Then <span class="math display">\[E_0 = 1 + \frac{1}{2}E_1 + \frac{1}{2}E_0\]</span></p>
+<p>The first term is we need to flip once. If the first flip is H, the additional expected number of flips is <span class="math inline">\(E_1\)</span>. If the first flip is T, we have to start over again (<span class="math inline">\(E_0\)</span>).</p>
+<p><span class="math display">\[E_1 = 1 + \frac{1}{2}(0) + \frac{1}{2}E_0\]</span></p>
+<p>Once we have observed an H, we do another flip. If it is another H, we are done. If it is a T, we have to start over again (<span class="math inline">\(E_0\)</span>).</p>
+<p>Solve the two equations, we have <span class="math inline">\(E_0=6\)</span>, <span class="math inline">\(E_1=4\)</span>. Thus, <span class="math inline">\(E(X)=6\)</span>.</p>
+<p><strong>HT case.</strong> Let <span class="math inline">\(E_0\)</span> = E(Y|No H observed), and <span class="math inline">\(E_1\)</span> = E(Y|One H observed). Then</p>
+<p><span class="math display">\[E_0 = 1 + \frac{1}{2}E_1 + \frac{1}{2}E_0\]</span></p>
+<p>If the first flip is H, we need <span class="math inline">\(E_1\)</span>. If the first flip is T, we have wasted the flip, so it is <span class="math inline">\(E_0\)</span> again.</p>
+<p><span class="math display">\[E_1 = 1 + \frac{1}{2}(0) + \frac{1}{2}E_1\]</span></p>
+<p>If we have a T by 1/2 chance, we are done (the first term). If it is an H, we get another <span class="math inline">\(E_1\)</span>.</p>
+<p>In this case, we have <span class="math inline">\(E_0=4\)</span>, <span class="math inline">\(E_1=2\)</span>. Thus, <span class="math inline">\(E(Y)=4\)</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># number of simulations</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">1000</span>  </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># X: number of flips until HH</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">numeric</span>(N) </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">100</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># run simulations</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>N) {</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># repeat until first head</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span>(<span class="cn">TRUE</span>) {</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">&lt;-</span> x <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    t <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">'H'</span>,<span class="st">'T'</span>), <span class="dv">1</span>, F)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (x <span class="sc">&gt;=</span><span class="dv">2</span> <span class="sc">&amp;&amp;</span> t <span class="sc">==</span> <span class="st">'H'</span> <span class="sc">&amp;&amp;</span> tt <span class="sc">==</span> <span class="st">'H'</span>) <span class="cf">break</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> tt <span class="ot">&lt;-</span> t  <span class="co"># store last toss</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="co"># record the number</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  X[i] <span class="ot">&lt;-</span> x</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Average number of flips until HH:"</span>, <span class="fu">mean</span>(X))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Average number of flips until HH: 5.789</code></pre>
 </div>
-<p>Intuitively, the median is a value <span class="math inline">\(c\)</span> such that half the mass of the distribution falls on either side of <span class="math inline">\(c\)</span> (or as close to half as possible, for discrete random variables). Note that the condition given above is more general than <span class="math display">\[P(X\leq c)=P(X\geq c)=\frac{1}{2}\]</span> Consider a discrete distribution as follows: <span class="math display">\[P(X=k)=\begin{cases}
-\frac{1}{3},\quad k=1 \\
-\frac{1}{2},\quad k=2 \\
-\frac{1}{6},\quad k=3
-\end{cases}\]</span> In this case, 2 is a median since <span class="math inline">\(P(X\leq 2)=5/6 \geq 1/2\)</span> and <span class="math inline">\(P(X\geq 2)=2/3 \geq 1/2\)</span>. However, <span class="math inline">\(P(X\leq 2)\neq P(X\geq 2)\)</span>. For strictly continuous random variable <span class="math inline">\(X\)</span>, <a href="#def-median" class="quarto-xref">Definition&nbsp;<span>36.1</span></a> does imply <span class="math display">\[P(X\leq c)=P(X\geq c)=\frac{1}{2}\]</span> Since the CDF of <span class="math inline">\(X\)</span> satisfies <span class="math inline">\(F(c)\geq1/2\)</span> and <span class="math inline">\(1-F(c)\geq 1/2\)</span>, which implies <span class="math inline">\(F(c)=1/2\)</span>. Moreover, if the CDF of <span class="math inline">\(X\)</span> is strictly increasing, <span class="math inline">\(F^{-1}(1/2)\)</span> is the unique median.</p>
-<div id="def-mode" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 36.2 (Mode)</strong></span> For a discrete random variable <span class="math inline">\(X\)</span>, we say that <span class="math inline">\(c\)</span> is a mode of <span class="math inline">\(X\)</span> if it maximizes the PMF: <span class="math display">\[P(X=c)\geq P(X=x)\quad\text{ for all }x.\]</span> For a continuous random variable <span class="math inline">\(X\)</span> with PDF <span class="math inline">\(f\)</span>, we say that <span class="math inline">\(c\)</span> is a mode if it maximizes the PDF: <span class="math display">\[f(c)\geq f(x)\quad\text{ for all }x.\]</span></p>
 </div>
-<p>Intuitively, the mode is a value that has the greatest mass or density out of all values in the support of <span class="math inline">\(X\)</span>.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># number of simulations</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">1000</span>  </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># X: number of flips until HT</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Y <span class="ot">&lt;-</span> <span class="fu">numeric</span>(N) </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">100</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># run simulations</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>N) {</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># repeat until first head</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span>(<span class="cn">TRUE</span>) {</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    y <span class="ot">&lt;-</span> y <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    t <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">'H'</span>,<span class="st">'T'</span>), <span class="dv">1</span>, F)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (y <span class="sc">&gt;=</span> <span class="dv">2</span> <span class="sc">&amp;&amp;</span> t <span class="sc">==</span> <span class="st">'T'</span> <span class="sc">&amp;&amp;</span> tt <span class="sc">==</span> <span class="st">'H'</span>) <span class="cf">break</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> tt <span class="ot">&lt;-</span> t  <span class="co"># store last toss</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="co"># record the number</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  Y[i] <span class="ot">&lt;-</span> y</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Average number of flips until HT:"</span>, <span class="fu">mean</span>(Y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Average number of flips until HT: 4.047</code></pre>
 </div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>A distribution can have multiple medians and multiple modes. Medians have to occur side by side; modes can occur all over the distribution.</p>
-</div>
-</div>
-<div id="exm-incdist" class="theorem example">
-<p><span class="theorem-title"><strong>Example 36.1</strong></span> The main reason why the median is sometimes preferred over the mean is that the median is more robust to extreme values. A typical example is the income distribution. Higher incomes are rare, but their absolute values are high. Thus, the mean income tends be higher than what the mass of the population would earn. But the median is more robust to extreme values and is closer to the earnings of an “average” person. For example, the average monthly income in China is <span class="math inline">\(\yen 2,500\)</span> in 2019, but the median is only <span class="math inline">\(\yen 1,000\)</span>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/incdist.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
-</div>
-</div>
-<div id="thm-median" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 36.1</strong></span> Let <span class="math inline">\(X\)</span> be an random variable with mean <span class="math inline">\(\mu\)</span> , and let <span class="math inline">\(m\)</span> be a median of <span class="math inline">\(X\)</span>.</p>
-<ul>
-<li><p>A value of <span class="math inline">\(c\)</span> that minimizes the mean squared error <span class="math inline">\(E\left(X-c\right)^{2}\)</span> is <span class="math inline">\(c=\mu\)</span>.</p></li>
-<li><p>A value of <span class="math inline">\(c\)</span> that minimizes the mean absolute error <span class="math inline">\(E\left|X-c\right|\)</span> is <span class="math inline">\(c=m\)</span>.</p></li>
-</ul>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Part 1 - Minimizing the mean squared error <span class="math inline">\(E[(X - c)^2]\)</span>. Expand the mean squared error: <span class="math display">\[E[(X - c)^2] = E[X^2 - 2cX + c^2] = E[X^2] - 2cE[X] + c^2.\]</span></p>
-<p>To find the value of <span class="math inline">\(c\)</span> that minimizes this expression, take the derivative with respect to <span class="math inline">\(c\)</span> and set it to zero: <span class="math display">\[\frac{d}{dc} E[(X - c)^2] = -2E[X] + 2c=0\]</span></p>
-<p>This implies <span class="math inline">\(c=\mu\)</span>. We can confirm with second-order condition that <span class="math inline">\(c = \mu\)</span> is indeed a minimizer.</p>
-<p>Part 2 - Minimizing the mean absolute error <span class="math inline">\(E\left|X-c\right|\)</span>.</p>
-<p><span class="math display">\[E|X-c|=\int_{-\infty}^{c}(c-x)f(x)dx+\int_c^{\infty}(x-c)f(x)dx\]</span></p>
-<p>Take derivative with respect to <span class="math inline">\(c\)</span>, applying the Leibniz’s rule:</p>
-<p><span class="math display">\[(c-x)f(x)\frac{d}{dc}c+\int_{-\infty}^c f(x)dx -(x-c)f(x)\frac{d}{dc}c+\int_c^\infty (-f(x))dx=0\]</span></p>
-<p>The first-order condition resolves to <span class="math display">\[\int_{-\infty}^c f(x) dx = \int_c^{\infty}f(x)dx\]</span> which is exactly the definition of a median.</p>
 </div>
 
 
@@ -1048,13 +1101,13 @@ Note
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/31_linearity.html" class="pagination-link" aria-label="Linearity and indicators">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Linearity and indicators</span></span>
+      <a href="../chapters/22_geom.html" class="pagination-link" aria-label="Geometric distribution">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Geometric distribution</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/33_var.html" class="pagination-link" aria-label="Variance">
-        <span class="nav-page-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Variance</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/22_nbin.html" class="pagination-link" aria-label="Negative Binomial">
+        <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Negative Binomial</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
