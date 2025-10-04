@@ -74,7 +74,34 @@ Variance has the following properties:
 :::
 
 ::: {#exm-4.14}
+### Variance of Binomial distribution
 Find the variance for $X\sim\textrm{Bin}(n,p).$ $X=X_{1}+\cdots+X_{n}$
 where $X_{i}$ are $i.i.d$ Bernoulli distributions
 $$Var(X)\overset{iid}{=}\sum_{i=1}^{n}Var(X_{i})=np(1-p).$$
+:::
+
+:::{#exm-4.15}
+### Variance of Poisson distribution
+
+Let $X\sim\text{Pois}(\lambda)$. To find the variance, we first compute $E(X^{2})$. By LOTUS,
+
+$$\begin{aligned}E(X^{2})= & \sum_{k=0}^{\infty}k^{2}\cdot\frac{e^{-\lambda}\lambda^{k}}{k!}=e^{-\lambda}\sum_{k=1}^{\infty}k^{2}\frac{\lambda^{k}}{k!}\end{aligned}$$
+
+Differentiate $\sum_{k=0}^{\infty}\frac{\lambda^{k}}{k!}=e^{\lambda}$ on
+both sides with respect to $\lambda$ and multiply (replenish) again by
+$\lambda$:
+
+$$\sum_{k-1}^{\infty}k\frac{\lambda^{k}}{k!}=\lambda e^{\lambda}$$
+
+Repeat:
+
+$$\sum_{k-1}^{\infty}k^{2}\frac{\lambda^{k}}{k!}=\lambda(e^{\lambda}+\lambda e^{\lambda})$$
+
+Therefore, we have
+
+$$E(X^{2})=e^{-\lambda}(\lambda+\lambda^{2})e^{\lambda}=\lambda+\lambda^{2}$$
+
+Finally,
+
+$$Var(X)=E(X^{2})-(E(X))^{2}=\lambda+\lambda^{2}-\lambda^{2}=\lambda.$$
 :::
