@@ -5,3 +5,4 @@
 .DS_Store
 /.quarto/
 /_book/
+/chapters/*_files/
