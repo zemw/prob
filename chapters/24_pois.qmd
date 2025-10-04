@@ -70,34 +70,11 @@ $$\begin{aligned}E(X)= & \sum_{k=0}^{\infty}k\cdot\frac{e^{-\lambda}\lambda^{k}}
 = & \lambda e^{-\lambda}e^{\lambda}=\lambda.
 \end{aligned}$$
 
-To get the variance, we first compute $E(X^{2})$. By LOTUS,
-
-$$\begin{aligned}E(X^{2})= & \sum_{k=0}^{\infty}k^{2}\cdot\frac{e^{-\lambda}\lambda^{k}}{k!}=e^{-\lambda}\sum_{k=1}^{\infty}k^{2}\frac{\lambda^{k}}{k!}\end{aligned}$$
-
-Differentiate $\sum_{k=0}^{\infty}\frac{\lambda^{k}}{k!}=e^{\lambda}$ on
-both sides with respect to $\lambda$ and multiply (replenish) again by
-$\lambda$:
-
-$$\sum_{k-1}^{\infty}k\frac{\lambda^{k}}{k!}=\lambda e^{\lambda}$$
-
-Repeat:
-
-$$\sum_{k-1}^{\infty}k^{2}\frac{\lambda^{k}}{k!}=\lambda(e^{\lambda}+\lambda e^{\lambda})$$
-
-Therefore, we have
-
-$$E(X^{2})=e^{-\lambda}(\lambda+\lambda^{2})e^{\lambda}=\lambda+\lambda^{2}$$
-
-Finally,
-
-$$Var(X)=E(X^{2})-(E(X))^{2}=\lambda+\lambda^{2}-\lambda^{2}=\lambda.$$
-
-```{r}
-x <- 1:20
-y1 <- dpois(x, lambda=1)
-y2 <- dpois(x, lambda=10)
-plot(x, y1, type="b", ann=F)
-lines(x, y2, type="b", col=2)
+```{r, echo=FALSE}
+curve(dpois(x, lambda=1), from=0,to=20,n=21,col=1,type='b',ann=F)
+curve(dpois(x, lambda=4), from=0,to=20,n=21,col=2,type='b',ann=F,add=T)
+curve(dpois(x, lambda=10), from=0,to=20,n=21,col=3,type='b',ann=F,add=T)
+title("PMF of Poisson distribution")
 ```
 
 ::: {#exm-4.20}
