@@ -16,24 +16,25 @@ $$\sum_{k=1}^{\infty}kq^{k-1}=\frac{1}{(1-q)^{2}};$$ Then multiply both sides by
 
 $$\sum_{k=1}^{\infty}kq^{k}=\frac{q}{(1-q)^{2}}=\frac{q}{p^{2}}.$$
 
-## PMF and CDF {.unnumbered}
+**Plot the PMF and CDF**
 
 ```{r, fig.asp=0.55}
 par(mfrow=c(1,2))
 
 # PMF for Geom(0.5)
-curve(dgeom(x, 0.5), from=0, to=10, n=11, type="b", main="PMF")
+curve(dgeom(x, 0.5), from=0, to=10, n=11, type="b", ann=F)
 
 # CDF for Geom(0.5)
-curve(pgeom(x, 0.5), from=0, to=10, n=11, type="b", main="CDF")
+curve(pgeom(x, 0.5), from=0, to=10, n=11, type="b", ann=F)
 ```
 
-## Coin flip until Head {.unnumbered}
 
+:::{#exm-flipHead}
+### Coin flip until Head
 Flipping a fair coin, what is the expected number of flips before the first Head?
 
 Let $X$ be the number of flips until the first head. We know $X-1\sim\text{Geom}(0.5)$ as geometric distribution models the number of failures excluding the success. Thus, $E(X-1)=0.5/0.5=1$, $E(X)=2$. Let's compare the theoretical value with results from simulations.
-
+:::
 
 ```{r}
 # number of simulations
