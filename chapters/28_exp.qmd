@@ -80,6 +80,12 @@ $$X=\begin{cases}
 $E(XY)=E(X)E(Y)$. But clearly $X,Y$ are not independent.
 :::
 
+::: {#prp-lote}
+### Law of total expectation
+Let $\{A_i\}$ be a finite (or countable) partition of the sample space, then
+$$E(X) = \sum_i E(X|A_i)P(A_i).$$
+:::
+
 ::: {#thm-lotus}
 ### Law of the unconscious statistician (LOTUS)
 
