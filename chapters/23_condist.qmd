@@ -9,17 +9,13 @@ The conditional PMF of $Y$ given $X=x$ is defined as $$f_{Y|X} (y|x) = P(Y=y | X
 **Plot conditional distribution**
 
 ```{r}
-library(lattice)
+library(lattice) # easy to make conditional plots
 
 # conditional distribution of exam scores 
 exam <- read.csv("../dataset/exam.csv")
 
 # distribution of exam scores conditioned on major
-densityplot(~ final | major, data = exam)
-
-# compare distributions in the same plot
-densityplot(~ final, groups = major, data = exam, 
-            auto.key = list(space="inside"))
+histogram(~ final | major, data = exam)
 ```
 
 ::: {#def-cond-exp}
