@@ -5,7 +5,7 @@ Let's explore an example that appears to be Binomial but is, in fact,
 not a Binomial distribution. Given a 5-card hand. Find the distribution
 of the number of aces.
 
-Let $X$ be the number of aces. It is tempting to say $X\sim Bin(5,p)$.
+Let $X$ be the number of aces. It is tempting to say $X\sim \text{Bin}(5,p)$.
 But this not correct. Because having one ace is NOT independent from
 having another ace. We need to use the classical approach:
 $$P(X=k)=\frac{\binom{4}{k}\binom{48}{5-k}}{\binom{52}{5}}.$$ This is a
@@ -14,7 +14,7 @@ Hypergeometric distribution.
 
 Suppose we have a box filled with $w$ white and $b$ black balls. We draw
 $n$ balls out of the box [with replacement]{.underline}. Let $X$ be the
-number of white balls. Then $X\sim Bin(n,w/(w+b))$. Since the draws are
+number of white balls. Then $X\sim \text{Bin}(n,w/(w+b))$. Since the draws are
 independent Bernoulli trials, each with probability $w/(w+b)$ of
 success. If we instead sample [without replacement]{.underline}, then
 the number of white balls follows a **Hypergeometric distribution**. We

@@ -18,36 +18,36 @@ is called the support of $X$.
 ## Probability mass function
 
 If a random variable $X$ has a discrete distribution, the probability
-mass function (PMF) of $X$ is defined as the function $f$ such that
-$$f(x)=P(X=x).$$
+mass function (PMF) of $X$ is defined as the function $f:\mathbb{R}\to[0,1]$ 
+such that $$f(x) \equiv P(X=x).$$
 :::
+
+Note that the PMF $f(x)$ is a discrete function which can only take 
+values in the support $\{x_1,x_2, \ldots,x_n\}$.
 
 ::: callout-note
 ### Notation for PMF
 
-PMF is also known as the **probability function**, since $f(x)$ gives
-the probability. Throughout this lecture notes, we use PMF for
-abbreviation. But you will find the textbook uses *p.f.* They are
-different conventions for the same thing.
+Throughout this course, we use PMF to refer to the probability function for
+a discrete random variable. Some textbooks may call it the *probability function* 
+(p.f.), while others may use the term *mass function*. All these terms describe 
+the same concept.
 
 Note that how $f(x)$ differs from the probability function $P(\cdot)$.
 $f(x)$ is a real-valued function, whereas $P(\cdot)$ is the probability
-operator. Also note that $x$ is not the same as random variable $X$.
-Sometimes, we add a subscript, $f_{X}(x)$, to specify this is the PMF
-for random variable $X$.
+operator. The two should not be confused even when the notation $p(x)$ 
+is used to represent a PMF.
 
-Because we also use $f(x)$ to denote the PDF for continuous random
-variables. PDF is known as the density function, it is not probability.
-So we better avoid confusing the two. To distinguish a PMF from a PDF,
-we may use $p(x)$ for PMF and $f(x)$ for PDF. Mostly in this lecture
-note, we simply use $P(X=k)$ for PMF.
+We may want to use a subscript to distinguish PMFs for different RVs.
+For example, $f_{X}$ is the PMF for random variable $X$, $f_{Y}$ 
+is the PMF for random variable $Y$.
 :::
 
 ::: {#prp-pmf}
-A valid PMF must satisfy the following criteria:
+A probability mass function $f:\mathbb{R}\to[0,1]$ satisfies
 
--   Non-negative: $P(X=k)\geq0$ for all $k$;
--   Sum up to one: $\sum_{k}P(X=k)=1$.
+1. $f(x)\geq 0$ for all $x$ and $f(x)\neq 0$ if and only if $x$ is in the support.
+2. $\sum_{i} f(x_i)=1$ where $i$ indexes every value in the support.
 :::
 
 There are different ways to represent a PMF. We can (1) list all the
@@ -55,22 +55,21 @@ possible values and their associated probabilities; (2) write a formula
 for the PMF; or (3) visualize it in a graph.
 
 ::: {#exm-drv-1}
-A random variable $X$ is said to have the **Bernoulli distribution** if
+### Bernoulli distribution
+A random variable $X$ is said to have the Bernoulli distribution if
 $X$ has only two possible values, $0$ and $1$, and $P(X=1)=p$,
 $P(X=0)=1-p$. 
 
 The PMF of a Bernoulli random variable $X$ is given by
-$$P(X=k)=\begin{cases}
+$$f(k)=\begin{cases}
 p & \textrm{if }k=1,\\
 1-p & \textrm{if }k=0.
 \end{cases}$$
-
 This can also be expressed as
-$$P(X=k)=p^{k}(1-p)^{1-k},\quad k\in\left\{ 0,1\right\} .$$
+$$f(k)=p^{k}(1-p)^{1-k},\quad k\in\left\{ 0,1\right\} .$$
 :::
 
-::: callout-tip
-### Exercise
+::: {#exm-disc-1}
 A student is trying to connect to the campus Wi-Fi network. Each attempt
 is independent, and:
 
@@ -80,10 +79,10 @@ is independent, and:
 
 The student will keep trying until the first success.
 
-1.  Define the event $A_k$ = "the first successful connection occurs on
-    the $k$-th attempt." What is $P(A_k)$?
+1.  Define $A_k$ = "the first successful connection occurs on
+    the $k$-th attempt." Find $P(A_k)$.
 2.  Define a random variable $X$ = "the number of attempts needed until
     the first success." What is the support of $X$?
 3.  Derive the probability mass function (PMF) of $X$.
-4.  Show that the PMF is properly normalized.
+4.  Show that this is a valid PMF (@prp-pmf).
 :::
