@@ -596,7 +596,7 @@ window.Quarto = {
 <p><span class="theorem-title"><strong>Definition 17.1 (Continuous random variable)</strong></span> We say a random variable <span class="math inline">\(X\)</span> has a continuous random variable if the possible values of <span class="math inline">\(X\)</span> takes the form of a continuum.</p>
 </div>
 <div id="def-pdf" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17.2 (Probability density function)</strong></span> For a continuous random variable <span class="math inline">\(X\)</span>, the probability density function (PDF) of <span class="math inline">\(X\)</span> is a real-valued function <span class="math inline">\(f\)</span> such that <span class="math display">\[P(a\leq X\leq b)=\int_{a}^{b}f(x)dx.\]</span></p>
+<p><span class="theorem-title"><strong>Definition 17.2 (Probability density function)</strong></span> For a continuous random variable <span class="math inline">\(X\)</span>, the probability density function (PDF) of <span class="math inline">\(X\)</span> is a real-valued function <span class="math inline">\(f:\mathbb{R}\to[0,\infty)\)</span> such that <span class="math display">\[P(a\leq X\leq b)=\int_{a}^{b}f(x)dx.\]</span></p>
 </div>
 <p>Continuous random variables are usually measurements. Examples include height, weight, temperature, the amount of money and so on.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -618,14 +618,15 @@ Density is not probability
 </div>
 </div>
 <div id="prp-pdf" class="theorem proposition">
-<p><span class="theorem-title"><strong>Proposition 17.1</strong></span> The PDF <span class="math inline">\(f\)</span> of a continuous random variable must satisfy the following criteria:</p>
-<ul>
-<li>Non-negative: <span class="math inline">\(f(x)\geq0\)</span>;</li>
-<li>Integrate to one: <span class="math inline">\(\int_{-\infty}^{\infty}f(x)dx=1\)</span>.</li>
-</ul>
+<p><span class="theorem-title"><strong>Proposition 17.1</strong></span> If <span class="math inline">\(X\)</span> has density function <span class="math inline">\(f\)</span> then</p>
+<ol type="1">
+<li><span class="math inline">\(P(X=x)=0\)</span> for all <span class="math inline">\(x\in\mathbb{R}\)</span></li>
+<li><span class="math inline">\(P(a\leq X\leq b) =\int_a^b f(x) dx\)</span></li>
+<li><span class="math inline">\(\int_{-\infty}^{\infty}f(x)dx=1\)</span></li>
+</ol>
 </div>
 <div id="exm-crv-1" class="theorem example">
-<p><span class="theorem-title"><strong>Example 17.1</strong></span> A <strong>uniform distribution</strong> is a probability distribution where all values within a specified interval <span class="math inline">\([a, b]\)</span> are equally likely to occur, and its probability density function (PDF) is given by: <span class="math display">\[f(x) = \frac{1}{b - a} \quad \text{for} \quad a \leq x \leq b\]</span> and <span class="math inline">\(f(x) = 0\)</span> otherwise.</p>
+<p><span class="theorem-title"><strong>Example 17.1 (Uniform distribution)</strong></span> A uniform distribution is a probability distribution where all values within a specified interval <span class="math inline">\([a, b]\)</span> are equally likely to occur, and its probability density function (PDF) is given by: <span class="math display">\[f(x) = \frac{1}{b - a} \quad \text{for} \quad a \leq x \leq b\]</span> and <span class="math inline">\(f(x) = 0\)</span> otherwise.</p>
 </div>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -640,24 +641,14 @@ Don’t confuse a random variable with its distribution
 <p>If random variable <span class="math inline">\(X\)</span> has distribution <span class="math inline">\(f(x)\)</span>, the distribution of <span class="math inline">\(X^2\)</span> is not <span class="math inline">\(f^2(x)\)</span>. To get the distribution of <span class="math inline">\(X+Y\)</span>, you can’t just add up <span class="math inline">\(f_X(x)+f_Y(y)\)</span>. The right way to do it will be discussed in later chapters (transformation and convolution).</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Every morning, a student waits for the elevator in their dormitory. The waiting time (in minutes) is equally likely to be anywhere between 0 and 3 minutes, depending on when the elevator arrives.</p>
+<div id="exm-cont-1" class="theorem example">
+<p><span class="theorem-title"><strong>Example 17.2</strong></span> Every morning, a student waits for the elevator in their dormitory. The waiting time (in minutes) is equally likely to be anywhere between 0 and 3 minutes, depending on when the elevator arrives.</p>
 <ol type="1">
-<li>Define the random variable <span class="math inline">\(X\)</span> = “the student’s elevator waiting time.” What is the support of <span class="math inline">\(X\)</span>?</li>
+<li>Define <span class="math inline">\(X\)</span> = “the student’s elevator waiting time.” What is the support of <span class="math inline">\(X\)</span>?</li>
 <li>Derive the probability density function (PDF) of <span class="math inline">\(X\)</span>.</li>
 <li>Compute <span class="math inline">\(P(X \leq 1)\)</span>, i.e.&nbsp;the probability that the waiting time is at most 1 minute.</li>
-<li>If the student must wait more than 2 minutes, they decide to take the stairs instead. Define a new indicator random variable <span class="math inline">\(Y = \mathbb{I}(X&gt;2)\)</span>. Compute <span class="math inline">\(P(Y=1)\)</span>.</li>
+<li>If the student must wait more than 2 minutes, they decide to take the stairs instead. Define a new indicator random variable <span class="math inline">\(Y\)</span>, which equals <span class="math inline">\(1\)</span> if <span class="math inline">\(X&gt;2\)</span> and <span class="math inline">\(0\)</span> otherwise. Compute <span class="math inline">\(P(Y=1)\)</span>.</li>
 </ol>
-</div>
 </div>
 
 
