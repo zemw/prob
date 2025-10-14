@@ -129,6 +129,280 @@ Table](https://www.mathsisfun.com/data/standard-normal-distribution-table.html)
 
 [Central Limit Theorem Demo](https://projects.oliverni.com/clt/)
 
+## Exam score lookup {.unnumbered}
+
+<div class="exam-score-lookup" id="exam-score-lookup">
+<label for="exam-lookup-input" class="exam-lookup-label">Student number</label>
+<div class="exam-lookup-controls">
+<input id="exam-lookup-input" type="text" inputmode="numeric" placeholder="e.g. 00123" aria-describedby="exam-lookup-status">
+<button type="button" id="exam-lookup-button">Find scores</button>
+</div>
+<p class="exam-lookup-status" id="exam-lookup-status" role="status" aria-live="polite">Loading exam scores...</p>
+<div class="exam-lookup-result" id="exam-lookup-result"></div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.getElementById('exam-lookup-input');
+  const button = document.getElementById('exam-lookup-button');
+  const status = document.getElementById('exam-lookup-status');
+  const resultContainer = document.getElementById('exam-lookup-result');
+  const dataUrl = 'dataset/exam.csv';
+  let headers = [];
+  let rows = [];
+  let hasLoaded = false;
+  let loadError = null;
+
+  const parseCSVRow = (row) => {
+    const values = [];
+    let current = '';
+    let inQuotes = false;
+    for (let i = 0; i < row.length; i += 1) {
+      const char = row[i];
+      if (inQuotes) {
+        if (char === '"' && row[i + 1] === '"') {
+          current += '"';
+          i += 1;
+        } else if (char === '"') {
+          inQuotes = false;
+        } else {
+          current += char;
+        }
+      } else if (char === '"') {
+        inQuotes = true;
+      } else if (char === ',') {
+        values.push(current.trim());
+        current = '';
+      } else {
+        current += char;
+      }
+    }
+    values.push(current.trim());
+    return values;
+  };
+
+  const parseCSV = (text) => {
+    const lines = text
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter((line) => line.length > 0);
+    if (lines.length === 0) {
+      return { headers: [], rows: [] };
+    }
+    const headerRow = parseCSVRow(lines[0]);
+    const records = lines.slice(1).map((line) => {
+      const values = parseCSVRow(line);
+      const record = {};
+      headerRow.forEach((header, index) => {
+        record[header] = values[index] !== undefined ? values[index] : '';
+      });
+      return record;
+    });
+    return { headers: headerRow, rows: records };
+  };
+
+  const loadData = async () => {
+    if (hasLoaded || loadError) {
+      return;
+    }
+    status.textContent = 'Loading exam scores...';
+    try {
+      const response = await fetch(dataUrl, { cache: 'no-store' });
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+      const text = await response.text();
+      const parsed = parseCSV(text);
+      headers = parsed.headers;
+      rows = parsed.rows;
+      hasLoaded = true;
+      if (!headers.length || !rows.length) {
+        throw new Error('Exam score file is empty.');
+      }
+      status.textContent = 'Enter a student number to view exam scores.';
+    } catch (error) {
+      loadError = error;
+      status.textContent = 'Exam score lookup is unavailable. Add "dataset/exam.csv" and reload the page.';
+      console.error('Exam lookup failed:', error);
+    }
+  };
+
+  const matchStudent = (query) => {
+    const trimmed = query.trim();
+    if (!trimmed) {
+      return null;
+    }
+    const idHeader = headers.find((header) => /id/i.test(header));
+    if (idHeader) {
+      const match = rows.find(
+        (row) => String(row[idHeader]).trim().toLowerCase() === trimmed.toLowerCase(),
+      );
+      if (match) {
+        return match;
+      }
+    }
+    return rows.find((row) =>
+      Object.values(row).some(
+        (value) => String(value).trim().toLowerCase() === trimmed.toLowerCase(),
+      ),
+    );
+  };
+
+  const renderResult = (record, query) => {
+    resultContainer.innerHTML = '';
+    if (!record) {
+      const message = document.createElement('p');
+      message.className = 'exam-lookup-message';
+      message.textContent = `No exam scores found for "${query}".`;
+      resultContainer.appendChild(message);
+      return;
+    }
+
+    const table = document.createElement('table');
+    table.className = 'exam-lookup-table';
+
+    const thead = document.createElement('thead');
+    const headerRow = document.createElement('tr');
+    headers.forEach((header) => {
+      const th = document.createElement('th');
+      th.textContent = header;
+      headerRow.appendChild(th);
+    });
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+
+    const tbody = document.createElement('tbody');
+    const dataRow = document.createElement('tr');
+    headers.forEach((header) => {
+      const td = document.createElement('td');
+      const value = record[header];
+      td.textContent = value !== undefined && value !== '' ? value : '—';
+      dataRow.appendChild(td);
+    });
+    tbody.appendChild(dataRow);
+    table.appendChild(tbody);
+
+    resultContainer.appendChild(table);
+  };
+
+  const handleLookup = async () => {
+    const query = input.value;
+    if (!query.trim()) {
+      status.textContent = 'Please enter a student number before searching.';
+      resultContainer.innerHTML = '';
+      return;
+    }
+
+    if (!hasLoaded && !loadError) {
+      await loadData();
+    }
+
+    if (loadError) {
+      status.textContent = 'Exam score lookup is unavailable. Add "dataset/exam.csv" and reload the page.';
+      return;
+    }
+
+    const match = matchStudent(query);
+    if (match) {
+      status.textContent = 'Showing results.';
+    } else {
+      status.textContent = 'No matching student found.';
+    }
+    renderResult(match, query.trim());
+  };
+
+  button.addEventListener('click', handleLookup);
+  input.addEventListener('keyup', (event) => {
+    if (event.key === 'Enter') {
+      handleLookup();
+    }
+  });
+
+  loadData();
+});
+</script>
+
+<style>
+.exam-score-lookup {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.75rem;
+  background-color: #f8f9fa;
+}
+
+.exam-lookup-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.exam-lookup-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.exam-lookup-controls input[type="text"] {
+  flex: 1 1 220px;
+  min-width: 160px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.exam-lookup-controls button {
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #0d6efd;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.exam-lookup-controls button:hover,
+.exam-lookup-controls button:focus {
+  background-color: #0b5ed7;
+}
+
+.exam-lookup-status {
+  margin: 0 0 0.75rem;
+  color: #495057;
+}
+
+.exam-lookup-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.exam-lookup-table th,
+.exam-lookup-table td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #dee2e6;
+  text-align: left;
+}
+
+.exam-lookup-message {
+  margin: 0;
+  color: #c1121f;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .exam-lookup-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .exam-lookup-controls button {
+    width: 100%;
+  }
+}
+</style>
+
 ## Copyright ©
 
 The content on this website is made available for online viewing by the
