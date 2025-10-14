@@ -111,8 +111,6 @@ much as possible.
     statistics.* Pearson Education.
 2.  Blitzstein, J. K., & Hwang, J. (2019). *Introduction to
     probability.* Chapman and Hall/CRC.
-3.  Hansen, B. (2022). *Probability and statistics for economists.*
-    Princeton University Press.
 4.  Grimmett, G., & Stirzaker, D. (2020). *Probability and random
     processes.* Oxford University Press.
 
