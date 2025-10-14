@@ -1,5 +1,7 @@
 project:
   type: book
+  resources:
+    - dataset/**
 
 book:
   title: "Introduction to Probability"
@@ -94,4 +96,3 @@ format:
     documentclass: scrreprt
 
 editor: source
-
