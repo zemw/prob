@@ -8,8 +8,9 @@ course that aims to be not boring. In this course, we try to blend
 **conventional teaching**, **interesting puzzles** and **data-oriented
 practical skills**.
 
-Course Instructor's email: [gamma12\@126.com](). Please indicate your
-class and student ID when you email me.
+Course Instructor's email: [gamma12\@126.com]() 
+(b/c $\Gamma(1/2)=\sqrt{\pi}$ is one of my favorite equation!) 
+Please indicate your class and student ID when you email me.
 
 ## Syllabus
 
@@ -51,7 +52,7 @@ support their conclusions will receive higher marks. Selective students
 may be invited to present their findings to the class.
 
 **Final exam (50%).** The final exam will be a closed-book,
-paper-and-pencil exam scheduled for Week 17. It will not simply repeat
+paper-and-pencil exam scheduled on Week 17. It will not simply repeat
 lecture material but will assess your ability to apply the knowledge you
 have gained to solve novel problems. To perform well, you must have a
 deep understanding of the concepts and acquire some degree of
@@ -59,10 +60,8 @@ problem-solving skills. The average score of the past exam is 69 with a
 standard deviation 15. The pass rate (\>=60) is about 80%.
 
 **Class participation (5%).** Additional 5 marks for class participation
-on top of the above. Regular attendance and constructive participation
-are are encouraged (though not mandatory) and will be recognized. Active
-engagement in class discussions or asking insightful questions will also
-be considered.
+on top of the above. Regular attendance and active participation in class
+discussions are encouraged (though not mandatory) and will be recognized. 
 
 ![](chapters/img/final.jpg){width="80%" fig-align="center"}
 
