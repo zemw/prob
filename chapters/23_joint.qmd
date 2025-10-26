@@ -110,8 +110,9 @@ statistical inference.
 
 ::: {#exr-benford}
 ### Benford's law
-The distribution of first two digits in many real-life data (e.g. annual accounts  
-of a corporation) can be approximated by the joint mass function:
+The distribution of first two digits in many real-life data 
+(e.g. annual accounts of a corporation) can be approximated 
+by the joint mass function:
 $$f(x,y) = \log_{10}\left(1+\frac{1}{10x+y}\right),\quad 1\leq x\leq 9,0\leq y\leq 9.$$
 
 1. Verify this is valid joint PMF.
