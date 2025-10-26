@@ -85,11 +85,11 @@ $$f(z,\theta)=\frac{1}{\pi},\quad 0\leq z\leq 1,0\leq\theta\leq\pi.$$
 An intersection occurs if and only if (draw a diagram to see this):
 $$z \leq\frac{1}{2}\sin\theta\textrm{ or }1-z \leq\frac{1}{2}\sin\theta$$
 Hence
-$$\begin{align}
+$$\begin{aligned}
 P(\text{intersection})
 & =\frac{1}{\pi}\int_0^\pi\left(
   \int_0^{\frac{1}{2}\sin\theta}dz + \int_{1-\frac{1}{2}\sin\theta}^1 dz
   \right)d\theta \\
 &= \frac{2}{\pi}.
-\end{align}$$
+\end{aligned}$$
 :::
