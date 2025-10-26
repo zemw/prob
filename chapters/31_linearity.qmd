@@ -54,25 +54,6 @@ $$E(Y)=\sum_{k=1}^{n}E(J_{k})=n\left(1-\left(\frac{364}{365}\right)^{n-1}\right)
 For some numeric values, $E(Y)=2.3$ if $n=30$; $E(Y)=6.3$ if $n=50$.
 :::
 
-::: {#exm-4.7}
-Suppose that there are $n$ people sitting in a classroom with exactly
-$n$ seats. At some point, everyone got up, ran around the room, and sat
-back down randomly (i.e., all seating arrangements are equally likely).
-What is the expected value of the number of people sitting in their
-original seat?
-:::
-
-::: solution
-Number the people from 1 to $n$. Let $X_{i}$ be the Bernoulli random
-variable with value $1$ if person $i$ returns to their original seat and
-value $0$ otherwise. Since person $i$ is equally likely to sit back down
-in any of the $n$ seats, the probability that person $i$ returns to
-their original seat is $1/n$. Therefore $E[X_{i}]=1/n$. Now, let $X$ be
-the number of people sitting in their original seat following the
-rearrangement. Then $X=X_{1}+X_{2}+\cdots+X_{n}$. By linearity of
-expected values, we have $E[X]=\sum E[X_{i}]=\sum1/n=1.$
-:::
-
 ::: {#exm-4.8}
 Let $\Pi$ be a permutation over $\{1,2,\dots,n\}$. That is a reordering
 of the numbers. A fixed point of a permutation are the points not moved
@@ -94,73 +75,63 @@ after the permutation. By linearity,
 $$E(X)=E\left(\sum_{k=1}^{n}\boldsymbol{1}_{\Pi(k)=k}\right)=\sum_{k=1}^{n}E\left(\boldsymbol{1}_{\Pi(k)=k}\right)=\sum_{k=1}^{n}\frac{1}{n}=1.$$
 :::
 
-::: {#exm-4.9}
-(Buffon's needle). Rule a surface with parallel lines a distance $d$
-apart. What is the probability that a randomly dropped needle of length
-$l\leq d$ crosses a line?
+::: {#exm-buffon}
+### Buffon's needle
+A plan is ruled by the lines $y=0,\pm 1,\pm 2,...$ and a needle of unit length
+is cast randomly on to the plane. What is the probability that it intersects
+some line? 
 :::
 
 ::: solution
-Consider dropping any (continuous) curve of length $l$ onto the surface.
-Imagine dividing up the curve into $N$ straight line segments, each of
-length $\frac{l}{N}$. Let $X_{i}$ be the indicator for the $i$-th
-segment crossing a line. Let $X$ be the total number of times the curve
-crosses a line. Then,
-$$E(X)=E(\sum X_{i})=\sum E(X_{i})=N\cdot E(X_{i}).$$ There could be
-infinitely many segments. It is hard to compute this expectation
-directly. But here we arrive an important Lemma: the expected number of
-crossings is proportional to the length of the curve, regardless of the
-shape of the curve. If we can compute $E(X)$ for some curve, the we can
-compute $E(X)$ for any length by scaling the value proportional to the
-length.
+Here we sketch an intuitive approach. 
+A more rigorous one will be given in @exm-buffon2.
 
-Consider a circle of diameter $d$. The circle always crosses the lines
+Let $X$ be the number of times the needle crosses a line. 
+The needle can cross a line either $1$ or $0$ times. Thus,
+$P(\text{intersection})=E(X)$.
+
+Consider dropping any (continuous) curve of unit length onto the surface.
+Divide the curve into $N$ straight line segments, each of length $1/N$. 
+Let $X_{i}$ be the indicator for the $i$-th segment crossing a line. Then,
+$$E(X)=E\left(\sum X_{i}\right)=\sum E(X_{i})=N\cdot E(X_{i}).$$ 
+We don't necessarily have to compute this expectation, but by this line of reasoning: 
+$E(X)$ is proportional to the length of the curve, *regardless* the shape of the curve. 
+If we can compute $E(X)$ for some curve, then $E(X)$ is the same for all curves with the same length.
+
+Consider a circle of diameter $d=1$. The circle always crosses the lines
 twice for sure. That is, $E(X_{\textrm{circle}})=2$. The length of the
-circle is $\pi d$. Therefore, the value of $E(X)$ for any curve of
-length $l$ is given by $$E(X)=\frac{2l}{\pi d}.$$
+circle is $\pi$. Therefore, for any curve (including a needle) of length $\pi$ 
+we have $E(X_\pi)=2$. 
 
-Now a needle can cross a line either $1$ or $0$ times. Thus,
-$E(X)=1\cdot P(X=1)+0\cdot P(X=0)$ is exactly the probability of a
-needle crossing a line.
-
-This amazing example can be used to approximate the value of $\pi$. Let
-$q$ be the probability of a needle crossing a line. $q$ can be
-approximated by large number of simulations. Then
-$\pi\approx\frac{2l}{qd}$.
+For a needle of unit length, scale it down by $\pi$, we have $E(X)=2/\pi$.
+Therefore, $$P(\text{intersection})=\frac{2}{\pi}.$$
 :::
 
 ```{r}
-# Buffon's Needle Simulation
-buffon_needle <- function(N, L, D) {
-  # Initialize the number of crossings
-  crossings <- 0
+# number of simulations
+N <- 10000
+
+# number of crossings
+X <- numeric(N)
+
+set.seed(0)
+
+# run simulation
+for (i in 1:N) {
   
-  for (i in 1:N) {
-    # Randomly generate the position of the needle's midpoint
-    y <- runif(1, min = 0, max = D / 2)  # Distance from the nearest line
-    # Randomly generate the angle of the needle (in radians)
-    theta <- runif(1, min = 0, max = pi / 2)  # Angle with respect to the lines
-    
-    # Check if the needle crosses a line
-    if (y <= (L / 2) * sin(theta)) {
-      crossings <- crossings + 1
-    }
-  }
+  # randomly generate the position of the needle's midpoint
+  # distance from the nearest line
+  y <- runif(1, min = 0, max = 1/2)  
   
-  # Estimate pi
-  pi_estimate <- (2 * L * N) / (D * crossings)
+  # randomly generate the angle of the needle (in radians)
+  θ <- runif(1, min = 0, max = pi/2)  
   
-  return(pi_estimate)
+  # check if the needle crosses a line
+  if (y <= 1/2 * sin(θ)) X[i] <- 1
+  else X[i] <- 0
 }
-
-# Parameters
-N <- 100000  # Number of trials
-L <- 1       # Length of the needle
-D <- 2       # Distance between the lines (D >= L)
-
-# Run the simulation
-pi_estimate <- buffon_needle(N, L, D)
-
-# Print the result
-cat("Estimated value of pi:", pi_estimate)
+  
+π <- 2 / mean(X)
+  
+cat("Estimated value of π:", π)
 ```

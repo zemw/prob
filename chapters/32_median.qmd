@@ -46,6 +46,7 @@ have to occur side by side; modes can occur all over the distribution.
 :::
 
 ::: {#exm-incdist}
+### Income distribution
 The main reason why the median is sometimes preferred over the mean is
 that the median is more robust to extreme values. A typical example is
 the income distribution. Higher incomes are rare, but their absolute
@@ -64,31 +65,25 @@ of $X$.
 
 -   A value of $c$ that minimizes the mean squared error
     $E\left(X-c\right)^{2}$ is $c=\mu$.
-
 -   A value of $c$ that minimizes the mean absolute error
     $E\left|X-c\right|$ is $c=m$.
 :::
 
 ::: proof
-Part 1 - Minimizing the mean squared error $E[(X - c)^2]$. Expand the
+1) Minimizing the mean squared error $E[(X - c)^2]$. Expand the
 mean squared error:
 $$E[(X - c)^2] = E[X^2 - 2cX + c^2] = E[X^2] - 2cE[X] + c^2.$$
-
 To find the value of $c$ that minimizes this expression, take the
 derivative with respect to $c$ and set it to zero:
 $$\frac{d}{dc} E[(X - c)^2] = -2E[X] + 2c=0$$
-
 This implies $c=\mu$. We can confirm with second-order condition that
 $c = \mu$ is indeed a minimizer.
 
-Part 2 - Minimizing the mean absolute error $E\left|X-c\right|$.
-
+2) Minimizing the mean absolute error $E\left|X-c\right|$. We prove this 
+assuming $X$ is continuous.
 $$E|X-c|=\int_{-\infty}^{c}(c-x)f(x)dx+\int_c^{\infty}(x-c)f(x)dx$$
-
 Take derivative with respect to $c$, applying the Leibniz’s rule:
-
 $$(c-x)f(x)\frac{d}{dc}c+\int_{-\infty}^c f(x)dx -(x-c)f(x)\frac{d}{dc}c+\int_c^\infty (-f(x))dx=0$$
-
 The first-order condition resolves to
 $$\int_{-\infty}^c f(x) dx = \int_c^{\infty}f(x)dx$$ which is exactly
 the definition of a median.

@@ -1,4 +1,4 @@
-## Inequalities
+## Inequalities*
 
 This section introduces some of the most popular inequality in
 statistics and general mathematics. Interestingly, our probability
@@ -7,7 +7,7 @@ explain. We don't show formal proofs here, but just point out how these
 inequalities can be useful in statistics.
 
 ::: {#thm-cauchy}
-(Cauchy-Schwarz inequality).
+### Cauchy-Schwarz inequality
 $$\left|\sum x_{i}y_{i}\right|\leq\sqrt{\sum x_{i}^{2}}\sqrt{\sum y_{i}^{2}}$$
 :::
 
@@ -24,7 +24,8 @@ original inequality is thus proved.
 :::
 
 ::: {#thm-jensen}
-(Jensen's inequality). For a convex function $f$, we have
+### Jensen's inequality
+For a convex function $f$, we have
 $$\frac{1}{n}\sum f(x_{i})\geq f\left(\frac{1}{n}\sum x_{i}\right);$$ If
 $f$ is concave, then
 $$\frac{1}{n}\sum f(x_{i})\leq f\left(\frac{1}{n}\sum x_{i}\right).$$
@@ -51,7 +52,8 @@ $b$ such that $g(X)=a+bX$ with probability 1.
 :::
 
 ::: {#thm-markov}
-(Markov inequality). Let $X$ be a random variable, then
+### Markov inequality
+Let $X$ be a random variable, then
 $$P(|X|\geq a)\leq\frac{E|X|}{a}$$ That is, the probability of $|X|$
 deviating from its mean by a multiple of $a$ must be less than $1/a$.
 :::
@@ -86,7 +88,8 @@ population making at least three times the average income, since those
 people would already drive the average above what it is.
 
 ::: {#thm-cheb}
-(Chebyshev inequality). Let $X$ be a random variable with mean $\mu$ and
+### Chebyshev inequality
+Let $X$ be a random variable with mean $\mu$ and
 standard deviation $\sigma$, then
 $$P\left(\left|X-\mu\right|> c\sigma\right)\leq\frac{1}{c^{2}}$$ That
 is, the probability of $X$ deviating from its mean by $a$ times the

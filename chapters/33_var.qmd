@@ -10,7 +10,8 @@ typically deviate from the mean, offering a measure of the
 distribution's dispersion.
 
 ::: {#def-var}
-The **variance** of a random variable $X$ is defined as
+### Variance
+The variance of a random variable $X$ is defined as
 $$Var(X)=E\left[X-E(X)\right]^{2}.$$ By convention, variance is also
 denoted by Greek letter $\sigma^2$, where $\sigma = \sqrt{Var(X)}$ is
 called the **standard deviation**.
@@ -38,9 +39,17 @@ Pythagorean theorem, which have useful statistical meanings.
 
 @def-var gives the theoretical variance of a distribution. With finite
 sample from the distribution, we estimate the variance with sample
-observations: $$\hat\sigma^2=\frac{1}{n-1}\sum_{i=1}^n (x_i-\bar x)^2$$
-Why dividing by $n-1$? Because we want an unbiased estimator. We will
-discuss this in later chapters.
+observations: $$s^2=\frac{1}{n-1}\sum_{i=1}^n (X_i-\bar X)^2$$
+Note that we divide by $n-1$ not $n$. Why? Because we want an unbiased estimator.
+We will discuss this later in detail. But here is a sketch of the reasoning.
+
+First note:
+$$\sum_{i=1}^n (X_i - \bar{X})^2 = \sum_{i=1}^n (X_i - \mu)^2 - n(\bar{X} - \mu)^2$$
+Take expectations of both sides:
+$$E\left[\sum_{i=1}^n (X_i - \bar{X})^2\right]
+= n\sigma^2 - n\left(\frac{\sigma^2}{n}\right)
+= (n-1)\sigma^2$$
+Dividing by $n-1$ makes $E(s^2)=\sigma^2$.
 :::
 
 ::: {#thm-var}
@@ -62,13 +71,9 @@ $$Var(X)=E(X^{2})-E^{2}(X)=p-p^{2}=p(1-p).$$
 Variance has the following properties:
 
 -   $Var(X)\geq0$
-
 -   $Var(X+c)=Var(X)$
-
 -   $Var(cX)=c^{2}Var(X)$
-
 -   If $X,Y$ are independent, $Var(X+Y)=Var(X)+Var(Y)$.
-
 -   If $X_{1},X_{2},\dots,X_{n}$ are independent,
     ${\displaystyle Var(\sum_{i=1}^{n}X_{i})=\sum_{i=1}^{n}Var(X_{i})}$.
 :::
@@ -92,16 +97,10 @@ both sides with respect to $\lambda$ and multiply (replenish) again by
 $\lambda$:
 
 $$\sum_{k-1}^{\infty}k\frac{\lambda^{k}}{k!}=\lambda e^{\lambda}$$
-
 Repeat:
-
 $$\sum_{k-1}^{\infty}k^{2}\frac{\lambda^{k}}{k!}=\lambda(e^{\lambda}+\lambda e^{\lambda})$$
-
 Therefore, we have
-
 $$E(X^{2})=e^{-\lambda}(\lambda+\lambda^{2})e^{\lambda}=\lambda+\lambda^{2}$$
-
 Finally,
-
 $$Var(X)=E(X^{2})-(E(X))^{2}=\lambda+\lambda^{2}-\lambda^{2}=\lambda.$$
 :::

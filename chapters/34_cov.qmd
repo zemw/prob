@@ -7,15 +7,13 @@ dependence. But they only capture a particular type of dependence,
 namely linear dependence.
 
 ::: {#def-cov}
-The **covariance** between random variables $X$ and $Y$ is defined as
+### Covariance
+The covariance between random variables $X$ and $Y$ is defined as
 $$Cov(X,Y)=E[(X-EX)(Y-EY)].$$
 :::
 
 The covariance between $X$ and $Y$ reflects how much $X$ and $Y$
-simultaneously deviate from their respective means. 
-
-- If $X>EX$ & $Y>EY$ or $X<EX$ & $Y<EY$, then $Cov(X,Y)$ is positive.
-- If $X>EX$ & $Y<EY$ or $X<EX$ & $Y>EY$, then $Cov(X,Y)$ is negative.
+*simultaneously* deviate from their respective means. 
 
 ::: {#thm-cov}
 For any random variables $X$ and $Y$, $$Cov(X,Y)=E(XY)-E(X)E(Y).$$
@@ -34,11 +32,12 @@ false.
 :::
 
 ::: proof
-$Cov(X,Y)=E(XY)-E(X)E(Y)$. Independence implies $E(XY)=E(X)E(Y)$. Thus,
-$Cov(X,Y)=0$. But $Cov(X,Y)=0$ does not necessarily imply independence.
+1. $Cov(X,Y)=E(XY)-E(X)E(Y)$. Independence implies $E(XY)=E(X)E(Y)$. Thus,
+$Cov(X,Y)=0$. 
+2. $Cov(X,Y)=0$ does not necessarily imply independence.
 Consider the following counter example. Let $X$ be a random variable
 that takes three values -1, 0, 1 with equal probability. And $Y=X^{2}$.
-$X$ and $Y$ are clearly dependent. But they their correlation is 0.
+$X$ and $Y$ are clearly dependent. But they their covariance is 0.
 Since $E(X)=0$, $E(Y)=2/3$, $E(XY)=E(X^{3})=0$, $Cov(X,Y)=0$.
 :::
 
@@ -48,9 +47,8 @@ Covariance and correlation provide measures of the extend to which two
 random variables are linearly related. It is possible that the
 covariance is $0$ even when $X$ and $Y$ are dependent but the relationship is
 nonlinear.
-:::
 
-```{r, fig.asp=0.4}
+```{r, echo=FALSE, fig.asp=0.4}
 # Set seed for reproducibility
 set.seed(123)
 
@@ -72,43 +70,29 @@ Y3 <- rnorm(n)
 # Visualize the relationship
 # Set up a 1x3 grid for plots
 par(mfrow = c(1, 3))
+options(digits = 3)
 
 # Plot 1: Linear Relationship
-plot(X1, Y1, main = "Linear Relationship", pch = 16)
+plot(X1, Y1, main = sprintf("Cov=%.3f",cov(X1,Y1)), pch = 16)
 abline(lm(Y1 ~ X1), col = "red", lwd = 2)
 
 # Plot 2: Nonlinear Relationship
-plot(X2, Y2, main = "Nonlinear Relationship", pch = 16)
+plot(X2, Y2, main = sprintf("Cov=%.3f",cov(X2,Y2)), pch = 16)
 curve(x^2, add = TRUE, col = "red", lwd = 2)
 
 # Plot 3: Independent Variables
-plot(X3, Y3, main = "Independent Variables", pch = 16)
+plot(X3, Y3, main = sprintf("Cov=%.3f",cov(X3,Y3)), pch = 16)
 abline(h = mean(Y3), col = "red", lwd = 2)
-
-# Compute covariances
-cov_linear <- cov(X1, Y1)
-cov_nonlinear <- cov(X2, Y2)
-cov_independent <- cov(X3, Y3)
-
-# Print the results
-knitr::kable(
-  data.frame(
-    Relationship = c("Linear", "Nonlinear", "Independent"),
-    Covariance = c(cov_linear, cov_nonlinear, cov_independent)
-  ), digits = 3)
 ```
+:::
 
 ::: {#prp-cov}
 Covariance has the following properties:
 
 -   $Cov(X,X)=Var(X)$
-
 -   $Cov(X,Y)=Cov(Y,X)$
-
 -   $Cov(cX,Y)=Cov(X,cY)=c\left[Cov(X,Y)\right]$
-
 -   $Cov(X+Y,Z)=Cov(X,Z)+Cov(Y,Z)$
-
 -   $Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y)$
 
 :::
@@ -139,11 +123,12 @@ arbitrary changes in the scales of either variable, we introduce a
 "standardized covariance" called correlation.
 
 ::: {#def-corr}
-The **correlation** between random variables $X$ and $Y$ is defined as
+### Correlation
+The correlation between random variables $X$ and $Y$ is defined as
 $$Corr(X,Y)=\frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}.$$
 :::
 
-We also denote correlation by $\rho\equiv Corr(X,Y)$.
+By convention, we denote correlation by Greek letter $\rho\equiv Corr(X,Y)$.
 
 Unlike covariance, scaling $X$ or $Y$ has no effect on the correlation.
 We can verify this:
@@ -180,25 +165,17 @@ $\rho_{XY}=\frac{a}{|a|}$. The theorem thus follows.
 
 ::: callout-note
 ### Correlation analysis
-Correlation analysis is a very commonly used method in statistics to measure 
-the strength of the linear relationship between two variables and compute 
-their association. Simply put, correlation analysis tells us how one variable 
-changes with other variables. 
-:::
+A **correlation matrix** shows the pairwise correlation coefficients between variables.
+It’s one of the most common tools for exploring relationships in multivariate data.
 
 ```{r, message=FALSE}
-# Select variables for covariance analysis
-variables <- mtcars[, c("mpg", "disp", "hp", "wt")]
+# variables for analysis
+vars <- mtcars[, 1:4]
 
-# Compute the covariance matrix
-cov_matrix <- cov(variables)
-
-# Compute the correlation matrix
-cor_matrix <- cor(variables)
-
-# Plot the correlation pairs
-GGally::ggpairs(variables)
+# compute the correlation matrix
+print(cor(vars))
 ```
+:::
 
 ::: {#exm-4.16}
 Let $X\sim \text{HGeom}(w,b,n)$. Find $Var(X)$.
@@ -233,40 +210,3 @@ story involves sampling without replacement. As $N\to\infty$, it becomes
 extremely unlikely that we would draw the same ball more than once, so
 sampling with or without replacement essentially become the same.
 :::
-
-::: {#exm-4.17}
-(PG exam). Put $k$ balls into $n$ boxes. Let $X$ be the number of empty
-boxes. Find $E(X)$ and $Var(X)$.
-:::
-
-::: solution
-Define an indicator variable $$I_{j}=\begin{cases}
-1 & j\textrm{-th box is empty}\\
-0 & \textrm{otherwise}
-\end{cases}$$
-
-Then $X=\sum_{j=1}^{n}I_{j}$. Unconditionally, the probability of one
-box being empty is $\left(\frac{n-1}{n}\right)^{k}$. Therefore,
-$$E(I_{j})=P(j\textrm{-th box is empty})=\left(\frac{n-1}{n}\right)^{k}$$
-for $j=1,2,\dots,n$. It follows that
-$$E(X)=\sum_{j=1}^{n}I_{j}=nE(I_{j})=n\left(\frac{n-1}{n}\right)^{k}.$$
-
-To compute the variance, $$\begin{aligned}
-Var(X) & =Var(I_{1}+\cdots+I_{n})=\sum_{j=1}^{n}Var(I_{j})+2\sum_{i<j}Cov(I_{i},I_{j})\\
- & =nVar(I_{j})+2\binom{n}{2}Cov(I_{i},I_{j}),\end{aligned}$$
-
-since by symmetry, $Var(I_{j})$ is the same for all $j$ and
-$Cov(I_{i},I_{j})$ is the same for all $i\neq j$. It suffices to compute
-$Var(I_{j})$ and $Cov(I_{i},I_{j})$ for any $j$ and $i\neq j$. Since
-$I_{j}$ only takes number 0 and 1,
-$$E(I_{j}^{2})=\left(\frac{n-1}{n}\right)^{k},$$ $$\begin{aligned}
-Var(I_{j})=E(I_{j}^{2})-(E(I_{j}))^{2} & =\left(\frac{n-1}{n}\right)^{k}-\left(\frac{n-1}{n}\right)^{2k}.\end{aligned}$$
-
-For the covariance term,
-$$E(I_{i}I_{j})=P(i,j \textrm{ are both empty})=\left(\frac{n-2}{n}\right)^{k},$$
-$$Cov(I_{i},I_{j})=E(I_{i}I_{j})-E(I_{i})E(I_{j})=\left(\frac{n-2}{n}\right)^{k}-\left(\frac{n-1}{n}\right)^{2k}.$$
-
-Therefore,
-$$Var(X)=n\left[\left(\frac{n-1}{n}\right)^{k}-\left(\frac{n-1}{n}\right)^{2k}\right]+2\binom{n}{2}\left[\left(\frac{n-2}{n}\right)^{k}-\left(\frac{n-1}{n}\right)^{2k}\right].$$
-:::
-

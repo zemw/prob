@@ -98,21 +98,21 @@ LOTUS says we can compute the expectation of $g(X)$ without knowing the
 PMF of $g(X)$.
 
 ::: {#exm-exp-sqx}
-Compute $E(X)$ and $E(X^{2})$ given the following distribution.
-
-|         |     |     |     |
-|:-------:|:---:|:---:|:---:|
-|   $X$   |  0  |  1  |  2  |
-| $X^{2}$ |  0  |  1  |  4  |
-|   $P$   | 1/4 | 1/2 | 1/4 |
+Compute $E(X)$ and $E(X^{2})$ given the following distribution:
+$$f(x)=\begin{cases}
+\frac{1}{4}, \quad x=0 \\
+\frac{1}{2}, \quad x=1 \\
+\frac{1}{4}, \quad x=2 \\
+\end{cases}$$
 :::
 
 ::: solution
-According to the distribution table, we compute the expectations as
-$$\begin{aligned}
-E(X) & =0\times1/4+1\times1/2+2\times1/4=1;\\
-E(X^{2}) & =0\times1/4+1\times1/2+4\times1/4=3/2.\end{aligned}$$ Note
-that $E(X^{2})\neq[E(X)]^{2}$.
+Compute the expectations of $X$ by definition:
+$$E(X) =0\times\frac{1}{4}+1\times\frac{1}{2}+2\times\frac{1}{4}=1$$
+Compute the expectations of $X^2$ by LOTUS:
+$$E(X^{2}) =0^2\times\frac{1}{4}+1^2\times\frac{1}{2}+2^2\times\frac{1}{4}=\frac{3}{2}.$$ 
+
+Note that $E(X^{2})\neq[E(X)]^{2}$.
 :::
 
 ::: callout-caution
@@ -151,39 +151,25 @@ say $2^{100}$, is none. We can demonstrate this with a simulation.
 :::
 
 ```{r}
-# Function to simulate the St. Petersburg Paradox
-st_petersburg_game <- function(n_simulations) {
-  # Initialize a vector to store the outcomes
-  outcomes <- numeric(n_simulations)
-  
-  for (i in 1:n_simulations) {
-    # Start with the initial reward
-    reward <- 2
-    # Flip a coin until it lands tails
-    while (runif(1) < 0.5) {
-      reward <- reward * 2
-    }
-    # Store the reward for this simulation
-    outcomes[i] <- reward
+# number of simulations
+N <- 1000
+
+# store simulated results
+X <- numeric(N)
+
+set.seed(0)
+
+# run simulation
+for (i in 1:N) {
+  # start with the initial reward
+  x <- 2
+  # flip a coin until it lands tails
+  while (runif(1) < 0.5) {
+    x <- x * 2
   }
-  
-  # Return the outcomes
-  return(outcomes)
+  # store the reward for this simulation
+  X[i] <- x
 }
-
-# Set the number of simulations
-n_simulations <- 1000
-
-# Run the simulation
-results <- st_petersburg_game(n_simulations)
-
-# Calculate the average outcome (expected value)
-expected_value <- mean(results)
-
-# Print the results
-cat("Simulated Expected Value:", expected_value)
-
-# However, as the number of simulations increases
-# We would see higher and higher maximum reward
-cat("Maximum Reward Observed:", max(results))
+  
+cat("Expected Reward:", mean(X))
 ```

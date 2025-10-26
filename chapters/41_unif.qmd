@@ -1,6 +1,7 @@
 ## Uniform distribution
 
 ::: {#def-unif-1}
+### Uniform distribution
 Let $a$ and $b$ be two given real numbers such that $a<b$. Let $X$ be a
 random variable such that it is known that $a\leq X\leq b$ and, for
 every subinterval of $[a,b]$, the probability that $X$ will belong to
@@ -35,13 +36,14 @@ Thus,
 
 $$Var(X)=E(X^{2})-E^{2}(X)=\frac{a^{2}+ab+b^{2}}{3}-\frac{(a+b)^{2}}{4}=\frac{(b-a)^{2}}{12}.$$
 
-::: {#exm-5.1}
+::: {#exm-stick}
+### Longer piece of a broken stick
 A stick of unit length is broken at a random point X. What is the
 expected length of the longer piece?
 :::
 
 ::: solution
-The lengths of the two pieces are $X$ and $1-X$, with $X\sim Unif(0,1)$.
+The lengths of the two pieces are $X$ and $1-X$, with $X\sim U(0,1)$.
 The longer piece is $\max(X,1-X)$. For $X<0.5$, the longer piece is
 $1-X$, and for $X\geq0.5$, it is $X$. The expected value is:
 $$E[\max(X,1-X)]=\int_{0}^{0.5}(1-X)\,dx+\int_{0.5}^{1}X\,dx=\frac{3}{4}.$$
@@ -55,19 +57,39 @@ than the shorter piece, especially when the break point is close to one
 end.
 
 ```{r}
-# Set seed for reproducibility
-set.seed(123)
+# number of simulations
+N <- 1000
 
-# Number of simulations
-n_simulations <- 1000
+# simulate random break point
+X <- runif(N, min = 0, max = 1)  
 
-# Simulate breaking the stick
-X <- runif(n_simulations, min = 0, max = 1)  # Random break points
-longer_piece <- pmax(X, 1 - X)  # Length of the longer piece
+# length of the longer piece
+L <- pmax(X, 1 - X)  
 
-# Compute the expected length
-expected_length <- mean(longer_piece)
-
-# Print the result
-cat("Simulated Expected Length of Longer Piece:", expected_length)
+cat("Expected Length of Longer Piece:", mean(L))
 ```
+
+::: {#exm-buffon2}
+### Buffon's needle revisited
+A plan is ruled by the lines $y=0,\pm 1,\pm 2,...$ and a needle of unit length
+is cast randomly on to the plane. What is the probability that it intersects
+some line? 
+:::
+
+::: solution
+Let $Z$ be the distance from the needle's center to the nearest line beneath it.
+Let $\Theta$ be the angle made by the needle and the $x$-axis.
+The fact that the needle is cast randomly means $Z\sim U(0,1)$, $\Theta\sim U(0,\pi)$ 
+and $Z$ and $\Theta$ are independent. Thus the joint density function of $(Z,\Theta)$ is
+$$f(z,\theta)=\frac{1}{\pi},\quad 0\leq z\leq 1,0\leq\theta\leq\pi.$$
+An intersection occurs if and only if (draw a diagram to see this):
+$$z \leq\frac{1}{2}\sin\theta\textrm{ or }1-z \leq\frac{1}{2}\sin\theta$$
+Hence
+$$\begin{align}
+P(\text{intersection})
+& =\frac{1}{\pi}\int_0^\pi\left(
+  \int_0^{\frac{1}{2}\sin\theta}dz + \int_{1-\frac{1}{2}\sin\theta}^1 dz
+  \right)d\theta \\
+&= \frac{2}{\pi}.
+\end{align}$$
+:::

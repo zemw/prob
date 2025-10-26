@@ -1,6 +1,7 @@
 ## Moments and MGF
 
 ::: {#def-momt}
+### Moment
 Let $X$ be a random variable with mean $\mu$ and variance $\sigma^{2}$ .
 For any positive integer $n$, the $n$-th **moment** of $X$ is
 $E(X^{n})$, the $n$-th **central moment** is $E(X-\mu)^{n}$, and the
@@ -13,13 +14,15 @@ $Var(X)$ is the second central moment of $X$. It is natural to ask if
 there are higher order moments. The answer is yes.
 
 ::: {#def-skew}
+### Skewness
 Let $X$ be a random variable with mean $\mu$, standard deviation
-$\sigma$, and finite third moment. The **skewness** of $X$ is defined as
+$\sigma$, and finite third moment. The skewness of $X$ is defined as
 $$\textrm{Skew}(X)=E\left[\left(\frac{X-\mu}{\sigma}\right)^{3}\right].$$
 :::
 
 ::: {#def-kurt}
-The **Kurtosis** of $X$ is defined as
+### Kurtosis
+The Kurtosis of $X$ is defined as
 $$\textrm{Kurt}(X)=\left[\left(\frac{X-\mu}{\sigma}\right)^{4}\right].$$
 :::
 
@@ -45,8 +48,9 @@ approximate a distribution by "expectation of polynomials":
 $E(X),E(X^{2}),E(X^{3}),\ldots$
 
 ::: {#def-mgf}
+### Moment generating function
 Let $X$ be a random variable. For each real number $t$, define the
-**moment generating function** (MGF) as
+moment generating function (MGF) as
 $$M_{X}(t)=E\left(e^{tX}\right).$$
 :::
 
@@ -68,9 +72,9 @@ derivative of the MGF.
 :::
 
 ::: {#thm-mgf2}
-The MGF (if it exists) uniquely determines the distribution. That is, if
-two random variables have the same MGF, then they must have the same
-distribution.
+If the MGFs of two random variables $X_1$ and $X_2$ are ﬁnite and identical 
+for all values of $t$ in an open interval around the point $t = 0$, then the 
+probability distributions of $X_1$ and $X_2$ must be identical.
 :::
 
 ::: {#thm-mgf-indep}
@@ -79,13 +83,13 @@ the individual MGFs: $$M_{X+Y}(t)=M_{X}(t)M_{Y}(t).$$
 :::
 
 ::: {#exm-4.18}
-For $X\sim Bern(p)$, $e^{tX}$ takes on the value $e^{t}$ with
+For $X\sim \textrm{Bern}(p)$, $e^{tX}$ takes on the value $e^{t}$ with
 probability $p$ and the value $1$ with probability $q$, so
 $M(t)=E\left(e^{tX}\right)=pe^{t}+q$. Since this is finite for all
 values of $t$, the MGF is defined on the entire real line.
 :::
 
 ::: {#exm-4.19}
-The MGF of a $Bin(n,p)$ random variable is $M(t)=(pe^{t}+q)^{n}$, since
+The MGF of a $\textrm{Bin}(n,p)$ random variable is $M(t)=(pe^{t}+q)^{n}$, since
 it is the product of $n$ independent Bernoulli MGFs.
 :::

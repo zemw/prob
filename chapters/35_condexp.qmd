@@ -102,34 +102,24 @@ $\hat b=\frac{\sum_{i=1}^n (x_i-\bar x)(y_i -\bar y)}{\sum_{i=1}^n (x_i - \bar x
 By definition, $b$ gives the marginal change of $E(Y|X)$ with respect to
 $X$.
 
-![](img/condist.png){fig-align="center" width="100%"}
-
-Linear regression is the simple yet powerful modeling tool in
-statistics. It is useful whenever we want to predict one variable with
-another. When the assumptions are met (though this is rare), the model
-gives the conditional expectation — the best predictor. If the
-assumptions are not met, regression does not give the
 
 ```{r}
-# Predict the miles/gallon of a car using its horsepower
-# Use the built-in dataset `mtcars`
-data(mtcars)
+# load data
+exam <- read.csv("../dataset/exam.csv")
 
-# Fit the linear regression model
-model <- lm(mpg ~ hp, data = mtcars)
+# midterm score
+x <- exam$mid
+# final score
+y <- exam$final
 
-# Display the model summary
-gtsummary::tbl_regression(model)
+# regress y on x, compute coefficients
+b <- cov(x,y)/var(x)
+a <- mean(y) - b*mean(x)
+
+# plot the data and the regression line
+plot(x,y)
+abline(a,b,col="red")
 ```
 
-```{r}
-# Scatter plot of the data
-plot(mtcars$hp, mtcars$mpg, 
-     main = "Simple Linear Regression: MPG vs. Horsepower", 
-     xlab = "Horsepower (hp)", 
-     ylab = "Miles per Gallon (mpg)", 
-     pch = 16)  # Use solid circles for points
-
-# Add the regression line
-abline(model, col = "red", lwd = 2)
-```
+Linear regression is the simple yet powerful modeling tool in statistics. It is useful whenever we want to predict one variable with another. When the assumptions are met (though this is rare), the model gives the best predictor (conditional expectation). If the assumptions are not met,
+regression gives a linear approximation.

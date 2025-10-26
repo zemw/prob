@@ -1,78 +1,21 @@
 # Portfolio allocation\*
 
-In the world of finance, one of the most well-established principles is
-the idea of **diversification**. By combining assets with varying levels
-of risk and return, investors can reduce the overall risk of their
-portfolio. One of the most powerful tools for achieving this is
-**correlation**, a statistical measure that quantifies how two assets
-move in relation to each other. Understanding and applying the concept
-of correlation can be the key to constructing portfolios that not only
-aim for higher returns but also minimize risk. This section demonstrates
-how a lower correlation between assets can significantly reduce
-portfolio risk while maintaining the same expected return.
+In the world of finance, one of the most well-established principles is the idea of **diversification**. By combining assets with varying levels of risk and return, investors can reduce the overall risk of their portfolio.
 
-**The Role of Correlation in Portfolio Risk**
+Consider a portfolio of two assets, Asset A and Asset B. Both assets have the same expected return and individual risks (standard deviations), and they are weighted equally in the portfolio.
 
-A core principle in portfolio management is that the overall portfolio
-risk (or volatility) is not simply the weighted average of the
-individual asset risks. Instead, it also depends on how the assets in
-the portfolio are correlated with each other. When assets have lower
-correlation, the overall risk of the portfolio is reduced. This occurs
-because the assets will not all move in the same direction at the same
-time, thus smoothing out large fluctuations in the portfolio value.
+| Asset | Return $\mu$  | Risk $\sigma$  | Weight $w$  |
+|-------|---------------|----------------|-------------|
+| **A** | 10%           | 15%            | 50%         |
+| **B** | 10%           | 15%            | 50%         |
 
-To quantify this relationship, we use a formula that calculates the
-portfolio risk:
+The expected return of the portfolio is: $$\mu_P=w_A\mu_A + w_B\mu_B = 10\%$$ Let's consider the portfolio risk. First, assuming high correlation, $\rho_{AB}^H=0.8$. The portfolio risk is: $$\sigma_P^{H} =
+\sqrt{w_A^2 \sigma_A^2 + w_B^2 \sigma_B^2 + 2w_A w_B \sigma_A \sigma_B \rho_{AB}^H}\approx 14.2\%$$
 
-$$\sigma_P =
-\sqrt{w_A^2 \sigma_A^2 + w_B^2 \sigma_B^2 + 2w_A w_B \sigma_A \sigma_B \rho_{AB}}$$
+If assuming low correlation, $\rho_{AB}^L=0.2$. The portfolio risk is: $$\sigma_P^{L} =
+\sqrt{w_A^2 \sigma_A^2 + w_B^2 \sigma_B^2 + 2w_A w_B \sigma_A \sigma_B \rho_{AB}^L}\approx 11.6\%$$
 
-Where: $\sigma_P$ is the overall portfolio risk. $w_A$ and $w_B$ are the
-weights of the assets in the portfolio. $\sigma_A$ and $\sigma_B$ are
-the individual standard deviations (risks) of assets A and B.
-$\rho_{AB}$ is the correlation between the two assets.
-
-Consider a portfolio of two assets, Asset A and Asset B. Both assets
-have the same expected return of 10% and individual risks (standard
-deviations) of 15%. The key difference between the two cases is the
-correlation between the assets.
-
-Case 1: High Correlation
-
-Let’s assume that the correlation between the two assets is 0.8,
-indicating that the two assets tend to move in the same direction. In
-this scenario, we will calculate the portfolio risk when we allocate 50%
-of the portfolio to Asset A and 50% to Asset B.
-
-$$\sigma_P =
-\sqrt{(0.5)^2 (0.15)^2 + (0.5)^2 (0.15)^2 + 2(0.5)(0.5)(0.15)(0.15)(0.8)}\approx 20.12\%$$
-
-Case 2: Low Correlation
-
-Now, let’s assume that the correlation between the two assets is 0.2,
-indicating a much weaker relationship between the two assets. Again, we
-allocate 50% to Asset A and 50% to Asset B. Using the same formula, we
-can compute the portfolio risk:
-
-$$\sigma_P =
-\sqrt{(0.5)^2 (0.15)^2 + (0.5)^2 (0.15)^2 + 2(0.5)(0.5)(0.15)(0.15)(0.2)} \approx 16.1\%$$
-
-In this example, by reducing the correlation between the two assets, we
-reduced the portfolio risk by approximately 4%, even though the expected
-return remained the same (since the return of both assets was
-identical).
-
-**The principle of diversification**
-
-Diversification is often referred to as a “free lunch” in finance
-because it allows investors to reduce portfolio risk without sacrificing
-expected returns. The reason lower correlation reduces risk is that when
-assets are highly correlated, they tend to move together, amplifying the
-portfolio’s overall volatility. In contrast, when assets are less
-correlated, they do not move in lockstep, and the portfolio experiences
-less overall volatility because the negative fluctuations of one asset
-can be offset by the positive fluctuations of the other. This is a key
-advantage of diversification: it allows you to spread risk across assets
-that behave differently.
+As we see, by reducing the correlation between the two assets, we reduced the portfolio risk, though the expected return remains the same.
+Therefore, diversification is often referred to as a “free lunch” in finance because it allows investors to reduce portfolio risk without sacrificing expected returns.
 
 ![](img/retrisk.png)
