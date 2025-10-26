@@ -385,7 +385,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/30_twoenvp.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Two envelope paradox</span></span></a>
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Two envelope paradox*</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -433,7 +433,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/37_ineq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Inequalities</span></span></a>
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Inequalities*</span></span></a>
   </div>
 </li>
       </ul>
@@ -627,18 +627,6 @@ P(X+Y=k)
 &amp; =\sum_{j=0}^{k}\frac{e^{-\lambda_{2}}\lambda_{2}^{k-j}}{(k-j)!}\cdot\frac{e^{-\lambda_{1}}\lambda_{1}^{j}}{j!}\\
 &amp; =\frac{e^{-(\lambda_{1}+\lambda_{2})}}{k!}\sum_{j=0}^{k}\binom{k}{j}\lambda_{1}^{j}\lambda_{2}^{k-j}\\
 &amp; =\frac{e^{-(\lambda_{1}+\lambda_{2})}}{k!}(\lambda_{1}+\lambda_{2})^{k}.\end{aligned}\]</span> We thus arrive at the PMF for <span class="math inline">\(\text{Pois}(\lambda_{1}+\lambda_{2})\)</span>. Intuitively, if there are two different types of events occurring at rates <span class="math inline">\(\lambda_{1}\)</span> and <span class="math inline">\(\lambda_{2}\)</span>, independently, then the overall event rate is <span class="math inline">\(\lambda_{1}+\lambda_{2}\)</span>.</p>
-</div>
-<div id="exr-bivariate" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 29.1</strong></span> Let <span class="math inline">\(\Omega=\{\omega_1,\omega_2,\omega_3\}\)</span>, with <span class="math inline">\(P(\omega_1)=P(\omega_2)=P(\omega_3)=\frac{1}{3}\)</span>. Define random variables <span class="math inline">\(X,Y,Z:\Omega\to\mathbb{R}\)</span> by <span class="math display">\[\begin{array}
-XX(\omega_1)=1, &amp; X(\omega_2)=2, &amp; X(\omega_3)=3 \\
-Y(\omega_1)=2, &amp; Y(\omega_2)=3, &amp; Y(\omega_3)=1 \\
-Z(\omega_1)=2, &amp; Z(\omega_2)=2, &amp; Z(\omega_3)=1 \\
-\end{array}\]</span></p>
-<ol type="1">
-<li>Show that <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> have the same PMF.</li>
-<li>Find the PMF of <span class="math inline">\(X+Y\)</span>, <span class="math inline">\(XY\)</span>, and <span class="math inline">\(X/Y\)</span>.</li>
-<li>Find the conditional PMF <span class="math inline">\(f_{Y|Z}\)</span> and <span class="math inline">\(f_{Z|Y}\)</span>.</li>
-</ol>
 </div>
 
 
