@@ -1,0 +1,17 @@
+{
+  "hash": "1373519ac13c57b1fa07a51d235192c9",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Earthquake simulation\n\n::: {#exm-4.21}\nWhat is the probability of $k$ earthquakes occurred in a random year in\nSichuan?\n\nThis is the case of rare events with approximately constant rate of\noccurrence. We intend to model this with the Poisson distribution. The\nkey is to figure out the parameter $\\lambda$.\n\nHistorical records[^25_earthquake-1] show that, from 26 BCE to 2021 CE,\nthere were 309 earthquakes with magnitude of 5.0 or greater. Let $X$ be\nthe number of earthquakes with magnitude 5.0 or greater. The annual rate\n$\\lambda$ of earthquakes is therefore $\\frac{309}{2048}=0.15$.\n\nAssume earthquakes are independent events (not always the case). Then\n$X\\sim\\textrm{Pois}(0.15)$. By the distribution of the Poisson\ndistribution, $$P(X=k)=\\begin{cases}\n0.86 & k=0\\\\\n0.13 & k=1\\\\\n0.01 & k=2\n\\end{cases}.$$\n:::\n\n[^25_earthquake-1]: See [this\n    article](https://www.scdzj.gov.cn/dzpd/dzkp/202201/t20220125_51277.html)\n    from the Sichuan Earthquake Administration.\n\nThis is of course a rough approximation. Let's see how close the\noccurrences of earthquakes simulated by a Poisson process to the actual\npatterns of events.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(lattice)\nlibrary(data.table)\n\n# Earthquakes of Sichuan 1900-2019. source: USGS\neq <- fread(\"../dataset/earthq.csv\")\n\n# only consider strong earthquakes with magnitude >= 6\n# count the number of earthquakes by year\neq6 <- eq[mag >=6, .N, by = year] \n  \n# plot the occurrence of earthquakes by year\nxyplot(N~year, data=eq6, type=\"h\", ylim=c(0,4))\n```\n\n::: {.cell-output-display}\n![](25_earthq_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# earthquakes are likely to be followed by earthquakes\n# the rate of occurrence, however, looks constant \nt <- seq(1900, 2019)\nrate <- 0.3\n\n# initialize the random generator\nset.seed(3000)\n\n# model the occurrence with Poisson distribution \ny <- rpois(length(t), rate)\n\n# plot the simulated occurrence of earthquakes\nxyplot(y ~ t, type=\"h\", ylim = c(0,4))\n```\n\n::: {.cell-output-display}\n![](25_earthq_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\nThe simulated result looks somewhat similar to the history. However,\nthere are a few notable difference. The simulated ones are distributed\nmore evenly, whereas in reality, earthquakes are not independent.\nMoreover, the Poisson process seems to generate less rare events (more\nthan 4 earthquakes a year) than the reality. \n\n\n",
+    "supporting": [
+      "25_earthq_files/figure-html"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

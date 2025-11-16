@@ -1,0 +1,21 @@
+{
+  "hash": "1bc622c6e555f572163927013d42d72e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Sum of RVs\n\nWe know the sum of coin heads and the sum of dice points follow a\nBinomial distribution.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nset.seed(0)\n\n# Repeat experiment: sum of heads tossing ten coins\nS1 <- replicate(1000, { sum(sample(0:1, 20, TRUE)) })\n\nhist(S1, prob=TRUE)\n\n# Bell-shaped curve\ncurve(dnorm(x, mean(S1), sd(S1)), col=2, add=TRUE)\n```\n\n::: {.cell-output-display}\n![](42_sumrvs_files/figure-pdf/unnamed-chunk-1-1.pdf){fig-pos='H'}\n:::\n:::\n\n\nThe distribution of the sum of dice has a similar shape:\n\n\n::: {.cell}\n\n```{.r .cell-code}\nset.seed(0)\n\n# Repeat experiment: sum of rolling ten dice\nS2 <- replicate(10000, { sum(sample(1:6, 10, TRUE)) })\n\nhist(S2, prob=TRUE)\n\n# Bell-shaped curve\ncurve(dnorm(x, mean(S2), sd(S2)), col=2, add=TRUE)\n```\n\n::: {.cell-output-display}\n![](42_sumrvs_files/figure-pdf/unnamed-chunk-2-1.pdf){fig-pos='H'}\n:::\n:::\n\n\nThis is not a coincidence. In fact, the sum of random variables \nfrom any distribution would reveal a similar shape.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nset.seed(0)\n\n# Repeat experiment: sum of ten uniform variables\nS3 <- replicate(1000, { sum(runif(10)) })\n\nhist(S3, prob=TRUE)\n\n# Bell-shaped curve\ncurve(dnorm(x, mean(S3), sd(S3)), col=2, add=TRUE)\n```\n\n::: {.cell-output-display}\n![](42_sumrvs_files/figure-pdf/unnamed-chunk-3-1.pdf){fig-pos='H'}\n:::\n:::\n\n\nThe bell-shaped curve comes from Normal distributions. \nThe distribution of the *sum* of random variables always converges to \nNormal distribution.\n\n::: callout-note\n## Sum of random variables approaches Normal\n\nLet $X_1, X_2, \\dots, X_n$ be a sequence of independent and identical random variables.\nLet $$S_n = X_1 + X_2 + \\dots + X_n$$ Then, as $n\\to\\infty$, $S_n$ converges to\nNormal in distribution. That is\n$$S_n \\to^d \\textrm{Normal}.$$\n:::\n",
+    "supporting": [
+      "42_sumrvs_files/figure-pdf"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}

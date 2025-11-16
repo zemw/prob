@@ -1,0 +1,3 @@
+"0",""
+"0","# Plot 3: Independent Variables"
+"0","plot(X3, Y3, main = sprintf(""Cov=%.3f"",cov(X3,Y3)), pch = 16)"

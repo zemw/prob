@@ -1,0 +1,6 @@
+"0",""
+"0","# inter-arrival time"
+"0","T <- diff( (1:N)[I==1] )"
+"0",""
+"0","# distribution if waiting time  "
+"0","hist(T, prob=TRUE)"

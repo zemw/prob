@@ -1,0 +1,1 @@
+"0","curve(ppois(x,lambda=1), from=0,to=20,n=21,type='b',col=1,ann=F)"

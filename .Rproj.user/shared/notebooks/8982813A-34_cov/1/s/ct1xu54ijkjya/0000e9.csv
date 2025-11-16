@@ -1,0 +1,3 @@
+"0",""
+"0","# Plot 2: Nonlinear Relationship"
+"0","plot(X2, Y2, main = sprintf(""Cov=%.3f"",cov(X2,Y2)), pch = 16)"

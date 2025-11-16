@@ -1,0 +1,17 @@
+{
+  "hash": "267a089a3f257c5a76e5978537699088",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Geometric distribution\n\n::: {#def-geom}\n### Geometric distribution\n\nConsider a sequence of independent Bernoulli trials, each with the same success probability $p$. Let $X$ be the number of failures before the first successful trial. Then $X$ has a Geometric distribution: $X\\sim\\textrm{Geom}(p)$.\n:::\n\nLet's derive the PMF for the Geometric distribution. By definition,\n\n$$P(X=k)=q^{k}p$$ where $q=1-p$. This is a valid PMF because $$\\sum_{k=0}^{\\infty}q^{k}p=p\\sum_{k=0}^{\\infty}q^{k}=\\frac{p}{1-q}=1.$$ The expectation of $X$ is given by\n\n$$E(X)=\\sum_{k=0}^{\\infty}k\\cdot q^{k}p=p\\sum_{k=0}^{\\infty}kq^{k}=p\\frac{q}{p^{2}}=\\frac{q}{p}.$$ To see why this holds, taking derivative with respect to $q$ on both sides of $\\sum_{k=0}^{\\infty}q^{k}=\\frac{1}{1-q}$ yields\n\n$$\\sum_{k=1}^{\\infty}kq^{k-1}=\\frac{1}{(1-q)^{2}};$$ Then multiply both sides by $q$:\n\n$$\\sum_{k=1}^{\\infty}kq^{k}=\\frac{q}{(1-q)^{2}}=\\frac{q}{p^{2}}.$$\n\n**Plot the PMF and CDF**\n\n\n::: {.cell}\n\n```{.r .cell-code}\npar(mfrow=c(1,2))\n\n# PMF for Geom(0.5)\ncurve(dgeom(x, 0.5), from=0, to=10, n=11, type=\"b\", ann=F)\n\n# CDF for Geom(0.5)\ncurve(pgeom(x, 0.5), from=0, to=10, n=11, type=\"b\", ann=F)\n```\n\n::: {.cell-output-display}\n![](22_geom_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\n\n:::{#exm-flipHead}\n### Coin flip until Head\nFlipping a fair coin, what is the expected number of flips before the first Head?\n\nLet $X$ be the number of flips until the first head. We know $X-1\\sim\\text{Geom}(0.5)$ as geometric distribution models the number of failures excluding the success. Thus, $E(X-1)=0.5/0.5=1$, $E(X)=2$. Let's compare the theoretical value with results from simulations.\n:::\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# number of simulations\nN <- 1000  \n\n# X: number of flips until first head\n# stores value of X in each simulation\nX <- numeric(N) \n\nset.seed(100)\n\n# run simulations\nfor (i in 1:N) {\n  x <- 0\n  # repeat until first head\n  while(TRUE) {\n    x <- x + 1\n    t <- sample(c('H','T'), 1, F)\n    if (t == 'H') break\n  }\n  # record the number\n  X[i] <- x\n}\n\n# plot distribution of X\nhist(X, probability=T)\n\n#overlay with geometric distribution\ncurve(dgeom(x-1,.5), from=1, to=10,n=10,add=T,col=2)\n```\n\n::: {.cell-output-display}\n![](22_geom_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n\n```{.r .cell-code}\ncat(\"Average number of flips until Head:\", mean(X))\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\nAverage number of flips until Head: 2.021\n```\n\n\n:::\n:::\n\n",
+    "supporting": [
+      "22_geom_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

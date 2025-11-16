@@ -1,0 +1,21 @@
+{
+  "hash": "8f9ea02d50d0252acfbc10ab6f532fe7",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Data descriptives*\n\nA random variable is a mathematical abstraction that provides a bridge\nbetween theoretical probability and real-world data. Every dataset can \nbe viewed as observations from random variables.\n\nDespite the outcome of any one event being uncertain, we can use\npatterns from past observations to predict the general behavior of these\nvariables. By collecting data, we can figure out how often certain\noutcomes occur and connect them to theoretical distributions.\n\n$$\\begin{array}{ccccccc}\n\\textrm{Question with} & \\rightarrow & \\textrm{Data} & \\rightarrow & \\textrm{Patterns}\\\\\n\\textrm{uncertainty} &  & \\downarrow &  & \\downarrow\\\\\n &  & \\textrm{RVs} & \\rightarrow & \\textrm{Distributions} & \\rightarrow & \\textrm{Predictions}\\\\\n\\end{array}$$\n\n**Columns as random variables**\n\nIn a dataset, we view every column as a random variable.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Load a dataset from a CSV file\nexam <- read.csv(\"../dataset/exam.csv\")\n\n# View the data: each column is a random variable\nhead(exam)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n  id gender     major hw mid final overall\n1  1 Female Economics 85  89    74      81\n2  2 Female   Finance 90  84    79      83\n3  3 Female Economics 90  71    51      65\n4  4 Female   Finance 86  84    68      76\n5  5   Male   Finance 80  84    67      75\n6  6 Female   Finance 96 100    99      99\n```\n\n\n:::\n:::\n\n\n**Summary statistics**\n\nWe can describe the distribution of a variable with summary statistics: \nsuch as quartiles, deciles and percentiles.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nsummary(exam$overall)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  45.00   72.00   77.50   76.56   84.00   99.00 \n```\n\n\n:::\n:::\n\n\n\n**Histograms**\n\nOne way to visualize the distribution of a variable is to plot a\nhistogram. A histogram groups data points into intervals, showing how\noften data values fall within each range. The horizontal axis represents\nthe intervals (or bins), and the vertical axis shows the frequency or\ncount of data points in each bin.\n\nA histogram gives an approximation of the true (unknown) distribution.\nIt is not itself the distribution. A distribution refers to the\n*theoretical* assignment of probabilities across all possible outcomes,\nwhereas a histogram represents the *empirical* frequencies observed in a\nfinite sample.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nhist(exam$final, prob = T, ann=F)\n```\n\n::: {.cell-output-display}\n![](13_data_files/figure-pdf/unnamed-chunk-3-1.pdf){fig-pos='H'}\n:::\n:::\n\n\n**Boxplots**\n\nA boxplot, also known as a box-and-whisker plot, displays the\nmedian, quartiles, and range of the data. The box represents the\ninterquartile range (IQR), which contains the middle 50% of the data,\nwith the lower and upper edges corresponding to the first (Q1) and third\nquartiles (Q3). Whiskers extend from the box to indicate the range of\nvalues within 1.5 times the IQR from Q1 and Q3, while points beyond this\nrange are considered outliers.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nboxplot(final ~ major, exam)\n```\n\n::: {.cell-output-display}\n![](13_data_files/figure-pdf/unnamed-chunk-4-1.pdf){fig-pos='H'}\n:::\n:::\n\n\n**Scatter plots**\n\nTo observe the relationship between variables, it is straightforward to\nmake a scatter plot of $Y$ against $X$. An upward-sloping pattern in the\nscatter plot indicates that the variables tend to move together, whereas\na downward-sloping pattern suggests that they move in opposite\ndirections. A flat slope implies the absence of correlation between the\ntwo variables.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nplot(final ~ mid, exam)\n```\n\n::: {.cell-output-display}\n![](13_data_files/figure-pdf/unnamed-chunk-5-1.pdf){fig-pos='H'}\n:::\n:::\n\n",
+    "supporting": [
+      "13_data_files/figure-pdf"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}

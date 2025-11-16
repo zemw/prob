@@ -1,0 +1,17 @@
+{
+  "hash": "c1f1b92b8d2b2b68a28c6ba7704fbe86",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Dice rolling formula\\*\n\nThe Binomial distribution gives the formula for the probability of\nobserving $k$ heads when flipping $n$ coins. Can we find a formula for\nthe probability of getting a total of $p$ points when rolling $n$ dice?\n\nThe probability of obtaining $p$ points on $n$ $s$-sided dice can be\ncomputed as the coefficient of $x^p$ in\n\n$$f(x)=(x+x^2+...+x^s)^n$$\n\nsince each possible arrangement contributes one term.\n\n$$f(x) = x^n(1+x+\\dots+x^{s-1})^n = x^n\\left(\\frac{1-x^s}{1-x}\\right)^n$$\n\nTo obtain the coefficient of $x^p$, expand the binomial power:\n\n$$x^n(1-x^s)^n(1-x)^{-n} = x^n \\sum_{k=0}^n (-1)^k \\binom{n}{k} x^{sk}\n\\sum_{l=0}^\\infty\\binom{n+l-1}{l}x^l$$\n\nThe coefficient of $x^p$ include all terms with $p=n+sk+l$. Therefore,\n\n$$c_p = \\sum_{k=0}^n (-1)^k \\binom{n}{k}\\binom{p-sk-1}{p-sk-n}$$\n\nBut $p-sk-n>0$ only when $k<(p-n)/s$, so the other terms do not\ncontribute. Furthermore, applying the symmetric property of the binomial\nformula, we have\n\n$$\\binom{p-sk-1}{p-sk-n}= \\binom{p-sk-1}{n-1}$$\n\nTherefore, the probability of getting $p$ points when rolling $n$\n$s$-sided dice is given by\n\n$$f(p,n,s) = \\sum_{k=0}^{\\lfloor{(p-n)/s}\\rfloor} (-1)^k \\binom{n}{k} \\binom{p-sk-1}{n-1}.$$\n\n::: callout-note\n## Binomial formula for negative $n$\n\n$$\\begin{aligned}\n\\binom{-n}{k} &= \\prod_{i=0}^{k-1} \\frac{-n-i}{k-i}\n=(-1)^k \\prod_{i=0}^{k-1} \\frac{n+i}{k-i} \\\\\n&=(-1)^k\\frac{n(n+1)\\dots(n+k-1)}{k!}\\\\\n&=(-1)^k\\frac{(n+k-1)!}{k!(n-1)!}\\\\\n&=(-1)^k\\binom{n+k-1}{k}\n\\end{aligned}$$\n:::\n\nWe can verify our formula by simulating the dice rolling game.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nset.seed(0)\n\n# simulates rolling n dice and returns the sum\nroll_dice <- function(n, s=6) {\n  sum(sample(seq(1,s), n, replace = T))\n}\n\n# rolling 10 dice 1000 times and collect the results\npoints <- replicate(1000, roll_dice(10))\n\n# distribution of the sum of points\nhist(points, freq = F)\n```\n\n::: {.cell-output-display}\n![](19_dice_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# formula for computing probability of dice points\ndice_formula <- function(p, n, s=6) {\n  prob <- 1/s^n*sum(\n    sapply(seq(0, floor((p-n)/s)), \n           function(k) (-1)^k*choose(n,k)*choose(p-s*k-1,n-1)))\n}\n\n# computing the probability of getting 20-50 when rolling 10 dice\nx <- 20:50; \ny <- sapply(x, function(p) dice_formula(p,n=10))\n\n# overlay the formula on the histogram\n# it turns out the formula does a nice job!\nhist(points, ylim = c(0, 0.07), freq = F)\nlines(x, y, col = 2, lwd=2)\n```\n\n::: {.cell-output-display}\n![](19_dice_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n",
+    "supporting": [
+      "19_dice_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

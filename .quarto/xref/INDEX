@@ -1,0 +1,188 @@
+{
+  "index.qmd": {
+    "index.html": "72f446bb"
+  },
+  "chapters/01_intro.qmd": {
+    "01_intro.html": "102b81f4"
+  },
+  "chapters/02_event.qmd": {
+    "02_event.html": "1c3b1986"
+  },
+  "chapters/03_classic.qmd": {
+    "03_classic.html": "e5aafc28"
+  },
+  "chapters/04_gambling.qmd": {
+    "04_gambling.html": "788bd5b1"
+  },
+  "chapters/05_birthday.qmd": {
+    "05_birthday.html": "4b28bddb"
+  },
+  "chapters/06_axioms.qmd": {
+    "06_axioms.html": "03c6f25e"
+  },
+  "chapters/07_cond.qmd": {
+    "07_cond.html": "4b23c9c5"
+  },
+  "chapters/08_montyhall.qmd": {
+    "08_montyhall.html": "ead0a6a0"
+  },
+  "chapters/09_simpson.qmd": {
+    "09_simpson.html": "33c02e7a"
+  },
+  "chapters/10_indep.qmd": {
+    "10_indep.html": "ef8f51d9"
+  },
+  "chapters/11_dating.qmd": {
+    "11_dating.html": "a4aade78"
+  },
+  "chapters/11_calculus.qmd": {
+    "11_calculus.html": "ca63399a"
+  },
+  "chapters/01_baseR.qmd": {
+    "01_baseR.html": "4b95a4c7"
+  },
+  "chapters/12_rv.qmd": {
+    "12_rv.html": "c82833af"
+  },
+  "chapters/13_data.qmd": {
+    "13_data.html": "27f2da7b"
+  },
+  "chapters/14_disc.qmd": {
+    "14_disc.html": "fc6df9d2"
+  },
+  "chapters/15_cont.qmd": {
+    "15_cont.html": "98d80818"
+  },
+  "chapters/16_cdf.qmd": {
+    "16_cdf.html": "0b1f3d4d"
+  },
+  "chapters/17_bern.qmd": {
+    "17_bern.html": "843ca81b"
+  },
+  "chapters/18_bin.qmd": {
+    "18_bin.html": "633920fc"
+  },
+  "chapters/19_dice.qmd": {
+    "19_dice.html": "6984a730"
+  },
+  "chapters/20_dexp.qmd": {
+    "20_dexp.html": "a590ae0d"
+  },
+  "chapters/21_hgeom.qmd": {
+    "21_hgeom.html": "16cec721"
+  },
+  "chapters/22_geom.qmd": {
+    "22_geom.html": "ad73d34f"
+  },
+  "chapters/23_joint.qmd": {
+    "23_joint.html": "e36b8518"
+  },
+  "chapters/23_condist.qmd": {
+    "23_condist.html": "20d61407"
+  },
+  "chapters/24_pois.qmd": {
+    "24_pois.html": "f0128e62"
+  },
+  "chapters/25_earthq.qmd": {
+    "25_earthq.html": "c02c5ee0"
+  },
+  "chapters/26_birthday2.qmd": {
+    "26_birthday2.html": "eb9a7ea8"
+  },
+  "chapters/27_convolution.qmd": {
+    "27_convolution.html": "95835762"
+  },
+  "chapters/27_ratings.qmd": {
+    "27_ratings.html": "da851772"
+  },
+  "chapters/28_exp.qmd": {
+    "28_exp.html": "854bf2d6"
+  },
+  "chapters/29_lifexp.qmd": {
+    "29_lifexp.html": "fe795d69"
+  },
+  "chapters/30_twoenvp.qmd": {
+    "30_twoenvp.html": "fefa2c35"
+  },
+  "chapters/31_linearity.qmd": {
+    "31_linearity.html": "7ea58e05"
+  },
+  "chapters/32_median.qmd": {
+    "32_median.html": "54eab8f9"
+  },
+  "chapters/33_var.qmd": {
+    "33_var.html": "e59d9a47"
+  },
+  "chapters/34_cov.qmd": {
+    "34_cov.html": "648fb601"
+  },
+  "chapters/34_portfolio.qmd": {
+    "34_portfolio.html": "fabe39ca"
+  },
+  "chapters/35_condexp.qmd": {
+    "35_condexp.html": "6e0fad38"
+  },
+  "chapters/36_mgf.qmd": {
+    "36_mgf.html": "38a976ae"
+  },
+  "chapters/37_ineq.qmd": {
+    "37_ineq.html": "afe15d10"
+  },
+  "chapters/40_contd.qmd": {
+    "40_contd.html": "9f6416cc"
+  },
+  "chapters/41_unif.qmd": {
+    "41_unif.html": "5dd8a324"
+  },
+  "chapters/42_gauss.qmd": {
+    "42_gauss.html": "07801692"
+  },
+  "chapters/42_sumrvs.qmd": {
+    "42_sumrvs.html": "459c473d"
+  },
+  "chapters/42_normal.qmd": {
+    "42_normal.html": "3d0c4617"
+  },
+  "chapters/42_mvn.qmd": {
+    "42_mvn.html": "8ad32968"
+  },
+  "chapters/43_expo.qmd": {
+    "43_expo.html": "dcb2f656"
+  },
+  "chapters/44_gamma.qmd": {
+    "44_gamma.html": "5db1c16b"
+  },
+  "chapters/45_beta.qmd": {
+    "45_beta.html": "b90a8e25"
+  },
+  "chapters/46_2rvs.qmd": {
+    "46_2rvs.html": "907334db"
+  },
+  "chapters/47_trans.qmd": {
+    "47_trans.html": "29ea2d7f"
+  },
+  "chapters/50_lln.qmd": {
+    "50_lln.html": "cc26ae8b"
+  },
+  "chapters/51_clt.qmd": {
+    "51_clt.html": "222fa4a8"
+  },
+  "chapters/52_samples.qmd": {
+    "52_samples.html": "c956c0e0"
+  },
+  "chapters/53_estimator.qmd": {
+    "53_estimator.html": "45fb14a4"
+  },
+  "chapters/54_ci.qmd": {
+    "54_ci.html": "dab58982"
+  },
+  "chapters/55_ht.qmd": {
+    "55_ht.html": "d91a3863"
+  },
+  "chapters/22_hhht.qmd": {
+    "22_hhht.html": "e6341d6d"
+  },
+  "chapters/22_nbin.qmd": {
+    "22_nbin.html": "d1848a39"
+  }
+}

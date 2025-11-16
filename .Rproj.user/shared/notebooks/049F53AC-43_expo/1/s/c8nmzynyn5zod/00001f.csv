@@ -1,0 +1,3 @@
+"0",""
+"0","# Overlay the exponential function"
+"0","curve(exp(-x/10)/10, col = 2, add = TRUE)"

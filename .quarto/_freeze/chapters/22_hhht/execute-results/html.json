@@ -1,0 +1,15 @@
+{
+  "hash": "0ae5f539e6b43567039d229a377f618e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Coin flip: HH vs HT\\*\n\nFlip a coin indefinite times. Let $X$ denote the number of flips until you see **HH**. Let $Y$ denote the number of flips until you see **HT**. Find $E(X)$ and $E(Y)$.\n\nIt is tempting to think they are the same, since either H or T happens with probability 1/2. But the answer is extremely counter-intuitive: $E(X)>E(Y)$!\n\n**HH case.** Let $E_0$ = E(X\\|No H observed), and $E_1$ = E(X\\|One H observed). Then $$E_0 = 1 + \\frac{1}{2}E_1 + \\frac{1}{2}E_0$$\n\nThe first term is we need to flip once. If the first flip is H, the additional expected number of flips is $E_1$. If the first flip is T, we have to start over again ($E_0$).\n\n$$E_1 = 1 + \\frac{1}{2}(0) + \\frac{1}{2}E_0$$\n\nOnce we have observed an H, we do another flip. If it is another H, we are done. If it is a T, we have to start over again ($E_0$).\n\nSolve the two equations, we have $E_0=6$, $E_1=4$. Thus, $E(X)=6$.\n\n**HT case.** Let $E_0$ = E(Y\\|No H observed), and $E_1$ = E(Y\\|One H observed). Then\n\n$$E_0 = 1 + \\frac{1}{2}E_1 + \\frac{1}{2}E_0$$\n\nIf the first flip is H, we need $E_1$. If the first flip is T, we have wasted the flip, so it is $E_0$ again.\n\n$$E_1 = 1 + \\frac{1}{2}(0) + \\frac{1}{2}E_1$$\n\nIf we have a T by 1/2 chance, we are done (the first term). If it is an H, we get another $E_1$.\n\nIn this case, we have $E_0=4$, $E_1=2$. Thus, $E(Y)=4$.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# number of simulations\nN <- 1000  \n\n# X: number of flips until HH\nX <- numeric(N) \n\nset.seed(100)\n\n# run simulations\nfor (i in 1:N) {\n  x <- 0\n  # repeat until first head\n  while(TRUE) {\n    x <- x + 1\n    t <- sample(c('H','T'), 1, F)\n    if (x >=2 && t == 'H' && tt == 'H') break\n    else tt <- t  # store last toss\n  }\n  # record the number\n  X[i] <- x\n}\n\ncat(\"Average number of flips until HH:\", mean(X))\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\nAverage number of flips until HH: 5.789\n```\n\n\n:::\n:::\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# number of simulations\nN <- 1000  \n\n# X: number of flips until HT\nY <- numeric(N) \n\nset.seed(100)\n\n# run simulations\nfor (i in 1:N) {\n  y <- 0\n  # repeat until first head\n  while(TRUE) {\n    y <- y + 1\n    t <- sample(c('H','T'), 1, F)\n    if (y >= 2 && t == 'T' && tt == 'H') break\n    else tt <- t  # store last toss\n  }\n  # record the number\n  Y[i] <- y\n}\n\ncat(\"Average number of flips until HT:\", mean(Y))\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\nAverage number of flips until HT: 4.047\n```\n\n\n:::\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "hash": "fdb1963b41bf06eaa7a45c101916101f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Birthday paradox\n\nThe birthday problem is a classic probability puzzle that demonstrates\nhow likely it is for at least two people in a group to share the same\nbirthday. While it might seem intuitive that the probability is low in\nsmall groups, the results are surprising.\n\n::: {#exm-birthday}\nIn a group of $k$ people, what is the probability that at least two\npeople share the same birthday? Assume (1) there are 365 possible\nbirthdays; (2) birthdays are evenly distributed across the year; (3)\npeople are equally likely to be born on any given day.\n:::\n\n::: solution\nIf $k>365$, the probability is $1$. Assume $k\\leq365$ for the rest.\nInstead of directly calculating the probability of at least two people\nsharing a birthday, we first compute the complementary probability,\n$P(\\text{no match})$ , where no two people in the group have the same\nbirthday.\n\nFor the first person, there are 365 choices for their birthday. For the\nsecond person, to avoid a shared birthday, there are 364 remaining\nchoices. For the third person, there are 363 choices, and so on. For $k$\npeople, the total number of arrangements (no shared birthday) is:\n\n$$365 \\times 364 \\times 363 \\times \\cdots \\times (365 - k + 1)$$\n\nThe total number of possible arrangements (with or without shared\nbirthdays) is $365^k$. Thus, the probability of no shared birthday is:\n\n$$P(\\textrm{no match})=\\frac{365\\cdot364\\cdots(365-k+1)}{365^{k}}$$\n\nThus, the probability of at least one matched birthday is:\n$$P(\\text{match})= 1- P(\\text{no match})=\\begin{cases}\n50.7\\% & k=23\\\\\n70.6\\% & k=30\\\\\n97.0\\% & k=50\\\\\n99.9\\% & k=70\n\\end{cases}$$\n:::\n\n## R simulation {.unnumbered}\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# a class of k people \nk <- 30\n\n# number of experiments\nN <- 1000\n\n# number of matches\nm <- 0\n\nfor (i in 1:N) {\n  \n  # draw k random numbers from 1 to 365 with replacement\n  birthdays <- sample(1:365, k, replace = T) \n    \n  # number of duplicated birthdays\n  dups <- duplicated(birthdays)\n    \n  # if duplicated birthdays found\n  if (any(dups)) m <- m + 1\n  \n}\n\ncat(\"Prob of at least one match: \", m / N)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\nProb of at least one match:  0.689\n```\n\n\n:::\n:::\n\n\nThere is even a built-in function `pbirthday` that computes the\nprobability of birthday coincidence. We may utilize this function to\nplot the probability as the number of people increases.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# compute the probability of birthday match for 30 people\nprob <- pbirthday(30) \n\n# compute a vector of probabilities for 1,2...100 people\nprobs <- sapply(1:100, pbirthday)\n\n# make a plot\nplot(1:100, probs, type=\"l\",main = \"Probability of >1 people with the same birthday\")\n```\n\n::: {.cell-output-display}\n![](05_birthday_files/figure-pdf/unnamed-chunk-2-1.pdf){fig-pos='H'}\n:::\n:::\n\n",
+    "supporting": [
+      "05_birthday_files/figure-pdf"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}
