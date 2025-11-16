@@ -91,21 +91,68 @@ distribution:
 $$P(X<90)=P\left(\frac{X-80}{20}<\frac{90-80}{20}\right)=\Phi(0.5)\approx0.69.$$
 :::
 
+::: {#thm-normal-mgf}
+### The MGF of Normal 
+The MGF of $X\sim N(\mu,\sigma^2)$ is:
+$$M_X(t) = E[e^{tX}] = e^{\mu t + \frac{1}{2}\sigma^2 t^2}.$$
+:::
+
+:::proof
+Let $Z=\frac{X-\mu}{\sigma}$, then $Z\sim N(0,1)$. The MGF of $Z$ is:
+$$\begin{aligned}
+E(e^{tZ}) & =\int_{-\infty}^{\infty}e^{tz}\cdot\frac{1}{\sqrt{2\pi}}e^{-z^{2}/2}dz\\
+ & =\int_{-\infty}^{\infty}\frac{1}{\sqrt{2\pi}}e^{-z^{2}/2+tz}dz\\
+ & =\int_{-\infty}^{\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}(z-t)^{2}+\frac{1}{2}t^{2}}dz\\
+ & =e^{\frac{t^{2}}{2}}\int_{-\infty}^{\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}(z-t)^{2}}dz\\
+ & =e^{\frac{t^{2}}{2}}\end{aligned}$$
+ Therefore, 
+ $$\begin{aligned}
+ E(e^{tX}) &= E[e^{t(\mu + \sigma Z)}] \\
+ &= e^{t\mu}\cdot E(e^{\sigma t Z}) \\ 
+ &= e^{t\mu} M_Z(\sigma t) \\
+ &= e^{t\mu}\cdot e^{\frac{1}{2}(\sigma t)^2} \\
+ &= e^{\mu t + \frac{1}{2}\sigma^2 t^2}.\\
+ \end{aligned}$$
+:::
+
 ::: {#thm-normal-2}
+### Linear transformation of Normal variables
 Suppose $X\sim N(\mu,\sigma^{2})$. If $Y=aX+b$, then $Y$ has the Normal
 distribution $Y\sim N(a\mu+b,a^{2}\sigma^{2})$.
 :::
 
+::: proof
+The MGF of $X$ is:
+$$M_X(t) = e^{\mu t + \frac{1}{2}\sigma^2 t^2} $$
+The MGF of $Y=aX+b$ is:
+$$\begin{aligned}
+M_Y(t) &= E(e^{t(aX+b)})=e^{tb}\cdot E(e^{atX})=e^{tb} M_X(at) \\
+&= e^{tb} \cdot e^{\mu at + \frac{1}{2}\sigma^2 (at)^2} \\
+&= e^{(a\mu+b)t + \frac{1}{2}(a^2\sigma^2) t^2}.
+\end{aligned}$$
+:::
+
 ::: {#thm-normal-3}
+### Sum of Normal variables
 If the random variables $X_{1},\ldots,X_{k}$ are independent and
 $X_{i}\sim N(\mu_{i},\sigma_{i}^{2})$. Then
 $$X_{1}+\cdots+X_{k}\sim N(\mu_{1}+\cdots+\mu_{k},\sigma_{1}^{2}+\cdots+\sigma_{k}^{2}).$$
 :::
 
+::: proof
+We prove the case $k=2$. By independence, the MGFs satisfy:
+$$\begin{aligned}
+M_{X_1+X_2}(t) &= M_{X_1}(t) M_{X_2}(t) \\
+&= \exp\left\{ \mu_1 t + \frac{1}{2}\sigma_1^2 t^2 \right\}\cdot 
+  \exp\left\{ \mu_2 t + \frac{1}{2}\sigma_2^2 t^2 \right\} \\
+&= \exp\left\{ (\mu_1+\mu_2) t + \frac{1}{2}(\sigma_1^2 +\sigma_2^2) t^2 \right\}.
+\end{aligned}$$
+:::
+
 ::: {#exm-5.4}
 Suppose the heights (in centimeters) of women and men independently
 follow the normal distribution, $X\sim N(165,25)$, $Y\sim N(170,25)$.
-Determine the probability that a randomly selected woman will be taller
+Find the probability that a randomly selected woman will be taller
 than a man.
 :::
 
