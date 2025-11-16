@@ -1,7 +1,0 @@
-"0","library(lattice) # easy to make conditional plots"
-"0",""
-"0","# conditional distribution of exam scores "
-"0","exam <- read.csv(""../dataset/exam.csv"")"
-"0",""
-"0","# distribution of exam scores conditioned on major"
-"0","histogram(~ final | major, data = exam)"

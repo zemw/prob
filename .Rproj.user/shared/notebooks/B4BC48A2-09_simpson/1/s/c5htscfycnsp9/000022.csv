@@ -1,6 +1,0 @@
-"0",""
-"0","# subset of the data with only admissions"
-"0","data <- subset(data, Admit == 'Admitted')"
-"0",""
-"0","# number of admissions by Gender"
-"0","aggregate(Freq ~ Gender, data = data, FUN = sum)"

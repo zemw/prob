@@ -1,8 +1,0 @@
-"0","# Earthquakes of Sichuan 1900-2019. source: USGS"
-"0","data <- read.csv(""../dataset/earthq.csv"")"
-"0",""
-"0","data <- subset(data, mag >=6)"
-"0",""
-"0","data_by_year <- aggregate(id ~ year, data = data, FUN = length)"
-"0",""
-"0","plot(id ~ year, data_by_year, type='s', ylab = ""No. of earthquakes"")"

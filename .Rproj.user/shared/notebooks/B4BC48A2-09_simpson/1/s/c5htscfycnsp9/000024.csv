@@ -1,3 +1,0 @@
-"0",""
-"0","# number of admissions by Gender and Department"
-"0","aggregate(Freq ~ Gender + Dept, data = data, FUN = sum)"

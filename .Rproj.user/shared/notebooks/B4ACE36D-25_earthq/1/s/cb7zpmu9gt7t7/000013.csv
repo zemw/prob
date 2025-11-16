@@ -1,3 +1,0 @@
-"0",""
-"0","# plot the simulated occurrence of earthquakes"
-"0","# xyplot(y ~ t, type=""h"", ylim = c(0,4))"

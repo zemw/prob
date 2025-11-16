@@ -1,6 +1,0 @@
-"0","set.seed(0)"
-"0",""
-"0","# Repeat experiment: sum of rolling ten dice"
-"0","S2 <- replicate(10000, { sum(sample(1:6, 10, TRUE)) })"
-"0",""
-"0","hist(S2, prob=TRUE)"

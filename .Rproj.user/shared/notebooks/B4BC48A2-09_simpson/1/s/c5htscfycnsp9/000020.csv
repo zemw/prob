@@ -1,6 +1,0 @@
-"0","# R has a built-in dataset `UCBAdmissions`"
-"0","# we convert it to data frame for analysis"
-"0","data <- as.data.frame(UCBAdmissions)"
-"0",""
-"0","# list the first a few rows"
-"0","head(data, 8)"

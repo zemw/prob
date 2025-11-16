@@ -1,3 +1,0 @@
-"0",""
-"0","# Bell-shaped curve"
-"0","curve(dnorm(x, mean(S1), sd(S1)), col=2, add=TRUE)"

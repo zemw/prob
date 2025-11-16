@@ -1,1 +1,0 @@
-"0","curve(dpois(x, lambda=1), from=0,to=20,n=21,col=1,type='b',ann=F)"

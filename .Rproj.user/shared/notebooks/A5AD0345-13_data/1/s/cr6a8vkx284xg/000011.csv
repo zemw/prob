@@ -1,5 +1,0 @@
-"0","# Load a dataset from a CSV file"
-"0","exam <- read.csv(""../dataset/exam.csv"")"
-"0",""
-"0","# View the data: each column is a random variable"
-"0","head(exam)"

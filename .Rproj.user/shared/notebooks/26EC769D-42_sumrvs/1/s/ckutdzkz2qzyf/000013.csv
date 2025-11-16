@@ -1,6 +1,0 @@
-"0","set.seed(0)"
-"0",""
-"0","# Repeat experiment: sum of ten uniform variables"
-"0","S3 <- replicate(1000, { sum(runif(10)) })"
-"0",""
-"0","hist(S3, prob=TRUE)"
