@@ -1,0 +1,58 @@
+Birth processes and the Poisson process Solutions - [6.8.2]-[6.8.4]
+
+where C = {two or more flies arrive in (¢, f + h]} and D = {two or more wasps arrive in (t, t + h]}.
+This probability is no greater than (Ah)(uh) + o(h) = ofA).
+
+2. Let I be the incoming Poisson process, and let G be the process of arrivals of green insects.
+Matters of independence are dealt with as above. Finally,
+
+P(G(t +h) =n+1|GQ@ =n) = pP(IG +h) =n 4+1| I(t) =n) + 04) = pah + Off),
+P(G(t +h) >n+1|GQ@) =n) < PU +h) > n4+1/1@ =n) =o(h).
+
+3. Conditioning on 7; and using the time-homogeneity of the process,
+
+P(Et-—u)>x) ifus<t,
+P(E(@) > x|Tj =u) = 0 ift<u<t4+x,
+1 ifu>t+x,
+
+(draw a diagram to help you see this). Therefore
+oo
+P(E(t) > x) = [ P(E(t) > x| Tj =u)ae™ du
+0
+
+t [oe]
+= [ P(E(t —u) > x)Ae* du +f re du.
+0 t+x
+
+You may solve the integral equation using Laplace transforms. Alternately you may guess the
+answer and then check that it works. The answer is P(E(t) < x) = 1 — e~*, the exponential
+distribution. Actually this answer is obvious since E(t) > x if and only if there is no arrival in
+[t, t +x], an event having probability e~**.
+
+4. The forward equation is
+Pi) =AG-VpPij-10-—AipPAO, i Si,
+
+with boundary conditions p;;(0) = 6;;, the Kronecker delta. We write G;(s,t) = 0 i si pij (t), the
+probability generating function of B(¢) conditional on B(Q) = i. Multiply through the differential
+equation by s/ and sum over j:
+
+aGi _ 4,281 _ , aGr
+
+— =) ;
+ary, as
+
+a partial differential equation with boundary condition G;(s, 0) = s’. This may be solved in the usual
+way to obtain G;(s, t) = ete d- s7)) for some function g. Using the boundary condition, we
+find that g(1 — s~!) = 5! and so g(u) = (1 —u)~, yielding
+
+1 (sey
+
+Gis.) = aig —s=)yi ~ [Tosa eS)
+
+The coefficient of s/ is, by the binomial series,
+-at{i-1 —Myj—i oe
+(*) pit) =e 5-1 d-e “yi, j zi,
+
+as required.
+
+291

@@ -1,0 +1,75 @@
+Queues Solutions [8.3.5]-[8.4.4]
+
+whence, by the negative binomial theorem,
+
+Ste | (NO +K\| 1 _ Us)
+Sos E = =
+= k (1—s)(— F(s))F 1s"
+
+5. This is an immediate consequence of the fact that the interarrival times of a Poisson process are
+exponentially distributed, since this specifies the distribution of the process.
+
+8.4 Solutions. Queues
+
+1. We use the lack-of-memory property repeatedly, together with the fact that, if X and Y are
+independent exponential variables with respective parameters 4 and yi, then P(X < Y) =A/(A+ 4p).
+
+(a) In this case,
+
+1 aA wb bh 1 ub Xr aA 1 2h
+P=5 : + 5 : + =5 +7277:
+2lAtMu AtuM AtU 2\Atu Atm Atu 2 (A+t+p)
+uw \2
+(b) If A < yz, and you pick the quicker server, p = 1 — (4).
+Bb
+2AL
+(A + yu)?"
+
+2. The given event occurs if the time X to the next arrival is less than ¢, and also less than the time
+Y of service of the customer present. Now,
+
+(c) And finally, p =
+
+t a
+P(X <1, X<Y)= I nee P* dy = (1 — e OHH),
+0 A+ UL
+
+3. By conditioning on the time of passage of the first vehicle,
+a
+E(T) = I (x +E(T))Ae* dx + ae,
+0
+
+and the result follows. If it takes a time b to cross the other lane, and so a + b to cross both, then, with
+an obvious notation,
+
+ah_ yo eb _ |}
+
+é
+(a) E(Ta) + ET) = —— +
+Lb
+eatb)A+u) _ 4
+b E(Tq45) = ———-——_
+(b) (Ta+b) an
+
+The latter must be the greater, by a consideration of the problem, or by turgid calculation.
+4. Look for a solution of the detailed balance equations
+
+A(n + 1)
+
+; n>0.
+n+2 Jin 2
+
+Mint =
+tofind that z, = p"zo/(n+1) isastationary distribution if < 1, in whichcase zg = —p/log(1—p).
+Hence 7, 2%n = Amg/(u—A), and by the lack-of-memory property the mean time spent waiting for
+service is p79/(js — 4). An arriving customer joins the queue with probability
+
+oO
+
+yt _ pttlog(l — p)
+n+2”"  plog(1—p) *
+
+n=0
+
+351
+

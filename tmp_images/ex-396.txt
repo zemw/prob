@@ -1,0 +1,62 @@
+Problems Solutions [11.7.3]-[11.8.1]
+
+3. (a) We may take as state space the set {0, 1’, 1”,2,3,...}, where i € {0,2,3,...} is the state
+of having i people in the system including any currently in service, and 1’ (respectively 1’) is the
+state of having exactly one person in the system, this person being served by the first (respectively
+second) server. It is straightforward to check that this process is reversible in equilibrium, whence the
+departure process is as stated, by the argument used in Exercise (11.2.7).
+
+(b) This time, we take as state space the set {0’, 0”, 1’, 1”, 2,3, ... } having the same states as in part
+(a) with the difference that 0’ (respectively 0”) is the state in which there are no customers present and
+the first (respectively second) server has been free for the shorter time. It is easily seen that transition
+from 0’ to 1” has strictly positive probability whereas transition from 1” to 0’ has zero probability,
+implying that the process is not reversible. By drawing a diagram of the state space, or otherwise, it
+may be seen that the time-reversal of the process has the same structure as the original, with the unique
+change that states 0’ are 0” are interchanged. Since departures in the original process correspond to
+arrivals in the time-reversal, the required properties follow in the same manner as in Exercise (11.2.7).
+
+4, The total time spent by a given customer in service may be expressed as the sum of geometrically
+distributed number of exponential random variables, and this is easily shown to be exponential with
+parameter 52. The queue is therefore in effect a M(A)/M(64)/1 system, and the stationary distribution
+is the geometric distribution with parameter p = A/(52), provided p < 1. As in Exercise (11.2.7),
+the process of departures is Poisson.
+
+Assume that rejoining customers go to the end of the queue, and note that the number of customers
+
+present constitutes a Markov chain. However, the composite process of arrivals is not Poisson, since
+increments are no longer independent. This may be seen as follows. In equilibrium, the probability of
+an arrival of either kind during the time interval (¢, f+) isAh+ pul -dh+o(h) = A/d)A+0(h).
+If there were an arrival of either kind during (¢ — h, t), then (with conditional probability 1 — O(/))
+the queue is non-empty at time t, whence the conditional probability of an arrival of either kind during
+(t,t +h) is Ah + w(1 — 5)h + O(h); this is of a larger order of magnitude than the earlier probability
+(A/d)h + o(h).
+5. For stations r,s, we write r > s if an individual at r visits s at a later time with a strictly positive
+probability. Let C comprise the station j together with all stations i such that i > j. The process
+restricted to C is an open migration process in equilibrium. By Theorem (11.7.19), the restricted
+process is reversible, whence the process of departures from C via j is a Poisson process with some
+intensity ¢. Individuals departing C via j proceed directly to k with probability
+
+AjRbj (Mj) _ Aj
+Hjbj (Qj) + rec djrdi nj) Bj + Veeco Ajr’
+
+independently of the number n; of individuals currently at j. Such a thinned Poisson process is a
+Poisson process also (cf. Exercise (6.8.2)), and the claim follows.
+
+11.8 Solutions to problems
+
+1. Although the two cases may be done together, we choose to do them separately. When k = 1,
+the equilibrium distribution 7 satisfies:
+
+pm, — Ano = 0,
+BTn41 — A+ )tn + Ann_1 = 9, l<n<N,
+—pry +Ary—-1 =9,
+
+a system of equations with solution 2, = m9(A/)" for 0 <n < N, where (if A # pe)
+
+1—(/pXt!
+
+N
+-1_ n_
+7 = LO/u) = Op
+
+387

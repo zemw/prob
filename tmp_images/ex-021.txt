@@ -1,0 +1,60 @@
+[2.5.1]-{2.7.4] Exercises Random variables and their distributions
+
+2.5 Exercises. Random vectors
+1. A fair coin is tossed twice. Let X be the number of heads, and let W be the indicator function of
+the event {X = 2}. Find P(X = x, W = w) for all appropriate values of x and w.
+
+2. Let X bea Bernoulli random variable, so that PX = 0) = 1— p, P(X = 1) = p. LetY = 1-X
+and Z = XY. Find P(X =x, Y = y) and P(X =x, Z =z) forx, y,z € {0, 1}.
+
+3. The random variables X and Y have joint distribution function
+0 ifx <0,
+
+Fy,y(, y) = 11
+x,y (x y) (1 —e7*) (5 + ~ tan! ) ifx > 0.
+
+Show that X and Y are (jointly) continuously distributed.
+4. Let X and Y have joint distribution function F. Show that
+
+Pla < X <b,ce<Y<d)=F(b,d) — F(a,d) — F(b,c)+ Flac)
+
+whenever a < bandc <d.
+5. Let X, Y be discrete random variables taking values in the integers, with joint mass function f.
+Show that, for integers x, y,
+
+f@, y= P(X>x,¥ <y)-PX2>x4+1,¥ <y)
+—-PX>x,¥ <y-)4+P(X2x4+1,¥ <y-D.
+Hence find the joint mass function of the smallest and largest numbers shown in r rolls of a fair die.
+
+6. Is the function F(x, y) = 1 — e-*7, 0 < x, y < on, the joint distribution function of some pair
+of random variables?
+
+2.7 Problems
+
+1. Each toss of a coin results in a head with probability p. The coin is tossed until the first head
+appears. Let X be the total number of tosses. What is P(X > m)? Find the distribution function of
+the random variable X.
+
+2. (a) Show that any discrete random variable may be written as a linear combination of indicator
+variables.
+
+(b) Show that any random variable may be expressed as the limit of an increasing sequence of discrete
+random variables.
+
+(c) Show that the limit of any increasing convergent sequence of random variables is a random
+variable.
+
+3. (a) Show that, if X and Y are random variables on a probability space (Q, ¥, P), then so are
+X+Y, XY, and min{X, Y}.
+
+(b) Show that the set of all random variables on a given probability space (Q, F, P) constitutes a
+vector space over the reals. If Q is finite, write down a basis for this space.
+
+4. Let X have distribution function
+
+0 ifx <0,
+F(x)=4 5x if0<x <2,
+1 if x > 2,
+
+12
+

@@ -1,0 +1,63 @@
+[10.6.13]-[10.6.16] Solutions Renewals
+
+Therefore m?* = F% 4 m*F%, Alsom* = F* + m* F*, so that
+
+1-— F*
+
+whence m** = F4* + m4* F*, the transform of the given integral equation.
+(ii) Arguing as in Problem (10.6.2), v'* = F%*+2m* Fo +0* F% where v* = F*(1+2m*)/(1- F*)
+
+is the corresponding object in the ordinary renewal process. We eliminate v* to find that
+
+F%% (1 4+ 2m*
+yt — aoe —— ) = m®*(1 4 2m*)
+
+by («). Now invert.
+
+13. Taking into account the structure of the process, it suffices to deal with the case J = 1. Refer
+to Example (10.4.22) for the basic notation and analysis. It is easily seen that B = (v — 1)A. Now
+F(t) =1—e—!. Solve the renewal equation (10.4.24) to obtain
+
+t
+g(t) = h(t) + | h(t — x) dii(x)
+
+where m(x) = vAx is the renewal function associated with the interarrival time distribution F.
+Therefore g(t) = 1, and m(t) = ef,
+
+14, We have from Lemma (10.4.5) that p* = 1— F> + p*F*, where F* = Fy F3. Solve to obtain
+
+pre 2
+1 FRFS
+
+15. The first locked period begins at the time of arrival of the first particle. Since all future events
+may be timed relative to this arrival time, we may take this time to be 0. We shall therefore assume
+that a particle arrives at 0; call this the Oth particle, with locking time Yo.
+
+We shall condition on the time X, of the arrival of the next particle. Now
+
+P(¥o > t) ifu >t,
+
+PL > tix = ={ ; .
+P(Yo > wWP(L'>t—u) ifu<t,
+
+where L’ has the same distribution as L; the second part is a consequence of the fact that the process
+‘restarts’ at each arrival. Therefore
+
+t
+PIL >t) = (1-G@) P(X, > +f P(L >t —u)(1— GW)) fx, @) du,
+0
+
+the required integral equation.
+
+If G(x) = 1 — e~#*, the solution is P(L > t) = e~“, so that L has the same distribution as
+the locking times of individual particles. This striking fact may be attributed to the lack-of-memory
+property of the exponential distribution.
+
+16. (a) It is clear that M(tp) is a renewal process whose interarrival times are distributed as X; +
+Xo+---+XpR where P(R =r) = pq! forr > 1. It follows that M(t) is a renewal process whose
+first interarrival time
+
+X(p) =inf{t : M(t) = 1} = p inf{t : M(tp) = 1}
+
+380
+

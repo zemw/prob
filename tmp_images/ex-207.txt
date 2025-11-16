@@ -1,0 +1,61 @@
+[4.7.10]-[4.7.14] Solutions Continuous random variables
+
+Hence f(r, z) = 3r for |z| < r < 1. This question may be solved in spherical polars also.
+
+10. The transformation s = x + y,r = x/(x + y), has inverse x = rs, y = (1 —1r)s and Jacobian
+J =s. Therefore,
+
+CO o.4)
+far) = | frstr.syds = [ fxy(rs, (1 —r)s)s ds
+
+0 Xr
+= | ne ATS pe HU-M)S 5 ds _ ——_E O<r<l.
+0 {ar + wl —1)}
+
+11. We have that
+
+pO <= (x2 > 2-1) = 2P(x <- <-1),
+Y y
+
+whence
+
+1
+fr) = 2fx(-V@ly) — 1) = Ta O<y<a.
+
+12. Using the result of Example (4.6.7), and integrating by parts, we obtain
+
+ramaran= [oe {i-0(Fa85)h a
+a —p
+
+=(1-e@t-e@l+ [1- ea ba px Pdx.
+a V1—p2 1— 2
+
+Since [1 — ®(x)]/@() is decreasing, the last term on the right is no greater than
+
+—70 b— px p d
+6@) Ja eco = 1p
+
+which yields the upper bound after an integration.
+
+13. The random variable Y is symmetric and, for a > 0,
+
+a7! d a 2g
+PY > a)=PO<X <a!) = [ aos aed
+0 ml+u?) Joo r(1 +07?)
+by the transformation v = 1/u. For another example, consider the density function
+5x? ifx > 1,
+faye i
+
+14, The transformation w = x + y,z = x/(x + y) has inverse x = wz, y = (1 — z)w, and Jacobian
+J = w, whence
+
+AQwz)%leAwz (A — z)w)yB-leAC 2)
+
+Fw, 2) = ws Tey TB)
+_ AAw)*tB-1 Aw zl _ ze!
+= r@ +A) : Bia. B) ; w>0,0<z<1.
+
+Hence W and Z are independent, and Z is beta distributed with parameters a and f.
+
+198
+

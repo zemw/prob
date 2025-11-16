@@ -1,0 +1,65 @@
+[5.12.20]-[5.12.30] Exercises Generating functions and their applications
+
+20. Let X have density function f and characteristic function ¢, and suppose that feo |P(t)| dt < ow.
+Deduce that
+
+F(x) = = [ aco dt.
+
+21. Conditioned branching process. Consider a branching process whose family sizes have the
+geometric mass function f(k) = qp* ,k > 0, where uw = p/q > 1. Let Z, be the size of the nth
+generation, and assume Zp = 1. Show that the conditional distribution of Z,/j”, given that Z, > 0,
+converges as n —> oo to the exponential distribution with parameter 1 — po!
+
+22. A random variable X is called symmetric if X and —X are identically distributed. Show that X
+is symmetric if and only if the imaginary part of its characteristic function is identically zero.
+
+23. Let X and Y be independent identically distributed variables with means 0 and variances 1. Let
+
+(t) be their common characteristic function, and suppose that X + Y and X — Y are independent.
+Show that @(2t) = (t)?(—1), and deduce that X and Y are N(0, 1) variables.
+
+More generally, suppose that X and Y are independent and identically distributed with means 0
+and variances 1, and furthermore that E(X — Y | X + Y) = Oand var(X — Y | X + Y) = 2. Deduce
+that @(s)? = $’(s)? — 6(s)¢”(s), and hence that X and Y are independent N(0, 1) variables.
+
+24. Show that the average Z = n—! >, X; of n independent Cauchy variables has the Cauchy
+distribution too. Why does this not violate the law of large numbers?
+
+25. Let X and Y be independent random variables each having the Cauchy density function f(x) =
+{r(1 +. x?)}—1, and let Z = $(X +).
+
+(a) Show by using characteristic functions that Z has the Cauchy distribution also.
+
+(b) Show by the convolution formula that Z has the Cauchy density function. You may find it helpful
+
+to check first that
+f@)+ fO-+*)
+x -—x) =O H+ xf(x)+(y-—x —x
+f@)F(y — x) n(44 yd sod{af(x) + — x) f(y —x)}
+
+where g(y) = 2/{xy(4 + y*)}.
+26. Let X1, X2,..., X» be independent variables with characteristic functions $1, $2, ...,¢n,. De-
+scribe random variables which have the following characteristic functions:
+
+(a) $1 @)d2(@) --- bn), (b) |i 1°,
+
+(©) Of pj where pj > Oand Di pj =1, M2-HO)7,
+(e) fo di (ute du.
+27. Find the characteristic functions corresponding to the following density functions on (—0oo, 00):
+(a) 1/cosh(zx), (b) (1 — cosx)/(x?),
+(c) exp(—x — e*), (d) de,
+Show that the mean of the ‘extreme-value distribution’ in part (c) is Euler’s constant y.
+
+28. Which of the following are characteristic functions:
+(a) o(t) = 1 — |t| if |t| < 1, 6(t) = 0 otherwise,
+)o@)=A+t4) 1, ©e@ =exp-r*,
+(d) o(t) = cost, (e) (t) = 2(1 — cost) /t”.
+29. Show that the characteristic function @ of a random variable X satisfies |1 — @(t)| < E|rX|.
+
+30. Suppose X and Y have joint characteristic function @(s, t). Show that, subject to the appropriate
+conditions of differentiability,
+
+as™ Ot” |, ¢<9
+
+60
+

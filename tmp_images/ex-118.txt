@@ -1,0 +1,66 @@
+Problems Exercises [10.5.1]-[10.5.6]
+
+10.5 Exercises. Renewal-reward processes
+
+1. If X(@) is an irreducible persistent non-null Markov chain, and u(-) is a bounded function on the
+integers, show that
+
+1 t
+-f u(X(s)) ds = S~ nul),
+F JO ieS
+
+where z is the stationary distribution of X(t).
+
+2. Let M(t) be an alternating renewal process, with interarrival pairs {X,, Y, : r > 1}. Show that
+
+1 EX,
+
+t
+“| TM (s) is even} 28 me ——————-_ aS t > OO.
+t JO EX, + EY,
+
+3. Let C(s) be the current lifetime (or age) of a renewal process N(t) with a typical interarrival time
+X. Show that
+
+1 ft E(x?
+‘ff C(s) ds 2s ma as t > 00.
+
+Find the corresponding limit for the excess lifetime.
+
+4. Let j and k be distinct states of an irreducible discrete-time Markov chain X with stationary
+distribution 2. Show that
+
+1/7
+Ej | Xo =k) + EC | Xo = J)
+
+PT) < Te | Xo =) =
+
+where 7; = min{n > 1: X, = i} is the first passage time to the state i. [Hint: Consider the times of
+return to j having made an intermediate visit to k.]
+
+10.5 Problems
+
+1. (a) Show that P(N(t) > coast + oo) = 1.
+(b) Show that m(t) < oo if uw £0.
+(c) More generally show that, for all k > 0, E(N (ty )< ooifu £0.
+
+2. Let v(t) = E(N(t)?). Show that
+t
+v(t) = mt) + 2 | m(t — s)dm(s).
+0
+Find v(t) when N is a Poisson process.
+3. Suppose that o? = var(X 1) > 0. Show that the renewal process N satisfies
+
+N(t)— (t/u) D
+Vore Xe 1), ast > oo.
+
+4. Find the asymptotic distribution of the current life C(t) of N ast + oo when X is not arithmetic.
+
+5. Let N bea Poisson process with intensity A. Show that the total life D(¢) at time t has distribution
+function P(D(t) < x) = 1—(1+Amin{t, x})e~** for x > 0. Deduce that E(D(t)) = (2—e7*4)//a.
+
+6. A Type 1 counter records the arrivals of radioactive particles. Suppose that the arrival process
+is Poisson with intensity 4, and that the counter is locked for a dead period of fixed length T after
+
+109
+

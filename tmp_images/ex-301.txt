@@ -1,0 +1,75 @@
+[6.8.5]-[6.8.6] Solutions Markov chains
+
+Alternatively use induction. Set j = i to obtain Pi; (t) = —Aip;(t) Gemember p; ;_1(¢) = 0),
+and therefore p;;(t) = e~™!_ Rewrite the differential equation as
+
+ay (Pi (te) = AG — Dp j-1 Me".
+Set j =i +1 and solve to obtain p; ;41(t) =i et (i —e ). Hence (+) holds, by induction.
+
+The mean is
+
+= Te,
+sal
+
+a
+E(Bt)) = 5 CL t)
+
+by an easy calculation. Similarly var(B(t)) = A + E(B(d) —- E(B())2 where
+
+2
+
+a
+
+sal
+
+Alternatively, note that B(¢) has the negative binomial distribution with parameters e~™ and J.
+
+5. The forward equations are
+Ph(t) = An—1Pn—1(t) —AnPat), 2 29,
+
+where A; = iA + v. The process is honest, and therefore m(t) = ©, nPn(t) satisfies
+
+oo oo
+
+m'(t) = So n[(n —1)A +0] Pn) — Do nna + v) pnt)
+
+n=] n=0
+
+oo
+= So {Al@t Dn — 17] + vf + 1) — 2) } nl)
+
+n=0
+
+[o@)
+= So (an + v)pn(t) = Am(t) + v.
+
+n=0
+
+Solve subject to m(0) = 0 to obtain m(t) = v(ert —1)/d.
+
+6. Using the fact that the time to the nth arrival is the sum of exponential interarrival times (or using
+equation (6.8.15)), we have that
+
+oO
+in (6) = [ 68 pa(t) dt
+0
+
+is given by
+
+~ Loy i
+0) = — | | ——
+
+Pn(@) an it +6
+
+which may be expressed, using partial fractions, as
+
+~ 1 QV aja;
+Pn) = — >. —
+
+An 20 Ai +8
+where
+ayo=
+‘ IT Aj — Ai
+j=0
+J#i
+

@@ -1,0 +1,57 @@
+Multivariate normal distribution Exercises [4.9.1]-[4.9.9]
+
+4.9 Exercises. Multivariate normal distribution
+
+1. A symmetric matrix is called non-negative (respectively positive) definite if its eigenvalues are
+non-negative (respectively strictly positive). Show that a non-negative definite symmetric matrix V
+has a square root, in that there exists a symmetric matrix W satisfying W* = V. Show further that W
+is non-singular if and only if V is positive definite.
+
+2. If X is a random vector with the N(, V) distribution where V is non-singular, show that Y =
+(X - pw! has the N(0, I) distribution, where I is the identity matrix and W is a symmetric matrix
+satisfying W2 = V. Therandom vector Y is said to have the standard multivariate normal distribution.
+
+3. Let X = (X1, X2,..., Xn) have the N(, V) distribution, and show that Y = a, X, + a.Xo +
+.++ ++ ayXy has the (univariate) N(w, o2) distribution where
+
+n i
+w= > ajE(X;), = Da? var(X;) +2) > ajajcov(X;, Xj).
+
+i=1 i=1 i<j
+
+4, Let X and Y have the bivariate normal distribution with zero means, unit variances, and correlation
+p. Find the joint density function of X + Y and X — Y, and their marginal density functions.
+
+5. Let X have the N(0, 1) distribution and let a > 0. Show that the random variable Y given by
+, ye { X if |X| <a
+~ (=x if |X|>a
+has the N(0, 1) distribution, and find an expression for p(a) = cov(X, Y) in terms of the density
+function ¢ of X. Does the pair (X, Y) have a bivariate normal distribution?
+
+6. Let {¥, : 1 <r <n} be independent N(O, 1) random variables, and define X; = aan cir Yr,
+1 <r <1, for constants cjy. Show that
+
+E(X; | Xx) = (ae) Xp.
+Dor Ckr
+What is var(X; | X;)?
+
+7. Let the vector (X; : 1 <r <n) have a multivariate normal distribution with covariance matrix
+V = (v;;). Show that, conditional on the event Hi Xy = x, X1 has the N(a, b) distribution where
+
+a = (ps/t)x, b =s*(1 — p*), ands? = v1, 1? = Oj; uj, 0 = Dy MA /(t).
+
+8. Let X, Y, and Z have a standard trivariate normal distribution centred at the origin, with zero
+means, unit variances, and correlation coefficients p1, 92, and p3. Show that
+
+1 1
+P(X >0,¥ >0,Z>0)= 5+ asin p, + sin—! pz + sin~! p3}.
+Tt
+
+9. Let X, Y, Z have the standard trivariate normal density of Exercise (8), with pj = o(X, Y). Show
+that
+
+E(Z | X,Y) = {(03 — pip2)X + (o2 — p103)¥ }/(1 — pj),
+var(Z | X, ¥) = {1 — pf — 63 — 93 + 210203}/(1 — pj).
+
+35
+

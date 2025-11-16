@@ -1,0 +1,64 @@
+Problems Solutions [5.12.48]-[5.12.52]
+
+where E(s¥) = G;(s) is given in Problem (5.12.46).
+
+48. We have that
+3X n with probability 5,
+Xx n+1 =
+
+5Xn+Yn with probability 4.
+
+Hence the characteristic functions satisfy
+
+‘ , a
+Gari (t) = EC *n41) = 5430) + 34n(Q0 —
+1; 1, oA
+A — ait A— git A —it2-" x
+1 2 1 4 —n
+= at = _1(st — 12
+ona gn IGN > $1 ( ) hit narearr
+
+asn —> oo. The limiting distribution is exponential with parameter A.
+
+49. We have that
+1
+1
+0 +
+
+1 1 got
+[ G(s)ds =E i s*ds\) =E
+0 0 X+1
+
+(a)(l-e~*)/a, (6) -(p/q?)(q+log p), (c)—9"*!)/[@+1)p], @) —[1+(p/9) log p]/log p.
+(e) Not if P(X + 1 > 0) = 1, by Jensen’s inequality (see Exercise (5.6.1)) and the strict concavity of
+the function f(x) = 1/x. If X + 1 is permitted to be negative, consider the case when P(X +1 =
+-) =P(X+1=1) =}.
+
+50. By compounding, as in Theorem (5.1.25), the sum has characteristic function
+
+péx(t) __P
+1—q¢x(t)  Ap—it’
+
+Gy(¢x(t)) =
+
+whence the sum is exponentially distributed with parameter Ap.
+
+51. Consider the function G(x) = {E(X*)}~! f*,, y? dF(y). This function is right-continuous and
+increases from 0 to 1, and is therefore a distribution function. Its characteristic function is
+
+OO gitx 2 2
+I. EK” dF(x) = ~ ER?) G2?
+
+52. By integration, fy(x) = fy(y) = 4, |x| < 1, ly < 1. Since f(x, y) # fx(x) fy(y), X and Y
+are not independent. Now,
+1(¢42) if -2<z<0,
+
+1
+= , — d =
+fxty@) I, FQ, 2 — x) dx iio if0<z <2,
+
+the ‘triangular’ density function on (—2, 2). This is the density function of the sum of two independent
+random variables uniform on (—1, 1).
+
+271
+

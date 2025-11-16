@@ -1,0 +1,62 @@
+Problems Solutions [12.9.6]-[12.9.10]
+
+Sum over k and use the fact that
+E(Zm+k+14/(Sm+k — Sm)) = E{h’(Sm4k — SmJE(Zm+k+1 | Fm+k)} = 9,
+
+to deduce that
+m-+n
+
+E(|Smin — Sml") <2?" S> E(IZxl’).
+k=m+1
+
+The argument is completed as after («).
+
+6 With ik = Tty;,=0}; we have that
+
+En | Fn—1) =E(Xndn—1 + 2¥n—11Xnl(l = Int) | Fu—1)
+= In1E(Xn) + 2¥q—11 = In-EIXnl = Yoo
+
+since E(Xn) = 0, E|Xn| = n—!. Also El¥n| < E{|Xal(1 + |¥n—1|)} and E|¥;| < 00, whence
+E|¥,| < oo. Therefore (Y, F) is a martingale.
+
+Now Y, = 0 if and only if X, = 0. Therefore P(¥, = 0) = P(X, = 0) =1-n7! > 1
+as n —> oo, implying that Y¥, + 0. On the other hand, 3°, P(Xn # 0) = oo, and therefore
+Pn # 01.0.) = 1 by the second Borel—-Cantelli lemma. However, Y, takes only integer values, and
+therefore Y, does not converge to 0 a.s. The martingale convergence theorem is inapplicable since
+sup, E|Yn| = 00.
+
+7, Assume that t > 0 and M(t) = 1. Then ¥, = e’ Sn defines a positive martingale (with mean 1)
+with respect to Fy = 0(X1, X2,..., Xn). By the maximal inequality,
+
+P( max S; > x) = P( max ¥; > e) <e *E(Yn),
+
+1<k<n 1l<k<n
+
+and the result follows by taking the limit as n — oo.
+
+8. The sequence ¥, = &%" defines a martingale; this may be seen easily, as in the solution to
+Exercise (12.1.15). Now {¥,} is uniformly bounded, and therefore Yoo = limy-+oo Yn exists a.s. and
+satisfies E(Yoo) = E(Yo) = &.
+
+Suppose 0 < & < 1. In this case Zj is not a.s. zero, so that Z, cannot converge a.s. to a constant
+c unless c € {0, 00}. Therefore the a.s. convergence of Y;, entails the a.s. convergence of Zy, to a limit
+tandom variable taking values 0 and oo. In this case, E(Yo9) = 1-P(Zn — 0) +0-P(Zn > o&),
+implying that P(Z, — 0) = é, and therefore P(Z, > co) = 1-&.
+
+9. It is a consequence of the maximal inequality that P(¥* > x) < x E(Yn Lyyt>xy) for x > 0.
+Therefore
+
+[o.<) oe)
+BaD = f Pg =H) dx <1 f P(Y* > x) dx
+
+OO
+<1 +E{% | Marg 4x
+=1+E(¥q logt ¥*) < 1+E(Yn log? ¥,) + E(Y;)/e.
+
+10. (a) We have, as in Exercise (12.7.1), that
+
+(x) E(h(X(t)) |B, X(s) =i) => py @h(/) fors <2,
+j
+
+405
+

@@ -1,0 +1,63 @@
+Crossings and convergence Exercises [12.2.1]-[12.3.4]
+
+12.2 Exercises. Martingale differences and Hoeffding’s inequality
+
+1. Knapsack problem. It is required to pack a knapsack to maximum benefit. Suppose you have n
+objects, the ith object having volume V; and worth W;, where V;, V2,..., Vn, Wy, Wo. ..., Wn are
+independent non-negative random variables with finite means, and W; < M for all i and some fixed
+M. Your knapsack has volume c, and you wish to maximize the total worth of the objects packed in
+it. That is, you wish to find the vector 21, z2,..., Zn of 0’s and 1’s such that }77 2;V; <c and which
+maximizes S~Y 2; W,;. Let Z be the maximal possible worth of the knapsack’s contents, and show that
+
+P(|Z —EZ| > x) < 2exp{—x?/(2nM2)} for x > 0.
+
+2. Graph colouring. Given n vertices v1, v2,..., Un, for each 1 < i < j <n we place an edge
+between v; and v; with probability p; different pairs are joined independently of each other. We call
+v; and v; neighbours if they are joined by an edge. The chromatic number x of the ensuing graph is
+the minimal number of pencils of different colours which are required in order that each vertex may
+be coloured differently from each of its neighbours. Show that P(jx — Ex| > x) < 2exp{- 5x? jn}
+for x > 0.
+
+12.3 Exercises. Crossings and convergence
+
+1, Give a reasonable definition of a downcrossing of the interval [a, b] by the random sequence
+
+Yo, Y1,..--
+
+(a) Show that the number of downcrossings differs from the number of upcrossings by at most 1.
+
+(b) If (Y, F) is a submartingale, show that the number D,,(a, b; Y) of downcrossings of [a, b] by Y
+up to time n satisfies
+
+E{(¥n — b)*}
+
+—a
+
+EDy(a, b; Y) <
+
+2. Let (Y, &) be a supermartingale with finite means, and let U,(a, b; Y) be the number of upcross-
+ings of the interval [a, b] up to time n. Show that
+
+E{Y¥n —a)7}
+
+EU, (a, b; Y) <
+b-a
+
+Deduce that EU, (a, b; Y) < a/(b — a) if Y is non-negative and a > 0.
+
+3. Let X be a Markov chain with countable state space S and transition matrix P. Suppose that X is
+irreducible and persistent, and that yy : S > Sis abounded function satisfying }~ jeS Pij ¥G)<¥@
+for i € S. Show that w is a constant function.
+
+4. Let Z,, Zo, ... be independent random variables such that:
+
+an with probability }n~?,
+
+Zn=4 0 with probability 1 — n—?,
+—ay with probability 5n~?,
+
+where aj = 2 and ay, = 4 a;. Show that Y, = j=l Z; defines a martingale. Show that
+Y = lim Y, exists almost surely, but that there exists no M such that E|Y,| < M for all xn.
+
+119
+

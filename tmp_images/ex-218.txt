@@ -1,0 +1,64 @@
+Problems Solutions [4.13.12]-[4.14.1]
+
+Hence,
+
+1 2
+xy x a 3
+BIBLN|=2 | © ——»——-dxdy= | (-x-——1togx) dx = 2-2,
+IBLN| ees vay [(- i) 6 2
+
+and likewise E|CLM] = E|ANM] = 47? — 3. It follows that EILMN| = 3(10 — 2?) = (10 —
+m7)|ABCI.
+12. Let the points be P, Q, R, S. By Example (4.13.6),
+
+NI
+
+P(one lies inside the triangle formed by the other three) = 4P(S € PQR) =4- i.
+
+13. We use Crofton’s method. Let m(a) be the mean area, and condition on whether points do or do
+not fall in the annulus with internal and external radii a, a + h. Then
+
+6
+m(a +h) = m(a) () + [* + o( m(a),
+
+where m(a) is the mean area of a triangle having one vertex P on the boundary of the circle. Using
+polar coordinates with P as origin,
+
+2acos@ p2acosy
+n7a‘m(a) = SEES [ r3r§ dry dra sin|6 — v\ldddw
+
+_ 32a° 65
+
+of [sie 6 sin? w sin |@ — vidody = 2
+
+Letting # | 0 above, we obtain
+dm 6m 6 35a”
+
+da ata 36m
+
+whence m(a) = (35a”)/(48z).
+
+14, Let a be the radius of C, and let R be the distance of A from the centre. Conditional on R, the
+required probability is (@ — R)?/a?, whence the answer is E((a — R)? /a”) = fo (l—r)*2r dr = é
+
+15. Leta be the radius of C, and let R be the distance of A from the centre. As in Exercise (4.13.14),
+the answer is E((a — R)?/a3) = fia —r)3r? dr = a
+
+4.14 Solutions to problems
+
+1. (a) We have that
+
+IL eo 49) dy dy = IL, en rdrdd =n.
+R R
+
+Secondly, f > 0, and it is easily seen that iho f()dx = 1 using the substitution y = (@ —
+p)/(oV2).
+
+: OO 1 - 12 : : - 1,2 . : :
+(b) The mean is f° go *(2%) Ze 2° dx, which equals 0 since xe 2" is an odd integrable function.
+
+. . OO 2 - 1 - 1 x2 : : :
+The variance is [°° x“(21)” 2e” 2” dx, easily integrated by parts to obtain 1.
+
+209
+

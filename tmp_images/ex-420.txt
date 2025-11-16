@@ -1,0 +1,46 @@
+13
+
+Diffusion processes
+
+13.3 Solutions. Diffusion processes
+
+1. Itis easily seen that
+E{X@+h)— X()|XO} =A-wXOh + oh),
+E({X@+h) —X()}" |X) =A+u)XOA + off),
+which suggest a diffusion approximation with instantaneous mean a(t, x) = (A — y2)x and instanta-
+neous variance b(t, x) = (A + a)x.
+
+2. The following method is not entirely rigorous (it is an argument of the following well-known
+type: it is valid when it works, and not otherwise). We have that
+
+aM oo 8 oo
+<= / oy of dy= / {da(t, y) + 462b«, y) te” f dy,
+ot —oo ot oo
+
+by using the forward equation and integrating by parts. Assume that a(t, y) = >°, @n(t)y”, b(t, y) =
+Yn Bn(t)y”. The required expression follows from the ‘fact’ that
+
+Oy n dy = — By dy- .
+[oe y fay = aan oo. f dy 39n
+
+3. Using Exercise (13.3.2) or otherwise, we obtain the equation
+
+M
+OM mM + 40°M
+ot
+
+with boundary condition M(0, 6) = 1. The solution is M(t) = exp{ 50 (2m + O)t}.
+4. Using Exercise (13.3.2) or otherwise, we obtain the equation
+sad = 0 + 46°M
+with boundary condition M(0, 6) = 1. The characteristics of the equation are given by
+at _do 2am
+1° 6 62M
+
+>
+
+1 92 192
+with solution M(t, 0) = e4° g(0e~*) where g is a function satisfying 1 = ea? g(@). Therefore
+M = exp{qz07(1 — e~*)).
+
+411
+

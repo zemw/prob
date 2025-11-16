@@ -1,0 +1,52 @@
+[2.7.1]-[2.7.6] Solutions Random variables and their distributions
+2.7 Solutions to problems
+1. By the independence of the tosses,
+P(X > m) = P(first m tosses are tails) = (1 — p)”.
+
+Hence
+px sx)={ 1-(—pyi fx 20,
+ifx <0.
+Remember that |x | denotes the integer part of x.
+2. (a) If X takes values {x; : i > 1} then X = 7%, xj14, where Aj = (X = xj}.
+
+(b) Partition the real line into intervals of the form [k2~™”, (k + 1)2-"), -—0oo < k < o, and
+define Xm = po _ 4g kK27 Ik,m where Ix m is the indicator function of the event {k2-" < X <
+(k + 1)27™}. Clearly Xj is a random variable, and X(w) ¢ X(w) as m — oo for all w.
+
+(c) Suppose {Xm} is a sequence of random variables such that Xm(@) t X(@) for all w. Then
+{X <x} =]\.{Xm < x}, which is a countable intersection of events and therefore lies in F.
+
+3. (a) We have that
+
+(K+¥<x}=f] U (Xsrn¥sx-rtn7})
+n=l reqt
+
+where Q* is the set of positive rationals.
+
+In the second case, if XY is a positive function, then X Y = exp{log X + log Y}; now use Exercise
+(2.3.2) and the above. For the general case, note first that |Z| is a random variable whenever Z is
+a random variable, since {|Z| < a} = {Z < a}\ {Z < —a} fora > 0. Now, if a > 0, then
+{X¥ <a} = {XY <0} U{|XY] < a} and
+
+{XY <0} = ({X <O}N{¥ > O}) U ({X > OFN{Y <0}).
+
+Similar relations are valid if a < 0.
+Finally {min{X, Y} > x} = {X > x}M{Y > y}, the intersection of events.
+
+(b) It is enough to check that aX + BY is arandom variable whenever a, B € R and X, Y are random
+variables. This follows from the argument above.
+
+If Q is finite, we may take as basis the set {74 : A € ¥} of all indicator functions of events.
+4, (a) F(3) — F(4) = 5.
+(b) F(2) — F(1) = 5.
+(c) P(X? < X) = P(X <1) =}.
+(d) P(X < 2X*) = P(X > 5) = 3.
+(e) P(X +X? < 7) = P(X < 4) =f.
+() (VX <2) = P(X <2”) = 42” if0 <2 < V2.
+5. P(X =-1)=1-p, P(X =0)=0, P(X > 1)= 4p.
+6. There are 6 intervals of 5 minutes, preceding the arrival times of buses. Each such interval has
+
+probability ra = ab. so the answer is 6- ib = ;-
+
+154
+

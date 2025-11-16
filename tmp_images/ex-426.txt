@@ -1,0 +1,58 @@
+It6’s formula Solutions [13.8.2]-[13.9.1]
+
+(c) It was shown in Exercise (13.7.3a) that fo W,; dW, = 3 W; _ dy. Hence,
+t 2
+e(| | Ws aw, | ) = i f{Ecw;) — 2E(W?) +17} _ 1,2,
+0
+
+and the result follows because E(W?) =f,
+
+2. Fix t > Oandn > 1, and let 6 = t/n. We set Vi = Wit/n- It is the case that X; =
+limy—oo >> 7; VjQj41 — tj). Each term in the sum is normally distributed, and all partial sums are
+multivariate normal for all 6 > 0, and hence also in the limit as 6 > 0. Obviously E(X;) = 0. For
+st,
+
+t ps t ops
+E(X; Xz) -| | E(W, Wy) du dv - | [ min{u, v}dudv
+0 JO 0 JO
+
+s 2 s 2 t AY
+-[ 5u aut [ u(tt—u)du=s (5-3):
+
+Hence var(X;) = Rt, and the autocovariance function is
+
+s fl Ss
+p(Xs, X7) =3/* €¢ _ =)
+
+3. By the Cauchy—Schwarz inequality, as n —> oo,
+E[{E(Xn | 9) — E(X | 9)}"] < E[E{(Xn — X)*|9}] =E[(Xn — X)71 > 0.
+
+4. Wesquare the equation ||7 (v1 + ¥2)\l2 = Ilv1 + ¥2|| and use the fact that || 7 (4) |l2 = || ¥% || for
+i = 1, 2, to deduce the result.
+
+5. The question permits us to use the integrating factor eFt to give, formally,
+
+t dW, t
+Pt x, - | es ds = cP wy, -6 | eS W, ds
+0 ds 0
+
+on integrating by parts. This is the required result, and substitution verifies that it satisfies the given
+equation.
+
+6. Finda sequence @ = (6) of predictable step functions such that ||@ — y|| > 0asn > oo.
+By the argument before equation (13.8.9), 1@™) as I(w) asn —> oo. By Lemma (13.8.4),
+11@™)|l2 = ||@™ ||, and the claim follows.
+
+13.9 Solutions. It6é’s formula
+
+1. The process Z is continuous and adapted with Zg = 0. We have by Theorem (13.8.11) that
+E(Z; — Zs | Fs) = 0, and by Exercise (13.8.6) that
+
+t x2 y2
+B((Z ~ Zs? |¥2) =B{ [ Met du) = 1s,
+OR
+
+The first claim follows by the Lévy characterization of a Wiener process (12.7.10).
+
+417
+

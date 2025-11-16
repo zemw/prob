@@ -1,0 +1,59 @@
+Problems Solutions [6.15.15]-[6.15.16]
+
+15. Leti and j be distinct states, and suppose that p;;(¢) > 0 for some t. Now
+
+cana |
+pi) = DI Gai,
+
+n=0 ~
+implying that (G”);; > 0 for some n, which is to say that
+(*) Bi,ky Sky sky Bln, j FO
+
+for some sequence kj, kz, ..., kn of states.
+
+Suppose conversely that (*) holds for some sequence of states, and choose the minimal such value
+of n. Then i, ky, kz,..., kn, j are distinct states, since otherwise n is not minimal. It follows that
+(G");; > 0, while (G”);; = 0 for 0 < m < n. Therefore
+
+oy ke
+k
+py) =0" 5 a (G")ij
+k=n
+
+is strictly positive for all sufficiently small positive values of t. Therefore i communicates with j.
+16. (a) Suppose X is reversible, and let i and j be distinct states. Now
+
+P(X(0) =i, X() = j) = P(X) =i, X() = j),
+which is to say that 7; p;;(¢) = 7; p;i(t). Divide by ¢ and take the limit as ¢ | 0 to obtain that
+
+MBij = Tj 8ji-
+Suppose now that the chain is uniform, and X (0) has distribution w. If ¢ > 0, then
+
+PXO =) =o mp = 7,
+
+so that X(t) has distribution 7 also. Now let t < 0, and suppose that X(t) has distribution w. The
+distribution of X (s) for s > 0 is wPs—; = x, a polynomial identity in the variable s — t, valid for all
+s > 0. Such an identity must be valid for all s, and particularly for s = ¢, implying that w = x.
+
+Suppose in addition that 7; 2;; = 1; 9;; for alli, 7. For any sequence k1, k2,..., kn of states,
+Wi 8i,ky 8k, ky °° Skin, j = Sky i ky 8ky kp Bhan jf 0 8k i8ko ky Bi kn MH -
+Sum this expression over all sequences k,, ko, ..., ky of length n, to obtain
+mG"); = 1j(G"*!)j;, n> 0.
+
+It follows, by the fact that P, = eG, that
+
+00 io.@]
+1 1
+nm pit) =m > ait (Gi = Hi > it (Gi = APIO
+m=0 ~ m=0 ~
+
+for all i, j,f. Fort; < tg <--++< ft,
+
+P(X(t)) = 11, X(t) = in, .... X(t) =in)
+= Mi; Piz in (t2 — 11) * ++ Pinyin Un — tn-1)
+= Pin, iy (2 — C1) Fin Pin, iz (3 — 12) +++ Pin) ,in Gn — 1) =
+= Pini (12 — 11) +++ Pinig_1 Gn — 2-1) Bin
+= P(¥(@) =i, Y(t2) =i2,...,¥ Gn) = in),
+
+309
+

@@ -1,0 +1,55 @@
+[3.11.9]-[3.11.13] Solutions Discrete random variables
+
+which is bin(m +n, p).
+
+9. Turning immediately to the second request, by the binomial theorem,
+n\ ,_ n _
+(x ty)" + Fy — x)" = 5 (<)> Hak 4 (ah }= ({) 40 k
+k k even
+as required. Now,
+
+P(N even) = )~ (7) pea — pyr
+
+k even
+= }3{(p+1—p)"+(—p-— p)"} = 514+ —2p)"}
+in agreement with Problem (1.8.20).
+
+10. There are (°) ways of choosing k blue balls, and (7 fa) ways of choosing n — k red balls. The
+total number of ways of choosing n balls is (¥ ), and the claim follows. Finally,
+
+rane (hee bt ON 8)! N=)!
+
+(b-k! (N-b—-n+k! WM!
+
+N-b N—b—n+k+1)(N N-—n+4+1)7!
+xX eee a ee
+N N
+
+> (°) pe — py*-* as N > oo.
+
+11. Using the result of Problem (3.11.8),
+P(X =k)P(Y = N —k)
+
+P(X =k|X+Y=N)=
+
+P(X +Y¥=N)
+_ Grea Ey PN Ea NE _ WO (ve)
+(Wy) PN g2n-N (w)
+
+12. (a) E(X) =c+d,E(Y) = b+4+d, and E(XY) =d, so cov(X, Y) = d — (c+ d)(b +d), and X
+and Y are uncorrelated if and only if this equals 0.
+(b) For independence, we require f(i, 7) = P(X =i)P(Y = J) for alli, 7, which is to say that
+
+a=(a+bja+c), b=(a+b\(b+d), c=(c+d)(at+c), d=(b+d)(c4+d).
+
+Now a +b+c+d = 1, and with a little work one sees that any one of these relations implies the
+other three. Therefore X and Y are independent if and only if d = (b+ d)(c +d), the same condition
+as for uncorrelatedness.
+
+13. (a) We have that
+
+co m-—l fore) fore)
+E(X) = 5 mP(X = m) = X= => 3 P(X =m) = > P(X > n).
+m=0 m=0 n=0 n=
+
+Om=n+1 n=0

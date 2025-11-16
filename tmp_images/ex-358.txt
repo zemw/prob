@@ -1,0 +1,54 @@
+8
+
+Random processes
+
+8.2 Solutions. Stationary processes
+
+1. With aj(n) = P(Xn = 71), we have that
+cov(Xm, Xmin) = P(Xmtn = 1| Xm = DP(Xm = 1) — P(Xm4n = 1)P(Xm = 1)
+= ay(m) p11 (n) — a) (m)a,(m +n),
+and therefore,
+
+a\(m) pi (1) — ay (m)a,(m +n)
+Jay(m)(1 — ay (m))a, (m Fn) — ay(m Fn)
+
+Now, a,(m) > a/(a + B) as m — oo, and
+
+pP(Xm, Xm+n) =
+
+_ a B _y_ gyn
+Pu) = a tay a — B)",
+
+whence (Xm, Xm+n) > (1 —a@ — 8)” as m -> ov. Finally,
+
+a
+at p
+
+1 n
+lim —S° P(X, =1) =
+r=1
+
+n—>OOn
+
+The process is strictly stationary if and only if Xo has the stationary distribution.
+
+2. We have that E(T(t)) = 0 and var(T(t)) = var(To) = 1. Hence:
+(a) p(T (s), T(s +1) = E(T(s)T(s +1) = E[(-I)NOF9 NO] = oP
+(b) Evidently, E(X (t)) = 0, and
+
+E[X(t)?] = e(f [ T(u)T(v) du av)
+
+t v
+=2 [ E(T(u)T(v)) dudv =2 / / e UW) du dy
+O<u<ve<t v=0 J/u=0
+
+1 1
+=r (gt gem) ~3 ast—> ©.
+
+3. We show first the existence of the limit A = lim, 1 g(¢)/t, where g(t) = P(N(t) > 0). Clearly,
+
+g(x +y) =P(NG@ + y) > 0)
+= P(N(x) > 0) + P({N(x) = 0} {NG@ + y) — N(x) > 0})
+<g(x)+e0) ~~ forx,y>=0.
+
+349

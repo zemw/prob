@@ -1,0 +1,66 @@
+[2.7.13]-[2.7.14] Solutions Random variables and their distributions
+
+where x = g6/g,. However x + x7! > 1 for all x > 0, a contradiction.
+13. (a) Clearly dy, satisfies (i). As for (ii), suppose that d.(F, G) = 0. Then
+
+F(x) <lim{G(x +6) +€} = Ga)
+€10
+
+and
+F(y) = lim{G(y — «) —e} = GQ).
+€10
+
+Now G(y—) > G(x) if y > x; taking the limit as y | x we obtain
+
+F(x) = lim G(y—) = G(x),
+yx
+
+implying that F(x) = G(x) for all x.
+
+Finally, if F(x) < G@w +e) +e and G(x) < A(x + 6) +4 6 for all x and some ¢, 5 > 0, then
+F(x) < H(x+6+6€)+6€46 for all x. A similar lower bound for F(x) is valid, implying that
+dL (F, H) < dL (F, G)+4(G, H).
+
+(b) Clearly dy satisfies (i), and dpy(X, Y) = O if and only if P(X = Y) = 1. By the usual triangle
+inequality,
+
+[P(X =k) -P(Z =k)| < |P(X =) -PY =’ | +|PY =H -P(Z=4)I,
+
+and (iii) follows by summing over k.
+We have that
+
+2|P(X € A) — P(Y € A)| = |(P(X € A) — PY € A)) — (P(X € AS) - PLY € AY))|
+
+= Dex =k) -P(Y =k) Ja’)
+k
+
+where J4(k) equals 1 if k € A and equals —1 if k € A°. Therefore,
+
+2|P(X € A) — P(Y € A)| < )o|P(X = — PY =4)| - Jal < arv(X, ¥).
+k
+Equality holds if A = {k : PX =k) > P(Y = k)}.
+14, (a) Note that
+OF
+axdy
+so that F is not a joint distribution function.
+(b) In this case
+
+-e* <0, x,y >0,
+
+a°F =f ifO0<x<y,
+axdy lO if0<y <x,
+
+I i dx dy =1.
+0 Jo axdy
+
+Hence F is a joint distribution function, and easy substitutions reveal the marginals:
+
+and in addition
+
+— ij —1_p7*
+FxQx) = lim FG, y) = 1 e*, x>Q0,
+
+Fy(y)= lim Fx, y)=1-e%—ye%, y20.
+
+156
+

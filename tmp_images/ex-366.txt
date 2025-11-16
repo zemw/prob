@@ -1,0 +1,54 @@
+Autocovariances and spectra Solutions [9.2.2]-[9.3.2]
+
+(a) In this case c(0) = 4, and c(1) = c(2) = 0. Therefore X41 = Xn41 = 0, and D = 0.
+(b) In this case D = 0 also.
+In both (a) and (b), little of substance is gained by using X,,+1 in place of X41.
+2. Let {Z, :n =...,—1,0,1,...} be independent random variables with zero means and unit
+variances, and define the moving-average process
+_ Zn + aZy-1
+
+Xn =
+(*) Tae
+
+It is easily checked that X has the required autocovariance function.
+
+By the projection theorem, X;, — Xn is orthogonal to the collection {Xn_- : r > 1}, so that
+E{(Xn — Xn)Xn—r} = 0,7 > 1. Set Xn = OP, bs Xn—s to obtain that
+
+a=b)+boa, 0=b,_ja+bs+be4 10 for s > 2,
+
+where @ = a/(1 + a”). The unique bounded solution to the above difference equation is bs =
+
+(—1)+1a5, and therefore
+oe)
+
+Xn = C1) ta’ Xp.
+s=1
+The mean squared error of prediction is
+s 2 2c 2 1 2 1
+= —a)ys _ = ——
+E{(Xn — Xn) y=2{ (So a) ns) \. Tae Sn) = lta’
+
+Clearly E(X,) = 0 and
+
+oe)
+cov(Xn, Xn—m) = > brbsc(m +r—s), m > 0,
+
+rs=l
+
+so that X is weakly stationary.
+
+9.3 Solutions. Autocovariances and spectra
+1. Itis clear that E(X,,) = 0 and var(X,) = 1. Also
+cov(Xm, Xm+n) = cos(mdA) cos{(m + n)A} + sin(mA) sin{(m + n)A} = cos(nd),
+
+so that X is stationary, and the spectrum of X is the singleton {A}.
+2. Certainly dy (t) = (e#" — e~#™)/ (Ait), so that E(Xn) = dy (dy (n) = 0. Also
+
+cov(Xim, Xmtn) = E(XmXm+n) = E (eV Vm UF V mt) — gy (n),
+whence X is stationary. Finally, the autocovariance function is
+cin) = dyin) = far),
+whence F is the spectral distribution function.
+
+357
+

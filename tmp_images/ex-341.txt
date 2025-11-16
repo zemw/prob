@@ -1,0 +1,58 @@
+[(7.7.2]-[7.8.2] Solutions Convergence of random variables
+
+by the martingale property.
+2. Clearly E|S,| < 00 for all n. Also, for n > 0,
+
+1 1— prt
+E(Sy41 | Zo, Z1,--+, Zn) = until E(Zn41 | Zo,.--, Zn) —m “T-p
+
+1 1— prt
+
+3. Certainly E|S,| < co for all n. Secondly, for n > 1,
+
+E(Sn41 | Xo, X1,---, Xn) = ME(Xp41 | X0,.--, Xn) + Xn
+= (aa +1)Xn +0bXyz_1,
+
+which equals S, if a = (1 — a),
+
+4. The gambler stakes Z; = f;-|(X1,..., Xj-1) onthe ith play, ata return of X; per unit. Therefore
+Si; = Sj-, + X;Z; fori > 2, with S$; = X,Y. Secondly,
+
+E(Sp41 — Sn | Xi, -.- Xn) = Znt1E(Xn41 | Xy,...,Xn) = 0,
+
+where we have used the fact that Z,4 depends only on X1, X2,..., Xn.
+
+7.8 Solutions. Martingale convergence theorem
+
+1. It is easily checked that S, defines a martingale with respect to itself, and the claim follows from
+the Doob-Kolmogorov inequality, using the fact that
+
+E(S3) = 5_ var(X;).
+j=l
+
+2. It would be easy but somewhat perverse to use the martingale convergence theorem, and so we
+give a direct proof based on Kolmogorov’s inequality of Exercise (7.8.1). Applying this inequality to
+the sequence Zm, Zm41,... where Z; = (X; — EX;)/i, we obtain that S, = Z] + Zo +---+Zn
+
+satisfies, for « > 0,
+r
+
+1
+P (mas, |Sn — Sm| > c) < 2 SS var(Zn).
+n=m+1
+
+We take the limit as r —> 00, using the continuity of P, to obtain
+
+1a 1
+P( sup ISn~ Sul =e) <3 S> a2 Var(Xn).
+
+nzm n=m+1
+Now let m — oo to obtain (after a small step)
+P (jim, sup IS ~ Sn <€) =1 for alle > 0.
+Any real sequence (x,,) satisfying
+lim sup |x, — xm| < € for all € > 0,
+
+M—>O p>m
+
+332
+

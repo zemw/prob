@@ -1,0 +1,62 @@
+Birth processes and the Poisson process Exercises [6.7.4]-[6.8.7]
+
+4. (a) Show that E(X | X > 0) < E(X2) /E(X) for any random variable X taking non-negative
+values.
+
+(b) Let Z,, be the size of the nth generation of a branching process with Zg = 1 and P(Z; =k) =q p*
+for k > 0, where p > 7 Use part (a) to show that E(Z,/i” | Zn, > 0) < 2p/(p — q), where
+B= p/q.
+
+(c) Show that, in the notation of part (b), E(Zn/i” | Zn > 0) > p/(p — gq) asn > oo.
+
+6.8 Exercises. Birth processes and the Poisson process
+
+1. Superposition. Flies and wasps land on your dinner plate in the manner of independent Poisson
+processes with respective intensities A and yz. Show that the arrivals of flying objects form a Poisson
+process with intensity A + je.
+
+2. Thinning. Insects land in the soup in the manner of a Poisson process with intensity 4, and each
+such insect is green with probability p, independently of the colours of all other insects. Show that
+the arrivals of green insects form a Poisson process with intensity Ap.
+
+3. Let T,, be the time of the nth arrival in a Poisson process N with intensity A, and define the excess
+lifetime process E(t) = Tyit)41 — t, being the time one must wait subsequent to t before the next
+arrival. Show by conditioning on 7 that
+
+t
+P(E(t) > x) =e OF) 4 I P(E(@ —u) > x)se™ du.
+0
+
+Solve this integral equation in order to find the distribution function of E(t). Explain your conclusion.
+
+4. Let B bea simple birth process (6.8.11b) with B(O) = /; the birth rates are A, = nA. Write
+down the forward system of equations for the process and deduce that
+
+P(B(t) =k) = ( : ier eel gay,
+
+Show also that E(B(t)) = Te! and var(B(t)) = Te24f(1 — e*).
+
+5. Let B be a process of simple birth with immigration (6.8.11c) with parameters 4 and v, and
+with B(O) = 0; the birth rates are A, = nA + v. Write down the sequence of differential—-difference
+equations for py (t) = P(B(t) = n). Without solving these equations, use them to show that m(t) =
+E(B(t)) satisfies m!(t) = Am(t) + v, and solve for m(t).
+
+6. Let N be a birth process with intensities 49,41,..., and let N(O) = 0. Show that p,(t) =
+
+P(N(t) = n) is given by
+—Ajt
+pnt = 5, es Never
+
+iA
+provided that A; # A; whenever i # j.
+
+7. Suppose that the general birth process of the previous exercise is such that a An 1 < 00.
+Show that A, pn(t) > f(t) as n — oo where f is the density function of the random variable
+T = sup{t : N(t) < oo}. Deduce that E(N(t) | N(t) < oo) is finite or infinite depending on the
+convergence or divergence of 7, nAj, 1
+
+Find the Laplace transform of f in closed form for the case when Ay, = (n + 3), and deduce an
+expression for f.
+
+71
+

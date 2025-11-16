@@ -1,0 +1,61 @@
+{4.14.2]-[4.14.5] Solutions Continuous random variables
+(c) Note that
+
+d _1,2 _1,2
+
+— {rte 2” \. -(+y)e7 2,
+
+dy
+
+d 1,2 _1,2
+— {or —y ye 2? \ = -(1-3y4)e72,
+dy
+
+1,2
+and also 1 — 3y~4 < 1 < 1+ y~?. Multiply throughout these inequalities by e 2” /./27, and
+integrate over [x, 00), to obtain the required inequalities. More extensive inequalities may be found
+in Exercise (4.4.8).
+
+(d) The required probability is a(x) = [1 — ®(@ + a/x)]/[1 — ®@)j]. By (©),
+ena @ta/x)?
+a(x) = (L +0(1))——{4-—— > e 4 aS xX —> 00.
+e2*
+2. Clearly f > 0 if and only if0 <a < B <1. Also
+- B 2 1,22 2 1723 3
+= [=a dx = $6? 0) — $0? - 03),
+a
+
+3. The A; partition the sample space, andi — 1 < X(w) <i if € Aj. Taking expectations and
+using the fact that E(/;) = P(A;), we find that S < E(X) < 1+ S where
+
+oo i-1
+S= Ye pPay =O Pa) = 30 3 FA) = YP ph
+i=2j=1 j=li=j+l
+
+4. (a) (i) Let F~!(y) = sup{x : F(x) = y}, so that
+P(F(X) <y)=P(X<F'Q))=FF'0)=y, O<y<l
+
+(ii) P(— log F(X) < y) = P(F(X) > e7”) =1—e7 ify >0.
+(b) Draw a picture. With D = PR,
+
+a, ——— 1
+P(D < d) = P(tan POR < d) = P(POR < tan~! @) = — (= + tan7 0)
+bd
+Differentiate to obtain the result.
+5. Clearly
+P(X>s+x) e+) ax
+PX >stx[X>sy= PO > 5) = is =e
+
+if x, s > 0, where A is the parameter of the distribution.
+
+Suppose that the non-negative random variable X has the lack-of-memory property. Then G(x) =
+P(X > x) is monotone and satisfies G(O) = 1 and G(s + x) = G(s)G(x) for s,x > 0. Hence
+G(s) = e7 5 for some A; certainly 1 > 0 since G(s) < 1 for alls.
+
+Let us prove the hint. Suppose that g is monotone with 9(0) = 1 and g(s +1) = g(s)g(t)
+for s,t > 0. For an integer m, g(m) = g(l1)g(m — 1) = --- = g(1)”. For rational x = m/n,
+g(x)” = g(m) = g(1)” so that g(x) = g(1)*; all such powers are interpreted as exp{x log g(1)}.
+Finally, if x is irrational, and g is monotone non-increasing (say), then g(u) < g(x) < g(v) for all
+
+210
+

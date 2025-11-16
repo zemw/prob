@@ -1,0 +1,55 @@
+Markov chain Monte Carlo Solutions [6.14.1]-[6.14.4]
+6.14 Solutions. Markov chain Monte Carlo
+
+1. If P is reversible then
+RHS = H(e pays ) vi = SP mipiyxiyi = > my pyivixy = Dmx) (x piivi) = LHS.
+i Sj i,j i,j j i
+
+Suppose conversely that (x, Py) = (Px, y) for all x, y €/ 2 (sr). Choose x, y to be unit vectors with 1
+in the ith and jth place respectively, to obtain the detailed balance equations x; pjj = 7; pji-
+
+2. Just check that 0 < 5;; < 1 and that the p;;j = gj; bj; satisfy the detailed balance equations
+(6.14.3).
+
+3. Itis immediate that pj, = |Ajx|, the Lebesgue measure of Aj. This is a method for simulating
+a Markov chain with a given transition matrix.
+
+4. (a) Note first from equation (4.12.7) that d(U) = 5 SUP; dry (u;., uj.), where uj. is the mass
+function u;;, t € T. The required inequality may be hacked out, but instead we will use the maximal
+coupling of Exercises (4.12.4, 5); see also Problem (7.11.16). Thus requires a little notation. For
+i,j € S,i # j, we find a pair (X;, X;) of random variables taking values in T according to the
+
+marginal mass functions u;., 4j., and such that P(X; # Xj) = sary (uj., uj.). The existence of
+such a pair was proved in Exercise (4.12.5). Note that the value of X; depends on j, but this fact
+has been suppressed from the notation for ease of reading. Having found (X;, X;), we find a pair
+(Y(X;), ¥(X;)) taking values in U according to the marginal mass functions v Xj UX;5 and such that
+
+P(Y (Xi) A Y(X;) | Xi, Xj) = S4tv (vx; Ux;.)- Now, taking a further liberty with the notation,
+
+P(Y(X;) # ¥(Xj)) =\ 5 PU =r, Xj = SPO £4 YO))
+ses
+xs
+
+= > P(X =r, Xj =5)Zdtv(rr., vs.)
+rses
+
+rxés
+< {3 sup ary (rs vs.) }P(X; # Xj),
+rFS
+
+whence
+d(UV) = sup P(Y (Xi) #Y(X;)) < {3 sup dry r vs.) } {sup P(X; # X;)}
+ifj rs i,j
+
+and the claim follows.
+(b) Write S = {1, 2,..., m}, and take
+
+ya {PXo=)D PXo=2) --- P(Xo =m)
+~\ PY =1) P(¥p =2) --- PY =m) /°
+
+The claim follows by repeated application of the result of part (a).
+It may be shown with the aid of a little matrix theory that the second largest eigenvalue of a finite
+stochastic matrix P is no larger in modulus that d(P); cf. the equation prior to Theorem (6.14.9).
+
+303
+

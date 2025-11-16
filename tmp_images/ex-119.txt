@@ -1,0 +1,62 @@
+[10.5.7]-[10.5.12] Exercises Renewals
+
+each detected arrival. Show that the detection process N is a renewal process with interarrival time
+distribution F(x) = 1 — e~*@—) if x > T. Find an expression for P(N (t) > k).
+
+7. Particles arrive at a Type 1 counter in the manner of a renewal process N; each detected arrival
+locks the counter for a dead period of random positive length. Show that
+
+P(X, <x) = [ [1 — F(x — y) FL) dm(y)
+
+where F7, is the distribution function of a typical dead period.
+
+8. (a) Show that m(t) = Sat - ae — eat ) if the interarrival times have the gamma distribution
+Pa, 2).
+
+(b) Radioactive particles arrive like a Poisson process, intensity A, at a counter. The counter fails to
+register the nth arrival whenever n is odd but suffers no dead periods. Find the renewal function
+
+m of the detection process N.
+
+9. Show that Poisson processes are the only renewal processes with non-arithmetic interarrival times
+having the property that the excess lifetime E(t) and the current lifetime C(t) are independent for
+each choice of t.
+
+10. Let N; be a Poisson process, and let N2 be a renewal process which is independent of Nj with
+non-arithmetic interarrival times having finite mean. Show that N(t) = Nj (t) + No(t) is a renewal
+process if and only if Nz is a Poisson process.
+
+11. Let N be a renewal process, and suppose that F is non-arithmetic and that 02 = var(X 1) < oo.
+Use the properties of the moment generating function F*(—@) of X1 to deduce the formal expansion
+
+1 2_ ,,2
+m0) = 5 +a FO as 0 —> 0.
+
+Invert this Laplace—Stieltjes transform formally to obtain
+
+2 2
+
+t —
+m(t) =~ +7 —* + 0(1) as t > 00.
+i 2b
+
+Prove this rigorously by showing that
+t t
+m() =< — Fe) + [ UL Fete — same)
+
+where Fg is the asymptotic distribution function of the excess lifetime (see Exercise (10.3.3)), and
+applying the key renewal theorem. Compare the result with the renewal theorems.
+
+12. Show that the renewal function m4 of a delayed renewal process satisfies
+t
+m4(t) = F4(t) + | m4(t — x) d F(x).
+0
+Show that v4(r) = E(N4(t)*) satisfies
+t
+vit) = m4(t) + 2 | m(t — x) dm(x)
+0
+
+where m is the renewal function of the renewal process with interarrival times X2, X3,....
+
+110
+

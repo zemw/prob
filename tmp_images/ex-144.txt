@@ -1,0 +1,55 @@
+1
+
+Events and their probabilities
+
+1.2 Solutions. Events as sets
+
+1. (a) Leta € (UA;)°. Thena ¢ UAj, so that a € Af for all i. Hence (UJ A;)° € () Af.
+Conversely, if a € (| Aj, then a ¢ A; for every i. Hence a ¢ \) A;, and so (| Af © (U A;)°. The
+first De Morgan law follows.
+
+(b) Applying part (a) to the family {Af : i € I}, we obtain that (Uj; Ag)° = 11;(A9)S = 1); Ai-
+Taking the complement of each side yields the second law.
+
+2. Clearly
+
+(i) AN B= (ASU BY),
+
+(ii) A\ B= AN BS = (AS UB),
+(iii) AA B= (A\ B)U(B\ A) = (ASU BYU (AU BY.
+
+Now F is closed under the operations of countable unions and complements, and therefore each of
+these sets lies in F.
+
+3. Letusnumberthe players 1, 2, ...,2” in the order in which they appear in the initial table of draws.
+The set of victors in the first round is a point in the space V, = {1,2} x {3,4} x --. x {2" —1,2”}.
+Renumbering these victors in the same way as done for the initial draw, the set of second-round
+victors can be thought of as a point in the space V,,_1, and so on. The sample space of all possible
+outcomes of the tournament may therefore be taken to be V, x V,_1 x +--+ x Vj, a Set containing
+g2rtg2"? |. ol — 92"—1 points.
+
+Should we be interested in the ultimate winner only, we may take as sample space the set
+
+{1,2,...,2"} of all possible winners.
+
+4, We must check that % satisfies the definition of a o-field:
+
+(a) @ € F, and therefore @ = ON B € G,
+
+(b) if Ay, Ag, ... € F, then Uj, (A; 9 B) = (U; Ai) NB € G,
+
+(c) if A € F, then A° € ¥ so that B\ (AN B) = ASN Be §.
+
+Note that %, is a o-field of subsets of B but not a o-field of subsets of Q, since C € % does not imply
+that C° = Q\ Ce §.
+
+5. (a), (b), and (d) are identically true; (c) is true if and only if A CC.
+
+1.3 Solutions. Probability
+
+1. (i) We have (using the fact that P is a non-decreasing set function) that
+
+P(AM B) = P(A) + P(B) — P(AU B) > P(A) + P(B) — 1 = %.
+
+135
+

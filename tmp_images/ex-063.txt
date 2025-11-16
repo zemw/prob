@@ -1,0 +1,62 @@
+[5.7.10]-{5.8.11] Exercises Generating functions and their applications
+
+10. If X and Y are continuous random variables, show that
+Toe) - ro.)
+/ ox(y) fy (ye? dy = / gy (x —t)fx@)dx.
+—w —0CO
+
+11. Tilted distributions. (a) Let X have distribution function F and let t be such that M(t) =
+E(e**) < oo. Show that Fy(x) = M(r)7! f*,, e* dF(y) is a distribution function, called a ‘tilted
+distribution’ of X, and find its moment generating function.
+
+(b) Suppose X and Y are independent and E(e™* ), E(e™”) < oo. Find the moment generating function
+of the tilted distribution of X + Y in terms of those of X and Y.
+
+5.8 Exercises. Examples of characteristic functions
+
+1. If ¢ is a characteristic function, show that ¢, 6”, |@|2, Re(@) are characteristic functions. Show
+that || is not necessarily a characteristic function.
+
+2. Show that
+P(X >x)< inf {e" Mx()},
+rt
+
+where My is the moment generating function of X.
+
+3. Let X have the F(A, m) distribution and let Y be independent of X with the beta distribution
+with parameters n and m — n, where m and n are non-negative integers satisfying n < m. Show that
+Z = XY has the ['(A, n) distribution.
+
+4. Find the characteristic function of X2 when X has the N (LL, o) distribution.
+
+5. Let X1, X2,... be independent N(0, 1) variables. Use characteristic functions to find the distri-
+bution of: (a) xf, (b) Oy X?, (c) X1/X2, (d) X1 Xo, (©) XyX2 + X3Xq.
+
+6. Let Xj, X2,..., Xn be such that, for all aj, az,...,a, € R, the linear combination a,X 1 +
+a7 X7+---+ay,Xp has anormal distribution. Show that the joint characteristic function of the Xj is
+exp(itye’ — ztve’ ), for an appropriate vector yz and matrix V. Deduce that the vector (X1, X2,..-, Xn)
+has a multivariate normal density function so long as V is invertible.
+
+7. Let X and Y be independent N (0, 1) variables, and let U and V be independent of X and Y. Show
+
+that Z = (UX + VY)/VU2 + V7 has the N(0, 1) distribution. Formulate an extension of this result
+to cover the case when X and Y have a bivariate normal distribution with zero means, unit variances,
+and correlation p.
+
+8. Let X be exponentially distributed with parameter 4. Show by elementary integration that
+E(e#*) = a/(a — it).
+
+9. Find the characteristic functions of the following density functions:
+
+(a) f= ze for x ER,
+
+(b) f(x) = 4|axle7Fl for x eR.
+
+10. Is it possible for X, Y, and Z to have the same distribution and satisfy X = U(Y + Z), where
+U is uniform on [0, 1], and Y, Z are independent of U and of one another? (This question arises in
+modelling energy redistribution among physical particles.)
+
+11. Find the joint characteristic function of two random variables having a bivariate normal distribution
+with zero means. (No integration is needed.)
+
+54

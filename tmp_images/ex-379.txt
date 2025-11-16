@@ -1,0 +1,46 @@
+10
+
+Renewals
+
+10.1 Solutions. The renewal equation
+
+1. Since E(X,) > 0, there exists « (> 0) such that P(X; > €) > e. Let Xi = €l{x,>e}, and denote
+
+by N’ the related renewal process. Now N(t) < N’(t), so that Ee°N®) < Be?" "Oy, for 6 > 0.
+Let Z», be the number of renewals (in N’) between the times at which N’ reaches the values (m — 1)e
+
+and me. The Z’s are independent with
+ee®
+
+whence E(e9N’"®) < (ce? {1 — (1 —e)e? yy for sufficiently small positive 6.
+
+2. Let X, be the time of the first arrival. If X; > s, then W = 5. On the other hand if X; < s, then
+the process starts off afresh at the new starting time X;. Therefore, by conditioning on the value of
+Xi,
+
+Fw) = [rw sx| Xi =warw = [pw sx-wdrwt [1-aFw
+= [ Pov sx-warw+t- Fo)
+
+ifx > s. Itis clear that Fy (x) = Oif x < s. This integral equation for Fy may be written in the
+standard form
+
+Fw(x) = H(x) +f Fw(x —u)dF(u)
+
+where H and F are given by
+
+may ={) ifx <s, Fay ={ oe ifx <s,
+1-F(s) ifx>s, F(s) ifx>s.
+
+This renewal-type equation may be solved in the usual way by the method of Laplace—Stieltjes trans-
+forms. We have that Fy, = H* + FRF*, whence Fy, = H*/(1 — F*). If N is a Poisson process
+then F(x) = 1 — e~*. In this case
+OO
+H*(@) = [ 2 dH (x) = eT At O8,
+
+since H is constant apart from a jump at x = s. Similarly
+
+A s Xr
+F* (0) = ~8% g F(x) = —~(1 — e195),
+(0) I e (x) L408 (le )
+
+370

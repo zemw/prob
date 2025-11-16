@@ -1,0 +1,76 @@
+[1.8.15]-[1.8.22] Exercises Events and their probabilities
+
+15, A random number N of dice is thrown. Let A; be the event that N = i, and assume that
+P(A;) = 27',i = 1. The sum of the scores is S. Find the probability that:
+
+(a) N =2 given S = 4;
+
+(b) S =4 given N is even;
+
+(c) N = 2, given that S = 4 and the first die showed 1;
+
+(d) the largest number shown by any die is r, where S is unknown.
+
+16. Let A;, Az,... be a sequence of events. Define
+
+ioe) io, 0)
+Bn= (J Am, Cn =] Am.
+=n =n
+
+Clearly Cp © An © By. The sequences {B,} and {C,,} are decreasing and increasing respectively
+with limits
+
+lim Bn = B=(\Bn=(|) UJ Am. limp =C =| J Cn =U) Am.
+n n
+
+nm>n nomen
+
+The events B and C are denoted lim sup,_,4. An and lim infy—oo An respectively. Show that
+
+(a) B = {wm € Q: w € Ay for infinitely many values of 7},
+
+(b) C = {wm € 2: w € Ap for all but finitely many values of 7}.
+
+We say that the sequence { A, } converges to a limit A = lim A, if B and C are the same set A. Suppose
+that A, — A and show that
+
+(c) A is an event, in that A € F,
+
+(d) P(An) > P(A).
+
+17. In Problem (1.8.16) above, show that B and C are independent whenever By, and Cy are inde-
+pendent for all n. Deduce that if this holds and furthermore A, — A, then P(A) equals either zero or
+one.
+
+18. Show that the assumption that P is countably additive is equivalent to the assumption that P is
+continuous. That is to say, show that if a function P : ¥ — [0, 1] satisfies P(@) = 0, P(Q) = 1, and
+P(A U B) = P(A) + P(B) whenever A, B € Fand AN B = @, then P is countably additive (in the
+sense of satisfying Definition (1.3.1b)) if and only if P is continuous (in the sense of Lemma (1.3.5)).
+
+19. Anne, Betty, Chloé, and Daisy were all friends at school. Subsequently each of the G) =6
+subpairs meet up; at each of the six meetings the pair involved quarrel with some fixed probability
+p, or become firm friends with probability 1 — p. Quarrels take place independently of each other.
+In future, if any of the four hears a rumour, then she tells it to her firm friends only. If Anne hears a
+rumour, what is the probability that:
+
+(a) Daisy hears it?
+
+(b) Daisy hears it if Anne and Betty have quarrelled?
+
+(c) Daisy hears it if Betty and Chloé have quarrelled?
+
+(d) Daisy hears it if she has quarrelled with Anne?
+
+20. A biased coin is tossed repeatedly. Each time there is a probability p of a head turning up. Let py
+be the probability that an even number of heads has occurred after n tosses (zero is an even number).
+Show that pp = 1 and that pp = p(1— pp—-1) + C1 — p) pn_1 ifn = 1. Solve this difference equation.
+
+21. A biased coin is tossed repeatedly. Find the probability that there is a run of r heads in a row
+before there is a run of s tails, where r and s are positive integers.
+
+22. A bowl contains twenty cherries, exactly fifteen of which have had their stones removed. A
+greedy pig eats five whole cherries, picked at random, without remarking on the presence or absence
+of stones. Subsequently, a cherry is picked randomly from the remaining fifteen.
+
+6
+

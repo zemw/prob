@@ -1,0 +1,62 @@
+Independence Solutions [1.4.6]-[1.5.3]
+
+Leta e€ 5. 41, and suppose the presenter possesses a coin which falls with heads upwards with
+probability 8 = 6a — 3. He flips the coin before the show, and adopts strategy (i) if and only if the
+
+coin shows heads. The probability in question is now 5B + 51 — Bp) =a.
+You never lose by swapping, but whether you gain depends on the presenter’s protocol.
+(b) Let D denote the first door chosen, and consider the following protocols:
+Gii) If D conceals a goat, open it. Otherwise open one of the other two doors at random. In this
+case p = 0.
+
+(iv) If D conceals the car, open it. Otherwise open the unique remaining door which conceals a
+goat. In this case p = 1.
+
+As in part (a), a randomized algorithm provides the protocol necessary for the last part.
+6. This is immediate by the definition of conditional probability.
+
+7. Let C; be the colour of the ith ball picked, and use the obvious notation.
+(a) Since each urn contains the same number n — 1 of balls, the second ball picked is equally likely to
+be any of the n(n — 1) available. One half of these balls are magenta, whence P(C2 = M) = 4
+
+(b) By conditioning on the choice of urn,
+
+P(C), C2 = M) = Sr @anmar-y 12
+
+P(C; =M) 3
+
+P(C, =M|C =M) = nn —1in—2) / 2 > 3
+
+1.5 Solutions. Independence
+1. Clearly
+
+P(AS NB) = P(B \ {AN B}) = P(B) — P(AN B)
+= P(B) — P(A)P(B) = P(A°)P(B).
+
+For the final part, apply the first part to the pair B, A°.
+
+2. Suppose i < j andm <n. If j < m, then Aj; and Aj» are determined by distinct independent
+rolls, and are therefore independent. For the case j = m we have that
+
+P(Ajj O Ajn) = PGth, jth, and nth rolls show same number)
+6
+= )> ¢P(jth and nth rolls both show r | ith shows r) = 4g = P(Ajj)P(Ajn),
+
+r=]
+
+as required. However, ifi # j #k,
+P(A A Aje O Aik) = ae # ag = P(A )P(AjR)PCAix)-
+
+3. That (a) implies (b) is trivial. Suppose then that (b) holds. Consider the outcomes numbered
+i, i2,...,im, and let uj € {H,T} for 1 < j < m. Let S; be the set of all sequences of length M =
+max{ij : 1 < j < m} showing uj in the i;th position. Clearly |Sj| = 2%~! and |, 5;| = 24-™.
+
+Therefore,
+M-1 1 9M —m 1
+
+2
+PS) = SM = 9° »(NS) = 2M ~ 3m?
+J
+
+139
+

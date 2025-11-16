@@ -1,0 +1,68 @@
+Problems Solutions [7.11.27}-[7.11.28]
+
+(b) The expectation is
+
+rid
+
+_ jun neg
+n= Dus (ae) a
+where the sum is over all j satisfying n — M./n < j <n. For sucha value of j,
+
+@ - *) nie — e™ [nit ni
+
+8) J He | ost >
+
+Jn ji Jn \ jt G-D)!
+
+whence E, has the form given.
+
+(c) Now g is continuous on the interval [— M, 0], and it follows by the central limit theorem that
+
+1442
+0 1 1,2 M 1,2 L—e 7M
+En f g(x) e 2” dx= | * e2* dx =~
+-M 0
+
+Vin Jin J 20
+Also,
+enn enn e—n—k? /(2n)
+En < yan the < En + paln — k,n) < Bn + Fan + Ln)
+
+where k = |M./n]. Take the limits as » > oo and M — oo in that order to obtain
+
+_ nitden -_!
+V2n ~ noo n!} ~ Jon
+
+27. Clearly
+Rn
+
+E(Ra+1 | Ro, Ri, ..., Rn) = Rat 5
+
+since a red ball is added with probability Ry, /(n + 2). Hence
+E(Sn41 | Ro, Ri,---, Rn) = Sn,
+
+and also 0 < S, < 1. Using the martingale convergence theorem, S = limpn—oo Sp exists almost
+surely and in mean square.
+
+28. Let 0 <e < 4, and let
+k(t) = |0t], mt) = [0 — &)kG)], nt) = LA +A)
+
+and let Imn(t) be the indicator function of the event {m(t) < M(t) < n(t)}. Since M(t)/t 4 6, we
+may find T such that EUmn(t)) > 1—€ fort > T.
+
+We may approximate Sjy() by the random variable S,q) as follows. With A; = {|S; — Sxl >
+
+e VEO},
+
+P(Amq@)) < P(Am@), Imn(t) = 1) + P(Am@), Inn) = 0)
+
+k(t)-1 n(t)—-1
+< P( U Aj) +P( U Aj) + P(Imn(t) = 0)
+j=m(t) j=k()
+{k(t) — m(t)}o2 — {n(t) — k(t) }o?
+<KO oun.
+
+<€(1+20%), ift > T,
+
+345
+

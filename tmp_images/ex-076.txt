@@ -1,0 +1,62 @@
+Stationary distributions and the limit theorem Exercises [6.3.9]-[6.4.6]
+
+9. (a) Show that for each pairi, j of states of an irreducible aperiodic chain, there exists N = N(i, j)
+
+such that pj; (r) > 0 for allr > N.
+
+(b) Show that there exists afunction f such that, if P is the transition matrix of an irreducible aperiodic
+Markov chain with n states, then p;;(r) > 0 for all states i, j, and allr > f(m).
+
+(c) Show further that f(4) > 6 and f(n) > (a — 1)(m — 2).
+[Hint: The postage stamp lemma asserts that, for a, b coprime, the smallest n such that all integers
+strictly exceeding n have the form wa + £b for some integers a, B > Ois (a — 1)(6 — 1).]
+
+10. An urn initially contains n green balls and n + 2 red balls. A ball is picked at random: if it is
+green then a red ball is also removed and both are discarded; if it is red then it is replaced together
+with an extra red and an extra green ball. This is repeated until there are no green balls in the urn.
+Show that the probability the process terminates is 1/(m + 1).
+
+Now reverse the rules: if the ball is green, it is replaced together with an extra green and an extra
+red ball; if it is red it is discarded along with a green ball. Show that the expected number of iterations
+until no green balls remain is va 2 j +1) = n(n + 2). [Thus, a minor perturbation of a simple
+symmetric random walk can be non-null persistent, whereas the original is null persistent]
+
+6.4 Exercises. Stationary distributions and the limit theorem
+
+1. The proof copy of a book is read by an infinite sequence of editors checking for mistakes. Each
+mistake is detected with probability p at each reading; between readings the printer corrects the
+detected mistakes but introduces a random number of new errors (errors may be introduced even if no
+mistakes were detected). Assuming as much independence as usual, and that the numbers of new errors
+after different readings are identically distributed, find an expression for the probability generating
+function of the stationary distribution of the number X, of errors after the nth editor—printer cycle,
+whenever this exists. Find it explicitly when the printer introduces a Poisson-distributed number of
+errors at each stage.
+
+2. Do the appropriate parts of Exercises (6.3.1)-(6.3.4) again, making use of the new techniques at
+your disposal.
+
+3. Dams. Let X,, be the amount of water in a reservoir at noon on day n. During the 24 hour period
+beginning at this time, a quantity Y, of water flows into the reservoir, and just before noon on each
+day exactly one unit of water is removed (if this amount can be found). The maximum capacity of
+the reservoir is K, and excessive inflows are spilled and lost. Assume that the Y, are independent
+and identically distributed random variables and that, by rounding off to some laughably small unit of
+volume, all numbers in this exercise are non-negative integers. Show that (X;,) is a Markov chain, and
+find its transition matrix and an expression for its stationary distribution in terms of the probability
+generating function G of the Yy.
+
+Find the stationary distribution when Y has probability generating function G(s) = p(1—qs)7!.
+
+4. Show by example that chains which are not irreducible may have many different stationary
+distributions.
+
+5. Diagonal selection. Let (x;(n) : i,m > 1) be a bounded collection of real numbers. Show that
+there exists an increasing sequence nj, ”2,... of positive integers such that limy—, 90 xj (",-) exists for
+all i. Use this result to prove that, for an irreducible Markov chain, if it is not the case that p;j (1) > 0
+as n — oo for alli and j, then there exists a sequence (n; : r > 1) and a vector « (< 9) such that
+Pij Mr) > aj asr — oo for all i and j.
+
+6. Random walk ona graph. A particle performs a random walk on the vertex set of a connected
+graph G, which for simplicity we assume to have neither loops nor multiple edges. At each stage it
+moves to a neighbour of its current position, each such neighbour being chosen with equal probability.
+
+67

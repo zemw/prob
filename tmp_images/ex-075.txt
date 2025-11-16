@@ -1,0 +1,63 @@
+[6.3.1]-[6.3.8] Exercises Markov chains
+
+6.3 Exercises. Classification of chains
+
+1. Let X be a Markov chain on {0, 1, 2,...} with transition matrix given by po j = aj for j > 0,
+Pii =r and p;;-) = 1 —r fori > 1. Classify the states of the chain, and find their mean recurrence
+times.
+
+2. Determine whether or not the random walk on the integers having transition probabilities p; ;42 =
+P, Pii-1 = 1 — p, for all i, is persistent.
+
+3. Classify the states of the Markov chains with transition matrices
+
+1-—2p 2p 0
+(a) p  1—2p~ p ,
+0 2p 1-—2p
+0 p 0 1-p
+1-—p 0 Pp 0
+(b) 0 1l-p 0 Pp
+Pp 0 1l-—p 0
+
+In each case, calculate p;;(n) and the mean recurrence times of the states.
+
+4. A particle performs a random walk on the vertices of a cube. At each step it remains where it is
+with probability i, or moves to one of its neighbouring vertices each having probability i. Let v and
+w be two diametrically opposite vertices. If the walk starts at v, find:
+
+(a) the mean number of steps until its first return to v,
+
+(b) the mean number of steps until its first visit to w,
+
+(c) the mean number of visits to w before its first return to v.
+
+5. Visits. With the notation of Exercise (6.2.4), show that
+
+(a) ifi > j and i is persistent, then yj; = nj; = 1,
+
+(b) nj; = 1 ifand only if PZ; < co | X9 =I) =P <wo|Xo=f=l.
+
+6. First passages. Let T4 = min{n > 0: Xy, € A}, where X is a Markov chain and A is a subset
+of the state space S, and let nj = P(T4 < co | Xo = j). Show that
+
+1 ifjeA,
+=) S” pjem iff ¢ A.
+keS
+
+Show further that if x = (x; : j € S) is any non-negative solution of these equations then x; > nj; for
+all j.
+
+7, Mean first passage. In the notation of Exercise (6), let 0; = E(T4 | Xo = j). Show that
+
+0 ifjeA,
+PI=YV1+>0 Djeoe if i ¢ A,
+keS
+and that if x = (x; : j € S) is any non-negative solution of these equations then x; > 0; for all j.
+
+8. Let X be an irreducible Markov chain and let A be a subset of the state space. Let S, and T,
+be the successive times at which the chain enters A and visits A respectively. Are the sequences
+{Xs 17 = 1}, {Xz 2 r => 1} Markov chains? What can be said about the times at which the chain
+exits A?
+
+66
+

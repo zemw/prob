@@ -1,0 +1,58 @@
+[(7.9.5]-[7.10.1] Solutions Convergence of random variables
+
+(vi) If g is convex then, for all a € R, there exists A(a) such that
+a(y) = g(a) + (y — aA);
+
+furthermore 2 may be chosen to be a measurable function of a. Set a = E(Y | Y) and y = Y, to
+obtain
+
+g(Y) = g{E(Y | 9)} + {¥ — EY | 9) } {EY | 9)}.
+
+Take expectations conditional on G, and use the fact that E(Y | 4) is $-measurable.
+(vii) We have that
+En | $) — EY | 9)| < E{I¥n — Y1|G} < Vn
+
+where Vr = E{supy>n |¥m — Y||9}. Now {Vq : n > 1} is non-increasing and bounded below.
+Hence V = limy-+o0 Vn exists and satisfies V > 0. Also
+
+E(V) < E(Vn) =E{ sup [Yn — vi}.
+
+m>n
+
+which tends to 0 as m — oo, by the dominated convergence theorem. Therefore E(V) = 0, and hence
+P(V = 0) = 1. The claim follows.
+
+5. EY | X)=X.
+
+6. (a) Let {X, : n > 1} be a sequence of members of H which is Cauchy convergent in mean
+square, that is, E{|Xn — Xm|7} — Oasm,n — oo. By Chebyshov’s inequality, {X, : n > 1} is
+Cauchy convergent in probability, and therefore converges in probability to some limit X (see Exercise
+
+(7.3.1). It follows that there exists a subsequence {Xy, : k > 1} which converges to X almost surely.
+Since each Xp, is G-measurable, we may assume that X is 3-measurable. Now, as n ~> 00,
+
+E{|Xn —X??}=E {im inf |Xn — Xn Pb < liminf E{|Xn — Xn,|7} > 0,
+k->00 k>oo
+
+where we have used Fatou’s lemma and Cauchy convergence in mean square. Therefore Xp mS x.
+That E(x 2) < oO is a consequence of Exercise (7.2.1a).
+
+(b) That (i) implies (ii) is obvious, since 1g € H. Suppose that (ii) holds. Any Z (€ H) may be
+written as the limit, as n -> oo, of random variables of the form
+
+m(n)
+
+Zn = > ai(n)lein)
+
+i=l
+
+for reals aj(n) and events G;(n) in 3; furthermore we may assume that |Zy| < |Z]. It is easy to see
+that E{(Y — M)Z,} = 0 for all n. By dominated convergence, E{(Y — M)Zn} > E{(Y — M)Z},
+and the claim follows.
+
+7.10 Solutions. Uniform integrability
+1. It is easily checked by considering whether |x| < a@ or |y| < a that, for a > 0,
+Ix + yl getyl>2a} S 2 (lel xieay + lygyiza}) -
+Now substitute x = Xy and y = Yj, and take expectations.
+
+334

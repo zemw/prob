@@ -1,0 +1,76 @@
+Inversion and continuity theorems Exercises [5.9.1]-[5.9.8]
+
+5.9 Exercises. Inversion and continuity theorems
+
+1. Let X, be a discrete random variable taking values in {1,2, ...,n}, each possible value having
+probability n—!. Show that, asn — oo, Pan lx, <y)—> y,fo0<y<1.
+
+2. Let X, have distribution function
+
+sin(2n7x)
+
+FAi@=x , O<x<l.
+
+food
+
+Qn
+
+(a) Show that F,, is indeed a distribution function, and that X,, has a density function.
+(b) Show that, as n — oo, F, converges to the uniform distribution function, but that the density
+function of F, does not converge to the uniform density function.
+
+3. Accoin is tossed repeatedly, with heads turning up with probability p on each toss. Let N be the
+minimum number of tosses required to obtain & heads. Show that, as p | 0, the distribution function
+of 2Np converges to that of a gamma distribution.
+
+4, If X is an integer-valued random variable with characteristic function ¢, show that
+1 fF .;
+P(X =k = = | ek gr) dt.
+2n J—x
+
+What is the corresponding result for a random variable whose distribution is arithmetic with span
+(that is, there is probability one that X is a multiple of A, and A is the largest positive number with this
+property)?
+
+5. Use the inversion theorem to show that
+
+[. sin(at) sin(bt) dt
+
+7 =m min{a, b}.
+
+—C
+6. Stirling’s formula. Let f,(~) be a differentiable function on R with a a global maximum at
+
+a > 0, and such that Sor exp{ fn(x)}dx < oo. Laplace’s method of steepest descent (related to
+Watson’s lemma and saddlepoint methods) asserts under mild conditions that
+
+[ exp{ fn(x)} dx ~ i exp{ fn(@) + d(x - a)? f7'(a)} dx asn>o.
+0
+
+By setting f,(x) = nlogx — x, prove Stirling’s formula: n! ~ n"e"" JV 2700.
+
+7. Let X = (X1, X2,...,Xn) have the multivariate normal distribution with zero means, and
+covariance matrix V = (v;;) satisfying |V| > 0 and vj; > 0 for all i, 7. Show that
+az
+L iti¢i,
+of Ox; 0X;
+duj ) 102
+4 ios ifi = j,
+2 dx;
+
+and deduce that P(maxg<p, Xx <u) > [Ty P(X, Sw).
+
+8. Let X,, X2 have a bivariate normal distribution with zero means, unit variances, and correlation
+p. Use the inversion theorem to show that
+
+1
+
+InV/1 — p2
+
+a
+—P(X, > 0, X2 > 0 =
+dp
+
+Hence find P(X; > 0, X2 > 0).
+
+55

@@ -1,0 +1,67 @@
+[13.11.1]-[13.12.2] Solutions Diffusion processes
+
+13.11 Solutions. Passage probabilities and potentials
+
+1. Let H beaclosed sphere with radius R (> |w|), and define pr(r) = P(G before H ||W(0)| =r).
+Then pp satisfies Laplace’s equation in IR¢, and hence
+
+d
+a -d-19PR -~0
+dr dr
+
+since pr is spherically symmetric. Solve subject to the boundary equations pr(¢) = 1, pr(R) = 0,
+
+to obtain
+72-4 _ R2-d
+
+d-—
+PRO) = 3-a_ pid (e/r) 2
+
+as R > oo.
+
+2. The electrical resistance R, between 0 and the set A, is no smaller than the resistance obtained
+by, for every i = 1,2,..., ‘shorting out’ all vertices in the set A;. This new network amounts to a
+linear chain of resistances in series, points labelled Aj and Aj, being joined by a resistance if size
+
+N;"!. It follows that
+a
+RG) = lim, Rn 2 » Ni
+
+By Theorem (13.11.18), the walk is persistent if 57; Ny} = 00.
+
+3. Thinking of G as an electrical network, one may obtain the network H by replacing the resistance
+of every edge e lying in G but not in H by oo. Let 0 be a vertex of H. By a well known fact in the
+theory of electrical networks, R(H) > R(G), and the result follows by Theorem (13.11.19).
+
+13.12 Solutions to problems
+
+1 (@Ta)=aWe/ a2) has continuous sample paths with stationary independent increments, since
+W has these properties. Also T (t)/a is N(0, t/a”), whence T(t) is N(0, t).
+
+(b) As for part (a).
+
+(c) Certainly V has continuous sample paths on (0, oo). For continuity at 0 it suffices to prove that
+twa) — Oas. ast | 0; this was done in the solution to Exercise (13.6.4).
+
+If (u,v), (s,f) are disjoint time-intervals, then so are (ol, uy, a}, sh; since W has
+independent increments, so has V. Finally,
+
+Vis +2) — V(s) =tW((s +2)7!) — s{ Ws!) — Ws + 1)7})}
+
+is N(O, 8) ifs, t > 0, where
+
+2
+t 1 1
+p= +8(2- jae
+s+t RY s+t
+
+2. Certainly W is Gaussian with continuous sample paths and zero means, and itis therefore sufficient
+to prove that cov(W(s), W(t)) = min{s, t}. Now, ifs < t,
+
+_ cov(Xr7'(s)), X71) — ue TO)
+cov(W(s), WO) = Tee) ve) TO OS
+
+as required.
+
+420
+

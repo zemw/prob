@@ -1,0 +1,65 @@
+Problems Solutions [6.15.10]-[6.15.13]
+
+3
+which, by an application of Stirling’s formula, is no bigger than Cn 2 for some constant C. Hence
+yn P(Kan = 9) < 00, so that the origin is transient.
+
+10. No. The line of ancestors of any cell-state is a random walk in three dimensions. The difference
+between two such lines of ancestors is also a type of random walk, which in three dimensions is
+transient.
+
+11. There are one or two absorbing states according as whether one or both of @ and 8 equal zero. If
+aB # 0, the chain is irreducible and persistent. It is periodic if and only if a = 6 = 1, in which case
+
+it has period 2.
+( B a } f )
+
+If0 < af < | then
+is the stationary distribution. There are various ways of calculating P”; see Exercise (6.3.3) for
+example. In this case the answer is given by
+
+n_i__y,_pynf & —a@ Ba).
+(a + p)P" =(1-a—f) (%, r+ a“)
+
+proof by induction. Hence
+
+(a + B)P” > ¢ “) asin —> 00.
+
+The chain is reversible in equilibrium if and only if 21 pj2 = 72,21, which is to say that aB = Ba!
+
+12. The transition matrix is given by
++\ 2
+
+N-
+
+( ") if j=i4+1,
+-\2 “\2
+i N-i ip:
+
+~\2
+
+i
+
+7 if j=i-1,
+
+(x) et
+
+for 0 < i < N. This process is a birth-death process in discrete time, and by Exercise (6.5.1) is
+reversible in equilibrium. Its stationary distribution satisfies the detailed balance equation 7; p;,j41 =
+
+2
+mj41Pi+1,i forO <i < N, whence 7; = mo() for 0 <i < N, where
+
+13. (a) The chain X is irreducible; all states are therefore of the same type. The state 0 is aperiodic,
+and so therefore is every other state. Suppose that Xp = 0, and let T be the time of the first return to
+0. Then P(T > n) = aga) ---a,—1 = bn for n > 1, so that 0 is persistent if and only if b, —> 0 as
+n— OO.
+
+(b) The mean of T is
+
+oO CO
+E(T) = So PIT >n)= Son.
+=0 =0
+
+307
+

@@ -1,0 +1,72 @@
+[7.11.6]-[7.11.13] Exercises Convergence of random variables
+
+(a) Find the covariance of N(s) and N(t).
+
+(b) Show that N is continuous in mean square, which is to say that E({N (t+h)-—N (t)}?) — Oas
+h->0.
+
+(c) Prove that N is continuous in probability, which is to say that P(|N (t+h)— N(t)| > €) — Oas
+h — 0, for all ¢ > 0.
+
+(d) Show that N is differentiable in probability but not in mean square.
+
+6. Prove thatn—! 1 Xj +5; 0 whenever the X j are independent identically distributed variables
+with zero means and such that E(X4) <M.
+
+7. Show that Xy, #5; X whenever Yn EUXn — XI") < 00 for some r > 0.
+
+8. Show that if X, 2 X thenaX, +b 2, aX + b for any real a and b.
+9, If X has zero mean and variance oa’, show that
+2
+
+o
++ 1?
+
+fort > 0.
+o2
+
+PIX >t) <
+
+10. Show that X,, +> 0 if and only if
+
+e() —-0 asnow.
+1+ |Xal
+
+11. The sequence {X,} is said to be mean-square Cauchy convergent if E{(Xy — Xm)"} —> Oas
+m,n — ov. Show that {X,} converges in mean square to some limit X if and only if it is mean-square
+Cauchy convergent. Does the corresponding result hold for the other modes of convergence?
+
+12. Suppose that {X,,} is a sequence of uncorrelated variables with zero means and uniformly bounded
+variances. Show that n~! S07_, X; aS. 0.
+
+13. Let X1, X2,... be independent identically distributed random variables with the common dis-
+tribution function F, and suppose that F(x) < 1 for all x. Let My, = max{X 1, X2,..., Xn} and
+suppose that there exists a strictly increasing unbounded positive sequence a,,a2,... such that
+P(My/an <x) — H(x) for some distribution function H. Let us assume that H is continuous
+with 0 < H(1) < 1; substantially weaker conditions suffice but introduce extra difficulties.
+
+(a) Show that n[1 — F(ay,x)] ~ — log H() as n — o and deduce that
+1— F(ay,x) . log H(x)
+1— F(an) log H(i)
+
+ifx > 0.
+
+(b) Deduce that if x > 0
+1— F(tx) log H(x)
+
+> ast —> ©.
+1—-F(@) log H(1)
+
+(c) Set x = x,x2 and make the substitution
+
+() = log H(e*)
+8) = Tos HA)
+to find that g(x + y) = g(x)g(y), and deduce that
+
+—ax 7B) i
+Hos) = { mr ax?) ifx>0,
+
+ifx <0,
+
+92
+

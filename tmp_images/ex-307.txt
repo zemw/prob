@@ -1,0 +1,58 @@
+[6.11.3]-[6.11.4] Solutions Markov chains
+
+whence 2; = mo'(1 + i/p)/i! fori > 1. Choosing zg accordingly, we obtain the result.
+
+It is a standard calculation that X has stationary distribution v given by v; = p!e~?/i! fori > 0.
+The difference between 7 and v arises from the fact that the holding-times of X have distributions
+which depend on the current state.
+
+3. We have, by conditioning on X (4), that
+
+n(t +h) =E{P(X(@ +h) =0| X(h))}
+= h-1+(1— Ah — ph)n(t) + AhE(E) + o(h)
+
+where &(t) = P(X(¢) = 0 | X(O) = 2). The process X may be thought of as a collection of particles
+each of which dies at rate 4: and divides at rate A, different particles enjoying a certain independence;
+this is a consequence of the linearity of A, and jn. Hence &(t) = n(t)2, since each of the initial pair
+is required to have no descendants at time t. Therefore
+
+n't) =u — (A+ w)n@) + Ang)?
+
+subject to 7(0) = 0.
+Rewrite the equation as
+"i y
+(1—n)(—An)
+
+and solve using partial fractions to obtain
+
+At .
+At+1 ith =m,
+n(t) = pd — eb)
+
+Finally, if0 <t <u,
+
+P(X(t) =0) _ n(t)
+
+P(X(t) =0| X@) = 0) = P(X(u) =0| XM = %) 5G) = 0) = Tw)
+
+4. Therandom variable X(t) has generating function
+
+_ UL =s) — (e—AsyetO
+C6.) = Fa) — i oases OH)
+
+as usual, The generating function of X(t), conditional on {X(t} > 0}, is therefore
+
+SS nPM(X® =n) _ Gs, t) - GO,t)
+ds PX®>0)  1-GO,n
+
+n=1
+
+Substitute for G and take the limit as t > 00 to obtain as limit
+
+H(s) = (Ns — Sis"
+ue — hs n=] ,
+
+where, with p = A/, we have that pn = ie p)forn > 1.
+
+298
+

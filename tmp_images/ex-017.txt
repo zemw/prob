@@ -1,0 +1,76 @@
+[1.8.32]-[1.8.36] Exercises Events and their probabilities
+
+(b) L includes exactly one pair of consecutive integers?
+
+(c) the numbers in L are drawn in increasing order?
+
+(d) your choice of numbers is the same as L?
+
+(e) there are exactly k of your numbers matching members of L?
+
+32. Bridge. During a game of bridge, you are dealt at random a hand of thirteen cards. With an
+obvious notation, show that P(4S, 3H, 3D, 3C) ~ 0.026 and P(4S, 4H, 3D, 2C) ~ 0.018. However
+
+if suits are not specified, so numbers denote the shape of your hand, show that P(4, 3,3, 3) ~ 0.11
+and P(4, 4, 3, 2) ~ 0.22.
+
+33. Poker. During a game of poker, you are dealt a five-card hand at random. With the convention
+that aces may count high or low, show that:
+
+PC pair) ~ 0.423, P(2 pairs) ~ 0.0475, P@ of a kind) ~ 0.021,
+P(straight) ~ 0.0039, P(flush) ~ 0.0020, P(full house) ~ 0.0014,
+P(4 of a kind) ~ 0.00024, P(straight flush) ~ 0.000015.
+
+34. Poker dice. There are five dice each displaying 9, 10, J, Q, K, A. Show that, when rolled:
+
+P(1 pair) ~ 0.46, P(2 pairs) ~ 0.23, P(3 of a kind) ~ 0.15,
+P(no 2 alike) ~ 0.093, P(full house) ~ 0.039, P(4 of a kind) ~ 0.019,
+P(5 of a kind) ~ 0.0008.
+
+35. You are lost in the National Park of Bandrikat. Tourists comprise two-thirds of the visitors to
+
+the park, and give a correct answer to requests for directions with probability 3. (Answers to repeated
+
+questions are independent, even if the question and the person are the same.) If you ask a Bandrikan
+
+for directions, the answer is always false.
+
+(a) You ask a passer-by whether the exit from the Park is East or West. The answer is East. What is
+the probability this is correct?
+
+(b) You ask the same person again, and receive the same reply. Show the probability that it is correct
+is 3
+
+(c) You ask the same person again, and receive the same reply. What is the probability that it is
+correct?
+
+(d) You ask for the fourth time, and receive the answer East. Show that the probability it is correct
+27
+
+is $y.
+70
+(e) Show that, had the fourth answer been West instead, the probability that East is nevertheless
+correct is a
+36. Mr Bayes goes to Bandrika. Tom is in the same position as you were in the previous problem,
+but he has reason to believe that, with probability «, East is the correct answer. Show that:
+(a) whatever answer first received, Tom continues to believe that East is correct with probability «,
+
+(b) if the first two replies are the same (that is, either WW or EE), Tom continues to believe that East
+is correct with probability €,
+(c) after three like answers, Tom will calculate as follows, in the obvious notation:
+
+lle
+9+ 2e°
+
+9
+P(East correct | EEE) = a
+
+, P(East correct | WWW) =
+1—2e
+
+Evaluate these when € = ra
+
++A fictional country made famous in the Hitchcock film ‘The Lady Vanishes’.
+
+8
+

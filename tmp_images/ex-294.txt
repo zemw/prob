@@ -1,0 +1,62 @@
+Stationary distributions and the limit theorem Solutions [6.4.11]-[6.4.12]
+
+Let An = {X, # Ofork <n}. Fori > 1,
+
+oo
+P(Aoo | Xo =i) = lim P(An | Xo =i) = 4 @)
+j=l
+
+< jim, La
+
+mins>| inal
+
+Let € > 0, and pick R such that
+Ji
+
+ee <KE,.
+ming>1{yR+s}
+
+Take r = R and let n — oo, implying that P(Aoo | Xp = 1) = 0. It follows that 0 is persistent, and
+by irreducibility that all states are persistent.
+
+11. By Exercise (6.4.6), the stationary distribution is 7a = 7B = 2p =7p = é c= 4.
+
+(a) By Theorem (6.4.3), the answer is “A = 1/7a = 6.
+
+(b) By the argument around Lemma (6.4.5), the answer is pp(A) = 7pU¥a = 1p/7A = 1.
+
+(c) Using the same argument, the answer is pc(A) = 1¢/7,A = 2.
+
+(d) Let P;(.) = P(- | Xo = 4), let 7; be the time of the first passage to state j, andlet vy; = P;(T4 < Tg).
+By conditioning on the first step,
+
+1
+vB =5+5 5%; veo=4+qpt+q 4°D, VA = 3B +5 3 VCs vp = 7%;
+
+with solution v4 = 3, v= i, ve = 5: vp = i
+A typical conditional transition probability t;3; = P;(X1 = j | Ta < Tg) is calculated as follows:
+
+Pa(X1 =B)Pa(Ta < Te) vp 3
+Tap = Pa(X; =B| Ty < Tg) = = > =-2
+
+Pa(Ta < Tp) 2va 5’
+and similarly,
+2 2 1 1 3 1
+Tac = §, TRA = 3> TBC = 3 TCA= J, TU z = 3% tc=!1
+
+We now compute the conditional expectations 4; = E;(Ta | T4 < Tp) by conditioning on the first
+step of the conditioned process. This yields equations of the form ji, = 1+ 2 fis + Ziic, whose
+solution gives ia = ig
+
+(e) Either use the stationary distribution of the conditional transition matrix T, or condition on the first
+step as follows. With N the number of visits to D, and yn; = E;(N | Ta < Tp), we obtain
+
+na=3nnt+2nc, m=0+4nc, nmc=O+3nnt+ gta), mD=N70,
+
+whence in particular 74 = 0:
+
+12. By Exercise (6.4.6), the stationary distribution has 74 = ip m= i. Using the argument
+around Lemma (6.4.5), the answer is pp(A) = mpHa = 1B/TA = 2.
+
+285
+

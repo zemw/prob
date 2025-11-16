@@ -1,0 +1,54 @@
+[3.4.6]-[3.4.9] Solutions Discrete random variables
+
+s 4
+
+Figure 3.1. The network with source s and sink t.
+
+For the reliability, see Problem (1.8.19a).
+6. The structure function is I;s>j;;, the indicator function of {S > k} where S = "=| Xc. The
+reliability is therefore )7?_, (7) p'(1 — p)??.
+
+7. Independently colour each vertex livid or bronze with probability 5 each, and let L be the random
+
+set of livid vertices. Then EN; = 51E |. There must exist one or more possible values of Nz, which
+are at least as large as its mean.
+
+8. Let J, be the indicator function that the rth pair have opposite polarity, so that X = 1+ yr} I.
+We have that P(J; = 1) = 5 and PUI, = I,41 = 1) = 4, whence EX = $(n + 1) and var X =
+4 — 1).
+
+9. (a) Let A; be the event that the integer i remains in the ith position. Then
+
+P(U ar) = Pan) = PrN As) ++ DP) Ar)
+r=] r r
+
+r<s
+
+ee 2 ee eT
+ma (C\aont OD
+
+Therefore the number M of matches satisfies
+
+1 1 nl
+P(M =0)= tI.
+
+Now
+
+P(M=r)= (") P(r given numbers match, and the remaining n — r are deranged)
+r
+
+_ n! (n—r)! (G-gte bene + ).
+
+“rin—-r)! al
+
+(b)
+n+l
+
+dng = S #{derangements with 1 in the rth place}
+r=2
+= n{#{derangements which swap 1 with 2}
++ #{derangements in which 1 is in the 2nd place and 2 is not in the 1st place}}
+= ndy—-1 + ndn >
+
+164
+

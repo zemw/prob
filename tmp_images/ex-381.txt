@@ -1,0 +1,71 @@
+[(10.2.3]-[10.2.5] Solutions Renewals
+
+3. (i) The shortest way is to observe that N(t) + & is a stopping time if k > 1. Alternatively, we
+have by Wald’s equation that E(Ty()41) = w(m(t) + 1). Also
+
+E(Xw@+k) = E{E(Xvwie|NO)}=u, kz=2,
+
+and therefore, for k > 1,
+
+k
+E(Ty ask) = Ey) + 9 E(Xneyes) = w(t) +).
+j=2
+(ii) Suppose p 4 1 and
+p ifa =1,
+P(X, =a) = .
+1-p ifa=2.
+
+Then p = 2— p #1. Also
+E(Tyqay) = 1 — p)EMo | NG) = 0) + pE(T | NG) = 1) =p,
+whereas m(1) = p. Therefore E(Ty1)) # um(1).
+
+4, Let V(t) = M(t) + 1, and let W), Wo, ... be defined inductively as follows. W; = V(1), Wo
+is obtained similarly to W, but relative to the renewal process starting at the V(1)th renewal, i.e., at
+time Tyv(1)41, and Wy is obtained similarly:
+Wa =N(Tx,_,+D—-N(Tx,_))+1, 2 >2,
+
+where Xj, = W1+W2+---+Wm. Foreachn, Wy is independent of the sequence W,, W2,..., Wn_1,
+and therefore the W,, are independent copies of V (1). It is easily seen, by measuring the time-intervals
+covered, that V(t) < yi W,, and hence
+
+1 1
+
+-~V(t) <- S- W; > E(V())) a.s. and in mean, as t —-> 00.
+
+t t i=]
+It follows that the family { m7} er, Wim = 1} is uniformly integrable (see Theorem (7.10.3)).
+Now M(t) < V(¢), and so {N(t)/t : t > 0} is uniformly integrable also.
+
+Since N(t)/t 3s ua!
+
+5. (a) Using the fact that P(N(t) = k) = P(S; < t) — P(Sy41 < 1), we find that
+
+fore) oo
+E(sN@) = | (% s*P(N(t) = ‘) ve" dt
+Oo \e=0
+
+oo lore)
+= yo s* { | [P(Sk St) — P(Seq1 <d)] ve ar} .
+k=0 0
+
+By integration by parts, or P(S, < tve "dt = M(—v)* for k > 0. Therefore,
+
+1— M(-v)
+1—sM(-v)
+
+, it follows by uniform integrability that there is also convergence in mean.
+
+[o.@)
+E(s)) = S° s*{M(—v)* — M(-v)**1} =
+k=0
+
+(b) In this case, E(sN)) = Ee’ T6-D) = Mp(a(s—1)). When T has the given gamma distribution,
+
+Mr (6) = {v/(v — 0), and
+BEN) = ( v y (i As )
+v+A v+iAz
+
+The coefficient of s* may be found by use of the binomial theorem.
+
+372
+

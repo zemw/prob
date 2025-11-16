@@ -1,0 +1,47 @@
+12
+Martingales
+
+12.1 Exercises. Introduction
+
+1. G)If (Y, F) is a martingale, show that E(Y,) = E(Yp) for all n.
+
+Gi) If (Y, ¥) is a submartingale (respectively supermartingale) with finite means, show that E(Y,,) >
+E(Yo) (respectively E(Y,) < E(Y)).
+
+2. Let (Y, F) be a martingale, and show that E(Y;+m | Fn) = Yn for alln,m > 0.
+
+3. Let Zy, be the size of the nth generation of a branching process with Zp = 1, having mean family
+size yz and extinction probability 7. Show that Z,4—” and n2" define martingales.
+
+4. Let {S, : n > 0} be a simple symmetric random walk on the integers with Sg = k. Show that Sy
+and Ss? —nare martingales. Making assumptions similar to those of de Moivre (see Example (12.1.4)),
+find the probability of ruin and the expected duration of the game for the gambler’s ruin problem.
+
+5. Let (Y, ¥) be a martingale with the property that E(¥2) < 00 for all n. Show that, fori < j <k,
+E{(Ye — ¥;)¥;} = 0, and E{(¥%, — ¥j)? | Fi} = EYP | F) - E(Y? | #;). Suppose there exists K
+such that E(Y2) < K for all n. Show that the sequence {Y,,} converges in mean square as n — co.
+
+6. Let Y be a martingale and let u be a convex function mapping R to R. Show that {u(Y,) : n > 0}
+is a submartingale provided that E(u(Y,)*) < oo for all n.
+
+Show that |Y,|, Y?, and Y,* constitute submartingales whenever the appropriate moment condi-
+tions are satisfied.
+
+7. Let Y be a submartingale and let u be a convex non-decreasing function mapping R to R. Show
+that {u(Y,) : n > O} is a submartingale provided that E(u(Y,)+) < oo for all n.
+
+Show that (subject to a moment condition) Y,t constitutes a submartingale, but that |Y,| and y2
+need not constitute submartingales.
+
+8. Let X be a discrete-time Markov chain with countable state space S and transition matrix P.
+Suppose that y : S > R is bounded and satisfies Dijes Pij>W(A) < AY@ for some A > 0 and all
+
+i € S. Show that A7~"y(X,,) constitutes a supermartingale.
+
+9, Let G(s) be the probability generating function of the size Z, of the nth generation of a branching
+process, where Zo = 1 and var(Z,) > 0. Let H, be the inverse function of the function Gy, viewed
+as a function on the interval [0, 1], and show that M, = {Hy (s)}2" defines a martingale with respect
+to the sequence Z.
+
+118
+

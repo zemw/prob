@@ -1,0 +1,74 @@
+Problems Exercises [3.11.15]-[3.11.21]
+
+Show that, for E(Y) fixed, var(Y) is a maximum when p; = p2 = -:- = pn. That is to say, the
+variation in the sum is greatest when individuals are most alike. Is this contrary to intuition?
+
+15. Let X = (Xj, X2,..., Xn) bea vector of random variables. The covariance matrix V(X) of X is
+defined to be the symmetric n by n matrix with entries (vj; : 1 <i, 7 <n) givenby uj; = cov(X;, X;).
+Show that |[VCX)| = 0 if and only if the X; are linearly dependent with probability one, in that
+P(a,X1 +a2X2 +---+anXpn = b) = 1 for some a and b. (|V| denotes the determinant of V.)
+
+16. Let X and Y be independent Bernoulli random variables with parameter 5. Show that X + Y and
+|X — Y| are dependent though uncorrelated.
+
+17. A secretary drops n matching pairs of letters and envelopes down the stairs, and then places the
+letters into the envelopes in a random order. Use indicators to show that the number X of correctly
+matched pairs has mean and variance 1 for all n > 2. Show that the mass function of X converges to
+a Poisson mass function as n —> oo.
+
+18. LetX = (Xj, X2,..., Xn) bea vector of independent random variables each having the Bernoulli
+
+distribution with parameter p. Let f : {0, 1}” — R be increasing, which is to say that f(x) < f(y)
+
+whenever x; < y; for eachi.
+
+(a) Let e(p) = E( f(X)). Show that e(p1) < e(p2) if pi < po.
+
+(b) FKG inequality}. Let f and g be increasing functions from {0, 1}” into R. Show by induction
+on n that cov( f (X), g(K)) > 0.
+
+19. Let R(p) be the reliability function of a network G with a given source and sink, each edge of
+which is working with probability p, and let A be the event that there exists a working connection
+from source to sink. Show that
+
+R(p) = S T4(@) pN@ (1 — pym-N@)
+
+where w is a typical realization (i.e., outcome) of the network, N(w) is the number of working edges
+of w, and m is the total number of edges of G.
+Deduce that R’(p) = cov(J4, N)/{p(1 — p)}, and hence that
+
+R(p)(1 — R(p)) _ oy mR(p)(1 — R(p))
+———__—_——— <R ———
+pd-p) sy pil —p)
+
+20. Let R(:p) be the reliability function of a network G, each edge of which is working with probability
+
+p.
+
+(a) Show that R(pi p2) < R(p1)R(p2) if0 < pi, p2 <1.
+
+(b) Show that R(p”) < R(p)” for all0 < p< landy > 1.
+
+21. DNA fingerprinting. In a certain style of detective fiction, the sleuth is required to declare “‘the
+
+criminal has the unusual characteristics ...; find this person and you have your man”. Assume that
+
+any given individual has these unusual characteristics with probability 10—7 independently of all other
+
+individuals, and that the city in question contains 107 inhabitants. Calculate the expected number of
+
+such people in the city.
+
+(a) Given that the police inspector finds such a person, what is the probability that there is at least
+one other?
+
+(b) If the inspector finds two such people, what is the probability that there is at least one more?
+
+(c) How many such people need be found before the inspector can be reasonably confident that he
+
+has found them all?
+
++Named after C. Fortuin, P. Kasteleyn, and J. Ginibre (1971), but due in this form to T. E. Harris (1960).
+
+25
+

@@ -1,0 +1,67 @@
+Expectation Exercises [3.2.3]-[3.3.5]
+
+3. Let X1, X2, X3 be independent random variables taking values in the positive integers and having
+mass functions given by P(X; = x) = (1 — pip forx = 1,2,..., andi = 1, 2,3.
+(a) Show that
+(1 — p1)(1 — pa) pap5
+(1 — pop3)(l — pip2p3)
+
+P(X, < X2 < X3) =
+
+(b) Find P(X) < Xz < X3).
+4. Three players, A, B, and C, take turns to roll a die; they do this in the order ABCABCA....
+(a) Show that the probability that, of the three players, A is the first to throw a 6, B the second, and
+C the third, is 216/1001.
+(b) Show that the probability that the first 6 to appear is thrown by A, the second 6 to appear is thrown
+by B, and the third 6 to appear is thrown by C, is 46656/753571.
+5. Let X,,1 <r <n, be independent random variables which are symmetric about 0; that is,
+X, and —X, have the same distributions. Show that, for all x, P(S, > x) = P(S, < —x) where
+Sn = or Xr.
+Is the conclusion necessarily true without the assumption of independence?
+
+3.3 Exercises. Expectation
+
+1. Is it generally true that E(1/X) = 1/E(X)? Is it ever true that E(1/X) = 1/E(X)?
+
+2. Coupons. Every package of some intrinsically dull commodity includes a small and exciting
+
+plastic object. There are c different types of object, and each package is equally likely to contain any
+
+given type. You buy one package each day.
+
+(a) Find the mean number of days which elapse between the acquisitions of the jth new type of object
+and the (j + 1)th new type.
+
+(b) Find the mean number of days which elapse before you have a full set of objects.
+
+3. Each member of a group of n players rolls a die.
+
+(a) For any pair of players who throw the same number, the group scores | point. Find the mean and
+variance of the total score of the group.
+
+(b) Find the mean and variance of the total score if any pair of players who throw the same number
+scores that number.
+
+4, St Petersburg paradox. A fair coin is tossed repeatedly. Let T be the number of tosses until
+
+the first head. You are offered the following prospect, which you may accept on payment of a fee. If
+
+T =k, say, then you will receive £2". What would be a ‘fair’ fee to ask of you?
+
+5. Let X have mass function
+
+{x(a+D}-! ifx =1,2,...,
+0 otherwise,
+
+fay={
+and let a € R. For what values of « is it the caset that E(X%) < 00?
+
++This problem was mentioned by Nicholas Bernoulli in 1713, and Daniel Bernoulli wrote about the question
+for the Academy of St Petersburg.
+
+If @ is not integral, than E(X%) is called the fractional moment of order a of X. A point concerning
+notation: for real a and complex x = re!?, x” should be interpreted as r%e’?”, so that |x| = r®. In particular,
+E(|X*|) = E(|X|®).
+
+17
+

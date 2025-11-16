@@ -1,0 +1,55 @@
+Problems Solutions [3.11.28]-[3.11.29]
+
+since P(S1S2---Sm #9) | P(S, #0 for allk > 1) asm > ow.
+
+There are various ways of showing that the last probability equals |p — q|, and here is one.
+Suppose p > q. If X, = 1, the probability of never subsequently hitting the origin equals 1 — (¢/p),
+by the calculation in the solution to Problem (3.11.26) above. If X, = —1, the probability of staying
+away from the origin subsequently is 0. Hence the answer is p(1 — (¢/p)) +¢-0= p—gq.
+
+If g > p, the same argument yields g — p, andif p = q = 5 the answer is 0.
+
+28. Consider first the event that M>, is first attained at time 2k. This event occurs if and only if: (i)
+the walk makes a first passage to Sz, (> 0) at time 2k, and (ii) the walk thereafter does not exceed
+S2,. These two events are independent. The chance of (i) is, by reversal and symmetry,
+
+P(S2x-1 < Sox, Sox—2 < Sop, +--+, So < Sox)
+= P(X2x > 0, Xox—1 + Xan > 0,...,X1 +++ + XK > 0)
+= P(X, > 0,X,+ Xo >0,...,X, +--- +X, > 0)
+= P(S; > O for 1 <i < 2k) = 4P(S; A0 for 1 <i < 2k)
+= P(Sx,=0) by equation (3.10.23).
+
+As for the second event, we may translate 5S, to the origin to obtain the probability of (ii):
+P(Sap41 < Sap, +--+ San < Soe) = PMoy—2~ = 0) = PSan—-24 = 9),
+
+where we have used the result of Exercise (3.10.2). The answer is therefore as given.
+
+The probabilities of (1) and (ii) are unchanged in the case i = 2k + 1; the basic reason for this is
+that So, is even, and S2,41 odd, for all r.
+
+29, Let up = P(S, = 0), fe = P(S, = 0, S; #0 for 1 <i < k), and use conditional probability (or
+recall from equation (3.10.25)) to obtain
+
+n
+(*) won = > Won—2k fok-
+k=1
+
+Now N = 2, and therefore it suffices to prove that E(N,) = E(N,—-1) forn > 2. Let Ni_y be
+the number of points visited by the walk 51, 52,..., Sy, exactly once (we have removed So). Then
+
+Ni_, +1. if S 4 Soforl<k<n,
+Nn = N)_1—1. if Sy = So for exactly one k in {1,2,...,n},
+Ni_y otherwise.
+Hence, writing a, = P(S,; 4 Oforl1 <k <n),
+E(Nn) = E(N,_1) + an — P(Sg = So exactly once)
+= E(Nn-1) + on — { fotin—2 + fadn—4 +--+ + fojn2y}
+
+where [x] is the integer part of x. Now a2 = G24] = “2m by equation (3.10.23). If n = 2k is
+even, then
+
+E(N9x) — E(N2¢—1) = 4x — (folae—2 +--+ fox} =O by ().
+If n = 2k + 1 is odd, then
+E(N2¢41) — E(Nox) = box — { foure—-2 +--+ + fox} =O by (%).
+
+181
+

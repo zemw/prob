@@ -1,0 +1,61 @@
+[1.3.4]-[1.4.5] Exercises Events and their probabilities
+
+4, Let A,, Az,..., An be events where n > 2, and prove that
+n
+°(U Ai) = 5> P(A) — SO P(A; N Aj) + SS PAL Aj Ag)
+i=1 i i<j i<j<k
+
+=e + (-1)"t! P(A] MAD N- ++  An)-
+
+In each packet of Corn Flakes may be found a plastic bust of one of the last five Vice-Chancellors
+of Cambridge University, the probability that any given packet contains any specific Vice-Chancellor
+being 7 independently of all other packets. Show that the probability that each of the last three
+
+Vice-Chancellors is obtained in a bulk purchase of six packets is 1 — 3(4)° + 3(3)6 - (3).
+5. Let A;,r > 1, be events such that P(A,) = 1 for all r. Show that P((\72, Ar) = 1.
+
+6. You are given that at least one of the events Ay, 1 <r <n, is certain to occur, but certainly no
+more than two occur. If P(A;) = p, and P(Ay 1 As) = q,r #5, show that p > 1/nandgq <2/n.
+
+7. You are given that at least one, but no more than three, of the events A;, 1 <r <n, occur, where
+n > 3. The probability of at least two occurring is 4. If P(A;) = p, P(Ar N As) = g,r #8, and
+P(Ap N As MN At) = x,7r <5 < t, show that p > 3/(2n), andg <4/n.
+
+1.4 Exercises. Conditional probability
+
+1. Prove that P(A | B) = P(B | A)P(A)/P(B) whenever P(A)P(B) ¥ 0. Show that, if P(A | B) >
+P(A), then P(B | A) > PCB).
+
+2. For events Aj, A2,..., An Satisfying P(A, MN Az N---M Ap_1) > 0, prove that
+
+P(A, 1 A2M-+-M An) = P(A1)P(A2 | A1)PCA3 | At 9 A2)---P(An | At A20--- 9 Ap—1).
+
+3. A man possesses five coins, two of which are double-headed, one is double-tailed, and two are
+normal. He shuts his eyes, picks a coin at random, and tosses it. What is the probability that the lower
+face of the coin is a head?
+
+He opens his eyes and sees that the coin is showing heads; what is the probability that the lower
+face is a head?
+
+He shuts his eyes again, and tosses the coin again. What is the probability that the lower face is
+a head?
+
+He opens his eyes and sees that the coin is showing heads; what is the probability that the lower
+face is a head?
+
+He discards this coin, picks another at random, and tosses it. What is the probability that it shows
+heads?
+
+4. What do you think of the following ‘proof’ by Lewis Carroll that an urn cannot contain two balls
+of the same colour? Suppose that the urn contains two balls, each of which is either black or white;
+thus, in the obvious notation, P(BB) = P(BW) = P(WB) = P(WW) = 1) We add a black ball, so
+that PCBBB) = P(BBW) = P(BWB) = P(BWW) = i Next we pick a ball at random; the chance
+that the ball is black is (using conditional probabilities) 1 - 4 + 3 . 4 + 5 . i + 3 . 4 = i. However, if
+there is probability 3 that a ball, chosen randomly from three, is black, then there must be two black
+and one white, which is to say that originally there was one black and one white ball in the urn.
+
+5. The Monty Hall problem: goats and cars. (a) Cruel fate has made you a contestant in a game
+show; you have to choose one of three doors. One conceals a new car, two conceal old goats. You
+
+2
+

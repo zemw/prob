@@ -1,0 +1,77 @@
+Problems Solutions [10.6.11]-[10.6.12]
+Writing Z, E; for the excess lifetimes of N, N;, we have that
+P(E(t) > x) = P(E, (t) > x, Eo(t) > x) =e P(Eo(t) > x).
+
+Take the limit as t > 00, using Exercise (10.3.3), to find that
+
+oO | oO 4
+| —[1 — F(u)]du =e" / —[1 — Fou) ] du,
+x x M2
+
+where {42 is the mean of F>. Differentiate, and use (x), to obtain
+
+ex
+
+1 hx hx °°
+a [1 — Fy(x)] = de | [1 — Fo(x)],
+
+x
+
+1
+—[l — Fy()) du t+
+M2 M2
+which simplifies to give 1 — Fy(x) = e fer — Fo(u)] du where c = Ap /(u2 — w); this integral
+equation has solution Fy(x) = 1 — e~™.
+
+11. (i) Taking transforms of the renewal equation in the usual way, we find that
+
+F*@) 1
+
+m'O) = 7 Fe) ~ To FO)”
+
+1
+
+where
+F*(0) = E(e°*1) = 1-0 + 507(u? +07) + 0(67)
+
+as 9 —> 0. Substitute this into the above expression to obtain
+
+1
+
+*@= -1
+en outl — F0(u + o2/n) + 008))
+
+and expand to obtain the given expression. A formal inversion yields the expression for m.
+(ii) The transform of the right-hand side of the integral equation is
+
+1
+(*) mo Fy (0) + m* (0) — FE@)m*(6).
+bb
+By Exercise (10.3.3), F£ (0) = [1 — F*(@)]/(u), and (*) simplifies to m*(0) — (m* — m* F* —
+F*)/(w0), which equals m*(@) since the quotient is 0 (by the renewal equation).
+Using the key renewal theorem, as t + oo,
+
+E(X{) _ 07 +p?
+2p 22
+
+t 1 [o.]
+[ fi -— Fett — x)]dm(@x) > ~ | [1 — Fg()]du =
+0 u JO
+
+by Exercise (10.3.3b). Therefore,
+
+ot+ py? 2p?
+
+2p2 2p
+
+t
+m(t)-— > -1+
+Bb
+
+12. (i) Conditioning on X1, we obtain
+t
+m4(t) = F(t) + [ m(t — x)dF4(x).
+0
+
+379
+

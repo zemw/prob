@@ -1,0 +1,65 @@
+Problems Solutions [8.7.1]-[8.7.3]
+
+8.7 Solutions to problems
+
+1. E(¥n) = 0, and cov(Y¥m, Yntn) = ao n+; for m,n > 0, with the convention that oa, = 0
+for k > r. The covariance does not depend on m, and therefore the sequence is stationary.
+
+2. Wehave, by iteration, that ¥, = S,(m) +amtly 4 where $;,(m) = =o al Zn—j- There
+are various ways of showing that the sequence {S,(m) : m > 1} converges in mean square and almost
+surely, and the shortest is as follows. We have thata”t!y, _,_; > Oinm.s. and as. asm — 00;
+to see this, use the facts that var(at!Y, in) = «2+ var(¥), and
+
+2(m+Dgy2
+
+a
+
+SP Yn m1 >e< > ew < 0, e>0.
+€
+
+m m
+
+It follows that S,(m) = Y, —a’"+1y, _,, 1 converges in m.s. and a.s. as m —> oo. A longer route to
+the same conclusion is as follows. Forr < s,
+
+a2”
+
+B(|Su(6) ~ S09?) <8} (> Zn i) = ac,
+
+j=r+l j=rtl
+
+whence {S,(m) : m > 1} is Cauchy convergent in mean square, and therefore converges in mean
+square. In order to show the almost sure convergence of S,(m), one may argue as follows. Certainly
+
+m m oO oO
+e(> x!Z,-j1) = DPElo! Zn—j| > Do lalE|Zn—j| < Dj lel! < 00,
+
+j=0 j=0 j=0 j=0
+
+whence ~ Feo at Zp ; is as. absolutely convergent, and therefore a.s. convergent also. We may
+express limm—oo Sn(m) as oe! Zn—j. Also, a™tly 1 —> 0 in mean square and a.s. as
+m —> oo, and we may therefore express Y, as
+
+lo.@)
+Yn = Seal LZn—j a.s.
+
+It follows that E(Y,) = limm—oo E(Sn(m)) = 0. Finally, forr > 0, the autocovariance function
+is given by
+e(r) = cov(Yn, Yn—r) = E{(@Y,-1 + Zn)¥n—r } =ac(r — 1),
+
+whence
+a
+— a?
+
+e(r) = a!"le@) = r=...,-1,0,1,...,
+
+since c(O) = var(Yn).
+
+3. Iftisanon-negative integer, N(t) is the number of 0’s and 1’s preceding the (¢ + 1)th 1. Therefore
+N(t) +1 has the negative binomial distribution with mass function
+
+f= (Sr ota, k>t+l.
+
+If ¢ is not an integer, then N(¢t) = N([t]).
+
+353

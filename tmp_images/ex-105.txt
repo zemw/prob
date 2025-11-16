@@ -1,0 +1,49 @@
+[7.11.34]-[7.11.37] Exercises Convergence of random variables
+
+1 t
+(a) Show that “ff Tix(s)=j} as ass ast > &;
+0
+
+Hj 8j
+(b) deduce that the stationary distribution w satisfies 7; = 1/(u; gj);
+(c) show that, if f is a bounded function on S,
+
+-[ f(X(s)) ds =4s Ease as t > 00.
+
+34. Tail equivalence. Suppose that the sequences {X, :n > 1} and {Y, : n > 1} are tail equivalent,
+which is to say that )>7°., P(Xn # Yn) < 00. Show that:
+
+(a) S372, Xn and S>7°., Yn converge or diverge together,
+(b) any (Xn — Yn) converges almost surely,
+
+(c) if there exist a random variable X and a sequence a, such that a, t oo and a,, 1 ae Xy 3S. Xx ;
+then
+Ty as.
+—SoY, = Xx.
+an
+r=1
+
+35. Three series theorem. Let {X, : 2 > 1} be independent random variables. Show that eat Xn
+converges a.s. if, for some a > 0, the following three series all converge:
+
+(a) So, PUXal > @),
+
+(b) Sy var(Xnlx_|<a})
+
+(C) oy, E(Xnl x, |<a})-
+
+[The converse holds also, but is harder to prove.]
+
+36. Let {Xp :n > 1} be independent random variables with continuous common distribution function
+
+F. We call X, a record value for the sequence if X, > X; for 1 <r < k, and we write J; for the
+indicator function of the event that X; is a record value.
+
+(a) Show that the random variables J; are independent.
+(b) Show that Rm = > 71 Ir satisfies Rm /logm “5; Lasm > 00.
+
+37. Random harmonic series. Let {X;, : 2 > 1} be a sequence of independent random variables
+with P(X, = 1) = P(X, = -1) = 4 Does the series }°”_, X;/r converge a.s. asm > 00?
+
+96
+

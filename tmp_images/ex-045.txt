@@ -1,0 +1,66 @@
+[4.10.1]-[4.11.7] Exercises Continuous random variables
+
+4.10 Exercises. Distributions arising from the normal distribution
+
+1, Let X, and X4 be independent variables with the x2(m) and x2(n) distributions respectively.
+Show that X, + X9 has the x2(m +n) distribution.
+
+2. Show that the mean of the t(r) distribution is 0, and that the mean of the F(r, s) distribution is
+s/(s — 2) if s > 2. What happens if s < 2?
+
+3. Show that the ¢(1) distribution and the Cauchy distribution are the same.
+
+4. Let X and Y be independent variables having the exponential distribution with parameter 1. Show
+that X/Y has an F distribution. Which?
+
+5. Use the result of Exercise (4.5.7) to show the independence of the sample mean and sample
+variance of an independent sample from the N (i, o2) distribution.
+
+6. Let {X,; : 1 < r < n} be independent N(0, 1) variables. Let Y e€ [0,2] be the angle
+between the vector (X,, X2,..., Xn) and some fixed vector in R”. Show that W has density
+fh) = Gin wy"? BA, In - 3). 0 < y < x, where B is the beta function.
+
+4.11 Exercises. Sampling from a distribution
+
+1. Uniform distribution. If U is uniformly distributed on [0, 1], what is the distribution of X =
+[nU}4+1?
+
+2. Random permutation. Given the first n integers in any sequence Sg, proceed thus:
+
+(a) pick any position Pp from {1, 2,... ,m} at random, and swap the integer in that place of Sg with
+the integer in the nth place of So, yielding Sj.
+(b) pick any position P, from {1,2,...,— 1} at random, and swap the integer in that place of Sj
+
+with the integer in the (n ~— 1)th place of S1, yielding S»,
+
+(c) at the (r — 1)th stage the integer in position P,_ , chosen randomly from {1,2,...,2 —r+ 1},
+is swapped with the integer at the (x — r + 1)th place of the sequence S,_ .
+
+Show that S, 1 is equally likely to be any of the n! permutations of {1, 2,..., n}.
+
+3. Gamma distribution. Use the rejection method to sample from the gamma density ['(A, t) where
+t (> 1) may not be assumed integral. [Hint: You might want to start with an exponential random
+variable with parameter 1/t.]
+
+4. Beta distribution. Show how to sample from the beta density B(a, 8) where a, 8 > 1. [Hint:
+Use Exercise (3).]
+
+5. Describe three distinct methods of sampling from the density f(x) = 6x(1 —x), O<x <1.
+
+6. Aliasing method. A finite real vector is called a probability vector if it has non-negative entries
+with sum 1. Show that a probability vector p of length n may be written in the form
+
+1 n
+Pro] du
+
+where each v;, is a probability vector with at most two non-zero entries. Describe a method, based on
+this observation, for sampling from p viewed as a probability mass function.
+
+7. Box-Muller normals. Let U; and U2 be independent and uniformly distributed on [0, 1], and
+let T; = 2U; — 1. Show that, conditional on the event that R = \/T? + T? <1,
+
+qT 2 Ta 2
+X= RV ~2logR , Y= BV —2logR ,
+
+36
+

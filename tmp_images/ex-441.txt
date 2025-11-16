@@ -1,0 +1,229 @@
+4.14.11, 19, 5.8.3; bivariate
+normal 4.7.5-6, 12, 4.9.4—-5,
+4.14.13, 16, 7.9.2, 7.11.19;
+Cauchy 4.4.4, 4.8.2, 4.10.3,
+4.14.4, 16, 5.7.1, 5.11.4,
+5.12.19, 24-25, 7.11.14;
+chi-squared 4.10.1, 4.14.12,
+5.7.7; Dirichlet 4.14.58;
+exponential 4.4.3, 4.5.5, 4.7.2,
+4.8.1, 4.10.4, 4.14.4-5, 17-19,
+24, 33, 5.12.32, 39, 6.7.1;
+extreme-value 4.1.1, 4.14.46,
+7.11.13; F(r,s) 4.10.2, 4,
+5.7.8; first passage 5.10.78,
+5.12.18-19; Fisher’s spherical
+4.14.36; gamma 4.14.10-12,
+5.8.3, 5.9.3, 5.10.3, 5.12.14,
+33; hypoexponential 4.8.4;
+log-normal 4.4.5, 5.12.43;
+multinormal 4.9.2, 5.8.6;
+normal 4.9.3, 5, 4.14.1,
+5.8.46, 5.12.23, 42, 7.11.19;
+spectral 9.3.3; standard normal
+4.7.5; Student’s ¢ 4.10.2-~3,
+5.7.8; uniform 4.4.3, 4.5.4,
+4.6.6, 4.7.1, 3, 4, 4.8.5, 4.11.1,
+8, 4.14.4, 15, 19, 20, 23-26,
+5.12.32, 7.11.4, 9.1.2, 9.7.5;
+Weibull 4.4.7, 7.11.13
+
+departure pr. 11.2.7, 11.7.2-4,
+11.8.12
+
+derangement 3.4.9
+
+diagonal selection 6.4.5
+
+dice 1.5.2, 3.2.4, 3.3.3, 6.1.2;
+weighted/loaded 2.7.12,
+5.12.36
+
+difference eqns 1.8.20, 3.4.9,
+5.2.5
+
+difficult customers 11.7.4
+
+diffusion: absorbing barrier
+13.12.8—9; Bessel pr. 12.9.23,
+13.3.5—6, 13.9.1; Ehrenfest
+model 6.5.5, 36; first passage
+13.4.2; It6 pr. 13.9.3; models
+3.4.4, 6.5.5, 6.15.12, 36;
+Omstein—Uhlenbeck pr.
+13.3.4, 13.7.4-5, 13.12.34,
+6; osmosis 6.15.36; reflecting
+barrier 13.5.1, 13.12.6; Wiener
+pr. 12.7.22—23; zeros 13.4.1,
+13.12.10; Chapter 13 passim
+
+diffusion approximation to
+birth-death pr. 13.3.1
+
+dimer problem 3.11.34
+
+Dirichlet: density 4.14.58; distn
+3.11.31
+
+disasters 6.12.2—3, 6.15.28
+discontinuous marginal 4.5.1
+dishonest birth pr. 6.8.7
+
+distribution: see also density;
+arc sine 4.11.13; arithmetic
+5.9.4; Benford 3.6.7; Bernoulli
+3.11.14, 35; beta 4.11.4;
+beta—binomial 4.6.5; binomial
+2.1.3, 3.11.8, 11, 5.12.39;
+bivariate normal 4.7.5—6, 12;
+Cauchy 4.4.4; chi-squared
+4.10.1; compound 5.2.3;
+compound Poisson 5.12.13;
+convergence 7.2.4; Dirichlet
+3.11.31, 4.14.58; empirical
+9.7.22; exponential 4.4.3,
+5.12.39; F(r, s) 4.10.2-4;
+extreme-value 4.1.1, 4.14.46,
+7.11.13; first passage
+§.10.7-8. 5.12.18-19; gamma
+4.14.10-12; Gaussian, see
+normal; geometric 3.1.1,
+3.2.2, 3.7.5, 3.11.7, 5.12.34,
+39, 6.11.4; hypergeometric
+3.11.10-11; hypoexponential
+4.8.4; infinitely divisible
+5.12.13~14; inverse square
+3.1.1; joint 2.5.4; lattice 5.7.5;
+logarithmic 3.1.1, 5.2.3;
+log-normal 4.4.5, 5.12.43;
+maximum 4.2.2, 4.14.17;
+median 2.7.11, 4.3.4, 7.3.11;
+mixed 2.1.4, 2.3.4, 4.1.3;
+modified Poisson 3.1.1;
+moments 5.11.3; multinomial
+3.5.1, 3.6.2; multinormal
+4.9.2; negative binomial
+3.8.4, 5.2.3, 5.12.4, 16;
+negative hypergeometric 3.5.4;
+non-central 5.7.7—8; normal
+4.4.6, 8, 4.9.3-5; Poisson
+3.1.1, 3.5.2~3, 3.11.6, 4.14.11,
+§.2.3, 5.10.3, 5.12.8, 14, 17,
+33, 37, 39, 7.11.18; spectral
+9.3.2, 4; standard normal 4.7.5;
+stationary 6.9.11; Student’s
+t 4.10.2—3, 5.7.8; symmetric
+3.2.5; tails 5.1.2, 5.6.4, 5.11.3;
+tilted 5.7.11; trapezoidal 3.8.1;
+trinormal 4.9.8-9; uniform
+2.7.20, 3.7.5, 3.8.1, 5.1.6,
+9.7.5; Weibull 4.4.7, 7.11.13;
+zeta or Zipf 3.11.5
+
+divergent birth pr. 6.8.7
+divine providence 3.11.22
+
+Dobrushin’s bound and ergodic
+coefficient 6.14.4
+
+dog-—flea model 6.5.5, 6.15.36
+
+dominated convergence 5.6.3,
+7.2.2
+
+Doob’s Lz inequality 13.7.1
+
+Doob-Kolmogorov inequality
+7.8.1-2
+
+432
+
+Index
+
+doubly stochastic: matrix 6.1.12,
+6.15.2; Poisson pr. 6.15.22—23
+
+downcrossings inequality 12.3.1
+
+drift 13.3.3, 13.5.1, 13.8.9,
+13.12.9
+
+dual queue 11.5.2
+
+duration of play 12.1.4
+
+E
+
+Eddington’s controversy 1.8.27
+
+editors 6.4.1
+
+eggs 5.12.13
+
+Ehrenfest model 6.5.5, 6.15.36
+
+eigenvector 6.6.1—2, 6.15.7
+
+embarrassment 2.2.1
+
+empires 6.15.10
+
+empirical distn 9.7.22
+
+entrance fee 3.3.4
+
+entropy 7.5.1; conditional
+6.15.45; mutual 3.6.5
+
+epidemic 6.15.32
+
+equilibrium, see stationary
+
+equivalence class 7.1.1
+
+ergodic: coefficient 6.14.4;
+measure 9.7.11; stationary
+measure 9.7.11
+
+ergodic theorem: Markov chain
+6.15.44, 7.11.32; Markov pr.
+7.11.33, 10.5.1; stationary pr.
+9.7.10-11, 13
+
+Erlang’s loss formula 11.8.19
+
+error 3.7.9; of prediction 9.2.2
+
+estimation 2.2.3, 4.5.3, 4.14.9,
+7TAL31
+
+Euler: constant 5.12.27, 6.15.32;
+product 5.12.34
+
+European call option 13.10.4-5
+
+event: of convergence 7.2.6;
+exchangeable 7.3.4—5; invariant
+9.5.1; sequence 1.8.16; tail
+73.3
+
+excess life 10.5.4; conditional
+10.3.4; and current 10.6.9;
+limit 10.3.3; Markov 8.3.2,
+10.3.2; moments 10.3.3;
+Poisson 6.8.3, 10.3.1, 10.6.9;
+reversed 8.3.2; stationary
+10.3.3
+
+exchangeability 7.3.45
+
+expectation: conditional
+3.7,.2-3, 4.6.2, 4.14.12,
+7.9.4; independent rv.s 7.2.3;
+linearity 5.6.2; tail integral
+4.3.3, 5; tail sum 3.11.13,
+4.14.3
+
+exponential distn: c.f. 5.8.8;
+holding time 11.2.2; in Poisson
+pr. 6.8.3; lack-of-memory

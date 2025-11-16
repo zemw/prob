@@ -1,0 +1,44 @@
+12
+
+Martingales
+
+12.1 Solutions. Introduction
+
+1. (i) We have that E(¥m) = E{E(%n41 | Fm)} = E(%n+1), and the result follows by induction.
+
+(ii) For a submartingale, E(¥m) < E{E(¥n41 | Fm)} = E(%m4+1), and the result for supermartingales
+follows similarly.
+
+2. We have that
+E(Qnim | Fn) = E{E(Yn+m | Fnim—1) | Fn} = E(Yn+m—1 | Fn)
+
+ifm > 1, since Fp C Fy4m-1. Iterate to obtain E(Yntim | Fn) = E(Yn | Fn) = Yn.
+
+3. (i) Znu—" has mean 1, and
+E(Zn pth TY | Fy) = we OVE (Zags | Fn) = wns
+
+where Fy, = 0(Z,, Z2,..., Zn).
+(ii) Certainly nen < 1, and therefore it has finite mean. Also,
+
+E(n2*+! | #,) =E (n= X;
+
+Fn) = G(n)™
+
+where the X; are independent family sizes with probability generating function G. Now G(n) = n,
+and the claim follows.
+
+4. (i) With X,, denoting the size of the nth jump,
+E(Sn41 | Fn) = Sn + E(Xn41 | Fn) = Sn
+
+where #y = 0 (X1, X2,..., Xn). Also E|Sy| <n, so that {S,} is a martingale.
+(ii) Similarly E(S2) = var(Sn) =n, and
+
+E(S2,, —(n +1) | Fn) = S2 + E(X2, 1) + 2SnE(Xn41) — (n +1) = S22.
+(iii) Suppose the walk starts at k, and there are absorbing barriers at 0 and N (> k). Let T be the time
+at which the walk is absorbed, and make the assumptions that E(S7) = So, E(S% -T)= Se. Then
+the probability pz of ultimate ruin satisfies
+
+O-pe+N-(—pe =k, O-pe+N?-(1- py) —E(T) =F,
+
+396
+

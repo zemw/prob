@@ -1,0 +1,57 @@
+Problems Solutions [11.8.8]-[11.8.10]
+Set 9 = 0 to obtain that h(0) = 1.H(0), and therefore
+1
+H(0) = — 5 Mu @){A(Ms@) —1)-6}.
+
+Take the limit as 6 > 0, using L’H6pital’s rule, to obtain H(0) = 1 — AE(S) = 1 — p. The moment
+generating function of U is given accordingly. Note that My is the same as the moment generating
+function of the equilibrium distribution of actual waiting time. That is to say, virtual and actual
+waiting times have the same equilibrium distributions in this case.
+
+8. In this case U takes the values 1 and —2 each with probability 4 (as usual, U = S — X where S
+and X are typical (independent) service and interarrival times). The integral equation for the limiting
+waiting time distribution function F becomes
+
+FQ) = 4FQ), Fox) =4{F@-D+F+2)} forx=1,2,....
+
+The auxiliary equation is 63 — 26 +1 = 0, with roots 1 and — 5( 1+ /5). Only roots lying in [—1, 1]
+
+can contribute, whence
+x
+—1 5
+F(x) =A+B (+4)
+
+for some constants A and B. Now F(x) > 1 as x — o, since the queue is stable, and therefore
+A = 1. Using the equation for F (0), we find that B = (1 — J/5).
+
+9. Q is a M(A)/M(2)/oo queue, otherwise known as an immigration—death process (see Exercise
+(6.11.3) and Problem (6.15.18)). As found in (6.15.18), Q(t) has probability generating function
+
+G(s, t) = {1+ (5 — Leet exp{p(s — 1)(1— ey}
+where p = A/y. Hence
+
+E(Q(t)) = le + p(l—e#),
+P(Q(t) = 0) = (1 — ee")! exp{—p — e™)},
+1
+P(Q(t) =n) > — pre? ast —> 00,
+ne
+If E(/) and E(B) denote the mean lengths of an idle period and a busy period in equilibrium, we
+have that the proportion of time spent idle is E(2)/{E(7) + E(B)}. This equals limy—.o0 P(Q(t) =
+
+0) = e~. Now E(J) = A7!, by the lack-of-memory property of the arrival process, so that E(B) =
+(e? —1)/a.
+
+10. We have in the usual way that
+(+) Qt +1) =A; + Q@) — min{1, OM}
+
+where A; has the Poisson distribution with parameter 2. When the queue is in equilibrium, E(Q(t)) =
+E(Q(t + 1)), and hence
+
+P(Q(t) > 0) = E(min{1, Q(t)}) = E(A;) =A.
+
+We have from («) that the probability generating function G(s) of the equilibrium distribution of
+Qf) (= Q)is
+
+G(s) = E(s41)B(s2~minllO}) = AE-D fR(s2-1 9.15) + P(Q = 0)}.
+
+391

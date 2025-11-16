@@ -1,0 +1,53 @@
+[5.5.2]-{5.5.2] Solutions Generating functions and their applications
+
+so that, using the fact that fr (u) = 4e~*” if u > 0,
+
+t FB) t t
+[ 5 (G(Gr—-u(s))} fru) du = -[GG1-w(s)) fr], - A [ G(G1—u(s)) fru) du,
+having integrated by parts. Hence
+
+2 G(s) = G(syae™ + {-G(sre™ + AGGi(s))} —4 {G6 - / ” sfr(w) au} — sre
+at ‘
+= A{G(G,(s)) — Gi(s)}.
+
+(ii) Substitute G(s) = s? into the last equation to obtain
+
+aG: 2
+— =A(G7 -G
+at ( t t)
+
+with boundary condition Go(s) = s. Integrate to obtain At + c(s) = log{1 — Gy for some function
+c(s). Using the boundary condition at t = 0, we find that c(s) = log{1 — Go} = log{l — s7}, and
+hence G;(s) = se~**/{1 — s(1 — e~*“)}. Expand in powers of s to find that Z(t) has the geometric
+distribution P(Z(t) = k) = (1 — e~*)F-1e—t for k > 1.
+
+2. The equation becomes
+
+aG
+Gp = + GP) - Gi
+
+with boundary condition Go(s) = s. This differential equation is easily solved with the result
+
+2s+t(L—s) _ 4/t 2-t
+
+Gels) = 24+t(1—s) 2441-5) ¢
+
+We pick out the coefficient of s” to obtain
+
+4 t \?r
+PZO =" = ary (=) / nel
+
+and therefore
+
+4 t \" 2/7 ¢t \k
+PZ) = =a (55) =? (55) , kL.
+
+n=k
+
+It follows that, for x > 0 and in the limit as t —> 00,
+
+Lxt]-1 1—[xt]
+P(Z(t) > xt | Z(t) > 0) = rane = (5 <3) = ( + *) os oo,
+
+240
+

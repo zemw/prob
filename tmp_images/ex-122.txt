@@ -1,0 +1,63 @@
+G/G/1 Exercises [11.2.7]-[11.5.2]
+
+7. Tandem queues. Two queues have one server each, and all service times are independent and
+
+exponentially distributed, with parameter 4; for queue i. Customers arrive at the first queue at the
+
+instants of a Poisson process of rate A (< min{jz1, 22}), and on completing service immediately enter
+
+the second queue. The queues are in equilibrium. Show that:
+
+(a) the output of the first queue is a Poisson process with intensity 4, and that the departures before
+time f are independent of the length of the queue at time f,
+
+(b) the waiting times of a given customer in the two queues are not independent.
+
+11.3 Exercises. M/G/1
+
+1. Consider M(A)/D(d)/1 where o = Ad < 1. Show that the mean queue length at moments of
+departure in equilibrium is 5p(2 — p)/A—-p).
+
+2. Consider M()/M(j2)/1, and show that the moment generating function of a typical busy period
+is given by
+
+_ Atn-s)-VA+p—5% —4dy
+2r
+
+for all sufficiently small but positive values of s.
+
+3. Show that, for a M/G/1 queue, the sequence of times at which the server passes from being busy
+to being free constitutes a renewal process.
+
+11.4 Exercises. G/M/1
+
+1, Consider G/M(j)/1, and let aj = E((ux)4 e BX /j'!) where X is a typical interarrival time.
+Suppose the traffic intensity p is less than 1. Show that the equilibrium distribution w of the imbedded
+chain at moments of arrivals satisfies
+
+foe)
+In = So ain si-1 forn > 1.
+=
+
+Look for a solution of the form 2, = 6” for some @, and deduce that the unique stationary distribution
+is given by 2; = (1 — 7)n/ for j > 0, where 7 is the smallest positive root of the equation s =
+Mx (us — 1)).
+
+2. Consider a G/M(;z)/1 queue in equilibrium. Let 7 be the smallest positive root of the equation
+x = Mx(u(x — 1)) where My is the moment generating function of an interarrival time. Show that
+the mean number of customers ahead of a new arrival is n(1 — n)7?, and the mean waiting time is
+mud — nyt.
+
+3. Consider D(1)/M(j)/1 where jz > 1. Show that the continuous-time queue length Q(r) does not
+converge in distribution as t — oo, even though the imbedded chain at the times of arrivals is ergodic.
+
+11.5 Exercises. G/G/1
+
+1. Show that, for a G/G/1 queue, the starting times of the busy periods of the server constitute a
+renewal process.
+
+2. Consider a G/M(j)/1 queue in equilibrium, together with the dual (unstable) M(jz)/G/1 queue.
+Show that the idle periods of the latter queue are exponentially distributed. Use the theory of duality
+
+113
+

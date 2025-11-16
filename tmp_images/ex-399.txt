@@ -1,0 +1,62 @@
+[11.8.6]-[11.8.7] Solutions Queues
+
+Now Mz(s) is non-decreasing in s, and therefore it is the value with the minus sign. The density
+function of B may be found by inverting the moment generating function; see Feller (1971, p. 482),
+who has also an alternative derivation of Mg.
+
+As for the mean and variance, either differentiate Mz, or differentiate («). Following the latter
+route, we obtain the following relations involving M (= Mp):
+
+21MM’ +M+(s—A-—p)M’ =0,
+24MM" +22(M’)? + 2M’! +(s —A —p)M” =0.
+
+Set s = Oto obtain M’(0) = (u—A)7! and M” (0) = 2(4—A)~3, whence the claims are immediate.
+
+6. (i) This question is closely related to Exercise (11.3.1). With the same notation as in that solution,
+we have that
+
+(*) On+1 = An + Qn — h(Qn)
+
+where h(x) = min{1, x}. Taking expectations, we obtain P(Q, > 0) = E(Ay) where
+oO
+B(An) = |" B(An | $=5)dFs(6) = AB(S) = p,
+
+and S is a typical service time. Square (*) and take expectations to obtain
+
+p(1 — 2p) + E(A?, 1)
+2(1 — p)
+
+’
+
+where E(A2) is found (as above) to equal p + 07E(S2).
+
+Gi) If a customer waits for time W and is served for time S, he leaves behind him a queue-length
+which is Poisson with parameter A(W + 5S). In equilibrium, its mean satisfies AE(W + S) = E(Qn),
+whence E(W) is given as claimed.
+
+(iii) E(W) is a minimum when E(S) is minimized, which occurs when S is concentrated at its mean.
+Deterministic service times minimize mean waiting time.
+
+7. Condition on arrivals in (¢, ¢+-A). If there are no arrivals, then W,+, < x ifandonly if W; < x-+h.
+If there is an arrival, and his service time is S, then W;,, < x if andonly if W, < x+A—S. Therefore
+
+x+h
+F(aj;t+h) =(1—-AA)F+A;1) +an | F(x th—s;t)dFs(s) + o(h).
+0
+
+Subtract F (x; t), divide by A, and take the limit as h | 0, to obtain the differential equation.
+We take Laplace-—Stieltjes transforms. Integrating by parts, for @ < 0,
+
+| e°* dh(x) = —h(0) — 0{My (6) — H(0)},
+(0,00)
+| e** dH (x) = My (6) — H(0),
+(0,00)
+| e%* dP(U +S < x) = My(6)Ms(),
+(0,00)
+
+and therefore
+
+0 = —h(0) — 0{My @) — H(0)} +AH (0) +AMy @){Ms(@) — 1}.
+
+390
+

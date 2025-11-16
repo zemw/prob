@@ -1,0 +1,60 @@
+[4.12.2]-[4.13.1] Solutions Continuous random variables
+
+to find that P(X > c) = E(ie(X)) = EUc(Y)) = P(Y > c).
+
+Conversely, suppose that X >st Y. We may assume by Theorem (4.12.3) that X and Y are
+defined on the same sample space, and that P(X > Y) = 1. Let u be an increasing function. Then
+P(u(X) > u(Y)) > P(X > Y) = 1, whence E(u(X) — u(Y)) => 0 whenever this expectation exists.
+
+2. Leta = w/A, and let {J, : r => 1} be independent Bernoulli random variables with parameter a.
+Then Z = an T, has the Poisson distribution with parameter Aa = ys, and Z < X.
+
+3. Use the argument in the solution to Problem (2.7.13).
+
+4. Forany ACR,
+
+P(X #£Y) > P(X¥ € A, Y € AS) = P(X € A)—-P(X EA, YEA)
+> P(X € A) —P(Y € A),
+
+and similarly with X and Y interchanged. Hence,
+
+P(X # Y) > sup |P(X € A) — P(Y € A)| = 4drv(X, Y).
+ACR
+
+5. For any positive x and y, we have that (y — x)+ +x Ay = y, where x A y = min{x, y}. It
+follows that
+
+Stfx@ — frit = fr ® — fe@yt =1- 30 fea fr®,
+k k k
+
+and by the definition of dty(X, Y) that the common value in this display equals sary (X,Y) = 6.
+Let U be a Bernoulli variable with parameter 1 — 5, and let V, W, Z be independent integer-valued
+variables with
+
+P(V =k) = {fx — fr®}*/8,
+P(W =k) = {fytk) — fx(k)}* /8,
+P(Z =k) = fx(k) A fr (K)/(L — 8).
+
+Then X‘ = UZ+ (1 —U)V and Y’ = UZ + (1 — U)W have the required marginals, and P(X’ =
+Y’) = PU = 1) = 1 —8. See also Problem (7.11.16d).
+
+6. Evidently dpy(X, Y) = |p — q|, and we may assume without loss of generality that p > g. We
+have from Exercise (4.12.4) that P(X = Y) < 1 — (p—q). Let U and Z be independent Bernoulli
+variables with respective parameters 1— p+g andq/(1—p+gq). Thepair X’ = U(Z—1)4+1,Y’ = UZ
+has the same marginal distributions as the pair X, Y, and P(X’ = Y’) = P(U = 1) = 1— p+qas
+required.
+
+To achieve the minimum, we set X” = 1 — X’ and Y” = Y’, so that P(X” = ¥”) = 1-P(X’ =
+Y’)=p-q.
+
+4.13 Solutions. Geometrical probability
+
+1. The angular coordinates Y and & of A and B have joint density f(y, o) = (27)~?. We make
+the change of variables from (p, 9)  (,o) by p = cos{5(o —-wW}a= 30 +o+ 7), with
+inverse
+
+w=o- 3x — cos! p, o=6- 3m + cos! p,
+
+and Jacobian |J| = 2/,/1 — p?.
+
+206

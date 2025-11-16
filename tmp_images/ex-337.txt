@@ -1,0 +1,64 @@
+[7.3.4]-[7.3.8] Solutions Convergence of random variables
+
+4. Let A be exchangeable. Since A is defined in terms of the X;, it follows by a standard result of
+measure theory that, foreach n, there exists an event An € 0(X 1, X2,..., Xn), suchthatP(AA An) >
+0 as n — oo. We may express A, and A in the form
+
+An = {Xn € Bn}, A={X eB},
+where Xp, = (X1, X2,..., Xn), and B, and B are appropriate subsets of R” and R®. Let
+Al = {K€ By}, A’ = {X’ € B},
+
+where xi, = (Xn41, Xn42,---, X2n) and xX’ = (Xn41, Xn42,---, Xn, X1, X2,---, Xn, X2n41,
+X2n42,--+-):
+Now P(An M A),) = P(An)P(Aj,), by independence. Also, P(An) = P(Aj,), and therefore
+
+(*) P(A M Al) = P(An)? > P(A)? asn > 00.
+
+By the exchangeability of A, we have that P(A A A),) = P(A’ A A‘), which in turn equals
+P(A A Aj), using the fact that the X; are independent and identically distributed. Therefore,
+
+[P(An 1. Aj,,) — P(A)| < P(A A An) + P(AA AL) OO asn > ow.
+
+Combining this with (+), we obtain that P(A) = P(A)2, and hence P(A) equals 0 or 1.
+
+5. The value of S, does not depend on the order of the first n steps, but only on their sum. If S, = 0
+i.o., then Sy, = 01.0. for all walks {5/,} obtained from {S,} by permutations of finitely many steps.
+
+6. Since f is continuous on a closed interval, it is bounded: | f(y)| < c for all y € [0, 1] for some c.
+Furthermore f is uniformly continuous on [0, 1], which is to say that, if ¢ > 0, there exists 6 (> 0),
+such that | f(y) — f(z)| < € if |y — z| < 6. With this choice of €, 5, we have that |E(ZI4c)| < €, and
+
+1 _
+IE(ZI4)| < 2cP(A) < 20-205
+né2
+
+by Chebyshov’s inequality. Therefore
+
+2c
+
+E(Z ,
+IE(Z)| <€ +75
+
+which is less than 2 for values of n exceeding 2c/ (e382).
+
+7. If {Xn} converges completely to X then, by the first Borel-Cantelli lemma, |X, — X| > € only
+finitely often with probability one, for all ¢ > 0. This implies that X, 5; X; see Theorem (7.2.4).
+
+Suppose conversely that {X,} is a sequence of independent variables which converges almost
+surely to X. By Exercise (7.2.8), X is almost surely constant, and we may therefore suppose that
+
+Xn =; ¢ where c € R. It follows that, for e > 0, only finitely many of the (independent) events
+{|Xn — c| > €} occur, with probability one. Using the second Borel—Cantelli lemma,
+
+SS P(IXn —cl>€) <0.
+n
+
+8. Of the various ways of doing this, here is one. We have that
+
+n\— yx - 2 Iss,’ 1 os
+2 » , ited i) -n@o) i
+
+l<i<j<n i=l i=1
+
+328
+

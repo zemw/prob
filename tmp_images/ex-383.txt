@@ -1,0 +1,50 @@
+[(10.3.4]-[10.3.5] Solutions Renewals
+
+4, We have that
+
+1-F
+P(E(t) > y| C(t) = x) =P(X,; >ytx|[Xp>x= eee
+whence
+C1-FQt+x) E(x; —x)t}
+
+E(E(t)|C@) =x) =| 1— F(x) y= 1— F(x)
+
+5. (a) Apply Exercise (10.2.2) to the sequence X; — 4, 1 <i < 00, to obtain var(Tyq) — uM (t)) =
+o°E(M(t)).
+
+(b) Clearly Ty) = ¢ + E(z), where E is excess lifetime, and hence pM (ft) = (¢ + E(t)) — Iuq@ —
+4M (t)), implying in turn that
+
+(x) y? var(M(t)) = var(E(t)) + var(Siqy) — 2cov(E(t), Suey)
+
+where Sy) = Tut) — UM (t). Now
+
+2, _. E(X})
+var(E(t)) < E(E(t)*) > va ast > oO
+je
+if E(X?) < 00 (see Exercise (10.3.3c)), implying that -
+1
+(x) ; var(E(t)) > 0 ast —> Oo.
+
+This is valid under the weaker assumption that E(X *) < oo, as the following argument shows. By
+Exercise (10.3.3),
+
+t
+E(E(t)2) = a(t) + | a(t — u)dm(u),
+
+where a(u) = E({(X, — u)t}2). Now use the key renewal theorem together with the fact that
+a(t) < E(X21¢x,>1) > Oast > oo.
+
+Using the Cauchy—Schwarz inequality,
+
+1 1
+_|cov(EO, Suay)| S var E(O) var(Siy(q)) —> 0
+
+as t —> ov, by part (a) and (*«). Returning to («), we have that
+
+2 2 2
+Ub _ jo o
+= var(M (0) > tin, {= (men + 0} =F
+
+374
+

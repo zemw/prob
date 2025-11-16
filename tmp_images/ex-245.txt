@@ -1,0 +1,58 @@
+[5.3.5]-[5.3.6] Solutions Generating functions and their applications
+
+Now X — Y = Vy, so that
+
+-1\f
+gx) tee" 1m) =| ($43 ) | arene)
+
+where we have used the independence of U and V. This converges if and only if |4(s + s7ly <1,
+which is to say that s = +1. Note that G(s) converges in a non-trivial region of the complex plane.
+
+5. Let T be the time of the first return of the walk S to its starting point 0. During the time-interval
+(0, T), the walk is equally likely to be to the left or to the right of 0, and therefore
+
+TR+L’ ifT <2n,
+Lon = .
+2nR if T > 2n,
+
+where R is Bernoulli with parameter 1 L’ has the distribution of 2,7, and R and L’ are independent.
+It follows that G,,(s) = E(s/2") satisfies
+
+n
+
+Gon(s) = 5-3. +87*)Gon—ae(s) FQ) + D5 + 5") F2K)
+k=1 k>n
+
+where f(2k) = P(T = 2k). (Remember that Lo, and T are even numbers.) Let H(s,t) =
+Sno 12"G>,,(s). Multiply through the above equation by t2” and sum over 2, to find that
+
+H(s,t) = 4H(s,t) {F(t) + F(st)} + 5 (J + J(st)}
+where F(x) = S°P2.p x?* (2k) and
+< 1
+JQ) = pap» [QW = Fs <1.
+
+by the calculation in the solution to Exercise (5.3.2). Using the fact that F(x) = 1 — /1—x2, we
+deduce that H(s, t) = 1/./(1 — #2)(1 — s2t2). The coefficient of 212" is
+
+-1 -1
+P(Lon = 2k) = (, 4) (“1 ( peo
+_ (2k) (2n-2k\ (1\™ ere,
+=|, )]\ pk (5) = P(S2x = O)P(S2n—2k = 9).
+
+6. We show that all three terms have the same generating function, using various results established
+for simple symmetric random walk. First, in the usual notation,
+
+252
+
+ie.)
+—0)52? — —
+
+m=0
+
+Secondly, by Exercise (5.3.2a, b),
+
+E(T A 2m) = 2mP(T > 2m) + S~ 2kfo(2k) = 2mP(Sam = 0) + S~ P(Srk-2 = 0).
+k=1 k=1
+
+236
+

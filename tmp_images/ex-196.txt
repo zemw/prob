@@ -1,0 +1,49 @@
+4
+
+Continuous random variables
+
+4.1 Solutions. Probability density functions
+
+1
+1. (a) {x(1 — x)} 2 is the derivative of sin~! (2x — 1), and therefore C = 27!.
+(b) C = 1, since
+
+—x —x
+—x— = ji _ K _ .
+/ exp(—x —e “)dx im [exp( e | k=l
+
+fond ©, 0)
+
+(c) Substitute v = (1 + x2j)71 to obtain
+
+OO d. 1 3 1
+—_O _ = |v 21) 2 dv = BA, m—})
+co 1 +x2" Jo
+
+where B(., -) is a beta function; see paragraph (4.4.8) and Exercise (4.4.2). Hence, if m > i,
+
+Co! = BGy,m-5)= POrap D)
+2. (i) The distribution function Fy of Y is
+
+FyQ) =PY < y)=P@X < y)= P(X < y/a) = Fx (y/a).
+So, differentiating, fy (y) = a7! fx (y/a).
+
+(ii) Certainly
+Fy) =PCX <x) =P(X = -x) = 1—-—P(X < -x)
+
+since P(X = —x) = 0. Hence f_y(x) = fx(—x). If X and —X have the same distribution function
+then f_x(x) = fx(x), whence the claim follows. Conversely, if fy(—x) = fx (x) for all x, then,
+by substituting u = —x,
+
+foe) y y
+P(-X < y) =P(X > -y)= / far(x)dx = / fax(-u) du = / farlu) du = P(X <y),
+-y 00 00
+
+whence X and —X have the same distribution function.
+
+3. Sincea > 0, f > 0, and g > 0, it follows thataf + (1 —a@)g > 0. Also
+[tars a-me}dx =a f far+a—a) f gdx=a41-a=1.
+R R R
+
+187
+

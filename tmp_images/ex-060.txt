@@ -1,0 +1,64 @@
+Branching processes Exercises [5.3.7]-[5.4.6]
+
+7. Let Sp = Soreo Xr be a left-continuous random walk on the integers with a retaining barrier
+at zero. More specifically, we assume that the X; are identically distributed integer-valued random
+variables with X; > —1, P(X; = 0) 4 0, and
+Sn t+ Xn41 if Sy > 0,
+Sn4l = :
+
+Show that the distribution of Sg may be chosen in such a way that E(z5") = E(z50) for all n, if and
+only if E(X,) < 0, and in this case
+(1 — )E(X)EG*!)
+
+1 — E(z*1)
+
+E(z%*) =
+
+8. Consider a simple random walk starting at 0 in which each step is to the right with probability
+p (= 1-4). Let Ty be the number of steps until the walk first reaches b where b > 0. Show that
+E(Tp | Th < 00) = b/|p — ql.
+
+5.4 Exercises. Branching processes
+
+1. Let Z, be the size of the nth generation in an ordinary branching process with Zg = 1, E(Z1) = pu,
+and var(Z,) > 0. Show that E(Z,Zm) = u—"R(Z2) for m <n. Hence find the correlation
+coefficient o(Zm, Zn) in terms of 2.
+
+2. Consider a branching process with generation sizes Zy, satisfying Zo = 1 and P(Z, = 0) = 0.
+Pick two individuals at random (with replacement) from the nth generation and let L be the index of
+the generation which contains their most recent common ancestor. Show that P(L = r) = E(Z, 1y _
+
+E(Z,,1) for 0 <r <n. What can be said if P(Z, = 0) > 0?
+
+3. Consider a branching process whose family sizes have the geometric mass function f(k) = gp*,
+k > 0, where p + q = 1, and let Zp be the size of the nth generation. Let T = min{n : Zp = 0} be
+the extinction time, and suppose that Zg = 1. Find P(T = n). For what values of p is it the case that
+E(T) < ~?
+
+4. Let Z, be the size of the nth generation of a branching process, and assume Zp = 1. Find an
+
+expression for the generating function Gy of Z,, in the cases when Z, has generating function given
+
+by:
+
+(a) G(s) =1-—a(1—s)?, 0<a,B <1.
+
+(b) Gs) = f —ltp( f (s))}, where P is a probability generating function, and f is a suitable function
+satisfying f(1) = 1.
+
+(c) Suppose in the latter case that f(x) = x” and P(s) = s{y-—(v- 1s}7! where y > 1. Calculate
+the answer explicitly.
+
+5. Branching with immigration. Each generation of a branching process (with a single progenitor)
+is augmented by a random number of immigrants who are indistinguishable from the other members
+of the population. Suppose that the numbers of immigrants in different generations are independent
+of each other and of the past history of the branching process, each such number having probability
+generating function H(s). Show that the probability generating function G, of the size of the nth
+generation satisfies G,i1(s) = Gn(G(s))A(s), where G is the probability generating function of a
+typical family of offspring.
+
+6. Let Z, be the size of the nth generation in a branching process with E(s41) = (2—s)7!
+and Zp = 1. Let V, be the total number of generations of size r. Show that E(V|) = in?, and
+E(2V2 — V3) = ¢2? — gy’.
+
+51

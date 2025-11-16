@@ -1,0 +1,71 @@
+[4.14.2]-[4.14.11] Exercises Continuous random variables
+
+2. Let X be continuous with density function f(x) = C(x — x”), where wa < x < BandC >0.,
+(a) What are the possible values of a and 6?
+
+(b) What is C?
+
+3. Let X be arandom variable which takes non-negative values only. Show that
+
+ioe)
+
+le ¢)
+SoG = Dla, < X < Oily,
+
+i=1 i=1
+
+where A; = {i —1 < X < i}. Deduce that
+
+OO ie,¢]
+> P(X > i) S$ E(X) < 1+ DOP(X > 3).
+
+i=l i=1
+
+4. (a) Let X have a continuous distribution function F. Show that
+G) F(X) is uniformly distributed on [0, 1],
+Gi) — log F(X) is exponentially distributed.
+
+(b) A straight line / touches a circle with unit diameter at the point P which is diametrically opposed
+on the circle to another point Q. A straight line QR joins Q to some point R on J. If the angle POR
+between the lines PQ and QR is a random variable with the uniform distribution on [-57, 57],
+show that the length of PR has the Cauchy distribution (this length is measured positive or negative
+depending upon which side of P the point R lies).
+
+5. Let X have an exponential distribution. Show that P(X > s+.x |X > s) = P(X > x), for
+x,s > 0. This is the ‘lack of memory’ property again. Show that the exponential distribution is the
+only continuous distribution with this property. You may need to use the fact that the only non-negative
+monotonic solutions of the functional equation g(s + t) = g(s)g(t) for s,t > 0, with g(0) = 1, are
+of the form g(s) = e“*. Can you prove this?
+
+6. Show that X and Y are independent continuous variables if and only if their joint density function
+J factorizes as the product f(x, y) = g(x)h(y) of functions of the single variables x and y alone.
+
+7. Let X and Y have joint density function f(x, y) = 2e°-*-7, 0 < x < y < oo. Are they
+independent? Find their marginal density functions and their covariance.
+
+8. Bertrand’s paradox extended. A chord of the unit circle is picked at random. What is the
+
+probability that an equilateral triangle with the chord as base can fit inside the circle if:
+
+(a) the chord passes through a point P picked uniformly in the disk, and the angle it makes with a
+fixed direction is uniformly distributed on [0, 27),
+
+(b) the chord passes through a point P picked uniformly at random on a randomly chosen radius, and
+the angle it makes with the radius is uniformly distributed on [0, 27r).
+
+9. Monte Carlo. It is required to estimate J = So g(x) dx where 0 < g(x) < 1 for all x, as
+in Example (2.6.3). Let X and Y be independent random variables with common density function
+f(x) = 1if 0 <x <1, f(x) = 0 otherwise. Let U = Ipy<g(x)}, the indicator function of the event
+that Y < 9(X), andlet V = g(X),W = 5{g(X)+e(1—X)}. Show that E(U) = E(V) = E(W) = J,
+and that var(W) < var(V) < var(U), so that, of the three, W is the most ‘efficient’ estimator of J.
+
+10. Let X1, X2,..., Xn be independent exponential variables, parameter 1. Show by induction that
+S=X,+Xo.+---+ Xy has the P(A, n) distribution.
+
+11. Let X and Y be independent variables, [(A, m) and (A, n) respectively.
+
+(a) Use the result of Problem (4.14.10) to show that X + Y is [(A, m+n) when m and n are integral
+(the same conclusion is actually valid for non-integral m and 7).
+
+40
+

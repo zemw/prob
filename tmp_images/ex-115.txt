@@ -1,0 +1,64 @@
+[9.7.17]-[9.7.22] Exercises Stationary processes
+
+17. Let X be a continuous-time process. Show that:
+
+(a) if X has stationary increments and m(t) = E(X(t)) is a continuous function of t, then there exist
+a and f such that m(t) =a + ft,
+
+(b) if X has stationary independent increments and v(t) = var(X (t) — X (0)) is a continuous function
+of t then there exists 0” such that var(X(s +1) — X(s)) = 07t for alls.
+
+18. A Wiener process W is called standard if W(0) = 0 and W(1) has unit variance. Let W be a
+
+standard Wiener process, and let w be a positive constant. Show that:
+
+(a) aW(t/ o:”) is a standard Wiener process,
+
+(b) W(t +a) — W(q) is a standard Wiener process,
+
+(c) the process V, given by V(t) = tW(1/t) fort > 0, V(O) = 0, is a standard Wiener process,
+
+(d) the process W(1) — W(1 — 1) is a standard Wiener process on [0, 1].
+
+19, Let W be a standard Wiener process. Show that the stochastic integrals
+
+f t
+x= [ dW(u), r= f e "aw,  t>0,
+0 0
+
+are well defined, and prove that X(t) = W(t), andthat Y has autocovariance functioncov(Y (s), Y(¢t)) =
+3 (e784 —e 5) s <t.
+20. Let W be a standard Wiener process. Find the means of the following processes, and the autoco-
+variance functions in cases (b) and (c):
+(a) XO =|WE)I,
+b) Yt) = e¥,
+(c) Z(t) = fg Ww) du.
+Which of these are Gaussian processes? Which of these are Markov processes?
+21. Let W be a standard Wiener process. Find the conditional joint density function of W(t) and
+W (t3) given that W(t;) = W(t4) = 0, where t) < fo < 13 < 14.
+Show that the conditional correlation of W (tz) and W (t3) is
+
+p= (t4 — t3)(t2 — th)
+(tq — t2)(t3 — 1)
+22. Empirical distribution function. Let U,, U2,... be independent random variables with the
+uniform distribution on [0, 1]. Let 7; («) be the indicator function of the event {U; < x}, and define
+
+1 n
+Fa(x) = ~ Ue), O<x<1.
+mH
+
+The function Fy, is called the ‘empirical distribution function’ of the U;.
+
+(a) Find the mean and variance of F,, (x), and prove that ./n(F, (x) — x) 2, Y(x) asn — oo, where
+Y (x) is normally distributed.
+
+(b) What is the (multivariate) limit distribution of a collection of random variables of the form
+{./n(Fr(x;) — xj): 1 <i < kj}, where O < xy < x9 < +--+ < xy <1?
+
+(c) Show that the autocovariance function of the asymptotic finite-dimensional distributions of
+/n(Fy(x) — x), in the limit as n > oo, is the same as that of the process Z(t) = W(t) -¢W(1),
+0 <+ < 1, where W is a standard Wiener process. The process Z is called a ‘Brownian bridge’
+or ‘tied-down Brownian motion’.
+
+106
+

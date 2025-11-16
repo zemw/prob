@@ -1,0 +1,58 @@
+[1.8.37]-[1.8.39] Solutions Events and their probabilities
+
+and for WWW,
+e{(3)q)> +4} _ lle
+[G+ 5)+0-83G)3 9426"
+
+Then for € = a the first is SL. the second is 7 as you would expect if you look at Problem (1.8.35).
+37. Use induction. The inductive step employs Boole’s inequality and the fact that
+
+n+l n n
+P(U Ar) = P(An41) +P(U Ar) -P(Uu, Ane):
+r=1
+
+r=1 r=1
+
+38. We propose to prove by induction that
+
+P(U Ar) < STP CA) — $2 P(A, 9 Aj).
+r=1 r=]
+
+2<r<n
+
+There is nothing special about the choice of A; in this inequality, which will therefore hold with any
+suffix k playing the role of the suffix 1. Kounias’s inequality is then implied.
+
+The above inequality holds trivially when n = 1. Assume that it holds for some value of n (> 1).
+We have that
+
+n+l n n
+°(U Ar) =( Ar) + P(An+1) =P(Anai n U*)
+
+r=]
+
+<SoP(Ar) — SD P(r Ay) + P(Ang1) — P(Ant nU Ar)
+r=]
+
+2<r<n r=]
+n+1
+<SUP(Ar)— D0 P(Ar NAY)
+r=1 2<r<ntl
+
+since P(An41 9 At) < P(An41 MUSE Ar):
+
+39, We take n > 2. We may assume without loss of generality that the seats are labelled 1,2,...,n,
+and that the passengers are labelled by their seat assignments. Write F for the event that the last
+passenger finds his assigned seat to be free. Let K (> 2) be the seat taken by passenger 1, so that
+P(F) = (n— pT! he a, wherea, = P(F | K =k). Note thata, = 0. Passengers 2,3,..., K—1
+occupy their correct seats. Passenger K either occupies seat 1, in which case all subsequent passengers
+take their correct seats, or he occupies some seat L satisfying L > K. In the latter case, passengers
+K+1,K+2,...,L—1 are correctly seated. We obtain thus that
+
+1
+Oe = oe tht Mkt + 42 Fo + Mn), 2<k <n.
+
+Therefore a, = 5 for 2 <k <n, by induction, and so P(F) = 4(n — 2)/(n - 1).
+
+150
+

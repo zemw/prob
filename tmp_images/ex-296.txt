@@ -1,0 +1,62 @@
+Chains with finitely many states Solutions [6.5.7]-[6.6.2]
+
+7. A simple random walk which moves rightwards with probability p has a stationary measure
+ttn = A(p/q)", in the sense that m is a vector satisfying x = mP. It is not necessarily the case that
+this 7 has finite sum. It may then be checked that the recipe given in the solution to Exercise (6.5.3)
+yields x(i, j) = pi p3 / 07,s)eC P| P2 as stationary distribution for the given process, where C is the
+relevant region of the plane, and p; = p;/gq; and p; (= 1 — q;) is the chance that the ith walk moves
+rightwards on any given step.
+
+8. Since the chain is irreducible with a finite state space, we have that z; > 0 for all i. Assume the
+chain is reversible. The balance equations 7; pjj = 7; Pji give pi; = 7; Pji/nji. Let D be the matrix
+with entries 1/7; on the diagonal, and § the matrix (7; p;;), and check that P = DS.
+
+Conversely, if P = DS, then d;} Pij = a7! Pji, whence 7; = d;} / de | satisfies the detailed
+
+balance equations.
+1 Tj
+ij = =, | — Dij./T;-
+Pij Jai \ 7 Pij fT;
+
+Note that
+If the chain is reversible in equilibrium, the matrix M = (, [1 |; Di i) is symmetric, and therefore M,
+and, by the above, P, has real eigenvalues. An example of the failure of the converse is the transition
+matrix
+
+1 0 0
+
+which has real eigenvalues 1, and -4 (twice), and stationary distribution z = g, g, 5)- However,
+
+m1 pi3=O0F 5 = 703 p31, so that such a chain is not reversible.
+
+9. Simply check the detailed balance equations 7; pjj = 7; Pji-
+
+6.6 Solutions. Chains with finitely many states
+
+1. Let P = (pj : 1 < i, j < n) bea stochastic matrix and let C be the subset of R” containing
+all vectors x = (x1, %2,...,Xn) satisfying x; > O for all i and we x; = 1; for x e€ C, let
+[|x|] = max, {x;}. Define the linear mapping T : C > R” by T(x) = xP. Let us check that T is a
+continuous function from C into C. First,
+
+IT()|| = max 9 Pi} < a||x|
+
+L
+
+where
+a = max > pi}
+i
+hence ||7(x) — T(y)|| < @ |x — yl]. Secondly, T(x); = 0 for all j, and
+
+S > T(); = Soo ivi = Som dS pi =1.
+j ji i J
+
+Applying the given theorem, there exists a point w in C such that T (@) = 2, which is to say that
+n=aHP.
+
+2. Let P bea stochastic m x m matrix and let T be the m x (m + 1) matrix with (i, j)th entry
+
+f= { piy — 9: if j <m,
+4 1 ifj=m+],
+
+287
+

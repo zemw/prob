@@ -1,0 +1,73 @@
+Problems Solutions [7.11.22]-[7.11.24]
+
+22. If the two points are U and V then
+
+1 ,l
+a -wyir= [P| w—waudv =f,
+
+and therefore
+
+1 1X pl
+pen UW & asn —> oO,
+
+by the independence of the components. It follows that X,/./n 4 1/6 either by the result of
+Problem (7.11.3) or by the fact that
+
+x2 1
+
+n 6
+
+Xn _ 3)
+vn V6
+
+He yt), tte 1
+Jn Jbl” V6
+
+n 4/6
+23. The characteristic function of ¥j = X71 is
+
+cos y
+y2
+
+1. . 1 0°
+of) = sf (elt/* 4 eHt/*) dy = [ cos(t/x) dx = iif dy
+1) 0 lt}
+
+by the substitution x = |¢|/y. Therefore
+[o.<) 1 _
+o(t) =1- ii f dy =1-It|+ ole) ast + 0,
+|t| y
+
+where, integrating by parts,
+
+1l-c © si
+r= | Pay = f sme dua =.
+0 y Oo uu 2
+
+It follows that J, = n~! viel x! has characteristic function
+
+a\t|
+
+o(t/n)" = (1 -—— +0007) ea Ldd
+2n
+
+as t ~ oo, whence 27, / is asymptotically Cauchy-distributed. In particular,
+
+2 [© du 1
+P(|27, 1 = =x t .
+((2%/nl> 1) >= [y= 5 ast 00
+
+24. Let my, be a non-decreasing sequence of integers satisfying 1 < m, <n, my, — oo, and define
+
+_ Xi if |Xp| < mtn
+mk | sign(Xe) if [Xgl > mtn,
+
+noting that Y,,, takes the value +1 each with probability 5 whenever m, < k <n. Let Z, =
+
+n n
+1
+Pn # Zn) < S>PUXel > mn) < >> G79 ano,
+k=1 k=myn
+
+343
+

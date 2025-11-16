@@ -1,0 +1,60 @@
+[5.12.12]-[5.12.14] Solutions Generating functions and their applications
+
+where T,,—1 (1), T,—-1 (2), .. . are independent random variables, each being distributed as T, 1. Using
+the compounding formula (5.1.25), Hn(s) = sG(Hy_1(s)).
+
+12. We have that
+
+P(Zn > N, Zm = 0)
+
+P(Zn > N | Zm =0) =
+
+P(Zm = 0)
+=> hm =0| Zn =N+r)P(Zn =N +r)
+~ a P(Zm = 0)
+= BGEnon = ON Pn = N47)
+~ P(Zm = 0)
+P(Zm = O)N+! _ _ aN _ N
+s “PE = 0) 2 Pen =N+r)<P(Zm =0)" = Gn(0)”.
+
+13. (a) We have that Gw(s) = Gy(G(s)) = eM(G)-)) Also, Gy(s)l/" = e(G()—D/n. the
+same probability generating function as Gy but with A replaced by A/n.
+
+(b) We can suppose that H(0) < 1, since if H(0) = 1 then H(s) = 1 for all s, and we may take A = 0
+and G(s) = 1. We may suppose also that H(0) > 0. To see this, suppose instead that H(0) = 0
+so that H(s) = s" Dix sJhj+r for some sequence (hz) and some r > 1 such that hy > 0. Finda
+
+positive integer n such that r/n is non-integral; then H(s)!/" is not a power series, which contradicts
+the assumption that H is infinitely divisible.
+
+Thus we take 0 < H(0) < 1, andso0 < 1 — A(s) < 1 forO <s <1. Therefore
+log H(s) = log(1 — {1 — H(s)}) =A(-1+ A(s))
+
+where 4 = — log H(0) and A(s) is a power series with A(O) = 0, A(1) = 1. Writing A(s) =
+D721 ajs/, we have that
+
+di a
+—{H(sje*}/"| = tay ton!)
+ds/ n
+s=0
+asn —> oo. Now A(s)!/* is a probability generating function, so that each such expression is non-
+
+negative. Therefore aj; > 0 for all j, implying that A(s) is a probability generating function, as
+required.
+
+14. It is clear from the definition of infinite divisibility that a distribution has this property if and only
+if, for each n, there exists a characteristic function W, such that @(f) = w,(t)" for all ¢.
+
+(a) The characteristic functions in question are
+tt
+N(w, 07): ot) =e
+Poisson (A): (ft) = ere 1)
+
+x “
+TA,4): @@)= (=a) .
+
+In these respective cases, the ‘nth root’ % of @ is the characteristic function of the N(u/n, o2 /n),
+Poisson (A/n), and (A, 2/n) distributions.
+
+258
+

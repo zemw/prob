@@ -1,0 +1,66 @@
+[6.9.9]-[6.9.11] Solutions Markov chains
+
+The distribution of T is a mixture of an atom at 0 and the exponential distribution with parameter aA.
+
+9. The number N of sojourns in i has a geometric distribution P(N = k) = fea -—f),k>1,
+for some f < 1. The length of each of these sojourns has the exponential distribution with some
+parameter g;. By the independence of these lengths, the total time T in state i has moment generating
+
+function A
+(oT lq _ (85 ) __si—f)
+)= vy -A (35) =sq-yp70
+
+The distribution of T is exponential with parameter g;(1 — f).
+
+10. The jump chain is the simple random walk with probabilities 4. /(A + 2) and z/(A + 2), and with
+Poi = 1. By Corollary (5.3.6), the chance of ever hitting 0 having started at 1 is 4/4, whence the
+probability of returning to 0 having started there is f = 4/A. By the result of Exercise (6.9.9),
+
+A— pb
+
+E(e9%) =
+(e""°) are,
+
+as required. Having started at 0, the walk visits the state r > 1 with probability 1. The probability of
+returning to r having started there is
+
+a ee Qu
+fr= 3
+
++
+Atm Atm A+ yp’
+
+and each sojourn is exponentially distributed with parameter gy = A + yw. Now g-(1 — fr) =A-— Bp,
+whence, as above,
+ac
+Bef) =
+A-p—@
+The probability of ever reaching 0 from X (0) is ({z/ )* ©), and the time spent there subsequently
+is exponential with parameter 4 — yz. Therefore, the mean total time spent at 0 is
+
+n (HAE) - Sa
+
+A-—p Apo
+
+11. (a) The imbedded chain has transition probabilities
+
+hej = { 8kj/8k KF j,
+J 0 ifk = j,
+
+where g, = —gxg. Therefore, for any state /,
+
+m key TSK (BK; /8k) 1; 8j ~
+So ghey = = = Fj,
+yi 8: Doi Ti8i
+
+where we have used the fact that G = 0. Also i, > Oand >>, 7 = 1, and therefore # isa stationary
+distribution of Y.
+
+Clearly #% = xy for all k if and only if g, = >>; 7:8; for all k, which is to say that g; = gx for
+all pairs i, k. This requires that the ‘holding times’ have the same distribution.
+(b) Let T, be the time of the nth change of value of X, with To = 0, and let Un, = T,41 — Tn. Fixa
+state k, and let H = min{n > 1: Z, = kj}. Let y;(&) be the mean time spent in state i between two
+consecutive visits to k, and let 7;(k) be the mean number of visits to i by the jump chain in between two
+
+296
+

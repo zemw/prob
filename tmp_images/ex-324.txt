@@ -1,0 +1,64 @@
+Problems Solutions [6.15.29]-[6.15.31]
+
+From the process Y we may generate the process X in the following way. At the epoch of each
+disaster, we paint every member of the population grey. At any given time, the unpainted individuals
+constitute X, and the aggregate population constitutes Y. When constructed in this way, it is the case
+that Y(t) < X(t), so that Y is a Markov chain which is dominated by a chain having a stationary
+distribution. It follows that X has a stationary distribution 7 (the state 0 is persistent for X, and
+therefore persistent for Y also).
+
+Suppose X is in equilibrium. The times of disasters form a Poisson process with intensity 6. At
+any given time f, the elapsed time T since the last disaster is exponentially distributed with parameter
+5. At the time of this disaster, the value of X(t) is reduced to 0 whatever its previous value.
+
+It follows by averaging over the value of T that the generating function H(s) = )>7o.ps"zn of
+X(t) is given by
+
+1
+H(s)= [ de “G(s, u) du = mere) | x6/M)—-le~es-Dx gy
+0 ub 0
+
+by the substitution x = e~“”. The mean of X(t) is
+
+H'(l) = L Se" E(Y (u)) du = [ se! p (1 —e##) du = PH = *
+0 0 é+u S+ph
+
+29. Let G(|B|, s) be the generating function of X(B). If BNC = @, then X(BUC) = X(B)4+X(C),
+so that G(a+ 6, s) = G(a, s)G(f, s) for |s| < 1,a, 6 = 0. The only solutions to this equation which
+are monotone in & are of the form G(a, s) = e®“) for |s| < 1, and for some function A(s). Now any
+interval may be divided into n equal sub-intervals, and therefore G(q, s) is the generating function of
+an infinitely divisible distribution. Using the result of Problem (5.12.13b), A(s) may be written in the
+form A(s) = (A(s) — 1)A for some A and some probability generating function A(s) = iw ajs* . We
+now use (iii): if |B| = a,
+P(X(B)=>1) 1 -—e%@o-)
+= >
+P(X(B)=1) — ardaye**@0-D)
+
+asa | 0. Therefore ag + a; = 1, and hence A(s) = ag + (1 — ag)s, and X(B) has a Poisson
+distribution with parameter proportional to |B].
+
+1
+
+30. (a) Let M(r, s) be the number of points of the resulting process on R+ lying in the interval (7, s].
+Since disjoint intervals correspond to disjoint annuli of the plane, the process M has independent
+increments in the sense that M(r1, 51), M(r2, 52), ..., M(rn, sn) are independent whenever rj <
+Sy <Q <-+: <1 < Sp. Furthermore, forr <s andk > 0,
+
+x _ k j~An(s—r)
+P(M(r,s) =k) = P(N has k points in the corresponding annulus) = tAx(s as é
+
+(b) We have similarly that
+
+oo (Amrx2)f eax?
+P(Ra < x) = PCN has least & points in circle of radius x) = S> ——_—
+r!
+rk
+
+and the claim follows by differentiating, and utilizing the successive cancellation.
+
+31. The number X(S) of points within the sphere with volume S and centre at the origin has the
+Poisson distribution with parameter AS. Hence P(X (S$) = 0) = e745, implying that the volume V of
+the largest such empty ball has the exponential distribution with parameter A.
+
+315
+

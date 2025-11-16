@@ -1,0 +1,66 @@
+[3.8.4]-[3.9.6] Exercises Discrete random variables
+
+4. Let {X;:1 <r <n} be independent geometric random variables with parameter p. Show that
+Z= pan X, has a negative binomial distribution. [Hint: No calculations are necessary. ]
+
+5. Pepys’s problem}. Sam rolls 6n dice once; he needs at least n sixes. Isaac rolls 6(n + 1) dice;
+he needs at least n + 1 sixes. Who is more likely to obtain the number of sixes he needs?
+
+6. Let N be Poisson distributed with parameter 4. Show that, for any function g such that the
+expectations exist, E(Ng(NV)) = AEg(N + 1). More generally, if 5 = ys X,, where {X; : r > 0}
+are independent identically distributed non-negative integer-valued random variables, show that
+
+E(Sg(S)) = AE(g(S + Xo)Xo).
+
+3.9 Exercises. Simple random walk
+
+1. Let T be the time which elapses before a simple random walk is absorbed at either of the absorbing
+barriers at 0 and N, having started at k where 0 < k < N. Show that P(T < oo) = 1 and E(T*) < 00
+for all k > 1.
+
+2. For simple random walk S with absorbing barriers at 0 and N, let W be the event that the particle
+is absorbed at 0 rather than at NV, and let py, = P(W | So = k). Show that, if the particle starts at
+k where 0 < k < N, the conditional probability that the first step is rightwards, given W, equals
+PPr+1/ Pr. Deduce that the mean duration J; of the walk, conditional on W, satisfies the equation
+
+PPk+1Sk+1 — PeIk + (Pk — PPk+i)Jk-1 = —Pk, forO<k <N.
+Show that we may take as boundary condition Jo = 0. Find J; in the symmetric case, when p = 4.
+
+3. With the notation of Exercise (2), suppose further that at any step the particle may remain where
+it is with probability r where p + g +r = 1. Show that J; satisfies
+
+PPkAA S41 — U — 1) pe Jk + 9Pk—-1Sk-1 = —Pk
+and that, when p = q/p # 1,
+
+1
+Ji W {rt +p) —
+
+1—p%
+
+_ 2NpN (1 — p*)
+p-@q pk—-p
+
+4. Problem of the points. A coin is tossed repeatedly, heads turning up with probability p on each
+toss. Player A wins the game if m heads appear before n tails have appeared, and player B wins
+otherwise. Let pmn be the probability that A wins the game. Set up a difference equation for the pmn.
+What are the boundary conditions?
+
+5. Consider a simple random walk on the set {0, 1,2, ..., N} in which each step is to the right with
+probability p or to the left with probability g = 1 — p. Absorbing barriers are placed at 0 and N.
+Show that the number X of positive steps of the walk before absorption satisfies
+
+E(X) = 4{Dg—k +N — pe}
+where D, is the mean number of steps until absorption and p, is the probability of absorption at 0.
+
+6. (a) “Millionaires should always gamble, poor men never” [J. M. Keynes].
+(b) “If I wanted to gamble, I would buy a casino” [P. Getty].
+
+(c) “That the chance of gain is naturally overvalued, we may learn from the universal success of
+lotteries” [Adam Smith, 1776].
+
+Discuss.
+
++Pepys put a simple version of this problem to Newton in 1693, but was reluctant to accept the correct reply
+he received.
+
+22

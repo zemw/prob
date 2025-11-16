@@ -1,0 +1,62 @@
+[4.14.50]-[4.14.56] Exercises Continuous random variables
+
+(b) In sampling from the density function f, it is decided to use a rejection method: for given a > 0,
+we sample U and V repeatedly, and we accept X the first time that Y > 3(X — a). What is the
+optimal value of a?
+
+(c) Describe how to use these facts in sampling from the N (0, 1) distribution.
+
+50. Let S be a semicircle of unit radius on a diameter D.
+(a) A point P is picked at random on D. If X is the distance from P to S along the perpendicular to
+D, show E(X) = 1/4.
+(b) A point Q is picked at random on S. If Y is the perpendicular distance from Q to D, show
+E(Y) = 2/zx.
+51. (Set for the Fellowship examination of St John’s College, Cambridge in 1858.) ‘A large quantity
+of pebbles lies scattered uniformly over a circular field; compare the labour of collecting them one by
+one:
+(i) at the centre O of the field,
+(ii) at a point A on the circumference.’
+To be precise, if Lo and La are the respective labours per stone, show that E(Lo) = fa and
+E(La) = 32a/(97) for some constant a.
+Gii) Suppose you take each pebble to the nearer of two points A or B at the ends of a diameter. Show
+in this case that the labour per stone satisfies
+
+4a (16 17 1 2
+E(L =f — log(l 2exzldl =a.
+(Lap) {5 5 V2 + 5 log +v5h 3x 3a
+
+(iv) Finally suppose you take each pebble to the nearest vertex of an equilateral triangle ABC inscribed
+in the circle. Why is it obvious that the labour per stone now satisfies E(Lagc) < E(Lo)?
+Enthusiasts are invited to calculate E(L apc).
+
+52. The lines L, M, and N are parallel, and P lies on L. A line picked at random through P meets M
+at Q. A line picked at random through Q meets N at R. What is the density function of the angle ©
+that RP makes with L? [Hint: Recall Exercise (4.8.2) and Problem (4.14.4).]
+
+53. Let A denote the event that you can form a triangle with three given parts of a rod R.
+
+(a) R is broken at two points chosen independently and uniformly. Show that P(A) = i.
+
+(b) R is broken in two uniformly at random, the longer part is broken in two uniformly at random.
+Show that P(A) = log(4/e).
+
+(c) R is broken in two uniformly at random, a randomly chosen part is broken into two equal parts.
+Show that P(A) = 4.
+
+(d) In case (c) show that, given A, the triangle is obtuse with probability 3 — 2/2.
+
+54. You break a rod at random into two pieces. Let R be the ratio of the lengths of the shorter to the
+longer piece. Find the density function fr, together with the mean and variance of R.
+
+55. Let R be the distance between two points picked at random inside a square of side a. Show that
+E(R2) = za’, and that R*/a? has density function
+
+fr) r-4/r4n if0<r <1,
+rioj=
+4/r —-1—-2—r42sin7! Vr-!—2sin7! V1 —r-! if t<r <2.
+
+56. Show that a sheet of paper of area A cm? can be placed on the square lattice with period 1 cm in
+such a way that at least [A] points are covered.
+
+46
+

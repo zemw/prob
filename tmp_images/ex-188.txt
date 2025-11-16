@@ -1,0 +1,63 @@
+Problems Solutions [3.11.22]-[3.11.23]
+
+the Poisson distribution. Assume that “reasonably confident that n is all" means that P(X > n |X >
+n) < r for some suitable small number r. Assuming the Poisson approximation, P(X > n) < rP(X =
+n) if and only if
+
+ie St
+ee > i <r e7! ke
+k=n+1 — kan
+For any given r, the smallest acceptable value of n may be determined numerically. If r is small, then
+very roughly n x 1/r will do (e.g., ifr = 0.05 then n ~ 20).
+(d) No level p of improbability is sufficiently small for one to be sure that the person is specified
+uniquely. If p = 10~’q, then X is bin(10’, 10~7a), which is approximately Poisson with parameter
+a, Therefore, in this case,
+—a bot 64
+PX >1/X2 Ie ee a Lg gay,
+1-—e
+An acceptable value of p for a very petty offence might be p ~ 0.05, in which case a ~ 0.1 and so
+p = 10-8 might be an acceptable level of improbability. For a capital offence, one would normally
+require a much smaller value of p. We note that the rules of evidence do not allow an overt discussion
+along these lines in a court of law in the United Kingdom.
+
+22. The number G of girls has the binomial distribution bin(Qn, p). Hence
+2n on
+P(G > 2n-G)=P(G2>n)= k ,2n—k
+(G = 2n-G)=P(G Zn) (7) a
+
+k=n
+an\ = _k 2n q
+< Ye ekg? * = | | p"q" ——.,
+
+where we have used the fact that Cr) < C7") for all k.
+With p = 0.485 and n = 10*, we have using Stirling’s formula (Exercise (3.10.1)) that
+
+n\ nn @ 1 n 0.515
+——< 1 — 0.03)(1 + 0.03) }” ——
+(0 4 q-p” Tan ya + d 0.03
+0.515 9 \ 108 5
+= -—— -— 2 a
+
+tS ¢ at) < 1.23 x 10
+
+It follows that the probability that boys outnumber girls for 82 successive years is at least (1 — 1.23 x
+107>)®2 > 0.99899.
+
+23. Let M be the number of such visits. If k 4 0, then M > 1 if and only if the particle hits 0 before
+it hits N, an event with probability 1 — kKN—! by equation (1.7.7). Having hit 0, the chance of another
+visit to 0 before hitting N is 1 — N—!, since the particle at 0 moves immediately to 1 whence there is
+probability 1 — N —1 of another visit to 0 before visiting N. Hence
+
+k 1 r-l
+PM >| $=" = (1-5) (1-5) ; r>1,
+
+so that
+
+P(M = j | So=k) = P(M > j | So =k) —P(M > j +1] So = 0)
+
+k 1\f/-! 1
+={1-—)({1-— —, fel.
+N N N
+
+179
+

@@ -1,0 +1,74 @@
+Problems Exercises [5.12.14]-[5.12.19]
+
+(b) Show that if H(s) is the probability generating function of some infinitely divisible distribution
+on the non-negative integers then H(s) = exp{—A + AG(s)} for some A (> 0) and some probability
+generating function G(s).
+
+14. The distribution of a random variable X is called infinitely divisible if, for all positive integers n,
+
+” ys... YK”
+
+there exists a sequence Y t of independent identically distributed random variables
+
+such that X and yi” + yi” +...4¥ have the same distribution.
+
+(a) Show that the normal, Poisson, and gamma distributions are infinitely divisible.
+
+(b) Show that the characteristic function ¢ of an infinitely divisible distribution has no real zeros, in
+that @(t) ¥ 0 for all real t.
+
+15. Let X,, X2,... be independent variables each taking the values 0 or 1 with probabilities 1— p and
+Pp, where 0 < p < 1. Let N be a random variable taking values in the positive integers, independent
+of the X;, and write S = X, + Xo. +---+ Xy. Write down the conditional generating function of N
+given that § = N, in terms of the probability generating function G of N. Show that N has a Poisson
+distribution if and only if EQN \P = EQN | S = N) forall pand x.
+
+16. If X and Y have joint probability generating function
+
+{1 — (pi + p2)}”
+
+— Wedel) —
+Cx.) = EST) = et py
+
+where p, + p2 < 1,
+
+find the marginal mass functions of X and Y, and the mass function of X + Y. Find also the conditional
+probability generating function G x\y(s | y) = E(s* | ¥ = y) of X given that Y = y. The pair X,Y
+is said to have the bivariate negative binomial distribution.
+
+17. If X and Y have joint probability generating function
+Gx,y(s,t) = exp{a(s —) + 6@-D+yv6r—-D}
+
+find the marginal distributions of X, Y, and the distribution of X + Y, showing that X and Y have the
+Poisson distribution, but that X + Y does not unless y = 0.
+
+18. Define 60
+I(a,b)= [ exp(—a?u? - b*u-?) du
+0
+
+for a, b > 0. Show that
+
+(a) I(a,b) = a71(1, ab), (b) 91/86 = —2I (1, ab),
+(©) Ia, b) = Jme~? /(2a).
+
+(d) If X has density function (d/./x)e—°/*—8* for x > 0, then
+
+E(e*) =d 7 exp(-2,/e(g +0), t>~g.
+
++t
+
+1
+(e) If X has density function (20x37) Ze—!/2) for x > O, then X has moment generating function
+given by E(e'*) = exp{—V2r}, t > 0. [Note that E(X") = co forn > 1.]
+
+19. Let X, Y, Z be independent N(0, 1) variables. Use characteristic functions and moment gener-
+ating functions (Laplace transforms) to find the distributions of
+
+(a) UV=X/Y,
+
+(b) V=x~,
+
+(c) W= XYZ/VX2Y¥2 + ¥2Z2 + Z2 x2.
+
+59
+

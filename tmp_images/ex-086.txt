@@ -1,0 +1,71 @@
+Problems Exercises [6.15.8]~[6.15.13]
+
+defines the n-step transition probabilities of a persistent irreducible Markov chain on S whose
+first-passage probabilities are given by
+
+xj ae
+E
+
+where Jj;(1) = P(Xn =i, T >| Xo = j) and T = min{m > 0: Xm = j}.
+
+(b) Show that x is unique up to a multiplicative constant.
+
+(c) Let Tj = min{n > 1: Xn = j} and define hj; = P(Z; < T; | Xo =i). Show that x;hjj = xjhjj
+foralli,j €S.
+
+8. Renewal sequences. The sequence u = {uy : n > 0} is called a ‘renewal sequence’ if
+n
+ug = 1, un = >> fini forn > 1,
+
+for some collection f = {f, : n > 1} of non-negative numbers summing to 1.
+
+(a) Show that u is a renewal sequence if and only if there exists a Markov chain X on a countable
+state space S such that u, = P(X, =s | Xp =), for some persistent s € S and all n > 1.
+
+(b) Show that if u and v are renewal sequences then so is {uyvpy, in > O}.
+
+9. Consider the symmetric random walk in three dimensions on the set of points {(x, y, z) : x, y,Z
+0, +1, £2, ...}; this process is a sequence {X,, : 2 > 0} of points such that P(X,,1 = X, +€) =
+for € = (+1, 0, 0), (0, +1, 0), (0, 0, +1). Suppose that Xp = (0, 0, 0). Show that
+
+1\2" (Qn)! 1\2" /2n ni \?
+P(Xan = (0,0.0)) = (2) »> Gt jtkD2 = (5) (") a Ca 7A)
+
+i+j+k=n i+j+k=n
+
+1
+6
+
+and deduce by Stirling’s formula that the origin is a transient state.
+
+10. Consider the three-dimensional version of the cancer model (6.12.16). If « = 1, are the empires
+of Theorem (6.12.18) inevitable in this case?
+
+11. Let X bea discrete-time Markov chain with state space S = {1, 2}, and transition matrix
+
+l-a a
+P= .
+( B ip)
+Classify the states of the chain. Suppose that a6 > 0 and af # 1. Find the n-step transition
+
+probabilities and show directly that they converge to the unique stationary distribution as n — oo.
+For what values of a and 6 is the chain reversible in equilibrium?
+
+12. Another diffusion model. N black balls and N white balls are placed in two urns so that each
+contains N balls. After each unit of time one ball is selected at random from each urn, and the two
+balls thus selected are interchanged. Let the number of black balls in the first urn denote the state
+of the system. Write down the transition matrix of this Markov chain and find the unique stationary
+distribution. Is the chain reversible in equilibrium?
+
+13. Consider a Markov chain on the set S = {0, 1,2, ...} with transition probabilities p;;.1 = a;,
+Pi,g = 1 —a;, i > O, where (a; : i = 0) is a sequence of constants which satisfy 0 < a; < 1 for alli.
+Let bg = 1, bj = aga, ---a;_1 fori > 1. Show that the chain is
+
+(a) persistent if and only if bj > 0 asi — oo,
+
+(b) non-null persistent if and only if 7; bj < 00,
+
+and write down the stationary distribution if the latter condition holds.
+
+77
+

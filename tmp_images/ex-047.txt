@@ -1,0 +1,53 @@
+[4.12.4]-[4.13.6] Exercises Continuous random variables
+
+4. Maximal coupling. Show for discrete random variables X, Y that P(X = Y) < 1—- sary (X,Y),
+where dry denotes total variation distance.
+
+5. Maximal coupling continued. Show that equality is possible in the inequality of Exercise
+(4.12.4) in the following sense. For any pair X, Y of discrete random variables, there exists a pair X’,
+Y’ having the same marginal distributions as X, Y such that P(X’ = Y’) = 1 — ary (X, Y).
+
+6. Let X and Y be indicator variables with EX = p, EY = q. What is the maximum possible value
+of P(X = Y), as a function of p, g? Explain how X, Y need to be distributed in order that P(X = Y)
+be: (a) maximized, (b) minimized.
+
+4.13 Exercises. Geometrical probability
+
+With apologies to those who prefer their exercises better posed ...
+
+1. Pick two points A and B independently at random on the circumference of a circle C with centre
+O and unit radius. Let I be the length of the perpendicular from O to the line AB, and let © be the
+angle AB makes with the horizontal. Show that (IT, @) has joint density
+
+1
+f(p, 0) = ———, 0< p <1, 0<6 «<2zn.
+we/1
+
+— p2
+
+2. Let Sy; and Sz be disjoint convex shapes with boundaries of length b(S,), b(S2), as illustrated
+in the figure beneath. Let b(H) be the length of the boundary of the convex hull of S; and 5S,
+incorporating their exterior tangents, and b(X) the length of the crossing curve using the interior
+tangents to loop round S$; and Sj. Show that the probability that a random line crossing Sj also
+crosses S2 is {b(X) — b(H)}/b(S1). (See Example (4.13.2) for an explanation of the term ‘random
+line’.) How is this altered if S; and $5 are not disjoint?
+
+The circles are the shapes S, and S$). The shaded regions are denoted A and B, and b(X) is
+
+the sum of the perimeter lengths of A and B.
+3. Let S, and Sz be convex figures such that Sy C S;. Show that the probability that two independent
+random lines 4, and Az, crossing S;, meet within S> is 27r|S>| /b(S1)?, where |S2| is the area of Sz
+and b(S}) is the length of the boundary of S;. (See Example (4.13.2) for an explanation of the term
+‘random line’.)
+
+4. Let Z be the distance between two points picked independently at random in a disk of radius a.
+Show that E(Z) = 128a/(45s), and E(Z”) = a?.
+
+5. Pick two points A and B independently at random in a ball with centre O. Show that the probability
+that the angle AOB is obtuse is 3. Compare this with the corresponding result for two points picked
+at random in a circle.
+
+6. A triangle is formed by A, B, and a point P picked at random in a set S with centre of gravity G.
+Show that E/ABP| = |ABG].
+
+38

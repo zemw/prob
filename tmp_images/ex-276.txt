@@ -1,0 +1,62 @@
+Problems Solutions [5.12.37]-[5.12.38]
+
+where 1, @1,...,@5, @5 are the ten complex eleventh roots of unity. The wz come in conjugate
+pairs, and therefore no five of the ten terms in The (wx — 5)(@_ — 5) have a product which is a real
+polynomial. This is a contradiction.
+
+37. (a) Let H and T be the numbers of heads and tails. The joint probability generating function of
+H and T is
+
+Gu,r(s,t) = E(s™ 17) = Es" tN—#) = E{E((s/t)# 2% |N)} =E {e” (4 + my"
+
+where p = | — q is the probability of heads on each throw. Hence
+Gu,r(s,t) = Gn(qt + ps) = exp {A(gt + ps — 1)}.
+It follows that
+Gu(s)=Gurs,=eP8Y), Gp) = Gyr, = e4EY,
+
+so that Gy 7(s,t) = Gy(s)Gr(t), whence H and T are independent.
+(b) Suppose conversely that H and T are independent, and write G for the probability generating
+function of N. From the above calculation, Gy ,7(s, t) = G(gt + ps), whence Gy (s) = G(q + ps)
+and Gr(t) = G(qt + p), so that G(qt + ps) = G(q + ps)G(qt + p) for all appropriate s, +. Write
+f(@) = G(1 — x) to obtain fx + y) = f(x) f(y), valid at least for allO < x,y < min{p, q}.
+The only continuous solutions to this functional equation which satisfy f(0) = 1 are of the form
+f(x) = e for some yz, whence it is immediate that G(x) = e*@—1) where A = — LL.
+38. The number of such paths x containing exactly n nodes is 2"—!, and each such z satisfies
+P(B(x) = k) = P(Sn > k) where Sp = Y, + Yo +---+ Yy is the sum of n independent Bernoulli
+variables having parameter p (= 1 — q). Therefore E{X,(k)} = 2°-1P(S, > k). We set k = nf,
+and need to estimate P(S, > nf). It is a consequence of the large deviation theorem (5.11.4) that, if
+psB<1,
+
+P(Sy > nB)!/" —> inf {ePuay}
+
+t>0
+
+where M(t) = E(e*¥1) = (g + pe’). With the aid of a little calculus, we find that
+
+B _ 1-g .
+P(Sp > np)'/" > (3) (3) . ps<Bpe<i.
+
+B 1-8
+Hence 0 ify) <1
+Wy <i,
+BUM) > { if y(B) > 1,
+where
+
+B 1-B
+P 1—p
+y(B) =2 (3) ((=3)
+B 1—B
+is a decreasing function of 8. If p < 5s there is a unique B. € [p, 1) such that y(6,) = 1; if p > 5
+
+then 7 (8) > 1 for all 6 € [p, 1) so that we may take 6, = 1.
+Turning to the final part,
+
+P(Xn(Bn) = 1) < E{X,(8n)} > 0 if B > Be.
+As for the other case, we shall make use of the inequality
+
+E(N)*
+
+() PN £0) > Soy
+
+267
+

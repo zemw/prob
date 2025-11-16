@@ -1,0 +1,66 @@
+[4.14.10]-[4.14.11] Solutions Continuous random variables
+
+Hence var(W) < var(V) < var(U).
+
+10. Clearly the claim is true for n = 1, since the P(A, 1) distribution is the exponential distribution.
+Suppose it is true forn < k where k > 1, and consider the casen = k+ 1. Writing f;, for the density
+function of S,, we have by the convolution formula (4.8.2) that
+
+x x yk qktle—Ax px
+_ _y)dy= k-1,-Ayy p-MXx-Y) dy = “ae tl kl gy,
+Fit) [ Fx fr @ — y) dy [ Te”? * , r® bb”
+
+which is easily seen to be the P(A, k + 1) density function.
+
+11. (a) Let Z1, Z,..., Zmin be independent exponential variables with parameter 1. Then, by
+Problem (4.14.10), X’ = Z) +---+Zm is TA,m), ¥’ = Zm41 + +--+ Zmtn is T(A,n), and
+X’+ Y’ is [(A,m +n). The pair (X, Y) has the same joint distribution as the pair (X’, Y’), and
+therefore X + Y has the same distribution as X’ + Y’,i.e., P(A,m +n).
+
+(b) Using the transformation u = x + y, v = x/(x + y), with inverse x = uv, y = u(1 — v), and
+
+Jacobian
+v u
+
+=-4u
+l—-v -u ,
+
+=|
+
+we find that U = X + Y, V = X/(X + Y) have joint density function
+pinta
+
+fu,v, v) = fx,y (uv, ul — v)) |u| = Tomr@ wr” te —v)}t ley
+
+-{ qmtn umintemt| yt-1q — yt}
+Pm +n) Bim,n)
+
+for u > 0,0 <v < 1. Hence U and V are independent, U being (A, m +n), and V having the beta
+distribution with parameters m and n.
+(c) Integrating by parts,
+
+OO rm
+P(X >nh= / "le * dx
+t
+
+(m — 1)!
+amt m—1 ,-Ax ° oo ml m—2_,—Ax
+-|-Soe “|, +f mami
+war ty"!
+
+where X’ is '(A, m — 1). Hence, by induction,
+P(X a Gk Z
+( >= re er = PC <m).
+k=0
+
+(d) This may be achieved by the usual change of variables technique. Alternatively, reflect that, using
+the notation and result of part (b), the invertible mapping uw = x + y, v = x/(x + y) maps a pair
+X,Y of independent ([(A, m) and (A, n)) variables to a pair U, V of independent (T(A, m +7) and
+B(m, n)) variables. Now UV = X, so that (figuratively)
+
+“‘TA,m+n) x Bim,n) =T(A,m)”.
+
+Replace n by n — m to obtain the required conclusion.
+
+212
+

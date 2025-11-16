@@ -1,0 +1,64 @@
+Random walk Solutions [5.3.7]-[5.3.8]
+
+Hence,
+
+2 2
+5° Po(s) bey 2s
+p—52 750) = Gap
+
+CO
+S- s°E(T A 2m) =
+m=0
+
+Finally, using the hitting time theorem (3.10.14), (5.3.7), and some algebra at the last stage,
+
+CO o@) m CO m
+5 57" 2E|Som| = 4 > 5°" > 2kP(Sam = 2k) = 45> 5°" S> 2m fog (2m)
+
+m=0 m=0 k=1 m=0 k=1
+dQ me d F,(s)? 2s?
+$y 8" D faxlOm) = As 7 Fis? (1 — 52372
+
+m=0 k=1
+
+7. Let In be the indicator of the event {S, = 0}, so that S,41 = Sn + Xn41 + In. In equilibrium,
+E(Sg) = E(Sp) + E(X1) + Eo), which implies that P(Sg = 0) = E(U/g) = —E(X;1) and entails
+E(X,) < 0. Furthermore, it is impossible that P(Sg = 0) = 0 since this entails P(Sg = a) = 0 for all
+a < oo. Hence E(X1) < Oif S is in equilibrium. Next, in equilibrium,
+
+E(z°0) = E(eSnt1) = E(2#tXn4i tif] — In) + In}).
+Now,
+E{z5ntXn+i tin] — J,)} = E(z™ | Sp > O)E(Z*!)P(Sp > 0)
+Ege tXn+i tlh J,) = 2E(2*1)P(Sp = 0).
+
+Hence
+E(z°0) = E(z*1)[{E(2°0) — P(Sp = 0)} + zP(Sp = 0)]
+which yields the appropriate choice for E(z50),
+8. The hitting time theorem (3.10.14), (5.3.7), states that P(To, =) = (|b|/n)P(Sp = 6), whence
+
+b
+E(Top | Top < 00) = P(Top < 00) S>P(Sn = 5).
+n
+
+The walk is transient if and only if p 4 4, and therefore E(Tp, | Top < co) < oc if and only if
+pF 3. Suppose henceforth that p 4 5.
+The required conditional mean may be found by conditioning on the first step, or alternatively
+
+as follows. Assume first that p < g, so that P(Tpp < 00) = (p/q)? by Corollary (5.3.6). Then
+>, P(Sn = 8) is the mean of the number N of visits of the walk to b. Now
+
+p\?
+P(N =r)= (2) p”\(1-p), r>1,
+
+where p = P(S, = 0 for some n > 1) = 1 — |p — q|. Therefore E(N) = (p/q)?/\p — q| and
+
+b  (p/q)?
+(p/q’ |p—al
+
+E(Top | Top < 0) =
+
+We have when p > q that P(To, < 00) = 1, and E(71) = (p — qa. The result follows from
+the fact that E(7o») = bE(Z1).
+
+237
+

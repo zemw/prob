@@ -1,0 +1,63 @@
+Worked examples Exercises [2.3.1]-[2.4.2]
+2.3 Exercises. Discrete and continuous variables
+
+1. Let X be a random variable with distribution function F, and let a = (am : —-oO < m < cw)
+be a strictly increasing sequence of real numbers satisfying a_m™ — —oo and am — co asm —> ov.
+Define G(x) = P(X < am) when a,,-| <x < am, So that G is the distribution function of a discrete
+random variable. How does the function G behave as the sequence a is chosen in such a way that
+SUP,, |dm — Am—1| becomes smaller and smaller?
+
+2. Let X be a random variable and let g : R > R be continuous and strictly increasing. Show that
+Y = g(X) is arandom variable.
+
+3. Let X be arandom variable with distribution function
+
+0 ifx <0,
+P(X <x}=4 x if0<x <1,
+1 ifx>t.
+
+Let F be a distribution function which is continuous and strictly increasing. Show that Y = F -1(X)
+is arandom variable having distribution function F’. Is itnecessary that F be continuous and/or strictly
+increasing?
+
+4. Show that, if f and g are density functions, and 0 < A < 1, thenAf + (1 —A)g is a density. Is
+the product fg a density function?
+
+5. Which of the following are density functions? Find c and the corresponding distribution function
+F for those that are.
+
+—d
+cx
+@) f@)= { 0 otherwise.
+
+(b) f@®)=ce*(1+e%)7-2, xER.
+
+x>l,
+
+2.4 Exercises. Worked examples
+
+1. Let X be a random variable with a continuous distribution function F. Find expressions for the
+distribution functions of the following random variables:
+
+(a) X?, (b) VX,
+(c) sin X, (d) G-1(X),
+(e) F(X), (f) G-!(F(X)),
+
+where G is a continuous and strictly increasing function.
+
+2. Truncation. Let X be a random variable with distribution function F,, and let a < b. Sketch the
+distribution functions of the ‘truncated’ random variables Y and Z given by
+
+a if X <a,
+Y= < X ifa<X <b,
+
+{x tik s
+Z=
+b ifX>b,
+
+0 if|X|>b.
+
+Indicate how these distribution functions behave as a > —oo, b > oo.
+
+11
+

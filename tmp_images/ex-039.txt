@@ -1,0 +1,60 @@
+[4.2.4]-[4.4.5] Exercises Continuous random variables
+
+(a) Xj < X2q < X3 < Xq,
+(b) Xy > X2 < X3 < X4.
+
+4. Let{X; :r > 1}be independent and identically distributed with distribution function F satisfying
+F(y) < 1 for all y, and let Y(y) = min{k : X,; > y}. Show that
+
+slim PY) < BY(y)) = 1 eT!
+
+4.3 Exercises. Expectation
+
+1. For what values of a is E(|X|*) finite, if the density function of X is:
+
+(a) f(x) =e for x > 0,
+
+(b) f(x) = CU +x2)~™ for x € R?
+
+If a is not integral, then E({X|) is called the fractional moment of order a of X, whenever the
+expectation is well defined; see Exercise (3.3.5).
+
+2. Let X1, X2,..., Xn be independent identically distributed random variables for which E(X 1)
+exists. Show that, if m < n, then E(S,;,/S,) = m/n, where Sy = Xj + Xz +---+Xm.
+
+3. Let X be a non-negative random variable with density function f. Show that
+foe)
+E(X") = I rx’ P(X > x) dx
+0
+for any r > 1 for which the expectation is finite.
+
+4, Show that the mean yz, median m, and variance o” of the continuous random variable X satisfy
+
+(u —m)* <o?.
+
+5. Let X bea random variable with mean yz and continuous distribution function F. Show that
+a OO
+/ Fo)dx = [ [1 — F(@)] dx,
+—OO a
+
+if and only if a = pw.
+
+4.4 Exercises. Examples of continuous variables
+
+1. Prove that the gamma function satisfies P(t) = (¢ — 1) C@¢ — 1) fort > 1, and deduce that
+P@) = (a —1)! forn = 1,2,.... Show that T(4) = ./n and deduce a closed form for P(n + 5)
+forn =0,1,2,....
+
+2. Show, as claimed in (4.4.8), that the beta function satisfies B(a, b) =T(a)P(b)/T(a@+b).
+
+3. Let X have the uniform distribution on [0, 1]. For what function g does Y = g9(X) have the
+exponential distribution with parameter 1?
+
+4. Find the distribution function of a random variable X with the Cauchy distribution. For what
+values of a does |X| have a finite (possibly fractional) moment of order a?
+
+5. Log-normal distribution. Let Y = e* where X has the N(0, 1) distribution. Find the density
+function of Y.
+
+30
+

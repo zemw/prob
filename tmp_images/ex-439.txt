@@ -1,0 +1,167 @@
+Index
+
+Abbreviations used in this index: c.f. characteristic function; distn distribution; eqn equation;
+fn function; m.g.f. moment generating function; p.g.f. probability generating function; pr.
+process; r.v. random variable; r.w. random walk; s.r.w. simple random walk; thm theorem.
+
+A
+absolute value of s.r.w. 6.1.3
+
+absorbing barriers: s.r.w. 1.7.3,
+3.9.1, 5, 3.11.23, 25-26,
+12.5.4-5, 7; Wiener pr.
+12.9.22-3, 13.12.8-9
+
+absorbing state 6.2.1
+adapted process 13.8.6
+
+affine transformation 4.13.11;
+4.14.60
+
+age-dependent branching pr.
+5.5.1+2; conditional 5.1.2;
+honest martingale 12.9.2; mean
+10.6.13
+
+age, see current life
+
+airlines 1.8.39, 2.7.7
+
+alarm clock 6.15.21
+
+algorithm 3.11.33, 4.14.63, 6.14.2
+aliasing method 4.11.6
+
+alternating renewal pr. 10.5.2,
+10.6.14
+
+American call option 13.10.4
+
+analytic fn 13.12.14
+
+ancestors in common 5.4.2
+
+anomalous numbers 3.6.7
+
+Anscombe’s theorem 7.11.28
+
+antithetic variable 4.11.11
+
+ants 6.15.41
+
+arbitrage 3.3.7, 6.6.3
+
+Arbuthnot, J. 3.11.22
+
+arc sine distn 4.11.13; sample
+from 4.11.13
+
+arc sine law density 4.1.1
+
+arc sine laws for r.w.: maxima
+3.11.28; sojourns 5.3.5; visits
+3.10.3
+
+arc sine laws for Wiener pr.
+13.4.3, 13.12.10, 13.12.19
+
+Archimedes’s theorem 4.11.32
+arithmetic rv. 5.9.4
+attraction 1.8.29
+
+autocorrelation function 9.3.3,
+9.7.5, 8
+
+autocovariance function 9.3.3,
+9.5.2, 9.7.6, 19-20, 22
+
+autoregressive sequence 8.7.2,
+9.1.1, 9.2.1, 9.7.3
+
+average, see moving average
+
+B
+babies 5.10.2
+backward martingale 12.7.3
+bagged balls 7.11.27, 12.9.13~14
+balance equations 11.7.13
+Bandrika 1.8.35-36, 4.2.3
+bankruptcy, see gambler’s ruin
+Barker’s algorithm 6.14.2
+
+barriers: absorbing/retaining in
+rw. 1.7.3, 3.9.1-2, 3.11.23,
+25-26; hitting by Wiener pr.
+13.4.2
+
+Bartlett: equation 13.3.2—4;
+theorem 8.7.6, 11.7.1
+
+batch service 11.8.4
+
+baulking 8.4.4, 11.8.2, 19
+Bayes’s formula 1.8.14, 1.8.36
+bears 6.13.1, 10.6.19
+Benford’s distn 3.6.7
+Berkson’s fallacy 3.11.37
+
+Bernoulli: Daniel 3.3.4, 3.4.3—4;
+Nicholas 3.3.4
+
+430
+
+Bernoulli: model 6.15.36;
+renewal 8.7.3; shift 9.17.14;
+sum of rv.s 3.11.14, 35
+
+Bertrand’s paradox 4.14.8
+
+Bessel: function 5.8.5, 11.8.5,
+11.8.16; B. pr. 12.9.23,
+13.3.5-6, 13.9.1
+
+best predictor 7.9.1; linear 7.9.3,
+9.2.1-2, 9.7.1, 3
+
+beta fn 4.4.2, 4.10.6
+
+beta distn: b.—binomial 4.6.5;
+sample from 4.11.4—-5
+
+betting scheme 6.6.3
+
+binary: expansion 9.1.2; fission
+5.5.1
+
+binary tree 5.12.38; rw. on 6.4.7
+
+binomial rv. 2.1.3; sum of 3.11.8,
+11
+
+birth process 6.8.6; dishonest
+6.8.7; forward eqns
+6.8.4; divergent 6.8.7;
+with immigration 6.8.5;
+non-homogeneous 6.15.24;
+see also simple birth
+
+birth—death process: coupled
+6.15.46; extinction 6.11.3,
+
+5, 6.15.25, 12.9.10; honest
+6.15.26; immigration—death
+6.11.3, 6.13.18, 28; jump chain
+6.11.1; martingale 12.9.10;
+queue 8.7.4; reversible 6.5.1,
+6.15.16; symmetric 6.15.27;
+see also simple birth-death
+
+birthdays 1.8.30
+
+bivariate: Markov chain 6.15.4;
+negative binomial distn
+5.12.16; p.g-f. 5.1.3
+
+bivariate normal distn 4.7.5—6,
+12, 4.9.4.5, 4.14.13, 16, 7.9.2,
+

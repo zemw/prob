@@ -1,0 +1,63 @@
+Problems Solutions [13.12.8]-[13.12.8]
+
+The mean value of the final term is, by the Cauchy—Schwarz inequality, no larger than
+
+Combine this with (*) to obtain
+
+E(Myn,2m)> < E(M2. om) <
+
+—
+Te
+
+It follows that
+oo
+
+oo
+6
+n=] n=1
+implying that 77°, Mon-1 9n < 00 a.8. Therefore the series which defines W converges uniformly
+with probability 1 (along a subsequence), and hence W has (a.s.) continuous sample paths.
+
+Certainly W is a Gaussian process since W(t) is the sum of normal variables (see Problem
+(7.11.19)). Furthermore E(W (t)) = 0, and
+
+oo. .
+cov(W(s), W(t) = 2 4+ 2 singh) sink
+™ a k=1
+
+since the X; are independent with zero means and unit variances. It is an exercise in Fourier analysis
+to deduce that cov(W(s), W(t)) = min{s, f}.
+
+8. We wish to find a solution g(t, y) to the equation
+dg 17
+
+naan 3? b,
+(*) at 2 ay? lyl <
+
+satisfying the boundary conditions
+8O,y)=s0 flylsb, g@.y)=0 ifly|=d.
+
+Let g(t, y | d) be the N(d, ft) density function, and note that g(-,- | d) satisfies («) for any
+‘source’ d. Let
+
+oe)
+st. yy= S> Ck gee, y | 2kb),
+k=—00
+
+a series which converges absolutely and is differentiable term by term. Since each summand satisfies
+(*), so does the sum. Now g(0, y) is a combination of Dirac delta functions, one at each multiple of 2b.
+Only one such multiple lies in [—b, b], and hence g(y, 0) = dg. Also, setting y = b, the contributions
+from the sources at —2(k — 1)b and 2kb cancel, so that g(t, b) = 0. Similarly g(t, —b) = 0, and
+therefore g is the required solution.
+
+Here is an alternative method. Look for the solution to («) of the form e~*"" sin{ snr (y + b)/b};
+
+such a sine function vanishes when |y| = b. Substitute into («) to obtain Ay, = n272 / (8b2). A linear
+combination of such functions has the form
+
+~w
+b
+gt, y= Xu ane?" sin (=aS*) .
+
+423
+

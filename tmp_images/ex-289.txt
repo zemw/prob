@@ -1,0 +1,60 @@
+[6.3.10]-[6.3.10] Solutions Markov chains
+
+There are only finitely many subsets of entries of P, and so there exists f(n) such that R(P) < f(n)
+for all relevant n x n transition matrices P.
+
+(c) Consider the two chains with diagrams in the figure beneath. In the case on the left, we have that
+P11(5) = 9, and in the case on the right, we may apply the postage stamp lemma with a = n and
+
+b=n-1.
+3 3 4
+‘ 2
+2 4
+( )
+1 n
+
+10. Let X, be the number of green balls after n steps. Let e; be the probability that X, is ever zero
+when Xp = j. By conditioning on the first removal,
+
+j+2
+
+J ;
+= : ; 1s > 1,
+I agaeynittag¢pi JF
+with eg = 1. Solving recursively gives
+(x) ej = 1-1-2) 148 4...4 ER GA ,
+Pi P1P2°** Pj-1
+where ; ;
+p=. gg =i
+Tage)? 4% 2agt
+It is easy to see that
+j-l
+Qi 2
+y) Set ig gg as j > 00.
+xp PIP2°** Pj-1 j+1
+
+By the result of Exercise (6.3.6), we seek the minimal non-negative solution (e;) to (+), which is
+attained when 2(1 — e;) = 1, that is, ey = 4. Hence
+
+;—1
+1 gg: 9j-1 __!}
+2p Pip2;Pj-1 i +1
+
+For the second part, let d; be the expected time until j — 1 green balls remain, having started with j
+green balls and j + 2 red. We condition as above to obtain
+
+j
+d; = 1+ — —f{d; d;}.
+HT Ge pts}
+
+We set ej = dj — (2j + 1) to find that (j + 2)e; = jej41, whence e; = 5iG + 1)e;. The expected
+time to remove all the green balls is
+
+n n n
+Sod; = fe, +24 —D} = at 2 +e, 4G FD.
+j=l j=l j=l
+The minimal non-negative solution is found by setting e; = 0, and the conclusion follows by Exercise
+(6.3.7).
+
+280
+

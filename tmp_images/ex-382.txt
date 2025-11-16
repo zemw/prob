@@ -1,0 +1,67 @@
+Excess life Solutions [10.3.1]-[10.3.3]
+
+10.3 Solutions. Excess life
+
+1. Let g(y) = P(E) > y), assumed not to depend ont. By the integral equation for the distribution
+of E(1),
+
+t
+g(y) =1- Fe+y) +80 [ dF (x).
+
+Write h(x) = 1 — F(x) to obtain g(y)A(t) = A(t + y), for y,t > 0. With t = 0, we have that
+g(y)h(O) = A(y), whence g(y) = h(y)/h(O) satisfies g(t + y) = g(t)g(y), for y,t = 0. Now g is
+left-continuous, and we deduce as usual that g(t) = e~*" for some A. Hence F @“#)=1- et , and
+the renewal process is a Poisson process.
+
+2. (a) Examine a sample path of £. If E(t) = x, then the sample path decreases (with slope —1)
+until it reaches the value 0, at which point it jumps to a height X, where X is the next interarrival time.
+Since X is independent of all previous interarrival times, the process is Markovian.
+
+(b) In contrast, C has sample paths which increase (with slope 1) until a renewal occurs, at which they
+drop to 0. If C(s) = x and, in addition, we know the entire history of the process up to time s, the
+time of the next renewal depends only on the length of the spent period (i.e., x) of the interarrival time
+in process. Hence C is Markovian.
+
+3. (a) We have that
+
+t
+(*) PEW) <y)=Fe+y)~ [ GO +y—x)dm(x)
+
+where G(u) = 1 — F(u). Check the conditions of the key renewal theorem (10.2.7): g(t) = G(t+ y)
+satisfies:
+
+(i) g@) = 0,
+
+(i) 5° e@)dt < fo°[1 — Flu) du = E(X}) < &,
+iii) g is non-increasing.
+“We conclude, by that theorem, that
+
+1° Yd]
+lim P(E() < y) =1-— ~ | g(x) dx =| —[1l — F(x)] dx.
+i000 H JO ou
+
+(b) Integrating by parts,
+
+io @) xt 1 CO xt tl E(Xxit1)
+~1-F =— Fa) =— 1”,
+[ bb U (1 ax a r+1 dF) Bir +1)
+
+See Exercise (4.3.3).
+(c) As in Exercise (4.3.3), we have that E(E(t)") = for ry’ P(E) > y)dy, implying by («) that
+
+oo rt
+BEM) = EK Ot) + ff ry tea > tty — x) dmx) dy,
+y=0 /x=0
+whence the given integral equation is valid with
+[o.<)
+h(u) - | ry’! P(X, >ut+y)dy= E({(X1 _ u)t}").
+Now A satisfies the conditions of the key renewal theorem, whence
+s r 1 °° 1 r
+lim E(E(@)”) = — h(u) du = — y'dF(ut+ y)du
+t>00 LK JO KM JI0<u,y<00
+
+~f- "P(X )d
+= > => ——,.
+andy PRX > DaY= TD
+
+373

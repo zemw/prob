@@ -1,0 +1,62 @@
+(10.2.3]-[10.4.1] Exercises Renewals
+
+3. Show that E(Ty(1)44) = w(m(t)+4) for all k > 1, but that it is not generally true that E(Ty(r)) =
+pm(t).
+
+4, Show that, using the usual notation, the family {N(t)/t : 0 < t < oo} is uniformly integrable.
+How might one make use of this observation?
+
+5. Consider a renewal process N having interarrival times with moment generating function M, and
+let T be a positive random variable which is independent of N. Find E(s%@)) when:
+
+(a) T is exponentially distributed with parameter v,
+
+(b) N is a Poisson process with intensity 4, in terms of the moment generating function of T. What
+is the distribution of N(T) in this case, if T has the gamma distribution T'(v, b)?
+
+10.3 Exercises. Excess life
+
+1. Suppose that the distribution of the excess lifetime E(t) does not depend on t. Show that the
+renewal process is a Poisson process.
+
+2. Show that the current and excess lifetime processes, C(t) and E(t), are Markov processes.
+
+3. Suppose that X; is non-arithmetic with finite mean pj.
+(a) Show that E(t) converges in distribution as t > oo, the limit distribution function being
+
+* 1
+Ha) = [ “0 Fopiay.
+0
+(b) Show that the rth moment of this limit distribution is given by
+x’ dH(x) = ———~,,
+ih wrth)
+assuming that this is finite.
+(c) Show that
+t
+E(E(t)") = E({(X1 1) Ty) + | h(t —x)dm(x)
+0
+for some suitable function h to be found, and deduce by the key renewal theorem that E(E(1)") >
+EXT) / (ur + 1)} as t > oo, assuming this limit is finite.
+
+4. Find an expression for the mean value of the excess lifetime E(t) conditional on the event that
+the current lifetime C(t) equals x.
+
+5. Let M(t) = N(t) +1, and suppose that Xj has finite non-zero variance o?.
+(a) Show that var(Tya) — uM(t)) = o7(m(@) + DD.
+
+(b) In the non-arithmetic case, show that var(M (t))/t > a2 / we ast — 00.
+
+10.4 Exercise. Applications
+
+1. Find the distribution of the excess lifetime for a renewal process each of whose interarrival times is
+the sum of two independent exponentially distributed random variables having respective parameters
+A and yz. Show that the excess lifetime has mean
+
+1 Ae TOtHMEL
+
+— + ey
+
+ib AA +B)
+
+108
+

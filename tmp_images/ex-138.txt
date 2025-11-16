@@ -1,0 +1,64 @@
+Option pricing Exercises [13.9.1]-[13.10.1]
+
+13.9 Exercises. It6’s formula
+
+In the absence of any contrary indication, W denotes a standard Wiener process, and F; is the smallest
+o-field containing all null events with respect to which every member of (Wy, : 0 < u < t} is
+measurable.
+
+1, Let X and Y be independent standard Wiener processes. Show that, with R? = X? + Y?,
+
+a4 ty,
+Z= | dx [ee
+t [ Rs s+ 0 Rs Ss
+
+is a Wiener process. [Hint: Use Theorem (13.8.13).] Hence show that R? satisfies
+t
+R? =2/ Rs dWs + 2t.
+0
+
+Generalize this conclusion to n dimensions.
+
+2. Write down the SDE obtained via It6’s formula for the process ¥; = w; , and deduce that
+EW) = 317.
+
+3. Show that Y; = 1W,; is an It6 process, and write down the corresponding SDE.
+
+4. Wiener process on a circle. Let Y; = e!%_ Show that Y = X 1 +iX2 is a process on the unit
+circle satisfying
+
+dX, = —4Xx, dt—XzdW, dX2z= —4Xdt +X ,dw.
+
+5. Find the SDEs satisfied by the processes:
+
+(a) Xr = Wi/U +1),
+
+(b) X; = sin W,,
+
+(c) [Wiener process on an ellipse] X; = acos W;, Y; = b sin W;, where ab #4 0.
+
+13.10 Exercises. Option pricing
+
+In the absence of any contrary indication, W denotes a standard Wiener process, and F; is the smallest
+o-field containing all null events with respect to which every member of {W, : 0 < u < ft} is
+measurable. The process S; = exp((u — 507) +oW,) is a geometric Brownian motion, and r > 0
+is the interest rate.
+
+1. (a) Let Z have the N(y, 12) distribution. Show that
+
+E((ae~ —K)*) = acVt30 @ (eecry + r) —Ko (Ree +r)
+
+where ® is the N(0, 1) distribution function.
+(b) Let Q be a probability measure under which oW is a Wiener process with drift r — uw and
+instantaneous variance a2. Show for 0 <t<T that
+
+Eg((Sr — K)+ | F) = Sre"F—9 @ (dy, S:)) — K (dot, S:))
+where
+
+log(x/K) + (r + 402)(T —1)
+oV/T —-t ,
+
+129
+
+di(t,x) = dy(t, x) = dy (t,x) —oVT —t.
+

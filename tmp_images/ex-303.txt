@@ -1,0 +1,55 @@
+[6.9.2]-[6.9.4] Solutions Markov chains
+
+and use the equation G+! = G - G" to find that
+Ont] = —Han t+ ben,  Cn41 = AGn — ACh.
+
+Hence ay4.1 = —(u/A)cn+1 forn > 0, and the first difference equation becomes a,4, = —(A+)an,
+n > 1, which, subject to aj] = —y, has solution an = (—1)"“( + pytt, n > 1. Therefore
+Cn = (-D" haa + py?! for n > 1, and one may see similarly that by = —ay, dy = —cy for
+n > 1. Using the facts that ag = dy = 1 and by = co = 0, we deduce that )>P0 q(t” /n!)G" = P;
+where P; is given in part (a).
+
+(c) With x = (71, 72), we have that —yuzry + Amy = O and yum] — Am. = 0, whence 2, = (A/p) 72.
+In addition, m7] + 22 = lif, =A/A+ mW =1—7.
+
+2. (a) The required probability is
+
+P(X(t) = 2, Xt) =1| XO) =1) _ pia)p2 24)
+P(X (Bt) =1| X(0) = 1) p11 Gt)
+
+using the Markov property and the homogeneity of the process.
+(b) Likewise, the required probability is
+
+Pi2(t) poi (2t) p11)
+P11 3t) Pi)
+
+the same as in part (a).
+
+3. The interarrival times and runtimes are independent and exponentially distributed. It is the lack-
+of-memory property which guarantees that X has the Markov property.
+
+The state space is § = {0, 1,2, ...} and the generator is
+
+—r h 0 0
+Bw —-At+p) A 0
+h
+
+G=]| 0 bh -Q+H
+
+Solutions of the equation 7G = 0 satisfy
+Ang + em =0, Anjy—-Q+p4)aj + erj41 = Ofor 7 > 1,
+
+with solution 7; = mg(a/p)!. We have in addition that 53; 7; = 1ifa < wanda = {1- a/pyol.
+4. One may use the strong Markov property. Alternatively, by the Markov property,
+
+Pao. =31|¥e =i, Te =t, B) =PVay1 = 1 ¥n =i, In =D)
+for any event B defined in terms of {X(s) : s < T,}. Hence
+oO
+PO =F 1¥a= 8B) = [POs =F Ya =i Te = Or, (0 at
+=PUn41 = 31% =),
+so that Y is a Markov chain. Now q;; = P(¥n41 = J | Yn = #) is given by
+
+°° a
+dij - | pij@)ae™ dt,
+
+294

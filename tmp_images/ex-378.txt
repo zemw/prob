@@ -1,0 +1,58 @@
+Problems Solutions [9.7.22]-[9.7.22]
+
+where 5
+
+“Ty (uz — 1)? | 3 — up)? | (ug — 3)?
+ty ta —t] tz — to t4 — t3 ,
+Likewise U, and U4 have joint density function
+
+Q=
+
+1
+e 2k ua (ug — u1)”
+= where R= — + ————~.
+2m /t) (t4 — t1) th t4— ty
+Hence the joint density function of U2 and U3, given U; = U4, = 0, is
+1
+e 2 4 — t
+g(u2, 43) = 5)
+mV (t2 — t1)(t3 — t2) (4 — 83)
+where 3 3
+_ Ww (43 — uy)” U3
+Ig —t] tz -—t ty — 3
+
+Now g is the density function of a bivariate normal distribution with zero means, marginal variances
+
+2_ (2 —t)(3 — by) 2 __ (t4 — 3) (3 — fy)
+oy =, OF =
+t3-—t tq —t2
+and correlation
+p= o102, sf (t4 — 3) (tn — ty)
+3-1 (t4 — t2)(& — tH)
+See also Exercise (8.5.2).
+
+22. (a) The random variables {I;(x) : 1 < j <n} are independent, so that
+
+1 1-
+E(Fn(x)) =x, var(Fn(x)) = = var(I (x) = se
+
+By the central limit theorem, ./n{F,(x) — x} 2% Y(x), where Y (x) is N(O, x(1 — x)).
+
+(b) The limit distribution is multivariate normal. There are general methods for showing this, and
+here is a sketch. If 0 < x] < x2 < 1, then the number M2 (= nF (x2)) of the J; not greater than
+x2 is approximately N(nx2, nx2(1 — x2)). Conditional on {Mz = m}, the number M,; = nF (x1)
+is approximately N(mu, mu(1 — u)) where u = x,/x2. It is now a small exercise to see that the
+pair (M,, M2) is approximately bivariate normal with means nx,, nx2, with variances nx,(1 — x1),
+nx2(1 — x2), and such that
+
+E(M1 Mp) = E{ M)E(M, | M2)} = E(M3x1/x2) ~ nx,(1 — x2) +n? x 1x9,
+
+whence cov(M,, Mz) ~ nx (1 — x2). It follows similarly that the limit of the general collection is
+multivariate normal with mean 0, variances x; (1 — x;), and covariances cjj = x;(1 — x;).
+
+(c) The autocovariance function of the limit distribution is c(s,#) = min{s,t} — st, whereas, for
+O<s <t <1, we have that cov(Z(s), Z()) = s —ts — st +st = min{s, t} — st. It may be shown
+that the limit of the process {./n(Fn(x) — x) : 2 = 1} exists as n — oo, in a certain sense, the limit
+being a Brownian bridge; such a limit theorem for processes is called a ‘functional limit theorem’.
+
+369

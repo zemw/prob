@@ -1,0 +1,60 @@
+Problems Exercises [13.12.3]-[13.12.9]
+
+that the ratio r(¢) = u(t)/v(t) is continuous and strictly increasing with inverse function r—!, Show
+that W(t) = X(r7!(a)) / v(r—1(t)) is a standard Wiener process on a suitable interval of time.
+If c(s,t) =s(. —t) fors <+t < 1, express X in terms of W.
+
+3. Let B > 0, and show that U(t) = e—F! w(e2t — 1) is an Ornstein—-Uhlenbeck process if W is a
+standard Wiener process.
+
+4. Let V = {V(t) : t > 0} be an Ornstein—Uhlenbeck process with instantaneous mean a(t, x) =
+— Bx where B > 0, with instantaneous variance b(t, x) = o”, and with U (0) = u. Show that V(£) is
+N(ue~P#, o2(1 — e~ Ft) /(2B)). Deduce that V(t) is asymptotically N(0, 507/B) as t —> oo, and
+show that V is strongly stationary if V (0) is N(O, 5a? /B).
+
+Show that such a process is the only stationary Gaussian Markov process with continuous auto-
+covariance function, and find its spectral density function.
+
+5. Let D = {D(t) : t > 0} be a diffusion process with instantaneous mean a(t, x) = ax and
+instantaneous variance b(f, x) = Bx where a and 6 are positive constants. Let D(O) = d. Show that
+the moment generating function of D(t) is
+
+2adbe™ \
+
+MEO = exp (yea ey Fa
+
+Find the mean and variance of D(t), and show that P(D(t) = 0) > e 240/B ast —> oo.
+
+6. Let D be an Ornstein—Uhlenbeck process with D(0) = 0, and place reflecting barriers at —c and
+d where c,d > 0. Find the limiting distribution of D as t > oo.
+
+7. Let Xo, X1,... be independent N(0, 1) variables, and show that
+
+_ it. 2 S sin(kt)
+Wo exo ES rae
+
+defines a standard Wiener process on [0, zr].
+
+8. Let W bea standard Wiener process with W (0) = 0. Place absorbing barriers at —b and b, where
+b > 0, and let W2 be W absorbed at these barriers. Show that W(t) has density function
+
+1 & (y — 2kb)”
+“Vy, 1) = = —1) exp ¢ -~——_ 3, -b<y<b,
+ro J 20t eS P 2t y
+which may also be expressed as
+CO
+b
+F*(y,1) = So ane" sin (=o) ,  -b<y<b,
+
+n=1
+where an = b—! sin(fnm) and Ay = n?x?/(8b?).
+Hence calculate P(supp<; <, |W(s)| > 5) for the unrestricted process W.
+
+9. Let D bea Wiener process with drift m, and suppose that D(0) = 0. Place absorbing barriers at
+the points x = —a and x = b where a and b are positive real numbers. Show that the probability pg
+that the process is absorbed at —a is given by
+
+_ e2mb |
+Pa =~ om(at+b) — 1°
+
+131

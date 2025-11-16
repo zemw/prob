@@ -1,0 +1,64 @@
+(13.12.5]-[13.12.7] Solutions Diffusion processes
+
+5. Bartlett’s equation (see Exercise (13.3.2)) for M is
+
+aM _ 2am,
+ai 0
+“Ot + 2B
+
+subject to M(0, 0) = e°4. The characteristics satisfy
+
+dM dt 2d0
+
+0 1 200+ pe2”
+
+The solution is M = g(6e% /(a + 5 B@)) where g is a function satisfying g(@/(a + $B0)) = 4
+The solution follows as given.
+By elementary calculations,
+
+aM
+E(D(t)) = = de™,
+a)
+a2M d
+E(D(t)?) = —— = Ba oat (gat — 1) 4+d%er",
+362 go |
+
+whence var(D(t)) = (Bd/a)e™ (e! — 1). Finally
+
+at
+P(D(@®) = 0) =, lim M(, 6) = exp eer dade \
+
+BC — e**)
+
+which converges to e—2#4/8 as t + 00.
+
+6. The equilibrium density function g(y) satisfies the (reduced) forward equation
+
+d 1 d?
+(*) ~ dy 08? +> 2 dy = (bg) =
+where a(y) = —fy and b(y) = o” are the instantaneous mean and variance. The boundary conditions
+are 4
+1,248
+z0°— =0, =-c,d.
+Byg + 50 dy y c
+Integrate («) from —c to y, using the boundary conditions, to obtain
+d
+byg + 40? =0, -ce<y<d.
+dy
+
+Integrate again to obtain g(y) = Ae—F */ oF The constant A is given by the fact that fe 8) dy =1.
+
+7. First we show that the series converges uniformly (along a subsequence), implying that the limit
+exists and is a continuous function of t. Set
+
+mal sin(kt)
+Zmn(t) = > k Xk, Mmn = sup{|Zmn(t)| :O0<t<z}.
+
+k=m
+We have that
+n—1 ike —1 y2 —m—1)n—Il— lyy id
+© Why sap | Sy) ST aa SS
+O<t<mlgom k=m i=l | jam IG+D
+
+422
+

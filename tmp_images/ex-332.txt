@@ -1,0 +1,46 @@
+7
+
+Convergence of random variables
+
+7.1 Solutions. Introduction
+
+1. (a) El(eX)"| = |cl” + {Xl}.
+
+(b) This is Minkowski’s inequality.
+
+(c) Let e > 0. Certainly |X| > Je where J, is the indicator function of the event {|X| > ¢}. Hence
+E|X"| > EjlZ| = P(\X| > ©), implying that P(|X| > €) = 0 for all e > 0. The converse is trivial.
+2. (a) E({aX + bY}Z) = aE(XZ) + DE(YZ).
+
+(b) E(X + Y}?) + E({X — ¥}?) = 2E(X?) + 2E(¥?).
+
+(c) Clearly
+
+n 2 n
+E {5} ) = S>E(X?) +25 - E(X;X)).
+i=1 i=]
+
+i<j
+
+3. Let fu) = Ze, g(u) = 0, h(u) = —4e, for all u. Then de(f, g) + de(g,h) = 0 whereas
+de(f,h) = 1.
+
+4. Either argue directly, or as follows. With any distribution function F, we may associate a graph
+F obtained by adding to the graph of F vertical line segments connecting the two endpoints at each
+discontinuity of F. By drawing a picture, you may see that /2d(F, G) equals the maximum distance
+between F and G measured along lines of slope —1. It is now clear that d(F, G) = 0 if and only if
+F = G, and that d(F, G) = d(G, F). Finally, by the triangle inequality for real numbers, we have
+that d(F, H) < d(F,G)+d(G, H).
+
+5. Take X to be any random variable satisfying E(X 2) = oo, and define Xp = X for all n.
+
+7.2 Solutions. Modes of convergence
+1. (a) By Minkowski’s inequality,
+{B|X" |} < {BX — XI} + CELXh I;
+let n -> 00 to obtain lim infy—o9 E|X},| > E|X’"|. By another application of Minkowski’s inequality,
+{E[X5|}/" < {EUXn — XI} + {B1X"
+
+whence lim sup, _, 59 E|X},| < E|X"|.
+
+323
+

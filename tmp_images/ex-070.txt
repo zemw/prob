@@ -1,0 +1,67 @@
+Problems Exercises [5.12.31]-[5.12.39]
+
+for any positive integers m and n.
+
+31. If X has distribution function F and characteristic function ¢, show that for t > 0
+
+() [og yo2aF < Ft -Reo@,
+[1h] t
+
+1
+
+7 t
+(b) P (x > *) < : if [1 —Re b(v)] dv.
+
+32. Let X,, X2,... be independent variables which are uniformly distributed on [0, 1]. Let My, =
+
+max{X 1, X2,..., Xn} and show that n(1 — M,) ae X where X is exponentially distributed with
+parameter 1. You need not use characteristic functions.
+
+33. If X is either (a) Poisson with parameter A, or (b) F'(1, A), show that the distribution of Y,; =
+(X — EX)//var X approaches the N(0, 1) distribution as 1 > oo.
+(c) Show that
+
+nt
+
+2 1
+e"(1ine7 4...45) = as n > 00.
+2! n! 2
+
+34. Coupon collecting. Recall that you regularly buy quantities of some ineffably dull commodity.
+To attract your attention, the manufacturers add to each packet a small object which is also dull, and in
+addition useless, but there are n different types. Assume that each packet is equally likely to contain
+any one of the different types, as usual. Let 7, be the number of packets bought before you acquire
+
+a complete set of n objects. Show that n—!(T, — nlogn) 3 T, where T is arandom variable with
+distribution function P(T < x) = exp(—e™*), —0o < x < ow.
+
+35. Find a sequence (¢,,) of characteristic functions with the property that the limit given by ¢(t) =
+limy— oo Gn (t) exists for all t, but such that @ is not itself a characteristic function.
+
+36. Use generating functions to show that it is not possible to load two dice in such a way that the
+sum of the values which they show is equally likely to take any value between 2 and 12. Compare
+with your method for Problem (2.7.12).
+
+37. A biased coin is tossed N times, where N is a random variable which is Poisson distributed
+with parameter A. Prove that the total number of heads shown is independent of the total number of
+tails. Show conversely that if the numbers of heads and tails are independent, then N has the Poisson
+distribution.
+
+38. A binary tree is a tree (as in the section on branching processes) in which each node has exactly
+two descendants. Suppose that each node of the tree is coloured black with probability p, and white
+otherwise, independently of all other nodes. For any path 7 containing n nodes beginning at the root
+of the tree, let B(zr) be the number of black nodes in 7, and let X,(k) be the number of such paths z
+for which B(zr) > k. Show that there exists 6, such that
+
+0 ifB> Be,
+B(Xa(n)) -> { in > Be
+co if B < Be,
+and show how to determine the value Be.
+Prove that 0 if
+P(Xn (Bn) > 1) = { 1B > Bes
+1 if B < Be.
+
+39. Use the continuity theorem (5.9.5) to show that, as n > ov,
+(a) if Xp is bin(n, 4/n) then the distribution of X, converges to a Poisson distribution,
+
+61

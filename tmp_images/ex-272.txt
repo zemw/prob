@@ -1,0 +1,74 @@
+Problems Solutions [5.12.25]-[5.12.27]
+
+25. (a) See the solution to Problem (5.12.24).
+(b) This is much longer. Having established the hint, the rest follows thus:
+
+OO
+fray) / Fa) fy —x)dx
+00
+
+OO
+== / {F@) +f —x)} dx 4 Jey) =
+00
+
+(4+ y2) +780)
+
+2
+m(4+y?)
+
+where
+o.¢)
+r= | {xf(x) + (vy —x) f(y —x)} dx
+—ooO
+
+- jj i 2) _ ayy _
+= yi FE {log(1 + x“) — log(1 + (y — x) | =0.
+
+Finally,
+
+z=2 2z) = ————.
+fz(@) = 2fx+y Q2z) nde
+26. (a) Xj + Xg+---+ Xn.
+(b) X; —X - where X, and X 1 are independent and identically distributed.
+
+(c) Xn, where N is a random variable with P(N = j) = pj; for 1 < j < a, independent of
+X1, X2,...,Xn-
+
+(d) we Zj where Z), Z2,... are independent and distributed as X,, and M is independent of the
+Z; with P(M = m) = (3)+! for m > 0.
+(e) YX, where Y is independent of X, with the exponential distribution parameter 1.
+
+itx
+o(t) = [ 28 ay.
+
+00 etx + etx
+
+27. (a) We require
+
+First method. Consider the contour integral
+
+2 e tz
+k= | ee
+where C is a rectangular contour with vertices at +K,+K +i. The integrand has a simple pole at
+1
+Z= 5i , with residue e~ 2° /(iz). Hence, by Cauchy’s theorem,
+1
+Qe 2! 1
+
+> >= i as K — oo.
+l+e cosh(5t)
+
+Ik
+
+Second method. Expand the denominator to obtain
+
+1
+
+co
+a _1)k _
+cosh(7x) 2 1)* exp{—(2k + Iz}.
+
+Multiply by e!* and integrate term by term.
+
+263
+

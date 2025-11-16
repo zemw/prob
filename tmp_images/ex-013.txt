@@ -1,0 +1,69 @@
+[1.5.8]-[1.8.3] Exercises Events and their probabilities
+
+(a) Show that A is independent of B, and that B is independent of C.
+(b) Is A independent of C?
+
+(c) Do these results hold if boys and girls are not equally likely?
+
+(d) Do these results hold if Jane has four children?
+
+8. Galton’s paradox. You flip three fair coins. At least two are alike, and it is an evens chance that
+the third is a head or a tail. Therefore P(all alike) = }. Do you agree?
+
+9. Two fair dice are rolled. Show that the event that their sum is 7 is independent of the score shown
+by the first die.
+
+1.7 Exercises. Worked examples
+
+1. There are two roads from A to B and two roads from B to C. Each of the four roads is blocked by
+snow with probability p, independently of the others. Find the probability that there is an open road
+from A to B given that there is no open route from A to C.
+
+If, in addition, there is a direct road from A to C, this road being blocked with probability p
+independently of the others, find the required conditional probability.
+
+2. Calculate the probability that a hand of 13 cards dealt from a normal shuffled pack of 52 contains
+exactly two kings and one ace. What is the probability that it contains exactly one ace given that it
+contains exactly two kings?
+
+3. Asymmetric random walk takes place on the integers 0, 1, 2, ..., N with absorbing barriers at 0
+and N, starting at k. Show that the probability that the walk is never absorbed is zero.
+
+4. The so-called ‘sure thing principle’ asserts that if you prefer x to y given C, and also prefer x to
+y given C°, then you surely prefer x to y. Agreed?
+
+5. A pack contains m cards, labelled 1,2,...,m. The cards are dealt out in a random order, one
+by one. Given that the label of the kth card dealt is the largest of the first k cards dealt, what is the
+probability that it is also the largest in the pack?
+
+1.8 Problems
+
+1. A traditional fair die is thrown twice. What is the probability that:
+(a) a six tums up exactly once?
+
+(b) both numbers are odd?
+
+(c) the sum of the scores is 4?
+
+(d) the sum of the scores is divisible by 3?
+
+2. A fair coin is thrown repeatedly. What is the probability that on the nth throw:
+(a) ahead appears for the first time?
+
+(b) the numbers of heads and tails to date are equal?
+
+(c) exactly two heads have appeared altogether to date?
+
+(d) at least two heads have appeared to date?
+
+3. Let Fand ¢ be o-fields of subsets of Q.
+
+(a) Use elementary set operations to show that ¥ is closed under countable intersections; that is, if
+Aj, A2,... are in F, then so is (}; A;.-
+
+(b) Let H = FN G be the collection of subsets of Q lying in both F and 3. Show that # is a o-field.
+
+(c) Show that FU G, the collection of subsets of Q lying in either F or G, is not necessarily a o-field.
+
+4
+

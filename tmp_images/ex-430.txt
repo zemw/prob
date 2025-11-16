@@ -1,0 +1,65 @@
+Problems Solutions [13.12.3]-[13.12.4]
+
+If u(s) = s, v(t) = 1—¢, thenr(t) =t/(1 — 8), andr7!(w) = w/(1 + w) for 0 < w < oo. In
+this case X(t) = (1 —1)Wet/d —2)).
+
+3. Certainly U is Gaussian with zero means, and U(0) = 0. Now, with s; = e2ht _ 1,
+
+E{UG +h) |UQ) =u} =e FOR Ws 44) | WO) = we}
+= ue PUT) Bt — y — Buh + o(h),
+
+whence the instantaneous mean of U is a(t, u) = —Bu. Secondly, 5,44 = s¢ + 2Berht h + o(h), and
+therefore
+
+E{UG +h)? | Ut) =u} =e POR Ws, 44)* | Wor) = ue}
+= e BUF) (4207! 4 2B 67Pth + o(h))
+= u* — 2Bh(u? — 1) + o(h).
+
+It follows that
+
+E{\U@ +h) — U@/? | UG) =u} =u? — 2Bh(u? — 1) — 2u(u — Buh) + v? + o(h)
+= 28h + o(h),
+
+and the instantaneous variance is b(t, u) = 26.
+
+4. Bartlett’s equation (see Exercise (13.3.4)) for M(t, 0) = E(e9") is
+
+OM _
+
+aM
+—— = — $9 ——
+ot B
+
+1242
+with boundary condition M(6, 0) = e, Solve this equation (as in the exercise given) to obtain
+
+1 2
+M(t, @) = exp {ee + 50° . x _ |
+
+the moment generating function of the given normal distribution. Now M(t, @) > exp{ 50707 /(2B)}
+as tf — oo, whence by the continuity theorem V(t) converges in distribution to the N(0, 507/ B)
+distribution.
+
+If V (0) has this limit distribution, then so does V(t) for all +. Therefore the sequence (V(f1), ...,
+V (tn)) has the same joint distribution as (V(t, +A),...,W(tn +)) for all h, thy..., ta, whenever
+V (0) has this normal distribution.
+
+In the stationary case, E(V(#)) = 0 and, for s < f,
+
+cov(V(s), V(t) =E{V(s)E(V(t) | V(s))} =E{V(s)2e7F E91 = c@e AIFS
+
+where c(0) = var(V(s)); we have used the first part here. This is the autocovariance function
+of a stationary Gaussian Markov process (see Example (9.6.10)). Since all such processes have
+autocovariance functions of this form (1.e., for some choice of 8), all such processes are stationary
+Ornstein—Uhlenbeck processes.
+
+The autocorrelation function is p(s) = e ®lsl, which is the characteristic function of the Cauchy
+
+density function
+1
+
+Ba{i + (@/B)?}"
+421
+
+f@)= xeER
+

@@ -1,0 +1,66 @@
+Problems Exercises [7.9.6]-[7.11.5]
+
+6. Let (2, F, P) be a probability space and let % be a sub-o-field of F. Let H be the space of
+g-measurable random variables with finite second moment.
+
+(a) Show that H is closed with respect to the norm || - |j2.
+
+(b) Let Y be a random variable satisfying E(Y 2) < co, and show the equivalence of the following
+two statements for any M € H:
+G) E{(Y — M)Z} = 0 forall Z € H,
+(ii) E{(Y — M)Ig} = 0 forall G € G.
+
+7.10 Exercises. Uniform integrability
+
+1. Show that the sum {X, + Y,} of two uniformly integrable sequences {X,} and {Y,} gives a
+uniformly integrable sequence.
+
+2. (a) Suppose that X;, > X where r > 1. Show that {|X,|" : > 1} is uniformly integrable, and
+deduce that E(X7,) — E(X") if r is an integer.
+
+(b) Conversely, suppose that {|X,|" : » = 1} is uniformly integrable where r > 1, and show that
+Xn > XifXp > X.
+
+3. Let g : [0, 00) — [0, co) be an increasing function satisfying g(x)/x — oo as x — oo. Show
+
+that the sequence {X, : n > 1} 1s uniformly integrable if sup, E{g(|Xn|)} < oo.
+
+4. Let {Z, : n > O} be the generation sizes of a branching process with Zo = 1, E(Z,) = 1,
+
+var(Z1) #4 0. Show that {Zy, : n > 0} is not uniformly integrable.
+
+5. Pratt’s lemma. Suppose that Xn < Yn < Zn where X, > X,Y, —> Y,and Z, + Z. If
+
+E(Xn) > E(X) and E(Z,) > E(Z), show that E(Y,) > E(Y).
+
+6. Let {X, :n > 1} be a sequence of variables satisfying E(sup, |Xn|) < oo. Show that {Xp} is
+uniformly integrable.
+
+7.11 Problems
+
+1. Let X, have density function
+
+n
+
+fn) = al +n2x2)’ n>.
+
+With respect to which modes of convergence does X», converge as n — 00?
+
+2. (i) Suppose that X, 7s X and Y, °s Y, and show that X, + Y, “+ X + Y. Show that the
+corresponding result holds for convergence in rth mean and in probability, but not in distribution.
+
+(ii) Show that if X, 2S: xX and Yn 2S: ¥ then X nin +; XY. Does the corresponding result hold
+for the other modes of convergence?
+
+3. Let g :R — R be continuous. Show that g(X») an g(X) if Xn as Xx.
+
+4. Let Yj, Y2,... be independent identically distributed variables, each of which can take any value
+in {0, 1,..., 9} with equal probability b- Let Xn = Ty Y; 10~#. Show by the use of characteristic
+
+functions that X, converges in distribution to the uniform distribution on [0, 1]. Deduce that X,, 2s y
+for some Y which is uniformly distributed on [0, 1].
+
+5. Let N(t) be a Poisson process with constant intensity on R.
+
+91
+

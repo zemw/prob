@@ -1,0 +1,69 @@
+Problems Solutions [4.14.35]-[4.14.37]
+
+It follows that L; = — log F(X;), 1 <i <n, isasequence of independent variables with the expo-
+nential distribution. The order statistics L(y), ..., L(,) are in order — log F(X(n)), ..., — log F(X),
+since the function — log F(-) is non-increasing. Applying the result of Problem (4.14.33), Ey =
+—n log F(X my) and
+
+Erp =—-(a+1- r) {log F(X(n41-r) — log F(X(n42-r))}> l<r<n,
+
+are independent with the exponential distribution. Therefore exp(—£,), 1 <r <n, are independent
+with the uniform distribution.
+
+35. One may be said to be in state j if the first 7 — 1 prizes have been rejected and the jth prize has
+just been viewed. There are two possible decisions at this stage: accept the jth prize if it is the best
+so far (there is no point in accepting it if it is not), or reject it and continue. The mean return of the
+first decision equals the probability j/n that the jth prize is the best so far, and the mean return of the
+second is the maximal probability f(j) that one may obtain the best prize having rejected the first /.
+Thus the maximal mean return V(j) in state j satisfies
+
+VQ) = max{j/n, f(/)).
+
+Now j/n increases with j, and f(j) decreases with j (since a possible stategy is to reject the (j + 1)th
+prize also). Therefore there exists J such that j/n < f(j) if and only if 7 < J. This confirms the
+optimal stategy as having the following form: reject the first J prizes out of hand, and accept the
+subsequent prize which is the best of those viewed so far. If there is no such prize, we pick the last
+prize presented.
+
+Let I; be the probability of achieving the best prize by following the above strategy. Let Az be
+the event that you pick the kth prize, and B the event that the prize picked is the best. Then,
+
+n 3 P(B | Ax)P(Ay) 3 (=) ( J 7) J > }
+l= K)P(Ag) = —}{—.--}=-— —.,
+k=J+1 pert 77 \EO1 MAF ko!
+
+and we choose the integer J which maximizes this expresion.
+
+When n is large, we have the asymptotic relation Ty ~ (J/n)log(n/J). The maximum of the
+function hy(x) = (x/n) log(n/x) occurs at x = n/e, and we deduce that J ~ n/e. [A version of this
+problem was posed by Cayley in 1875. Our solution is due to Lindley (1961).]
+
+36. The joint density function of (X, Y, Z) is
+
+fQ,y,2) = exp{—$(r? — 2ax — Quy — 2vz+4* +? +-v?)}
+
+1
+(2x07)3/2
+
+where r2 = x* + y* + z*. The conditional density of X, Y, Z given R = r is therefore proportional
+to exp{Ax + zy + vz}. Now choosing spherical polar coordinates with axis in the direction (A, 2, v),
+
+we obtain a density function proportional to exp(acos@) sin@, where a = r\/A24+ p24 v2. The
+constant is chosen in such a way that the total probability is unity.
+
+37. (a) ¢'(x) = —x¢(x), so Hi (x) = x. Differentiate the equation for Hy, to obtain H,41 (x) =
+xHpy(x) — H/(x), and use induction to deduce that Hy, is a polynomial of degree n as required.
+Integrating by parts gives, when m <n,
+
+OO oO
+/ Hn (*) Hn (x)(x) dx = (-1)" / Hn (x) (x) dx
+—cO —0O
+OO
+= (1! / HE (x)6°-Y (x) dx
+—-cO
+fo)
+=.= (-yn / HE (x60 (x) dex,
+—-cO
+
+221
+

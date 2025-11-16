@@ -1,0 +1,63 @@
+[6.4.6]-[6.4.10] Solutions Markov chains
+
+Now X is persistent, since otherwise p;;(n) — 0 for alli, 7. The coupling argument in the proof
+of the ergodic theorem (6.4.17) is valid, so that pgj(n) — ppj(n) > 0 as n — on, implying that
+Oa; = ap; for alla, d, j.
+
+6. Just check that m satisfies x = xP and >, a, = 1.
+
+7. Let Xp be the Markov chain which takes the value r if the walk is at any of the 2” nodes at level
+r. Then X, executes a simple random walk with retaining barrier having p = 1 — g = Z, and it is
+thus transient by Example (6.4.15).
+
+8. Assume that X, includes particles present just after the entry of the fresh batch Y,. We may write
+
+Xn
+Xn41 = >_ Bin + Yn
+i=l
+
+where the B; , are independent Bernoulli variables with parameter 1 — p. Therefore X is a Markov
+chain. It follows also that
+
+Gn41(s) = E(s*"+1) = Gn(p +. qs)ero-),
+
+In equilibrium, Gni, = Gn = G, where G(s) = G(p+ gs)e*s —). There is a unique stationary
+distribution, and it is easy to see that G(s) = e*6 —)/P must therefore be the solution. The answer is
+the Poisson distribution with parameter )/ p.
+
+9. The Markov chain X has a uniform transition distribution pj, = 1/() + 2),O0<k < ft.
+Therefore,
+
+E(Xn) = E(E(Xn | Xn—1)) = 9 (1+ E(Xn-1)) =
+=1-(5)" + "Xo.
+
+The equilibrium probability generating function satisfies
+
+G(s) = E(s*") = E(E(s* |X 1)) =—E _ ast?
+i (1—s)(Xn +2) f’
+
+whence d
+qe 1 — s)G(s)} = —sG(s),
+
+subject to G(1) = 1. The solution is G(s) = e*~!, which is the probability generating function of
+the Poisson distribution with parameter 1.
+
+10. This is the claim of Theorem (6.4.13). Without loss of generality we may take s = 0 and the y; to
+be non-negative (since if the y; solve the equations, then so do y; + c for any constant c). Let T be the
+matrix obtained from P by deleting the row and column labelled 0, and write T” = (¢; y(n): i, j #0).
+Then T” includes all the n-step probabilities of paths that never visit zero.
+
+We claim first that, for all i, j it is the case that t;;(n) > Oasn — oo. The quantity #;;(m) may
+be thought of as the n-step transition probability from i to j in an altered chain in which s has been
+made absorbing. Since the original chain is assumed irreducible, all states communicate with s, and
+therefore all states other than s are transient in the altered chain, implying by the summability of t;; ()
+(Corollary (6.2.4)) that tj; (2) — 0 as required.
+
+Iterating the inequality y > Ty yields y > T” y, which is to say that
+
+[o.@) [o.@)
+wz day = minOr+s) QD) wj@), 121.
+j=l ~ j=rtl
+
+284
+

@@ -1,0 +1,73 @@
+Branching processes revisited Solutions [6.6.5]-[6.7.2]
+
+as required.
+
+5. The first part follows from the fact that 21/ = 1 if and only if rU = 1. The second part follows
+from the fact that 7; > 0 for alli if P is finite and irreducible, since this implies the invertibility of
+I-P+U.
+
+6. The chessboard corresponds to a graph with 8 x 8 = 64 vertices, pairs of which are connected
+by edges when the corresponding move is legitimate for the piece in question. By Exercises (6.4.6),
+(6.5.9), we need only check that the graph is connected, and to calculate the degree of a corner vertex.
+
+(a) For the king there are 4 vertices of degree 3, 24 of degree 5, 36 of degree 8. Hence, the number of
+edges is 210 and the degree of a corner is 3. Therefore (king) = 420/3 = 140.
+
+(b) ju(queen) = (28 x 21+ 20 x 23 +12 x 2544 x 27)/21 = 208/3.
+
+(c) We restrict ourselves to the set of 32 vertices accessible from a given corner. Then jz(bishop) =
+(14x 7+10x9+6x 1142 x 13)/7 = 40.
+
+(d) w(knight) = (4x 24+8x3+4+20x4+ 16 x 6+ 16 x 8)/2 = 168.
+(e) (rook) = 64 x 14/14 = 64.
+
+7. They are walking on a product space of 8 x 16 vertices. Of these, 6 x 16 have degree 6 x 3 and
+16 x 2 have degree 6 x 5. Hence
+
+w(C) = (6 x 16x 6x3+16x 2 x 6 x 5)/18 = 448/3.
+
+8 |P-Alj=QA-)DQAt+ 5) + ‘). Tedious computation yields the eigenvectors, and thus
+1 1 1 8 -4 -4 0 oO 0
+PP=2/1 1 t)4+QCh"{ 2 -1 -1])4+9Ch"{-2 3-1}.
+111 -10 5 5 2 -3 1
+
+6.7 Solutions. Branching processes revisited
+
+|
+
+1. We have (using Theorem (5.4.3), or the fact that G,z41(s) = G(Gn(s))) that the probability
+generating function of Zy is
+
+n—(n—1)s
+Gnl(s) =" ev .
+
+PZ, =k) = n \kt1 n-1 h kT nk-!
+me N at n+1/\n+1 ~ (a + 1/41
+
+for k > 1. Therefore, for y > 0, as n > oo,
+
+so that
+
+1 [2yn]k-1 1 \—l2yn] 2
+= s- =]- = — ev
+PZn = 2yn| Zn >= 7G) f Gane =} (145) >1l-e™”*.,
+=1
+
+2. Using the independence of different lines of descent,
+
+fo ¢)
+E(s2” | extinction) = >
+k=0
+
+s*P(Zp =k, extinction) _ 3 s*P(Zn = kn
+
+1
+= G :
+P(extinction) n n(sn)
+
+k=0 "
+
+where Gy is the probability generating function of Zp.
+
+289
+

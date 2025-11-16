@@ -1,0 +1,59 @@
+[6.15.17]-[6.15.19] Solutions Markov chains
+
+giving that the chain is reversible.
+(b) Let S = {1, 2} and
+
+o=(G 4)
+
+where af > 0. The chain is uniform with stationary distribution
+
+(c) Let X be a birth-death process with birth rates 4; and death rates j4;. The stationary distribution
+satisfies
+
+1 — AQMO =O, Wet MeL — ThA = RAR — WR—-1AK-1 fork > 1.
+
+Therefore x4.) 4g4-1 = Ax for k = O, the conditions for reversibility.
+
+17. Consider the continuous-time chain with generator
+
+G= (;’ B )
+y —¥Y
+It is a standard calculation (Exercise (6.9.1)) that the associated semigroup satisfies
+
+_( y+Bhe) BO-AW)
+(B+ Y)Pr = (ra —h@) B+yhit) )
+
+where h(t) = e+”), Now Py = P if and only if y + Bh(1) = B + yh(1) = a(B + y), which is
+to say that B = y = -4 log(2a — 1), a solution which requires that a > 5.
+
+18. The forward equations for py, (t) = P(X (ft) = n) are
+
+Po(t) = up — Apo,
+Ppt) =App-1— A+nu) prt uat ppg, n21.
+
+6 _ 6 (ag— 2%
+ra BOs
+
+In the usual way,
+
+with boundary condition G(s,0) = s/. The characteristics are given by
+
+_ ds _ dG
+~ pws—1l A(s— DG’
+
+dt
+
+and therefore G = e? S~)) ¢ ((s —1)e~#*), forsome function f, determined by the boundary condition
+to satisfy e® S—) ¢(s — 1) = s!. The claim follows.
+Ast > 00, G(s, t) > e? S—)), the generating function of the Poisson distribution, parameter p.
+
+19. (a) The forward equations are
+
+ra)
+5, Pit (s,t) =—-A@ pi, 0),
+
+a . .
+9p Pil +4) = —AC) pi (St) +A pi, 7-10), i<j.
+
+310
+

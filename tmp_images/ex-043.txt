@@ -1,0 +1,62 @@
+[4.7.13]-[4.8.8] Exercises Continuous random variables
+
+where c = (b — pa)/+/1 — p2,d = (a— pb)/V/1 — 02, and @ and © are the density and distribution
+function of the N(O, 1) distribution.
+
+13. Let X have the Cauchy distribution. Show that Y = X~! has the Cauchy distribution also. Find
+another non-trivial distribution with this property of invariance.
+
+14. Let X and Y be independent and gamma distributed as (A, a), P(A, B) respectively. Show that
+W = X+4+Y and Z = X/(X +Y) are independent, and that Z has the beta distribution with parameters
+
+a, B.
+
+4.8 Exercises. Sums of random variables
+
+1. Let X and Y be independent variables having the exponential distribution with parameters A and
+pe respectively. Find the density function of X + Y.
+
+2. Let X and Y be independent variables with the Cauchy distribution. Find the density function of
+aX + BY where a8 # 0. (Do you know about contour integration?)
+
+3. Find the density function of Z = X + Y when X and Y have joint density function f(x, y) =
+Lox + ye Ot”), x,y >0.
+
+4. Hypoexponential distribution. Let {X; : r => 1} be independent exponential random variables
+
+with respective parameters {A, : r > 1} no two of which are equal. Find the density function of
+
+Sn = >0Y_, Xr. [Hint: Use induction.]
+
+5. (a) Let X, Y, Z be independent and uniformly distributed on [0, 1]. Find the density function of
+X+Y+Z.
+
+(b) If {X; : r > 1} are independent and uniformly distributed on [0, 1], show that the density of
+yo Xp at any point x € (0, n) is a polynomial in x of degree n — 1.
+
+6. For independent identically distributed random variables X and Y, show that U = X + Y and
+V = X — ¥ are uncorrelated but not necessarily independent. Show that U and V are independent if
+X and Y are N(0, 1).
+
+7. Let X and Y have a bivariate normal density with zero means, variances o”, t”, and correlation
+p. Show that:
+
+(a) E(X | Y) = mY,
+
+(b) var(X | Y) = 07(1 — p?),
+(o2 + pot)z
+o2+2p0t +12’
+o212(1 — p2)
+t24+2p0t +02
+
+8. Let X and Y be independent N(0, 1) random variables, and let Z = X + Y. Find the distribution
+and density of Z given that X > 0 and Y > 0. Show that
+
+(©) EX|X+Y¥=z2)=
+
+(d) va(X |X +¥=H=
+
+E(Z | X > 0, Y > 0) =2V2/z.
+
+34
+

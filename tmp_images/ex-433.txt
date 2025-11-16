@@ -1,0 +1,65 @@
+[13.12.9]-[13.12.11] Solutions Diffusion processes
+
+We choose the constants a, such that g(0, y) = dy9 for |y| < b. With the aid of a little Fourier
+analysis, one finds that ay, = bo} sin(5 nz).
+
+Finally, the required probability equals the probability that W* has been absorbed by time ¢, a
+probability expressible as 1 — f°, f?(t, y) dy. Using the second expression for f?, this yields
+
+421 .
+-5 —e7 nt! sin} (Sn).
+Fa n
+
+n=]
+
+9. Recall that U(t) = e~2"?© isa martingale. Let T be the time of absorption, and assume that
+the conditions of the optional stopping theorem are satisfied. Then E(U(0)) = E(U(T)), which is to
+say that 1 = e2"4 py + e~2™(] — pa).
+
+10. (a) We may assume that a, b > 0. With
+pr(b) = P(W(t) > b, F(O,t)| WO) =a),
+we have by the reflection principle that
+pr(b) = P(W(t) > b| W(0) = a) — P(Wit) < —b| WO) =a)
+= P(b-—a< W(t) <b+a|W(0) =0),
+
+giving that
+
+Opr(b
+
+PO) = f(t,b +a) ~ f(t,b—a)
+
+where f(t, x) is the N(0, t) density function. Now, using conditional probabilities,
+
+1 Opr(b) _
+fit,b-—a) 0b
+
+P(FQ, 1) |W) =a, W(t) =b) =- 1—¢7 abit.
+
+(b) We know that
+
+P(F(s,t)) =1—- = cos!{ s/t} = = sin! { /s7F}
+
+if 0 < s <t, The claim follows since F (fg, t2) © F(t, t).
+(c) Remember that sinx = x + o(x) as x | 0. Take the limit in part (b) as fg | 0 to obtain /t; /to.
+
+11. Let M(t) = sup{W(s) : 0 < s < t} and recall that M(t) has the same distribution as |W(¢)|. By
+symmetry,
+
+P( sup |W(s)| > w) < 2P(M(t) > w) = 2P(|W()| > w).
+
+O<s<t
+
+By Chebyshov’s inequality,
+
+E(W(t)?
+P(|W(t)| = w) < —S = “5.
+
+Fix € > 0, and let
+An(€) = {|W(s)|/s > € for some s satisfying Wles< an}.
+
+Note that
+Ano ¢ { sup wena} cf sup woo >a |
+
+an-les<Qn O<s<2"
+
+424

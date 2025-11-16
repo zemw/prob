@@ -1,0 +1,67 @@
+Sums of random variables Exercises [3.7.3]-[3.8.3]
+
+3. Suppose that the conditional expectation of Y given X is defined as the (almost surely) unique
+function y(X) such that E(w(X)g(X)) = E(¥g(X)) for all functions g for which the expectations
+exist. Show (a)-(f) of Exercise (1) above (with the occasional addition of the expression ‘with
+probability 1°).
+
+4. How should we define var(Y | X), the conditional variance of Y given X? Show that var(Y) =
+E(var(Y | X)) + var(E(Y | X)).
+
+5. The lifetime of a machine (in days) is a random variable T with mass function f. Given that the
+machine is working after t days, what is the mean subsequent lifetime of the machine when:
+
+(a) f(x) =(N+1)7! forx € {0,1,..., N},
+
+(b) f(x) =2~~ forx = 1,2,....
+
+(The first part of Problem (3.11.13) may be useful.)
+
+6 Let X1, X2,... be identically distributed random variables with mean yz, and let N be a random
+
+variable taking values in the non-negative integers and independent of the X;. Let S = X, + X2+
+-+» + Xy. Show that E(S | N) = wN, and deduce that E(S) = pE(N).
+
+7. A factory has produced n robots, each of which is faulty with probability ¢. To each robot a test
+is applied which detects the fault (if present) with probability 8. Let X be the number of faulty robots,
+and Y the number detected as faulty. Assuming the usual independence, show that
+
+E(X | Y) = {ng(i — 8) + 1 — 6) ¥}/(1 — 8).
+
+8. Families. Each child is equally likely to be male or female, independently of all other children.
+
+(a) Show that, in a family of predetermined size, the expected number of boys equals the expected
+number of girls. Was the assumption of independence necessary?
+
+(b) A randomly selected child is male; does the expected number of his brothers equal the expected
+number of his sisters? What happens if you do not require independence?
+
+9. Let X and Y be independent with mean jz. Explain the error in the following equation:
+
+E(X | X+Y =z) =E(X|X=z-Y)=E(e—-Y) =z-w’.
+
+10. A coin shows heads with probability p. Let X, be the number of flips required to obtain a run of
+n consecutive heads. Show that E(Xn) = S_, p-*.
+
+3.8 Exercises. Sums of random variables
+
+1. Let X and Y be independent variables, X being equally likely to take any value in {0, 1,..., m},
+and Y similarly in {0, 1,...,}. Find the mass function of Z = X + Y. The random variable Z is
+said to have the trapezoidal distribution.
+
+2. Let X and Y have the joint mass function
+
+Cc
+(x+y—-Daetye+tyt+l’
+
+faywe= x,y=1,2,3,....
+
+Find the mass functions of VU = X + Y and V = X -— Y.
+
+3. Let X and Y be independent geometric random variables with respective parameters a and f.
+Show that B
+at _
+P(X +¥ =2)= reerase — pe! —-a@)*"}.
+
+21
+

@@ -1,0 +1,67 @@
+Problems Solutions [3.11.39]-{3.11.39]
+
+where s =n — we r;. Therefore,
+
+CO
+P(X; =7j for 1 <i <k) = > Pa(Xj = 7 for 1 <i < P(N =n)
+n=0
+
+“II ct vri fone \y 3 v5 (1 — F(k))§ e7¥(I-F®),
+s=0
+
+s!
+
+The final sum is a Poisson sum, and equals 1.
+
+(b) We use an argument relevant to Wald’s equation. The event {7 < n—1} depends only on the random
+variables X,, X2,..., X,_1, and these are independent of X,. It follows that X, is independent of
+the event {T > n}={T <n-—1}°. Hence,
+
+E(S) = DO E(Xifroay) = SO E(KDEC rai) = DL E(K)PM = 1)
+i=] i=] i=]
+
+ow ow t
+DVO MPT =H =v PT =O LV FO
+
+i=] t=1 t=] i=1
+
+o.4)
+v SORT =1t)F(t) = E(F(T)).
+
+t=1
+
+39. (a) Place an absorbing barrier at a + 1, and let pg be the probability that the particle is absorbed
+at 0. By conditioning on the first step, we obtain that
+
+1
+Pu= a (Pot Pit pats + Prt), 1snsa.
+
+The boundary conditions are po = 1, pg+1 = 0. It follows that py+) — pn = (n+ D(Pn — Pn-1)
+for 2 <n <a. We have also that pp — py = p, — 1, and
+
+Patt — Pn = 4(n + 1)! (p2 — pt) = 44+ 1)! (v1 — Po).
+
+Setting n = a we obtain that —p,g = AG + 1)! (py — 1). By summing over 2 <n <a,
+a
+Pa — P\ = (P1 ~ Po) + 3(P1 ~ Po) Dj!
+
+and we eliminate p; to conclude that
+
+(a+ 1)!
+443!+4!+---4+@41!
+
+Pa =
+
+It is now easy to see that, for givenr, py = py(a) > 1 asa — on, so that ultimate absorption
+at 0 is (almost) certain, irrespective of the starting point.
+
+(b) Let 4, be the probability that the last step is from 1 to 0, having started at r. Then
+
+(*) Ay = 3(1+A1 +49),
+(&*) (r+ 2)Ap = Ay +AQH+-+-+A,44, r>
+
+v
+N
+
+185
+

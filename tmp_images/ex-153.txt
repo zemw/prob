@@ -1,0 +1,62 @@
+[1.8.14]-[1.8.16] Solutions Events and their probabilities
+
+by Exercise (1.3.4). Hence
+
+k+1 _
+P(N) = S> P(As)- SO ( k Jes) (oF «({ pear os Ap
+|S|=k |S|=k+1
+
+where a typical summation is over all subsets S of {1, 2,..., 2} having the required cardinality.
+Let A; be the event that a copy of the ith bust is obtained. Then, by symmetry,
+
+w-o-()
+
+where a; is the probability that the j most recent Vice-Chancellors are obtained. Now a3 is given in
+Exercise (1.3.4), and a4 and as may be calculated similarly.
+
+14, Assuming the conditional probabilities are defined,
+P(AJNB) PCB A;)P(AjZ) _— «PCB | Aj) PAs)
+P(B) P(BO (UT A4i)) = 1 PCB | A)PCAi)
+
+P(A; | B) =
+
+15. (a) We have that
+
+PIN =2|/S—4) = PUN EAS = 4p P(S =4| N =2)P(N =2)
+
+P(S = 4) yo; PS =4| N =i)P(N =i)
+iil
+_ 124
+1 1 1 3 1 1 1°
+6° 2+ 12°47 716° 8+ M6
+
+(b) Secondly,
+
+P(S=4|N=214+P(S =4|N=44
+P(S =4/j N even) = ( | 4 ( | 16
+
+P(N even)
+Jiil,i ii 233
+_ 2 4t ete 43° +1
+~“T7 1 ~ 4433
+atagte: 443
+(c) Writing D for the number shown by the first die,
+PIN =2,S=4,D=1) é-e-4
+PIN =2|S=4,D=1)= P(S =4,D=1 —T.1.1,1.2.1,1.1°
+== 6°6°446°36°8 + GF 16
+
+(d) Writing M for the maximum number shown, if 1 <r < 6,
+
+ad oo .
+j r\J 1 r r\-l r
+s = < =jf2J= > = = -— = .
+P(M <r) DPM SIN j)2 XG) ws =p(-5) =p
+
+16. (a) € B if and only if, for all n, w € UP, A;, which is to say that w belongs to infinitely many
+of the Ap.
+
+(b) w € C if and only if, for some n, w € Wen Aj, which is to say that w belongs to all but a finite
+number of the Ay.
+
+144
+

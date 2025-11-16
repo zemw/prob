@@ -1,0 +1,63 @@
+Problems Exercises [4.13.7]-[4.14.1]
+
+7. Appoint D is fixed on the side BC of the triangle ABC. Two points P and Q are picked independently
+at random in ABD and ADC respectively. Show that EJAPQ| = |AG,Go| = lABCl, where G, and
+Gp are the centres of gravity of ABD and ADC.
+
+8. From the set of all triangles that are similar to the triangle ABC, similarly oriented, and inside
+ABC, one is selected uniformly at random. Show that its mean area is tb |ABC].
+
+9. Two points X and Y are picked independently at random in the interval (0, a). By varying a,
+show that F(z, a) = P(|X — Y| < z) satisfies
+
+and hence find F(z, a). Let r > 1, and show that m,(a) = E(|X — Y{") satisfies
+dm, a’
+=2 _ .
+“ da {> +1 mr}
+
+10. Lines are laid down independently at random on the plane, dividing it into polygons. Show that
+the average number of sides of this set of polygons is 4. [Hint: Consider n random great circles of a
+sphere of radius R; then let R and n increase.)
+
+11. A point P is picked at random in the triangle ABC. The lines AP, BP, CP, produced, meet BC,
+AC, AB respectively at L, M, N. Show that E|LMN| = (10 — m*)|ABC].
+
+12. Sylvester’s problem. If four points are picked independently at random inside the triangle ABC,
+
+show that the probability that no one of them lies inside the triangle formed by the other three is z.
+
+Hence find m;(a).
+
+13. Ifthree points P, Q, R are picked independently at random ina disk of radius a, show that E|PQR| =
+35a”/(487). [You may find it useful that fj’ [> sin? x sin? y sin |x — y|dx dy = 357 /128.]
+
+14. Two points A and B are picked independently at random inside a disk C’.. Show that the probability
+that the circle having centre A and radius |AB| lies inside C is é.
+
+15. Two points A and B are picked independently at random inside a ball S. Show that the probability
+that the sphere having centre A and radius |AB| lies inside S is y-
+
+4.14 Problems
+
+1. (a) Show that [°° e~*” dx = ./7, and deduce that
+
+2
+fQ@)= v0 | Sook —00 <x < 00,
+
+202
+
+1
+ov2n
+is a density function if o > 0.
+
+(b) Calculate the mean and variance of a standard normal variable.
+(c) Show that the V0, 1) distribution function ® satisfies
+
+1,2 1,2
+(xh axe < V/2n[1 — O(x)] < xe? x>0.
+
+These bounds are of interest because ® has no closed form.
+(d) Let X be N(O, 1), and a > 0. Show that P(X > x +a/x |X >x)7 e 4% asx > 0.
+
+39
+

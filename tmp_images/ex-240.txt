@@ -1,0 +1,64 @@
+Generating functions Solutions [5.1.3]-[5.1.5]
+
+whence the claim is immediate.
+
+3. (i) We have that Gy y(s,t) = E(s*t¥), whence Gyx,y(, 1) = Gx(s) andGy y(1, t) = Gy(t).
+(ii) If E|XY| < oo then
+
+B(XY) = EB (x¥s%"Us?1) ae (s, t)
+~ s=t=1 dsar ** si=l
+4. We write G(s, t) for the joint generating function.
+0° j . . .
+(a) G(s,t) = S> sik — a) (6 — aad peI-}
+j=0k=0
+j _ _ _ j+1
+_ “¥ (4) a “ “1 ae if Blt| <1
+_ 0180) | 1 set \ es) <1
+d= poe \i-@s/B) T-axf “ph!
+(1 — a)(B — @)
+
+~ (1 —ast)(B — as)
+
+(the condition a|st| < 1 is implied by the other two conditions on s and t). The marginal generating
+functions are
+(1 — a)(B — @)
+
+l-a@
+
+and the covariance is easily calculated by the conclusion of Exercise (5.1.3) as a(1 — a)~2,
+(b) Arguing similarly, we obtain G(s, t) = (e — 1)/{e(1 — tes —2y) if |tle* —2 < 1, with marginals
+
+l-el 1—e7!
+Pra, i G 1,t = TTT:
+1 — es-2 (1,7) 1—te-!
+
+Gs, 1) =
+and covariance e(e — 172.
+(c) Once again,
+
+log{1 —tp(1 — p+sp)}
+
+OOD = log(1 — p)
+
+if |tp(. — p+sp)| <1.
+
+The marginal generating functions are
+
+log{1 — p+ p*(1—s)} log(1 — tp)
+, Gd,t)=——,
+log(1 — p) (8 log(1 — p)
+
+G(s, 1) =
+
+and the covariance is 9
+__p*{p +log( — p)}
+
+(1 — p)*{log(1 — p)}?
+
+5. (i) We have that
+
+E(x" y") = Sixty mk (7) pk — p)"* = (px +qy)"
+t=O
+
+231
+

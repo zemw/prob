@@ -1,0 +1,50 @@
+6
+
+Markov chains
+
+6.1 Solutions. Markov processes
+1. The sequence X 1, X,... of independent random variables satisfies
+PUXng1 = J | X1 =i1,...,Xa = in) = PXng1 = S),
+
+whence the sequence is a Markov chain. The chain is homogeneous if the X; are identically distributed.
+
+2. (a) With Y,, the outcome of the nth throw, X,41 = max{Xn, Y;,+41}, so that
+
+0 ifj<i
+py =4 gi iff=i
+i iff >i,
+
+for 1 <i, j <6. Similarly,
+
+(n) 0 ifj <i
+s(n) =
+Pij (gi)” if fai.
+
+If 7 > i, then pjj (1) = P(Z, = j), where Zp = max{Yj, Y2,..., Yn}, and an elementary calculation
+
+yields
+‘\n - n
+py() = (2) -() , i<j <6
+
+(b) Nn+1 — Nn is independent of N,, N2,..., Nn, so that N is Markovian with
+
+if j=i+1,
+
+Pi = if j =i,
+
+Oo an ae
+
+otherwise.
+
+(c) The evolution of C is given by
+
+0 if the die shows 6,
+Cr+ = :
+C,+1~ otherwise,
+whence C is Markovian with
+Pij = j=it+l,
+otherwise.
+
+Oo awn ane
+
+272

@@ -1,0 +1,51 @@
+4
+
+Continuous random variables
+
+4.1 Exercises. Probability density functions
+
+1. For what values of the parameters are the following functions probability density functions?
+
+(a) f@) =C{xd - x2, 0 <x < 1, the density function of the ‘arc sine law’.
+
+(b) f(x) = Cexp(—x — e~*), x € R, the density function of the ‘extreme-value distribution’.
+
+(c) f@®)=CO4+x2)-™, x ER.
+
+2. Find the density function of Y = aX, where a > 0, in terms of the density function of X. Show
+
+that the continuous random variables X and —X have the same distribution function if and only if
+fx(x) = fx(—x) forall x eR.
+
+3. If f and g are density functions of random variables X and Y, show thataf + (1 —a)g isa
+density function for 0 < a < 1, and describe a random variable of which it is the density function.
+
+4. Survival. Let X be a positive random variable with density function f and distribution function
+F.. Define the hazard function H(x) = —log[1 — F(x)] and the hazard rate
+
+1
+r@) = Tim (P(X Sx +h |X > x), x >0.
+
+Show that:
+
+(a) r(x) = H'(x) = f(x)/{1- F@)},
+
+(b) If r(x) increases with x then H(x)/x increases with x,
+
+(c) H(x)/x increases with x if and only if [1 — F(x)]* < 1— F(ax) forall0 <a <1,
+(d) If H(x)/x increases with x, then H(x + y) > H(x) + Hy) forall x, y > 0.
+
+4.2 Exercises. Independence
+
+1. [am selling my house, and have decided to accept the first offer exceeding £K. Assuming
+that offers are independent random variables with common distribution function F’, find the expected
+number of offers received before I sell the house.
+
+2. Let X and Y be independent random variables with common distribution function F and density
+function f. Show that V = max{X, Y} has distribution function P(V < x) = F (x)* and density
+function fy (x) = 2f(x)F(), x € R. Find the density function of VU = min{X, Y}.
+
+3. The annual rainfall figures in Bandrika are independent identically distributed continuous random
+variables {X, : r > 1}. Find the probability that:
+
+29

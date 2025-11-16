@@ -1,0 +1,69 @@
+Expectation Solutions [4.3.1]-[4.3.5]
+
+4.3 Solutions. Expectation
+
+1. (a) E(X*%) = f° x%e~* dx < 00 if and only if a > —-1.
+
+(b) In this case
+CO Clx|*
+E(\x|* -| ——,— d.
+(|X|") “oo AED x < 00
+
+if and only if —1 <a@ < 2m —1.
+2. We have that
+
+An xX; n
+1=E (He ‘) = > E(X;/Sn).
+i=]
+By symmetry, E(X;/Sn) = E(X1/S») for all i, and hence 1 = nE(X,/S,). Therefore
+
+E(Sm/Sn) =) | E(Xi/Sn) = mE(X1/Sn) = m/n.
+
+i=l
+3. Either integrate by parts or use Fubini’s theorem:
+
+OO OO le ¢)
+rf x’ P(X > x) dx =r | xt! { foyay} dx
+0 0 y
+
+=x
+
+= [rot fe #} dy = [ y" f(y) dy.
+
+An alternative proof is as follows. Let I, be the indicator of the event that X > x, so that
+for I, dx = X. Taking expectations, and taking a minor liberty with the integral which may be made
+rigorous, we obtain EX = Io° EC) dx. A similar argument may be used for the more general case.
+
+4. We may suppose without loss of generality that 4 = 0 ando = 1. Assume further that m > 1.
+In this case, at least half the probability mass lies to the right of 1, whence E(XJ;y>m}) = 3 Now
+0 = E(X) = E{X[I(x>mj + [tx <m)]}, implying that EX Ix <m)) < —}. Likewise,
+E(X7Ix>m}) = 4, E(X?Ix<m}) < 4.
+By the definition of the median, and the fact that X is continuous,
+E(X |X <m)<-—l, E(X2|X <m) <1.
+
+It follows that var(X | X < m) <0, which implies in turn that, conditional on {X < m}, X is almost
+surely concentrated at a single value. This contradicts the continuity of X, and we deduce that m < 1.
+The possibility m < —1 may be ruled out similarly, or by considering the random variable — X.
+
+5. Itis a standard to write X = X* — X~ where X* = max{X, 0} and X~ = — min{X, 0}. Now
+Xt and X~ are non-negative, and so, by Lemma (4.3.4),
+
+p= EX) = BX+)— BA) = [Pex > dx [Px < —x)dx
+0 0
+
+lee) ioe) 0
+= [urea [ F(-x)dx = | = Faide- [ F(x)dx.
+0 0 0
+
+—0O
+It is a triviality that
+
+i jb
+w= Fajds + [ [1 — F(x) dx
+0 0
+
+and the equation follows with a = y. It is easy to see that it cannot hold with any other value of a,
+since both sides are monotonic functions of a.
+
+189
+

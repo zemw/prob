@@ -1,0 +1,98 @@
+(3.11.37]-{3.11.38] Solutions Discrete random variables
+
+HAnNnc Oe?
+YP
+C Hnc eee ee ene
+Y —
+ANC
+HOC
+|; ha) Ge (-y)a
+l-y
+
+Cc
+
+ANC
+
+Figure 3.2. The tree of possibility and probability in Problem (3.11.37). The presence of the
+disease is denoted by C, and hospitalization by H; their negations are denoted by C and H.
+
+that
+
+il
+Mz
+Spas
+
+=
+
+var(Y)
+
+=~
+i
+[=
+
+ee”
+
+eae (4-H) (y- HS
+
+ifj
+xjxj Jnn—-1 n2
+n2 )NN-1 N2
+
+Daya
+~ i“] ON — DN2
+we n(N —1)N
+
+N N
+2
+wat - “D ry ye Ee
+
+E{(H-H)
+
+ll
+Wo
+|
+
+ry “NS
+tM oY
+
+I
+eae
+2|s
+—
+
+|
+2/5
+—
+
+Some
+
+ll
+M=
+*
+“i
+>| =
+wo} |
+=
+
+l
+fal
+
+Nii
+N N
+N-n 1
+_ _ nel i _x)2
+- syn {2 r Nx mN= DN De x)".
+
+37. The tree in Figure 3.2 illustrates the possibilities and probabilities. If G contains n individuals,
+X is bin(n, yp + (1 — y)a) and Y is bin(n, yp). It is not difficult to see that cov(X, Y) = nyp(1—v)
+where v = yp+(1—y)a. Also, var(Y) = nyp(1 — yp) and var(X) = nk(1—v). The result follows
+from the definition of correlation.
+
+38. (a) This is an extension of Exercise (3.5.2). With P, denoting the probability measure conditional
+on N =n, we have that
+
+Pa(Xi = 7 for <i <k) = ff (2)? --- fA! -— FY,
+
+rytrol---rgts!
+
+184

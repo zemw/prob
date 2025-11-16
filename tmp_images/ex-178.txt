@@ -1,0 +1,80 @@
+Sums of random variables Solutions [3.8.1]-[3.8.5]
+
+3.8 Solutions. Sums of random variables
+
+1. By the convolution theorem,
+
+P(X+¥ =z) =) P(X =HPY =z—h)
+k
+
+k+1
+srt fO<k<maAn,
+(m+1)a@+1)
+(mAn)+1 .
+= ¢ ——— — ifman<k<mvn,
+(m+ 1)(n +1)
+m+n+1—k
+
+——_——— _ ifmvn<k<m+n,
+(m+1)@+1)
+
+where m An = min{m, n} and m V n = max{m, n}.
+2. Ifz>2,
+
+Cc
+z(z+1)'
+
+[oe]
+P(X+Y¥ =z) => P(X =k, Y=r-k)=
+k=]
+Also, if z > 0,
+
+P(X -Y =z) =) P(X =k+z,Y =h)
+
+k=]
+
+cy 1
+
+6 Ok +2- Qk +2)Qk +241)
+
+Ine 1 1
+
+=3¢)){ aepecparsy ” CeFDORFzFD}
+08 1
+
+-lcye
+
+20) Gye det D
+
+1
+By symmetry, if z < 0, P(X — Y =z) = P(X — Y = —z) = P(X — Y = [2)).
+
+zl -1 -1
+_ rl _— gye-r-l _ oP {(1 — By - dd - a)’ }
+3. > a(l—a)’ “pd — B) = ans .
+
+r=1
+4. Repeatedly flip a coin that shows heads with probability p. Let X; be the number of flips after
+the r — 1th head up to, and including, the rth. Then X; is geometric with parameter p. The number
+of flips Z to obtain n heads is negative binomial, and Z = )~”_, X; by construction.
+
+r
+
+5. Sam. Let X, be the number of sixes shown by 6n dice, so that X,41 = Xn +Y where Y has the
+same distribution as X; and is independent of X,. Then,
+
+6
+P(Xng1 >a 4+1) = $0 P(Xn = nt+1—-r)PY =r)
+r=0
+6
+=P(Xn =n) + >) [P(Xn =n +1 —r)—P(Xn > n)|PY =r).
+r=0
+
+We set g(k) = P(X, = &) and use the fact, easily proved, that g(n) > g(n—1)>--- > g(n—5) to
+find that the last sum is no bigger than
+
+6
+g(n) )r — LP(Y =r) = g(n)(E(Y) - 1).
+r=0
+
+169

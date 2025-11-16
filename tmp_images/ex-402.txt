@@ -1,0 +1,64 @@
+Problems Solutions [11.8.14]-[11.8.14]
+
+These are easily solved iteratively to obtain
+= {ron if0<i <k,
+| nola/kikk/k! ifi>k
+
+where a = i/y. Therefore there exists a stationary distribution if and only if A < ky, and it is given
+
+accordingly, with
+k-1
+
+m= a aa ye Ley
+
+i =0 /
+
+The cost of having k servers is
+
+kyikk
+Cy = Ak + Bao Sil _k+ jee
+i=k
+where 79 = 29(k). One finds, after a little computation, that
+Ba 2Ba*
+Ci = , C2 =2A .
+1 tie 2 ane
+
+Therefore
+o3(A — B)+a2(2B — A) —4a(A+ B) + 4a
+
+(1 —a)(4 - a)
+Viewed as a function of a, the numerator is a cubic taking the value 4A at a = O and the value —3B
+at a = 1. This cubic has a unique zero at some a* € (0, 1), and C, < C» if and only if 0 < a < a*.
+
+C2-C, =
+
+14. The state of the system is the number Q(t) of customers within it at time t. The state 1 may be
+divided into two sub-states, being o, and 02, where og; is the state in which server i is occupied but
+the other server is not. The state space is therefore § = {0, 01, 02, 2,3, ...}.
+
+The usual way of finding the stationary distribution, when it exists, is to solve the equilibrium
+equations. An alternative is to argue as follows. If there exists a stationary distribution, then the
+process is reversible in equilibrium if and only if
+
+(*) 811 ,i9 8i2, 13 °° * Sixty = Bi, ip Six,ig_y °° * Sig, iy
+
+for ali sequences i;,i2,..., iz of states, where G = (guy)y,veg is the generator of the process (this
+may be shown in very much the same way as was the corresponding claim for discrete-time chains
+in Exercise (6.5.3); see also Problem (6.15.16)). It is clear that («) is satisfied by this process for all
+sequences of states which do not include both o1 and 02; this holds since the terms gyy are exactly
+those of a birth-death process in such a case. In order to see that («) holds for a sequence containing
+both o1 and o», it suffices to perform the following calculation:
+
+80,01 801 ,282,09 80,0 = (AA)AM2M = 80,07 807,282,061 801,0-
+Since the process is reversible in equilibrium, the stationary distribution z satisfies my gyy =
+Ty vu for allu, v € S,u ¥ v. Therefore
+Hyd = Ty41(1 + M2), u>2,
+570A = To, 1 = Mon h2, AoA =12K2, Noy = 72M,
+and hence
+
+d a 2 ( a \" foru >?
+Noy ==—10, No = =—N), M= ——— no foru > 2.
+1 Hy °2 Qua “ Quim2 \mi t+ M2
+
+393
+

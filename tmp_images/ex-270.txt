@@ -1,0 +1,66 @@
+Problems Solutions [5.12.20]-[5.12.22]
+
+in the notation of Problem (5.12.18). Hence U has the Cauchy distribution.
+
+(b) Similarly
+oo 2 1 1,2 2 1
+E(eY -| e e 2* dx=4/—I (=~) — eo V2t
+( ) 60 om Vz a
+
+for t > 0. Using the result of Problem (5.12.18e), V has density function
+
+f@)= a eT/Qx) x >0.
+
+V2rx3
+
+(c) We have that W~2 = X~2 4 y~2 + Z~2. Therefore, using (b),
+E(etW) =e 3V2t = eV 18 = Bie 9)
+
+for t > 0. It follows that W~? has the same distribution as 9V = 9X~2, and so W” has the same
+distribution as aX 2 Therefore, using the fact that both X and W are symmetric random variables, W
+
+has the same distribution as 3 X, that is N(0, §).
+
+20. It follows from the inversion theorem that
+
+Fax +h) — F(x) _ 1 jim N 1 —e7ith -ltxg() i
+h 2% N>co JN it ,
+
+Since |@| is integrable, we may use the dominated convergence theorem to take the limit ash | 0
+within the integral:
+
+fe ~ Om N->00 _N- ¢ ‘
+
+The condition that ¢ be absolutely integrable is stronger than necessary; note that the characteristic
+function of the exponential distribution fails this condition, in reflection of the fact that its density
+function has a discontinuity at the origin.
+
+21. Let G, denote the probability generating function of Z,. The (conditional) characteristic function
+of Z,/p" is
+
+, it/u™)_G_ ©
+itZn/u” = Gn(elti#) Gn(0)
+E(e | Zn > 0) 16,0)
+
+It is a standard exercise (or see Example (5.4.3)) that
+
+we” —1— psu"! —1)
+G = ;
+n(s) wrt) —1— ps(u" — 1)
+
+whence by an elementary calculation
+
+u-l
+
+itZn/ pe”
+E(e n | Zn > 0) >
+
+asn —> 00,
+
+the characteristic function of the exponential distribution with parameter 1 — u~!.
+
+22. The imaginary part of @x(t) satisfies
+5${x(t) — dx} = 3{6x(1) — ox(-)} = 4 {Ee#*) — Ee} = 0
+
+261
+

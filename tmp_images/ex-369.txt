@@ -1,0 +1,77 @@
+[9.5.3]-[9.6.3] Solutions Stationary processes
+
+3. It is easily seen that Sm = 57729 aj Xn+i Constitutes a martingale with respect to the X’s, and
+
+m CO
+E(Sp,) = > oF E(Xn 41) S > oe,
+i=0 i=0
+
+whence S,, converges a.s. and in mean square as m —> 00.
+
+Since the X, are independent and identically distributed, the sequence Y, is strongly stationary;
+also E(Y,) = 0, and so nl a Y; — Z a.s. and in mean, for some random variable Z with mean
+zero. For any fixed m (> 1), the contribution of X;, X2,..., Xm towards an Y; is, for large n, no
+larger than
+
+m
+Cn = S>@o + ay +--+ +aj.1)X;).
+
+j=l
+
+Now n-!Cm — 0 as n — oo, so that Z is defined in terms of the subsequence X41, Xm+2,---
+for all m, which is to say that Z is a tail function of a sequence of independent random variables.
+Therefore Z is a.s. constant, and so Z = Oa.s.
+
+9.6 Solutions. Gaussian processes
+1. The quick way is to observe that c is the autocovariance function of a Poisson process with
+intensity 1. Alternatively, argue as follows. The sum is unchanged by taking complex conjugates, and
+
+hence is real. Therefore it equals
+
+2
+
+n n n n n
+Da (igP +5 So uty > x)= oy oe
+1 k j=l
+
+j= =jf+l k=j+l1 k=j
+
+= KC; — t-1)
+j=l
+
+2 n
+-| Sx
+k=jtl
+2
+
+n
+
+Doz
+
+k=j
+
+where to = 0.
+
+2. Fors,t > 0, X(s) and X(s + ¢) have a bivariate normal distribution with zero means, unit
+variances, and covariance c(t). It is standard (see Problem (4.14.13)) that E(X(s +t) | X(s)) =
+c(t)X(s). Now
+
+o(s +1) = E(XO)X(s + 1)) = E{E(X(OX(s +1)| XO, X(s))}
+= E(X(O)c(t)X(s)) = e(s)e(t)
+
+by the Markov property. Therefore c satisfies c(s + t) = c(s)c(t), c(O) = 1, whence c(s) = c(1)s! =
+pls! Using the inversion formula, the spectral density function is
+oo 1 p2
+
+1 . _
+aAy= —ish _ —, l<cx.
+f= 5 oo Omllaperp «AIS *
+
+Note that X has the same autocovariance function as a certain autoregressive process. Indeed,
+stationary Gaussian Markov processes have such a representation.
+
+3. If X is Gaussian and strongly stationary, then it is weakly stationary since it has a finite variance.
+Conversely suppose X is Gaussian and weakly stationary. Then c(s, f) = cov(X(s), X(#)) depends
+
+360
+

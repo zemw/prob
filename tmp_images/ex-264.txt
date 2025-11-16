@@ -1,0 +1,60 @@
+Problems Solutions [5.12.3]-[5.12.6]
+
+Ly
+
+for integers r. Hence 3{Gy() + Gy(w) + Gy(w’)} = me am 9 P(N = 3r), the probability that N
+
+is a multiple of 3. Generalize this conclusion.
+
+3. We have that 7 = & if no run of n heads appears in the first k — n — 1 throws, then there is a
+tail, and then a run of n heads. Therefore P(T = k) = P(T > k —n — l)qp” fork > n+ 1 where
+p+q=1. Finally P(T =n) = p”. Multiply by s* and sum to obtain a formula for the probability
+generating function G of T:
+
+at+j
+G(s) — p"s” = gp" ss SS PT =j)=4p" Lrr=n > st
+k=n+1  j>k—n—-1 k=n+1
+nontl © n a
+= Soe = pa -si)= 4 *_a- ee).
+j=l
+
+Therefore
+p's _ prtlsntl
+
+G — ane .
+(s) 1—s+qp%st1
+
+4. The required generating function is
+
+Gis) = ye (E )era = pr = (-F-)
+
+where p +q = 1. The mean is G’(1) = r/p and the variance is G” (1) + G’(1) — {G’(1)}* = rq/p?.
+
+5. It is standard (5.3.3) that po(2n) = 7") (pq)". Using Stirling’s formula,
+
+2 n+} —2n /2 4 n
+po(2n) ~ SNE (pgyt = SP
+{n"*2 2. /In}? mn
+
+The generating function Fo(s) for the first return time is given by Fo(s) = 1 — Pots)! where
+Pots) = on s*" p9(2n). Therefore the probability of ultimate return is Fo(1) = 1 — 171 where, by
+
+Abel’s theorem, 1
+A= 2n 2
+2 Pot <0o ifp#g.
+Hence Fo(1) = 1 if and only if p = 4.
+6 (a) Rp = x? + y?2 satisfies
+E(Rn41 — Rn) = E{(Xh41 — Xn) + Wo — YF
+= 26(X2,) — X2)= oe B(x, — x? | X,)}
+= 2E{4[(Xn +1)? — X32) + 4[(Xn — 1)? — X2)} = 1.
+
+Hence Ry =n + Ro =n.
+
+(b) The quick way is to argue as in the solution to Exercise (5.3.4). Let Un = Xn+Yn, Vn = Xn—Yn.
+Then U and V are simple symmetric random walks, and furthermore they are independent. Therefore
+
+1\2" fon °
+po(2n) = P(U2q = 0, Voy = 0) = PU2y = O)P(V2q = 0) = (5) (’ \
+
+255
+

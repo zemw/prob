@@ -1,0 +1,68 @@
+[13.6.2]-[13.6.5] Solutions Diffusion processes
+
+by a consideration of the minimum value of W on (0, t]. It follows that the density function of W(4),
+conditional on ZN {W(O) = w}, where w > 0, is
+
+f@,x—w)— f@,x+w)
+
+hy) = x > 0.
+. Lew FQ, y) dy
+Divide top and bottom by 2w, and take the limit as w | 0:
+1 fF, /00 x >0.
+
+li =- el
+lim hw x) f@t,0) ox t
+
+2. Itis a standard exercise that, for a Wiener process W,
+
+l-s
+
+E{W(t) |W) =a, wy =0} =a(-—),
+
+E{W(s)?| W(0) = W(1) = 0} =s(1—s),
+
+if0 <s <+t <1. Therefore the Brownian bridge B satisfies, forO < 5s <t <1,
+1-t
+E(B(s)B(t)) = E{ B(s)E(B(t) | B(s))} = FTE”) =s(1—t)
+
+as required. Certainly E(B(s)) = 0 for all s, by symmetry.
+
+3. W isa zero-mean Gaussian process on [0, 1] with continuous sample paths, and also W(0) =
+W(1) = 0. Therefore W is a Brownian bridge if it has the same autocovariance function as the
+Brownian bridge, that is, c(s, t) = min{s, t} — st. Fors < f,
+
+cov(W(s), W(t)) = cov(W(s) — sW(1), W(t) —fW(1)) =s —ts —st4+st=s—st
+since cov(W(u), W(v)) = min{u, v}. The claim follows.
+
+4. Either calculate the instantaneous mean and variance of Ww, or repeat the argument in the solution
+to Exercise (13.6.3). The only complication in this case is the necessity to show that Wit) is as.
+continuous at ¢ = 1, i.e., thatu—! W(u— 1) > 0a.s.asu —> oo. There are various ways to show this.
+Certainly it is true in the limit as u — oo through the integers, since, for integral u, W(u — 1) may be
+expressed as the sum of u — 1 independent N (0, 1) variables (use the strong law). It remains to fill in the
+gaps. Let n be a positive integer, let x > 0, and write My, = max{|W(u) —W(n)|:n<u<n+ti}.
+We have by the stationarity of the increments that
+
+lee) Cc
+
+SOP Mn > nx) = POM > nx) <1 + =D < oo,
+
+n=0 n=0 *
+implying by the Borel—Cantelli lemma that n~!M, < x for all but finitely many values of 7, a.s.
+Therefore n~!M, — Oa.s.asn —> oo, implying that
+
+1
+lim
+u>oou + 1
+
+1
+|Wiu)| < lim —{|W@|+Mn}>0 as.
+noo n
+
+5. In the notation of Exercise (13.6.4), we are asked to calculate the probability that W has no zeros
+in the time interval between s/(1 — s) andt/(i — t). By Theorem (13.4.8), this equals
+
+1 cos! sy) _ 2 ogg fas .
+au t(dl—s) cra td —s)
+
+414
+

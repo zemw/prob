@@ -1,0 +1,62 @@
+Classification of chains Solutions [6.3.6]-[6.3.9]
+
+6. Let Pi) = PC | Xo = 2). It is trivial that n; = 1 for j <¢ A. For j ¢ A, condition on the first
+step and use the Markov property to obtain
+
+nj = >> pjeP(Ta < 00 | X1 = 1) = © vyene.
+kes k
+
+If x = (x; : j € S) is any non-negative solution of these equations, then x; = 1 > nj for j ¢ A. For
+JA,
+
+xj = > Pik = > Pik + S> PjkXk =Pi(Ta =D 4+ S> DjkXk
+
+keS keA k@A k@A
+=Pj)Ts =D) + S> Pie, Pri + > puixi} =P\(T4 <2) + S> Pik > PkiXi-
+k@A icA idA kdA id A
+
+We obtain by iteration that, for j ¢ A,
+
+xy =P(Ta Sat So Pik Phy ky °° * Pkt —\skn¥kn 2 P(Ta <n),
+
+where the sum is over all kj, ko,...,kn ¢ A. We let n — oo to find that x; > Pj(T4 < 00) =7nj;.
+
+7, The first part follows as in Exercise (6.3.6). Suppose x = (x; : j € S) is a non-negative solution
+to the equations. As above, for j ¢ A,
+
+xj= tt So jee =P)(T4 >= 1+ > Pik ¢ + > puis)
+k kA idA
+
+=P(T4 2 1)+Pj)(Ts 22) 4+---+ Pi (Tg = 1) + > jk, Pkyka + * Pky_ykn*kn
+
+> $5 (Ta =m),
+
+m=1
+
+where the penultimate sum is over all paths of length n that do not visit A. We let n — oo to obtain
+that x; = Ej(T4) = 9;.
+
+8. Yes, because the 5; and 7; are stopping times whenever they are finite. Whether or not the exit
+times are stopping times depends on their exact definition. The times U; = min{k > U,_1 : Xu, €
+A, Xy,+1 ¢ A} are not stopping times, but the times U; + 1 are stopping times.
+
+9. (a) Using the aperiodicity of j, there exist integers r1,r2,..., 7s having highest common factor
+1 and such that p; jE) > Ofor 1 < k <s. There exists a positive integer M such that, ifr > M, then
+r = Y=) 4ere for some sequence a1, a2,..., as of non-negative integers. Now, by the Chapman—
+
+Kolmogorov equations,
+
+S
+pir) = ]] pyre > 0,
+k=1
+
+so that pjj(r) > O for allr > M.
+Finally, find m such that p;;(m) > 0. Then
+
+PyT+m)= pij(m)pjy7)>0  ifr>= M.
+
+(b) Since there are only finitely many pairs i, j, the maximum R(P) = max{M(i, j) : i, 7 € S}is
+finite. Now R(P) depends only on the positions of the non-negative entries in the transition matrix P.
+
+279
+

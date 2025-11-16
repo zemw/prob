@@ -1,0 +1,64 @@
+[7.2.2]-[7.2.4] Solutions Convergence of random variables
+
+(b) We have that
+|E(Xn) — E(X)| = |E(Xn — X)| < E|Xn — X| > 0
+
+as n —> oo. The converse is clearly false. If each X, takes the values +1, each with probability 5
+then E(X,,) = 0, but E|X, — 0| = 1.
+
+(c) By part (a), E(X2) + E(X2). Now Xn —> X by Theorem (7.2.3), and therefore E(Xn) > E(X)
+by part (b). Therefore var(X;,) = E(X?) — E(Xn)? > var(X).
+
+2. Assume that Xp a X. Since |X,| < Z for all n, it is the case that |X| < Z as. Therefore
+Zn = |Xn — X| satisfies Z, < 2Z a.s. In addition, if ¢ > 0,
+
+E|Zn| = E (Zalizp<e}) +E (Znl{Z_>e}) S € + 2E (ZI Z_>e}) -
+
+As n — 00, P(|Zn| > €) — 0, and therefore the last term tends to 0; to see this, use the fact that
+E(Z) < oo, together with the result of Exercise (5.6.5). Now let € | 0 to obtain that E]Z,| > 0 as
+noo.
+
+3. We have that X —n~! < X, < X, so that E(Xn) — E(X), and similarly E(Y,) > E(Y). By
+the independence of X» and Yp,
+
+E(Xn Yn) = E(Xn)JEWn) > EQOQE(Y).
+
+Finally, (X —n7!)(¥ —n7!) < XnYn < XY, and
+B{ (x- *) (¥- “} =Exy) — PCOFEM | —> E(XY)
+n n n n
+
+as n — oo, so that E(XnYn) > E(XY).
+
+4. Let F), Fy, ... be distribution functions. As in Section 5.9, we write F, > F if Fn(x) > F(x)
+
+for all x at which F is continuous. We are required to prove that F,, > F if and only ifd(Fn, F) > 0.
+Suppose that d(F,, F) — 0. Then, for e > 0, there exists N such that
+
+F(x-—©)-—€< Fya(xs) < Fat+eyte for all x.
+
+Take the limits as n — oo and € — 0 in that order, to find that F,(x) — F(x) whenever F is
+continuous at x.
+
+Suppose that F, — F. Let e > 0, and find real numbers a = x1 < x2 <--- < xn = b, each
+being points of continuity of F, such that
+
+(i) F;(a) < € foralli, F(b) > 1—e,
+
+Gi) |xj41. —2;| < €forl <i<n.
+In order to pick a such that F;(a) < € for all i, first choose a’ such that F(a’) < xe and F is
+continuous at a’, then find M such that | Fyn (a’) — F(a’)| < ze form > M, and lastly find a continuity
+point a of F such that a < a! and Fi,(a) < € forl <m < M.
+
+There are finitely many points x;, and therefore there exists N such that | Fimn(x;) — F(xj)| < €
+for alli and m > N. Now, if m > N and x; < x < x41,
+
+Fn(*) S Fm Qj41) < F@i4i) +65 F@t+e) +e,
+
+and similarly
+Fm(x) = Fm) > FQ) -—€ = F@—€)-€.
+
+Similar inequalities hold if x < a or x > b, and it follows that d(Fin, F) < ¢ ifm > N. Therefore
+d(Fy, F) > Oasm > ow.
+
+324
+

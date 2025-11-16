@@ -1,0 +1,70 @@
+Problems Solutions [5.12.15]-[5.12.16]
+
+(b) Suppose that ¢ is the characteristic function of an infinitely divisible distribution, and let wy, be a
+characteristic function such that #(t) = wn(t)". Now |@(f)| < 1 for all £, so that
+
+1 if || 49,
+_ l/n
+oH|\= t ->
+lYa(t)| = 1 { 0 if|o)| <0.
+For any value of ¢ such that ¢(t) # 0, it is the case that W(t) > lasn > OO, To see this, suppose
+instead that there exists 6 satisfying 0 < 9 < 2m such that y(t) > e° along some subsequence.
+Then y(t)” does not converge along this subsequence, a contradiction. It follows that
+
+. 1 if d(t) 49,
+* t)= lim t=
+(#) vO) = lim vn {6 fp) <0.
+
+Now ¢ is a characteristic function, so that ¢(+) 4 0 on some neighbourhood of the origin. Hence
+w(t) = 1 on some neighbourhood of the origin, so that y is continuous at the origin. Applying the
+continuity theorem (5.9.5), we deduce that w is itself a characteristic function. In particular, y is
+continuous, and hence y(t) = 1 for all t, by (x). We deduce that ¢(+) # 0 for all r.
+
+15. We have that
+
+_ ay PS=n|N=n)P(N=n) —_ p*P(N =n)
+PIN =n | S=N)= YEP(SH=kKIN=HPN=KH YO, PEPIN =k)"
+
+Hence E(x” | S = N) = G(px)/G(p).
+If N is Poisson with parameter A, then
+
+eM(px—l)
+
+apaty = OP = GY.
+
+EG’ |S=N)=
+Conversely, suppose that E(x® | § = N) = G(x)?. Then G(px) = G(p)G(x)?, valid for |x} < 1,
+0 < p <1. Therefore f(x) = log G(X) satisfies f (px) = f(p) + pf (x), and in addition f has a
+power series expansion which is convergent at least for0 < x < 1. Substituting this expansion into the
+
+above functional equation for f , and equating coefficients of p'x/, we obtain that f(x) = —A(1 — x)
+for some A > 0. It follows that N has a Poisson distribution.
+
+16. Certainly
+
+1 — (py + p2)
+
+1— (py *p)\!
+1 — po — pys ,
+
+n
+) , Gyt)=Gyy(t= (
+1 — pj — pat
+
+1 — (py + p2) )
+1 — (py + p2)s
+
+Gx(s) = Gx y(s, 1) = (
+Gxty(s) = Gx y(s,5) = (
+
+giving that X, Y, and X + Y have distributions similar to the negative binomial distribution. More
+specifically,
+
+WX =h= ( ‘ata -a)", PY=hH= ( ‘at — B)",
+
+P(X+Y¥=b= ("Eo tao
+
+for k > 0, where @ = p;/(1 — p2), B = p2/(1 — pi), y = pi t+ po.
+
+259
+

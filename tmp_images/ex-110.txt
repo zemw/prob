@@ -1,0 +1,50 @@
+9
+
+Stationary processes
+
+9.1 Exercises. Introduction
+
+1. Let...,Z_1, Zo, Z1, Zo, ... be independent real random variables with means 0 and variances
+1, and let a, 8 € R. Show that there exists a (weakly) stationary sequence {W,} satisfying W, =
+aW,—-1 + BWn-2 + Zn, n = ...,—1,0,1,..., if the (possibly complex) zeros of the quadratic
+equation z2 — wz — 6 = O are smaller than 1 in absolute value.
+
+2. Let U be uniformly distributed on [0, 1] with binary expansion U = aa Xx 7277. Show that
+the sequence
+
+CO
+Vn = >_Xign2!, n=O,
+
+i=l
+is strongly stationary, and calculate its autocovariance function.
+
+3. Let {X,:n=...,—1,0,1,...} bea stationary real sequence with mean 0 and autocovariance
+function c(m).
+(i) Show that the infinite series 0 anX pn converges almost surely, and in mean square, whenever
+co lanl < 09.
+Gi) Let
+le ¢)
+Yn = So aK Xn n=...,—1,0,1,...
+k=0
+
+where “729 |ax| < oo. Find an expression for the autocovariance function cy of Y, and show
+that
+
+oO
+
+d= lev()| < 00.
+
+m=—-CO
+
+4. LetX = {X, : n > 0}bea discrete-time Markov chain with countable state space S and stationary
+distribution 7, and suppose that Xo has distribution 2. Show that the sequence { f (Xn): n > O} is
+strongly stationary for any function f : S > R.
+
+9.2 Exercises. Linear prediction
+
+1. Let X be a (weakly) stationary sequence with zero mean and autocovariance function c(m).
+(i) Find the best linear predictor X ntl Of Xn41 given Xn.
+(ii) Find the best linear predictor xX n+1 Of Xn41 given Xp and Xp,_}1.
+
+101
+

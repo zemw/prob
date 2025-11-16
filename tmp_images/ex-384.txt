@@ -1,0 +1,68 @@
+Renewal-reward processes Solutions [10.4.1]-[10.5.3]
+
+10.4 Solution. Applications
+
+1. Visualize a renewal as arriving after two stages, type 1 stages being exponential parameter 2 and
+type 2 stages being exponential parameter 2. The ‘stage’ process is the flip-flop two-state Markov
+process of Exercise (6.9.1). With an obvious notation,
+
+Ag Otu)t 4, 4
+
+j= .
+putt) hap hin
+
+Hence the excess lifetime distribution is a mixture of the exponential distribution with parameter y,
+and the distribution of the sum of two exponential random variables, thus,
+
+fea) = pir(t)g(x) + 1 — prt) we,
+
+where g(x) is the density function of a typical interarrival time. By Wald’s equation,
+
+1 1
+E¢t + E(@)) = ESy)+1) = EX DEW®) +) = € + =) (m(t) + 1).
+
+We substitute ; 1 ; ; o
+E(E(t)) = pitt) (5 + <) +(1-pu@)y—- =—4 PH
+A ho pb a
+
+to obtain the required expression.
+
+10.5 Solutions. Renewal—reward processes
+
+_ 1. Suppose, at time s, you are paid a reward at rate u(X(s)). By Theorem (10.5.10), equation
+(10.5.7), and Exercise (6.9.11b),
+
+1 ft as, 1
+(*) aft =j)ds —> — =7j.
+t Jo {X(s)=j} 1} 8} J
+
+Suppose |u(i)| < K < oo for alli € S, and let F be a finite subset of the state space. Then
+1 t . 1 t
++f u(X(s)) ds — So mui) = iS u(i) <f L(x (s)=i} 48 — ni)
+i i .
+t— )
+<K K (| ———— K is
+< 2 + ( ; +K Son;
+
+igF
+
+1 t
+a I(x (s)=i} 45 — Hi
+
+where 7;(/*) is the total time spent in F up to time t. Take the limit as tf > oo using (*), and then as
+F ¢ S, to obtain the required result.
+
+2. Suppose you are paid a reward at unit rate during every interarrival time of type X, i.e., at all
+times ¢ at which M(t) is even. By the renewal-reward theorem (10.5.1),
+
+1 [ t I as * E(reward during interarrival time) EX,
+= : s—_ = .
+0 {M(s) is even} Edlength of interarrival time) EX, + EY;
+
+t
+
+3. Suppose, at time ¢, you are paid a reward at rate C(t). The expected reward during an interval
+(cycle) of length X is Se sds = 5X 2 | since the age C is the same at the time s into the interval. The
+
+375
+

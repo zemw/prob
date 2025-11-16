@@ -1,0 +1,68 @@
+Problems Solutions [10.6.4]-[10.6.7]
+
+where a(t) = | (t/) + xx/to2/u3|. Now,
+
+P(Taq) <0) =P (2 ~ Ha) i a)
+
+o/a(t) ~ o/a(t)
+However a(t) ~ t/j as t —> oo, and therefore
+
+t — pa(t)
+
+x ast > oO,
+o/a(t)
+
+implying by the usual central limit theorem that
+
+P N(t) — (¢/)
+Vto2/p>
+where ® is the N(O, 1) distribution function.
+An alternative proof makes use of Anscombe’s theorem (7.11.28).
+
+4, We have that, for y < f,
+
+>*) — &(-x) ast > 0O
+
+P(C(t) > y) =P(E(t —y)> y) > jim PEW > y) ast + 0O
+=[- te F@ax
+y HB
+
+by Exercise (10.3.3a). The current and excess lifetimes have the same asymptotic distributions.
+
+5. Using the lack-of-memory property of the Poisson process, the current lifetime C(t) is independent
+of the excess lifetime E(t), the latter being exponentially distributed with parameter 4. To derive the
+density function of C(t) either solve (without difficulty in this case) the relevant integral equation, or
+argue as follows. Looking backwards in time from f, the arrival process looks like a Poisson process
+up to distance f¢ (at the origin) where it stops. Therefore C(t) may be expressed as min{Z, t} where Z
+is exponential with parameter 1; hence
+
+nes ifs <1,
+
+0) ifs >f,
+
+fom) = {
+
+and P(C(t) = t) = e7**. Now D(t) = C(t) + E(2), whose distribution is easily found (by the
+convolution formula) to be as given.
+
+6. The ith interarrival time may be expressed in the form T + Z; where Z; is exponential with
+parameter A. In addition, Z,, Zz, ... are independent, by the lack-of-memory property. Now
+
+1-F(@x) =P(T+Z,>x)=WMZ)>x—-T)=e%F-), x>T.
+
+Taking into account the (conventional) dead period beginning at time 0, we have that
+
+k
+P(N(t) > k) = p(kr +5)°Z< ') =P(NG@—kT)>k),  t =kT,
+
+i=]
+where N is a Poisson process.
+
+7. We have that X} = L + E(L) where L is the length of the dead period beginning at 0, and E(L)
+is the excess lifetime at L. Therefore, conditioning on L,
+
+P(X, <x) = [ P(E@) <x-1)dF,@.
+0
+
+377
+

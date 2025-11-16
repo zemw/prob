@@ -1,0 +1,44 @@
+2
+
+Random variables and their distributions
+
+2.1 Solutions. Random variables
+
+1. @Ifa > 0,x € R, then {w : aX@) < x} = [wm : X(w) < x/a} € F since X is a random
+variable. If a < 0,
+
+(w: aX(w) <4} = (0: X@) > x/a)={U {o:x(o) <*— ohh
+a
+
+n>l1 n
+which lies in ¥ since it is the complement of a countable union of members of F. If a = 0,
+
+@ ifx <0,
+
+fo: ax(w) sx) ={ Q ifx>0:
+
+in either case, the event lies in F.
+(ii) For w € Q, X(w) — X(@) = 0, so that X — X is the zero random variable (that this is a random
+variable follows from part (i) with a = 0). Similarly X(w) + X(w) = 2X (@).
+
+2. Set ¥Y =aX +b. We have that
+
+P(X <(y —b)/a) = F((y —b)/a) ifa > 0,
+
+PY <y)= { P(X > (y —b)/a) =1—-limypyy—sy/a F(x) ifa <0.
+
+Finally, if a = 0, then Y = b, so that P(Y < y) equals Oifb > yand1lifb<y.
+3. Assume that any specified sequence of heads and tails with length n has probability 2~”. There
+are exactly (7) such sequences with k heads.
+
+If heads occurs with probability p then, assuming the independence of outcomes, the probability of
+any given sequence ofk heads andn—k tails is p*(1—p)"—*. The answer is therefore (7) p*(1—p)"—*.
+
+4. Write H =AF+(1—A)G. Then limy_,—.9 H(x) = 0, limy_5o9 H(x) = 1, and clearly H is
+non-decreasing and right-continuous. Therefore H is a distribution function.
+
+5. The function g(F (x)) is a distribution function whenever g is continuous and non-decreasing on
+(0, 1], with g(0) = 0, g(1) = 1. This is easy to check in each special case.
+
+151
+

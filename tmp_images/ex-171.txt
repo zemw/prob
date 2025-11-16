@@ -1,0 +1,58 @@
+[3.3.4]-[3.4.1] Solutions Discrete random variables
+
+4. The expected reward is 77°, 2-*.2k = oo. If your utility function is w, then your ‘fair’ entrance
+fee is we 2-ky (2k). For example, if u(k) = c(1 — k~®) for k => 1, where c, a > O, then the fair
+
+fee is
+k k 1
+_ ok, _ _
+oD? d-2 )=e(1 az):
+
+This fee is certainly not ‘fair’ for the person offering the wager, unless possibly he is a noted philan-
+thropist.
+
+5. We have that E(X%) = S792, x®/{x(x + 1)}, which is finite if and only if a < 1.
+6. Clearly )
+
+var(a + X) = E({(a +X) —E(a + X)}”) = E({X — E(X)}*) = var(X).
+
+7. For each r, bet {1 + a(r)}—! on horse r. If the rth horse wins, your payoff is {z(r) + 1}{1+
+x(r)}~! = 1, which is in excess of your total stake 37, {1 (k) + 1}7!.
+
+8. We may assume that: (a) after any given roll of the die, your decision whether or not to stop
+depends only on the value V of the current roll; (b) if it is optimal to stop for V = r, then it is also
+optimal to stop when V > r.
+
+Consider the strategy: stop the first time that the die shows r or greater. Let S(r) be the expected
+score achieved by following this stategy. By elementary calculations,
+
+S(6) = 6- P(6 appears before 1) + 1 - P(1 appears before 6) = 5,
+
+and similarly $(5) = 4, S(4) = 4, 53) = 2, S(2) = 4. The optimal strategy is therefore to stop at
+the first throw showing 4, 5, or 6. Similar arguments may be used to show that ‘stop at 5 or 6’ is the
+rule to maximize the expected squared score.
+
+9. Proceeding as in Exercise (8), we find the expected returns for the same strategies to be:
+S@)=4-3c, S(6)=4-2c, S(4)=4-3e, SBV=P-$c, S2=F-c.
+
+Ifc= 7 it is best to stop when the score is at least 4; if c = 1, you should stop when the score is at
+least 3. The respective expected scores are ui and 13.
+
+3.4 Solutions. Indicators and matching
+
+1. Let J; be the indicator function of the event that the outcome of the (j + 1)th toss is different from
+the outcome of the jth toss. The number R of distinct runs is given by R = 1+ a I;, Hence
+
+E(R) =14+@—DE()) =14+ @—-—1)2pq,
+where g = 1 — p. Now remark that J; and J;, are independent if |j — &| > 1, so that
+n—-l
+
+>
+
+j=l
+
+2
+E{((R — 17} = e{ ( ij) \ = (n— DE(h) +2 — DE)
++ {(n— 1)? — @—1) -2(n — 2) }E()?.
+
+162

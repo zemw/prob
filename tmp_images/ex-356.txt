@@ -1,0 +1,71 @@
+Problems Solutions [7.11.33]-[7.11.34]
+
+excursion fromi. By the strong Markov property, the T (7) are independent and identically distributed
+with mean j;. Furthermore,
+
+, “@-! V; (n)
+Vo » Tr) < Ta » T(r).
+
+By the strong law of large numbers and the fact that V; (7) =: 00 as n —> 00, the two outer terms
+sandwich the central term, and the result follows.
+
+(b) Note that 7d f(X,) = ies f@DVi(n). With Q a finite subset of S, and z; = y; 1, the
+
+unique stationary distribution,
+Vj (n) 1 ;
+» (M2 - 2) so)
+n bi
+
+n-1 :
+f (Xr) f@
+y ey Mle)
+Vie)
++(e +o) Mf oo
+
+r=0 i Mi
+<{y |v 2
+i¢Q
+
+Li
+where || f lloo = sup{| f(@)| : i €¢ S}. The sum overi € Q converges a.s. to 0 as n — o, by part (a).
+
+The other sum satisfies
+Viln) Vil)
+yA tg) Er +s)
+
+i€Q
+
+which approaches 0 a.s., in the limits as n —> oo and Q ¢ S.
+
+33. (a) Since the chain is persistent, we may assume without loss of generality that Xp = j. Define
+the times R,, R2,... of return to j, the sojourn lengths $;, S2,... in j, and the times Vj, V2,...
+between visits to 7. By the Markov property and the strong law of large numbers,
+
+i 1
+-S*s, = —, ram eS
+n=l 8j
+
+Also, Rn/Rn+1 —> 1, since 4; = E(R1) < 00. If Rn <t < Ry41, then
+
+Ry Dora Sr 15r <l a Ratt wrt Der=1 St 1 Sr
+I =j\ds <
+Ratt yaa v= {X(s)=j} Rn ply,
+
+Let n —> oo to obtain the result.
+
+(b) Note by Theorem (6.9.21) that pj;;(¢) > 1; ast — 00. We take expectations of the integral in
+part (a), and the claim follows as in Corollary (6.4.22).
+
+(c) Use the fact that
+[ f(X(s)) ds = vf Kx (s)=j} ds
+jes
+
+together with the method of solution of Problem (7.11.32b).
+
+34, (a) By the first Borel—Cantelli lemma, X, = Y, for all but finitely many values of n, almost
+surely. Off an event of probability zero, the sequences are identical for all large n.
+
+(b) This follows immediately from part (a), since X, — Y, = 0 for all large n, almost surely.
+(c) By the above, a7! $7, (X, — Yr) = 0, which implies the claim.
+
+347

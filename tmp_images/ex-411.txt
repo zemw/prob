@@ -1,0 +1,49 @@
+[12.5.6]-[12.5.8] Solutions Martingales
+
+If we can prove that E{(cos NT} < 00, it will follow that {Y7,,,} is uniformly integrable. This will
+imply in turn that E(Yr) = limp—oo E(¥7~n) = E(%), and therefore
+
+cos{5A(a + b)JE{(cos an7?y = cos{5A(b —a)}
+as required. We have from (*) that
+E(Y) = E(¥ran) = cos{Za(a + b)}E{(cos a) 7*"}.
+Now T An > T asn — on, implying by Fatou’s lemma that
+
+E(Y%) __ cos{zA(a — b)}
+
+E{(cos a)~7 7 )
+{(cosa)"* } < cos{4a(a +b)} cos{4ZA(a + b)}
+
+6. (a) The occurrence of the event {U = n} depends on S1, S2,..., S, only, and therefore U is a
+stopping time. Think of U as the time until the first sequence of five consecutive heads in a sequence
+of coins tosses. Using the renewal-theory argument of Problem (10.5.17), we find that E(U) = 62.
+(b) Knowledge of $1, So, ..., Sn is insufficient to determine whether or not V = n, and therefore V
+is not a stopping time. Now E(V) = E(U) — 5 = 57.
+
+(c) W is a stopping time, since it is a first-passage time. Also E(W) = oo since the walk is null
+persistent.
+
+7. With the usual notation,
+
+m m+n
+E(Mm+n | Fm) = B(d> Spt S> Sp — 5 (Smtn — Sm + Sm)? | Fn)
+=0 r=m+1
+
+= Mm + Sm — SmE{(Smn ~ Sm)?}
+= Mn + Sm — nSmE(X?) = Mm.
+Thus {M, : n > 0} is a martingale, and evidently T is a stopping time. The conditions of the optional
+
+stopping theorem (12.5.1) hold, and therefore, by a result of Example (3.9.6),
+
+T
+a
+a — 4a? = My = E(M7) -2(5 s,) —4K?. ra
+=0
+
+8. We partition the sequence into consecutive batches of a + b flips. If any such batch contains only
+1’s, then the game is over. Hence P(T > n(a + b)) < {1-— (gato y" — 0asn — oo. Therefore,
+E|Sp — T| < E(S7) + E(T) < @ +6)" +E(T) < 0,
+
+and
+E[(S# —T) ron] < @+b)P(T > n)+E(TIrsny) > 0  asn > oo.
+
+402

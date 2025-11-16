@@ -1,0 +1,74 @@
+Stationary distributions and the limit theorem Solutions [6.4.4]-[6.4.5]
+
+The final equation is a consequence of the previous ones, since a O x; = 1. Suppose then that
+v = (1, v2, ...) is an infinite vector satisfying
+
+vo = vo(go + 81) + 4180, Yr = VO8rg1 + Y18r +--+: +4180 forr > 0.
+
+Multiply through the equation for v; by s” +1 and sum over r to find (after a little work) that
+
+[o.<) . [o@)
+N(s) = So ys‘, G(s) = S> gis’
+i=0 i=0
+
+satisfy sN(s) = N(s)G(s) + vogo(s — 1), and hence
+
+1 -—1
+
++ ns) — 806 =)
+
+vo s— G(s)
+The probability generating function of the 7; is therefore a constant multiplied by the coefficients of
+sysl...jsk-lin go(s — 1)/(s — G(s)), the constant being chosen in such a way that a n=l.
+
+When G(s) = p(1 — gs)~!, then gg = p and
+
+sols—1) _ pl —49s) —p q
+s— G(s) p-—4qs 1—(qs/p)
+
+The coefficient of 5° is 1, and of s! is git} /p' if i > 1. The stationary distribution is therefore given
+by 2; = gxo(q/p)' fori = 1, where
+_ 1 _ p-4
+
+140% gq/pyi P49 + 4?(1— G/p)*-)
+
+TO
+
+if p #q,and mp = 2/(K + lif p=q = t.
+
+4. The transition matrices
+
+Oo ONeNIE
+
+i]
+fa
+ll
+“oonN
+oe
+- Oo
+Ne
+ia]
+i)
+II
+Oo ONeBNIE
+NENIE O ©
+NEN O ©
+
+have respective stationary distributions 7; = (p,1— p) anda2 = (3 P, 5 P, (1 — p), 5(1 — p))
+for any 0 < p < 1.
+5. (a) Set i = 1, and find an increasing sequence n1(1),1(2),... along which x;(m) converges.
+Now set i = 2, and find a subsequence of (n1(j) : j = 1) along which x2(n) converges; denote
+this subsequence by n2(1), n2(2),.... Continue inductively to obtain, for each i, a sequence nj =
+(nj(J) : j = 1), noting that:
+
+(i) m;41 is a subsequence of n;, and
+
+Gi) limy—s oo xj (nj (r)) exists for all i.
+Finally, define m; = n;,(k). For eachi > 1, the sequence m;, mj+1, ... is a subsequence of n;, and
+therefore lim; oo x; (my) exists.
+(b) Let S be the state space of the irreducible Markov chain X. There are countably many pairs i, j
+of states, and part (a) may be applied to show that there exists a sequence (n, : r > 1) and a family
+(aij : i, 7 € S), not all zero, such that pj; (ar) > ajj asr > oo.
+
+283
+

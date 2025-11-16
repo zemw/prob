@@ -1,0 +1,75 @@
+[4.14.38]-[4.14.39] Solutions Continuous random variables
+
+and the claim follows by the fact that 42”) (x) = m!.
+(b) By Taylor’s theorem and the first part,
+
+_4\n
+Toe  Hn() = Lo $x) =x),
+
+whence
+[o.<)
+
+rt”
+y ain) = = exp{- 5 (x —1)*+ 5x7} = exp(xt — 31”),
+n=0”
+
+38. The polynomials of Problem (4.14.37) are orthogonal, and there are unique expansions (subject
+to mild conditions) of the form u(x) = 37729 ar Hy(x) and v(x) = 7°25 by Hy (x). Without loss of
+generality, we may assume that E(U) = E(V) = 0, whence, by Problem (4.14.37), ag = bo = 0.
+By (4.14.37a) again,
+
+oe) [o@)
+var(U) = E(u(X)*) = Soa?r!, var(V) = > bert.
+
+r=1
+
+By (4.14.37b),
+
+fo ¢) mo n
+e(> Fm(X)s > Fn (¥)t )= E(exp(sX — 4s? +1¥ — 427}) = eS?
+
+! !
+m=O mt n=0 nt
+
+By considering the coefficient of st”,
+
+n ‘ —_
+p'n! ifm=n,
+
+E(Hm(X)An(¥)) = { 0 ifm £n
+
+and so
+
+[o.<) [o@) [o.<)
+cov(U, V) = e(> am Hm (X) > bn n(¥)) = 2 anbapint
+
+m=1 n=1
+
+lallxnei anne" int] Sy |anbn|n!
+Vren nt De, ban! Vue agn! Sona an!
+
+where we have used the Cauchy—Schwarz inequality at the last stage.
+
+lo, VY = < lel,
+
+39. (a) Let ¥, = Xq@) — X(r—1) with the convention that X(@) = 0 and X(41) = 1. By Problem
+(4.14.21) and a change of variables, we may see that Y,, Y2,..., Yn41 have the distribution of a point
+chosen uniformly at random in the simplex of non-negative vectors y = (yj, y2,--.. ¥n41) With sum
+1. [This may also be derived using a Poisson process representation and Theorem (6.12.7).] Conse-
+quently, the Y; are identically distributed, and their joint distribution is invariant under permutations
+
+of the indices of the Y;. Now pias Y, = 1 and, by taking expectations, (n + 1)E(%1) = 1, whence
+E(X()) = rE(%1) = rin +1).
+(b) We have that
+
+2
+
+1
+2) 2 _ y\n-l _—
+Bp) = [ x*n(1 — x) dx = @aba+2’
+
+ntl 2
+l= B|(> rr) = (n+ DEY?) +.n(n + DE( ¥2),
+r=1
+
+222

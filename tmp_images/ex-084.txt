@@ -1,0 +1,62 @@
+Markov chain Monte Carlo Exercises [6.13.3]-[6.14.4]
+
+convenience to be non-negative. Show that E(S) = fea g(u)A(u) duand var(S) = fod g(u)2A(u) du,
+provided these integrals converge.
+
+3. Let I bea Poisson process with constant intensity 4 on the surface of the sphere of R?3 with radius
+1. Let P be the process given by the (X, Y) coordinates of the points projected on a plane passing
+through the centre of the sphere. Show that P is a Poisson process, and find its intensity function.
+
+4. Repeat Exercise (3), when TF is a homogeneous Poisson process on the ball {(x1, x2, x3) : xe +
+xe + x3 < 1}.
+5. You stick pins in a Mercator projection of the Earth in the manner of a Poisson process with
+constant intensity 4. What is the intensity function of the corresponding process on the globe? What
+would be the intensity function on the map if you formed a Poisson process of constant intensity 4 of
+meteorite strikes on the surface of the Earth?
+6. Shocks. The rth point 7, of a Poisson process N of constant intensity 1 on R+ gives rise to an
+effect X,e-“¢—-T) at time t > Ty, where the X; are independent and identically distributed with
+finite variance. Find the mean and variance of the total effect S(t) = yo X-e %¢—T) in terms of
+the first two moments of the X;, and calculate cov(S(s), S(t)).
+
+What is the behaviour of the correlation o(S(s), S(t)) as s > co witht — s fixed?
+
+7. Let N be a non-homogeneous Poisson process on R+ with intensity function A. Find the joint
+density of the first two inter-event times, and deduce that they are not in general independent.
+
+8. Competitionlemma. Let {N;(t) : r > 1}beacollection of independent Poisson processes on R+
+with respective constant intensities {Ay : r > 1}, such that >A, = A < oo. Set N(t) = >, Nr(t),
+and let J denote the index of the process supplying the first point in NV, occurring at time 7. Show that
+
+A;
+PU =i, T>H)=PU =)PT >H)N= se, i>.
+
+6.14 Exercises. Markov chain Monte Carlo
+
+1. Let P be a stochastic matrix on the finite set © with stationary distribution 7. Define the inner
+product (x, y) = S“pe@ xk Yk, and let Par) = {xe R® : (x, x) < oo}. Show, in the obvious
+notation, that P is reversible with respect to 7 if and only if (x, Py) = (Px, y) for all x, y € Por).
+
+2. Barker’s algorithm. Show that a possible choice for the acceptance probabilities in Hastings’s
+general algorithm is
+Tj 8 iji
+bij => —_—, — .
+Hj 8ij + Hj 8ji
+where G = (g;;) is the proposal matrix.
+
+3. Let S be a countable set. For each j € S, the sets Ajx, k € S, form a partition of the interval
+[0, 1]. Let g : S x [0,1] > S be given by g(j,u) = k ifu € Ajz. The sequence {X, : » > O} of
+random variables is generated recursively by Xy41 = g(Xn,Un4 1), n => 0, where {Uy : n > 1} are
+independent random variables with the uniform distribution on [0, 1]. Show that X is a Markov chain,
+and find its transition matrix.
+
+4. Dobrushin’s bound. Let U = (us;) be a finite |S| x |T| stochastic matrix. Dobrushin’s ergodic
+coefficient is defined to be
+
+1
+dU) = 3 sup Y> |uie — ujel-
+LIES pep
+
+(a) Show that, if V is a finite |7| x |U| stochastic matrix, then d(UV) < d(U)d(V).
+
+75
+

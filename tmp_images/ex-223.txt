@@ -1,0 +1,67 @@
+[4.14.16]-[4.14.17] Solutions Continuous random variables
+
+whence f7(0) = fy (tan@) sec” 6. Therefore fz@= xo! (for || < ea) if and only if
+
+1
+mi +u2)’
+
+“MO <uUu< Ww.
+
+fut) =
+When f is the N(0, 1) density,
+°° © 4, 1.9,,.2
+[- feotanitax =2 [Phe PO vax,
+—0o 0 2
+
+which is easily integrated directly to obtain the Cauchy density. In the second case, we have the
+following integral:
+
+fore) 2 x|
+4 aa OX
+—oo (1 +x*)(1 + x*y*)
+In this case, make the substitution z = x” and expand as partial fractions.
+16. The transformation x = rcos@, y =r sin@ has Jacobian J = r, so that
+1 _1,2
+fr,e(r,0) = ~-re 2 , r>0, 0<6 <2n.
+
+20
+
+Therefore R and © are independent, © being uniform on [0, 277), and R?2 having distribution function
+
+Ja 4 1
+P(R? <a) = [ re-2” dr =1—e724;
+0
+
+this is the exponential distribution with parameter 4 (otherwise known as ry, 1) or x2(2)). The
+
+1,2
+density function of R is fr(r) =re 2" forr > 0.
+Now, by symmetry,
+x? 1_ { x?+4y¥? 1
+Ei —; = -—E | ——,—_ =-,.
+R2 2 R2 2
+
+In the first octant, ie., in {(x, y) : 0 < y < x}, we have min{x, y} = y, max{x, y} = x. The
+joint density fx y is invariant under rotations, and hence the expectation in question is
+
+8 | = fy, ydxdy=8 | [. an’ re 2” dr dé = — log?.
+O<y<x ¥ =0 On” Xu
+
+17. G) Using independence,
+
+PU <u) =1—-P(X >u,¥ > u)=1-(1-FxyW)(1—- Fylu)).
+Similarly
+
+PVV <v)=PXX <0,Y <v) = Fy(v)Fy().
+(ii) (a) By @), PU <u) = 1 — ee foru > 0.
+(b) Also, Z = X + 4Y satisfies
+OO v io.¢]
+P(Z>v)= [ P(Y > 2(v —x)) fx(@x) dx = [ e 2X) 9% ay +/ e* dx
+0 0
+
+v
+
+=e%e" — 1) +e? = 1—-(1-e 2 = PV > 0).
+
+214
+

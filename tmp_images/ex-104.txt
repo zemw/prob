@@ -1,0 +1,73 @@
+Problems Exercises [7.11.27]-[7.11.33]
+
+where k = [Mn!/ 21. Now use the central limit theorem and (a) above, to deduce Stirling’s
+
+formula:
+nie”
+
+i
+n"+?./n
+
+27. A bag contains red and green balls. A ball is drawn from the bag, its colour noted, and then it
+is returned to the bag together with a new ball of the same colour. Initially the bag contained one
+ball of each colour. If R, denotes the number of red balls in the bag after n additions, show that
+Sn = Rp/(n 4+ 2) is a martingale. Deduce that the ratio of red to green balls converges almost surely
+to some limit as n + ov.
+
+—>1 asn — OOo.
+
+28. Anscombe’s theorem. Let {X; : i > 1} be independent identically distributed random variables
+with zero mean and finite positive variance o”, and let Sy = 7] X;. Suppose that the integer-valued
+
+: _ P : eye
+random process M (ft) satisfies ¢ lu (t) — 6 ast — oo, where @ is a positive constant. Show that
+
+Ss AY
+2M) Bovo,1) and —“@®_ 2 wo,1) ast > 0.
+oVét o/M(t)
+
+You should not assume that the process M is independent of the X;.
+
+29. Kolmogorov’s inequality. Let X,, X2,... be independent random variables with zero means,
+and Sy = Xj +Xo+-:-+Xn. Let My, = max) <p<y |5,%j and show that E(S2TA,) > c2P(Ag) where
+Ay = {Mg_1 <c < My} andc > 0. Deduce Kolmogorov’s inequality:
+
+E 2
+P ( max ISkl >) < (Sn) c> 0.
+
+l<k<n c2
+
+30. Let X 1, X2,... be independent random variables with zero means, and let S, = X; + X2+
+--- + X,. Using Kolmogorov’s inequality or the martingale convergence theorem, show that:
+
+(i) S772) Xi converges almost surely if S772, E(X?) < 0,
+(ii) if there exists an increasing real sequence (b,) such that by, — ov, and satisfying the inequality
+Sree E(XP)/bz < 00, then by! S700, X, *S Oasn > ov.
+
+31. Estimating the transition matrix. The Markov chain Xo, X1,... , Xn has initial distribution
+Ff, = P(Xo = i) and transition matrix P. The log-likelihood function A(P) is defined as A(P) =
+log( Xo PX9,X1 PX1,X_ °°" PX,-1,Xn)- Show that:
+
+(a) ACP) = log fxg + yi, j Ni; log pij where N;; is the number of transitions from i to j,
+
+(b) viewed as a function of the p;;, A(P) is maximal when p;; = pjj where Dj; = Nij/3°, Nik.
+(c) if X is irreducible and ergodic then p; ij aS; Pij ASN > OO.
+
+32. Ergodic theorem in discrete time. Let X be an irreducible discrete-time Markov chain, and let
+j4; be the mean recurrence time of state i. Let V;(n) = yr I,x,=i} be the number of visits to i up
+ton — 1, and let f be any bounded function on S. Show that:
+
+(a) n—!V;(n) aS uj! asn > o,
+(b) if 4; < 00 for all i, then
+
+1%
+hn So f(r) => Sof @O/m: asn —> oo.
+r=0
+
+ieS
+
+33. Ergodic theorem in continuous time. Let X be an irreducible persistent continuous-time Markov
+chain with generator G and finite mean recurrence times j;.
+
+95
+

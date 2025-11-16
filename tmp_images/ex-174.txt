@@ -1,0 +1,61 @@
+Dependence Solutions [3.5.1]-[3.6.2]
+
+where #A denotes the cardinality of the set A. By rearrangement, d,4 1 —(n+1)dn = —(dn—ndy_}).
+Set uy = dy — nd,_1 and note that uz = 1, to obtain u, = (—1)", n > 2, and hence
+
+ni ont
+
+dn = 3 — 3
+
+i}
+fet (I,
+n!
+
+Now divide by n! to obtain the results above.
+
+3.5 Solutions. Examples of discrete variables
+
+1. There are n!/(n,!n!---n;!) sequences of outcomes in which the ith possible outcome occurs
+n; times for each i. The probability of any such sequence is p;! p,? --- p;*, and the result follows.
+
+2. The total number H of heads satisfies
+
+[o.¢) 0° n Aner
+P(A =x)= >> PH =x|N=n)P(N=n)= > ("ora = py *—
+
+n=x n=xX
+_ pyre? S (al — pyr %e UP
+
+x! oat (n—x)!
+
+The last summation equals 1, since it is the sum of the values of the Poisson mass function with
+parameter A(1 — p).
+
+3. dpn/dd = Pp—1 — Pn Where p_, = 0. Hence (d/dd)P(X <n) = pp(A).
+
+4. The probability of a marked animal in the nth place is a/b. Conditional on this event, the chance
+of n — 1 preceding places containing m — 1 marked and n — m unmarked animals is
+
+(521) (028) /Cc))
+
+as required. Now let X; be the number of unmarked animals between the j — 1th and jth marked
+animals, if all were caught. By symmetry, EX; = (6 — a)/(a + 1), whence EX = m(EX; +1) =
+m(b + 1)/(a4+ 1).
+
+3.6 Solutions. Dependence
+
+1. Remembering Problem (2.7.3b), it suffices to show that var(aX + bY) < o if a,b € R and
+var(X), var(Y) < oo. Now,
+
+var(aX + bY) = E({aX + bY - B(aX +bY)}’)
+= a” var(X) + 2ab cov(X, Y) + b* var(Y)
+< a’ var(X) + 2ab/var(X) var(Y) + b” var(Y)
+2
+= (ay/var(X) + by/var(¥))
+
+where we have used the Cauchy—Schwarz inequality (3.6.9) applied to X — E(X), Y — E(Y).
+
+2. Let N; be the number of times the ith outcome occurs. Then Nj; has the binomial distribution
+with parameters n and p;.
+
+165

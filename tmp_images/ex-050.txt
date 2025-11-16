@@ -1,0 +1,65 @@
+Problems Exercises [4.14.12]-[4.14.19]
+
+(b) Find the joint density function of X + Y and X/(X + Y), and deduce that they are independent.
+
+(c) If Z is Poisson with parameter At, and m is integral, show that P(Z < m) = P(X > f).
+
+(d) If0 <m <n and B is independent of Y with the beta distribution with parameters m and n — m,
+show that Y B has the same distribution as X.
+
+12. Let X1, X2,..., Xn be independent N(0, 1) variables.
+
+(a) Show that Xf is x7(1).
+
+(b) Show that X : + xs is x7(2) by expressing its distribution function as an integral and changing
+to polar coordinates.
+
+(c) More generally, show that Xt + X3 +--+» +X? is x(n).
+
+13. Let X and Y have the bivariate normal distribution with means «41, 442, variances a7, a4, and
+
+correlation p. Show that
+
+(a) E(X | Y) = wy + poy (¥ — u2)/o2,
+
+(b) the variance of the conditional density function fy|y is var(X | Y) = of (1 _ p).
+
+14. Let X and Y have joint density function f. Find the density function of Y/X.
+
+15. Let X and Y be independent variables with common density function f. Show that tan (Y /X)
+has the uniform distribution on (— $7, 577) if and only if
+
+/ FOO Fay)leldx = yeR,
+oo
+
+m(1+y?)’
+Verify that this is valid if either f is the N(0, 1) density function or f(x) = a(1 + x*)~! for some
+constant a.
+
+16. Let X and Y be independent N(0, 1) variables, and think of (X, Y) as arandom point in the plane.
+Change to polar coordinates (R, ©) given by R? = X24 Y? tn@=Y /X; show that R? is x7 (2),
+tan © has the Cauchy distribution, and R and © are independent. Find the density of R.
+
+Find E(X2/R) and
+EY min{|X|, iY |} \
+max{(X/, |Y |}
+
+17. If X and Y are independent random variables, show that U = min{X, Y} and V = max{X, Y}
+have distribution functions
+
+Fyu@) =1—-{1—-Fx@}{1-Fy@}, Fy) = Fx(v)Fy().
+
+Let X and Y be independent exponential variables, parameter 1. Show that
+(a) U is exponential, parameter 2,
+(b) V has the same distribution as X + SY. Hence find the mean and variance of V.
+18. Let X and Y be independent variables having the exponential distribution with parameters 1 and
+pt respectively. Let U = min{X, Y}, V = max{X, Y}, and W = V —U.
+(a) Find POU = X) = P(X < Y).
+(b) Show that U and W are independent.
+19. Let X and Y be independent non-negative random variables with continuous density functions
+on (0, 00). ;
+(a) If, given X + Y = u, X is uniformly distributed on [0, u] whatever the value of u, show that X
+and Y have the exponential distribution.
+
+41
+

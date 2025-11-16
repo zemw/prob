@@ -1,0 +1,62 @@
+Problems Solutions [6.15.46]-{6.15.48]
+Taking the expectation of each side gives the result. Furthermore,
+
+H(Xn4i | Xn) = — 0 (pi log pij)P(Xn = i).
+ij
+Now X has a unique stationary distribution 7, so that P(X; =i) > 2; as n — oo. The state space
+
+is finite, and the claim follows.
+
+46. Let T = inf{t : X; = Y;}. Since X and Y are persistent, and since each process moves by
+distance 1 at continuously distributed times, it is the case that P(T < oo) = 1. We define
+
+{ xX; ift <T,
+Z= .
+Y; ift >T,
+
+noting that the processes X and Z have the same distributions.
+(a) By the above remarks,
+
+(P(X; = k) — PCY; = &)| = |P(Zp = k) — PCY; =k)
+<|P(Z, =k, T <t)+P(Zp =k, T >t) - PM =k, T <1) -P% =k, T> |
+<P(X; =k, T>) +P; =k, T> Dd.
+
+We sum over k € A, and let tf + oo.
+
+(b) We have in this case that Z; < Y; for all t. The claim follows from the fact that X and Z are
+processes with the same distributions.
+
+47. We reformulate the problem in the following way. Suppose there are two containers, W and N,
+containing n particles in all. During the time interval (¢, ¢ + dt), any particle in W moves to N with
+probability dt + o(dt), and any particle in N moves to W with probability Adt + o(dt). The particles
+move independently of one another. The number Z(¢) of particles in W has the same rules of evolution
+as the process X in the original problem. Now, Z(t) may be expressed as the sum of two independent
+random variables U and V, where U is bin(r, @;), V is bin(n — 7, wy), and 6; is the probability that a
+particle starting in W is in W at time ¢, y is the probability that a particle starting in N at 0 is in W
+at t. By considering the two-state Markov chain of Exercise (6.9.1),
+
+A+ pe Atuyt a — re ~Atwt
+
+o
+A+ pu
+
+and therefore
+E(s*) = B(s¥)yE(s”) = (56; +1—5)" (5 +1—5)"7".
+
+Also, E(X(#)) = r@; + (nm — r) yy and var(X(t)) = r@;. — 8;) + — rr). — 1). In the limit as
+n — ©0, the distribution of X (¢) approaches the bin(n, A/(A + «)) distribution.
+
+48. Solving the equations
+
+HO = 4101 + prm2, 1 = 422 + Porto, Sox; =1,
+i
+
+gives the first claim. We have that y = 7; (pi — qi)2;, and the formula for y follows.
+Considering the three walks in order, we have that:
+A. m= 1 for each i, and ya = —2a < 0.
+
+B. Substitution in the férmula for yg gives the numerator as 3{ _ Aga +o(a) } , which is negative
+for small a whereas the denominator is positive.
+
+321
+

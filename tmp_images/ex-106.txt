@@ -1,0 +1,48 @@
+8
+
+Random processes
+
+8.2 Exercises. Stationary processes
+
+1. Flip-flop. Let {X,} be a Markov chain on the state space S = {0, 1} with transition matrix
+
+l-a a
+P= ;
+( B 9)
+where a + B > 0. Find:
+
+(a) the correlation p(Xm, Xm-+n), and its limit as m — oo with n remaining fixed,
+(b) littn+oon! 1 P(X = 1).
+Under what condition is the process strongly stationary?
+
+2. Random telegraph. Let {N(t) : t > 0} be a Poisson process of intensity 4, and let 7p be
+an independent random variable such that P(Ty = +1) = 4. Define T(t) = To(-1)N®. Show
+that {7 (¢) : t > O} is stationary and find: (a) e(T(s), T(s + ¢)), (b) the mean and variance of
+X(t) = fp T(s)ds.
+
+3. Korolyuk—Khinchin theorem. An integer-valued counting process {N(t) : t > 0} with N(0) =
+0 is called crudely stationary if px(s,t) = P(N(s +t) — N(s) = k) depends only on the length ¢ and
+not on the location s. It is called simple if, almost surely, it has jump discontinuities of size 1 only.
+Show that, for a simple crudely stationary process N, lim, jo t PIN (t) > 0) = E(N(1)).
+
+8.3 Exercises. Renewal processes
+
+1. Let (f; : n = 1) bea probability distribution on the positive integers, and define a sequence
+(un :n > 0) by ug = 1 and uy = D0? _, f-un—r, n = 1. Explain why such a sequence is called a
+renewal sequence, and show that u is a renewal sequence if and only if there exists a Markov chain U
+and a state s such that u, = P(U, = s | Up = 5).
+
+2. Let {X; : i > 1} be the inter-event times of a discrete renewal process on the integers. Show
+that the excess lifetime B, constitutes a Markov chain. Write down the transition probabilities of the
+sequence {By} when reversed in equilibrium. Compare these with the transition probabilities of the
+chain U of your solution to Exercise (1).
+
+3. Let (u, :n > 1) satisfy ug = 1 and up = 77_, frun—r forn > 1, where (f; :r > lisa
+non-negative sequence. Show that:
+
+(a) Uv, = pup is a renewal sequence if p > Oand 0°.) op" fn = 1,
+
+(b) asn — ©0, p”™uy, converges to some constant c.
+
+97
+

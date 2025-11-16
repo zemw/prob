@@ -1,0 +1,62 @@
+Dependence Exercises [3.4.9]-[3.6.5]
+
+9. Matching. (a) Use the inclusion—exclusion formula (3.4.2) to derive the result of Example
+(3.4.3), namely: in a random permutation of the first » integers, the probability that exactly r retain
+
+their original positions is
+1 (5 1 feed (-1)"*
+ri\2! 3! (n—r)t J
+
+(b) Let dy, be the number of derangements of the first n integers (that is, rearrangements with no
+integers in their original positions). Show that d,41 = ndn +nd,_, forn > 2. Deduce the result of
+part (a).
+
+3.5 Exercises. Examples of discrete variables
+
+1. De Moivre trials. Each trial may result in any of ¢ given outcomes, the ith outcome having
+probability p;. Let Nj; be the number of occurrences of the ith outcome in n independent trials. Show
+
+that
+n!
+
+P(N; = nj for 1 <i <t) = ————— p'! py? -- py"
+nying!---ny!
+for any collection 11,2, ...,n; of non-negative integers with sum n. The vector N is said to have
+
+the multinomial distribution.
+
+2. In your pocket is a random number N of coins, where N has the Poisson distribution with
+parameter A. You toss each coin once, with heads showing with probability p each time. Show that
+the total number of heads has the Poisson distribution with parameter Ap.
+
+3. Let X be Poisson distributed where P(X = 2) = pa(A) = Ate /n! for n > 0. Show that
+P(X <n) =1- fo Pn (x) dx.
+
+4. Capture-recapture. A population of b animals has had a number a of its members captured,
+
+marked, and released. Let X be the number of animals it is necessary to recapture (without re-release)
+in order to obtain m marked animals. Show that
+
+vam 5 (roa) / (2)
+
+and find EX. This distribution has been called negative hypergeometric.
+
+3.6 Exercises. Dependence
+1, Show that the collection of random variables on a given probability space and having finite
+variance forms a vector space over the reals.
+2. Find the marginal mass functions of the multinomial distribution of Exercise (3.5.1).
+3. Let X and Y be discrete random variables with joint mass function
+
+Cc
+ty-)atyatyt+l’
+
+f@.y)= x,y =1,2,3,....
+
+Find the marginal mass functions of X and Y, calculate C, and also the covariance of X and Y.
+
+4. Let X and Y be discrete random variables with mean 0, variance 1, and covariance p. Show that
+E(max{X?, ¥7}) <14+ V1 — p?.
+
+5. Mutual information. Let X and Y be discrete random variables with joint mass function /.
+
+19

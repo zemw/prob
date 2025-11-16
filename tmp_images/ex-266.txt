@@ -1,0 +1,75 @@
+Problems Solutions [5.12.9]-[5.12.11]
+
+Write fu) = G0 +4),x =s—1, y =t —1, to obtain f(px + qy) = f (px) f (gy), a functional
+equation valid at least when —2 < x, y < 0. Now f is continuous within its disc of convergence,
+and also f(0) = 1; the usual argument (see Problem (4.14.5)) implies that f(x) = e for some
+A, and therefore G(s) = f(s — 1) = e*“—)_ Therefore X + Y has the Poisson distribution with
+parameter 4. Furthermore, Gx(s) = G(ps +q) =e? (s~l) whence X has the Poisson distribution
+with parameter Ap. Similarly Y has the Poisson distribution with parameter Aq.
+
+9. In the usual notation, G,41(s) = Gn(G(s)). It follows that Gri) = G"(1)6'(1)? +
+G!,(1)G” (1) so that, after some work, var(Zp4.1) = #2 var(Zn) + "0. Iterate to obtain
+
+2,,n n+1
+o 1-
+mH yo. 4 any THEE)
+
+> > 0,
+1-p n=
+
+var(Zn41) = o7(u" +b
+
+for the case pw # 1. If ~ = 1, then var(Z,41) = o2(n +1).
+
+10. (a) Since the coin is unbiased, we may assume that each player, having won a round, continues
+to back the same face (heads or tails) until losing. The duration D of the game equals k if and only
+if k is the first time at which there has been either a run of r — 1 heads or a run of r — 1 tails; the
+probability of this may be evaluated in a routine way. Alternatively, argue as follows. We record S
+(for ‘same’) each time a coin shows the same face as its predecessor, and we record C (for ‘change’)
+otherwise; start with a C. It is easy to see that each symbol in the resulting sequence is independent
+of earlier symbols and is equally likely to be S or C. Now D = k if and only if the first run of r — 2
+S’s is completed at time k. It is immediate from the result of Problem (5.12.3) that
+
+(gsy'2(1 — 55)
+
+G = .
+p= TT, + (3571
+
+(b) The probability that A; wins is
+
+oO
+m = >_> P(D =n - 1) +k-1).
+
+n=]
+
+Let @ be a complex (r — 1)th root of unity, and set
+
+1 1 1
+
+$e tt Gp o"s)
+@r-2Dk-D 7P
+
+It may be seen (as for Problem (5.12.2)) that the coefficient of st in W,;(s) is P(D = i) if i is of the
+form n(r — 1) + (k — 1) for some n, and is 0 otherwise. Therefore P(A, wins) = W;(1).
+
+(c) The pool contains £D when it is won. The required mean is therefore
+
+E(Dia, wins}) _ Ww.)
+
+E(D | Ay wins) = =
+(D | Ax wins) = ra wins) W,()
+
+(d) Using the result of Exercise (5.1.2), the generating function of the sequence P(D > k), k > 0, is
+T(s) =(1 — Gp(s))/(1 — 5). The required probability is the coefficient of s” in T(s).
+
+11. Let T, be the total number of people in the first n generations. By considering the size Z; of the
+
+first generation, we see that
+Zi
+
+Tm =14+ 5 >T1@
+
+i=1
+
+257
+

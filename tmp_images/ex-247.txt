@@ -1,0 +1,57 @@
+[5.4.1]-[5.4.4] Solutions Generating functions and their applications
+
+5.4 Solutions. Branching processes
+
+1. Clearly E(Z, | Zm) = Zmu"—™ since, given Zm, Zy is the sum of the numbers of (n — m)th
+generation descendants of Zm progenitors. Hence E(ZmZp | Zm) = Zz p™—™ and E(ZmZn) =
+E{E(Zm Zn | Zm)} = E(Z2,)u"—™. Hence
+
+cov(Zm, Zn) = 2" -™E(Z2,) — E(Zm)E(Zn) = uw" var(Zm),
+
+and, by Lemma (5.4.2),
+
+—m_ [Vat Zm { Jur —w™)/A—p") ifu 1,
+Z ,Z — ,2-m Fs
+pZm, Zn) = \) var Zn Jmin if = 1.
+
+2. Suppose 0 <r <n, and that everything is known about the process up to time r. Conditional on
+this information, and using a symmetry argument, a randomly chosen individual in the nth generation
+has probability 1/Z, of having as rth generation ancestor any given member of the rth generation.
+The chance that two individuals from the nth generation, chosen randomly and independently of each
+other, have the same rth generation ancestor is therefore 1/Z,. Therefore
+
+P(L <r) =E{P(L <r | Z,)} =E(1— Z,!)
+
+and so
+
+P(L=r)=P(L <r+1)-PWL <r) =K(Z,!)-E(Z},), 9 Osr<n.
+
+If0 < P(Z; = 0) < 1, then almost the same argument proves that PL = 7 | Z, > 0) =
+Nr — H+) forO <r <n, where yy = E(Z;! | Z, > 0).
+
+3. The number Z, of nth generation decendants satisfies
+
+n
+if p=
+P(Zn = 0) = Gn ntl eee
+Zn=)=GnO =) gipn—gry
+prt — grt ifp#q,
+whence, for n > 1,
+1
+ee ifp=
+nn +1) if p =4,
+P(T =n) = P(Zn = 0) — P(Zp—1 = 0) = platy — gy?
+if p #q.
+
+(p" — q”)(p"t1 — gn +1)
+It follows that E(T) < 00 if and only if p < q.
+4, (a) As usual,
+
+Go(s) = G(G(s)) =1—afa(l — s)8}8 = 1a! +81 — 5)6”.
+This suggests that G,(s) = 1 — gl tb +6" — 5)” for n > 1; this formula may be proved
+easily by induction, using the fact that G(s) = G(Gy_1(s)).
+(b) As in the above part (a),
+Gas) = f (PF TPO) = fF PPO) = F(a)
+
+238
+

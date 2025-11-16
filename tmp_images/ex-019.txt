@@ -1,0 +1,49 @@
+2
+
+Random variables and their distributions
+
+2.1 Exercises. Random variables
+
+1. Let X be arandom variable on a given probability space, and let a € R. Show that
+
+(i) aX is a random variable,
+
+(ii) X — X = 0, the random variable taking the value 0 always, and X + X = 2X.
+2. Arandom variable X has distribution function F. What is the distribution function of Y = aX +b,
+where a and b are real constants?
+3. A fair coin is tossed n times. Show that, under reasonable assumptions, the probability of exactly
+k heads is (RG). What is the corresponding quantity when heads appears with probability p on
+each toss?
+
+4. Show that if F and G are distribution functions andO < 4 < 1 thenA F+(1 —A)G isa distribution
+function. Is the product FG a distribution function?
+
+5. Let F be a distribution function and r a positive integer. Show that the following are distribution
+functions:
+
+(a) F(x)’,
+
+(b) 1-f1- FQ),
+
+(ce) F(x) + {1 — F(x)} log{1 — F@)},
+(d) {F(x) — 1}e + exp{1 — F(x)}.
+
+2.2 Exercises. The law of averages
+
+1. You wish to ask each of a large number of people a question to which the answer “yes” is
+embarrassing. The following procedure is proposed in order to determine the embarrassed fraction of
+the population. As the question is asked, a coin is tossed out of sight of the questioner. If the answer
+would have been “no” and the coin shows heads, then the answer “yes” is given. Otherwise people
+respond truthfully. What do you think of this procedure?
+
+2. Acoinis tossed repeatedly and heads turns up on each toss with probability p. Let Hy, and Ty be
+the numbers of heads and tails in n tosses. Show that, for « > 0,
+
+1
+P(2p—1-€ < “(Hin ~ Ty) <2p—-1 46) +1 asin —> oo.
+n
+
+3. Let {X;, :r > 1} be observations which are independent and identically distributed with unknown
+distribution function F. Describe and justify a method for estimating F(x).
+
+10

@@ -1,0 +1,61 @@
+[4.14,52]-[4.14.55] Solutions Continuous random variables
+
+52. By Problem (4.14.4), the displacement of R relative to P is the sum of two independent Cauchy
+random variables. By Exercise (4.8.2), this sum has also a Cauchy distribution, and inverting the
+transformation shows that © is uniformly distributed.
+
+53. We may assume without loss of generality that R has length 1. Note that A occurs if and only if
+the sum of any two parts exceeds the length of the third part.
+
+(a) If the breaks are at X, Y, where 0 < X < Y < 1, then A occurs if and only if 2Y > 1, and
+2(¥ — X) < land 2X < 1. These inequalities are satisfied with probability i.
+
+(b) The length X of the shorter piece has density function fy(x) = 2 for0 <x < 5. The other pieces
+are of length (1 — X)Y and (1 — X)(1 — Y), where Y is uniform on (0, 1). The event A occurs if and
+only if2Y <2XY+1landX+Y-XY> 5 and this has probability
+
+1
+
+2 1 1 —2x
+2 | {ma —x) 2d a dx = log(4/e).
+
+(c) The three lengths are X, 31 — x), x1 — X), where X is uniform on (0, 1). The event A occurs
+if and only if X < 5.
+
+(d) This triangle is obtuse if and only if
+
+which is to say that X > /2 — 1. Hence,
+
+P(V2-1<X <}4) ~ 3 2wWa.
+
+P(obtuse | A) =
+( 1A) P(X < 4)
+
+54. The shorter piece has density function fy (x) = 2 forO <x < 5. Hence,
+
+PR <r)=P x < 2r
+r= r =
+~ 1-x — 14+r’
+
+with density function fr(r) = 2/1 —- r)* for 0 <r < 1. Therefore,
+
+1 lye
+E(R) =| P(R > rar = | i ” dr =2Iog2- 1,
+0 0
+
++r
+
+1 lord -
+BR) = [ 2rP(R > rar = [ ar =") ay = 3 — 41082,
+0 0 l+r
+
+and var(R) = 2 — (2log2)?.
+
+55. With an obvious notation,
+E(R?) = E[(X1 — X)7] + E((% — ¥2)*] = 4E(X2) — 4{E(X1)}* = 4- $a? — 4(4a)? = ba?.
+
+By a natural re-scaling, we may assume that a = 1. Now, X, — X> and Y; — Y> have the
+same triangular density symmetric on (—1, 1), whence (X; — Xp)" and (Y; — Yo)? have distribution
+
+226
+

@@ -1,0 +1,66 @@
+Problems Exercises [3.10.1]-[3.11.6]
+
+3.10 Exercises. Random walk: counting sample paths
+
+1. Consider a symmetric simple random walk S with Sg = 0. Let T = min{n > 1: S, = 0} be the
+time of the first return of the walk to its starting point. Show that
+
+F(T = 2n) = ao (*") 2-2n
+n—
+
+l\n
+
+and deduce that E(T“) < oo if and only ifa < 5. You may need Stirling’s formula: n! ~
+1
+nto" Son,
+
+2. For asymmetric simple random walk starting at 0, show that the mass function of the maximum
+satisfies P(M, = r) = P(S, =r) +P(Sy, =r +1) forr > 0.
+
+3. For asymmetric simple random walk starting at 0, show that the probability that the first visit to
+Son takes place at time 2k equals the product P(S2, = 0)P(S2,-2, = 0), forO < k <n.
+
+3.11 Problems
+
+1. (a) Let X and Y be independent discrete random variables, and let g, h : R + R. Show that 9(X)
+and h(Y) are independent.
+
+(b) Show that two discrete random variables X and Y are independent if and only if fy, y(x, y) =
+Ix (x) fy (y) for all x, y ER.
+
+(c) More generally, show that X and Y are independent if and only if fy y(x, y) can be factorized
+as the product 9(x)h(y) of a function of x alone and a function of y alone.
+
+2. Show that if var(X) = 0 then X is almost surely constant; that is, there exists a € R such that
+P(X = a) = 1. (First show that if E(X2) = 0 then P(X = 0) = 1.)
+
+3. (a) Let X be a discrete random variable and let g : R > R. Show that, when the sum is absolutely
+convergent,
+
+E(g(X)) = D> g(x)P(X = x).
+
+(b) If X and Y are independent and g,h : R — R, show that E(g(X)A(Y)) = E(g(X))E(A(Y))
+whenever these expectations exist.
+
+4, Let Q = {«1, @2, w3}, with P(w)) = P(@2) = P(w3) = 4. Define X, ¥, Z: Q > R by
+
+X(@1)=1, X(@2)=2, X(w3) =3,
+
+Y(m1)=2, Y(@2)=3, Y(@3)=1,
+
+Z(@|)=2, Z(@2)=2, Z{w3) = 1.
+Show that X and Y have the same mass functions. Find the mass functions of X + Y, XY, and X/Y.
+Find the conditional mass functions fy|z and fzyy.
+
+5. For what values of k and a is f a mass function, where:
+
+(a) fy) =k/{nvt+Djn=1,2,...,
+
+(b) f(m) = kn®,n =1,2,... (zeta or Zipf distribution)?
+
+6. Let X and Y be independent Poisson variables with respective parameters 1 and jz. Show that:
+(a) X + Y is Poisson, parameter 1. + 2,
+
+(b) the conditional distribution of X, given X + Y =n, is binomial, and find its parameters.
+
+23

@@ -1,0 +1,65 @@
+[6.15.40]-[6.15.46] Exercises Markov chains
+
+40. Perturbations continued. Suppose for convenience in Problem (6.15.39) that the displacements
+have a continuous distribution function and finite mean, and that d = 1. Suppose also that you are
+at the origin originally, and you move to a in the perturbed process. Let Lp be the number of points
+formerly on your left that are now on your right, and Ry, the number of points formerly on your right
+that are now on your left. Show that E(Lp) = E(R,) if and only if a = jz where yz is the mean
+displacement of a particle.
+
+Deduce that if cars enter the start of a long road at the instants of a Poisson process, having
+independent identically distributed velocities, then, if you travel at the average speed, in the long run
+the rate at which you are overtaken by other cars equals the rate at which you overtake other cars.
+
+41, Ants enter a kitchen at the instants of a Poisson process N of rate A; they each visit the pantry
+and then the sink, and leave. The rth ant spends time X; in the pantry and Y, in the sink (and X; + Y,
+in the kitchen altogether), where the vectors V, = (X,, Y,) and Vs are independent for r ~ s. At
+time t = 0 the kitchen is free of ants. Find the joint distribution of the numbers A(t) of ants in the
+pantry and B(t) of ants in the sink at time t. Now suppose the ants arrive in pairs at the times of the
+Poisson process, but then separate to behave independently as above. Find the joint distribution of the
+numbers of ants in the two locations.
+
+42. Let {X, : r > 1} be independent exponential random variables with parameter 1, and set S, =
+
+yor, Xr. Show that:
+
+(a) Ye = Sx/Sn, 1 < k <n —1, have the same distribution as the order statistics of independent
+variables {U; : 1 < k <n — 1} which are uniformly distributed on (0, 1),
+
+(b) Z, = Xx/Sn, 1 < k < n, have the same joint distribution as the coordinates of a point
+(U,,..., Un) chosen uniformly at random on the simplex an ur = 1, uy > O for all r.
+
+43. Let X be a discrete-time Markov chain with a finite number of states and transition matrix
+P = (pij) where p;; > 0 for alli, 7. Show that there exists 1 € (0, 1) such that | pj; (2) — m;| < A”,
+where w is the stationary distribution.
+
+44. Under the conditions of Problem (6.15.43), let V;(n) = a, T;x,=i} be the number of visits of
+the chain to i before time n. Show that
+
+1 2
+&(|Eim—x >0 asnow.
+
+Show further that, if f is any bounded function on the state space, then
+
+n-1 2
+(|? L1H) - Yi fom| } +0
+
+ieS
+
+45. Conditional entropy. Let A and B = (Bo, By,..., Bn) be a discrete random variable and
+vector, respectively. The conditional entropy of A with respect to B is defined as H(A | B) =
+E(E{—log f(A | B)|B}) where f(a | b) = P(A =a | B=b). Let X be an aperiodic Markov chain
+on a finite state space. Show that
+
+H(Xn41 | Xo, X1..- Xn) = H(Xn41 | Xn),
+
+and that
+A(Xns1 | Xn) > —Somi SS) py log pij asn > 00,
+i j
+if X is aperiodic with a unique stationary distribution w.
+
+46. Coupling. Let X and Y be independent persistent birth-death processes with the same parameters
+(and no explosions). It is not assumed that Xg = Yo. Show that:
+
+82
+

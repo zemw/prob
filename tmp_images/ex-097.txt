@@ -1,0 +1,61 @@
+[7.3.11]-[7.5.1] Exercises Convergence of random variables
+
+0 if}), P(X1 > an) < ~,
+1 if 0, P(X, > an) = ow.
+11. Construct an example to show that the convergence in distribution of X, to X does not imply the
+convergence of the unique medians of the sequence Xp.
+
+(b) P(X > an io.) = {
+
+12. (i) Let {X; : r > 1} be independent, non-negative and identically distributed with infinite mean.
+Show that lim sup,_,,) X,/r = oo almost surely.
+(ii) Let {X;} be a stationary Markov chain on the positive integers with transition probabilities
+—— ifk=j+1,
+j+2 J
+— ifk=1.
+j+2
+
+(a) Find the stationary distribution of the chain, and show that it has infinite mean.
+(b) Show that lim sup,_, 4 X,/r < 1 almost surely.
+
+13. Let {X; : 1 <7 <n} be independent and identically distributed with mean yz and finite variance
+o?. Let X =n—! S>"_, X;. Show that
+
+do — w) /
+r=1
+
+converges in distribution to the N(0, 1) distribution as n — oo.
+
+7.4 Exercise. Laws of large numbers
+
+1. Let X2, X3,... be independent random variables such that
+
+1
+
+P(X, =n) = P(X, = —n) = wloen’
+
+» PX, =0=1-
+
+2n logn
+
+Show that this sequence obeys the weak law but not the strong law, in the sense that n! VX:
+converges to 0 in probability but not almost surely.
+
+2. Construct a sequence {X; : r > 1} of independent random variables with zero mean such that
+n—!yo"_| X, > —oo almost surely, as n > 00.
+
+3. Let N be a spatial Poisson process with constant intensity 2 in R@, where d > 2. Let S be the
+ball of radius r centred at zero. Show that N(S)/|S| — A almost surely as r > oo, where | S| is the
+volume of the ball.
+
+7.5 Exercises. The strong law
+
+1. Entropy. The interval [0, 1] is partitioned into n disjoint sub-intervals with lengths p), po, ...,
+Pn, and the entropy of this partition is defined to be
+
+i
+h=—)° pjlog pj.
+i=1
+
+88
+

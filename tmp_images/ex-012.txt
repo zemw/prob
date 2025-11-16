@@ -1,0 +1,65 @@
+Independence Exercises [1.4.6]-[1.5.7]
+
+choose, but your chosen door is not opened immediately. Instead, the presenter opens another door
+to reveal a goat, and he offers you the opportunity to change your choice to the third door (unopened
+and so far unchosen). Let p be the (conditional) probability that the third door conceals the car. The
+value of p depends on the presenter’s protocol. Devise protocols to yield the values p = 5: p= Z.
+
+Show that, for a € (5, 3, there exists a protocol such that p = a. Are you well advised to change
+your choice to the third door?
+
+(b) In a variant of this question, the presenter is permitted to open the first door chosen, and to reward
+you with whatever lies behind. If he chooses to open another door, then this door invariably conceals
+a goat. Let p be the probability that the unopened door conceals the car, conditional on the presenter
+having chosen to open a second door. Devise protocols to yield the values p = 0, p = 1, and deduce
+that, for any a € [0, 1], there exists a protocol with p = a.
+
+6. The prosecutor’s fallacy}. Let G be the event that an accused is guilty, and T the event that
+some testimony is true. Some lawyers have argued on the assumption that P(G | T) = P(T | G).
+Show that this holds if and only if P(G) = P(T).
+
+7. Urns. There are n urns of which the rth contains r — 1 red balls and n — r magenta balls. You
+pick an urn at random and remove two balls at random without replacement. Find the probability that:
+(a) the second ball is magenta;
+
+(b) the second ball is magenta, given that the first is magenta.
+
+1.5 Exercises. Independence
+
+1, Let A and B be independent events; show that A°, B are independent, and deduce that A°, B®
+are independent.
+
+2. We roll a die n times. Let Aj; be the event that the ith and jth rolls produce the same number.
+
+Show that the events {A;; : 1 <i < j <x} are pairwise independent but not independent.
+
+3. A fair coin is tossed repeatedly. Show that the following two statements are equivalent:
+
+(a) the outcomes of different tosses are independent,
+
+(b) for any given finite sequence of heads and tails, the chance of this sequence occurring in the first
+m tosses is 2~”, where m is the length of the sequence.
+
+4, LetQ={1,2,..., p} where p is prime, ¥ be the set of all subsets of Q, and P(A) = |A|/p for
+all A € ¥. Show that, if A and B are independent events, then at least one of A and B is either @ or
+Q.
+
+5. Show that the conditional independence of A and B given C neither implies, nor is implied by,
+the independence of A and B. For which events C is it the case that, for all A and B, the events A and
+B are independent if and only if they are conditionally independent given C?
+
+6. Safe or sorry? Some form of prophylaxis is said to be 90 per cent effective at prevention during
+one year’s treatment. If the degrees of effectiveness in different years are independent, show that the
+treatment is more likely than not to fail within 7 years.
+
+7. Families, Jane has three children, each of which is equally likely to be a boy or a girl independently
+of the others. Define the events:
+
+A = {all the children are of the same sex},
+B = {there is at most one boy},
+C = {the family includes a boy and a girl}.
+
++The prosecution made this error in the famous Dreyfus case of 1894.
+
+3
+

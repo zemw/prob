@@ -1,0 +1,57 @@
+[6.1.5]-[6.1.9] Solutions Markov chains
+
+where pj;; (7) denotes the appropriate n-step transition probability of X.
+(a) With the usual notation, the transition matrix of Y is
+
+pe iff=it+2,
+Nip = \ 2pq if j =i,
+qg ifj=i-2.
+(b) With the usual notation, the transition probability 7;; is the coefficient of s/ in G(G(s))!.
+5. Writing KX = (X 1, X2,..., Xn), we have that
+
+P(F, 1(X) = 1, Xn =i)
+P(1(X) = 1, Xn =i)
+
+P(F | 1(X) = 1, X, =i) =
+
+where F is any event defined in terms of X,, X,41,.... Let A be the set of all sequences x
+(x1, %2,.--,X,—1, 2) of states such that J (x) = 1. Then
+
+P(F, 1(X) =1,X, =i) = $0 P(F,X =x) = PCF | Xn =i) So PK =)
+
+xéA xeA
+
+by the Markov property. Divide through by the final summation to obtain P(F | 1(X) = 1, Xn
+i) =P(F | X, =i).
+
+6. Let A, = {Xz = x, forO <k <n, X, =i}. The required probability may be written as
+
+P(Hr) P(r)
+
+Now P(X74m = j | Ar, T =n) = P(Xntim = j | An, T =n). Let I be the indicator function of
+the event H, 1{T = n}, an event which depends only upon the values of X1, X2,..., Xn. Using the
+result of Exercise (6.1.5),
+
+P(Xntm = j | Hn, T =n) = P(Xn4m =f | Xn =i) = py (m).
+Hence
+
+pij(m) >>, Pn, T =n)
+P(Ay)
+
+P(Xr4m = j| Hr) = = pij(m).
+
+7. Clearly
+PO n41 = J | ¥ =i, forO <r <n) = P(X, 41 = 0 | X,y = a, forO <r <n)
+
+where b = h-(), ar = h-1G,); the claim follows by the Markov property of X.
+
+It is easy to find an example in which / is not one-one, for which X is a Markov chain but Y is
+not. The first part of Exercise (6.1.3) describes such a case if Sp # 0.
+
+8. Not necessarily! Take as example the chains S and Y of Exercise (6.1.3). The sum is S, + ¥, =
+Mn, which is not a Markov chain.
+
+9. Allof them. (a) Using the Markov property of X,
+P(Xm+r =k | Xm =im, ---, Xm+r-1 = im+tr-1) = PXm+r =k | Xmtr-1 = imtr—-1)-
+
+274

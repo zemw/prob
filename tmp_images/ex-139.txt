@@ -1,0 +1,63 @@
+(13.10.2]-[13.12.2] Exercises Diffusion processes
+
+2. Consider a portfolio which, at time rt, holds &(t, S) units of stock and w(t, S) units of bond, and
+assume these quantities depend only on the values of S,, for 0 < u < t. Find the function y such that
+the portfolio is self-financing in the three cases:
+
+(a) &(¢, S) = 1 for allt, S,
+
+(b) &@, S) = Sz,
+) &tt y= fs dv
+(c = R py dv.
+
+3. Suppose the stock price S; is itself a Wiener process and the interest rate r equals 0, so that a
+unit of bond has unit value for all time. In the notation of Exercise (2), which of the following define
+self-financing portfolios?
+
+(a) €(¢t, S) = w@, S) = 1 for all ¢, S,
+
+(b) (1, 8) = 2S;, W(t, S) = -S? -1,
+
+(c) &(t, S) = —-t, Wit, S) = fg Ss ds,
+
+) &(t,5) = fo Ssds, W(t, S) = — fg S? ds.
+
+4. An ‘American call option’ differs from a European call option in that it may be exercised by the
+buyer at any time up to the expiry date. Show that the value of the American call option is the same
+as that of the corresponding European call option, and that there is no advantage to the holder of such
+an option to exercise it strictly before its expiry date.
+
+5. Show that the Black-Scholes value at time 0 of the European call option is an increasing function
+of the initial stock price, the exercise date, the interest rate, and the volatility, and is a decreasing
+function of the strike price.
+
+13.11 Exercises. Passage probabilities and potentials
+
+1. Let G be the closed sphere with radius € and centre at the origin of R@ where d > 3. Let W bea
+d-dimensional Wiener process starting from W(0) = w ¢ G. Show that the probability that W visits
+Gis (e/r)4-2, where r = |w|.
+
+2. Let G be an infinite connected graph with finite vertex degrees. Let A, be the set of vertices x
+which are distance n from 0 (that is, the shortest path from x to 0 contains n edges), and let Ny be
+the total number of edges joining pairs x, y of vertices with x € An, y € Ayn+1. Show that a random
+walk on G is persistent if }7; i = 0.
+
+3. Let G be aconnected graph with finite vertex degrees, and let H be a connected subgraph of G.
+Show that a random walk on 7 is persistent if a random walk on G is persistent, but that the converse
+
+is not generally true.
+
+13.12 Problems
+
+1. Let W beastandard Wiener process, that is, a process with independent increments and continuous
+sample paths such that W(s +1) — W(s) is N(O, t) fort > 0. Let a be a positive constant. Show that:
+
+(a) aW(t /o) is a standard Wiener process,
+(b) W(t +a) — W(q) is a standard Wiener process,
+(c) the process V, given by V(t) = tW(1/t) for t > 0, V(O) = 0, is a standard Wiener process.
+
+2. Let X = {X(t) : t > 0} be a Gaussian process with continuous sample paths, zero means, and
+autocovariance function e(s, t) = u(s)v(t) for s < ¢ where u and v are continuous functions. Suppose
+
+130
+

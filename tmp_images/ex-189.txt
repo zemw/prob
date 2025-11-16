@@ -1,0 +1,65 @@
+[3.11.24]-[3.11.27] Solutions Discrete random variables
+
+24. Either read the solution to Exercise (3.9.4), or the following two related solutions neither of which
+uses difference equations.
+First method. Let Ty be the event that A wins and exactly & tails appear. Then k < n so that
+P(A wins) = ar, P(7T,). However P(7;) is the probability that m + k tosses yield m heads, k tails,
+and the last toss is heads. Hence
+P(Ti) = (" the ' pak,
+m—-1
+
+whence the result follows.
+
+Second method. Suppose the coin is tossed m +n — 1 times. If the number of heads is m or more,
+then A must have won; conversely if the number of heads is m — 1 or less, then the number of tails is
+n or more, so that B has won. The number of heads is bin(m +n — 1, p) so that
+
+m+n—1
+. m+n-—-1 je
+P(A wins) = y ( k ) an 1-k
+
+=m
+25. The chance of winning, having started from k, is
+k le Le
+1—- @/p) 1—(@/p)?* 1+ @/p)?” |
+_ N 1 lar?
+1 @/p) 1—(q/p)2™ 14 (q/p)?%
+
+see Example (3.9.6). If k and N are even, doubling the stake is equivalent to playing the original game
+with initial fortune $k and the price of the Jaguar set at 5N . The probability of winning is now
+
+which may be written as
+
+1
+1— @/p)?
+7
+1— (q/p)2™
+which is larger than before, since the final term in the above display is greater than 1 (when p < 5).
+
+If p= 5. doubling the stake makes no difference to the chance of winning. If p > 7 it is better
+to decrease the stake.
+
+26. This is equivalent to taking the limit as N — oo in the previous Problem (3.11.25). In the limit
+when p # 7 the probability of ultimate bankruptcy is
+
+in ———————_——_. =
+
+(q/py* —(q/py’ _ { (@/p)* if p> 5,
+N>co 1-—(q/p)%
+
+1 ifp< 7
+where p+ g=1.Ifp= 4, the corresponding limit is limy—oo(1 —k/N) = 1.
+27, Using the technique of reversal, we have that
+P(Rn = Ry_-1 +1) = P(Syp_-1 ¥ Sn, Sp—2 F Sn, ---, So F Sn)
+= P(Xn £0, Xn_-1 + Xn FO,..., Xp +--- + Xn #0)
+= P(X; £0, X2+ X1 #0,...,X_pt+--- +X, #0)
+= P(S| £0, Sp £0,..., Sp 0) = P(S1S2--- Sy AO).
+
+It follows that E(Ry) = E(R,~-1) + P(S1S2---S, 4 0) for n > 1, whence
+
+1 1 n
+-E(R,) = — fis S> P(S1S2-++ Sn 20)! —> P(S,% £0 for all k > 1)
+n n m=l
+
+180
+

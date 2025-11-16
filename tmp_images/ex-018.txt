@@ -1,0 +1,21 @@
+Problems Exercises [1.8.37]-[1.8.39]
+
+37. Bonferroni’s inequality. Show that
+
+»(U Ar) > S>P(Ar) — $>P(Ar 9 Ax).
+r=] r=1
+
+r<k
+
+38. Kounias’s inequality. Show that
+
+P(U A,) < min {7 P(Ar) — D7 P(Ar 9 Ag)
+r=l r=l
+
+rirZk
+
+39. Then passengers for a Bell-Air flight in an airplane with n seats have been told their seat numbers.
+They get on the plane one by one. The first person sits in the wrong seat. Subsequent passengers sit
+in their assigned seats whenever they find them available, or otherwise in a randomly chosen empty
+seat. What is the probability that the last passenger finds his seat free?
+

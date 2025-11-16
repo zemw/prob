@@ -1,0 +1,63 @@
+Some ancillary results Solutions  [7.3.2]-[7.3.3]
+
+whence, by the first Borel—Cantelli lemma, a.s. only finitely many of the events {|X jy, 417 Xn, | =
+2-*) occur. Therefore, the expression
+
+[o.<)
+X= Xwy, + 0X — Xny)
+k=l
+
+converges absolutely on an event C having probability one. Define X (w) accordingly for w € C, and
+
+X(@) = 0 for w ¢ C. We have, by the definition of X, that Xy, “+ X as k > oo. Finally, we ‘fill
+in the gaps’. As before, for € > 0,
+
+P(|\Xn —X| > €) < P(\Xn — Xn, 1 > 3€) + P(IXy, — X| > ge) > 0
+
+as n, k —> oo, where we are using the assumption that {X,} is Cauchy convergent in probability.
+
+(b) Since Xp, bx , the sequence {X,,} is Cauchy convergent in probability. Hence
+P(I¥n — Ym| > €) =P(IXn —Xm|>€) 70 asn,m— oo,
+
+for € > 0. Therefore {Y,} is Cauchy convergent also, and the sequence converges in probability to
+
+some limit Y. Finally, X, “3 X and Y, > X, so that X and Y have the same distribution.
+
+2. Since An © UC, Am, we have that
+
+OO wo
+
+lim. supP(An) < im, U Am) = P( im, U An) = P(Ap i.0.),
+mn m=n
+
+where we have used the continuity of P. Alternatively, apply Fatou’s lemma to the sequence Tac of
+
+indicator functions.
+
+3. (a) Suppose X29, = 1, X2n41 = —1, forn > 1. Then {S, = 01.0.} occurs if X; = —1, and not
+if X; = 1. The event is therefore not in the tail o-field of the X’s.
+
+(b) Here is a way. As usual, P(S2, = 0) = 7")(pd — p)}", so that
+
+DoPSmn =0) < co ifp #9,
+n
+
+implying by the first Borel-Cantelli lemma that P(S, = 0i.0.) = 0.
+(c) Changing the values of any finite collection of the steps has no effect on J = liminf J, and J =
+lim sup Tp, since such changes are extinguished in the limit by the denominator ‘,/n’. Hence J and J
+are tail functions, and are measurable with respect to the tail o-field. In particular, {7 < —x}N{J > x}
+lies in the o-field.
+
+Take x = 1, say. Then, PZ < —1) = P(J > 1) by symmetry; using Exercise (7.3.2) and the
+central limit theorem,
+
+PJ > 1) > P(Sp > J/n io.) > limsupP(S, > /n) = 1— ®(1) > 0,
+n->oo
+
+where ® is the N(O, 1) distribution function. Since {J > 1} is a tail event of an independent sequence,
+it has probability either 0 or 1, and therefore PU. < —1) = P(VJ = 1) = 1, andalsoPU < —-1,J >
+1) = 1. That is, on an event having probability one, each visit of the walk to the left of —./n is
+followed by a visit of the walk to the right of ./n, and vice versa. It follows that the walk visits 0
+infinitely often, with probability one.
+
+327

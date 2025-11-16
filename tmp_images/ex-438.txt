@@ -1,0 +1,57 @@
+Bibliography
+
+A man will turn over half a library to make one book. Samuel Johnson
+
+Abramowitz, M. and Stegun, L. A. (1965). Handbook of mathematical functions with formulas,
+graphs and mathematical tables. Dover, New York.
+
+Billingsley, P. (1995). Probability and measure (3rd edn). Wiley, New York.
+
+Breiman, L. (1968). Probability. Addison-Wesley, Reading, MA, reprinted by SIAM, 1992,
+
+Chung, K. L. (1974). A course in probability theory (2nd edn). Academic Press, New York.
+
+Cox, D. R. and Miller, H. D. (1965). The theory of stochastic processes. Chapman and Hall,
+London.
+
+Doob, J. L. (1953). Stochastic processes. Wiley, New York.
+
+Feller, W. (1968). An introduction to probability theory and its applications, Vol. 1 (3rd edn).
+Wiley, New York.
+
+Feller, W. (1971). An introduction to probability theory and its applications, Vol. 2 (2nd edn).
+Wiley, New York.
+
+Grimmett, G. R. and Stirzaker, D. R. 2001). Probability and random processes, 3rd edn).
+Oxford University Press, Oxford.
+
+Grimmett, G. R. and Welsh, D. J. A. (1986). Probability, an introduction. Clarendon Press,
+Oxford.
+
+Hall, M. (1983). Combinatorial theory (2nd edn). Wiley, New York.
+
+Harris, T. E. (1963). The theory of branching processes. Springer, Berlin.
+
+Karlin, S. and Taylor, H. M. (1975). A first course in stochastic processes (2nd edn). Academic
+Press, New York.
+
+Karlin, S. and Taylor, H. M. (1981). A second course in stochastic processes. Academic
+Press, New York.
+
+Laha, R. G. and Rohatgi, V. K. (1979). Probability theory. Wiley, New York.
+
+Loéve, M. (1977). Probability theory, Vol. 1 (4th edn). Springer, Berlin.
+
+Loéve, M. (1978). Probability theory, Vol. 2 (4th edn). Springer, Berlin.
+
+Moran, P. A. P. (1968). An introduction to probability theory. Clarendon Press, Oxford.
+
+Stirzaker, D. R. (1994). Elementary probability. Cambridge University Press, Cambridge.
+
+Stirzaker, D. R. (1999). Probability and random variables. Cambridge University Press,
+Cambridge.
+
+Williams, D. (1991). Probability with martingales. Cambridge University Press, Cambridge.
+
+429
+

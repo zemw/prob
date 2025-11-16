@@ -1,0 +1,59 @@
+[4.14.32]-[4.14.34] Solutions Continuous random variables
+
+by part (b). In the limit as « | 0, we have that 5°; E(/;) approaches the required mean, while
+
+2L(S)
+— 25 lxi+1 — x11 > Td
+
+32. (i) Fix Cartesian axes within the gut in question. Taking one end of the needle as the origin,
+the other end is uniformly distributed on the unit sphere of R°. With the X-ray plate parallel to the
+(x, y)-plane, the projected length V of the needle satisfies V > v if and only if |Z| < /1—- v2, where
+Z is the (random) z-coordinate of the ‘loose’ end of the needle. Hence, for 0 < uv < 1,
+
+4/1] — 12
+PV >v) =P(-VI1-w <Z< Vi-v) = VE ‘ “= V1 -2?,
+
+since 4x 1/1 — v2 is the surface area of that part of the unit sphere satisfying |z| < \/1— v2 (use
+Archimedes’s theorem of the circumscribing cylinder, or calculus). Therefore V has density function
+fy(v) =0/V1—-v? forO <u <1.
+
+Gi) Draw a picture, if you can. The lengths of the projections are determined by the angle © between
+the plane of the cross and the X-ray plate, together with the angle W of rotation of the cross about an
+axis normal to its arms. Assume that © and W are independent and uniform on [0, $m]. If the axis
+system has been chosen with enough care, we find that the lengths A, B of the projections of the arms
+are given by
+
+A= \cos2 W + sin? & cos2 ©, B= \/ sin? W + cos? W cos ©,
+
+1— A2
+@ =cos~! V A2 + B2 -1, Ww =tan—! »/ ——..
+cos + an 1-R2
+
+Some slog is now required to calculate the Jacobian J of this mapping, and the answer will be
+fa,p(a, b) = 4|J|2—2 for 0 < a,b < 1,a* +b? > 1.
+
+33. The order statistics of the X; have joint density function
+
+n
+h(x], x2, .-+)Xn) =A"n! exo(- ox)
+i=l
+
+with inverse
+
+on the set J of increasing sequences of positive reals. Define the one-one mapping from J onto
+(0, 00)” by
+y1 = 7x1, yr =(n+1—r)@, —x--1) forl<r<n,
+
+with inverse xy = )~y.-) yk/(n —k + 1) forr = 1. The Jacobian is (n 1)—1, whence the joint density
+function of Y,, ¥2,..., Yn is
+
+1 * ‘
+— in! exp (- 2H w) =a" ex(- » vx).
+ix =
+
+34. Recall Problem (4.14.4). First, Z; = F(X;), 1 <i <n, is a sequence of independent variables
+with the uniform distribution on [0, 1]. Secondly, a variable U has the latter distribution if and only
+if — log U has the exponential distribution with parameter 1.
+
+220
+

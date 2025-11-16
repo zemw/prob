@@ -1,0 +1,51 @@
+[3.8.6]-[3.9.2] Solutions Discrete random variables
+
+The claim follows since E(Y) = 1.
+
+—Ayn g(nje~* yn] —
+6. (i) LHS = Srsine nN nt=r¥ oane ike = RHS.
+Gi) Conditioning on N and Xy,
+
+LHS = E(E(Sg(S) | N)) = E{NE(Xya(S)|N)}
+en Ayn nal
+
+=) fat +x)) dF(x) = RHS.
+
+3.9 Solutions. Simple random walk
+
+1. (a) Consider an infinite sequence of tosses of a coin, any one of which turns up heads with
+probability p. With probability one there will appear a run of N heads sooner or later. If the coin
+tosses are ‘driving’ the random walk, then absorption occurs no later than this run, so that ultimate
+absorption is (almost surely) certain. Let S be the number of tosses before the first run of N heads.
+Certainly P(S > Nr) < (1 - pn )’, since Nr tosses may be divided into r blocks of N tosses, each
+of which is such a run with probability p’. Hence P(S = s) < (1 — p%)l/J, and in particular
+E(S*) < oo for all k > 1. By the above argument, E(T*) < oo also.
+
+2. If So =k then the first step X 1 satisfies
+
+PX = DPW | X1=1) _ prey
+
+POL = TI W) = P(W) _—"
+
+Let T be the duration of the walk. Then
+
+Jy = ECT | So =k, W)
+=E(T | So=k, W, X, = 1)P(X, = 1| Sg =k, W)
++E(T | So =k, W, Xy = —DP(X, = —-1 | So=k, W)
+= (1+ Jeg1) A + (1+ a) (1 - Pati? )
+Pk Pk
+PPk+1 Seth (Pk — PPk-+1) Fea
+Pk Pk
+
+as required.
+Certainly Jo = 0. If p = 5 then py = 1 — (k/N), so the difference equation becomes
+
+(N —k -VDJeg1 —2(N —BD Jp + (N —k + De = 2k — N)
+fori <k < N —1. Setting up = (N — k) Jy, we obtain
+Up] — 2ue + up = 2(k — N),
+
+with general solution up = A+ Bk — S(N — k) for constants A and B. Now ug = uy = 0, and
+therefore A = 4N?, B = —4N?, implying that J, = 4{N? —(N —k)*},0<k <N.
+
+170
+

@@ -1,0 +1,56 @@
+The ergodic theorem Solutions [9.4.1]-[9.5.2]
+
+9.4 Solutions. Stochastic integration and the spectral representation
+
+1. Let Hy be the space of all linear combinations of the X;, and let Hx be the closure of this space,
+that is, Hy together with the limits of all mean-square Cauchy-convergent sequences in Hy. All
+members of Hy have zero mean, and therefore all members of Hy also. Now S(A) € Hy forall A,
+whence E(S(A) — S(j)) = 0 for all A and yu.
+
+2. First, each Yj, lies in the space Hy containing all linear combinations of the X, and all limits of
+mean-square Cauchy-convergent sequences of the same form. As in the solution to Exercise (9.4.1),
+all members of Hy have zero mean, and therefore E(Y¥) = 0 for all m. Secondly,
+
+_ gid g—ink
+E(Y¥mY »= | ~___ f(A) dA = 8mn.
+mY n (um) oF) fA) mn
+As for the last part,
+= ijdh enh ind
+ajYn—j; =f (> aje_ i) os asc) = | er’ dSQ)=
+2 Pet Ienz) de") Te mF) (<7)
+
+This proves that such a sequence X, may be expressed as a moving average of an orthonormal
+sequence.
+
+3. Let Hy be the space of all linear combinations of the X,, together with all limits of (mean-
+square) Cauchy-convergent sequences of such combinations. Using the result of Problem (7.11.19),
+all elements in Hy are normally distributed. In particular, all increments of the spectral process are
+normal. Similarly, all pairs in Hy are jointly normally distributed, and therefore two members of
+Hy are independent if and only if they are uncorrelated. Increments of the spectral process have
+zero means (by Exercise (9.4.1)) and are orthogonal. Therefore they are uncorrelated, and hence
+independent.
+
+9.5 Solutions. The ergodic theorem
+
+“1. With the usual shift operator tr, it is obvious that tg =@, so that @ € J. Secondly, if A € 2,
+then t~!(A°) = (r~!A)® = A®, whence A° € £. Thirdly, suppose Ay, Az,... € £. Then
+
+oo lo. @) lo. @)
+YU Ai) =(Jrta =U A.
+i=l i=l i=l
+
+so that 7° A; € J.
+
+2. The left-hand side is the sum of covariances, c(0) appearing n times, and c(i) appearing 2(n — i)
+times for 0 < i <n, in agreement with the right-hand side.
+
+Lete > 0. Ifé(j) = j7! i c(i) > o7 as j —> 00, there exists J such that |¢(j) —o2| <
+when j > J. Now
+
+2S a =f e+ 3 i(o? +o} +0? +e
+j=l j=l j=J+l
+
+asn — oo. A related lower bound is proved similarly, and the claim follows since € (> 0) is arbitrary.
+
+359
+

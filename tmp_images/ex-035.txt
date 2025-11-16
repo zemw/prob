@@ -1,0 +1,63 @@
+[3.11.22]-{3.11.30] Exercises Discrete random variables
+
+(d) For the given population, how improbable should the characteristics of the criminal be, in order
+that he (or she) be specified uniquely?
+
+22. In 1710, J. Arbuthnot observed that male births had exceeded female births in London for 82
+successive years. Arguing that the two sexes are equally likely, and 2~82 is very small, he attributed
+this run of masculinity to Divine Providence. Let us assume that each birth results in a girl with
+probability p = 0.485, and that the outcomes of different confinements are independent of each other.
+Ignoring the possibility of twins (and so on), show that the probability that girls outnumber boys in 2n
+live births is no greater than 2") P"a"{q/(q — p)}, where q = 1 — p. Suppose that 20,000 children
+are born in each of 82 successive years. Show that the probability that boys outnumber girls every
+year is at least 0.99. You may need Stirling’s formula.
+
+23. Consider a symmetric random walk with an absorbing barrier at N and a reflecting barrier at 0
+(so that, when the particle is at 0, it moves to 1 at the next step). Let a, (j) be the probability that
+the particle, having started at k, visits 0 exactly j times before being absorbed at N. We make the
+convention that, if k = 0, then the starting point counts as one visit. Show that
+
+N-k 1\J7!
+
+24. Problem of the points (3.9.4). A coin is tossed repeatedly, heads turning up with probability p
+on each toss. Player A wins the game if heads appears at least m times before tails has appeared n
+times; otherwise player B wins the game. Find the probability that A wins the game.
+
+25. A coin is tossed repeatedly, heads appearing on each toss with probability p. A gambler starts
+with initial fortune k (where 0 < k < N); he wins one point for each head and loses one point for
+each tail. If his fortune is ever 0 he is bankrupted, whilst if it ever reaches N he stops gambling to buy
+
+a Jaguar. Suppose that p < 4 Show that the gambler can increase his chance of winning by doubling
+the stakes. You may assume that k and N are even.
+What is the corresponding strategy if p > 5?
+
+26. A compulsive gambler is never satisfied. At each stage he wins £1 with probability p and loses
+£1 otherwise. Find the probability that he is ultimately bankrupted, having started with an initial
+fortune of £k.
+
+27. Range of random walk. Let {X, : n > 1} be independent, identically distributed random
+variables taking integer values. Let Sp = 0, Sy = S07, X;. The range Ry of So, S1,..., Sn is the
+number of distinct values taken by the sequence. Show that P(Ry = R,-1 +1) = P(S1S2--- Sp #9),
+and deduce that, asn —> ov,
+
+1
+—E(Rn) > PCS, # 0 for all k > 1).
+n
+
+Hence show that, for the simple random walk, n—B(Ry) —> |p—gq|asn > oo.
+
+28. Arc sine law for maxima. Consider a symmetric random walk S starting from the origin, and
+let M, = max{S; :0 <i <n}. Show that, for i = 2k, 2k + 1, the probability that the walk reaches
+Moy, for the first time at time i equals A P(Soy = 0)P(S2,_2,% = 0).
+
+29. Let S be a symmetric random walk with Sg = 0, and let N, be the number of points that have
+been visited by S exactly once up to time n. Show that E(V,) = 2.
+
+30. Family planning. Consider the following fragment of verse entitled ‘Note for the scientist’.
+
+People who have three daughters try for more,
+And then its fifty—fifty they'll have four,
+Those with a son or sons will let things be,
+
+26
+

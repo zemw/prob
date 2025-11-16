@@ -1,0 +1,60 @@
+[9.2.2]-[9.4.2] Exercises Stationary processes
+
+(ii) Find an expression for D = E{(Xn41 — Xn41)2} — E{(Xn41 — Xn41)7}, and evaluate this
+expression when:
+(a) X, = cos(nU) where U is uniform on [—2, x],
+(b) X is an autoregressive scheme with c(k) = o:!*l where ja] < 1.
+
+2. Suppose |a| < 1. Does there exist a (weakly) stationary sequence {X, : —oo <n < oo} with
+zero means and autocovariance function
+
+1 ifk =0,
+
+(k) = Cif [kl =1
+Cc = L+a2 =t,
+0 if |k| > 1.
+
+Assuming that such a sequence exists, find the best linear predictor Xn of X», given X,-1,
+Xy—-2,---, and show that the mean squared error of prediction is (1 + a*)—!_ Verify that {Xp} is
+(weakly) stationary.
+
+9.3 Exercises. Autocovariances and spectra
+
+1. Let X, = Acos(nd) + Bsin(nd) where A and B are uncorrelated random variables with zero
+means and unit variances. Show that X is stationary with a spectrum containing exactly one point.
+
+2. Let U be uniformly distributed on (—7, 2), and let V be independent of U with distribution func-
+tion F. Show that X, = e!(U—Y") defines a stationary (complex) sequence with spectral distribution
+function F’.
+
+3. Find the autocorrelation function of the stationary process {X(t) : —oo <t < oo} whose spectral
+density function is:
+
+@ N,V, i) f(x) = Fe7 FI, -00 < x < 00.
+
+4. Let X,, X2,... beareal-valued stationary sequence with zero means and autocovariance function
+
+c(m). Show that
+Len _ sin(nd/2) \*
+(5%) = c(0) _ (Tinos) oe
+
+where F is the spectral distribution function. Deduce that n-! jal Xj ™S, 0 if and only if
+F(0) — F(O—) = 0, and show that
+
+n—-1
+1
+c(O){F (0) — FO-)} = lim, — Y/c(7).
+j=0
+
+9.4 Exercises. Stochastic integration and the spectral representation
+1. Let S be the spectral process of a stationary process X with zero mean and unit variance. Show
+that the increments of S have zero means.
+
+2. Moving average representation. Let X be a discrete-time stationary process having zero means,
+continuous strictly positive spectral density function f, and with spectral process S. Let
+
+y, asa.
+“=f Jan f () ).
+
+102
+

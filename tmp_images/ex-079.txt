@@ -1,0 +1,63 @@
+[6.6.4]-[6.7.3] Exercises Markov chains
+
+K = (x1, x2,--- , Xn), where xy € (—00, 00) is your stake with the rth bookmaker, is called a betting
+
+scheme. Show that exactly one of (a) and (b) holds:
+
+(a) there exists a probability mass function p = (p1, p2,... , Pm) such that j=l tij pj = O for all
+values of 7,
+
+(b) there exists a betting scheme x for which you surely win, that is, 3“, x;t;; > 0 for all j.
+i=l J
+
+4. Let X bea Markov chain with state space S = {1, 2, 3} and transition matrix
+
+l-p P 0
+P= 0 l-—p Dp
+
+Pp 0 1-p
+
+where 0 < p < 1. Prove that
+h Gin 42n 43y
+PY =| a3, an 42
+42n 43n 41n
+
+where aj, + wd2, + Ww a3y, = (1 — p+ pw)", w being a complex cube root of 1.
+
+5. Let P be the transition matrix of a Markov chain with finite state space. Let I be the identity
+matrix, U the |S| x |S| matrix with all entries unity, and 1 the row |S|-vector with all entries unity.
+Let # be a non-negative vector with )>; 7; = 1. Show that xP = z if and only ifa(@—P+U) =1.
+
+Deduce that if P is irreducible then 7 = 10 —P + U7,
+6. Chess. A chess piece performs a random walk on a chessboard; at each step it is equally likely
+
+to make any one of the available moves. What is the mean recurrence time of a corner square if the
+piece is a: (a) king? (b) queen? (c) bishop? (d) knight? (e) rook?
+
+7, Chess continued. A rook and a bishop perform independent symmetric random walks with
+synchronous steps on a 4 x 4 chessboard (16 squares). If they start together at a corner, show that the
+expected number of steps until they meet again at the same corner is 448/3.
+
+8. Find the 1-step transition probabilities p;; (7) for the chain X having transition matrix
+
+WIN WE ©
+Ale Ale NIE
+Nir niu Nie
+
+6.7 Exercises. Branching processes revisited
+
+1. Let Z, be the size of the nth generation of a branching process with Zp = 1 and P(Z, = k) = q*
+for k > 0. Show directly that, asn > 00, P(Zy, < 2yn | Z, > 0) > 1- ey, y > 0, in agreement
+with Theorem (6.7.8).
+
+2. Let Z be a supercritical branching process with Zg = 1 and family-size generating function G.
+Assume that the probability 7 of extinction satisfies 0 < 7 < 1. Find a way of describing the process
+Z, conditioned on its ultimate extinction.
+
+3. Let Zy, be the size of the nth generation of a branching process with Zo = land P(Z,; =k) = gp*
+fork > 0, where p+-g = land p > 5: Use your answer to Exercise (2) to show that, if we condition
+on the ultimate extinction of Z, then the process grows in the manner of a branching process with
+generation sizes Zn satisfying Zo = land P(Z; =k) = pa* for k > 0.
+
+70
+

@@ -1,0 +1,59 @@
+[3.7.5]-[3.7.10] Solutions Discrete random variables
+
+since E{Y — E(Y | X)| X} =E(Y | X) -E(Y | X) =0.
+5. We have that
+
+lo. @)
+
+oo
+PT >t+r)
+ET -t|T>)=) PT>ttr|T>H)=>> Hsp
+r=0 r=0
+N-t
+(a) EIT —1|T>1) = )) —— =3N-1 +I).
+r=0
+OO 4-(t4tr)
+(b) ET -t|T>)=)) xa =
+r=0
+
+6. Clearly
+n
+E(S | N =n) = e(S>x:) = pn,
+i=1
+
+and hence E(S | N) = uN. It follows that E(S) = E{E(S | N)} = E(uN).
+7. A robot passed is in fact faulty with probability 7 = {@(1 — 8)}/(1 — $8). Thus the number of
+faulty passed robots, given Y, is bin(n — Y, 2), with mean (n — Y){@(1 — 5)}/(1 — $5). Hence
+
+(n— Y)o0 — 8)
+
+E(X|Y)=Y¥+ 38
+
+8. (a) Let m be the family size, 4, the indicator that the rth child is female, and jz; the indicator of
+a male. The numbers G, B of girls and boys satisfy
+
+G= Soe, B= our, EG) = m= E(B).
+
+r=1 r=l
+
+(It will be shown later that the result remains true for random m under reasonable conditions.) We
+have not used the property of independence.
+
+(b) With M the event that the selected child is male,
+m1
+E(G | M) = e(> 6r) = 4(m—-1) = E(B).
+r=1
+
+The independence is necessary for this argument.
+
+9. Conditional expectation is defined in terms of the conditional distribution, so the first step is not
+justified. Even if this step were accepted, the second equality is generally false.
+
+10. By conditioning on X;,_1,
+EXn = E[E(Xn | Xn—1)] = E[p(Xn-1 +1) +d — p)(Xn-1 +14 Xn)]
+
+where X, has the same distribution as X,. Hence EX, = (+ EX,_1)/p. Solve this subject to
+EX, = pa.
+
+168
+

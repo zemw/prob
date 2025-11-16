@@ -1,0 +1,49 @@
+[7.11.35]-[7.11.37] Solutions Convergence of random variables
+35. Let Yn = XnIx,|<a}. Then,
+
+do PRn # Yn) = $I P(Xn| > a) < 00
+
+by assumption (a), whence {X;,} and {Y,} are tail-equivalent (see Problem (7.11.34)). By assumption
+(b) and the martingale convergence theorem (7.8.1) applied to the partial sums ye (Yn — E(Y,)),
+the infinite sum )77°.| (Yn — E(Yn)) converges almost surely. Finally, }“7C., E(Yn) converges by
+assumption (c), and therefore yea Yn, and hence Ry Xn, converges a.s.
+
+36. (a) Let ny < nz <--- < ny =n. Since the J; take only two values, it suffices to show that
+
+r
+P(UIn, =lforl<s<r)= [] Pda = 1).
+
+s=l1
+
+Since F is continuous, the X; take distinct values with probability 1, and furthermore the ranking of
+X 1, X2,..-, Xn is equally likely to be any of the n! available. Let x,,x2,..., xn be distinct reals,
+and write A = {X; = x; for 1 <i <n}. Now,
+
+PUn, = 1forl <s <r| A)
+
+= i {(" 7 " (n-1- not} {(": 7 ') (ns_1 — 1 - nah “-+(m, —1)!
+n! Ns—] Ns—2
+
+1 1 1
+
+Ns Ms] My
+
+and the claim follows on averaging over the x;.
+
+(b) We have that E(I,) = PU, = 1) = k7! and var(I,) = k~!(1—k7!), whence >, var(Ix/ log k) <
+oo. By the independence of the J; and the martingale convergence theorem (7.8.1), S772, Uk —
+k-ly/ log k converges a.s. Therefore, by Kronecker’s lemma (see Exercise (7.8.2)),
+
+1 1\ as.
+i-7z)— 0 asn— oo.
+logn <> J
+
+1
+
+The result follows on recalling that }(7_) j—" ~ logn asin — oo.
+
+37. By an application of the three series theorem of Problem (7.11.35), the series converges almost
+surely.
+
+348
+

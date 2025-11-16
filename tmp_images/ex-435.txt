@@ -1,0 +1,65 @@
+[(13.12.14]-[13.12.18] Solutions Diffusion processes
+
+14. By an extension of It6’s formula to functions of two Wiener processes, U = u(W ,, W2) and
+V = v(W,, W2) satisfy
+
+dU = uz dW, + uy dW + f(uxx + Wyy) dt,
+
+dV =v, dW, + vy dW + Axx + vyy) dt,
+where ux, Vyy, etc, denote partial derivatives of u and v. Since ¢ is analytic, u and v satisfy the
+
+Cauchy—Riemann equations ux = vy, 4 = —vx, whence u and v are harmonic in that uy + Uyy =
+Uxx + Vyy = 0. Therefore,
+
+dU =uydW,+uydW2, dV =—uydW, +uxydWyo.
+
+. u Uu
+The matrix x Y
+—u y uy
+
+of the pair (W,, W2) is invariant under such rotations, the claim follows.
+
+) is an orthogonal rotation of IR? when uz +u5 = 1. Since the joint distribution
+
+15. One method of solution uses the fact that the reversed Wiener process {W(t—s)-W(t):O0<s<
+t} has the same distribution as {W(s) : 0 < s <t}. Thus M(t)— W(t) = maxg<s<;{W(s)— W(e)} has
+the same distribution as maxp<,<;{W(u) — W(0)} = M(t). Alternatively, by the reflection principle,
+
+P(M(t) > x, W(t) < y) =P(W(t) = 2x —y) forx > max{O, y}.
+
+By differentiation, the pair M(t), W(t) has joint density function —2¢’(2x — y) for y < x, x > 0,
+where @ is the density function of the N(0, t) distribution. Hence M(t) and M(t) — W(t) have the
+joint density function —2¢’(x + y). Since this function is symmetric in its arguments, M(t) and
+M(t) — W(t) have the same marginal distribution.
+
+16. The Lebesgue measure A(Z) is given by
+
+io. ¢)
+A(Z) = [ Tiwot)=u} 24,
+whence by Fubini’s theorem (cf. equation (5.6.13)),
+
+E(A(Z)) = [ P(W(t) =u) dt =0.
+0
+
+17. LetO0 <a <b <c <d, and let M(x, y) = maxy<s<y W(s). Then
+
+M c,d) — M(a, b) = max { W(s) — Wec)} + {We) — Woe)} - max, { W(s) — Wob)}.
+
+Since the three terms on the right are independent and continuous random variables, it follows that
+P((M (c,d) = Ma, b)) = 0. Since there are only countably many rationals, we deduce that
+P((M¢c, d) = Mca, b) for all rationals a < b < c < d) = 1, and the result follows.
+
+18. The result is easily seen by exhaustion to be true when n = 1. Suppose it is true for allm <n—1
+where n > 2.
+
+(i) If sy < 0, then (whatever the final term of the permutation) the number of positive partial sums and
+the position of the first maximum depend only on the remaining n — 1 terms. Equality follows by the
+induction hypothesis.
+
+Gi) If s, > 0, then
+nt
+A; = S- A,-1(k),
+k=1
+
+426
+

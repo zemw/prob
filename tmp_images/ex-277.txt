@@ -1,0 +1,59 @@
+[5.12.38]-[5.12.38] Solutions Generating functions and their applications
+
+for any N taking values in the non-negative integers. This is easily proved: certainly
+var(N | N #0) = E(N? | N #0)—E(N | N #0)" 20,
+
+whence
+E(N2) . EWN)?
+
+PIN £0) ~ P(N £0)2°
+
+We have that E{X, (Bn)*} = Vex,p E(/7 Jp) where the sum is over all such paths z, p, and I, is the
+indicator function of the event {B(z) > Bn}. Hence
+
+E{Xn(Bn)?} = S$) Ex) + 5) EUnlp) = E{Xn(Bn)} +2"7! S> EU Ip)
+7 wep p#L
+
+where L is the path which always takes the left fork (there are 2”—! choices for 2, and by symmetry
+each provides the same contribution to the sum). We divide up the last sum according to the number
+
+of nodes in common to p and L, obtaining a 2n—m—l RI, Ij.) where M is a path having exactly
+m nodes in common with L. Now
+
+EUzIu) = EUy | In = DEUL) < PCh—-m = Bn — m)JECU)
+
+where Ty—m has the bin(n — m, p) distribution (the ‘most value’ to [jy of the event {77 = 1} is
+obtained when all m nodes in L M M are black). However
+
+Edy) = Pn = Bn) > p™P(Th—-m = Bn —m)
+
+so that EU, Iy) < p~™ EU, )ECUy). It follows that N = Xy,(Bn) satisfies
+
+nal n-1 m
+E(N?) < E(N) +2771 S* aneml a BAIL IEC) = E(N) + $E(N)? S> (;.)
+
+m=1 m=1
+
+whence, by (+),
+1
+
+E(N)~! +5 Oy 2p)
+If 6 < B- then E(N) — oo asn —> oo. It is immediately evident that P(N # 0) > lif p < 4.
+Suppose finally that p > 5 and 8 < B-. By the above inequality,
+
+P(N #0) >
+
+(4%) P(Xn(Br) > 0) > c(B) for all n
+where c(f) is some positive constant. Find « > 0 such that 6B +€ < £,. Fix a positive integer m, and
+
+let Pm be a collection of 2” disjoint paths each of length n — m starting from depth m in the tree.
+Now
+
+P(Xn(Bn) = 0) < P(B(v) < Ba forall v € Pm) =P(B() < Bn)”
+where v € Pm. However
+P(B() < fn) < P(B(W) < (B + €)(n — m))
+if Bn < (B + €)(n — m), which is to say that n > (6 + €)m/e. Hence, for all large n,
+P(Xn(Bn) =0) < {(1-c(B +0)"
+
+268
+

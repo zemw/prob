@@ -1,0 +1,64 @@
+[6.15.42]-[6.15.45] Solutions Markov chains
+where y = 1 — x ~ p. Hence,
+EXAM yBO) = exp{atrx + py +y)" — Y},
+
+whence A(t) and B(¢) are not independent in this case.
+
+42. The sequence {X;} generates a Poisson process N(t) = max{n : Sy, < t}. The statement that
+Sn = t is equivalent to saying that there are n — | arrivals in (0, ¢), and in addition an arrival at t. By
+Theorem (6.12.7) or Theorem (6.13.11), the first n — 1 arrival times have the required distribution.
+
+Part (b) follows similarly, on noting that fy(w) depends on u = (w1, u2,..., un) only through
+the constraints on the u;.
+
+43. Let Y be a Markov chain independent of X, having the same transition matrix and such that Yo
+
+has the stationary distribution 7. Let T = min{n > 1: X, = Y,} and suppose Xp =i. As in the
+proof of Theorem (6.4.17),
+
+|pij(n) — 71 = om (pij (2) — pej ))| < D0 meP(T > 2) =P(T > 2).
+k k
+
+Now,
+P(T >r+1|T>r)<1-€? for r > 0,
+
+where € = min;;{pj;} > 0. The claim follows with A = 1 — é2.
+
+44. Let J; (n) be the indicator function of a visit to k at time n, so that EU, (1)) = P(Xyn = k) = ag(n),
+say. By Problem (6.15.43), |ag(n) — 2%| < A". Now,
+
+2 1 n-l 2
+= 5E prize) - ni)
+n r=0
+
+1
+= 5 EU) — mim) — m1)}.
+
+# ([Eiw@—x
+n
+
+Let s = min{m,r} and t = |m — r|. The last summation equals
+1
+=z Dail) pis ©) — a5 (7m — a5 (m) 5; + 17}
+r m
+1
+= 3 Gi) — MPO — m1) + mi(PUO — 2)
+r m
+
++ 7; (aj (s) — mj) — mi (ai(r) — 1) — my (aj(m) — x) }
+
+1 S+t t s r m
+<3) ae +Ab4aS 4a" 40)
+r m
+An
+sz70 asn — oOo,
+n
+
+where 0 < A < oo. For the last part, use the fact that ar ff Xr) = ies FOV; (). The result
+is obtained by Minkowski’s inequality (Problem (4.14.27b)) and the first part.
+
+45. We have by the Markov property that f(X,41 | Xn, Xn—1,--- , Xo) = f(Xn41 | Xn), whence
+E(log f(Xn41 | Xn, Xn—1,--- Xo) |Xn»--. Xo) =E(log f(Xn41 | Xn) | Xn).
+
+320
+

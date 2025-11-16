@@ -1,0 +1,55 @@
+(3.11.7]-[3.11.14] Exercises Discrete random variables
+
+7. If X is geometric, show that P(X =n+k |X > n) = P(X =&) fork, n > 1. Why do you think
+that this is called the ‘lack of memory’ property? Does any other distribution on the positive integers
+have this property?
+
+8. Show that the sum of two independent binomial variables, bin(m, p) and bin(n, p) respectively,
+is bin(m +n, p).
+
+9. Let N be the number of heads occurring inn tosses of a biased coin. Write down the mass function
+of N in terms of the probability p of heads turning up on each toss. Prove and utilize the identity
+
+» (3) =3{@ ty" +0-2)"}
+
+in order to calculate the probability p, that N is even. Compare with Problem (1.8.20).
+
+10. Anurn contains N balls, b of which are blue and r (= N — b) of which are red. A random sample
+of n balls is withdrawn without replacement from the urn. Show that the number B of blue balls in
+this sample has the mass function
+
+men ()(09/()
+
+This is called the hypergeometric distribution with parameters N, b, and n. Show further that if N, b,
+and r approach oo in such a way that b/N — p andr/N — 1 — p, then
+
+P(B =k > (7) pea — pyr.
+
+You have shown that, for small n and large N, the distribution of B barely depends on whether or not
+the balls are replaced in the urn immediately after their withdrawal.
+
+11, Let X and Y be independent bin(n, p) variables, and let Z = X + Y. Show that the conditional
+distribution of X given Z = N is the hypergeometric distribution of Problem (3.11.10).
+
+12. Suppose X and Y take values in {0, 1}, with joint mass function f(x, y). Write f(0,0) = a,
+fO, 1) = b, fA, 0) =c, fU, ) = d, and find necessary and sufficient conditions for X and Y to
+be: (a) uncorrelated, (b) independent.
+
+13. (a) If X takes non-negative integer values show that
+io.¢]
+E(X) = 5) P(X > n).
+=0
+
+(b) An urn contains b blue and r red balls. Balls are removed at random until the first blue ball is
+drawn. Show that the expected number drawn is (b +r 4+ 1)/(b4+ 1).
+
+(c) The balls are replaced and then removed at random until all the remaining balls are of the same
+colour. Find the expected number remaining in the urn.
+
+14. Let X,, X2,..., Xn be independent random variables, and suppose that X; is Bernoulli with
+parameter py. Show that Y = X,; + X2 +--+-+ Xn has mean and variance given by
+
+E(Y)= >> pe, var(¥) = >> pe(1 — pr).
+1 1
+
+24

@@ -1,0 +1,57 @@
+Stopping times Solutions [12.3.3]-[12.4.5]
+
+by Exercise (12.3.1). If a, Yn, => O then (Yn —a)™ <a.
+
+3. The random sequence {y(X») : n > 1} is a bounded supermartingale, which converges a.s. to
+some limit Y. The chain is irreducible and persistent, so that each state is visited infinitely often a.s.;
+it follows that limy-.o0 w(Xn) cannot exist (a.s.) unless y is a constant function.
+
+4. Yisamartingale since Y, is the sum of independent variables with zero means. Also )\7° P(Zn #
+0= xP n2 < @, implying by the Borel-Cantelli lemma that Z, = 0 except for finitely many
+values of n (a.s.); therefore the partial sum Y, converges a.s. as n —> 00 to some finite limit.
+
+It is easily seen that an = Sa,_1 and therefore ay, = 8-5"-2 ifn > 3. It follows that |Yn| > 54n
+if and only if |Z,| = a,. Therefore
+
+a
+El¥n| > 3anP(Yal 2 34n) = 34nP(\Znl = an) = 5
+
+which tends to infinity as n — oo.
+
+12.4 Solutions. Stopping times
+
+1. We have that
+
+{y+ =n}= VU IN =m =2-&)),
+k=0
+{ max{71, 72} <n} ={T, <n} N{T2 <n},
+{ min{7,, 72} <n} ={T, <n} U {Tz <n}.
+
+Each event on the right-hand side lies in Fy.
+2. Let Fn = 0(X1, X2,..., Xn) and Sy = X1 + X2+-+-- + Xn. Now
+
+{N(t) +1 =n} ={Sn-1 <t} {Sn > t} © Fn.
+
+3. (Y+,F) is asubmartingale, and T = min{k : ¥, > x} is a stopping time. Now 0 < T An <n,
+so that E(¥°) < E(¥7,,,) < E(¥,'), whence
+
+E(¥t) = E(¥¢.,lr<n}) = xP(T <n).
+
+4. We may suppose that E(¥) < oo. With the notation of the previous solution, we have that
+
+E(Yo) = E(¥ran) = E(¥ranliren}) = xP(T <n).
+
+§. It suffices to prove that EYs < EY7y, since the other inequalities are of the same form but with
+different choices of pairs of stopping times. Let Im be the indicator function of the event {S < m < T},
+and define
+
+n
+Zn = >) Imm —Ym-1), OS SN.
+
+m=1
+
+Note that Im is Fj, 1-measurable, so that
+(Zn — Zn—1) = E{InE(¥n — Yn—1 | Fn—1)} = 0,
+
+399
+

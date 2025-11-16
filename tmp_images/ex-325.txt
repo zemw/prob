@@ -1,0 +1,66 @@
+[6.15.32]-[6.15.33] Solutions Markov chains
+
+It follows that P(R > r) = P(V > er”) = e7€" ” for r > 0, where c is the volume of the unit
+ball in x dimensions. Therefore
+
+a — A
+fr(r) = Ancr®™ eer r>0.
+
+Finally, E(R) = fo? eer" dr, and we set v = Acr”.
+
+32. The time between the kth and (k + 1)th infection has mean Ags whence
+
+N
+E(T) porn
+
+Fl
+
+Now
+
+ul 1 1 {ota 1 \
+SKN +1-K N41 Gk GN+1-k
+
+~2 yl. a {logN +y +0(N71)}
+Tok NFILOEN TY
+
+ray
+
+It may be shown with more work (as in the solution to Problem (5.12.34)) that the moment
+generating function of A(N + 1)T — 2log N converges as N > 00, the limit being {T'(1 — 6)}?.
+
+33. (a) The forward equations for pn (t) = P(V(t) =n + 4) are
+Prt) = (@ + V)pngi@) — 2nt+ Dpn@) +n, 229,
+
+with the convention that p_;(¢) = 0. It follows as usual that
+
+aG _ 9G _(,,3G 9G
+
+as required. The general solution is
+
+1 1
+Gon= oF (r+ i)
+
+for some function f. The boundary condition is G(s, 0) = 1, and the solution is as given.
+
+(b) Clearly
+T T
+my(T) =E | In, dt -[ Ent) at
+0 0
+
+by Fubini’s theorem, where I; is the indicator function of the event that V(t) = n + h.
+As for the second part,
+
+l-s
+
+ce r logf1 + (1 —s)T
+$= s"mp(T) =| G(s, t)dt = logil + — s)T]
+_ 0
+
+so that, in the limit as T —> 0,
+
+oe)
+2 8" (mn(T) — log T) = = log (4 2) > wet 2) 5) > an
+n=0
+
+316
+

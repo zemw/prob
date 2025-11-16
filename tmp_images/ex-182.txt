@@ -1,0 +1,66 @@
+Problems Solutions [3.11.5]-[3.11.8]
+
+(d) Similarly fx/y(@) = 4 fori = 5, $,3.
+
+PYY=2,Z=2)  — P(w) 1
+
+(e) friz2 12) = Baa = Bio Uw) 2?
+
+and similarly fy)z(3 | 2) = 7 fy\z(1 | 1) = 1, and other values are 0.
+(f) Likewise fzjy (2 | 2) = fzjy(213) = fzjyd |) =1.
+
+5 wy ‘ =k +__t \ ak, and therefore k= 1
+. Svna+) 4 \|n ntif” =1.
+
+(b) $772.) kn™ = kt(—o) where ¢ is the Riemann zeta function, and we require a < —1 for the sum
+to converge. In this case k = t(-—a)7}.
+
+6. (a) We have that
+
+n Ne pAgn-k k
+
+e*x eeu
+PX +Y =n) =D IMX =n- WP =) = DS
+
+k=0 k=0
+n! pars k n!
+P(X =k,X+¥ =n)
+®) OS RIXAV == Ox EY =a)
+
+_ P(X =HPY =n—-k) _ (n\ aku
+
+~  PX+¥=n) \kJA+w™
+
+Hence the conditional distribution is bin(n, A/(A + 44).
+7, (i) We have that
+
+P(X =n+k,X >n)
+P(X =n+k|X>ny= PX > n)
+
+_ pa- pyitk-1
+
+(ii) Many random variables of interest are ‘waiting times’, i.e., the time one must wait before the
+occurrence of some event A of interest. If such a time is geometric, the lack-of-memory property
+states that, given that A has not occurred by time 7, the time to wait for A starting from has the same
+distribution as it did to start with. With sufficient imagination this can be interpreted as a failure of
+memory by the process giving rise to A.
+
+(iii) No. This is because, by the above, any such process satisfies G(k + n) = G(k)G(n) where
+G(n) = P(X > n). Hence G(k + 1) = G(1)**! and X is geometric.
+
+8. Clearly,
+
+= pl — p)*! = P(X =b).
+
+k
+P(X+¥ =k) =) P(X =k-j,¥ = jf)
+j=
+
+k
+ML _? _ . n . _}
+= (," et ig™ (") ighd
+\krd j
+
+k
+= pk pmtn-k m n = yk ymta-k morn
+

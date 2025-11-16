@@ -1,0 +1,60 @@
+Multivariate normal distribution Solutions [4.9.1]-[4.9.5]
+
+whence the conditional density function is
+f@) = 22{20(z/V2) — 1}6(z/v2).
+Finally,
+
+E(Z | X > 0, Y > 0) = 2E(X | X > 0, Y > 0)
+Co x 1,2
+
+= 2E(X | X > 0) = 4E(XIjx30)) = af
+0
+
+4.9 Solutions. Multivariate normal distribution
+
+1. Since V is symmetric, there exists a non-singular matrix M such that M’ = M7~! and V =
+MAM7!, where A is the diagonal matrix with diagonal entries the eigenvalues Aj, A2,..., An of V.
+
+1 1
+Let A2 be the diagonal matrix with diagonal entries ./A1, /A2,...,-/An; A2 is well defined since
+1
+V is non-negative definite. Writing W = MA2M’, we have that W = W’ and also
+
+Ww = (MA2M~!)(MA2M~!) =MAM-!=V
+
+1
+as required. Clearly W is non-singular if and only if A2 is non-singular. This happens if and only if
+A; > 0 for all i, which is to say that V is positive definite.
+
+2. By Theorem (4.9.6), ¥ has the multivariate normal distribution with mean vector 0 and covariance
+matrix
+w-'vw-! = wo! ow4yw-l =
+
+3. Clearly Y = (K — pa’ + pra’ where a = (a1, @2,..., an). Using Theorem (4.9.6) as in the
+previous solution, (X — yz)a’ is univariate normal with mean 0 and variance aVa’. Hence Y is normal
+with mean ja’ and variance aVa’.
+
+4. Make the transformation u = x + y, v = x — y, with inverse x = su +v) y= 5(u — v), SO
+that |J| = 5. The exponent of the bivariate normal density function is
+
+ny ay Eg ay 2
+apy * 2oxy + y*) 4nd (L—p)+v°(1+ p)},
+
+and therefore U = X + Y, V = X — Y have joint density
+
+flu, v) 1 ex uw v?
+u,v) = - - ,
+4nJi-p2?| 40 +0) 40—p)
+
+whence U and V are independent with respective distributions N(0, 2(1 + e)) and N(O, 2(1 — ¢)).
+
+5. That Y is N(O, 1) follows by showing that P(Y < y) = P(X < y) for each of the cases y < ~a,
+ly| <a, y>a.
+Secondly,
+
+p(a) = E(XY) = a x°o(x) dx — [. x°o(x) dx — [ Pomax =1-— af x(x) dx.
+
+a —ooO a a
+
+201
+

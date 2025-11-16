@@ -1,0 +1,59 @@
+Problems Solutions [7.11.3]-[7.11.5]
+
+which tends to 0 in the limit as n > oo and 6 — oo in that order. Together with two similar facts, we
+. P
+obtain that X,Y, — XY.
+
+(h) The example of (d) above indicates that the corresponding statement is false for convergence in
+distribution.
+
+3. Let e > 0. We may pick M such that P(|X| > M) < €. The continuous function g is uniformly
+continuous on the bounded interval [—M, M]. There exists 6 > 0 such that
+
+lex)-gQ)| se if|x —y| < Sand |x| < M.
+If |g(Xn) — g(X)| > €, then either |X, — X| > 6 or |X| => M. Therefore
+P(|g(Xn) — g(X)| > €) < P(|Xn — X| > 6) +P(|X| => M) > P(IX| > M) <e,
+
+in the limit as n —> oo. It follows that g(Xn) 4 g(X).
+4. Clearly
+
+itX ‘ it, /10/ a ee ee
+tiAny _ j = —
+E(el!Xn) = [[Ee 5/107) I] 16° canto)
+j=l j=l
+1—e!# 1-el?
+
+~ Tord — elt/10") ir
+
+asn — oo. The limit is the characteristic function of the uniform distribution on [0, 1].
+Now Xn < Xy41 < 1 for all n, so that Y(w) = limp oo Xn(@) exists for all w. Therefore
+
+Xn 2s Y; hence X;, as Y, whence Y has the uniform distribution.
+
+5. (a) Suppose s < ¢. Then
+E(N(s)N(t)) = E(N(s)?) + E{N(s)(N(t) — N(s))} = E(N(8)*) + E(N(8))E(N() — N(8)),
+since N has independent increments. Therefore
+
+cov(N(s), N(t)) = E(N(s)N(t)) — EWN(s))E(N@®)
+= (As)? +As +As{A(t — 5)} — (As)(At) = As.
+
+In general, cov(N(s), N(t)) = A min{s, ¢}.
+(b) N(t +h) — N(t) has the same distribution as N(h), if h > 0. Hence
+
+E ({N(@ +h) — N@)}”) = BVH?) = Gh)? + ah
+
+which tends to 0.as h — 0.
+(c) By Markov’s inequality,
+
+1
+P(ING +h) —NO|>«) < zE({NE +m) —NO}’),
+
+which tends to 0 ash —> 0, if € > 0.
+(d) Lete > 0. ForO <h < el,
+
+p(Jae
+
+; | > c) = P(M(t +h) — N(t) = 1) =Ah + o(h),
+
+337
+

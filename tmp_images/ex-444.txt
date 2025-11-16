@@ -1,0 +1,236 @@
+Index
+
+stationary 9.7.11-12; strongly
+
+mixing 9.7.12
+median 2.7.11, 4.3.4, 7.3.11
+ménages 1.8.23
+Mercator projection 6.13.5
+meteorites 9.7.4
+
+metric 2.7.13, 7.1.4; Lévy 2.7.13,
+
+7.1.4, 7.2.4; total variation
+2.7.13
+m.g.f. inequality 5.8.2, 12.9.7
+migration pr., open 11.7.1, 5
+millionaires 3.9.4
+Mills’s ratio 4.4.8, 4.14.1
+minimal, solution 6.3.6—7, 6.9.6
+Minkowski’s inequality 4.14.27
+misprints 6.4.1
+mixing, strong 9.7.12
+mixture 2.1.4, 2.3.4, 4.1.3, 5.1.9
+modified renewal 10.6.12
+
+moments: branching pr. 5.4.1;
+fractional 3.3.5, 4.3.1;
+generating fn 5.1.8, 5.8.2,
+
+5.11.3; joint 5.12.30; problem
+5.12.43; renewal pr. 10.1.1; tail
+
+integral 4.3.3, 5.11.3
+Monte Carlo 4.14.9
+Monty Hall 1.4.5
+Moscow 11.8.3
+
+moving average 8.7.1, 9.1.3,
+9.4.2, 9.5.3, 9.7.1-2, 7;
+spectral density 9.7.7
+
+multinomial distn 3.5.1; marginals
+
+3.6.2; p.g.f. 5.1.5
+
+multinormal distn 4.9.2; c.f.
+5.8.6; conditioned 4.9.6-7;
+covariance matrix 4.9.2;
+maximum 5.9.7; sampling
+from 4.14.62; standard 4.9.2;
+transformed 4.9.3, 4.14.62
+
+Murphy’s law 1.3.2
+
+mutual information 3.6.5
+
+N
+
+needle, Buffon’s 4.5.2,
+4.14.31-32
+
+negative binomial distn 3.8.4;
+bivariate 5.12.16; moments
+5.12.4; p.gf. 5.1.1, 5.12.4
+
+negative hypergeometric distn
+3.5.4
+
+Newton, I. 3.8.5
+
+non-central distn 5.7.7-8
+
+non-homogeneous: birth pr.
+6.15.24; Poisson pr. 6.13.7,
+6.15.19-20
+
+noodle, Buffon’s 4.14.31
+
+norm 7.1.1, 7.9.6; equivalence
+
+class 7.1.1; mean square 7.9.6;
+rth mean 7.1.1
+
+normal distn 4.4.6; bivariate
+
+4.7.5—6, 12; central limit
+theory 5.10.1, 3, 9, 5.12.23,
+40; characterization of 5.12.23;
+cumulants 5.7.4; limit 7.11.19;
+linear transfomations 4.9.3--4;
+Mills’s ratio 4.4.8, 4.14.1;
+moments 4.4.6, 4.14.1;
+multivariate 4.9.2, 5.8.6;
+regression 4.8.7, 4.9.6, 4.14.13,
+7.9.2; sample 4.10.5, 5.12.42;
+simulation of 4.11.7, 4.14.49;
+square 4.14.12; standard 4.7.5;
+
+sum 4.9.3; sum of squares
+4.14.12; trivariate 4.9.8-9;
+uncorrelated 4.8.6
+
+normal integral 4.14.1
+
+normal number theorem 9.7.14
+
+now 6.15.50
+
+O
+
+occupation time for Wiener pr.
+13.12.20
+
+open migration 11.7.1, 5
+
+optimal: packing 12.2.1; price
+12.9.19; reset time 13.12.22;
+serving 11.8.13
+
+optimal stopping: dice 3.3.8—9;
+marriage 4.14.35
+
+optional stopping 12.5.1-8,
+12.9.19; diffusion 13.4.2;
+Poisson 12.7.2
+
+order statistics 4.14.21;
+exponential 4.14.33; general
+4.14.21; marginals 4.14.22;
+uniform 4,14.23~24, 39,
+6.15.42, 12.7.3
+
+Ornstein—Uhlenbeck pr. 9.7.19,
+
+13.3.4, 13.7.4-5, 13.12.3-4, 6;
+
+reflected 13.12.6
+
+orthogonal: increments 7.7.1;
+polynomials 4.14.37
+
+osmosis 6.15.36
+
+Pp
+pairwise independent: events
+1.5.2; nv.s 3.2.1, 3.3.3, 5.1.7
+paradox: Bertrand 4.14.8;
+Borel 4.6.1; Carroll 1.4.4;
+Galton 1.5.8; inspection
+10.6.5; Parrando 6.15.48; St
+Petersburg 3.3.4; voter 3.6.6
+parallel lines 4.14.52
+parallelogram 4.14.60; property
+7.1.2;
+
+435
+
+parking 4.14.30
+
+Parrando’s paradox 6.15.48
+
+particle 6.15.33
+
+partition of sample space 1.8.10
+
+Pasta property 6.9.4
+
+patterns 1.3.2, 5.2.6, 5.12.2,
+10.6.17, 12.9.16
+
+pawns 2.7.18
+
+Pepys’s problem 3.8.5
+
+periodic state 6.5.4, 6.15.3
+
+persistent: chain 6.4.10, 6.15.6;
+rw. 5.12.5-6, 6.3.2, 6.9.8,
+7.3.3, 13.11.2; state 6.2.3-4,
+6.9.7
+
+Petersburg, see St Petersburg
+
+pig 1.8.22
+
+points, problem of 3.9.4, 3.11.24
+
+Poisson: approximation 3.11.35;
+coupling 4.12.2; flips 3.5.2,
+5.12.37; sampling 6.9.4
+
+Poisson distn 3.5.3;
+characterization of 5.12.8, 15;
+compound 3.8.6, 5.12.13; and
+gamma distn 4.14.11; limit of
+binomial 5.12.39; modified
+3.1.1; sum 3.11.6, 7.2.10
+
+Poisson pr. 6.15.29; age 10.5.4;
+arrivals 8.7.4, 10.6.8;
+autocovariance 7.11.5,
+9.6.1; characterization
+6.15.29, 9.7.16; colouring
+theorem 6.15.39; compound
+6.15.21; conditional property
+6.13.6; continuity in m.s.
+7.11.5; covariance 7.11.5;
+differentiability 7.11.5;
+doubly stochastic 6.15.22—23;
+excess life 6.8.3, 10.3.1;
+forest 6.15.30; gaps 10.1.2;
+Markov renewal pr. 8.3.5,
+10.6.9; martingales 12.7.2;
+non-homogeneous 6.13.7,
+6.15.19-20; optional stopping
+12.7.2; perturbed 6.15.39-40;
+renewal 8.3.5, 10.6.9-10;
+Rényi’s theorem 6.15.39;
+repairs 11.7.18; sampling
+6.9.4; spatial 6.15.30-31,
+7.4.3; spectral density
+9.7.6; sphere 6.13.3-4;
+stationary increments 9.7.6,
+16; superposed 6.8.1; thinned
+6.8.2; total life 10.6.5; traffic
+6.15.40, 49, 8.4.3
+
+poker 1.8.33; dice 1.8.34
+
+Pélya’s urn 12.9.13-14
+
+portfolio 13.12.23; self-financing
+13.10.2~3
+
+positive definite 9.6.1, 4.9.1
+

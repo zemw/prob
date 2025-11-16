@@ -1,0 +1,54 @@
+Functions of random variables Solutions [4.6.7]-[4.7.1]
+
+7. We may assume without loss of generality that EX = EY = 0. By the Cauchy—Schwarz
+inequality,
+E(XY)? = E(XE(Y | X))? < E(X?)E(E(Y | X)?).
+
+Hence,
+
+E(XyYy2
+
+~— (1 — 72
+E(xdy = (1 #7 vart).
+
+E(var(Y | X)) = E(Y?) — E(E(Y | X)*) < EY? -
+
+8. One way is to evaluate
+
+OO OO OO
+[ / / Apve*-HY-Y2 dx dy dz.
+0 x y
+
+Another way is to observe that min{Y, Z} is exponentially distributed with parameter yz + v, whence
+P(X < min{Y, Z}) =A/A+ uv). Similarly, POY < Z) = u/(u + v), and the product of these
+two terms is the required answer.
+
+9. By integration, for x, y > 0,
+
+y foe)
+fr) = [ fee. yde= foe, fee) = [fee yay = ore,
+
+whence c = 1. It is simple to check the values of fxjy(x | y) = f(x, y)/fy(y) and fy\x(y | x),
+and then deduce by integration that E(X | Y = y)= Y and E(Y | X =x) =x+4+2.
+
+10. We have that N > nif and only if XQ is largest of {Xp, X1,..., Xn}, an event having probability
+1/(7 +1). Therefore, P(N = n) = 1/{n(v + 1)} forn > 1. Next, on the event {N = n}, Xp is the
+largest, whence
+
+ee 3 Fa@yrth | 3 F(x}
+
+P(Xy < = o_o = F ;
+Ov 3) = Tae n n+11*
+n=1 n=1 n=1
+as required. Finally,
+P(M =m) = P(Xo = X1 = > Xm_-1) — P(Xo0 = X1 = > Xm) =— y
+=mn)= oz AlLz 2 Am-1 02412 = Am) = 7 (m+)!
+
+4.7 Solutions. Functions of random variables
+1. We observe that, if0 <u <1,
+P(XY <u) =PUXY <u, Y <u) +PXY <u,¥ >u) =P(Y <u) +P(X <u/Y, Y>u)
+nut [i dy =u loge,
+By the independence of XY and Z,
+P(XY <u, Z* <v) = P(XY <uw)P(Z < Vv) =uJv(1—logu), O<u,v<1.
+
+195

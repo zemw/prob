@@ -1,0 +1,63 @@
+[13.8.1]-[13.8.1] Solutions Diffusion processes
+
+after prolonged integration. By the linearity of the definition of U, it is a Gaussian process. From the
+calculation above, it has autocovariance function c(s, s +t) = (e~PC—S) _ eB ts my /@8). From this
+we may calculate the instantaneous mean and variance, and thus we recognize an Ornstein—-Uhlenbeck
+process. See also Exercise (13.3.4) and Problem (13.12.4).
+
+13.8 Solutions. The It6 integral
+
+1, (a) Fixt > Oand let n > 1 and dé = t/n. We write t; = jt/n and Vj = Wi;- By the absence of
+correlation of Wiener increments, and the Cauchy—Schwarz inequality,
+)
+
+t n-1 2 n—1 tl
+e(|/ Ws ds — S° Vjai(tj41 - 4) ) =E( > | (Vj41 — Ws) ds
+° j=0 joo 74
+n—l t+] 2
+=S2(| [wa - woes] )
+j=o NE
+nol +d 5
+<v {Gu | E(\Vj41 — Ws| pas}
+j=0 qj
+
+n—l 1 n—-1 1 /t 3
+= SGu-m =D 5 (<) +0 asn—> oo.
+j=0
+
+j=0
+Therefore,
+
+t n—1 n-1
+
+[saws = li Do (Wen — MD = ln, Daa Yins 9%) — Gar — 19 ¥)
+n—1 t
+= jim, (om, > VjaiG4i- “)) =1W; -[ W, ds.
+(b) As n > oo,
+n—-1
+
+n-1
+do VP Va — Vp) = 3 VA — VP — 3 41 — Yi)? — 41 — Yi}
+j=0 j=0
+
+a~l n—1
+= 3h — Oi H+ YY — WO? Gar — DW} — FOG — VV
+t
+> swe — | W(s)ds +0 +0.
+0
+
+The fact that the last two terms tend to 0 in mean square may be verified in the usual way. For example,
+
+n—l 2 n—-l
+YVYja1- wi | ) = SE[(Vj41 - ¥)*]
+=0 j=0
+
+n
+
+n—-1 -1 t 3
+=6 t41—-t))? =6 ~)} -0 —> 00.
+d(H i) > (<) as n
+
+j
+
+416

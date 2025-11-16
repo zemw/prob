@@ -1,0 +1,62 @@
+[6.15.26]-[6.15.28] Solutions Markov chains
+(b) By conditioning on the first step, the probability n;, of visiting 0 having started from j, satisfies
+
+n= (G+ D2 nya + 7? nj-1
+’ P+G+)?
+
+Hence, (j + 1)?(nj41 — 1j) = i7(nj — nj -1), giving (7 + 1)?(nj-41 — 2) = 11 — no. Therefore,
+
+j
+1
+1-nj41=Ud-—m) >> —,;
+oo FFD
+
+> d- man? as j —> 00.
+
+By Exercise (6.3.6), we seek the minimal non-negative solution, which is achieved when 4; = 1 —
+(6/2).
+
+26. We may suppose that X(0) = 0. Let TJ, = inf{t : X(t) = n}. Suppose TJ, = T, and let
+Y = T,41 — T. Condition on all possible occurrences during the interval (T, T + /) to find that
+E(Y) = Anh)A + unh(h + EY’) + (1 — Anh — enh) (h + E(Y)) + off),
+
+where Y’ is the mean time which elapses before reaching n + 1 from n — 1. Set mn = E(Ty41 — Tn)
+to obtain that
+My = Unh(my—1 + mn) + my +h{l — An + Un) mp} + o(h).
+
+Divide by / and take the limit ash | 0 to find that A,my, = 1+ unm,—1,n > 1. Therefore
+1 pn 1 Ln 4, Bnbn-1"*" BA
+
+" An An nt An AnAn-l1 AnAn—1°+*4A0
+
+since mg = Ag | The process is dishonest if 0 Mn < 00, Since in this case Tog = lim T;, has
+finite mean, so that P(Too < 00) = 1.
+
+On the other hand, the process grows no faster than a birth process with birth rates A;, which is
+honest if }7°° 9 1/An = 00. Can you find a better condition?
+
+27. We know that, conditional on X (0) = J, X (#) has generating function
+
+at(1 =o +s)!
+
+G6. = (a —s)41
+
+so that
+
+I
+P(T <x |X) =D) =P(X(x) =0| X0) =) =G0,x) = (* :)
+
+It follows that, in the limit as x > ov,
+
+per =x) => ( Ax ) Pao) =) =Gx0)( Ax jaa
+WO ep Nae $1 ) \Ox +1
+
+For the final part, the required probability is {x7/(«7 + DY = {1+ @D7!}-!, which tends to
+e7!/* as I -> 00.
+
+28. Let Y be an immigration—death process without disasters, with Y (0) = 0. We have from Problem
+(6.15.18) that Y(t) has generating function G(s, t) = exp{o(s — 1)(1 — e~#*)} where p = A/p. As
+seen earlier, and as easily verified by taking the limit as t — oo, Y has a stationary distribution.
+
+314
+

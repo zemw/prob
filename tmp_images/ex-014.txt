@@ -1,0 +1,66 @@
+Problems Exercises [1.8.4]-[1.8.14]
+
+4. Describe the underlying probability spaces for the following experiments:
+
+(a) a biased coin is tossed three times;
+
+(b) two balls are drawn without replacement from an urn which originally contained two ultramarine
+and two vermilion balls;
+
+(c) a biased coin is tossed repeatedly until a head turns up.
+
+5. Show that the probability that exactly one of the events A and B occurs is
+
+P(A) + P(B) — 2P(AN B).
+
+6. Prove that P(AU BUC) =1—P(AS | BSN C°)P(BS | CPCS).
+
+7. (a)If A is independent of itself, show that P(A) is 0 or 1.
+(b) If P(A) is 0 or 1, show that A is independent of all events B.
+
+8. Let Fbeac-field of subsets of Q, and suppose P : ¥ -> [0, 1] satisfies: (4) P(&2) = 1, and Gi) P
+is additive, in that P(A U B) = P(A) + P(B) whenever AM B = @. Show that P(@) = 0.
+
+9, Suppose (Q, ¥, P) is a probability space and B € F satisfies P(B) > 0. Let Q: F — [0, 1] be
+defined by Q(A) = P(A | B). Show that (Q, F, Q) is a probability space. If C € Fand Q(C) > 0,
+show that Q(A | C) = P(A | BNC); discuss.
+
+10. Let By, Bo,... be a partition of the sample space Q, each B; having positive probability, and
+show that
+
+le ¢)
+P(A) = P(A | Bj)P(B;).
+j=l
+
+11. Prove Boole’s inequalities:
+n n A n
+»(U Ai) < > P(Ai), (1 Ai) > 1-5 > P(AP).
+i=1 i=l i=l i=1
+12. Prove that
+
+P(A) = So P(A) — OPA; U Aj) +S P(A; UA; U Ag)
+1 i
+
+i<j i<j<k
+
+~ +++ —(=1)"P(Ay U Az U--*U Ag).
+
+13. Let Aj, Az,..., An be events, and let Ny be the event that exactly k of the A; occur. Prove the
+result sometimes referred to as Waring’s theorem:
+
+n-k :
+,f{k+i
+P(N) = > (-1)' ( k ) see where S; = » P(A;, N Ai Ai):
+i=0 i <ig<-<ij
+
+Use this result to find an expression for the probability that a purchase of six packets of Corn Flakes
+yields exactly three distinct busts (see Exercise (1.3.4)).
+14. Prove Bayes’s formula: if A;, Az, ..., An isa partition of Q, each A; having positive probability,
+then
+
+P(B | Aj)P(A;)
+Dj PCB | Aj)PCAi)
+
+P(A; | B) =
+
+5

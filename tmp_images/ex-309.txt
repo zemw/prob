@@ -1,0 +1,60 @@
+[6.12.2]-[6.12.4] Solutions Markov chains
+
+whence j4i9 = (u% + A)/(u — A). Since each sojourn is exponentially distributed with parameter
+iu +A, the result follows by an easy calculation. See also Theorem (11.3.17).
+
+2. We apply the method of Theorem (6.12.11) with
+
+seh
+
+Gy(s,u) = i <n
+
+—s+se
+
+the probability generating function of the population size at time u in a simple birth process. In the
+absence of disasters, the probability generating function of the ensuing population size at time v is
+
+A(s,v) = exp (» [ tens. u) — 11du) ={s+(1 = ser,
+0
+
+The individuals alive at time ¢ arose subsequent to the most recent disaster at time t — D, where D
+has density function be *, x > 0. Therefore,
+
+t be79* oe ¥t dx ewvt
+E(s*) = E(H(s, D - | ~
+(s ) ( (s, )) 0 ral —st+ seyv/d +e (1 —s + se Myv/d
+
+3. The mean number of descendants after time t of a single progenitor at time 0 is e@~)".. The
+expected number due to the arrival of a single individual at a uniformly distributed time in the interval
+
+on [0, x] is therefore
+Q-“)x _
+1 [ [OW gy = Oe
+x Jo (A — w)x
+
+The aggregate effect at time x of N earlier arrivals is the same, by Theorem (6.12.7), as that of N
+arrivals at independent times which are uniformly distributed on [0, x]. Since E(V) = vx, the mean
+population size at time x is v[eA-#)* — 1]/(A — w). The most recent disaster occurred at time t — D,
+where D has density function be7o* , x > 0, and it follows that
+
+v feQ-)* — WY dx + eX feA—mt _ 47.
+
+pe A pL
+
+E(X(t)) = i bev es
+
+This is bounded as t > oo if and only if6 > A — w.
+
+4. Let N be the number of clients who arrive during the interval [0, t]. Conditional on the event
+{N = n}, the arrival times have, by Theorem (6.12.7), the same joint distribution as n independent
+variables chosen uniformly from [0, t]. The probability that an arrival at a uniform time in [0, t] is
+still in service at time f is B = fol — G(t —x)]t7! dx, whence, conditional on {N = 7}, the total
+number M still in service is bin(x, 8). Therefore,
+
+B (eM) = B(B(e™ | N)) = B((Be? +1—f)") = Gy Be? +1 - py =e,
+
+whence M has the Poisson distribution with parameter ABt = A fo — G(x)Jdx. Note that this
+parameter approaches XE(S) as t — oo.
+
+300
+

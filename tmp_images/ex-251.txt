@@ -1,0 +1,72 @@
+[5.7.3}-[5.7.6] Solutions Generating functions and their applications
+
+(ii) Note first that, if X and Y are independent with common characteristic function ¢, then X — Y
+has characteristic function
+
+v(t) = E(e!* Ee") = 6) (1) = (OO = OOP.
+
+Apply the result of part (i) to the function % to obtain that 1 — |p (2t)|2 < 40 - |f(t)|?). However
+|@(@)| < 1, so that
+
+1 — 19 (28)| < 1-|@ Qe)? < 40 - 1@@)) < 80 - 1G).
+
+3. (a) With m, = E(X*), we have that
+
+[o.<)
+E(eo*) =1+ 5) —mpo* =14 S06),
+k=1
+
+1
+kt
+say, and therefore, for sufficiently small values of 0,
+(14!
+
+Kx@)=)>_
+
+r=]
+
+S(6)”.
+
+Expand S(6)" in powers of 9, and equate the coefficients of 6, 6, 63, in turn, to find that ky (X) =m,
+ka(X) = mz — mi, k3(X) = m3 — 3mm + 2m}.
+(b) If X and Y are independent, Ky,y(6) = log{E(e°*)E(e°”)} = Kx(@) + Ky(@), whence the
+claim is immediate.
+
+192
+4. The N(O, 1) variable X has moment generating function E(e?* )= e2? , so that Ky (0) = 407,
+
+5. (a) Suppose X takes values in L(a, b). Then
+
+|x (227/b)| = = |e27!a/dy
+
+So 2m ix/ p(x =x) So ett P(X =a+bm)| =1
+x m
+
+since only numbers of the form x = a + bm make non-zero contributions to the sum.
+Suppose in addition that X has span b, and that |@x(T)| = 1 for some T € (0, 27/b). Then
+ox (T) = e'© for some c € R. Now
+
+E(cos(T'X —c)) = dE(e!T XH 4 eiT tic) — 1,
+
+using the fact that E(e7*) = $x(T) = e7!¢. However cosx < 1 for all x, with equality if and
+only if x is a multiple of 27. It follows that TX — c is a multiple of 27, with probability 1, and hence
+that X takes values in the set L(c/T, 27/T). However 22 /T > b, which contradicts the maximality
+of the span b. We deduce that no such T exists.
+
+(b) This follows by the argument above.
+
+6. Thisisaform of the ‘Riemann—Lebesgue lemma’. It is a standard result of analysis that, fore > 0,
+there exists a step function g¢ such that [°>, | f (x) — ge(x)| dx < €. Let de(t) = f%, ef ge(x) dx.
+Then
+
+ao | 0°
+bx ~ 001 =| / e''* (f(x) — ge(x)) dx| < / If) — ge(x)| dx <e.
+oO
+
+—OO
+
+If we can prove that, for each €, |@¢(t)| - 0ast — too, then it will follow that |¢x (¢)| < 2e for all
+large t, and the claim then follows.
+
+242
+

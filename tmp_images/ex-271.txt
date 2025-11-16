@@ -1,0 +1,58 @@
+[5.12.23]-[5.12.24] Solutions Generating functions and their applications
+
+for all t, if and only if X and —X have the same characteristic function, or equivalently the same
+distribution.
+
+23. (a) U = X + Y and V = X - ¥ are independent, so that ¢y4y = $y ¢y, which is to say that
+g2x = bx+yex-_y, Or
+
+$(2t) = {P(t}? Hb@o(—t)} = 76-2).
+Write w(t) = o(t)/o(—t). Then
+b2t) — o)3o(—t) _
+
+2t) = = = 2
+4) = Gn one
+Therefore ,
+v@=v¥40 = wiint =.= wee)" forn > 0.
+However, as h — 0,
+_ 1,2 2
+y(n) = 2 8 a FO) M1 os,
+
+o(-h) 1 — 43h? + 0(h?)
+
+so that Y(t) = {1 + o(t?/22ny}?" — lasn — oo, whence y(t) = 1 for all ¢, giving that
+$(-t) = (t). It follows that
+
+g(t) = oh o(—4n = on = 90/2") — forn = 1
+
+g2n
+1 2? _1,2
+= {1-5 se toe} > e 2! asn—> oO,
+
+so that X and Y are N(O, 1).
+(b) With U = X + Y and V = X — Y, we have that #(s, t) = E(eSUt+"V) satisfies
+
+(*) e(s, t) = Eel tOX4iS DY) — gs 4 t)o(s — 1).
+
+Using what is given,
+
+a = -E(V7 iY) = —EfeYE(V? | U)} = —EQe!Y) = —24(5)?.
+t=0
+However, by (*),
+a*y " hogy
+Sr) = 2d") - 6'65)"},
+ |r=0
+
+yielding the required differential equation, which may be written as
+d
+qe! ¢)=-1.
+s
+
+_1.2
+Hence log (s) =a +bs — 587 for constants a, b, whence ¢(s) =e 2° .
+
+24. (a) Using characteristic functions, z(t) = dx (t/n)" = eT,
+(b) E|X;| = 00.
+
+262
+

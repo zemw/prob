@@ -1,0 +1,69 @@
+Problems Solutions [6.15.38]-[6.15.41]
+
+where we have used the fact that F mj pjk(t) = me. Now a;(s) —> mj ass — oo, and therefore
+d(t) > c(1).
+
+38. By the Chapman—Kolmogorov equations and the reversibility,
+
+ug (2t) = 5 P(X (2t) = 0| X(t) = f)P(X@) = j | XO =0)
+j
+
+2
+=> 2P(xen = j|X@ =0)uj@) =20 So 7; (u2) .
+jd j
+
+aj
+
+2
+
+The function c(x) = —x~“ is concave, and the claim follows by the result of the previous problem.
+
+39. This may be done in a variety of ways, by breaking up the distribution of a typical displacement and
+using the superposition theorem (6.13.5), by the colouring theorem (6.13.14), or by Rényi’s theorem
+(6.13.17) as follows. Let B be a closed bounded region of R?, We colour a point of Tl atx ¢ R@
+black with probability P(x + X € B), where X is a typical displacement. By the colouring theorem,
+the number of black points has a Poisson distribution with parameter
+
+[ AP@+X¢ Bydx=3 | ay [ P(X € dy —x)
+Rd yeB xeR?
+
+= / ay | P(X Edy) =A|BI,
+yeB verR?d
+
+by the change of variables v = y — x. Therefore the probability that no displaced point lies in B is
+e~4181, and the claim follows by Rényi’s theorem.
+
+40. Conditional on the number N(s) of points originally in the interval (0, s), the positions of these
+points are jointly distributed as uniform random variables, so the mean number of these points which
+lie in (—c<, a) after the perturbation satisfies
+
+Ss ] OO
+as [ <PX+u<a)du i [ Fy(a —u)du = E(R,) as s —> Oo,
+os 0
+
+where X is a typical displacement. Likewise, E(Lp) = 4 Sor [1 — Fy (a + u)] du. Equality is valid
+if and only if
+
+OO a
+[u-Feonde= [ Freyas,
+a —C
+which is equivalent to a = E(X), by Exercise (4.3.5).
+The last part follows immediately on setting X; = V-t, where V;, is the velocity of the rth car.
+
+41. Conditional on the number N(*) of arrivals by time ft, the arrival times of these ants are distributed
+as independent random variables with the uniform distribution. Let U be a typical arrival time, so
+that U is uniformly distributed on (0, ¢). The arriving ant is in the pantry at time t with probability
+nx =P(U +X > 2), or in the sink with probability 9 = P(U + X <t <U +X +), or departed
+with probability 1 — o — a. Thus,
+
+E(x4)y8O) _ E{E(x40 yBO | N(t)) }
+
+=E{(ax+pyt+tl—a—- pyNOr = ftA-NeheY-D_
+
+Thus A(t) and B(t) are independent Poisson-distributed random variables. If the ants arrive in pairs
+and then separate,
+
+E(x4M y3O | N(t)) = {1r2x? + Inpxy + py” + 2ymx +2ypy + y2}NO
+
+319
+

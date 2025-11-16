@@ -1,0 +1,70 @@
+Optional stopping Solutions [12.5.3]-[12.5.5]
+
+(a) Now,
+
+E (l¥rangyeaptza)) = E (I¥rlr<niypizay) + E (Yall an,\¥n|>a})
+<E (|¥rll(ypi>a}) + E (l¥nld(r>n}) = g(a) +h),
+
+say. We have that g(a) > 0 asa —> o, since E/Y7| < oo. Also h(n) > Oasn > ~w,
+so that sup,,>, A(x) may be made arbitrarily small by suitable choice of N. On the other hand,
+
+E (|¥nlZ{¥,|>a}) —> 0 as a > 00 uniformly inn € {0, 1,..., N}, and the claim follows.
+
+(b) Since Y,* defines a submartingale, we have that sup, E(Yz, an) < SUPp E(¥q') < 00, the second
+inequality following by the uniform integrability of {Y,,}. Using the martingale convergence theorem,
+Yrtan — Yr a.s. where E|Y7| < 00. Now
+
+El¥ran — Yr| = E(I¥n _ Yr |I(r>n}) < E(|¥nllr>n}) +E(I¥r|r>n})-
+
+Also P(T > n) — 0.as n — on, so that the final two terms tend to 0 (by the uniform integrability of
+
+the Y; and the finiteness of E|Y7| respectively). Therefore Y7 ,n 4 Yr, and the claim follows by the
+standard theorem (7.10.3).
+
+3. By uniform integrability, Yoo = limp—+soo Yn exists a.s. and in mean, and Yn = E(Yoo | Fn).
+
+(a) On the event {7 = n} it is the case that Yr = Y, and E(Yoo | Fr) = E(Yoo | Fn); for the
+latter statement, use the definition of conditional expectation. It follows that Yr = E(Yoo | Fr),
+irrespective of the value of T.
+
+(b) We have from Exercise (12.4.7) that Fs C Fr. Now Ys = E(Yoo | Fg) = E{E(Yoo | Fr) |
+Fs) = E(¥7 | Fs).
+
+4. Let T be the time until absorption, and note that {S,} is a bounded, and therefore uniformly
+integrable, martingale. Also P(T < oo) = 1 since T is no larger than the waiting time for N
+consecutive steps in the same direction. It follows that E(Sg) = E(S7) = NP(Sr = N), so that
+P(Sr = N) = E(So)/N. Secondly, {s? —n:n > 0} is a martingale (see Exercise (12.1.4)), and the
+optional stopping theorem (if it may be applied) gives that
+
+E(S3) = E(S% — T) = N*P(Sp = N) —E(T),
+
+and hence E(T) = NE(So) — E(SQ) as required.
+
+It remains to check the conditions of the optional stopping theorem. Certainly P(T < oo) = 1,
+and in addition E(T2) < oo by the argument above. We have that E|S% —T| <N24+KE(T) < ©.
+Finally,
+
+E{(S2 —n)Irsny} < (N? +n)P(T > n) > 0
+
+as n —> 00, since E(T2) < 0.
+
+5. Let Fy = o(S1, Sz,.-.., Sn). It is immediate from the identity cos(A + A) + cos(A — A) =
+2cos A cos A that
+
+cos[A(Sn + 1 — 5(b — a))] + cosfA(Sn — 1 — 5(6 — a))]
+
+E(Yn+41 | Fn) = (cos A+
+
+= Yn,
+
+and therefore Y is a martingale (it is easy to see that E] Y,| < oo for all 7).
+
+Suppose that 0 <A < 2/(a +b), and note that 0 < |A{S, — 5(b —a)}| < 5Xa +b) < 50 for
+n<T.Now Yr, constitutes a martingale which satisfies
+
+cos{5A(a + b)} -_!
+(cosayr™  — Tan = (cos A)T
+
+(x)
+
+401

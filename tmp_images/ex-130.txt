@@ -1,0 +1,56 @@
+Problems Exercises [12.5.6]-[12.9.2]
+
+constitutes a martingale if cosA 4 0.
+
+Let a and b be positive integers. Show that the time T until absorption at one of two absorbing
+barriers at —a and b satisfies
+
+_py _ cos{5a(b — a)}
+B({eosa™") = cos{a(b +a)}' < Sora
+
+6. Let {S, :n > 0} bea simple symmetric random walk on the positive and negative integers, with
+So = 0. For each of the three following random variables, determine whether or not it is a stopping
+time and find its mean:
+
+U =min{n >5:S_,=Sp-5+5}, V=U-5, W=min{n: S, = 1).
+
+7. LetS, =a+>°?_, Xr beasimple symmetric random walk. The walk stops at the earliest time T
+when it reaches either of the two positions 0 or K whereO < a < K. Show that My, = 0 Sr—- 43
+is a martingale and deduce that E(S~/_9 Sy) = 4(K? — a?)a +a.
+
+8. Gambler’s ruin. Let X; be independent random variables each equally likely to take the values
+
++1, and let T = min{n : S, € {—a,b}}. Verify the conditions of the optional stopping theorem
+(12.5.1) for the martingale Ss? — nand the stopping time T.
+
+12.7 Exercises. Backward martingales and continuous-time martingales
+
+1. Let X be a continuous-time Markov chain with finite state space S and generator G. Let 7 =
+{n(@i) : i € S} be a root of the equation Gy’ = 0. Show that 4(X(t)) constitutes a martingale with
+respect to F; = o ({X(u) : u < t}).
+
+2. Let N be a Poisson process with intensity A and N(O) = 0, and let Tz = min{r : N(t) = a},
+where a is a positive integer. Assuming that E{exp(yTz)} < oo for sufficiently small positive w, use
+the optional stopping theorem to show that var(Tz) = an,
+
+3. Let S, = ee Xy, m <n, where the X; are independent and identically distributed with finite
+mean. Denote by U;, U2, ... , Un the order statistics of n independent variables which are uniformly
+distributed on (0, t), and set U,,1 = t. Show that Rm = Sm/Um+i, 0 < m <n, is a backward
+martingale with respect to a suitable sequence of o-fields, and deduce that
+
+P(Rm = 1 for some m <n| Sp = y) < min{y/t, 1}.
+
+12.9 Problems
+
+1. Let Z, be the size of the nth generation of a branching process with immigration in which the
+mean family size is jz (4 1) and the mean number of immigrants per generation is m. Show that
+
+_ 1— pe”
+Yn =U {zn mi}
+
+defines a martingale.
+
+2. In an age-dependent branching process, each individual gives birth to a random number of off-
+spring atrandom times. At time 0, there exists a single progenitor who has N children at the subsequent
+
+121

@@ -1,0 +1,65 @@
+(6.15.21]-[6.15.21] Solutions Markov chains
+
+For any event B defined in terms of X1, X2,..., Xy—1, we have that
+
+oe)
+P(Xy >u,B)= > P(Xy > u,B| M=m)P(M =m)
+m=1
+[o.<)
+= 0 P(Xy > u|M=m)P(B | M =m)P(M =m)
+mz=z1
+
+[o@)
+=P(Xy >u) >> P(B| M=m)P(M =m)
+m=1
+
+=P(Xy > u)P(B), O<s <u,
+
+where we have used the fact that P(X yy > u | M = m) is independent of m. It follows that the first
+record value exceeding s is independent of all record values not exceeding s. By a similar argument
+(or an iteration of the above) all record values exceeding s are independent of all record values not
+exceeding s.
+
+The chance of a record value in (s,s + A] is
+
+F(s+h)—F(s) ff (s)h
+1— F(s) ~ 1 ~ F(s)
+
+Ps <Xy<s+h)= + o(h).
+
+A very similar argument works for the runners-up. Let Xy,,X,,.-. be the values, in order,
+of offers exceeding s. It may be seen that this sequence is independent of the sequence of offers
+not exceeding s, whence it follows that the sequence of runners-up is a non-homogeneous Poisson
+process. There is a runner-up in (s, s + A] if (neglecting terms of order o(/)) the first offer exceeding
+s is larger than s + h, and the second is in (s, s + 4]. The probability of this is
+
+(44°) See Fsyh
+1— F(s) 1 - F(s) 1 - F(s)
+
+) +o(4) = + of).
+
+21. Let F;(x) = P(N*(t) < x), and let A be the event that N has a arrival during (¢,f +). Then
+Fin (t) = AAP(N*(¢ +h) <x| A) + (1 — Ah) F(x) +018)
+
+where
+foe)
+
+P(N*(¢+h) <x|A)= / F(x — y) f(y) dy.
+OO
+
+Hence 3 oo
+ap ft) = —AF;(x) +a Fi(x — y) fQ) dy.
+
+Take Fourier transforms to find that ¢;(@) = E(e!#4* ©) satisfies
+
+a
+om = —Adt + AOrd,
+
+an equation which may be solved subject to ¢9(0) = 1 to obtain ¢;(6) = et G@)-1,
+Alternatively, using conditional expectation,
+
+$1(0) = E{E(e!°N"© | N@))} = E{O@)N}
+where N(¢t) is Poisson with parameter At.
+
+312
+

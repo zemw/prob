@@ -1,0 +1,65 @@
+[3.3.6]-[3.4.8] Exercises Discrete random variables
+
+6. Show that var(a + X) = var(X) for any random variable X and constant a.
+
+7. Arbitrage. Suppose you find a warm-hearted bookmaker offering payoff odds of (k) against
+the kth horse in an n-horse race where rel {(k) + 1}-! < 1. Show that you can distribute your
+bets in such a way as to ensure you win.
+
+8. You roll a conventional fair die repeatedly. If it shows 1, you must stop, but you may choose to
+stop at any prior time. Your score is the number shown by the die on the final roll. What stopping
+strategy yields the greatest expected score? What strategy would you use if your score were the square
+of the final roll?
+
+9. Continuing with Exercise (8), suppose now that you lose c points from your score each time you
+roll the die. What strategy maximizes the expected final score if ¢ = 5? What is the best strategy if
+c=1?
+
+3.4 Exercises. Indicators and matching
+
+1. A biased coin is tossed ” times, and heads shows with probability p on each toss. A run isa
+sequence of throws which result in the same outcome, so that, for example, the sequence HHTHTTH
+contains five runs. Show that the expected number of runs is 1 + 2(n — 1) p(1 — p). Find the variance
+of the number of runs.
+
+2. Anurn contains 7 balls numbered 1, 2, ...,. Weremove k balls at random (without replacement)
+and add up their numbers. Find the mean and variance of the total.
+
+3. Of the 2n people in a given collection of n couples, exactly m die. Assuming that the m have
+been picked at random, find the mean number of surviving couples. This problem was formulated by
+Daniel Bernoulli in 1768.
+
+4. Urn R contains n red balls and urn B contains n blue balls. At each stage, a ball is selected at
+random from each urn, and they are swapped. Show that the mean number of red balls in urn R after
+
+stage k is zn{l + (1 -2/ nyk }. This ‘diffusion model’ was described by Daniel Bernoulli in 1769.
+
+5. Consider a square with diagonals, with distinct source and sink. Each edge represents a component
+which is working correctly with probability p, independently of all other components. Write down an
+expression for the Boolean function which equals 1 if and only if there is a working path from source
+to sink, in terms of the indicator functions X; of the events {edge i is working} as i runs over the set
+of edges. Hence calculate the reliability of the network.
+
+6. A system is called a ‘k out of n’ system if it contains n components and it works whenever k or
+more of these components are working. Suppose that each component is working with probability
+p, independently of the other components, and let X, be the indicator function of the event that
+component c is working. Find, in terms of the X,, the indicator function of the event that the system
+works, and deduce the reliability of the system.
+
+7. The probabilistic method. Let G = (V, EZ) bea finite graph. For any set W of vertices and any
+edge e € E, define the indicator function
+
+1 if e connects W and W°,
+
+0 otherwise.
+
+Iw(e) = {
+
+Set Nw = Yicce Iw(e). Show that there exists W C V such that Nw > sIEl.
+
+8. A total of n bar magnets are placed end to end in a line with random independent orientations.
+Adjacent like poles repel, ends with opposite polarities join to form blocks. Let X be the number of
+blocks of joined magnets. Find E(X) and var(X).
+
+18
+

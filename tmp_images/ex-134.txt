@@ -1,0 +1,52 @@
+Problems Exercises [12.9.20]-[12.9.24]
+
+week. Explain why a sensible strategy for the businessman is to sell in the week T, where T is a
+stopping time chosen so as to maximize
+
+Tr
+wT) = e{( +a)? Xr-S + are
+
+n=1
+
+Show that this problem is equivalent to maximizing E{(1 + a)~7 Zr} where Zy = Xy +c/a.
+Show that there exists a unique positive real number y with the property that
+
+CO
+ay -| P(Zyn > y) dy,
+Y
+
+and that, for this value of y, the sequence V, = (1+a@)~” max{Z,, y} constitutes a supermartingale.
+Deduce that the optimal strategy for the businessman is to set a target price t (which you should
+specify in terms of y) and sell the first time he is offered at least this price.
+
+In the case when f (x) = 2x73 forx > 1,andc =a = ay find his target price and the expected
+number of weeks he will have to wait before selling.
+20. Let Z be a branching process satisfying Zp = 1, E(Z,) < 1, and P(Z, > 2) > 0. Show that
+E(sup,, Zn) < n/(n— 1), where n is the largest root of the equation x = G(x) and G is the probability
+generating function of Z.
+21. Matching. In a cloakroom there are K coats belonging to K people who make an attempt to
+leave by picking a coat at random. Those who pick their own coat leave, the rest return the coats and
+
+try again at random. Let N be the number of rounds of attempts until everyone has left. Show that
+EN = K and var(N) < K.
+
+22. Let W be a standard Wiener process, and define
+t
+M(t) = [ W(u) du — 4 wa)?
+0
+
+Show that M(t) is a martingale, and deduce that the expected area under the path of W until it first
+reaches one of the levels a (> 0) or b (< 0) is —zab(a +b).
+
+23. Let W = (W), Wo,..., Wa) be a d-dimensional Wiener process, the W; being independent
+one-dimensional Wiener processes with W;(0) = 0 and variance parameter o2 =d7!. Let Rity* =
+Wi (t)? + W(t)? So Wa(t)?, and show that R(t)? — tis a martingale. Deduce that the mean
+time to hit the sphere of R@ with radius a is a”.
+
+24. Let W be a standard one-dimensional Wiener process, and let a,b > 0. Let T be the earliest
+
+time at which W visits either of the two points —a, b. Show that P(W(T) = b) = a/(a + b) and
+E(T) = ab. In the case a = b, find E(e~*T) for s > 0.
+
+125
+

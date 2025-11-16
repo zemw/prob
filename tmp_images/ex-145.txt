@@ -1,0 +1,64 @@
+[1.3.2]-[1.3.4] Solutions Events and their probabilities
+
+Also, since AN BC Aand AM BC B, P(AN B) < min{P(A), P(B)} = 5.
+
+These bounds are attained in the following example. Pick a number atrandom from {1, 2, ..., 12}.
+Taking A = {1,2,...,9} and B = {9, 10, 11, 12}, we find that AN B = {9}, and so P(A) = 3,
+P(B) = 4, (AN B) = 75. To attain the upper bound for P(A M B), take A = {1,2,...,9} and
+B = {1, 2, 3, 4}.
+
+(ii) Likewise we have in this case P(A U B) < min{P(A) + P(B),1} = 1, and P(A U B) =
+max{P(A), P(B)} = 3. These bounds are attained in the examples above.
+
+2. (i) We have (using the continuity property of P) that
+P(no head ever) = lim P(no head in first n tosses) = lim 27" =0,
+n->OO now
+
+so that P(some head turns up) = 1 — P(no head ever) = 1.
+
+(ii) Given a fixed sequence s of heads and tails of length k, we consider the sequence of tosses arranged
+in disjoint groups of consecutive outcomes, each group being of length k. There is probability 2—*
+that any given one of these is s, independently of the others. The event {one of the first n such groups
+is s} is a subset of the event {s occurs in the first nk tosses}. Hence (using the general properties of
+probability measures) we have that
+
+P(s turns up eventually) = im, P(s occurs in the first nk tosses)
+> lim P(s occurs as one of the first n groups)
+n> CO
+
+=1- jim, P(none of the first n groups is s)
+
+=1- lim (1—27*)” =1.
+n> CO
+
+3. Lay out the saucers in order, say as RRWWSS. The cups may be arranged in 6! ways, but since
+each pair of a given colour may be switched without changing the appearance, there are 6!— (2!1)3 =90
+distinct arrangements. By assumption these are equally likely. In how many such arrangements is
+no cup on a saucer of the same colour? The only acceptable arrangements in which cups of the
+same colour are paired off are WWSSRR and SSRRWW; by inspection, there are a further eight
+arrangements in which the first pair of cups is either SW or WS, the second pair is either RS or SR,
+
+and the third either RW or WR. Hence the required probability is 10/90 = 5:
+
+4. We prove this by induction on n, considering first the casen = 2. Certainly B = (AN B)U(B\ A)
+is a union of disjoint sets, so that P(B) = P(AN B) + P(B \ A). Similarly AU B = AU (B\ A), and
+sO
+
+P(AU B) = P(A) + P(B \ A) = P(A) + {P(B) — P(AN B)}.
+
+Hence the result is true for n = 2. Let m > 2 and suppose that the result is true for n < m. Then it is
+true for pairs of events, so that
+
+m+1 m m
+P( U Ai) = P(U Ai) + P(Am+1) - Pf (Ua:) n Amat}
+1 1 1
+= P(U Ai) +P(Am41) -»{ Ui 0 Ame)
+1
+
+1
+
+Using the induction hypothesis, we may expand the two relevant terms on the right-hand side to obtain
+the result.
+
+136
+

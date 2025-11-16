@@ -1,0 +1,66 @@
+Problems Exercises [11.8.1]-[11.8.7]
+
+11.8 Problems
+
+1. Finite waiting room. Consider M(A)/M(j1)/k with the constraint that arriving customers who
+see N customers in the line ahead of them leave and never return. Find the stationary distribution of
+queue length for the cases k = 1 and k = 2.
+
+2. Baulking. Consider M(A)/M(j2)/1 with the constraint that if an arriving customer sees n customers
+
+in the line ahead of him, he joins the queue with probability p(n) and otherwise leaves in disgust.
+
+(a) Find the stationary distribution of queue length if p(m) = (vn + 17),
+
+(b) Find the stationary distribution 2 of queue length if p(n) = 2~”, and show that the probability
+that an arriving customer joins the queue (in equilibrium) is (1 — 7)/A.
+
+3. Series. Ina Moscow supermarket customers queue at the cash desk to pay for the goods they want;
+then they proceed to a second line where they wait for the goods in question. If customers arrive in the
+shop like a Poisson process with parameter A and all service times are independent and exponentially
+distributed, parameter jz; at the first desk and j2 at the second, find the stationary distributions of
+queue lengths, when they exist, and show that, at any given time, the two queue lengths are independent
+in equilibrium.
+
+4. Batch (or bulk) service. Consider M/G/1, with the modification that the server may serve up to m
+customers simultaneously. If the queue length is less than m at the beginning of a service period then she
+serves everybody waiting at that time. Find a formula which is satisfied by the probability generating
+function of the stationary distribution of queue length at the times of departures, and evaluate this
+generating function explicitly in the case when m = 2 and service times are exponentially distributed.
+
+5. Consider M(A)/M(j1)/1 where 4 < ys. Find the moment generating function of the length B of a
+
+typical busy period, and show that E(B) = (yu — aw} and var(B) = (A+ p)/(u —- )3. Show that
+the density function of B is
+
+af [A
+fp@) = EIR Ow (2x/Au) forx > 0
+
+where J is a modified Bessel function.
+
+6. Consider M(A)/G/1 in equilibrium. Obtain an expression for the mean queue length at departure
+times. Show that the mean waiting time in equilibrium of an arriving customer is } AE(S?) /U—-p)
+where S is a typical service time and p = AE(S).
+
+Amongst all possible service-time distributions with given mean, find the one for which the mean
+waiting time is a minimum.
+7. Let W; be the time which a customer would have to wait ina M(A)/G/1 queue if he were to arrive
+at time t. Show that the distribution function F(x; t) = P(W; < x) satisfies
+
+OF OF
+at ax
+where S is a typical service time, independent of W;.
+
+Suppose that F(x, t) > H(x) for all x as t > ov, where Z is a distribution function satisfying
+0=h-\AH+AP(U +S <x) for x > 0, where U is independent of S with distribution function H,
+and h is the density function of H on (0, 00). Show that the moment generating function My of U
+satisfies
+
+(1 — p)é
+
+Mu (0) = 63M)
+
+where p is the traffic intensity. You may assume that P(S = 0) = 0.
+
+115
+

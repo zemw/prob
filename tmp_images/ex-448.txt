@@ -1,0 +1,36 @@
+This is a revised, updated and greatly expanded version of the authors’ Probability
+and Random Processes: Problems and Solutions, tirst published in 1992. The 1000+
+kercises contained within are not merely drill problems but have been chosen to
+illustrate the concepts, illuminate the subject and both inform and entertain the
+student. A broad range of subjects is covered, including: elementary aspects of
+probability and random variables; sampling; Markov chains; convergence; Station
+ary processes; renewals; queues; martingales; diffusion; mathematical finance and
+the Black-Scholes model. A bibliography and extensive index conclude the volume
+
+This text is intended to serye students as a companion for elementary, intermedi-
+ate or advanced courses in probability and random processes. It will also be useful
+for anyone needing a source for large numbers of problems in these areas, In par
+ticular this text acts as a companion to the authors’ Probability and Random Processe:
+Third Edition (OUP, 2001).
+
+A wealth of intcresting teaching material at all levels
+PA. L. Embrpwhts Shorr Book Ret itwy
+
+ALSO PUBLISHED BY OXFORD UNIVERSITY PRESS
+
+Probability: An Introduction
+Geoffrey Grimmett and Dominic Welsh
+Codes and Cryptography
+
+Dominic Welsh
+
+Introduction to Algebra
+
+Peter J, Cameron
+
+OXFORD
+
+UNIVERSITY PRESS
+
+www.oup.com
+

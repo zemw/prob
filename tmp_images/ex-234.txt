@@ -1,0 +1,66 @@
+Problems Solutions [4.14.49]-[4.14.51]
+
+Thus,
+P(Z > z) =P(X > [z}+2)+ P(X = lz] 41, ¥ < lz] +1-2z)
+—[zJ—-2 +1-
+= ee eee ert EE ah owe,
+l-—e7 e-1
+
+49. (a) Y has density function e~ for y > 0, and X has density function fy (x) = ae~® for x > 0.
+Now Y > 5(X — a)” if and only if
+
+ze 2 2 _ly2
+
+~ax € / [2 _
+
+ae eX fF cf =e 2%,
+a Va 1
+
+1,2
+which is to say that aVfy(X) < f(X), where a = a 1e2% /2/n. Recalling the argument of
+Example (4.11.5), we conclude that, conditional on this event occurring, X has density function /.
+
+(b) The number of rejections is geometrically distributed with mean a—', so the optimal value of a is
+that which minimizes ae 3” /n/2, that is, ¢ = 1.
+(c) Setting
+z= { +X with probability 4 5
+—-X with probability 4 5
+we obtain a random variable Z with the N(0, 1) distribution.
+
+1
+50. (a) E(X) -[ Vl-uedu=n/4.
+
+4 conditional on Y > 5(X —a)?,
+
+1
+(b) E(Y) = = [ 2” sin 6 do = 2/n.
+
+51. You are asked to calculate the mean distance of a randomly chosen pebble from the nearest
+collection point. Running through the cases, where we suppose the circle has radius a and we write
+P for the position of the pebble,
+
+25
+)) E[OP| = _ aan r 2 ar do = 24
+ma
+2 ta 2a cos @ 32a
+(ii) E|AP| = —5 "| r? dr do = ——
+ma on
+qn asec 2a cos
+(iii) E(|AP| A |BP|) = 41) I r? dr dO ah [ r? dr ao]
+47
+4a
+=— log(1 — x 1.13.
+ue (16 tat logit + V5) = 2 > x
+(iv)
+
+6 i x 50 2a cos
+E({AP| A [BP] A |CP]) = "| f [ r? dr dO + |, [ r? dr ao}
+maz | Jo 0 zx JO
+where x =a sin(47) cosec( $7 —6)
+2a 5m 1 Xu 5m
+-={/ -3/3 cosec? (F +0) ao+ 8 cos? 6 dé
+x\Jo 8 3 4Q
+
+2a { 16 33 | 3 2a
+= Tse > ae 67.
+at ait 6 we | 3X0

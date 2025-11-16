@@ -1,0 +1,63 @@
+[4.14.35]-[4.14.42] Exercises Continuous random variables
+
+are independent and uniformly distributed on {0, 1]. This is equivalent to Problem (4.14.33). Why?
+
+35. Secretary/marriage problem. You are permitted to inspect the n prizes at a féte in a given order,
+at each stage either rejecting or accepting the prize under consideration. There is no recall, in the sense
+that no rejected prize may be accepted later. It may be assumed that, given complete information, the
+prizes may be ranked in a strict order of preference, and that the order of presentation is independent
+of this ranking. Find the strategy which maximizes the probability of accepting the best prize, and
+describe its behaviour when n is large.
+
+36. Fisher’s spherical distribution. Let R? = X24 Y¥2+4 Z2 where X , Y, Z are independent normal
+random variables with means i, jz, v, and common variance a”, where (A, #,v”) 4 (0, 0,0). Show
+that the conditional density of the point (X, Y, Z) given R = r, when expressed in spherical polar
+coordinates relative to an axis in the direction e = (A, yz, v), is of the form
+
+£69) = aetone sin, 0<60<2,0<¢<2z,
+where a = rje|.
+37. Let @ be the N(O, 1) density function, and define the functions H,, n > 0, by Ayo = 1, and
+(-1)" Hyd = o™, the nth derivative of ¢. Show that:
+(a) Hy(x) is a polynomial of degree n having leading term x”, and
+
+ifm An,
+ifm =n.
+
+[. Am (x) An (xox) dx = { 0
+-o% n!
+
+le ¢) th
+(b) y Hn (x) = exp(tx — 31).
+
+38. Lancaster’s theorem. Let X and Y have a standard bivariate normal distribution with zero
+means, unit variances, and correlation coefficient o, and suppose U = u(X) and V = v(Y) have finite
+variances. Show that |o(U, V)| < |o|. [Hint: Use Problem (4.14.37) to expand the functions u and
+v. You may assume that u and v lie in the linear span of the Ay.)
+
+39. Let X (1)> X(2).-+- » X(n) be the order statistics of n independent random variables, uniform on
+[0, 1]. Show that:
+ra—st+]1)
+(n+1)2(n +2)
+40. (a) Let X, Y, Z be independent N(O, 1) variables, and set R = VX 24 y¥24 72. Show that
+x? / R? has a beta distribution with parameters 4 and 1, and is independent of R?,
+
+(b) Let X, Y, Z be independent and uniform on [—1, 1] and set R = X24 ¥2+4 Z2. Find the
+density of X 2/R2 given that R? <1.
+
+r
+(a) E(Xq@)) = maT’ (b) cov(X(7), X(s)) = forr <s.
+
+41. Let ¢ and ® be the standard normal density and distribution functions. Show that:
+
+(a) P@&) =1— O(—x),
+
+(b) f() = 26(x) Px), —00 < x < ov, is the density function of some random variable (denoted
+by Y), and that |Y| has density function 2¢.
+
+(c) Let X be astandard normal random variable independent of Y, anddefine Z = (X-+A|Y|)/V/1 +22.
+Write down the joint density of Z and |Y|, and deduce that Z has density function /.
+
+42. The six coordinates (X;, Y;), 1 <i < 3, of three points A, B, C in the plane are independent
+N(O, 1). Show that the the probability that C lies inside the circle with diameter AB is i
+
+44

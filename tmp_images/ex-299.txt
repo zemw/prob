@@ -1,0 +1,56 @@
+[6.7.3]-[6.8.1] Solutions Markov chains
+3. We have that 7 = G(n). In this case G(s) = (V1 — ps), and therefore 7 = q/p. Hence
+
+Pate" — 4" ~ p(sq/p)(p"" — a")
+q prt! — grt! — p(sq/p)(p" — 4")
+_ plq” — p" — qs(q""" — p""")}
+
+~ grt _ peti — qs(q" — p")
+
+1
+—Gp(sn) =
+n
+
+which is Gp(s) with p and g interchanged.
+4. (a) Using the fact that var(X | X > 0) > 0,
+
+E(X2) = E(X? | X > 0)P(X > 0) > E(X | X > 0)*P(X > 0) = E(X)E(X | X > 0).
+
+(b) Hence
+n E(Zn) ar y2
+E(Zn/u™ | Zn > 0) < ME(Zn) =E(W,)
+
+where W, = Z,/E(Zn). By an easy calculation (see Lemma (5.4.2)),
+
+2 l1—un7? 2 2
+Ew?) = 2 Mats ~— +12 —P-
+we — pb ue — pe p-@q
+where o? = var(Z1) = p/q.
+(c) Doing the calculation exactly,
+E(Zn/u") 1 1
+
+E(Zn/pn” | Zn > 0) =
+
+= >
+P(Zn > 0) 1 -—G,(0) 1-7
+
+where 7 = P(ultimate extinction) = g/p.
+
+6.8 Solutions. Birth processes and the Poisson process
+1. Let F and W be the incoming Poisson processes, and let N(t) = F(t)+-W(t). Certainly N(0) = 0
+and N is non-decreasing. Arrivals of flies during [0, s] are independent of arrivals during (s, 7], if
+s < t; similarly for wasps. Therefore the aggregated arrival process during [0, s] is independent of
+the aggregated process during (s, t]. Now
+P(N(E +h) =n4+1|N(@) =n) =P(AAB)
+where
+A = {one fly arrives during (t,t +h]}, B = {one wasp arrives during (t, t + AJ}.
+We have that
+
+P(A A B) = P(A) + P(B) — P(ANB)
+= Ah + ph — (AR)(uh) + o(h) = (A+ wh + o(h).
+
+Finally
+P(N(t +h) >n+1|N(@) =n) < P(ANB)+P(CUD),
+
+290
+

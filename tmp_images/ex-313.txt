@@ -1,0 +1,62 @@
+[6.15.1]-[6.15.6] Solutions Markov chains
+
+6.15 Solutions to problems
+
+1. (a) The state 4 is absorbing. The state 3 communicates with 4, and is therefore transient. The set
+{1, 2} is finite, closed, and aperiodic, and hence ergodic. We have that f34(7) = qr! J so that
+faa = Dn fag(n) = §.
+
+(b) The chain is irreducible with period 2. All states are non-null persistent. Solve the equation
+x = 7P to find the stationary distribution x = (2. <: > z) whence the mean recurrence times are
+g 16 IS, 8, in order.
+
+2. (a) Let P be the transition matrix, assumed to be doubly stochastic. Then
+
+> pi) = 2 > pik - Dy = o(S Pik (n — ») Pkj
+ik k i
+
+t
+
+whence, by induction, the -step transition matrix P” is doubly stochastic for all n > 1.
+
+If j is not non-null persistent, then p;;(n) > Oasn — oo, foralli, implying that >>; pi; (2) > 0,
+a contradiction. Therefore all states are non-null persistent.
+
+If in addition the chain is irreducible and aperiodic then p;;(n) —> 2;, where m is the unique
+
+stationary distribution. However, it is easy to check that r = (N~!, N—!,..., N7!) is a stationary
+distribution if P is doubly stochastic.
+
+(b) Suppose the chain is persistent. In this case there exists a positive root of the equation x = xP, this
+root being unique up to a multiplicative constant (see Theorem (6.4.6) and the forthcoming Problem
+(7)). Since the transition matrix is doubly stochastic, we may take x = 1, the vector of 1’s. By the
+above uniqueness of x, there can exist no stationary distribution, and therefore the chain is null. We
+deduce that the chain cannot be non-null persistent.
+
+3. By the Chapman—Kolmogorov equations,
+Pulm +r+n)> py) pM pi), m,r,n > 0.
+Choose two states i and j, and pick m and n such that a = pj; (m)p;;(n) > 0. Then
+Dig(m +r +n) > aps; (r).
+
+Set r = 0 to find that p;;(m +n) > 0, and sod(@) | (m+n). Ifd(@i) {r then pjj(m +r +n) =0, so
+that p;;(r) = 0; therefore d@) | d(j). Similarly d(j) | d(@), giving that d@) = d(j).
+4. (a) See the solution to Exercise (6.3.9a).
+(b) Let i, j, 7, s € S, and choose N(i, r) and N(j, s) according to part (a). Then
+P(Zn = (7,5) | Zo = @, J) = Pir ™)pjs(n) > 0
+
+ifn > max{N(i,r), N(j, s)}, so that the chain is irreducible and aperiodic.
+(c) Suppose S = {1, 2} and
+_f0 1
+P= (} 0)
+
+In this case {{1, 1}, {2, 2}} and {{1, 2}, {2, 1}} are closed sets of states for the bivariate chain.
+
+5. Clearly P(N = 0) = 1 — fi;, while, by conditioning on the time of the nth visit to 7, we
+have that P(N > n+1|N =n) = fj; forn > 1, whence the answer is immediate. Now
+P(N = co) = 1 — R29 P(N =n) which equals 1 if and only if fj; = fj; = 1.
+
+6 Fixi # j and let m = min{n : pjj(n) > 0}. If Xo =i and X» = j then there can be no
+intermediate visit to i (with probability one), since such a visit would contradict the minimality of m.
+
+304
+

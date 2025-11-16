@@ -1,0 +1,65 @@
+[6.15.9]-[6.15.9] Solutions Markov chains
+
+where f; is the probability that the first return of X to its persistent starting point s takes place at time
+i. Certainly ug = 1.
+
+Conversely, suppose u is a renewal sequence with respect to the collection (fi, : m > 1). Let X
+be a Markov chain on the state space § = {0, 1, 2, ...} with transition matrix
+
+jo {Pozitaipeled if j =i +1,
+PU \ 1 _pr >i42|T>it)) iff =0,
+
+where T is a random variable having mass function fy, = P(T = m). With Xo = 0, the chance that
+the first return to O takes place at time n is
+
+n—-1
+
+P(X = 0, Il X; #0 | Xo = 0) = P0O1P12°** Pn—2,n—1Pn—1,0
+1
+
+G+ ») "=! GG 41)
+={1-
+( cm J Ua
+
+=G(n)-Ga+)= fn
+
+where G(m) = P(T > m) = -7°_, fn. Now un = P(Xy = 0| Xo = 0) satisfies
+n
+vo = 1, tn = - fitn-i forn > 1,
+i=l
+
+whence vy = uy, for all n.
+
+(b) Let X and Y be the two Markov chains which are associated (respectively) with u and v in the
+above sense. We shall assume that X and Y are independent. The product (u;vp : n > 1) is now the
+renewal sequence associated with the bivariate Markov chain (Xn, Yn).
+
+9. Of the first 2n steps, let there be i rightwards, 7 upwards, and k inwards. Now X2, = 0 if
+and only if there are also i leftwards, 7 downwards, and k outwards. The number of such possible
+combinations is (2n)!/{(i! j! k!)*}, and each such combination has probability (2)?¢+/+) = (4)2”.
+The first equality follows, and the second is immediate.
+
+Now
+
+1\7" (2n n!
+© Pn =0) < (5) (*)u DRI jE
+i+j+k=n
+
+where
+
+M = max {or i,j,k > 0, i+ j+k=ah.
+It is not difficult to see that the maximum M is attained when i, j, and k are all closest to 5n, so that
+
+n!
+< —
+~ 3(L an]!
+
+Furthermore the summation in () equals 1, since the summand is the probability that, in allocating n
+balls randomly to three urns, the urns contain respectively i, j, and k balls. It follows that
+
+(2n)!
+
+P(Xy, = 0) < —
+Man = 9) = mnt inlys
+
+306

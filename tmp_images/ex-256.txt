@@ -1,0 +1,72 @@
+Inversion and continuity theorems Solutions [5.8.7]-[5.9.2]
+
+Let Z = X — w. It is easy to check that the vector Z has joint characteristic function ¢7(t) =
+1
+eT atVe which we recognize by (5.8.6) as being that of the (0, V) distribution.
+
+1,2 1,2
+7. We have that E(Z) = 0, E(Z”) = 1, and E(e') = E{E(e!@ | U, V)} = E(e2") = 2°.
+If X and Y have the bivariate normal distribution with correlation o, then the random variable Z =
+
+(UX + VY)//U2 + 2pUV + V? is N(O, 1).
+
+8. By definition, E(e!!*) = E(cos(tX)) + iE(sin(tX)). By integrating by parts,
+
+ft (tx)ae** d x x yre** g Mt
+cos(tx)Ae x=—=s—, sin(tx)Ae x= —s—,
+0 2412? Jo +P
+and
+
++iat A
+
+42422 — Ait
+
+9. (a) We have that e~*! = e-* Ip>0} + e* [ty <0}, whence the required characteristic function is
+
+1 1 1 1
+n= = .
+o@) 5 (ati) 1422
+
+(b) By a similar argument applied to the (1, 2) distribution, we have in this case that
+
+1 1 1 1—??
+tH=x = .
+0O= 35 (a ain? * asim) a+
+10. Suppose X has moment generating function M(t). The proposed equation gives
+1 t
+2 1 2
+
+M(t) = Mut) du = ; Mv) dv.
+
+0 0
+
+Differentiate to obtain tM’ + M = M2, with solution M(t) = A/(A +1). Thus the exponential
+distribution has the stated property.
+
+11. We have that oo,
+ox,y(s,t) =E(eh* 4") = bc x 4:7 (1).
+Now sX +tY is N(O, sta? 4 2stoto + 12) where o2 = var(X), r= var(Y), e = corr(X, Y), and
+therefore
+ox,y(s,t) = exp{—4(62o? 4 2statp + 1717)},
+
+The fact that @y y may be expressed in terms of the characteristic function of a single normal variable
+is sometimes referred to as the Cramér—Wold device.
+
+5.9 Solutions. Inversion and continuity theorems
+
+1. Clearly, for 0 < y < 1, P(Xn < ny) =n7!|ny| > yasn > oo.
+
+2. (a) The derivative of F, is f,(x) = 1 —cos(2nrx), for 0 < x < 1. It is easy to see that f, is
+non-negative and fe Fn(x) dx = 1. Therefore F;, is a distribution function with density function fy.
+
+(b) Asn > ox,
+1
+
+—— > 0,
+= Onn
+
+sin(2n7x) <
+
+2ni
+
+247

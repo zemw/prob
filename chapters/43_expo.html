@@ -485,7 +485,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/40_contd.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Continuous vs Discrete</span></span></a>
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Definition revisited</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -497,13 +497,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/42_gauss.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Special integrals</span></span></a>
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Special integrals*</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/42_sumrvs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Sum of random variables</span></span></a>
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Sum of RVs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -515,7 +515,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/42_mvn.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Multivariate normal</span></span></a>
+ <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Multivariate normal*</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -533,19 +533,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/45_beta.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Beta distribution</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/46_2rvs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Multivariate problems</span></span></a>
+ <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Beta distribution*</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/47_trans.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Transformation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Transformation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/46_2rvs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Additional problems</span></span></a>
   </div>
 </li>
       </ul>
@@ -627,14 +627,14 @@ window.Quarto = {
 </header>
 
 
-<p>Imagine you are a shop owner that waits for your next customer. The customers arrive randomly, with no preference for any specific time interval. What interests us is the waiting time until the next customer arrives. Since the customers arrives randomly, the likelihood of it coming in the next moment is the same whether you’ve been waiting for one minute or ten minutes. In other words, the waiting time between events that occur randomly and independently over time. The exponential distribution is the mathematical model that best describes such scenarios.</p>
-<p>To model the waiting time, let <span class="math inline">\(X\)</span> represent the time until the next event. A crucial feature of this process is that the waiting time has no “memory.” That is, no matter how long you’ve already waited, the probability of waiting an additional amount of time is the same. Mathematically, this memoryless property is expressed as: <span class="math display">\[P(X\geq s+t\mid X\geq s)=P(X\geq t),\quad\text{for all }s,t\geq0.\]</span> The conditional probability can be rewritten using the definition of conditional probabilities: <span class="math display">\[P(X\geq s+t\mid X\geq s)=\frac{P(X\geq s+t)}{P(X\geq s)}.\]</span> Thus, the memoryless property implies: <span class="math display">\[\frac{P(X\geq s+t)}{P(X\geq s)}=P(X\geq t).\]</span> Let the survival function <span class="math inline">\(S(x)\)</span> represent <span class="math inline">\(P(X\geq x)\)</span> . Substituting <span class="math inline">\(S(x)\)</span> into the equation gives: <span class="math display">\[\frac{S(s+t)}{S(s)}=S(t).\]</span> This reminds us of the exponential function. In fact, the only continuous and non-negative solution to this equation is: <span class="math display">\[S(x)=e^{-\lambda x},\quad\lambda&gt;0,\]</span> where <span class="math inline">\(\lambda\)</span> is a positive constant. This solution represents the probability that the waiting time exceeds <span class="math inline">\(x\)</span> , and <span class="math inline">\(\lambda\)</span> determines how quickly the probability decreases over time.</p>
+<p>Imagine you are a shop owner that waits for your next customer. The customers arrive randomly. What interests us is the waiting time until the next customer arrives.</p>
+<p>Let <span class="math inline">\(X\)</span> represent the waiting time. Since the customers arrives randomly, the likelihood of it coming in the next moment is the same whether you’ve been waiting for one minute or ten minutes. In other words, the probability of waiting another <span class="math inline">\(t\)</span> minutes is the same no matter how long you’ve already waited. Therefore, <span class="math display">\[P(X\geq s+t\mid X\geq s)=P(X\geq t),\quad\forall s,t\geq0.\]</span> The conditional probability can be rewritten using the definition of conditional probabilities: <span class="math display">\[P(X\geq s+t\mid X\geq s)=\frac{P(X\geq s+t)}{P(X\geq s)}.\]</span> Thus, the memoryless property implies: <span class="math display">\[\frac{P(X\geq s+t)}{P(X\geq s)}=P(X\geq t).\]</span> Let the survival function <span class="math inline">\(S(x)\)</span> represent <span class="math inline">\(P(X\geq x)\)</span> . Substituting <span class="math inline">\(S(x)\)</span> into the equation gives: <span class="math display">\[\frac{S(s+t)}{S(s)}=S(t).\]</span> This reminds us of the exponential function. In fact, the only continuous and non-negative solution to this equation is: <span class="math display">\[S(x)=e^{-\lambda x},\quad\lambda&gt;0,\]</span> where <span class="math inline">\(\lambda\)</span> is a positive constant. This solution represents the probability that the waiting time exceeds <span class="math inline">\(x\)</span> , and <span class="math inline">\(\lambda\)</span> determines how quickly the probability decreases over time.</p>
 <p>The CDF of <span class="math inline">\(X\)</span> is exactly the opposite of <span class="math inline">\(S(x)\)</span>: <span class="math display">\[F(x)=1-S(x)=1-e^{-\lambda x}.\]</span> Take derivative to get the PDF: <span class="math display">\[f(x)=F'(x)=\lambda e^{-\lambda x}.\]</span></p>
 <div id="def-expo" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 49.1 (Exponential distribution)</strong></span> A random variable <span class="math inline">\(X\)</span> is said to have the Exponential distribution with parameter <span class="math inline">\(\lambda\)</span> if its PDF is <span class="math display">\[f(x)=\lambda e^{-\lambda x},\qquad x&gt;0.\]</span></p>
-<p>We denote this as <span class="math inline">\(X\sim\textrm{Expo}(\lambda).\)</span><span class="math inline">\(\lambda\)</span> is interpreted as the “rate”, i.e.&nbsp;number of events per unit of time.</p>
+<p>We denote this as <span class="math inline">\(X\sim\textrm{Exp}(\lambda).\)</span><span class="math inline">\(\lambda\)</span> is interpreted as the “rate”, i.e.&nbsp;number of events per unit of time.</p>
 </div>
-<p>To compute the expectation and variance, we first standardize the exponential distribution. Let <span class="math inline">\(Y=\lambda X\)</span>, then <span class="math inline">\(Y\sim\textrm{Expo}(1)\)</span>, because <span class="math display">\[P(Y\leq y)=P(X\leq y/\lambda)=1-e^{-y}.\]</span> It follows that, <span class="math display">\[\begin{aligned}
+<p>To compute the expectation and variance, we first standardize the exponential distribution. Let <span class="math inline">\(Y=\lambda X\)</span>, then <span class="math inline">\(Y\sim\textrm{Exp}(1)\)</span>, because <span class="math display">\[P(Y\leq y)=P(X\leq y/\lambda)=1-e^{-y}.\]</span> It follows that, <span class="math display">\[\begin{aligned}
 E(Y) &amp; =\int_{0}^{\infty}ye^{-y}dy=\left[-ye^{-y}\right]_{0}^{\infty}+\int_{0}^{\infty}e^{-y}dy=1;\\
 Var(Y) &amp; =E(Y^{2})-(EY)^{2}=\int_{0}^{\infty}y^{2}e^{-y}dy-1=1.\end{aligned}\]</span> For <span class="math inline">\(X=Y/\lambda\)</span>, we have <span class="math inline">\(E(X)=\frac{1}{\lambda}\)</span>, <span class="math inline">\(Var(X)=\frac{1}{\lambda^{2}}\)</span>.</p>
 <div id="thm-memoryless" class="theorem">
@@ -643,57 +643,50 @@ Var(Y) &amp; =E(Y^{2})-(EY)^{2}=\int_{0}^{\infty}y^{2}e^{-y}dy-1=1.\end{aligned}
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>For <span class="math inline">\(t&gt;0\)</span> we have <span class="math display">\[P(X\geq t)=\int_{t}^{\infty}\lambda e^{-\lambda x}dx=e^{-\lambda t}.\]</span> Hence for each <span class="math inline">\(t&gt;0\)</span> and each <span class="math inline">\(h&gt;0\)</span>, <span class="math display">\[P(X\geq t+h|X\geq t)=\frac{P(X\geq t+h)}{P(X\geq t)}=\frac{e^{-\lambda(t+h)}}{e^{-\lambda t}}=e^{-\lambda h}=P(X\geq h).\]</span>&nbsp;</p>
 </div>
-<p>What are the implications of the memoryless property? If human lifetimes were Exponential, then conditional on having survived to the age of 80, your remaining lifetime would have the same distribution as that of a newborn baby! Clearly, the memoryless property is not an appropriate description for human lifetimes.</p>
 <p>The memoryless property is a very special property of the Exponential distribution. In fact, the Exponential is the only memoryless continuous distribution (with support <span class="math inline">\((0,\infty)\)</span>); and Geometric distribution is the only memoryless discrete distribution (with support <span class="math inline">\(0,1,\dots\)</span>).</p>
-<div id="exm-waiting-time" class="theorem example">
-<p><span class="theorem-title"><strong>Example 49.1 (Waiting time)</strong></span> We try to model the waiting time at a bus station. Suppose the bus arrives at random time but on average there will be one bus per 10 minutes. You arrive at the bus stop at a random time, not knowing how long ago the previous bus came. What is the distribution of your waiting time for the next bus? What is the mean waiting time? What is the median waiting time?</p>
-</div>
-<div class="proof solution">
-<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(X\)</span> be the waiting time and we know it is an Exponential distribution. Since <span class="math inline">\(E(X)=1/\lambda=10\)</span>, the parameter <span class="math inline">\(\lambda=1/10\)</span>. Thus <span class="math inline">\(X\sim\textrm{Expo}(0.1)\)</span>. By the memoryless property, how much longer the next bus will take to arrive is independent of how long ago the previous bus arrived. The average waiting time is always 10 minutes.</p>
-<p>The CDF of <span class="math inline">\(X\)</span> is: <span class="math inline">\(F(x)=1-e^{-\lambda x}\)</span>. The median <span class="math inline">\(m\)</span> satisfies <span class="math inline">\(F(m) = 1/2\)</span>. Thus, <span class="math inline">\(m= \log(2)/\lambda \approx 6.9\)</span> minutes. So the typical waiting experienced by most passengers is less than 10 minutes.</p>
-</div>
 <div id="thm-expo" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 49.2 (Poisson-Exponential connection)</strong></span> Let <span class="math inline">\(T\)</span> be the time between two consecutive events in Poisson process <span class="math inline">\(\text{Pois}(\lambda t)\)</span>. Then <span class="math inline">\(T\)</span> follows Exponential distribution <span class="math inline">\(T\sim\text{Expo}(\lambda)\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 49.2 (Poisson-Exponential connection)</strong></span> Let <span class="math inline">\(T\)</span> be the time between two consecutive events in Poisson process <span class="math inline">\(\text{Pois}(\lambda t)\)</span>. Then <span class="math inline">\(T\)</span> follows Exponential distribution <span class="math inline">\(T\sim\text{Exp}(\lambda)\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>The waiting time <span class="math inline">\(T&gt;t\)</span> is equivalent to no event occurred during period <span class="math inline">\(t\)</span>. Therefore, <span class="math display">\[P(T&gt;t)=P(N_{t}=0)=e^{-\lambda t}\frac{(\lambda t)^{0}}{0!}=e^{-\lambda t}\]</span> where <span class="math inline">\(N_{t}\)</span> is the number of events occurred in <span class="math inline">\([0,t]\)</span>, which follows a Poisson distribution. The CDF of <span class="math inline">\(T\)</span> is</p>
 <p><span class="math display">\[F(t)=1-P(T&gt;t)=1-e^{-\lambda t}\]</span></p>
-<p>The PDF of <span class="math inline">\(T\)</span> is <span class="math display">\[f(t)=F'(t)=\lambda e^{-\lambda t}\]</span> This indicates <span class="math inline">\(T\sim \text{Expo}(\lambda)\)</span>.</p>
+<p>The PDF of <span class="math inline">\(T\)</span> is <span class="math display">\[f(t)=F'(t)=\lambda e^{-\lambda t}\]</span> This indicates <span class="math inline">\(T\sim \text{Exp}(\lambda)\)</span>.</p>
+</div>
+<div id="exm-waiting-time" class="theorem example">
+<p><span class="theorem-title"><strong>Example 49.1 (Bus arrivals)</strong></span> We try to model the waiting time at a bus station. Suppose the bus arrives at random time but on average there will be one bus per 10 minutes. You arrive at the bus stop at a random time, not knowing how long ago the previous bus came. What is the distribution of your waiting time for the next bus? What is the mean waiting time? What is the median waiting time?</p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>Solution</em>. </span>The bus arrivals in a period of time is best modeled by a Poisson distribution. Let <span class="math inline">\(X\)</span> be the waiting time and we know it is an Exponential distribution. Since <span class="math inline">\(E(X)=1/\lambda=10\)</span>, <span class="math inline">\(X\sim\textrm{Exp}(1/10)\)</span>. Thus, The average waiting time is always 10 minutes.</p>
+<p>The CDF of <span class="math inline">\(X\)</span> is <span class="math inline">\(F(x)=1-e^{-\lambda x}\)</span>. The median <span class="math inline">\(m\)</span> satisfies <span class="math inline">\(F(m) = 1/2\)</span>. Thus, <span class="math inline">\(m= \log(2)/\lambda \approx 6.9\)</span> minutes. So the typical waiting experienced by most passengers is less than 10 minutes.</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulate random arrivals and inter-arrival time</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>T <span class="ot">&lt;-</span> <span class="dv">1000</span>  <span class="co"># Total time horizon</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>rate <span class="ot">&lt;-</span> <span class="dv">1</span>  <span class="co"># rate of occurrence per unit time</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Total number of arrivals</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>n_arrivals <span class="ot">&lt;-</span> <span class="fu">rpois</span>(<span class="dv">1</span>, <span class="at">lambda =</span> rate <span class="sc">*</span> T)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Time of each arrivals</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>t_arrivals <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">runif</span>(n_arrivals, <span class="at">min =</span> <span class="dv">0</span>, <span class="at">max =</span> T))</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulate random arrivals and inter-arrival time</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">600</span>  <span class="co"># total simulation time</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> .<span class="dv">1</span>   <span class="co"># prob of occurrence per unit time</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">0</span>)  </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># I[t] = 1 if an event occurs in time t </span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>I <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">*</span> (<span class="fu">runif</span>(N) <span class="sc">&lt;</span> p)  </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the timeline of arrivals</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(t_arrivals[<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>], <span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">20</span>), <span class="at">type =</span> <span class="st">"h"</span>, <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">ann =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the random occurrence</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span>N, I, <span class="at">type =</span> <span class="st">"h"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># inter-arrival time</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>T <span class="ot">&lt;-</span> <span class="fu">diff</span>( (<span class="dv">1</span><span class="sc">:</span>N)[I<span class="sc">==</span><span class="dv">1</span>] )</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># distribution if waiting time  </span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(T, <span class="at">prob=</span><span class="cn">TRUE</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Overlay the exponential function</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">exp</span>(<span class="sc">-</span>x<span class="sc">/</span><span class="dv">10</span>)<span class="sc">/</span><span class="dv">10</span>, <span class="at">col =</span> <span class="dv">2</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
 <p><img src="43_expo_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute inter-arrival time</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>inter_arrival_time <span class="ot">&lt;-</span> <span class="fu">diff</span>(t_arrivals)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the distribution of inter-arrival time</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(inter_arrival_time, <span class="at">prob =</span> <span class="cn">TRUE</span>, <span class="at">breaks =</span> <span class="dv">20</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Overlay the exponential function</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">exp</span>(<span class="sc">-</span>x), <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="43_expo_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1103,8 +1096,8 @@ Var(Y) &amp; =E(Y^{2})-(EY)^{2}=\int_{0}^{\infty}y^{2}e^{-y}dy-1=1.\end{aligned}
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/42_mvn.html" class="pagination-link" aria-label="Multivariate normal">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Multivariate normal</span></span>
+      <a href="../chapters/42_mvn.html" class="pagination-link" aria-label="Multivariate normal*">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Multivariate normal*</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

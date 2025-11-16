@@ -1,0 +1,65 @@
+(11.8.2]-[11.8.3] Solutions Queues
+
+Now let k = 2. The queue is a birth-death process with rates
+dX ifi <N, Bw ifi=1,
+= tps i= ups
+0 ifi>N, Qu ifi > 2.
+
+It is reversible in equilibrium, and its stationary distribution satisfies Aj;7; = 441741. We deduce
+that 7; = 2p'zo for 1 <i < N, where p = A/(2y) and
+
+N
+m- =1 + 5° 2p!.
+i=l
+
+2. The answer is obtainable in either case by following the usual method. It is shorter to use the fact
+that such processes are reversible in equilibrium.
+
+(a) The stationary distribution satisfies z,Ap(n) = 7414 forn > 0, whence zn = 9p" /n! where
+o =A/wp. Therefore my, = p"e7? /n!.
+
+(b) Similarly,
+n-1 1
+Tn = Tp” Il p(m) = mop"27 2"), n> 0,
+m=0
+where
+
+=1 Donde)
+mm => P"(3)
+=0
+
+At the instant of arrival of a potential customer, the probability g that she joins the queue is
+obtained by conditioning on its length:
+
+[o-e) oo _,_1 l [o-e) 1 1 1 ;
+q = Yi Pada = 19D pra BMD = DT DANY = m9 tg) =
+
+n=0 n=0 n=0
+
+3. First method. Let (Q1, Q2) be the queue-lengths, and suppose they are in equilibrium. Since
+Q) is a birth-death process, it is reversible, and we write Oj; (t) = Q)(-t). The sample paths of
+Q, have increasing jumps of size 1 at times of a Poisson process with intensity 4; these jumps mark
+arrivals at the cash desk. By reversibility, 01 has the same property; such increasing jumps for 01
+are decreasing jumps for Q1, and therefore the times of departures from the cash desk form a Poisson
+process with intensity 4. Using the same argument, the quantity Q(t) together with the departures
+prior to t have the same joint distribution as the quantity Q} (—t) together with all arrivals after —t.
+However 01 (—t) is independent of its subsequent arrivals, and therefore Q(t) is independent of its
+earlier departures.
+
+It follows that arrivals at the second desk are in the manner of a Poisson process with intensity
+A, and that Q(t) is independent of Q, (zt). Departures from the second desk form a Poisson process
+also.
+
+Hence, in equilibrium, Q; is M(A)/M(y1)/1 and Qo is M(A)/M(jz2)/1, and they are independent
+at any given time. Therefore their joint stationary distribution is
+
+mn = P(Q1(t) = m, Q2(t) =n) = (1 — pr) — pr) oF
+
+where pj = A/L;.-
+Second method. The pair (Q(t), Q2(t)) is a bivariate Markov chain. A stationary distribution
+(mn : m,n > 0) satisfies
+
+A+ uy + H2)tmn = Atm—1,n + M1 0m4+ijn—-1 + M2 n41> mn>l,
+
+388
+

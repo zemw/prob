@@ -1,0 +1,60 @@
+Problems Solutions [9.6.4}-{9.7.2]
+
+ont — s only. The joint distribution of X(t,), X (t2), ..., X (én) depends only on the common mean
+and the covariances c(¢;, t;). Now c(#;, tj) depends on t; — 4; only, whence X(t), X(t2), ..., X(tn)
+have the same joint distribution as X(s + f,), X(s + t2),...,X(s +t). Therefore X is strongly
+stationary.
+
+4. (a)Ifs,t > 0, we have from Problem (4.14.13) that
+E(X(s + 1)? | X(s)) = Xe? +1 — ett)’,
+whence
+cov(X(s)*, X(s +1)”) = E(X(s)*X(s +1)?) —1
+= E{X(sPE(X( +1)? | X(s)) $= 1
+= ¢(t)E(X(s)*) + (1 — c(t)? )E(X(s)*) — 1 = 2c(t)?
+
+by an elementary calculation.
+(b) Likewise cov(X(s)?, X(s + £)°) = 3G + 2c(t)*)e(t).
+
+9.7 Solutions to problems
+
+1. Itis easily seen that Y, = Xn + (a2 — B)X,_1 + BY,—1, whence the autocovariance function c
+of Y is given by
+1+a?— p?
+1 — p2
+e(k) = ; 5
+ikl! {* +a — B*)
+
+ifk =0,
+
+1 — p?
+
+Set Yat = 79 a; ¥,_; and find the a; for which it is the case that E{(¥,41 — Yn41)¥n—k} =0
+for k > 0. These equations yield
+
+ifk £0.
+
+[o@)
+ck+1)=Scajek-i), k>0,
+i=0
+
+which have solution a; = «(8 — a)! fori > 0.
+
+2. The autocorrelation functions of X and Y satisfy
+
+;
+oxpx(n) = oF » ajagpy(n +k — j).
+j,k=0
+
+Therefore
+
+2 [o,6) r
+os -i .
+of f(A) = xe > eink > ajay py(n +k — j)
+oo
+_%5 ajazel®-D* Se WOH D y(n $k = j)
+21 J
+
+= of |Gale™)|? fy (a).
+
+361
+

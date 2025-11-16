@@ -1,0 +1,61 @@
+Characteristic functions Solutions [5.6.1]-[5.7.2]
+
+5.6 Solutions. Expectation revisited
+
+1. Set a = E(X) to find that u(X) > u(EX) + A(X — EX) for some fixed 4. Take expectations to
+obtain the result.
+
+2. Certainly Z, = ant X; and Z = yaa |X;| are such that |Z,| < Z, and the result follows by
+dominated convergence.
+
+3. Apply Fatou’s lemma to the sequence {—X, : > 1} to find that
+
+(lim sup Xn) = -E(lim inf —Xn) > —liminf E(—Xn) = lim sup E(Xn).
+n->0oO
+
+noo
+4. Suppose that E|X"| < oo where r > 0. We have that, if x > 0,
+
+xPUX|>») < | u’dF(u)y>0 asx,
+[x,00)
+where F is the distribution function of |X|.
+
+Conversely suppose that x”P(|X{ > x) > O where r > 0, and letO0 < 5s < r. Now E|X*| =
+limy+oo fu us dF (u) and, by integration by parts,
+
+[ u' dF(u) = [-#' (1 - Fw)|e + [eX — F(u)) du.
+
+The first term on the right-hand side is negative. The integrand in the second term satisfies su®~!P(|X| >
+u) < sus—!.y-" for all large u. Therefore the integral is bounded uniformly in M, as required.
+
+5. Suppose first that, for all e > 0, there exists 6 = 8(€) > 0, such that E(|X|Z4) < ¢€ for all A
+satisfying P(A) < 6. Fix € > 0, and find x (> 0) such that P(|X| > x) < 5(€). Then, for y > x,
+
+x
+
+y x
+/ lu|dFy(u) < / lu|dFx(u) +E (\Xllyxi>x) < / luldFy(u) +e.
+x
+
+-y —x _
+Hence J, |u| dFy(u) converges as y —> 00, whence E|X| < 00.
+
+Conversely suppose that E|X| < oo. It follows that E (IXlZqx|>y}) —> Oas y > oo. Lete > 0,
+
+and find y such that E (|X|J,)x|>y}) < 5e. For any event A, [4 < Tange +Jp where B = {|X| > y}.
+Hence
+E(\X|14) < E(\X|Jange) + E(\X|Ip) < yP(A) + de.
+
+Writing 6 = €/(2y), we have that E(|X|I4) < € if P(A) < 6.
+
+5.7 Solutions. Characteristic functions
+1. Let X have the Cauchy distribution, with characteristic function ¢(s) = esl, Setting Y = X,
+we have that dy+y(t) = d(2t) = e 2ltl = dy(t)dy (t). However, X and ¥ are certainly dependent.
+2. (i) It is the case that Re{@(t)} = E(costX), so that, in the obvious notation,
+lo @] lo @]
+Re{1 — 6(2r)} = / {1 — cos(2tx)} dF (x) = 2 | {1 — cos(tx)}{1 + cos(tx)} dF (x)
+—OO —OO
+
+< af” {1 — cos(tx)} dF(x) = 4Re{1 — 6(t)}.
+
+241

@@ -1,0 +1,75 @@
+[13.3.5]-[13.3.10] Solutions Diffusion processes
+
+5. Fixt > 0. Suppose we are given W1(s), Wo(s), W3(s), for0 < s < t. By Pythagoras’s theorem,
+Rit+u)?=X : + x3 + x3 where the X; are independent N(W; (¢), «) variables. Using the result of
+Exercise (5.7.7), the conditional distribution of R(t + u)* (and hence of R(t + u) also) depends only
+on the value of the non-centrality parameter 9 = R(t) of the relevant non-central x” distribution.
+It follows that R satisfies the Markov property. This argument is valid for the n-dimensional Bessel
+process.
+
+6. By the spherical symmetry of the process, the conditional distribution of R(s +a) given R(s) = x
+is the same as that given W(s) = (x, 0, 0). Therefore, recalling the solution to Exercise (13.3.5),
+
+P(R(s +a) < y| R(s) =x)
+ux? +0? +0?
+
+1
+= . ——-sz5 CX dudvd
+cee rays? *P 2a ws
+
+y p?m pm 1 p* —2pxcosd+x*| 4
+~ Qnay3/2 ~ ind dd dod
+I o=0 - (2n.a)3/2 oo{ 2a p- sin dp
+
+-[° pix J(_ @-2\ (e+e) |
+— /2ta P 2a P 2a p>
+
+and the result follows by differentiating with respect to y.
+
+7. Continuous functions of continuous functions are continuous. The Markov property is preserved
+because g(-) is single-valued with a unique inverse.
+
+1,2
+8. (a) Since E(e7 ¥) = ¢2°", this is not a martingale.
+(b) This is a Wiener process (see Problem (13.12.1)), and is certainly a martingale.
+(c) With ¥; = o (W(s):0<s <1t) andt,u > 0,
+
+t+u
+
+t+u
+B{ e+ motu) - W(s)ds
+0
+
+t
+wi =¢+wHW) - [ Wis)ds — Wt) ds
+0 t
+
+t
+=tWi(t) - W(s)ds,
+0
+
+whence this is a martingale. [The integrability condition is easily verified.]
+
+9. (a) Withs < ft, S(t) = S(s) exp{a(t — 5) ++ b(W(t) — W(s))}. Now W(t) — W(s) is independent
+of {W(u) : 0 < u < s}, and the claim follows.
+(b) S(t) is clearly integrable and adapted to the filtration ¥ = (¥;) so that, for s < f,
+
+E(S(t) | Fs) = S(s)E(exp{a(t — s) + (Wt) — W(s))} | Fs) = Ss) expla(t — s) + 507 — s)},
+which equals S(s) if and only if a + 5b? = 0. In this case, E(S(t)) = E(S(0)) = 1.
+
+10. Either find the instantaneous mean and variance, and solve the forward equation, or argue directly
+as follows. With s < ft,
+
+P(S(t) < y| S(s) =x) = P(OW(t) < —at + log y| bW(s) = —as + logx).
+
+Now b(W(t) — W(s)) is independent of W(s) and is distributed as N (0, b2(t —s)), and we obtain on
+differentiating with respect to y that
+
+_ _ 2
+_ (log(y/x) — a(t - 5) ). ny > 0.
+
+1
+f@, y |s,x) = y an b2(t — 5) 5) exp ( 2b2(t —s)
+
+412
+

@@ -1,0 +1,58 @@
+Expectation Solutions [3.3.1]-[3.3.3]
+
+3.3 Solutions. Expectation
+
+1. (a) No!
+(b) Let X have mass function: f(—1) = 5: f()= $, f¢ fQ)= 5. Then
+4+2=
+9
+
+E(X)=-g+$4+$8=1=-$4+84+3 =E(1/%).
+2. (a) If you have already j distinct types of object, the probability that the next packet contains
+a different type is (c — j)/c, and the probability that it does not is j/c. Hence the number of days
+required has the geometric distribution with parameter (c — j)/c; this distribution has mean c/(c — j).
+(b) The time required to collect all the types is the sum of the successive times to collect each new
+
+type. The mean is therefore
+c-1
+
+j=0
+
+3. (a) Let Jj; be the indicator function of the event that players i and 7 throw the same number. Then
+6 2
+E(Vij)=PUj =YD=>0(b)=§ FFA.
+
+The total score of the group is S = }7;<; 1ij, 80
+
+B(S) = ) Ej) = :(; )
+
+i<j
+
+We claim that the family {J;; : i < j} is pairwise independent. The crucial calculation for this is
+as follows: ifi < j < k then
+
+6
+E(1j1jk) = PG, j, and k throw same number) = > (1)? = 4 = E(hyj E(x).
+r=]
+Hence
+var(S) = var (x Ij) = S> var(1j;) = (; var(112)
+i<j i<j
+
+by symmetry. But var(/}2) = z(1 - 2).
+(b) Let X;; be the common score of players i and j, so that X;; = 0 if their scores are different. This
+time the total score is S = }7;.; Xij, and
+
+1 7 7
+B(S) = (3) = (5) 627 12 ()
+
+The Xj; are not pairwise independent, and you have to slog it out thus:
+
+2
+var(S) = E | (Xxs) — E(S)*
+
+i<j
+
+= (;) eat + (3) cnax + (3) _ (;) _ (:) Et 7 ) (:)
+
+161
+

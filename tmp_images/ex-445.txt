@@ -1,0 +1,228 @@
+positive state, see non-null
+
+postage stamp lemma 6.3.9
+
+potential theory 13.11.1-3
+
+power series approximation
+71117
+
+Pratt’s lemma 7.10.5
+
+predictable step fn 13.8.4
+
+predictor: best 7.9.1; linear 7.9.3,
+
+9.2.1-2, 9.7.1, 3
+probabilistic method 1.8.28, 3.4.7
+probability: continuity 1.8.16,
+
+1.8.18; p.g.f. 5.12.4, 13; vector
+4.11.6
+
+problem: matching 3.4.9, 3.11.17,
+
+5.2.7, 12.9.21; ménages 1.8.23;
+Pepys 3.8.5; of points 3.9.4,
+
+exchange 11.8.9; two servers
+8.4.1, 5, 11.7.3, 11.8.14;
+virtual waiting 11.8.7; waiting
+time 11.2.3, 11.5.2-3, 11.8.6,
+8, 10
+
+quotient 3.3.1, 4.7.2, 10, 13-14,
+4.10.4, 4.11.10, 4.14.11, 14,
+16, 40, 5.2.4, 5.12.49, 6.15.42
+
+R
+radioactivity 10.6.6-8
+random: bias 5.10.9; binomial
+
+coefficient 5.2.1; chord
+4.13.1; dead period 10.6.7;
+harmonic series 7.11.37;
+
+Index
+
+orthogonal 7.7.1; p.g.f. 5.12.4,
+13; Poisson 3.5.3; standard
+normal 4.7.5; Student’s ¢
+4.10.2-3, 5.7.8; symmetric
+3.2.5, 4.1.2, 5.12.22; tails
+3.11.13, 4.3.3, 5, 4.14.3, 5.1.2,
+5.6.4, 5.11.3; tilted 5.1.9,
+5.7.11; trivial 3.11.2; truncated
+2.4.2; uncorrelated 3.11.12, 16,
+4.5.7-8, 4.8.6; uniform 3.8.1,
+4.8.4, 4.11.1, 9.7.5; waiting
+time, see queue; Weibull 4.4.7;
+
+zeta or Zipf 3.11.5
+
+random walk: absorbed 3.11.39,
+12.5.4—5; arc sine laws
+3.10.3, 3.11.28, 5.3.5; on
+
+integers 6.15.34; line 4,13.1-3,
+
+3.11.24; Waldegrave 5.12.10
+program, dual, linear, and primal
+6.6.3
+projected rw. 5.12.6
+projection theorem 9.2.10
+proof-reading 6.4.1
+proportion, see empirical ratio
+proportional investor 13.12.23
+prosecutor’s fallacy 1.4.6
+protocol 1.4.5, 1.8.26
+pull-through property 3.7.1
+
+Q
+
+quadratic variation 8.5.4, 13.7.2
+queue: batch 11.8.4; baulking
+
+8.4.4, 11.8.2, 19; busy period
+6.12.1, 11.3.2-3, 11.5.1,
+11.8.5, 9; costs 11.8.13;
+departure pr. 11.2.7, 11.7.2-4,
+11.8.12; difficult customer
+11.7.4; D/M/1 11.4.3, 11.8.15;
+dual 11.5.2; Erlang’s loss fn
+11.8.19; finite waiting room
+11.8.1; G/G/1 11.5.1, 11.8.8;
+G/M/1 11.4.1-2, 11.5.2-3;
+heavy traffic 11.6.1, 11.8.15;
+idle period 11.5.2, 11.8.9;
+imbedded branching 11.3.2,
+11.8.5, 11; imbedded Markov
+pr. 11.2.6, 11.4.1, 3, 11.4.1;
+imbedded renewal 11.3.3,
+11.5.1; imbedded rw. 11.2.2,
+5; Markov, see M/M/1; M/D/1
+11.3.1, 11.8.10-11; M/G/1
+11.3.3, 11.8.6-7; M/G/oo
+6.12.4, 11.8.9; migration
+system 11.7.1, 5; M/M/1 6.9.3,
+6.12.1, 11.2.2-3, 5-6, 11.3.2,
+11.6.1, 11.8.5, 12; M/M/k
+11.7.2, 11.8.13; M/M/oo 8.7.4;
+series 11.8.3, 12; supermarket
+11.8.3; tandem 11.2.7, 11.8.3;
+taxicabs 11.8.16; telephone
+
+4.14.52; paper 4.14.56;
+parameter 4.6.5, 5.1.6,
+
+5.2.3, 5.2.8; particles 6.4.8;
+pebbles 4.14.51; permutation
+4.11.2; perpendicular 4.14.50;
+polygons 4.13.10, 6.4.9; rock
+4.14.57; rods 4.14.25-26,
+53-54; sample 4.14.21;
+subsequence 7.11.25; sum
+3.7.6, 3.8.6, 5.2.3, 5.12.50,
+
+10.2.2; telegraph 8.2.2; triangle
+
+4.5.6, 4.13.6-8, 11, 13;
+velocity 6.15.33, 40
+
+random sample: normal 4.10.5;
+ordered 4.12.21
+
+random variable: see also density
+
+and distribution; arc sine
+4.11.13; arithmetic 5.9.4;
+Bernoulli 3.11.14, 35; beta
+4.11.4; beta—binomial 4.6.5;
+binomial 2.1.3, 3.11.8, 11,
+5.12.39; bivariate normal
+4.7.5-6, 12; Cauchy 4.4.4;
+c.f. 5.12.26-31; chi-squared
+4.10.1; compounding
+
+5.2.3; continuous 2.3.1;
+Dirichlet 3.11.31, 4.14.58;
+expectation 5.6.2, 7.2.3;
+exponential 4.4.3, 5.12.39;
+extreme-value 4.1.1, 4.14.46;
+F(r,s) 4.10.2, 4, 5.7.8;
+gamma 4.11.3, 4.14.10-12;
+geometric 3.1.1, 3.11.7;
+hypergeometric 3.11.10-11;
+independent 3.11.1, 3, 4.5.5,
+7.2.3; indicator 3.11.17;
+infinitely divisible 5.12.13-14;
+logarithmic 3.1.1, 5.2.3;
+log-normal 4.4.5; median
+2.7.11, 4.3.4; m.g.f. 5.1.8,
+5.8.2, 5.11.3; multinomial
+3.5.1; multinormal 4.9.2;
+negative binomial 3.8.4;
+normal 4.4.6, 4.7.5—6, 12;
+
+436
+
+binary tree 6.4.7; conditional
+3.9,2-3; on cube 6.3.4;
+
+first passage 5.3.8; first
+
+visit 3.10.3; on graph 6.4.6,
+
+9, 13.11.2-3; on hexagon
+6.15.35; imbedded in queue
+11.2.2, 5; left-continuous 5.3.7,
+5.12.7; martingale 12.1.4,
+12.4.6, 12.5.4-5; maximum
+3.10.2, 3.11.28, 5.3.1;
+persistent 5.12.5—6, 6.3.2;
+potentials 13.11.2~3; projected
+5.12.6; range of 3.11.27;
+
+reflected 11.2.1-2; retaining
+barrier 11.2.4; returns to origin
+3.10.1, 5.3.2; reversible 6.5.1;
+simple 3.9.1~3, 5, 3.10.1-3; on
+square 5.3.3; symmetric 1.7.3,
+3.11.23; three dimensional
+6.15.9-10; transient 5.12.44,
+6.15.9, 7.5.3; truncated 6.5.7;
+two dimensional 5.3.4, 5.12.6,
+12.9.17; visits 3.11.23, 6.9.8,
+10; zero mean 7.5.3; zeros of
+3.10.1, 5.3.2, 5.12.56
+
+range of r.w. 3.11.27
+
+rate of convergence 6.15.43
+
+ratios 4.3.2; Mills’s 4.4.8; sex
+3.11.22
+
+record: times 4.2.1, 4, 4.6.6, 10;
+values 6.15.20, 7.11.36
+
+recurrence, see difference
+
+recurrence time 6.9.11
+
+recurrent: event 5.12.45, 7.5.2,
+9.7.4; see persistent
+
+red now 12.9.18
+
+reflecting barrier: s.r.w. 11.2.1-2;
+drifting Wiener pr. 13.5.1;
+Ornstein—Uhlenbeck pr.
+13.12.6
+
+regeneration 11.3.3
+
+regression 4.8.7, 4.9.6, 4.14.13,
+79.2
+
+rejection method 4.11.3-4, 13

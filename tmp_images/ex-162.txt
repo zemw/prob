@@ -1,0 +1,58 @@
+Random vectors Solutions [2.4.2]-[2.5.6]
+
+()If-l<y<1l,
+
+~
+
+P(sinX <y)= S> P((Qn+1)x -sin” y < X < (Qn+2)n +sin“! y)
+n=—0o
+OO
+= > {F(@n+2)x + sin“! y) — F(Qn + 1m - sin! y)}.
+n=—-0o0
+
+(d) P(G71(X) < y) = P(X < G(y)) = F(G0)).
+
+(e) If0 < y < 1, then P(F(X) < y) = P(X < F71(y)) = F(F71(y)) = y. There is a small
+difficulty if F is not strictly increasing, but this is overcome by defining F~!(y) = sup{x : F(x) = y}.
+() PG" (F(X)) < y) = P(F(X) < G(y)) = GQ).
+
+2. It is the case that, for x € R, Fy (x) and Fz(x) approach F(x) as a > —00, b > oo.
+
+2.5 Solutions. Random vectors
+
+1. Write few = P(X =x, W = w). Then foo = for = 4, fio = 4, and frw = 0 for other pairs
+Xx, W.
+
+2. (a) We have that
+
+p if (x, y) = (1, 9),
+fxy@.y) = | 1-p if@,y)=(@,1)),
+0 otherwise.
+
+(b) Secondly,
+1-—p if @,z)= (0,0),
+
+fx,z(%.z) = P if @, z) = (1, 0),
+
+0 otherwise.
+3. Differentiating gives fy y(x, y) = e-*/{w(1 + y2)}, x>0,yeER.
+4. LetA={X <b,c<Y<d},B={a<X <b, Y <d}. Clearly
+P(A) = F(6,d)— F(b,c), P(B) = F,d)— F(a,d), P(AU B)= F(, d) — F(a, c);
+
+now P(A NM B) = P(A) + P(B) — P(A U B), which gives the answer. Draw a map of R? and plot the
+regions of values of (X, Y) involved.
+
+5. The given expression equals
+PX =x, Y¥<y)-PX =x, Ys y-1=P(X =x, Y=y).
+
+Secondly, for 1 <x < y < 6,
+_ 1] r _ r _ -1 r
+1\"
+(z) ifx=y.
+
+6. No, because F is twice differentiable with 02 F /axdy <0.
+
+f@yY=
+
+153
+
