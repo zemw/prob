@@ -1,69 +1,36 @@
-## Continuous vs Discrete
+## Definition revisited
 
-Continuous random variables, in many ways, are more versatile and useful
-than discrete distributions. One key reason is that many quantities in
-the physical world, such as temperature, height, weight, and time, are
-inherently continuous in nature. These variables can take on any value
-within a range, providing a more accurate representation of real-world
-phenomena compared to discrete variables, which are limited to distinct
-values. Additionally, the probability density functions (PDFs) of
-continuous distributions are often defined by smooth, differentiable
-functions. This mathematical structure allows us to apply calculus for
-analysis, enabling precise calculations of probabilities, expected
-values, and other statistical measures. The ability to integrate and
-differentiate these functions not only simplifies manipulation but also
-makes continuous distributions a powerful tool for solving complex
-problems in physics, engineering, and data analysis.
+Continuous random variables, in many ways, are more versatile and useful than discrete distributions. One key reason is that many quantities in the physical world, such as temperature, height, weight, and time, are inherently continuous in nature. Additionally, the probability density functions (PDFs) of continuous distributions are often defined by smooth, differentiable functions. This mathematical structure allows us to apply calculus for analysis.
 
-::: {#def-crv-1}
-A random variable has a continuous distribution if its CDF is
-*differentiable*. A continuous random variable is a random variable with
-a continuous distribution.
-:::
-
-::: {#def-pdf-1}
-For a continuous random variable $X$ with CDF $F$, the probability
-density function (PDF) of $X$ is the derivative of the CDF, given by
-$f(x)=F'(x)$. The support of $X$ is the set of all $x$ where $f(x)>0$.
+::: {#def-crv2}
+A random variable has a continuous distribution if its CDF is *differentiable*.
 :::
 
 ::: remark
-By the fundamental theorem of calculus, we integrate a PDF to get the
-CDF: $$F(x)=\int_{-\infty}^{x}f(t)dt.$$ PDF differs from the discrete
-PMF in important ways:
-
 -   For a continuous random variable, $P(X=x)=0$ for all $x$;
--   The quantity $f(x)$ is not a probability. To get the probability, we
-    integrate the PDF (probability is the area under the PDF):
-    $$P(a<X\leq b)=F(b)-F(a)=\int_{a}^{b}f(x)dx.$$
--   Since any single value has probability 0, including or excluding
-    endpoints does not matter.
-    $$P(a<X<b)=P(a<X\leq b)=P(a\leq X<b)=P(a\leq X\leq b).$$
-:::
 
-::: {#thm-crv-pdf}
-The PDF $f$ of a continuous random variable must satisfy the following
-criteria:
+-   The density function $f(x)$ is not a probability. To get the probability, we integrate the PDF (probability is the area under the PDF): $$P(a<X\leq b)=F(b)-F(a)=\int_{a}^{b}f(x)dx.$$
 
--   Nonnegative: $f(x)\geq0$;
--   Integrates to 1: $\int_{-\infty}^{\infty}f(x)dx=1$.
+-   Since any single value has probability 0, including or excluding endpoints does not matter. $$P(a<X<b)=P(a<X\leq b)=P(a\leq X<b)=P(a\leq X\leq b).$$
+
+-   The PDF of a continuous random variable satisfies the property: $$\int_{-\infty}^{\infty}f(x)dx=1.$$
+
+-   The CDF is the integral of PDF:
+
+    $$F(X)=\int_{-\infty}^{x}f(x)dx,\quad f(x)=F'(x).$$
 :::
 
 ::: {#def-crv-exp}
-The expectation of a continuous random variable $X$ with PDF $f$ is
-$$E(X)=\int_{-\infty}^{\infty}xf(x)dx.$$
+The expectation of a continuous random variable $X$ with PDF $f$ is $$E(X)=\int_{-\infty}^{\infty}xf(x)dx.$$
 :::
 
 ::: {#thm-crv-lotus}
-If $X$ is a continuous random variable with PDF $f$ and
-$g:\mathbb{R}\to\mathbb{R}$. The LOTUS applies
-$$E[g(X)]=\int_{-\infty}^{\infty}g(x)f(x)dx.$$
+If $X$ is a continuous random variable with PDF $f$ and $g:\mathbb{R}\to\mathbb{R}$. The LOTUS applies $$E[g(X)]=\int_{-\infty}^{\infty}g(x)f(x)dx.$$
 :::
 
 |   | Discrete | Continuous |
-|----|:---|:---|
+|------------------------|:-----------------------|:-----------------------|
 | PMF/PDF | $P(X=x)=p(x)$ | $P(a\leq X\leq b)=\int_{a}^{b}f(x)dx$ |
 | CDF | $F(x)=P(X\leq x)=\sum_{k\leq x}p(k)$ | $F(x)=P(X\leq x)=\int_{-\infty}^{x}f(t)dt$ |
 | Expectation | $E(x)=\sum_{x}xP(X=x)$ | $E(X)=\int_{-\infty}^{+\infty}xf(x)dx$ |
 | LOTUS | $E[g(x)]=\sum_{x}g(x)P(X=x)$ | $E[g(x)]=\int_{-\infty}^{+\infty}g(x)f(x)dx$ |
-

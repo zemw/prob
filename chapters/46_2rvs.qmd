@@ -1,4 +1,4 @@
-## Multivariate problems
+## Additional problems
 
 We extend the concepts of joint, marginal and conditional distribution
 to continuous random variables.

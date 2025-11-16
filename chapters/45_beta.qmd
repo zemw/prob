@@ -1,4 +1,4 @@
-## Beta distribution
+## Beta distribution*
 
 The Beta distribution is a continuous distribution on the interval
 $(0,1)$. It is a generalization of the $\textrm{Unif}(0,1)$

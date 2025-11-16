@@ -73,7 +73,7 @@ $\infty$.
 :::
 
 ::: {#thm-mtrans}
-## Transformation of multi-variables
+## Transformation of multi-variables*
 
 Let $\mathbf{X}=(X_{1},\dots,X_{n})$ be a continuous random vector with
 joint PDF $f_{\mathbf{X}}$, and let $\mathbf{Y}=g(\mathbf{X})$ where $g$
@@ -90,7 +90,7 @@ the absolute value of the determinant of the Jacobian matrix.
 :::
 
 ::: {#exm-jacobian}
-Suppose $X,Y\overset{iid}{\sim}Expo(1)$. Find the distribution of
+Suppose $X,Y\overset{iid}{\sim}\textrm{Exp}(1)$. Find the distribution of
 $X/(X+Y)$.
 :::
 

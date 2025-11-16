@@ -8,7 +8,7 @@ events to occur.
 
 Let's start with a simple case. Suppose we want to find out the total
 waiting until the 2nd event occurred. Let $Y=X_{1}+X_{2}$ where
-$X_{1},X_{2}\sim \textrm{Expo}(\lambda)$ independently. If $Y$ is
+$X_{1},X_{2}\sim \textrm{Exp}(\lambda)$ independently. If $Y$ is
 discrete, we have $P(Y=y)=\sum_{k=0}^{y}P(X_{1}=k,X_{2}=y-k)$. For
 continuous $y$, we have $$\begin{aligned}
 f_{Y}(y) & =\int_{0}^{y}f_{X}(x)f_{X}(y-x)dx=\int_{0}^{y}\lambda e^{-\lambda x}\lambda e^{-\lambda(y-x)}dx\\
@@ -35,7 +35,7 @@ $$\int_{0}^{\infty}\frac{1}{\Gamma(a)}(\lambda x)^{a}e^{-\lambda x}\frac{dx}{x}\
 
 Taking $a=1$, the $\textrm{Gamma}(1,\lambda)$ PDF is
 $f(x)=\lambda e^{-\lambda x}$, which is the same as
-$\textrm{Expo}(\lambda)$. So Exponential distribution is a special case
+$\textrm{Exp}(\lambda)$. So Exponential distribution is a special case
 of Gamma distribution.
 
 Let's find the expectation and variance of the Gamma distribution. Let
@@ -65,7 +65,7 @@ Hence, we have $E(X)=\frac{a}{\lambda}$, $Var(X)=\frac{a}{\lambda^{2}}$.
 ## Exponential-Gamma connection
 
 Let $X_{1},\dots,X_{n}$ be independent and identical
-$\textrm{Expo}(\lambda)$. Then
+$\textrm{Exp}(\lambda)$. Then
 $$X_{1}+\cdots+X_{n}\sim\textrm{Gamma}(n,\lambda).$$
 :::
 
@@ -99,7 +99,7 @@ in the queue. What is the expected waiting to be served?
 :::
 
 ::: solution
-$X_{i}\sim\textrm{Expo}(0.1)$. Then $E(X_{i})=10$. Let Y be the time
+$X_{i}\sim\textrm{Exp}(0.1)$. Then $E(X_{i})=10$. Let Y be the time
 until you are served. Then $Y\sim\textrm{Gamma}(5,0.1)$. Thus,
 $E(Y)=\frac{5}{0.1}=50$ minutes. The probabilities of some selected
 values: $$P(Y\leq t)=\begin{cases}

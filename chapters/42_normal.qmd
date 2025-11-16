@@ -8,13 +8,14 @@ Limit Theorem (will be discussed in later chapters), which essentially
 says the sum (or mean) or any random samples are approximately normal.
 
 ::: {#def-std-normal}
+### Standard Normal
 A random variable $Z$ has the standard Normal distribution with mean $0$
 and variance $1$, denoted as $Z\sim N(0,1)$, if $Z$ has a PDF that
 follows $$f(z)=\frac{1}{\sqrt{2\pi}}e^{-z^{2}/2}.$$
 :::
 
 This is a valid PDF because $\int_{-\infty}^{\infty}f(z)dz=1$, which
-directly follows from @exm-gauss. We further verify its mean and
+directly follows from the Gaussian integral. We further verify its mean and
 variance:
 
 $$E(Z)=\int_{-\infty}^{+\infty}z\cdot\frac{1}{\sqrt{2\pi}}e^{-z^{2}/2}dz=0\quad\textrm{by symmetry.}$$
@@ -27,13 +28,18 @@ Var(Z) & =E(Z^{2})-(EZ)^{2}=E(Z^{2})\\
  & =1.\end{aligned}$$
 
 ::: {#def-phi}
+### The $\Phi$ function
 The CDF of standard normal distribution is usually denoted by $\Phi$.
 Therefore,
 $$\Phi(z)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{z}e^{-t^{2}/2}dt.$$ By
 symmetry, we have $\Phi(-z)=1-\Phi(z)$.
 :::
 
+To find the value of $\Phi(z)$, we need to use the normal probability
+table or statistical software.
+
 ::: {#def-normal}
+### General Normal
 Let $X=\mu+\sigma Z$ where $Z\sim N(0,1)$. Then we say $X$ has the
 Normal distribution with mean $\mu$ and variance $\sigma^{2}$, denoted
 as $X\sim N(\mu,\sigma^{2})$. The PDF of $X$ is given by
@@ -51,28 +57,27 @@ $$P(X\leq x)=P\left(\frac{X-\mu}{\sigma}\leq\frac{x-\mu}{\sigma}\right)=\Phi\lef
 The PDF is the derivative of the CDF,
 $$f(x)=\frac{1}{\sigma}\Phi'\left(\frac{x-\mu}{\sigma}\right)=\frac{1}{\sigma\sqrt{2\pi}}\exp\left[-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}\right].$$
 
-The shape of the normal distribution is the famous bell-shaped curve.
+::: {#prp-three-sigma}
+### Three-sigma rule
+The normal distribution has the following properties:
+$$\begin{aligned}
+P(|X-\mu|\leq\sigma) & \approx 0.68\\
+P(|X-\mu|\leq2\sigma) & \approx 0.95\\
+P(|X-\mu|\leq3\sigma) & \approx 0.997\\
+\end{aligned}$$ 
+Critical values in standard normal:
+$\Phi(-1)\approx0.16,\Phi(-2)\approx0.025,\Phi(-3)\approx0.0015$.
 
 ![](img/normal.png){width="70%" fig-align="center"}
-
-::: callout-note
-## Three-sigma rule
-The normal distribution has the "three-sigma rule": $$\begin{aligned}
-P(|X-\mu|\leq\sigma) & \approx0.68\\
-P(|X-\mu|\leq2\sigma) & \approx0.95\\
-P(|X-\mu|\leq3\sigma) & \approx0.997\end{aligned}$$ Critical values:
-$\Phi(-1)\approx0.16,\Phi(-2)\approx0.025,\Phi(-3)\approx0.0015$.
 :::
 
 ::: {#thm-normal-1}
+### Standardization
 Let $X$ have the Normal distribution with mean $\mu$ and variance
-$\sigma^{2}$. Let $F$ be the CDF of $X$. Then the **standardization** of
+$\sigma^{2}$. Let $F$ be the CDF of $X$. Then the standardization of
 $X$ $$Z=\frac{X-\mu}{\sigma}$$ has the standard normal distribution,
 and, for all $x$: $$F(x)=\Phi\left(\frac{x-\mu}{\sigma}\right).$$
 :::
-
-To find the value of $\Phi(z)$, we need to use the normal probability
-table or statistical software.
 
 ::: {#exm-5.3}
 Suppose the test score of a class of 50 students is normally distributed
@@ -85,19 +90,6 @@ $X\sim N(80,20)$. We want to find $P(X<90)$. Standardize the
 distribution:
 $$P(X<90)=P\left(\frac{X-80}{20}<\frac{90-80}{20}\right)=\Phi(0.5)\approx0.69.$$
 :::
-
-
-```{r}
-# Exam scores from past students
-scores <- read.csv("../dataset/exam.csv")$final
-
-# Histogram of the exam scores
-hist(scores, prob = TRUE, col = "lightblue")
-
-# Overlay the normal curve
-curve(dnorm(x, mean(scores), sd(scores)), col = "red", lwd = 2, add = TRUE)
-```
-
 
 ::: {#thm-normal-2}
 Suppose $X\sim N(\mu,\sigma^{2})$. If $Y=aX+b$, then $Y$ has the Normal

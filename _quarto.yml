@@ -72,8 +72,8 @@ book:
         - chapters/43_expo.qmd
         - chapters/44_gamma.qmd
         - chapters/45_beta.qmd
-        - chapters/46_2rvs.qmd
         - chapters/47_trans.qmd
+        - chapters/46_2rvs.qmd
     - part: "Sampling distributions"
       chapters:
         - chapters/50_lln.qmd

@@ -1,4 +1,4 @@
-## Multivariate normal
+## Multivariate normal*
 
 ::: {#def-mvn}
 ## Bivariate normal distribution
