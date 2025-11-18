@@ -1,16 +1,17 @@
 ## Overview {.unnumbered}
 
-![](chapters/img/normal.png){fig-align="center"}
-
 This book is adapted from *MAT921: Probability* at Southwest University
 of Finance and Economics (RIEM). It is an introductory probability
-course that aims to be not boring. In this course, we try to blend
-**conventional teaching**, **interesting puzzles** and **data-oriented
-practical skills**.
+course that aims to be not boring. The course emphasizes:
+
+- Conventional teaching
+- Interesting puzzles
+- Data-oriented practical skills
 
 Course Instructor's email: [gamma12\@126.com]() 
-(b/c $\Gamma(1/2)=\sqrt{\pi}$ is one of my favorite equation!) 
 Please indicate your class and student ID when you email me.
+
+PS: $\Gamma\left(\frac{1}{2}\right)=\sqrt{\pi}$ is one of my favorite equation!
 
 ## Syllabus
 
@@ -94,16 +95,6 @@ possible. We will demonstrate how to do statistics in R, which is a
 widely-used open-source statistical programming language. It is highly
 recommended that you try it yourself while learning this course.
 
-## Students' evaluation
-
-If you have not decided whether to enroll in this course or not. Here
-are some surveys from the past students for your reference. In general,
-this is not an easy course especially for freshmen. We will deal with
-serious maths, though I will try to convey the beauty of the subject as
-much as possible.
-
-![](chapters/img/wordcloud.png){fig-align="center"}
-
 ## Reference
 
 1.  Schervish, M. J., & DeGroot, M. H. (2014). *Probability and
@@ -115,23 +106,16 @@ much as possible.
 
 ## Online playground
 
-[Probability Playground: Interactive Probability
-Distributions](https://www.acsu.buffalo.edu/~adamcunn/probability/probability.html)
+[Probability Playground: Interactive Probability Distributions](https://www.acsu.buffalo.edu/~adamcunn/probability/probability.html)
 
-[StatKey: Statistics Unlocking the Power of
-Data](https://www.lock5stat.com/StatKey/index.html)
-
-[MathIsFun: Standard Normal Distribution
-Table](https://www.mathsisfun.com/data/standard-normal-distribution-table.html)
-
-[Central Limit Theorem Demo](https://projects.oliverni.com/clt/)
+[Statistics: Unlocking the Power of Data](https://www.lock5stat.com/StatKey/index.html)
 
 ## Exam score lookup {.unnumbered}
 
 <div class="exam-score-lookup" id="exam-score-lookup">
 <label for="exam-lookup-input" class="exam-lookup-label">Student number</label>
 <div class="exam-lookup-controls">
-<input id="exam-lookup-input" type="text" inputmode="numeric" placeholder="e.g. 00123" aria-describedby="exam-lookup-status">
+<input id="exam-lookup-input" type="text" inputmode="numeric" placeholder="e.g. 42431000" aria-describedby="exam-lookup-status">
 <button type="button" id="exam-lookup-button">Find scores</button>
 </div>
 <p class="exam-lookup-status" id="exam-lookup-status" role="status" aria-live="polite">Loading exam scores...</p>
