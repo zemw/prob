@@ -6,7 +6,7 @@ nonetheless review some basic concepts here as a warm-up. This review is
 not exhaustive, so please refer to a specific textbook if needed for a
 more comprehensive understanding.
 
-### Differentiation {.unnumbered}
+## Differentiation {.unnumbered}
 
 We define the derivative of a function $f(x)$ to be
 $$f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}$$
@@ -58,7 +58,7 @@ fractions:
 $$\pi=4\left(1-\frac{1}{3}+\frac{1}{5}-\frac{1}{7}+\cdots\right).$$
 :::
 
-### Integration {.unnumbered}
+## Integration {.unnumbered}
 
 Integration is the inverse operation of differentiation. Integral has
 the geometric interpretation as the area under the curve. Let $A(x)$ be

@@ -38,7 +38,7 @@ coin lands Tail.
 -   Let $D$ be the event that no flip is Heads, $D=B^{c}$
 :::
 
-### Use set language to describe events {.unnumbered}
+## Use set language to describe events {.unnumbered}
 
 <div>
 
