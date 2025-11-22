@@ -81,6 +81,7 @@ book:
         - chapters/52_stats.qmd
         - chapters/53_mle.qmd
         - chapters/53_est.qmd
+        - chapters/53_bayes.qmd
         - chapters/54_ci.qmd
         - chapters/55_ht.qmd
 
