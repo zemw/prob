@@ -49,6 +49,29 @@ of $\sqrt{n}\bar{X}_{n}$ also approaches the standard normal
 distribution.
 :::
 
+::: callout-note
+### Distributuion of $\bar{X}$ vs Distribution of $X$
+The distribution of the sample mean $\bar{X}$ and the distribution of the 
+random variables $X_i$ are fundamentally different. 
+The former is a theoretical distribution of the averages we would get if 
+we drew repeated samples of size $n$. 
+What the CLT says is that, regardless the distribution of $X_i$, the 
+distribution of $\bar{X}$ always approaches Normal. 
+:::
+
+```{r}
+set.seed(0)
+
+# population of uniform distribution
+G <- rnorm(10000)
+
+# repeatedly sample from the population and compute sample mean
+X_bar <- replicate(1000, mean(sample(G, 100)))
+
+# distribution of the sample mean
+hist(X_bar, prob = TRUE)
+```
+
 The CLT gives the distribution of the sample mean regardless of the
 underlying distribution. It allows us to gauge the accuracy of our 
 sample mean as an estimate of the true mean: 
