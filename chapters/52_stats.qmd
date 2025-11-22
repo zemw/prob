@@ -46,11 +46,17 @@ $$p(\mu | \bar{X}_n) \propto p(\bar{X}_n | \theta) p(\theta).$$
 Suppose we observe random variables $X_1,...,X_n$. Let $g$ be a 
 real-valued function of $n$ variables. Then the random variable 
 $T=g(X_1,...,X_n)$ is called a **statistic**. 
-The distribution of $T$ is called the **sampling distribution** of $T$. 
 :::
 
+:::callout-note
+### Statistic is a random variable
+Statistic $T$ is a function of random variables, therefore it is
+itself a random variable. The distribution of $T$ is called the 
+**sampling distribution** of $T$. 
 The name "sampling distribution" comes from the fact that $T$ depends on 
-a random sample and so its distribution comes from the sampling process.
+the sampling process (a different sample gives to a different value of 
+the statistic).
+:::
 
 :::{#def-estimator}
 ### Estimator
@@ -59,6 +65,8 @@ An **estimator** of parameter $\theta$ is a statistic $\hat\theta = g(X_1,...,X_
 constructed to learn about $\theta$. If $X_1=x_1, ..., X_n=x_n$ are
 observed, then $g(x_1,...,x_n)$ is called the **estimate** of $\theta$.
 :::
+
+### Constructing an estimator {.unnumbered}
 
 How to construct an estimator is an art in itself, which needs to be guided 
 by principles. We introduction the methods to construct estimators in the

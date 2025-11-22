@@ -93,12 +93,11 @@ So we replace it with its sample estimator.
 ::: {#def-se}
 ### Standard error
 The standard error of an estimator $\hat{\theta}$ is defined as
-$$SE(\hat{\theta})=\hat{V}^{1/2}$$ 
-where $\hat{V}$ is the estimator for $Var[\hat{\theta}]$.
+$$SE(\hat{\theta})=\hat\sigma(\hat\theta).$$ 
 
 The standard error of $\bar{X}_{n}$ is
 $$SE(\bar{X}_{n})=\frac{s}{\sqrt{n}}$$ 
-where $s$ is the sample standard deviation.
+where $s^2$ is the sample variance.
 :::
 
 The standard error indicates the "precision" of the estimator, thereby
