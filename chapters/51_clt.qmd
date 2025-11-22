@@ -1,24 +1,30 @@
 ## Central limit theorem
 
-The LLN shows the convergence of the sample mean to the population mean.
-What about the entire sample distribution? This is addressed by the
-central limit theorem (CLT), which, as its name suggests, is a limit
-theorem of central importance in statistics.
-
-The CLT states that for large $n$, the distribution of $\bar{X}_{n}$
-after standardization approaches a standard Normal distribution,
-regardless of the underlying distribution of $X_{i}$. By
-standardization, we mean that we subtract $\mu$, the expected value of
-$\bar{X}_{n}$, and divide by $\sigma/\sqrt{n}$, the standard deviation
-of $\bar{X}_{n}$.
+::: {#def-cvd}
+### Convergence in distribution
+Let $X_1,X_2,\dots,X_n$ be a sequence of random variables, and let 
+$F_n$ denote the CDF of $X_n$. It is said the sequence $X_1,X_2,...$ 
+converges in distribution $F$ if 
+$$\lim_{n\to\infty} F_n(x) = F(x),$$
+for all $x$ at which F(x) is continuous. The property is denoted as 
+$$ F_n \to_d F. $$
+$F$ is called the **asymptotic distribution** of $X_n$.
+:::
 
 ::: {#thm-7.3}
-(Central limit theorem). As $n\to\infty$,
-$$\sqrt{n}\left(\frac{\bar{X}_{n}-\mu}{\sigma}\right)\to N(0,1)\textrm{ in distribution.}$$
-
-In other words, the CDF of the left-hand side approaches the CDF of the
-standard normal distribution.
+### Central limit theorem
+Let $X_1,X_2,\dots,X_n$ be a random sample of size $n$ from a distribution
+with mean $\mu$ and finite variance $\sigma^2$. Let $\bar{X}_n$ be the sample mean.
+Then,
+$$\frac{\bar{X}_{n}-\mu}{\sigma/\sqrt{n}} \to_d N(0,1).$$
 :::
+
+Note that the CLT can be equivalently expressed as:
+$$\begin{aligned} 
+\sum_{i=1}^{n} X_i &\to_d N(n\mu, n\sigma^2) \\
+\bar{X}_n &\to_d N\left(\mu, \frac{\sigma^2}{n}\right)\\
+\frac{\bar{X}_n - \mu}{\sigma} &\to_d N\left(0, \frac{1}{n}\right)
+\end{aligned}$$
 
 ::: proof
 We will prove the CLT assuming the MGF of the $X_{i}$ exists, though the
@@ -26,17 +32,6 @@ theorem holds under much weaker conditions. Without loss of generality
 let $\mu=1,\sigma^{2}=1$ (since we standardize it anyway). We show that
 the MGF of $\sqrt{n}\bar{X}_{n}=(X_{1}+\cdots+X_{n})/\sqrt{n}$ converges
 to the MGF of the $N(0,1)$.
-
-The MGF of $N(0,1)$ is
-
-$$\begin{aligned}
-E(e^{tX}) & =\int_{-\infty}^{\infty}e^{tx}\cdot\frac{1}{\sqrt{2\pi}}e^{-x^{2}/2}dx\\
- & =\int_{-\infty}^{\infty}\frac{1}{\sqrt{2\pi}}e^{-x^{2}/2+tx}dx\\
- & =\int_{-\infty}^{\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}(x-t)^{2}+\frac{1}{2}t^{2}}dx\\
- & =e^{\frac{t^{2}}{2}}\int_{-\infty}^{\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}(x-t)^{2}}dx\\
- & =e^{t^{2}/2}\end{aligned}$$
-
-Compute the MGF of $\sqrt{n}\bar{X}_{n}$:
 
 $$\begin{aligned}
 E(e^{\sqrt{n}\bar{X}_{n}}) & =E(e^{t(X_{1}+\cdots+X_{n})/\sqrt{n}})\\
@@ -54,54 +49,29 @@ of $\sqrt{n}\bar{X}_{n}$ also approaches the standard normal
 distribution.
 :::
 
-The CLT tells us about the limiting distribution of $\bar{X}_{n}$ as
-$n\to\infty$. That means, we can reasonably approximate the distribution
-$\bar{X}_{n}$ with normal distribution when $n$ is a finite large
-number.
-$$\bar{X}_{n}\approx N(\mu,\sigma^{2}/n)\quad\textrm{for large }n.$$
-
-The Central Limit Theorem was first proved by Pierre-Simon Laplace in
-1810. Let's take a moment to admire the generality of this result. The
-distribution of the individual $X_{i}$ can be anything in the world, as
-long as the mean and variance are finite. This does mean the
-distribution of $X_{i}$ is irrelevant, however. If the distribution is
-fairly close to normal, the result would hold for smaller $n$. If the
-distribution is far away from normal, it would take larger $n$ to
-converge.
-
 The CLT gives the distribution of the sample mean regardless of the
-underlying distribution. This allows to assess the "quality" of the
-sample mean --- how close it is to the true mean. The LLN tells us the
-larger the sample, the closer the sample mean to the population mean.
-The CLT tells us the distribution of the sample mean for sample size
-$n$. For smaller $n$, the distribution is more spread-out (a normal
-distribution with large $\sigma^{2}$); hence the uncertainty is huge,
-other values are more likely. For larger $n$, the uncertainty is
-reduced, most values would be centered around the true mean. We will
-delve deeper into this when we get to hypothesis testing.
+underlying distribution. It allows us to gauge the accuracy of our 
+sample mean as an estimate of the true mean: 
+$$ P\left(\left| \frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \right| \leq 1 \right) = .68 $$
+$$ P\left(\bar{X}-\sigma^2/\sqrt{n} \leq \mu \leq \bar{X}+\sigma^2/\sqrt{n}\right) = .68 $$
+Thus, the interval $[\bar{X} - \sigma^2/\sqrt{n}, \bar{X} + \sigma^2/\sqrt{n}]$ 
+contains the true mean 68% of the chance. 
+This is known as **confidence intervals** that we will come back later. 
+But we need one more theorem to make this actually works.
 
-::: {#exm-7.3}
-Suppose that a fair coin is tossed 900 times. Approximate the
-probability of obtaining more than 395 heads.
+::: {#thm-slutsky}
+### Slutsky's theorem
+Let $X_n$ and $Y_n$ be sequences of random variables. If $X_n \to_p c$ and
+$Y_n \to_d Y$, then
+
+- $X_n + Y_n \to_d c + Y$
+- $X_n Y_n \to_d cY$
+- $Y_n/X_n \to_d Y/c$, provided $c$ is invertible.
 :::
 
-::: solution
-Let $H=\sum_{i=1}^{900}X_{i}$ be the number of heads, where
-$X_{i}\sim\textrm{Bern}(\frac{1}{2})$. We could compute the probability
-by
-
-$$P(H>495)=\sum_{k=496}^{900}\binom{900}{k}\left(\frac{1}{2}\right)^{k}\left(\frac{1}{2}\right)^{900-k}$$
-
-But this is quite tedious. Because $n=900$ is reasonably large, we can
-apply the CLT:
-
-$$\begin{aligned}
-\frac{1}{n}\sum_{i=1}^{900}X_{i} & \sim N(\mu,\sigma^{2}/n)\quad\textrm{or}\\
-\sum_{i=1}^{900}X_{i} & \sim N(n\mu,n\sigma^{2})\end{aligned}$$
-
-We know $\mu=E(X_{i})=\frac{1}{2}$, $\sigma^{2}=Var(X_{i})=\frac{1}{4}$.
-Thus $H\sim N(450,225)$. Therefore,
-
-$$P(H>495)=1-P(H\leq495)\approx1-\Phi\left(\frac{495-450}{15}\right)=0.0013.$$
-:::
-
+In practice, the true variance $\sigma^2$ is unknown. But if we have an 
+estimate from our sample such that $s^2 \to_p \sigma^2$, the Slutsky's 
+theorem implies:
+$$\frac{\bar{X}_{n}-\mu}{s/\sqrt{n}} \to_d N(0,1).$$
+Thus we can feasibly construct the confidence interval with the sample variance: 
+$[\bar{X} - s^2/\sqrt{n}, \bar{X} + s^2/\sqrt{n}]$.

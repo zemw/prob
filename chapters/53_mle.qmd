@@ -1,0 +1,94 @@
+### Maximum likelihood
+
+::: {#def-likelihood}
+### Likelihood function
+Let $\boldsymbol{x}$ be the observed values of a vector of random variables. 
+Let $f(\boldsymbol{x}; \theta)$ be the joint probability (density) function, 
+where $\theta$ is the parameter(s) that governs the distribution.
+The likelihood function is $f$ expressed as a function of $\theta$: 
+$$\mathcal{L}(\theta; \boldsymbol{x}) = f(\boldsymbol{x}; \theta),$$
+which represents the likelihood of observing $\boldsymbol{x}$ given $\theta$.
+:::
+
+::: {#def-mle}
+# Maximum likelihood estimator
+The maximum likelihood estimator (MLE) of the parameter $\theta$ is found by 
+maximizing the likelihood function:
+$$\hat\theta_{\textrm{MLE}} = \textrm{argmax}_\theta\ \mathcal{L}(\theta).$$
+We express $\hat\theta_{\textrm{MLE}}$ as a function of the random variables.
+Whereas the **estimate** given $\boldsymbol{x}$ is the value of $\theta$ that
+maximizes the chance of observing $\boldsymbol{x}$.
+:::
+
+::: {#exm-mle-bern}
+### MLE of the Bernoulli parameter
+Let $X_1, ..., X_n \overset{iid}{\sim}\textrm{Bern}(\theta)$ where $\theta$
+is unknown. Find $\hat\theta_{\textrm{MLE}}$. 
+
+First write down the joint probability function (also the likelihood funnction):
+$$\mathcal{L}(\theta)=f(\boldsymbol{x}; \theta) = \prod_{i=1}^{n} \theta^{x_i}(1-\theta)^{1-x_i}. $$
+It is usually easier to maximize the log of $\mathcal{L}(\theta)$ since logarithm
+is a monotonic transformation:
+$$\begin{aligned}
+\mathscr{l}(\theta)=\ln\mathcal{L}(\theta) 
+&= \sum_{i=1}^n [ x_i \ln\theta + (1-x_i)\ln(1-\theta) ] \\
+&= \left(\sum_{i=1}^n x_i\right)\ln\theta + \left(n-\sum_{i=1}^n x_i\right)\ln(1-\theta).
+\end{aligned}$$
+The maximum is achieved when $\mathscr{l}'(\theta)=0$, which occurs at $\theta = \bar{x}_n$.
+Therefore,
+$$\hat\theta_{\textrm{MLE}} = \bar{X}_n.$$
+:::
+
+::: {#exm-mle-norm}
+### MLE of the mean from a Normal distribution
+Let $X_1, ..., X_n \overset{iid}{\sim} N(\mu,\sigma^2)$ where $\mu$ 
+is unknown and $\sigma^2$ is known. Find $\hat\mu_{\textrm{MLE}}$. 
+
+The likelihood function is:
+$$\begin{aligned}
+\mathcal{L}(\mu; \boldsymbol{x},\sigma^2) 
+&= \prod_{i=1}^n \frac{1}{\sqrt{2\pi}} \exp\left[ -\frac{1}{2\sigma^2}(x_i-\mu)^2 \right] \\
+&= \frac{1}{\sqrt{2\pi}^n} \exp\left[ -\frac{1}{2\sigma^2}\sum_{i=1}^n (x_i-\mu)^2 \right]
+\end{aligned}$$
+
+It is maximized by the value of $\mu$ by minimizing 
+$$Q(\mu) = \sum_{i=1}^n (x_i-\mu)^2 = \sum_{i=1}^n x_i^2 - 2\mu \sum_{i=1}^n x_i + n\mu^2. $$
+$Q(\mu)$ is minimized when $\mu = \bar{x}_n$. Therefore,
+$$\hat\mu_{\textrm{MLE}} = \bar{X}_n.$$
+:::
+
+::: {#exm-mle-unif}
+### MLE of the mean from a Uniform distribution
+Let $X_1, ..., X_n \overset{iid}{\sim} U(\theta)$ where $\theta$ 
+is unknown. The population mean is $\mu=\frac{\theta}{2}$. 
+Find $\hat\mu_{\textrm{MLE}}$. 
+
+The PDF $f(x;\theta)$ of each observation takes the form:
+$$f(x)= \begin{cases}
+\frac{1}{\theta}, &\textrm{if}\ 0\leq x\leq \theta,\\
+0, &\textrm{otherwise}.
+\end{cases}$$
+Therefore, the joint PDF or the likelihood function is:
+$$\mathcal{L}(\theta) = \begin{cases}
+\frac{1}{\theta^n}, &\textrm{if}\ 0\leq x_i\leq \theta\ (i=1,...,n),\\
+0, &\textrm{otherwise}.
+\end{cases}$$
+The MLE of $\theta$ if found for which $\mathcal{L}$ is maximized.
+Since $\mathcal{L}$ is a decreasing function of $\theta$, the estimate
+will be the smallest value of $\theta$ such that $\theta\geq x_i$ 
+for $i=1,...,n$. Therefore, $\theta = \max\{x_1,...,x_n\}$. 
+The MLE of the mean $\mu$ is:
+$$\hat\mu_{\textrm{MLE}} = \frac{\max\{X_1,...,X_n\}}{2}.$$ 
+Note that as $n\to\infty$, $\hat\mu_{\textrm{MLE}} \to \frac{\theta}{2}$ 
+because the largest $X_i$ would be very close to $\theta$.
+:::
+
+::: callout-caution
+### The importance of the underlying distribution
+In statistics, you cannot simply assume that the arithmetic average $\bar{x}$ 
+is always the best way to estimate the center of a population. 
+The arithmetic mean is the MLE when the data comes from a normal distribution. 
+However, it is not always the best estimate if the data is distributed otherwise.
+That's why understanding the distribution is the prerequisite of statistical 
+inference.
+:::

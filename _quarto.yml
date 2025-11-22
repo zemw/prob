@@ -74,12 +74,13 @@ book:
         - chapters/45_beta.qmd
         - chapters/47_trans.qmd
         - chapters/46_2rvs.qmd
-    - part: "Sampling distributions"
+    - part: "Estimation"
       chapters:
         - chapters/50_lln.qmd
         - chapters/51_clt.qmd
-        - chapters/52_samples.qmd
-        - chapters/53_estimator.qmd
+        - chapters/52_stats.qmd
+        - chapters/53_mle.qmd
+        - chapters/53_est.qmd
         - chapters/54_ci.qmd
         - chapters/55_ht.qmd
 

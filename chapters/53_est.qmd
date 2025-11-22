@@ -1,0 +1,107 @@
+## Estimator properties
+
+::: {#def-bias}
+### Bias
+The bias of an estimator $\hat{\theta}$ of a parameter $\theta$ is defined as:
+$$\textrm{Bias}[\hat{\theta}]=E(\hat{\theta})-\theta.$$ 
+An estimator is **biased** means its sampling is incorrectly centered. 
+An estimator is **unbiased** if
+$$E(\hat{\theta})=\theta.$$ 
+:::
+
+::: {#thm-sample-mean}
+### Sample mean
+The sample mean, defined as:
+$$\bar{X}_{n}=\sum_{i=1}^n X_i,$$ 
+is an **unbiased** estimator of $\mu=E(x)$.
+:::
+
+::: proof
+$$E(\bar{X}_{n})=E\left(\frac{1}{n}\sum_{i=1}^{n}X_{i}\right)=\frac{1}{n}\sum_{i=1}^{n}E(X_{i})=\frac{1}{n}\sum_{i=1}^{n}\mu=\mu.$$
+:::
+
+::: {#thm-sample-variance}
+### Sample variance
+The sample variance, defined as:
+$$s^{2} = \frac{1}{n-1}\sum_{i=1}^{n}(X_{i}-\bar{X_{n}})^{2},$$ 
+is an unbiased estimator of $\sigma^{2}$ ($\sigma^2<\infty$).
+:::
+
+::: proof
+First note:
+$$\sum_{i=1}^n (X_i - \bar{X})^2 = \sum_{i=1}^n (X_i - \mu)^2 - n(\bar{X} - \mu)^2$$
+Take expectations of both sides:
+$$E\left[\sum_{i=1}^n (X_i - \bar{X})^2\right]
+= n\sigma^2 - n\left(\frac{\sigma^2}{n}\right)
+= (n-1)\sigma^2$$
+Dividing by $n-1$ makes $E(s^2)=\sigma^2$.
+:::
+
+::: {#def-mae}
+### Mean absolute error
+The mean absolute error (MAE) of an estimator is defined as:
+$$\textrm{MSE}[\hat{\theta}]=E\left| \hat{\theta}-\theta \right|.$$
+:::
+
+::: {#def-mse}
+### Mean square error
+The mean square error (MSE) of an estimator is defined as:
+$$\textrm{MSE}[\hat{\theta}]=E\left[(\hat{\theta}-\theta)^{2}\right].$$
+:::
+
+::: {#thm-bias-var}
+### Bias-variance trade-off
+For any estimator with a finite variance, we have
+$$\textrm{MSE}[\hat{\theta}]=Var[\hat{\theta}]+(\textrm{Bias}[\hat{\theta}])^{2}.$$
+:::
+
+::: proof
+By expanding the MSE we find that
+$$\begin{aligned}
+\textrm{MSE}[\hat{\theta}] & =E\left[(\hat{\theta}-\theta)^{2}\right]\\
+ & =E\left[(\hat{\theta}-E[\hat{\theta}]+E[\hat{\theta}]-\theta)^{2}\right]\\
+ & =E\left[(\hat{\theta}-E[\hat{\theta}])^{2}\right] + 
+    2E(\hat{\theta}-E[\hat{\theta}])(E[\hat{\theta}]-\theta) + 
+    (E[\hat{\theta}]-\theta)^{2}\\
+ & =Var[\hat{\theta}]+(\textrm{Bias}[\hat{\theta}])^{2}.
+ \end{aligned}$$
+Thus, the MSE is the variance plus the squared bias. A good estimator balances
+the variance (precision) and the bias (correctly centered).
+:::
+
+::: {#def-consistent}
+### Consistency
+An estimator is consistent if $\textrm{MSE}[\hat{\theta}]\to0$ as
+$n\to\infty$.
+:::
+
+::: callout-note
+### Unbiasedness vs consistency
+Bias is the property of an estimator for finite samples. Consistency is
+the property of an estimator when the sample size gets large. 
+A consistent estimator behaves well for large sample size. Whereas an
+unbiased estimator is correct centered even for small samples.
+:::
+
+For unbiased estimator, MSE is solely determined by the variance of the estimator. 
+Consider the sample mean $\bar{X}$ as an estimator for the population mean. 
+Suppose the sample is large enough so that CLT holds. Then
+$$Var(\bar{X}_{n})=\frac{\sigma^{2}}{n}.$$
+But this is not a very useful in practice because $\sigma^2$ is usually unknown.
+So we replace it with its sample estimator.
+
+::: {#def-se}
+### Standard error
+The standard error of an estimator $\hat{\theta}$ is defined as
+$$SE(\hat{\theta})=\hat{V}^{1/2}$$ 
+where $\hat{V}$ is the estimator for $Var[\hat{\theta}]$.
+
+The standard error of $\bar{X}_{n}$ is
+$$SE(\bar{X}_{n})=\frac{s}{\sqrt{n}}$$ 
+where $s$ is the sample standard deviation.
+:::
+
+The standard error indicates the "precision" of the estimator, thereby
+carrying a sense of "error". The smaller the standard error, the more
+precise the estimator.
+

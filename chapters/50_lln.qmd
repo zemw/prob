@@ -1,93 +1,130 @@
 ## Law of large numbers
 
-We now introduce two important theorems describing the behavior of the
-sample mean as the sample size grows. Throughout this section and the
-next, we assume $X_{1},X_{2},\dots,X_{n}$ are i.i.d RVs drawn from a
-population with mean $\mu$ and variance $\sigma^{2}$. The sample mean is
-defined as
+::: {#def-iid}
+### Independent and identical RVs
+Random variables $X_{1},X_{2},\dots,X_{n}$ are independently and identically 
+distributed (or **i.i.d** for short) if they are independently drawn from the 
+same distribution (with the same parameters). 
+:::
 
-$$\bar{X}_{n}=\frac{X_{1}+\cdots+X_{n}}{n}.$$
+::: {#def-rsample}
+### Random sample
+Let $X_{1},X_{2},\dots,X_{n}$ be i.i.d random variables from distribution $F$.
+We call the collection $\{X_{1},X_{2},\dots,X_{n}\}$ a **random sample** of $F$. 
+$F$ is known as the **population distribution**, or just the **population**. 
+:::
 
-As we have discussed previously, the sample mean is itself a random
-variable with mean and variance:
+::: callout-note
+### Population as an abstraction
+The definition above is more general than the concept of population
+in everyday life (e.g. members of a group). It is an mathematical abstraction 
+of the underlying "truth" we want to learn about.
+:::
 
+::: {#def-cvp}
+### Converge in probability
+A sequence $Z_1,Z_2,\dots$ of random variables converges to $b$ in probability 
+if for every number $\epsilon>0$, 
+$$\lim_{n\to\infty} P(|Z_n - b|<\epsilon) = 1.$$
+The property is denoted by $Z_n \to_p b$.
+:::
+
+:::{#thm-lln}
+### Law of large numbers
+Let $X_{1},X_{2},\dots,X_{n}$ be a random sample from a distribution for which
+the mean is $\mu$ and the variance is finite. Let $\bar{X}_n$ denote the 
+**sample mean**, i.e. $\bar{X}_n=\frac{1}{n}\sum_{i=1}^{n}X_i$. Then 
+$$\bar{X}_n \to_p \mu.$$
+:::
+
+::: proof
+Since $X_{1},X_{2},\dots,X_{n}$ are i.i.d random variables from the same 
+distribution. Let $E(X_i)=\mu$ and $Var(X_i)=\sigma^2$ for $i=1,2,...,n$.
+For every number $\epsilon>0$, by the Chebyshev inequality, 
+$$P( |\bar{X}_n - \mu| < \epsilon ) \geq 1 - \frac{\sigma^2}{n\epsilon^2}. $$
+Hence,
+$$\lim_{n\to\infty} P(|\bar{X}_n - \mu|<\epsilon) = 1.$$
+:::
+
+::: callout-note
+### Sample mean as an random variable
+Note that sample mean, $\bar{X}_n=\frac{1}{n}\sum_{i=1}^{n}X_i$, is the 
+weighted sum of random variables. It is therefore itself a random variable.
+It is easy to see that
 $$\begin{aligned}
-E(\bar{X}_{n}) & =\frac{1}{n}E(X_{1}+\cdots+X_{n})=\frac{1}{n}(E(X_{1})+\cdots+E(X_{n}))=\mu,\\
-Var(\bar{X}_{n}) & =\frac{1}{n^{2}}Var(X_{1}+\cdots+X_{n})\overset{iid}{=}\frac{1}{n^{2}}(Var(X_{1})+\cdots+Var(X_{n}))=\frac{\sigma^{2}}{n}.\end{aligned}$$
-
-The law of large numbers (LLN) says that as n grows, the sample mean
-$\bar{X}_{n}$ converges to the true mean $\mu$.
-
-::: {#thm-7.1}
-(Strong law of large numbers). The sample mean $\bar{X}_{n}$ converges
-to the true mean $\mu$ point-wise as $n\to\infty$, with probability $1$.
-In other words, the event $\bar{X}_{n}\to\mu$ has probability $1$.
-:::
-
-::: {#thm-7.2}
-(Weak law of large numbers). For all $\epsilon>0$,
-$P(|\bar{X}_{n}-\mu|>\epsilon)\to0$ as $n\to\infty$. (this is known as
-converge in probability).
-:::
-
-We don't need a rigorous proof here. But an intuitive proof is obvious.
-As $n\to\infty$, $Var(\bar{X}_{n})=\frac{\sigma^{2}}{n}\to0$. The random
-variable $\bar{X}_{n}$ becomes fixed at $\mu$ as $n$ becomes large.
+E(\bar{X}_n) &= \mu \\
+Var(\bar{X}_{n}) &=\frac{\sigma^{2}}{n}\to0,\quad\textrm{as }n\to\infty
+\end{aligned}$$ 
+The random variable $\bar{X}_{n}$ becomes fixed at $\mu$ as $n$ becomes large.
 Thus, it converges to $\mu$ in a probabilistic sense.
+:::
 
-It seems that the LLN just states the obvious. But it has wide
-applications in daily time that you might not even realize. What it says
-is essentially this: the uncertainty at the individual level becomes
-certain when aggregating together; the risks that are unmanageable at
-the individual level becomes manageable collectively. Think about a rare
-disease, it happens at 1 out of a million probability. For each
-individual, no one knows if they will get the disease or not. But as the
-sample size gets large, suppose we have one billion population, the LLN
-says the sample mean will be very close the true mean. That is, there
-will be almost surely 1000 people being infected by the disease. We
-provide two more examples.
+::: {#thm-lln-fun}
+### Continuous function of RVs
+If $Z_n \to_p b$, and $g(\cdot)$ is a continuous function, then 
+$g(Z_n) \to_p g(b)$.
+:::
 
-::: {#exm-7.1}
-(Lottery). A lottery company is designing a game with a 6-digit format.
+The theorem implies that LLN does not only apply to the sample mean, 
+but also applies to any moments of a random variable, 
+$$\frac{1}{n}\sum_{i=1}^{n}X_i^k \to_p E(X^k).$$
+This is the foundation of the method of moments estimation that we will 
+discuss later.
+
+### Applications of LLN {.unnumbered}
+It might seem that the LLN just states the obvious. But it has wide
+applications in daily life that you might not even realize. 
+The LLM implies that: the uncertainty at the individual level becomes
+certain at aggregate level; the risks that are unmanageable at
+the individual level becomes manageable collectively. 
+
+::: {#exm-lottery}
+### Lottery
+A lottery company is designing a game with a 6-digit format.
 Each time someone buys a ticket, they receive a randomly generated
-6-digit number. Only one number will win the grand prize of 10 million
+6-digit number. Only one number will win the grand prize of 1 million
 dollars. What should the company charge per ticket to break even?
 :::
 
 ::: solution
-The probability of winning the game is $p=1/10^{6}$. Suppose the company
-has sold $n$ tickets. The price for each ticket is $x$. The revenue for
-the company is therefore $xn$. By the LLN, the cost of the company
-should be very close to $10^{7}np$. The break even point is
-$xn=10^{7}np$. So $x=10^{7}p=10$. Therefore, if the company sells each
-ticket above 10 dollars. The business is surely profitable as long as
-$n$ is large. If the company is a monopoly, it can reap as much profit
-as it desires as long as they know the basic probability theory! The
-same can be said about gambling companies.
+Let $X_i \sim \textrm{Bern}(p)$ be the random variable that indicates 
+whether the $i$-th ticket is a winner, where $p=1/10^{6}$. 
+For each individual who buys a ticket, the outcome is highly uncertain. 
+But collectively, by the Law of Large Numbers, 
+$$\frac{1}{n}\sum_{i=1}^{n}X_i \to_p p.$$
+Meaning that when $n$ is large, the proportion of winners should be very
+close to $p$. Therefore, the total number of winners should be very
+close to $np$. 
+
+If it is estimated that there will be 10 million tickets sold. There
+would be almost exactly $10^{7}p=10$ winners. The total cost of the
+company is therefore 10 million. If the company charge $1 per ticket, 
+it is just enough to cover the cost. Any price above $1 would make 
+the business profitable.
 :::
 
-::: {#exm-7.2}
-(Insurance). Insurance is anther great application of the LLN. It is
+::: {#exm-insurance}
+### Insurance
+Insurance is anther great application of the LLN. It is
 essentially the same as the the lottery game but most people do not
-realize it. Suppose there is a disease with infection rate of 1 out of 1
-million. The medical expenditure to cure the disease is 10 million
+realize it. Suppose there is a disease with mortality rate 1 out of a
+million. The medical expenditure to cure the disease is 1 million
 dollars. How much the insurance company should charge per customer to
 cover this disease?
 :::
 
 ::: solution
-The solution is essentially the same as above. Suppose the premium for
-the insurance product is $x$. The revenue of the company by selling the
-premium is $xn$. The cost is --- when one customer is infected, the
-company has to pay the medical cost ---$10^{7}np$. The break even price
-for the insurance premium is thus $10$ dollars.
+The solution is essentially the same as above. As long as the number of 
+customers is large enough, by the LLN, the number of claims should be
+very close to $np$. Thus the risks that are unmanageable at the individual
+level becomes manageable when pooled together.
 
-What is the implication of this insurance? Without the insurance, each
-individual either chooses to set aside 10 million dollars pre-cautiously
-for the disease (if he is rich enough) or be exposed to the risk
-completely uncovered. The insurance product enables everyone to get
-covered at a cost of just 10 dollars. It is a typical example that the
-unmanageable risk at the individual level becomes manageable
-collectively.
+Insurance is a great invention because it not only provides cover for 
+individuals but also improve the capital efficiency of the society as 
+a whole. This about this: Without the insurance, each individual has to
+set aside 1 million dollars pre-cautiously for the disease 
+(if he is rich enough) or be exposed to the risk completely uncovered. 
+The insurance product enables everyone to get covered at the fraction 
+of the cost and thus frees up capital for more productive uses.
 :::
 
