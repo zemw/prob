@@ -69,12 +69,13 @@ book:
         - chapters/42_sumrvs.qmd
         - chapters/42_normal.qmd
         - chapters/42_mvn.qmd
+        - chapters/43_chisq.qmd
         - chapters/43_expo.qmd
         - chapters/44_gamma.qmd
         - chapters/45_beta.qmd
         - chapters/47_trans.qmd
         - chapters/46_2rvs.qmd
-    - part: "Estimation"
+    - part: "Estimation and Sampling Distributions"
       chapters:
         - chapters/50_lln.qmd
         - chapters/51_clt.qmd

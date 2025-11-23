@@ -1,0 +1,63 @@
+## $\chi^2$ and $t$-distribution
+
+This section introduces distributions that are closely related to normal distributions.
+More specifically, they are distributions of functions of normal random variables.
+
+::: {#def-chi2}
+### $\chi^2$ distribution
+Let $X_1, \ldots, X_m$ be independent random variables from $N(0,1)$. Then 
+$$X_1^2 + \cdots + X_m^2 \sim \chi^2(n),$$
+which is known as the $\chi^2$ distribution with $n$ degrees of freedom.
+:::
+
+::: {#thm-chi2-s}
+### Sample variance distribution
+Suppose that $X_1, \ldots, X_n$ form a random sample from $N(\mu,\sigma^2)$. Then
+$$\sum_{i=1}^{n} \left(\frac{X_i - \mu}{\sigma}\right)^2 \sim \chi^2(n).$$ 
+If $\mu$ is replaced by the sample mean $\bar{X}$, one degree of freedom is lost:
+$$\frac{\sum_{i=1}^{n}(X_i - \bar{X})^2}{\sigma^2} \sim \chi^2(n-1).$$ 
+:::
+
+::: {#def-stut}
+### Student-$t$ distribution
+Let $Y$ and $Z$ be two independent random variables, for which $Y\sim \chi^2(n)$
+and $Z\sim N(0,1)$. Then
+$$ \frac{Z}{\sqrt{Y/n}} \sim t(n),$$
+which is known as the $t$-distribution with $n$ degrees of freedom.
+:::
+
+:::{#thm-stut-mu}
+### Sample mean distribution
+Suppose that $X_1, \ldots, X_n$ form a random sample from $N(\mu,\sigma^2)$.
+Let $\bar{X}$ denote the sample mean, and define the sample variance 
+$$s^2 = \frac{1}{n-1}\sum_{i=1}^{n}(X_i - \bar{X})^2$$
+Then we have 
+$$\frac{\bar{X} - \mu}{s/\sqrt{n}} \sim t(n-1).$$
+:::
+
+::: callout-note
+### Sampling distribution of normal variables
+Statistics such as $\bar{X}$ and $s^2$ are functions of the random variables
+and are thus random variables themselves. 
+The distribution of a statistic is called **sampling distribution**, as the
+distribution arises due to the sampling process. 
+
+@thm-stut-mu and @thm-chi2-s give the sampling distributions associated with 
+$\bar{X}$ and $s^2$ respectively. 
+They allow us to gauge how accurate the statistics are as measures of the 
+true parameters. 
+
+For example, the $t$-distribution gives the probability:
+$$ P\left(t_1 \leq \frac{\bar{X}_n - \mu}{s/\sqrt{n}} \leq t_2 \right) = 
+P\left( \bar{X}-t_2 \frac{s}{\sqrt{n}} \leq \mu \leq \bar{X}+t_1 \frac{s}{\sqrt{n}} \right)$$
+So we know how close $\bar{X}$ is to the true mean $\mu$.
+
+Similarly, since $\frac{(n-1)s^2}{\sigma^2}\sim \chi^2(n-1)$, we know:
+$$ P\left( \chi^2_1 \leq \frac{(n-1)s^2}{\sigma^2} \leq \chi^2_2 \right) = 
+P\left( \frac{(n-1)s^2}{\chi^2_2} \leq \sigma^2 \leq \frac{(n-1)s^2}{\chi^2_1}\right)
+$$
+which gives the probable range of the true $\sigma^2$.
+
+It is crucial to stress that the above inferences are only valid 
+when the sample is drawn from a normal distribution. 
+:::
