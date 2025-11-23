@@ -38,7 +38,7 @@ $$\bar{X}_n \to_p \mu$$
 Whereas treating parameters as random variables is typically associated with
 the **Bayesian framework**. We update the distribution of the parameters 
 with the information provided by the observables:
-$$p(\mu | \bar{X}_n) \propto p(\bar{X}_n | \theta) p(\theta).$$
+$$p(\theta | \bar{X}_n) \propto p(\bar{X}_n | \theta) p(\theta).$$
 :::
 
 ::: {#def-stat}
@@ -48,14 +48,14 @@ real-valued function of $n$ variables. Then the random variable
 $T=g(X_1,...,X_n)$ is called a **statistic**. 
 :::
 
-:::callout-note
-### Statistic is a random variable
+::: {#def-sampling-dist}
+### Sampling distribution
 Statistic $T$ is a function of random variables, therefore it is
 itself a random variable. The distribution of $T$ is called the 
 **sampling distribution** of $T$. 
-The name "sampling distribution" comes from the fact that $T$ depends on 
-the sampling process (a different sample gives to a different value of 
-the statistic).
+
+The name comes from the fact that $T$ depends on the sampling process 
+(a different sample gives to a different value of the statistic).
 :::
 
 :::{#def-estimator}
