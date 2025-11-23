@@ -78,6 +78,26 @@ p(\theta|k) & \propto f(k|\theta)p(\theta)\\
 This is the kernel of $\textrm{Beta}(a+k,b+n-k)$.
 :::
 
+```{r}
+# unknown parameter
+p <- 0.3
+
+# number of observations
+n <- 100
+
+# generate Bernoulli observations
+X <- 1* (runif(n) < p)
+
+# sum of positive outcomes
+k <- sum(X)
+
+# the prior distribution (blue)
+curve(dbeta(x, 2, 2), col=4, ylim=c(0,10))
+
+# the posterior distribution (red)
+curve(dbeta(x, 2+k, 2+n-k), col=2, add=TRUE)
+```
+
 :::{#thm-pois-gamma}
 ### Poisson-Gamma conjugacy
 Let $X\sim \textrm{Pois}(\lambda)$. Assume the unknown parameter
@@ -138,3 +158,28 @@ $$\frac{\mu_n}{v_n^2} = \frac{\mu_0}{v_0^2} + \frac{n\bar{x}}{\sigma^2} = \frac{
 
 Solving for $\mu_n$ and $v_n^2$ gives the answer desired.
 :::
+
+```{r}
+# the true mean and variance
+m <- 0.3
+v <- 1
+
+# number of observations
+n <- 10
+
+# generate Normal observations
+X <- rnorm(n, m, v)
+
+# compute sample mean
+x_ <- mean(X)
+
+# the prior distribution (blue)
+m0 <- 0
+v0 <- .5
+curve(dnorm(x, m0, v0), -1, 1, col=4, ylim=c(0,5))
+
+# the posterior distribution (red)
+m1 <- (v*m0 + n*v0*x_)/(v+n*v0) 
+v1 <- (v*v0)/(v+n*v0) 
+curve(dnorm(x, m1, v1), -1, 1, col=2, add=TRUE)
+```
