@@ -1,5 +1,11 @@
 ## Bayesian inference
 
+Bayesians take a different approach to statistical inference. 
+Bayesians treat the unknown parameters as random variables associated with 
+distributions. Instead of trying to estimate the "true" value of the 
+parameters, the distribution of the parameters gets updated with the 
+information contained in the data. 
+
 :::{#def-prior}
 ### Prior distribution
 Suppose we have a statistical model with parameter $\theta$. 
@@ -33,25 +39,14 @@ is a function of $\theta$, the denominator bahaves like a normalizing
 constant. So we don't lost anything if we only focus on the likelihood 
 function and the prior. 
 
-::: callout-note
-### Frequentist estimator vs Bayesian posterior
-| Feature | **Frequentist Estimator** | **Bayesian Posterior** |
-| :--- | :--- | :--- |
-| **What is the Parameter?** ($\theta$) | **A Fixed, Unknown Constant.**<br>The true mean is a specific number (e.g., 5.2) hidden in nature. It does not move or fluctuate. | **A Random Variable.**<br>The parameter is uncertain. We describe it using a probability distribution that reflects our state of knowledge. |
-| **What is the Data?** ($X$) | **Random & Repeatable.**<br>We imagine the data is just one of infinite possible samples we could have drawn. | **Fixed.**<br>The data is the only solid reality we have. We condition our beliefs *on* this specific dataset. |
-| **The Output** | **A Point Estimate.**<br>A single number (like $\bar{x}$) or a Confidence Interval. | **A Probability Distribution.**<br>A full curve (the Posterior) showing which values are most likely. |
-| **Probability Meaning** | **Long-Run Frequency.**<br>"If we repeated this experiment 1,000 times, the estimator would be close to the truth 95% of the time." | **Degree of Belief.**<br>"Given the data we actually saw, there is a 95% probability the true parameter is in this range." |
-| **Use of Prior Knowledge** | **Forbidden.**<br>The data must speak for itself. Bringing in outside beliefs is considered "bias." | **Required (The Prior).**<br>You start with an initial belief ($p(\theta)$) and update it with data to get the Posterior. |
-:::
-
 ::: {#def-conjugate}
-### Conjugate distributions
+### Conjugate prior
 In Bayesian inference, if, given the likelihood function $f(x|\theta)$, 
 the posterior distribution $p(\theta|x)$ is in the same **probability
 distribution family** as the prior distribution $p(\theta)$,
-the prior and posterior are then called **conjugate distributions** 
+the prior and posterior are then called conjugate distributions
 with respect to that likelihood function. The prior is called a 
-**conjugate prior**.
+conjugate prior.
 :::
 
 A conjugate prior is an algebraic convenience, giving a closed-form expression
@@ -157,27 +152,13 @@ $$\frac{\mu_n}{v_n^2} = \frac{\mu_0}{v_0^2} + \frac{n\bar{x}}{\sigma^2} = \frac{
 Solving for $\mu_n$ and $v_n^2$ gives the answer desired.
 :::
 
-```{r}
-# the true mean and variance
-m <- 0.3
-v <- 1
-
-# number of observations
-n <- 10
-
-# generate Normal observations
-X <- rnorm(n, m, v)
-
-# compute sample mean
-x_ <- mean(X)
-
-# the prior distribution (blue)
-m0 <- 0
-v0 <- .5
-curve(dnorm(x, m0, v0), -1, 1, col=4, ylim=c(0,5))
-
-# the posterior distribution (red)
-m1 <- (v * m0 + n * v0 * x_) / (v + n * v0) 
-v1 <- (v * v0) / (v + n * v0) 
-curve(dnorm(x, m1, v1), -1, 1, col=2, add=TRUE)
-```
+::: callout-note
+### Frequentist estimator vs Bayesian posterior
+| Feature | **Frequentist Estimator** | **Bayesian Posterior** |
+| :--- | :--- | :--- |
+| **What is the Parameter?** ($\theta$) | **A Fixed, Unknown Constant.**<br>The true mean is a specific number (e.g., 5.2) hidden in nature. It does not move or fluctuate. | **A Random Variable.**<br>The parameter is uncertain. We describe it using a probability distribution that reflects our state of knowledge. |
+| **What is the Data?** ($X$) | **Random & Repeatable.**<br>We imagine the data is just one of infinite possible samples we could have drawn. | **Fixed.**<br>The data is the only solid reality we have. We condition our beliefs on this specific dataset. |
+| **The Output** | **A Point Estimate.**<br>A single number (like $\bar{x}$) or a Confidence Interval. | **A Probability Distribution.**<br>A full curve (the Posterior) showing which values are most likely. |
+| **Probability Meaning** | **Long-Run Frequency.**<br>The frequency of occurrence out of infinitely many trials. | **Degree of Belief.**<br>How certain we are about something given our knowledge. |
+| **Use of Prior Knowledge** | **Forbidden.**<br>The data must speak for itself. Bringing in outside beliefs is considered "bias." | **Required (The Prior).**<br>You start with an initial belief ($p(\theta)$) and update it with data to get the Posterior. |
+:::
