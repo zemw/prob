@@ -138,14 +138,12 @@ $$p(\mu) \propto \exp\left( -\frac{1}{2v_0^2}(\mu - \mu_0)^2 \right)$$
 
 The likelihood of the independent sample:
 
-$$p(\boldsymbol{x} | \mu) \propto \exp\left( -\frac{1}{2\sigma^2} \sum_{i=1}^n (x_i - \mu)^2 \right)
-\propto \exp\left( -\frac{1}{2\sigma^2} (n\mu^2 - 2n\bar{x}\mu) \right)
-$$
+$$p(\boldsymbol{x} | \mu) \propto \exp\left( -\frac{1}{2\sigma^2} \sum_{i=1}^n (x_i - \mu)^2 \right)$$
 
-Multiply the Prior and Likelihood exponentials:
-$$p(\mu | \boldsymbol{x}) \propto \exp\left( -\frac{1}{2} \left[ \frac{(\mu - \mu_0)^2}{v_0^2} + \frac{n\mu^2 - 2n\bar{x}\mu}{\sigma^2} \right] \right)$$
+Multiply the prior and likelihood exponentials:
+$$p(\mu | \boldsymbol{x}) \propto \exp\left( -\frac{1}{2} \left[ \frac{(\mu - \mu_0)^2}{v_0^2} + \frac{\sum_{i=1}^n (x_i - \mu)^2}{\sigma^2} \right] \right)$$
 
-Group terms by $\mu^2$ and $\mu$:
+Group terms by $\mu^2$ and $\mu$ and ignore the constant:
 $$p(\mu | \boldsymbol{x}) \propto \exp\left( -\frac{1}{2} \left[ \mu^2 \left( \frac{1}{v_0^2} + \frac{n}{\sigma^2} \right) - 2\mu \left( \frac{\mu_0}{v_0^2} + \frac{n\bar{x}}{\sigma^2} \right) \right] \right)$$
 
 We want the posterior to look like a Normal distribution $N(\mu_n, v_n^2)$, which has the form:
@@ -179,7 +177,7 @@ v0 <- .5
 curve(dnorm(x, m0, v0), -1, 1, col=4, ylim=c(0,5))
 
 # the posterior distribution (red)
-m1 <- (v*m0 + n*v0*x_)/(v+n*v0) 
-v1 <- (v*v0)/(v+n*v0) 
+m1 <- (v * m0 + n * v0 * x_) / (v + n * v0) 
+v1 <- (v * v0) / (v + n * v0) 
 curve(dnorm(x, m1, v1), -1, 1, col=2, add=TRUE)
 ```
