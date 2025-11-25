@@ -1,17 +1,18 @@
 ## Overview {.unnumbered}
 
-This book is adapted from *MAT921: Probability* at Southwest University
-of Finance and Economics (RIEM). It is an introductory probability
-course that aims to be not boring. The course emphasizes:
+This website contains the lecture notes of *MAT924: Probability and Statistics*
+I taught at Southwest University of Finance and Economics (RIEM). 
+It is an introductory probability course that aims to be not boring. 
+The course emphasizes:
 
 - Conventional teaching
 - Interesting puzzles
 - Data-oriented practical skills
 
 Course Instructor's email: [gamma12\@126.com]() 
-Please indicate your class and student ID when you email me.
+<small>(FYI: $\Gamma(1/2)=\sqrt{\pi}$)</small>
 
-PS: $\Gamma\left(\frac{1}{2}\right)=\sqrt{\pi}$ is one of my favorite equation!
+Please indicate your class and student ID when you email me.
 
 ## Syllabus
 
@@ -82,10 +83,10 @@ theorems are the same.
 
 ## Homework
 
-There is no homework assignment in this course. We will do in-class
-exercises instead. However, problem solving is essential for learning
-math. You are encouraged to practice the exercises in DeGroot and
-Schervish's textbook after class. But it is not mandatory.
+There is no mandatory homework assignment in this course. 
+Exercise questions will be provided following each chapter. 
+You are also encouraged to practice the exercises in DeGroot
+and Schervish's textbook after class. But it is not mandatory.
 
 ## Statistical software
 
@@ -97,12 +98,9 @@ recommended that you try it yourself while learning this course.
 
 ## Reference
 
-1.  Schervish, M. J., & DeGroot, M. H. (2014). *Probability and
-    statistics.* Pearson Education.
-2.  Blitzstein, J. K., & Hwang, J. (2019). *Introduction to
-    probability.* Chapman and Hall/CRC.
-4.  Grimmett, G., & Stirzaker, D. (2020). *Probability and random
-    processes.* Oxford University Press.
+1.  Schervish, M. J., & DeGroot, M. H. (2014). *Probability and Statistics.* Pearson Education.
+1.  Blitzstein, J. K., & Hwang, J. (2019). *Introduction to Probability.* Chapman and Hall/CRC.
+1.  Grimmett, G., & Stirzaker, D. (2020). *Probability and Random Processes.* Oxford University Press.
 
 ## Online playground
 
@@ -203,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
       status.textContent = 'Enter a student number to view exam scores.';
     } catch (error) {
       loadError = error;
-      status.textContent = 'Exam score lookup is unavailable. Add "dataset/exam.csv" and reload the page.';
+      status.textContent = 'Exam score lookup is unavailable.';
       console.error('Exam lookup failed:', error);
     }
   };
@@ -257,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
     headers.forEach((header) => {
       const td = document.createElement('td');
       const value = record[header];
-      td.textContent = value !== undefined && value !== '' ? value : '—';
+      td.textContent = value !== undefined && value !== '' ? value : '0';
       dataRow.appendChild(td);
     });
     tbody.appendChild(dataRow);

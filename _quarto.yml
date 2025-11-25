@@ -4,11 +4,11 @@ project:
     - dataset/**
 
 book:
-  title: "Introduction to Probability"
+  title: "Probability and Statistics"
   author: 
     - name: "Zeming WANG"
       affiliations: "Southwest University of Finance and Economics"
-  date: "26 January 2025"
+  date: "8 Sept 2025"
   chapters:
     - index.qmd
     - part: "Probability Basics" 
