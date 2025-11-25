@@ -1,9 +1,10 @@
 ## Hypothesis testing
 
-Confidence interval allows us to construct an interval estimate of a
-population parameter. Hypothesis testing allows us to test specific
-hypothesis about a population parameter with the evidence obtained from
-a sample. The earliest use of statistical hypothesis testing is
+### The birth problem {.unnumbered}
+
+Hypothesis testing allows us to test specific hypothesis about a population 
+parameter with the evidence obtained from a sample. 
+The earliest use of statistical hypothesis testing is
 generally credited to the question of whether male and female births are
 equally likely (null hypothesis), which was addressed in the 1700s by
 John Arbuthnot and later by Pierre-Simon Laplace.
@@ -41,148 +42,138 @@ reject the $H_{0}$. Rejecting the null hypothesis does not mean it is
 false, [but it means our evidence does not support this
 hypothesis.]{.underline}
 
-![](img/pvalue.jpg){width="60%" fig-align="center"}
+### Definitions {.unnumbered}
 
-$p$**-value**: the probability of obtaining test results at least as
-extreme as the result actually observed, under the assumption that the
-null hypothesis is correct. A very small $p$-value means that such an
-extreme observed outcome would be very unlikely under the null
-hypothesis. Thus, [The smaller the $p$-value, the stronger the evidence
-against the $H_{0}$.]{.underline}
+::: {#def-hypothesis}
+### Hypothesis testing
+A **null hypothesis** ($H_0$) is a statement that there is no relationship
+or effect between variables. An **alternative hypothesis** ($H_1$) is the
+opposite of the null hypothesis. Hypothesis testing seeks to find evidence
+to reject the null. 
+:::
 
-In some studies, we can simply report the $p$-value and let people judge
-whether the evidence is strong enough. In other studies, we prefer to
-select a cut-off value $\alpha$, call the **significance level**, and
-follow the rule:
+::: {#def-rejection}
+### Rejection region
+The range of *extreme values* in the sampling distribution where, 
+if the test statistic falls, the null hypothesis ($H_0$) is rejected.
+Rejection region means the $H_0$ is higly unikely to be true given
+the evidence. This region is defined by the significance level ($\alpha$).
+:::
 
--   If the $p\textrm{-value}<\alpha$, reject $H_{0}$;
--   If the $p\textrm{-value}>\alpha$, do not reject $H_{0}$.
-
-Commonly used significance levels: $0.05$ and $0.01$. And we like to use
-the word "significant" to describe the test result:
-
--   A test with $p\textrm{-value}<0.05$ is said to be (statistically)
-    **significant**;
--   A test with $p\textrm{-value}<0.01$ is said to be highly
-    **significant**.
-
-When we make a decision about accepting or rejecting a hypothesis, there
-are chances that we make a mistake. There are two types of mistakes:
-**Type 1 error** and **Type 2 error**.
+::: {#def-type12error}
+### Type I/II error
+A **Type I error** is rejecting the $H_0$ when it is true.
+A **Type II error** is failing to reject the $H_0$ when it is false.
 
 |     |                  |                |                        |
 |-----|------------------|:--------------:|------------------------|
 |     |                  |    Decision    |                        |
 |     |                  | Reject $H_{0}$ | Fail to reject $H_{0}$ |
-|     | $H_{0}$ is true  |  Type 1 error  | $\checkmark$           |
-|     | $H_{0}$ is false |  $\checkmark$  | Type 2 error           |
+|     | $H_{0}$ is true  |  Type I error  | $\checkmark$           |
+|     | $H_{0}$ is false |  $\checkmark$  | Type II error           |
+:::
 
-**Type 1 error** is rejecting the $H_{0}$ when it is true. **Type 2
-error** is failing to reject the $H_{0}$ when it is false. Usually, it
-is more important to control the Type 1 error than the the Type 2 error.
-That is, we want to minimize the chance of falsely rejecting the null
-hypothesis.
+::: {#def-siglevel}
+### Significance level
+Significance level is the probability of making a Type I error, typically
+denoted by $\alpha$:
+$$ \alpha = P(\textrm{Type I error}|H_{0}\textrm{ is true}).$$
+To control the Type I error, we typically set $\alpha$ to a very small value.
+Typical choices include $\alpha = 0.1, 0.05, 0.01$.
+:::
 
-In the example above, we reject the null hypothesis on the ground that
-there is only 2.3% of the chance that we could observe this sample.
-Therefore, the probability of Type 1 error is only 2.3%.
+::: {#def-pvalue}
+### p-value
+The probability of observing a test statistic as extreme as, or more extreme than, 
+the one calculated from the sample data, assuming $H_0$ is true.
+A small $p$-value provides strong evidence *against* $H_0$.
+:::
 
-If we make decisions based on a significance level, the significance
-level is the Type 1 error rate. In other words, when using a 5%
-significance level, there is 5% chance of making a Type 1 error.
+::: {#def-decision}
+### Decision rule
+We reject the null hypothesis ($H_0$) under a given significance level ($\alpha$)
+if $p \leq \alpha$. We say a result is **statistically significant**, by the standards 
+of the study, when $p \leq \alpha$.
+:::
 
-$$P(\textrm{Type 1 error}|H_{0}\textrm{ is true})=\alpha$$
+![Decision rule of one-sided and two-sided tests](img/twosides.png){width="80%" fig-align="center"}
 
-This is why we prefer small values of $\alpha$---smaller $\alpha$
-reduces the Type 1 error rate. However, significance level doesn't
-control Type 2 error rate.
+### Testing the sample mean {.unnumbered}
 
-### Hypothesis testing with $z$-statistics {.unnumbered}
+Tom is 185 (cm) tall and he wants to know if he is taller than the average male ($\mu$). 
 
-We may have noticed that, in the above example, the assumption that the
-population $\sigma$ is known is unrealistic. In practice, we approximate
-it with the standard error $s/\sqrt{n}$. The approximate is valid if the
-the sample size is large enough or the underlying distribution is nearly
-normal. If this is not the case, we would opt for a $t$-test. Here we
-summarize the steps of testing for a population mean with
-$z$-statistics.
+**Formulating hypothesis:**
+$$\begin{aligned}
+H_0:\ & \mu = 185 \\
+H_1:\ & \mu < 185 \\
+\end{aligned}$$
 
-We notice that the **two-sided** hypothesis tests are very closed
-related to the concept of confidence intervals. A two-sided test means
-we are interested in rejection regions on both sides of the tail
-distribution. Typically, the alternative hypothesis is
-$H_{1}:\mu\neq\mu_{0}$.
+**Constructing test statistics:**
+$$T = \frac{\bar{X}-\mu}{s/\sqrt{n}}$$
 
-![](img/twosides.png){width="80%" fig-align="center"}
+**Computing test statistics and p-value:**
 
-Suppose we are doing a hypothesis test under the significance level
-$\alpha$, the region of accepting the $H_{0}$ is
+```{r}
+# load dataset
+data <- read.csv("../dataset/survey.csv")
 
-$$-z_{\alpha/2}\leq\frac{\bar{X}-\mu}{SE}\leq z_{\alpha/2}$$
+# extract heights of males
+height <- subset(data, Gender == 'M', 'Height')
 
-such that the rejection region ($p$-value) has probability $\alpha$.
-This is equivalent to
-$$\bar{X}-z_{\alpha/2}SE\leq\mu\leq\bar{X}+z_{\alpha/2}SE$$
+# conducting t-test
+t <- t.test(height - 185, alternative = 'less')
 
-which is exactly the $100(1-\alpha)\%$ confidence interval of $\bar{X}$.
-Therefore, for a two-sided test, we have the rule:
+# report results
+cat("t-stat:", t$statistic, "p-value:", t$p.value)
+```
 
--   Reject $H_{0}$ if $\mu$ is not in the $100(1-\alpha)\%$ CI:
-    $\bar{X}\pm z_{\alpha/2}SE$
+**Making decision:**
 
-We conclude this chapter by reiterating a couple of critical points that
-could be easily misunderstood.
+We adopt significance level $\alpha=0.05$. 
+Because $p<\alpha$, we reject the $H_0$ and accept $H_1$. 
+We thus conclude Tom is **significantly** taller than the average.
 
-Rejecting $H_{0}$ doesn't means we are 100% sure that $H_{0}$ is false.
-We might make Type 1 errors. Setting a significance level just guarantee
-we won't make Type 1 error too often.
+::: callout-tip
+### Why t-test?
+By convention, we would like to use a $t$-test. For large samples, $t$-statistic 
+converges to standard normal. So it is equivalent to conducting $z$-test under CLT.
+For small samples, $t$-test is valid if the sample is drawn from a normal distribution. 
+:::
 
-Failing to reject $H_{0}$ does not necessarily mean $H_{0}$ is true. We
-could make a type 2 error when failing to reject $H_{0}$. Moreover,
-unlike type 1 error rate is controlled at a low level, type 2 error rate
-is usually quite high. When we fail to reject $H_{0}$, it just means the
-data are not able to distinguish between $H_{0}$ and $H_{1}$. That's why
-we say *fail to reject*. [$p$-value is not the probability that the
-$H_{0}$ is true.]{.underline}
+### Comparing two sample means {.unnumbered}
 
-Saying that results are statistically significant just informs the
-reader that the findings are unlikely due to chance alone. However, it
-says nothing about the practical importance of the finding. For example,
-rejecting the $H_{0}$: $\mu=\mu_{0}$ does not tell us how big the
-difference $|\mu-\mu_{0}|$ is. Mostly in practice we care more about the
-magnitude of this difference, rather than the fact that they are indeed
-different. It is possible that the difference is too small to be
-relevant even if it is significant.
+Are male students on average do better in exams than female students? 
+(or the other way around)
 
-### Hypothesis testing with $t$-statistics {.unnumbered}
+**Formulating hypothesis:**
+$$\begin{aligned}
+H_0:\ & \mu_1 = \mu_2 \\
+H_1:\ & \mu_1 \neq \mu_2 \\
+\end{aligned}$$
 
-When the sample size is small, we opt for $t$-test for more reliable
-hypothsis testing. Define test statistics
-$$T=\frac{\bar{X}-\mu}{s/\sqrt{n}}$$ where $s$ is the sample standard
-deviation. For small samples, this test statistics follows a Student
-$t$-distribution with $n$ degrees of freedom, $T\sim t(n)$.
+**Constructing test statistics:**
+$$T = \frac{\bar{X_1}-\bar{X_2}}{\sqrt{s_1^2 + s_2^2}}$$
 
-Why Student-$t$ distribution? Recall the definition of Student-$t$
-distribution: when the underlying distribution of
-$X_{1},X_{2},\dots,X_{n}$ is Normal, sample variance $s^{2}$ follows a
-$\chi^{2}$ distribution. $T$ follows $t$ distribution by definition
-regardless of the sample size. However, if the underlying distribution
-is not normal, this argument loses ground. We use $t$-test mainly as a
-convention. But $t$ distribution has heavier tails than standard normal,
-meaning that we are more likely to reject a hypothesis based on $t$
-distribution. In other words, $t$-test is a more conservative choice
-than $z$-test for small samples.
+**Computing test statistics and p-value:**
 
-|                   |       |       |       |
-|:-----------------:|:-----:|:-----:|:-----:|
-| one-tail $\alpha$ | 0.05  | 0.025 | 0.005 |
-| two-tail $\alpha$ | 0.10  | 0.05  | 0.01  |
-|       d.f.        |       |       |       |
-|        10         | 1.812 | 2.228 | 3.169 |
-|        20         | 1.725 | 2.086 | 2.845 |
-|        30         | 1.697 | 2.042 | 2.750 |
-|     $z$ value     | 1.645 | 1.960 | 2.576 |
+```{r}
+# load dataset
+data <- read.csv("../dataset/survey.csv")
 
-The table shows a few critical values for $t$-test with different
-degrees of freedom (d.f.). We can see as the sample size gets larger,
-$t$ distribution converges to standard normal.
+# extract heights of males
+x1 <- subset(data, Gender == 'M', 'Score')
+x2 <- subset(data, Gender == 'F', 'Score')
+
+# conducting t-test
+t <- t.test(x1, x2, alternative = 'two.sided')
+
+# report results
+cat("t-stat:", t$statistic, "p-value:", t$p.value)
+```
+
+**Making decision:**
+
+We adopt significance level $\alpha=0.05$. 
+Because $p>\alpha$, we fail to reject the $H_0$.
+We thus conclude the average score of male students is 
+**not significantly different** from females.
