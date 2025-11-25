@@ -9,7 +9,7 @@ An estimator is **unbiased** if
 $$E(\hat{\theta})=\theta.$$ 
 :::
 
-::: {#thm-sample-mean}
+::: {#prp-sample-mean}
 ### Sample mean
 The sample mean, defined as:
 $$\bar{X}_{n}=\sum_{i=1}^n X_i,$$ 
@@ -20,7 +20,7 @@ is an **unbiased** estimator of $\mu=E(x)$.
 $$E(\bar{X}_{n})=E\left(\frac{1}{n}\sum_{i=1}^{n}X_{i}\right)=\frac{1}{n}\sum_{i=1}^{n}E(X_{i})=\frac{1}{n}\sum_{i=1}^{n}\mu=\mu.$$
 :::
 
-::: {#thm-sample-variance}
+::: {#prp-sample-variance}
 ### Sample variance
 The sample variance, defined as:
 $$s^{2} = \frac{1}{n-1}\sum_{i=1}^{n}(X_{i}-\bar{X_{n}})^{2},$$ 
@@ -49,7 +49,7 @@ The mean square error (MSE) of an estimator is defined as:
 $$\textrm{MSE}[\hat{\theta}]=E\left[(\hat{\theta}-\theta)^{2}\right].$$
 :::
 
-::: {#thm-bias-var}
+::: {#prp-bias-var}
 ### Bias-variance trade-off
 For any estimator with a finite variance, we have
 $$\textrm{MSE}[\hat{\theta}]=Var[\hat{\theta}]+(\textrm{Bias}[\hat{\theta}])^{2}.$$
