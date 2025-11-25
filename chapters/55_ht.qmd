@@ -152,7 +152,7 @@ H_1:\ & \mu_1 \neq \mu_2 \\
 \end{aligned}$$
 
 **Constructing test statistics:**
-$$T = \frac{\bar{X_1}-\bar{X_2}}{\sqrt{s_1^2 + s_2^2}}$$
+$$T = \frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}$$
 
 **Computing test statistics and p-value:**
 
