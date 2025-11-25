@@ -18,8 +18,8 @@ our estimates. The narrower the confidence interval, the more precise
 the estimate. 
 
 We seek an interval which includes the true value with
-reasonably high probability. Standard choices are $\alpha=0.05$ or
-$0.10$, corresponding to 95% and 90% confidence levels.
+reasonably high probability. Standard choices are $\alpha=0.05$,
+corresponding to 95% confidence intervals.
 
 ### CI of sample mean {.unnumbered}
 
@@ -144,9 +144,19 @@ population nor the sample is required to be normally distributed.
 
 Do male students do better in exams than female students? (or the other
 way around?) Comparing the means are not enough, because there are errors
-in the estimates. Instead, we construct the confidence interval of the
-test score difference. (We construct the CIs using $t$-scores assuming normal
-distribution in scores, or use $z$-scores if the sample size is large.)
+in the estimates. 
+
+Let $\bar{X}_1$ and $\bar{X}_2$ be the average scores of male and female
+students respectively. By the CLT, 
+$$\bar{X}_1 \to_d N\left( \mu_1, \frac{\sigma_1^2}{\sqrt{n_1}} \right)$$
+$$\bar{X}_2 \to_d N\left( \mu_2, \frac{\sigma_2^2}{\sqrt{n_2}} \right)$$
+
+The difference in sample means also follows a normal distribution:
+$$\bar{X}_1 - \bar{X}_2 \sim N\left( \mu_1-\mu_2, 
+\frac{\sigma_1^2}{\sqrt{n_1}} + \frac{\sigma_2^2}{\sqrt{n_2}}\right)$$
+
+We construct a confidence interval over $\bar{X}_1 - \bar{X}_2$ and check
+if it contains $0$. 
 
 ```{r}
 #| warning: false
@@ -154,13 +164,17 @@ distribution in scores, or use $z$-scores if the sample size is large.)
 data <- read.csv("../dataset/survey.csv")
 
 # math scores of introverts and extroverts
-y1 <- subset(data, Gender == 'F', 'Score')
-y2 <- subset(data, Gender == 'M', 'Score')
+x1 <- subset(data, Gender == 'F', 'Score')
+x2 <- subset(data, Gender == 'M', 'Score')
 
-# t-test over d = y1 - y2
-d <- t.test(y1, y2, conf.level = .95)
+# t-test over x1 - x2
+t <- t.test(x1, x2, conf.level = .95)
 
 # CI contains 0, meaning there is no significant difference
-cat("Means:",  d$estimate, "CI:", d$conf.int)
+cat("Means:",  t$estimate, "CI:", t$conf.int)
 ```
 
+The fact that the conficence interval contains $0$ means that 
+there is no statistical difference between the two means. 
+The algebric difference is due to errors in the estimation 
+(maybe because of small samples).
