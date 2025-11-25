@@ -21,7 +21,7 @@ We seek an interval which includes the true value with
 reasonably high probability. Standard choices are $\alpha=0.05$ or
 $0.10$, corresponding to 95% and 90% confidence levels.
 
-### Confidence interval of sample mean {.unnumbered}
+### CI of sample mean {.unnumbered}
 
 Let's set $\alpha=5\%$, that is, we are trying to
 find the CI that contains the true mean 95% of the times. Assume our
@@ -148,22 +148,19 @@ in the estimates. Instead, we construct the confidence interval of the
 test score difference. (We construct the CIs using $t$-scores assuming normal
 distribution in scores, or use $z$-scores if the sample size is large.)
 
-```{r, warning=}
+```{r}
 #| warning: false
 # load dataset
-data <- read.csv("../dataset/exam.csv")
+data <- read.csv("../dataset/survey.csv")
 
-# test scores of male and female students
-y1 <- subset(data, gender == 'Male'  )$overall 
-y2 <- subset(data, gender == 'Female')$overall
-
-# compare the means
-cat("Male:", mean(y1), "Female:", mean(y2))
+# math scores of introverts and extroverts
+y1 <- subset(data, Gender == 'F', 'Score')
+y2 <- subset(data, Gender == 'M', 'Score')
 
 # t-test over d = y1 - y2
 d <- t.test(y1, y2, conf.level = .95)
 
 # CI contains 0, meaning there is no significant difference
-cat("Diff:",  d$estimate, "CI: [", d$conf.int, "]")
+cat("Means:",  d$estimate, "CI:", d$conf.int)
 ```
 
