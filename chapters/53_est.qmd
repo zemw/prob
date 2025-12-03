@@ -40,7 +40,7 @@ Dividing by $n-1$ makes $E(s^2)=\sigma^2$.
 ::: {#def-mae}
 ### Mean absolute error
 The mean absolute error (MAE) of an estimator is defined as:
-$$\textrm{MSE}[\hat{\theta}]=E\left| \hat{\theta}-\theta \right|.$$
+$$\textrm{MAE}[\hat{\theta}]=E\left| \hat{\theta}-\theta \right|.$$
 :::
 
 ::: {#def-mse}
