@@ -30,7 +30,7 @@ sample size $n$ is large enough to invoke the CLT, we thus have
 $$\begin{aligned}
 \frac{\bar{X}_{n}-\mu}{\sigma/\sqrt{n}} & \sim N(0,1)\end{aligned}$$
 Let's find the interval $[a,b]$ such that
-$$P\left(a\leq\frac{\bar{X}_{n}-\mu}{\sigma/\sqrt{n}}\leq b\right)=1-2\Phi(L)=0.95$$
+$$P\left(a\leq\frac{\bar{X}_{n}-\mu}{\sigma/\sqrt{n}}\leq b\right)=1-2\Phi(a)=0.95$$
 
 since the normal distribution is symmetric, $b=-a$. By looking at the
 CDF of standard normal, we get $a=-1.96$, $b=1.96$. Thus,
