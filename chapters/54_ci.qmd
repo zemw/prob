@@ -21,28 +21,54 @@ We seek an interval which includes the true value with
 reasonably high probability. Standard choices are $\alpha=0.05$,
 corresponding to 95% confidence intervals.
 
+::: {#exm-ci}
+### CI of a Bernoulli parameter
+Suppose we would like male and female births are equally likely. 
+Let $X_{i}$ be a Bernoulli random variable that equals $1$ if the $i$-th baby 
+is a boy (with probability $p$) and $0$ otherwise.
+Suppose we have observed a sample of size $n$:
+$\{X_1, ..., X_n\}$. We want to estimate the parameter $p$.
+
+In @exm-mle-bern, we find the MLE: $\hat p = \bar{X}$. But we do not know
+how close this estimator is to the true value. Suppose we calculated
+$\hat p=0.55$ from a sample of 50 babies.
+Does that mean the boys' ratio is higher than girls? Or is there 
+measurement error in the estimate while the actual ratio is 
+$p=0.5$?
+
+To get an idea of how precise our estimator is, we would like to 
+construct an interval around $\hat p$ which contains the true $p$ 
+with high probability. Since,
+$$\begin{aligned}
+E(\hat p) &= E(\bar{X}) = p, \\
+Var(\hat p) &= Var(\bar{X}) = \frac{p(1-p)}{n}. 
+\end{aligned}$$
+By the CLT and the Slutsky's theorem, 
+$$Z = \frac{\hat p - p}{\sqrt{\frac{\hat p(1-\hat p)}{n}}} \to_d N(0,1).$$
+Since, $P(|Z|<1.96) = .95$. The 95% confidence interval is given by
+$$\hat p \pm 1.96\sqrt{\frac{\hat p(1-\hat p)}{n}}.$$
+
+For $n=50$, $\hat p=0.55$, the CI is $[0.41, 0.69]$. That is, the true
+ratio can be any value between this range. We cannot conclude a higher
+ratio of boys based on the evidence.
+:::
+
 ### CI of sample mean {.unnumbered}
 
-Let's set $\alpha=5\%$, that is, we are trying to
-find the CI that contains the true mean 95% of the times. Assume our
-sample size $n$ is large enough to invoke the CLT, we thus have
-
+Suppose we want to construct a $(1-\alpha)$ CI of the sample mean $\bar X_n$.
+Assume the population mean and variance are $\mu$ and $\sigma^2$.
+Also assume the sample size $n$ is large enough to invoke the CLT 
+(usually $n > 30$). We thus have
 $$\begin{aligned}
 \frac{\bar{X}_{n}-\mu}{\sigma/\sqrt{n}} & \sim N(0,1)\end{aligned}$$
-Let's find the interval $[a,b]$ such that
-$$P\left(a\leq\frac{\bar{X}_{n}-\mu}{\sigma/\sqrt{n}}\leq b\right)=1-2\Phi(a)=0.95$$
 
-since the normal distribution is symmetric, $b=-a$. By looking at the
-CDF of standard normal, we get $a=-1.96$, $b=1.96$. Thus,
-
-$$P\left(-1.96\leq\frac{\bar{X}_{n}-\mu}{\sigma/\sqrt{n}}\leq1.96\right)=0.95$$
+Let's find the interval $[-z,z]$ such that
+$$P\left(\frac{|\bar{X}_{n}-\mu|}{\sigma/\sqrt{n}}< z\right)=\Phi(z)-\Phi(-z)=1-\alpha$$
+We thus have: $z= \Phi^{-1}(1-\alpha/2)$. We denote this value as $z_{\alpha/2}$.
 
 With a little rearrangement, we have
-
-$$P\left(\bar{X}_{n}-1.96\frac{\sigma}{\sqrt{n}}\leq\mu\leq\bar{X}_{n}+1.96\frac{\sigma}{\sqrt{n}}\right)=0.95$$
-Therefore, the interval
-$\left[\bar{X}_{n}-1.96\frac{\sigma}{\sqrt{n}},\bar{X}_{n}+1.96\frac{\sigma}{\sqrt{n}}\right]$
-contains the true mean 95% of the times.
+$$P\left(\bar{X}_{n} - z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\leq \mu 
+\leq\bar{X}_{n} + z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\right)=1-\alpha$$
 
 In practice, because we do not know the true $\sigma^2$, we thus replace it
 with the sample variance $s^2$. @thm-slutsky ensures the result still holds
@@ -53,8 +79,9 @@ if the sample size is reasonably large.
 The $100(1-\alpha)\%$ confidence interval for the sample mean $\bar{X}_{n}$ is 
 $$\left[ \bar{X}_{n}- z_{\alpha/2}\frac{s}{\sqrt{n}},
 \bar{X}_{n}+ z_{\alpha/2}\frac{s}{\sqrt{n}} \right],$$
-where $s^2$ is the sample variance, $z_{\alpha/2}$ is the critical value 
-such that $\Phi(z_{\alpha/2})=\frac{\alpha}{2}$.
+where $s^2$ is the sample variance. 
+$z_{\alpha/2}$ is called the **critical value** given the confidence level.
+The expression $z_{\alpha/2}\frac{s}{\sqrt{n}}$ is known as the **margin of error**.
 :::
 
 ::: callout-tip
@@ -64,7 +91,15 @@ such that $\Phi(z_{\alpha/2})=\frac{\alpha}{2}$.
 -   **99% CI**: $\alpha=0.01$, $z_{0.005}=2.58$
 :::
 
-```{r,fig.asp=1}
+### Interpretation of CIs {.unnumbered}
+
+A 95% CI means: *95% of the intervals constructed will cover the true
+population mean $\mu$.* After taking the sample and an interval is
+constructed, the constructed interval either covers $\mu$ or it doesn't.
+But if we were able to take many such samples and reconstruct the
+interval many times, 95% of the intervals will contain the true mean.
+
+```{r, echo=FALSE, fig.asp=1}
 # the true mean
 mu <- 0.5
 
@@ -98,14 +133,6 @@ for (i in 1:50) {
 # the true mean
 abline(v=mu, col=2)
 ```
-
-### Interpretation of CIs {.unnumbered}
-
-A 95% CI means: *95% of the intervals constructed will cover the true
-population mean $\mu$.* After taking the sample and an interval is
-constructed, the constructed interval either covers $\mu$ or it doesn't.
-But if we were able to take many such samples and reconstruct the
-interval many times, 95% of the intervals will contain the true mean.
 
 ::: callout-caution
 ### Common misconceptions
@@ -164,17 +191,19 @@ if it contains $0$.
 data <- read.csv("../dataset/survey.csv")
 
 # math scores of introverts and extroverts
-x1 <- subset(data, Gender == 'F', 'Score')
-x2 <- subset(data, Gender == 'M', 'Score')
+x <- data[data$Gender == 'F', 'Score']
+y <- data[data$Gender == 'M', 'Score']
 
-# t-test over x1 - x2
-t <- t.test(x1, x2, conf.level = .95)
+d <- mean(x) - mean(y)
+s <- sqrt(sd(x)/length(x) + sd(y)/length(y))
+
+ci <- c(d-1.96*s, d+1.96*s)
 
 # CI contains 0, meaning there is no significant difference
-cat("Means:",  t$estimate, "CI:", t$conf.int)
+cat("Diff:", d, "CI:", ci)
 ```
 
-The fact that the conficence interval contains $0$ means that 
+The fact that the confidence interval contains $0$ means that 
 there is no statistical difference between the two means. 
-The algebric difference is due to errors in the estimation 
+The algebraic difference is due to errors in the estimation 
 (maybe because of small samples).
