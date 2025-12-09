@@ -29,7 +29,7 @@ the parameter space.
 
 ::: callout-note
 ### Parameters as random variables
-There is a debtate over wheter unknown parameters should be treated as
+There is a debate over whether unknown parameters should be treated as
 random variables or merely as numbers. Treating parameters as numbers
 is typically adopted by the **Frequentist framework**. We use the 
 observables to provide the best estimate of the unknown parameter. 
@@ -84,7 +84,7 @@ where $\hat m_j$ is the sample moment: $\hat m_j = \frac{1}{n}\sum_{i=1}^{n} X_i
 for $j=1,...,k$. 
 :::
 
-The method of momment is guided by the LLN, as the sample moments 
+The method of moment is guided by the LLN, as the sample moments 
 converges to the true moments for large samples. 
 As an example, the estimator for population mean $\mu$ is:
 $$\hat\mu = \frac{1}{n}\sum_{i=1}^{n} X_i.$$

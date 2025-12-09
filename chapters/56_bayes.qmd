@@ -35,7 +35,7 @@ $f(\boldsymbol{x}|\theta)p(\theta)$ is also known as the likelihood function.
 
 The essence of Bayesian inference is to *update* the distribution of the 
 parameter with the information in the data. The posterior distribution
-is a function of $\theta$, the denominator bahaves like a normalizing 
+is a function of $\theta$, the denominator behaves like a normalizing 
 constant. So we don't lost anything if we only focus on the likelihood 
 function and the prior. 
 
