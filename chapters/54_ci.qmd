@@ -23,18 +23,18 @@ corresponding to 95% confidence intervals.
 
 ::: {#exm-ci}
 ### CI of a Bernoulli parameter
-Suppose we would like male and female births are equally likely. 
-Let $X_{i}$ be a Bernoulli random variable that equals $1$ if the $i$-th baby 
-is a boy (with probability $p$) and $0$ otherwise.
-Suppose we have observed a sample of size $n$:
-$\{X_1, ..., X_n\}$. We want to estimate the parameter $p$.
+Suppose we want to know if a coin is fair or not by counting the number
+of Heads out of $n$ tosses.
+Let $X_{i}$ be a Bernoulli random variable that equals $1$ if the $i$-th toss 
+is Head (with probability $p$) and $0$ otherwise.
+Given a sample of size $n$: $\{X_1, ..., X_n\}$. 
+We want to estimate the parameter $p$.
 
 In @exm-mle-bern, we find the MLE: $\hat p = \bar{X}$. But we do not know
 how close this estimator is to the true value. Suppose we calculated
-$\hat p=0.55$ from a sample of 50 babies.
-Does that mean the boys' ratio is higher than girls? Or is there 
-measurement error in the estimate while the actual ratio is 
-$p=0.5$?
+$\hat p=0.55$ from a sample of 50.
+Does that mean the coin is unfair? Or is it just a measurement error
+due to the small sample size?
 
 To get an idea of how precise our estimator is, we would like to 
 construct an interval around $\hat p$ which contains the true $p$ 
@@ -49,8 +49,8 @@ Since, $P(|Z|<1.96) = .95$. The 95% confidence interval is given by
 $$\hat p \pm 1.96\sqrt{\frac{\hat p(1-\hat p)}{n}}.$$
 
 For $n=50$, $\hat p=0.55$, the CI is $[0.41, 0.69]$. That is, the true
-ratio can be any value between this range. We cannot conclude a higher
-ratio of boys based on the evidence.
+ratio can be any value between this range. We cannot exclude the possibility
+of a fair coin. 
 :::
 
 ### CI of sample mean {.unnumbered}
