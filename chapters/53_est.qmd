@@ -12,7 +12,7 @@ $$E(\hat{\theta})=\theta.$$
 ::: {#prp-sample-mean}
 ### Sample mean
 The sample mean, defined as:
-$$\bar{X}_{n}=\sum_{i=1}^n X_i,$$ 
+$$\bar{X}_{n}= \frac{1}{n} \sum_{i=1}^n X_i,$$ 
 is an **unbiased** estimator of $\mu=E(x)$.
 :::
 
@@ -82,25 +82,4 @@ the property of an estimator when the sample size gets large.
 A consistent estimator behaves well for large sample size. Whereas an
 unbiased estimator is correct centered even for small samples.
 :::
-
-For unbiased estimator, MSE is solely determined by the variance of the estimator. 
-Consider the sample mean $\bar{X}$ as an estimator for the population mean. 
-Suppose the sample is large enough so that CLT holds. Then
-$$Var(\bar{X}_{n})=\frac{\sigma^{2}}{n}.$$
-But this is not a very useful in practice because $\sigma^2$ is usually unknown.
-So we replace it with its sample estimator.
-
-::: {#def-se}
-### Standard error
-The standard error of an estimator $\hat{\theta}$ is defined as
-$$SE(\hat{\theta})=\hat\sigma(\hat\theta).$$ 
-
-The standard error of $\bar{X}_{n}$ is
-$$SE(\bar{X}_{n})=\frac{s}{\sqrt{n}}$$ 
-where $s^2$ is the sample variance.
-:::
-
-The standard error indicates the "precision" of the estimator, thereby
-carrying a sense of "error". The smaller the standard error, the more
-precise the estimator.
 
