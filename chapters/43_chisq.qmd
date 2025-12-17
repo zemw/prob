@@ -32,7 +32,7 @@ Suppose that $X_1, \ldots, X_n$ form a random sample from $N(\mu,\sigma^2)$.
 Let $\bar{X}$ denote the sample mean, and define the sample variance 
 $$s^2 = \frac{1}{n-1}\sum_{i=1}^{n}(X_i - \bar{X})^2$$
 Then we have 
-$$\frac{\bar{X} - \mu}{s/\sqrt{n}} \sim t(n-1).$$
+$$\frac{\bar{X} - \mu}{s/\sqrt{n-1}} \sim t(n-1).$$
 :::
 
 ::: callout-note
