@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Zeming WANG">
-<meta name="dcterms.date" content="2025-09-08">
 
-<title>Probability and Statistics</title>
+<title>58&nbsp; Estimator properties – Introduction to Probability</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./chapters/01_intro.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f71be59c340e2606a87407e2ea661a67.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/54_ci.html" rel="next">
+<link href="../chapters/53_mle.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-f71be59c340e2606a87407e2ea661a67.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/50_lln.html">Estimation</a></li><li class="breadcrumb-item"><a href="../chapters/53_estimator.html"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Estimator properties</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -127,7 +126,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Probability and Statistics</a> 
+      <a href="../">Introduction to Probability</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -139,7 +138,7 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
@@ -154,79 +153,79 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/01_intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/01_intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">What is probability?</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/02_event.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/02_event.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Event and sample space</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/03_classic.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/03_classic.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Classical probability</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/04_gambling.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/04_gambling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Gambling problems</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/05_birthday.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/05_birthday.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Birthday paradox</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/06_axioms.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/06_axioms.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Axiomatic probability</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/07_cond.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/07_cond.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Conditional probability</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/08_montyhall.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/08_montyhall.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Monty Hall problem</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/09_simpson.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/09_simpson.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Simpson’s paradox</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/10_indep.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/10_indep.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Independence</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/11_dating.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/11_dating.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Optimal mating problem*</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/11_calculus.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/11_calculus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Review of calculus*</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/01_baseR.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/01_baseR.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">R tutorial*</span></span></a>
   </div>
 </li>
@@ -243,31 +242,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/12_rv.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/12_rv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">What is a random variable?</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/13_data.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/13_data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Data descriptives*</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/14_disc.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/14_disc.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Discrete RVs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/15_cont.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/15_cont.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Continuous RVs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/16_cdf.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/16_cdf.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Cumulative distribution</span></span></a>
   </div>
 </li>
@@ -284,79 +283,79 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/18_bin.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/18_bin.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Binomial distribution</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/20_dexp.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/20_dexp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Discrete expectation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/21_hgeom.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/21_hgeom.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Hypergeometric dist</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/22_geom.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/22_geom.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Geometric distribution</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/22_hhht.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/22_hhht.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Coin flip: HH vs HT*</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/22_nbin.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/22_nbin.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Negative Binomial</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/23_joint.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/23_joint.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Bivariate distribution</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/23_condist.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/23_condist.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Conditional distribution</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/24_pois.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/24_pois.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Poisson distribution</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/26_birthday2.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/26_birthday2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Birthday problem revisited</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/27_convolution.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/27_convolution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Convolution</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/19_dice.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/19_dice.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Dice rolling formula*</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/27_ratings.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/27_ratings.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Application: seller ratings*</span></span></a>
   </div>
 </li>
@@ -373,67 +372,67 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/28_exp.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/28_exp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Expectation revisited</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/29_lifexp.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/29_lifexp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Life expectancy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/30_twoenvp.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/30_twoenvp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Two envelope paradox*</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/31_linearity.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/31_linearity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Linearity and indicators</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/32_median.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/32_median.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Median and mode</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/33_var.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/33_var.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Variance</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/34_cov.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/34_cov.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Covariance</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/34_portfolio.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/34_portfolio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Portfolio allocation*</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/35_condexp.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/35_condexp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Conditional expectation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/36_mgf.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/36_mgf.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Moments and MGF</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/37_ineq.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/37_ineq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Inequalities*</span></span></a>
   </div>
 </li>
@@ -450,74 +449,68 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/40_contd.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/40_contd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Definition revisited</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/41_unif.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/41_unif.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Uniform distribution</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/42_gauss.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/42_gauss.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Special integrals*</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/42_sumrvs.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/42_sumrvs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Sum of RVs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/42_normal.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/42_normal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">Normal distribution</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/42_mvn.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/42_mvn.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Multivariate normal*</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/43_chisq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title"><span class="math inline">\(\chi^2\)</span> and <span class="math inline">\(t\)</span>-distribution</span></span></a>
+  <a href="../chapters/43_expo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Exponential distribution</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/43_expo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Exponential distribution</span></span></a>
+  <a href="../chapters/44_gamma.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Gamma distribution</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/44_gamma.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Gamma distribution</span></span></a>
+  <a href="../chapters/45_beta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Beta distribution*</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/45_beta.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Beta distribution*</span></span></a>
+  <a href="../chapters/47_trans.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Transformation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/47_trans.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Transformation</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./chapters/46_2rvs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Additional problems</span></span></a>
+  <a href="../chapters/46_2rvs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Additional problems</span></span></a>
   </div>
 </li>
       </ul>
@@ -525,7 +518,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Estimation and Sampling Distributions</span></a>
+ <span class="menu-text">Estimation</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -533,50 +526,44 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/50_lln.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Law of large numbers</span></span></a>
+  <a href="../chapters/50_lln.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Law of large numbers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/51_clt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Central limit theorem</span></span></a>
+  <a href="../chapters/51_clt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">Central limit theorem</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/52_stats.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Statistical inference</span></span></a>
+  <a href="../chapters/52_stats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">Statistical inference</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/53_mle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Maximum likelihood</span></span></a>
+  <a href="../chapters/53_mle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Maximum likelihood</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/53_est.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">Estimator properties</span></span></a>
+  <a href="../chapters/53_estimator.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Estimator properties</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/54_ci.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">Confidence intervals</span></span></a>
+  <a href="../chapters/54_ci.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">Confidence intervals</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/55_ht.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">Hypothesis testing</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./chapters/56_bayes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">Bayesian inference</span></span></a>
+  <a href="../chapters/55_ht.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">Hypothesis testing</span></span></a>
   </div>
 </li>
       </ul>
@@ -586,56 +573,22 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#syllabus" id="toc-syllabus" class="nav-link" data-scroll-target="#syllabus">Syllabus</a></li>
-  <li><a href="#assessment" id="toc-assessment" class="nav-link" data-scroll-target="#assessment">Assessment</a></li>
-  <li><a href="#lecture-notes" id="toc-lecture-notes" class="nav-link" data-scroll-target="#lecture-notes">Lecture notes</a></li>
-  <li><a href="#homework" id="toc-homework" class="nav-link" data-scroll-target="#homework">Homework</a></li>
-  <li><a href="#statistical-software" id="toc-statistical-software" class="nav-link" data-scroll-target="#statistical-software">Statistical software</a></li>
-  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
-  <li><a href="#online-playground" id="toc-online-playground" class="nav-link" data-scroll-target="#online-playground">Online playground</a></li>
-  <li><a href="#exam-score-lookup" id="toc-exam-score-lookup" class="nav-link" data-scroll-target="#exam-score-lookup">Exam score lookup</a></li>
-  <li><a href="#copyright" id="toc-copyright" class="nav-link" data-scroll-target="#copyright">Copyright ©</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/50_lln.html">Estimation</a></li><li class="breadcrumb-item"><a href="../chapters/53_estimator.html"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Estimator properties</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Probability and Statistics</h1>
+<h1 class="title"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Estimator properties</span></h1>
 </div>
 
 
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Author</div>
-  <div class="quarto-title-meta-heading">Affiliation</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author">Zeming WANG </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            Southwest University of Finance and Economics
-          </p>
-      </div>
-  </div>
 
 <div class="quarto-title-meta">
 
-      
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">September 8, 2025</p>
-    </div>
-  </div>
+    
   
     
   </div>
@@ -645,353 +598,66 @@ window.Quarto = {
 </header>
 
 
-<section id="overview" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="overview">Overview</h2>
-<p>This website contains the lecture notes of <em>MAT924: Probability and Statistics</em> I taught at Southwest University of Finance and Economics (RIEM). It is an introductory probability course that aims to be not boring. The course emphasizes:</p>
-<ul>
-<li>Conventional teaching</li>
-<li>Interesting puzzles</li>
-<li>Data-oriented practical skills</li>
-</ul>
-<p>Course Instructor’s email: <a href="">gamma12@126.com</a> <small>(FYI: <span class="math inline">\(\Gamma(1/2)=\sqrt{\pi}\)</span>)</small></p>
-<p>Please indicate your class and student ID when you email me.</p>
-</section>
-<section id="syllabus" class="level2">
-<h2 class="anchored" data-anchor-id="syllabus">Syllabus</h2>
-<p><strong>Topic 1: Classical probabilities<br>
-</strong>How likely were some of your classmates born on the same day as you?</p>
-<p><strong>Topic 2: Data and random variables</strong><br>
-Why is your exam score in this class a random variable?</p>
-<p><strong>Topic 3: Discrete distributions</strong><br>
-How many earthquakes are likely to happen in a random year?</p>
-<p><strong>Topic 4: Expectation and variance</strong><br>
-How old are you expected to live?</p>
-<p><strong>Topic 5: Continuous distributions</strong><br>
-How long are you expected to wait in the queue at a restaurant?</p>
-<p><strong>Topic 6: Limiting theorems</strong><br>
-Why a lottery company never loses?</p>
-<p><strong>Topic 7: Sampling distribution</strong><br>
-How do I know I am taller than an average person?</p>
-</section>
-<section id="assessment" class="level2">
-<h2 class="anchored" data-anchor-id="assessment">Assessment</h2>
-<p><strong>Quiz (25%).</strong> There will be an arbitrary number of in-class quizzes. The date for each quiz will be announced in advance. Each quiz will consist of 1-2 questions based on material covered in previous weeks. Every quiz is mandatory; there will be no make-up quizzes under any circumstances.</p>
-<p><strong>Project (25%).</strong> The goal of the projects is to encourage students to apply the knowledge learned in this course to solve practical problems. Projects are usually open-ended and may involve data analysis, simulations, or exploring real-world applications of probability. Essays that present innovative perspectives and use the data persuasively to support their conclusions will receive higher marks. Selective students may be invited to present their findings to the class.</p>
-<p><strong>Final exam (50%).</strong> The final exam will be a closed-book, paper-and-pencil exam scheduled on Week 17. It will not simply repeat lecture material but will assess your ability to apply the knowledge you have gained to solve novel problems. To perform well, you must have a deep understanding of the concepts and acquire some degree of problem-solving skills. The average score of the past exam is 69 with a standard deviation 15. The pass rate (&gt;=60) is about 80%.</p>
-<p><strong>Class participation (5%).</strong> Additional 5 marks for class participation on top of the above. Regular attendance and active participation in class discussions are encouraged (though not mandatory) and will be recognized.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="chapters/img/final.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
-</figure>
+<div id="def-bias" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 58.1 (Bias)</strong></span> The bias of an estimator <span class="math inline">\(\hat{\theta}\)</span> of a parameter <span class="math inline">\(\theta\)</span> is defined as: <span class="math display">\[\textrm{Bias}[\hat{\theta}]=E(\hat{\theta})-\theta.\]</span> An estimator is <strong>biased</strong> means its sampling is incorrectly centered. An estimator is <strong>unbiased</strong> if <span class="math display">\[E(\hat{\theta})=\theta.\]</span></p>
 </div>
-</section>
-<section id="lecture-notes" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-notes">Lecture notes</h2>
-<p>All lecture materials will be published through this online website. You are not required to read any textbook. For students who insist on a textbook, it would be DeGroot and Schervish’s <em>Probability and Statistics (4th edition).</em></p>
-<p>It is recommended to use the textbook as a supplement not a replacement of the lecture note. For students who prefer to read the textbook. There are two key differences between this lecture note and the textbook. First, the sections are arranged differently. Second, the examples and exercises are entirely different despite the key definitions and theorems are the same.</p>
-</section>
-<section id="homework" class="level2">
-<h2 class="anchored" data-anchor-id="homework">Homework</h2>
-<p>There is no mandatory homework assignment in this course. Exercise questions will be provided following each chapter. You are also encouraged to practice the exercises in DeGroot and Schervish’s textbook after class. But it is not mandatory.</p>
-</section>
-<section id="statistical-software" class="level2">
-<h2 class="anchored" data-anchor-id="statistical-software">Statistical software</h2>
-<p>Statistical software is indispensable for modern statistics. For practical consideration, it is beneficial to start learn it as early as possible. We will demonstrate how to do statistics in R, which is a widely-used open-source statistical programming language. It is highly recommended that you try it yourself while learning this course.</p>
-</section>
-<section id="reference" class="level2">
-<h2 class="anchored" data-anchor-id="reference">Reference</h2>
-<ol type="1">
-<li>Schervish, M. J., &amp; DeGroot, M. H. (2014). <em>Probability and Statistics.</em> Pearson Education.</li>
-<li>Blitzstein, J. K., &amp; Hwang, J. (2019). <em>Introduction to Probability.</em> Chapman and Hall/CRC.</li>
-<li>Grimmett, G., &amp; Stirzaker, D. (2020). <em>Probability and Random Processes.</em> Oxford University Press.</li>
-</ol>
-</section>
-<section id="online-playground" class="level2">
-<h2 class="anchored" data-anchor-id="online-playground">Online playground</h2>
-<p><a href="https://www.acsu.buffalo.edu/~adamcunn/probability/probability.html">Probability Playground: Interactive Probability Distributions</a></p>
-<p><a href="https://www.lock5stat.com/StatKey/index.html">Statistics: Unlocking the Power of Data</a></p>
-</section>
-<section id="exam-score-lookup" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="exam-score-lookup">Exam score lookup</h2>
-<div id="exam-score-lookup" class="exam-score-lookup">
-<label for="exam-lookup-input" class="exam-lookup-label">Student number</label>
-<div class="exam-lookup-controls">
-<p><input id="exam-lookup-input" type="text" inputmode="numeric" placeholder="e.g. 42431000" aria-describedby="exam-lookup-status"> <button type="button" id="exam-lookup-button">Find scores</button></p>
+<div id="thm-sample-mean" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 58.1 (Sample mean)</strong></span> The sample mean, defined as: <span class="math display">\[\bar{X}_{n}=\sum_{i=1}^n X_i,\]</span> is an <strong>unbiased</strong> estimator of <span class="math inline">\(\mu=E(x)\)</span>.</p>
 </div>
-<p class="exam-lookup-status" id="exam-lookup-status" role="status" aria-live="polite">
-Loading exam scores…
-</p>
-<div id="exam-lookup-result" class="exam-lookup-result">
-
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math display">\[E(\bar{X}_{n})=E\left(\frac{1}{n}\sum_{i=1}^{n}X_{i}\right)=\frac{1}{n}\sum_{i=1}^{n}E(X_{i})=\frac{1}{n}\sum_{i=1}^{n}\mu=\mu.\]</span></p>
+</div>
+<div id="thm-sample-variance" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 58.2 (Sample variance)</strong></span> The sample variance, defined as: <span class="math display">\[s^{2} = \frac{1}{n-1}\sum_{i=1}^{n}(X_{i}-\bar{X_{n}})^{2},\]</span> is an unbiased estimator of <span class="math inline">\(\sigma^{2}\)</span> (<span class="math inline">\(\sigma^2&lt;\infty\)</span>).</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>First note: <span class="math display">\[\sum_{i=1}^n (X_i - \bar{X})^2 = \sum_{i=1}^n (X_i - \mu)^2 - n(\bar{X} - \mu)^2\]</span> Take expectations of both sides: <span class="math display">\[E\left[\sum_{i=1}^n (X_i - \bar{X})^2\right]
+= n\sigma^2 - n\left(\frac{\sigma^2}{n}\right)
+= (n-1)\sigma^2\]</span> Dividing by <span class="math inline">\(n-1\)</span> makes <span class="math inline">\(E(s^2)=\sigma^2\)</span>.</p>
+</div>
+<div id="def-mae" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 58.2 (Mean absolute error)</strong></span> The mean absolute error (MAE) of an estimator is defined as: <span class="math display">\[\textrm{MSE}[\hat{\theta}]=E\left[|\hat{\theta}-\theta| \right].\]</span></p>
+</div>
+<div id="def-mse" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 58.3 (Mean square error)</strong></span> The mean square error (MSE) of an estimator is defined as: <span class="math display">\[\textrm{MSE}[\hat{\theta}]=E\left[(\hat{\theta}-\theta)^{2}\right].\]</span></p>
+</div>
+<div id="thm-bias-var" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 58.3 (Bias-variance trade-off)</strong></span> For any estimator with a finite variance, we have <span class="math display">\[\textrm{MSE}[\hat{\theta}]=Var[\hat{\theta}]+(\textrm{Bias}[\hat{\theta}])^{2}.\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>By expanding the MSE we find that <span class="math display">\[\begin{aligned}
+\textrm{MSE}[\hat{\theta}] &amp; =E\left[(\hat{\theta}-\theta)^{2}\right]\\
+&amp; =E\left[(\hat{\theta}-E[\hat{\theta}]+E[\hat{\theta}]-\theta)^{2}\right]\\
+&amp; =E\left[(\hat{\theta}-E[\hat{\theta}])^{2}\right] +
+    2E(\hat{\theta}-E[\hat{\theta}])(E[\hat{\theta}]-\theta) +
+    (E[\hat{\theta}]-\theta)^{2}\\
+&amp; =Var[\hat{\theta}]+(\textrm{Bias}[\hat{\theta}])^{2}.
+\end{aligned}\]</span> Thus, the MSE is the variance plus the squared bias. A good estimator balances the variance (precision) and the bias (correctly centered).</p>
+</div>
+<div id="def-consistent" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 58.4 (Consistency)</strong></span> An estimator is consistent if <span class="math inline">\(\textrm{MSE}[\hat{\theta}]\to0\)</span> as <span class="math inline">\(n\to\infty\)</span>.</p>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Unbiasedness vs consistency
 </div>
 </div>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const input = document.getElementById('exam-lookup-input');
-  const button = document.getElementById('exam-lookup-button');
-  const status = document.getElementById('exam-lookup-status');
-  const resultContainer = document.getElementById('exam-lookup-result');
-  const dataUrl = 'dataset/quiz.csv';
-  let headers = [];
-  let rows = [];
-  let hasLoaded = false;
-  let loadError = null;
-
-  const parseCSVRow = (row) => {
-    const values = [];
-    let current = '';
-    let inQuotes = false;
-    for (let i = 0; i < row.length; i += 1) {
-      const char = row[i];
-      if (inQuotes) {
-        if (char === '"' && row[i + 1] === '"') {
-          current += '"';
-          i += 1;
-        } else if (char === '"') {
-          inQuotes = false;
-        } else {
-          current += char;
-        }
-      } else if (char === '"') {
-        inQuotes = true;
-      } else if (char === ',') {
-        values.push(current.trim());
-        current = '';
-      } else {
-        current += char;
-      }
-    }
-    values.push(current.trim());
-    return values;
-  };
-
-  const parseCSV = (text) => {
-    const lines = text
-      .split(/\r?\n/)
-      .map((line) => line.trim())
-      .filter((line) => line.length > 0);
-    if (lines.length === 0) {
-      return { headers: [], rows: [] };
-    }
-    const headerRow = parseCSVRow(lines[0]);
-    const records = lines.slice(1).map((line) => {
-      const values = parseCSVRow(line);
-      const record = {};
-      headerRow.forEach((header, index) => {
-        record[header] = values[index] !== undefined ? values[index] : '';
-      });
-      return record;
-    });
-    return { headers: headerRow, rows: records };
-  };
-
-  const loadData = async () => {
-    if (hasLoaded || loadError) {
-      return;
-    }
-    status.textContent = 'Loading exam scores...';
-    try {
-      const response = await fetch(dataUrl, { cache: 'no-store' });
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
-      }
-      const text = await response.text();
-      const parsed = parseCSV(text);
-      headers = parsed.headers;
-      rows = parsed.rows;
-      hasLoaded = true;
-      if (!headers.length || !rows.length) {
-        throw new Error('Exam score file is empty.');
-      }
-      status.textContent = 'Enter a student number to view exam scores.';
-    } catch (error) {
-      loadError = error;
-      status.textContent = 'Exam score lookup is unavailable.';
-      console.error('Exam lookup failed:', error);
-    }
-  };
-
-  const matchStudent = (query) => {
-    const trimmed = query.trim();
-    if (!trimmed) {
-      return null;
-    }
-    const idHeader = headers.find((header) => /id/i.test(header));
-    if (idHeader) {
-      const match = rows.find(
-        (row) => String(row[idHeader]).trim().toLowerCase() === trimmed.toLowerCase(),
-      );
-      if (match) {
-        return match;
-      }
-    }
-    return rows.find((row) =>
-      Object.values(row).some(
-        (value) => String(value).trim().toLowerCase() === trimmed.toLowerCase(),
-      ),
-    );
-  };
-
-  const renderResult = (record, query) => {
-    resultContainer.innerHTML = '';
-    if (!record) {
-      const message = document.createElement('p');
-      message.className = 'exam-lookup-message';
-      message.textContent = `No exam scores found for "${query}".`;
-      resultContainer.appendChild(message);
-      return;
-    }
-
-    const table = document.createElement('table');
-    table.className = 'exam-lookup-table';
-
-    const thead = document.createElement('thead');
-    const headerRow = document.createElement('tr');
-    headers.forEach((header) => {
-      const th = document.createElement('th');
-      th.textContent = header;
-      headerRow.appendChild(th);
-    });
-    thead.appendChild(headerRow);
-    table.appendChild(thead);
-
-    const tbody = document.createElement('tbody');
-    const dataRow = document.createElement('tr');
-    headers.forEach((header) => {
-      const td = document.createElement('td');
-      const value = record[header];
-      td.textContent = value !== undefined && value !== '' ? value : '0';
-      dataRow.appendChild(td);
-    });
-    tbody.appendChild(dataRow);
-    table.appendChild(tbody);
-
-    resultContainer.appendChild(table);
-  };
-
-  const handleLookup = async () => {
-    const query = input.value;
-    if (!query.trim()) {
-      status.textContent = 'Please enter a student number before searching.';
-      resultContainer.innerHTML = '';
-      return;
-    }
-
-    if (!hasLoaded && !loadError) {
-      await loadData();
-    }
-
-    if (loadError) {
-      status.textContent = 'Exam score lookup is unavailable. Add "dataset/exam.csv" and reload the page.';
-      return;
-    }
-
-    const match = matchStudent(query);
-    if (match) {
-      status.textContent = 'Showing results.';
-    } else {
-      status.textContent = 'No matching student found.';
-    }
-    renderResult(match, query.trim());
-  };
-
-  button.addEventListener('click', handleLookup);
-  input.addEventListener('keyup', (event) => {
-    if (event.key === 'Enter') {
-      handleLookup();
-    }
-  });
-
-  loadData();
-});
-</script>
-<style>
-.exam-score-lookup {
-  margin-top: 2.5rem;
-  padding: 1.5rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 0.75rem;
-  background-color: #f8f9fa;
-}
-
-.exam-lookup-label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-}
-
-.exam-lookup-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.exam-lookup-controls input[type="text"] {
-  flex: 1 1 220px;
-  min-width: 160px;
-  padding: 0.5rem 0.75rem;
-  border: 1px solid #ced4da;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-}
-
-.exam-lookup-controls button {
-  padding: 0.5rem 1.25rem;
-  border: none;
-  border-radius: 0.5rem;
-  background-color: #0d6efd;
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.exam-lookup-controls button:hover,
-.exam-lookup-controls button:focus {
-  background-color: #0b5ed7;
-}
-
-.exam-lookup-status {
-  margin: 0 0 0.75rem;
-  color: #495057;
-}
-
-.exam-lookup-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.exam-lookup-table th,
-.exam-lookup-table td {
-  padding: 0.5rem 0.75rem;
-  border: 1px solid #dee2e6;
-  text-align: left;
-}
-
-.exam-lookup-message {
-  margin: 0;
-  color: #c1121f;
-  font-weight: 600;
-}
-
-@media (max-width: 600px) {
-  .exam-lookup-controls {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .exam-lookup-controls button {
-    width: 100%;
-  }
-}
-</style>
-</section>
-<section id="copyright" class="level2">
-<h2 class="anchored" data-anchor-id="copyright">Copyright ©</h2>
-<p>The content on this website is made available for online viewing by the public. Redistribution, reproduction, or any other use of the content, in whole or in part, is prohibited without prior written permission from the author.</p>
+<div class="callout-body-container callout-body">
+<p>Bias is the property of an estimator for finite samples. Consistency is the property of an estimator when the sample size gets large. A consistent estimator behaves well for large sample size. Whereas an unbiased estimator is correct centered even for small samples.</p>
+</div>
+</div>
+<p>For unbiased estimator, MSE is solely determined by the variance of the estimator. Consider the sample mean <span class="math inline">\(\bar{X}\)</span> as an estimator for the population mean. Suppose the sample is large enough so that CLT holds. Then <span class="math display">\[Var(\bar{X}_{n})=\frac{\sigma^{2}}{n}.\]</span> But this is not a very useful in practice because <span class="math inline">\(\sigma^2\)</span> is usually unknown. So we replace it with its sample estimator.</p>
+<div id="def-se" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 58.5 (Standard error)</strong></span> The standard error of an estimator <span class="math inline">\(\hat{\theta}\)</span> is defined as <span class="math display">\[SE(\hat{\theta})=\hat{V}^{1/2}\]</span> where <span class="math inline">\(\hat{V}\)</span> is the estimator for <span class="math inline">\(Var[\hat{\theta}]\)</span>.</p>
+<p>The standard error of <span class="math inline">\(\bar{X}_{n}\)</span> is <span class="math display">\[SE(\bar{X}_{n})=\frac{s}{\sqrt{n}}\]</span> where <span class="math inline">\(s\)</span> is the sample standard deviation.</p>
+</div>
+<p>The standard error indicates the “precision” of the estimator, thereby carrying a sense of “error”. The smaller the standard error, the more precise the estimator.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1395,10 +1061,13 @@ document.addEventListener('DOMContentLoaded', () => {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../chapters/53_mle.html" class="pagination-link" aria-label="Maximum likelihood">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Maximum likelihood</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./chapters/01_intro.html" class="pagination-link" aria-label="What is probability?">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">What is probability?</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/54_ci.html" class="pagination-link" aria-label="Confidence intervals">
+        <span class="nav-page-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">Confidence intervals</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
