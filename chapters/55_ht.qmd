@@ -52,34 +52,46 @@ opposite of the null hypothesis. Hypothesis testing seeks to find evidence
 to reject the null. 
 :::
 
-::: {#def-rejection}
-### Rejection region
-The range of *extreme values* in the sampling distribution where, 
-if the test statistic falls, the null hypothesis ($H_0$) is rejected.
-Rejection region means the $H_0$ is highly unlikely to be true given
-the evidence. This region is defined by the significance level ($\alpha$).
+::: {#def-powerfun}
+### Power function
+In a hypothesis testing about a parameter $\theta$, let the null hypothesis be
+$$H_0: \theta = \theta_0$$
+The power function, $\pi(\theta)$ is a function that gives the probability of 
+rejecting the null hypothesis when it is true.
+:::
+
+::: callout-tip
+### An ideal test
+An ideal test would be:  $\pi(\theta_0) = 0$, and $\pi(\theta)=1$.
+for any $\theta \leq\theta_0$. That is, the test never makes a mistake.
+But in reality, a test always involves errors.
 :::
 
 ::: {#def-type12error}
 ### Type I/II error
-A **Type I error** is rejecting the $H_0$ when it is true.
-A **Type II error** is failing to reject the $H_0$ when it is false.
+A **Type I error** is rejecting the $H_0$ when it is true, whose probability 
+is given by $$\alpha = \pi(\theta_0).$$
+A **Type II error** is failing to reject the $H_0$ when it is false, whose 
+probability is given by $$\beta = 1- \pi(\theta).$$
+:::
 
-|     |                  |                |                        |
-|-----|------------------|:--------------:|------------------------|
-|     |                  |    Decision    |                        |
+::: callout-tip
+### Type I/II error
 |     |                  | Reject $H_{0}$ | Fail to reject $H_{0}$ |
+|-----|------------------|:--------------:|------------------------|
 |     | $H_{0}$ is true  |  Type I error  | $\checkmark$           |
 |     | $H_{0}$ is false |  $\checkmark$  | Type II error           |
 :::
 
 ::: {#def-siglevel}
 ### Significance level
-Significance level is the probability of making a Type I error, typically
-denoted by $\alpha$:
-$$ \alpha = P(\textrm{Type I error}|H_{0}\textrm{ is true}).$$
-To control the Type I error, we typically set $\alpha$ to a very small value.
-Typical choices include $\alpha = 0.1, 0.05, 0.01$.
+Significance level is the probability of making a Type I error, that is the $\alpha$.
+
+In a hypothesis testing, we typically want to control the Type I error. 
+That is we want to make sure that when we reject the null, 
+the chance of being wrong is small. 
+Typically, we restrict $\alpha$ to a very small value, such as 
+$\alpha = 0.1, 0.05, 0.01$.
 :::
 
 ::: {#def-pvalue}
@@ -118,10 +130,11 @@ $$T = \frac{\bar{X}-\mu}{s/\sqrt{n}}$$
 data <- read.csv("../dataset/survey.csv")
 
 # extract heights of males
-height <- subset(data, Gender == 'M', 'Height')
+H <- data[data$Gender == 'M', 'Height']
 
 # conducting t-test
-t <- t.test(height - 185, alternative = 'less')
+T <- (H - 185)/(sd(H)/sqrt(length(H)))
+t <- t.test(T, alternative = 'less')
 
 # report results
 cat("t-stat:", t$statistic, "p-value:", t$p.value)
@@ -161,11 +174,11 @@ $$T = \frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}$$
 data <- read.csv("../dataset/survey.csv")
 
 # extract heights of males
-x1 <- subset(data, Gender == 'M', 'Score')
-x2 <- subset(data, Gender == 'F', 'Score')
+H1 <- data[data$Gender == 'M', 'Score']
+H2 <- data[data$Gender == 'F', 'Score']
 
 # conducting t-test
-t <- t.test(x1, x2, alternative = 'two.sided')
+t <- t.test(H1, H2, alternative = 'two.sided')
 
 # report results
 cat("t-stat:", t$statistic, "p-value:", t$p.value)
@@ -177,3 +190,99 @@ We adopt significance level $\alpha=0.05$.
 Because $p>\alpha$, we fail to reject the $H_0$.
 We thus conclude the average score of male students is 
 **not significantly different** from females.
+
+### Goodness-of-fit test {.unnumbered}
+
+Purpose: Decide if the values of a categorical variable abide to certain frequencies.
+For example, are people equally likely to be introverts and extroverts? 
+
+**Formulating hypothesis:**
+$$\begin{aligned}
+H_0:\ & p_1 = p_2 = \frac{1}{2} \\
+H_1:\ & p_2 \neq p_2 \\
+\end{aligned}$$
+
+**Constructing test statistics:**
+$$\chi^2 = \sum_{i=1}^{k} \frac{(O_i - Np_i)^2}{Np_i} $$
+
+where $O_i$ is the number observations of category $i$; 
+$N$ is the total number of observations. 
+The test statistics asymptotically approaches a $\chi^2(k-1)$ distribution,
+where $k$ is the number of categories.
+
+**Computing test statistics and p-value:**
+
+```{r}
+# load dataset
+data <- read.csv("../dataset/survey.csv")
+
+# extract heights of males
+O1 <- NROW(data[data$Type == 'E',])
+O2 <- NROW(data[data$Type == 'I',]) 
+
+# chi-square test of goodness-of-fit
+x <- chisq.test(c(O1, O2), p = c(.5, .5))
+
+# report results
+cat("chisq:", x$statistic, "p-value:", x$p.value)
+```
+
+**Making decision:**
+
+We've got $p=0.074 >0.05$, so we will not be able to reject the null 
+at 5% significance level. However, the difference is significant at
+10% significance level.
+
+### Test of independence {.unnumbered}
+
+Purpose: Decide if two variables are statistically independent. 
+For example, is personality independent of gender?
+
+```{r}
+# load dataset
+data <- read.csv("../dataset/survey.csv")
+
+# contingency table
+table(data$Gender, data$Type)
+```
+
+
+**Formulating hypothesis:**
+
+$$\begin{aligned}
+H_0:\ & \text{The two variables are independent} \\
+H_1:\ & \text{The two variables are not independent} \\
+\end{aligned}$$
+
+**Constructing test statistics:**
+
+Let $E_{i,j}$ be the "theoretical frequency" of the value in the $i$-th row
+and $j$-th column. If the independent hypothesis is true, then
+$$E_{i,j} = N p_{i\cdot}p_{\cdot j}$$
+where $N$ is the total number of observations and
+$$p_{i\cdot} = \frac{O_{i\cdot}}{N}, p_{\cdot j} = \frac{O_{\cdot j}}{N}$$
+is the marginal probability of the row variable and column variable respectively.
+
+The test statistic is
+$$\chi^2 = \sum_{i=1}^r \sum_{j=1}^c \frac{(O_{i,j}-E_{i,j})^2}{E_{i,j}} $$
+The test statistic is an asymptotic $\chi^2(d)$ distribution with a 
+degree of freedom $d=(r-1)(c-1)$.
+
+**Computing test statistics and p-value:**
+
+```{r}
+# contingency table
+c <- table(data$Gender, data$Type)
+
+# chi-square test of independence
+x <- chisq.test(c)
+
+# report results
+cat("chisq:", x$statistic, "p-value:", x$p.value)
+```
+
+**Making decision:**
+
+The fact that $p=0.58 >0.1$ means we are unable to reject the null even
+at 10% significance level. Thus we conclude the row variable and column
+variable are statistically independent.
